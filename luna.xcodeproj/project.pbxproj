@@ -16,6 +16,10 @@
 		0DBADDB32A65FDF300A10FC3 /* lunaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDB22A65FDF300A10FC3 /* lunaTests.swift */; };
 		0DBADDBD2A65FDF300A10FC3 /* lunaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDBC2A65FDF300A10FC3 /* lunaUITests.swift */; };
 		0DBADDBF2A65FDF300A10FC3 /* lunaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDBE2A65FDF300A10FC3 /* lunaUITestsLaunchTests.swift */; };
+		0DBADDD02A66002800A10FC3 /* LunaText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDCF2A66002800A10FC3 /* LunaText.swift */; };
+		0DBADDD32A66005500A10FC3 /* LunaTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDD22A66005500A10FC3 /* LunaTextViewModel.swift */; };
+		0DBADDD62A6600CD00A10FC3 /* AnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDD52A6600CD00A10FC3 /* AnyView.swift */; };
+		0DBADDD82A66017600A10FC3 /* DrawableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDD72A66017600A10FC3 /* DrawableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		0DBADDB82A65FDF300A10FC3 /* lunaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lunaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBADDBC2A65FDF300A10FC3 /* lunaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lunaUITests.swift; sourceTree = "<group>"; };
 		0DBADDBE2A65FDF300A10FC3 /* lunaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lunaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0DBADDCF2A66002800A10FC3 /* LunaText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaText.swift; sourceTree = "<group>"; };
+		0DBADDD22A66005500A10FC3 /* LunaTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaTextViewModel.swift; sourceTree = "<group>"; };
+		0DBADDD52A6600CD00A10FC3 /* AnyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyView.swift; sourceTree = "<group>"; };
+		0DBADDD72A66017600A10FC3 /* DrawableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +147,7 @@
 		0DBADDCC2A65FF5700A10FC3 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				0DBADDD42A6600B800A10FC3 /* Protocols */,
 				0DBADDCE2A65FF6B00A10FC3 /* Modules */,
 				0DBADDCD2A65FF6400A10FC3 /* Components */,
 			);
@@ -148,6 +157,7 @@
 		0DBADDCD2A65FF6400A10FC3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0DBADDD12A66003300A10FC3 /* LunaText */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -157,6 +167,24 @@
 			children = (
 			);
 			name = Modules;
+			sourceTree = "<group>";
+		};
+		0DBADDD12A66003300A10FC3 /* LunaText */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADDCF2A66002800A10FC3 /* LunaText.swift */,
+				0DBADDD22A66005500A10FC3 /* LunaTextViewModel.swift */,
+			);
+			name = LunaText;
+			sourceTree = "<group>";
+		};
+		0DBADDD42A6600B800A10FC3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADDD52A6600CD00A10FC3 /* AnyView.swift */,
+				0DBADDD72A66017600A10FC3 /* DrawableView.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,8 +319,12 @@
 			files = (
 				0DBADD9D2A65FDF100A10FC3 /* ViewController.swift in Sources */,
 				0DBADDA32A65FDF100A10FC3 /* luna.xcdatamodeld in Sources */,
+				0DBADDD02A66002800A10FC3 /* LunaText.swift in Sources */,
+				0DBADDD82A66017600A10FC3 /* DrawableView.swift in Sources */,
 				0DBADD992A65FDF100A10FC3 /* AppDelegate.swift in Sources */,
 				0DBADD9B2A65FDF100A10FC3 /* SceneDelegate.swift in Sources */,
+				0DBADDD32A66005500A10FC3 /* LunaTextViewModel.swift in Sources */,
+				0DBADDD62A6600CD00A10FC3 /* AnyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
