@@ -8,11 +8,14 @@
 import UIKit
 
 
-class LunaText: UILabel {
+class LunaText: UILabel, AnyView, DrawableView {
 
+    
+    typealias ViewModel = LunaTextViewModel
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupView()
     }
     
     required init?(coder: NSCoder) {
@@ -20,5 +23,9 @@ class LunaText: UILabel {
     }
     
     
-    
+    func draw(_ model: LunaTextViewModel) {
+        textColor = model.color
+        font = UIFont.systemFont(ofSize: model.size,
+                                      weight: model.weight)
+    }
 }

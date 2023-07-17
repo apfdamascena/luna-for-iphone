@@ -10,7 +10,7 @@ import Foundation
 
 protocol DrawableView {
     
-    associatedtype T
+    associatedtype ViewModel
     
-    func draw(_ model: T)
+    func draw(_ model: ViewModel)
 }

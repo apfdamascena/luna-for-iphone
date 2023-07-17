@@ -12,4 +12,5 @@ struct LunaTextViewModel {
     
     let size: CGFloat
     let color: UIColor
+    let weight: UIFont.Weight
 }
