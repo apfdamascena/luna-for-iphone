@@ -26,6 +26,9 @@
 		0DBADDE22A6603F800A10FC3 /* LastDayMenstruationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDDD2A6603F800A10FC3 /* LastDayMenstruationViewController.swift */; };
 		0DBADDE72A66044600A10FC3 /* UIView+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDE62A66044600A10FC3 /* UIView+Preview.swift */; };
 		0DBADDE92A66045700A10FC3 /* UIViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDE82A66045700A10FC3 /* UIViewController+Preview.swift */; };
+		2814909EB8D2BDC1D5AA5874 /* Pods_lunaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33837198E1A2D686B82FD9A5 /* Pods_lunaTests.framework */; };
+		6994CDD4C9481D9C0BE8F427 /* Pods_luna_lunaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72D64B781A7543B9B9BB027 /* Pods_luna_lunaUITests.framework */; };
+		EA84604FAF8A4EF699191266 /* Pods_luna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA252E2368804117A5E627F6 /* Pods_luna.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08D186E62F83C3701D60F993 /* Pods-luna.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna.release.xcconfig"; path = "Target Support Files/Pods-luna/Pods-luna.release.xcconfig"; sourceTree = "<group>"; };
 		0DBADD952A65FDF100A10FC3 /* luna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = luna.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBADD982A65FDF100A10FC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DBADD9A2A65FDF100A10FC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,14 @@
 		0DBADDDD2A6603F800A10FC3 /* LastDayMenstruationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastDayMenstruationViewController.swift; sourceTree = "<group>"; };
 		0DBADDE62A66044600A10FC3 /* UIView+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
 		0DBADDE82A66045700A10FC3 /* UIViewController+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
+		33837198E1A2D686B82FD9A5 /* Pods_lunaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lunaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CD2EB575C89A943BE87F57E /* Pods-lunaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lunaTests.release.xcconfig"; path = "Target Support Files/Pods-lunaTests/Pods-lunaTests.release.xcconfig"; sourceTree = "<group>"; };
+		40083797C335396142E4E31B /* Pods-luna-lunaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna-lunaUITests.debug.xcconfig"; path = "Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		46B376156DE621DEBE58A794 /* Pods-luna-lunaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna-lunaUITests.release.xcconfig"; path = "Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5295EDDCBCE10935681952A4 /* Pods-luna.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna.debug.xcconfig"; path = "Target Support Files/Pods-luna/Pods-luna.debug.xcconfig"; sourceTree = "<group>"; };
+		C72D64B781A7543B9B9BB027 /* Pods_luna_lunaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luna_lunaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D479E806F71C261B7BE2C777 /* Pods-lunaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lunaTests.debug.xcconfig"; path = "Target Support Files/Pods-lunaTests/Pods-lunaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA252E2368804117A5E627F6 /* Pods_luna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA84604FAF8A4EF699191266 /* Pods_luna.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2814909EB8D2BDC1D5AA5874 /* Pods_lunaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6994CDD4C9481D9C0BE8F427 /* Pods_luna_lunaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +118,8 @@
 				0DBADDB12A65FDF300A10FC3 /* lunaTests */,
 				0DBADDBB2A65FDF300A10FC3 /* lunaUITests */,
 				0DBADD962A65FDF100A10FC3 /* Products */,
+				E1362888AE372F99EAD49303 /* Pods */,
+				44D481D3F52D76C9157564E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -229,6 +246,30 @@
 			name = Preview;
 			sourceTree = "<group>";
 		};
+		44D481D3F52D76C9157564E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA252E2368804117A5E627F6 /* Pods_luna.framework */,
+				C72D64B781A7543B9B9BB027 /* Pods_luna_lunaUITests.framework */,
+				33837198E1A2D686B82FD9A5 /* Pods_lunaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1362888AE372F99EAD49303 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5295EDDCBCE10935681952A4 /* Pods-luna.debug.xcconfig */,
+				08D186E62F83C3701D60F993 /* Pods-luna.release.xcconfig */,
+				40083797C335396142E4E31B /* Pods-luna-lunaUITests.debug.xcconfig */,
+				46B376156DE621DEBE58A794 /* Pods-luna-lunaUITests.release.xcconfig */,
+				D479E806F71C261B7BE2C777 /* Pods-lunaTests.debug.xcconfig */,
+				3CD2EB575C89A943BE87F57E /* Pods-lunaTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -236,9 +277,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DBADDC22A65FDF300A10FC3 /* Build configuration list for PBXNativeTarget "luna" */;
 			buildPhases = (
+				FD1041872EAABF4892646539 /* [CP] Check Pods Manifest.lock */,
 				0DBADD912A65FDF100A10FC3 /* Sources */,
 				0DBADD922A65FDF100A10FC3 /* Frameworks */,
 				0DBADD932A65FDF100A10FC3 /* Resources */,
+				E2A77B1EA3955B14217C863A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +296,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DBADDC52A65FDF300A10FC3 /* Build configuration list for PBXNativeTarget "lunaTests" */;
 			buildPhases = (
+				82EC186ABB682E650EA75819 /* [CP] Check Pods Manifest.lock */,
 				0DBADDAA2A65FDF300A10FC3 /* Sources */,
 				0DBADDAB2A65FDF300A10FC3 /* Frameworks */,
 				0DBADDAC2A65FDF300A10FC3 /* Resources */,
@@ -271,9 +315,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DBADDC82A65FDF300A10FC3 /* Build configuration list for PBXNativeTarget "lunaUITests" */;
 			buildPhases = (
+				78D7736E3CA4C513F406F810 /* [CP] Check Pods Manifest.lock */,
 				0DBADDB42A65FDF300A10FC3 /* Sources */,
 				0DBADDB52A65FDF300A10FC3 /* Frameworks */,
 				0DBADDB62A65FDF300A10FC3 /* Resources */,
+				1A6E2E5F053CFE753A02C55D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -353,6 +399,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A6E2E5F053CFE753A02C55D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78D7736E3CA4C513F406F810 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-luna-lunaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82EC186ABB682E650EA75819 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lunaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2A77B1EA3955B14217C863A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-luna/Pods-luna-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-luna/Pods-luna-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-luna/Pods-luna-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD1041872EAABF4892646539 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-luna-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0DBADD912A65FDF100A10FC3 /* Sources */ = {
@@ -536,6 +685,7 @@
 		};
 		0DBADDC32A65FDF300A10FC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5295EDDCBCE10935681952A4 /* Pods-luna.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -563,6 +713,7 @@
 		};
 		0DBADDC42A65FDF300A10FC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08D186E62F83C3701D60F993 /* Pods-luna.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -590,6 +741,7 @@
 		};
 		0DBADDC62A65FDF300A10FC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D479E806F71C261B7BE2C777 /* Pods-lunaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -610,6 +762,7 @@
 		};
 		0DBADDC72A65FDF300A10FC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CD2EB575C89A943BE87F57E /* Pods-lunaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -630,6 +783,7 @@
 		};
 		0DBADDC92A65FDF300A10FC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40083797C335396142E4E31B /* Pods-luna-lunaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -648,6 +802,7 @@
 		};
 		0DBADDCA2A65FDF300A10FC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46B376156DE621DEBE58A794 /* Pods-luna-lunaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
