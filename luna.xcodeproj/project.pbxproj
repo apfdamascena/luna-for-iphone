@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D7C73A62A67566700677D1E /* Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D7C73A52A67566700677D1E /* Constants.strings */; };
+		0D7C73AD2A67580D00677D1E /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */; };
+		0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */; };
 		0DBADD992A65FDF100A10FC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADD982A65FDF100A10FC3 /* AppDelegate.swift */; };
 		0DBADD9B2A65FDF100A10FC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADD9A2A65FDF100A10FC3 /* SceneDelegate.swift */; };
 		0DBADDA32A65FDF100A10FC3 /* luna.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDA12A65FDF100A10FC3 /* luna.xcdatamodeld */; };
@@ -52,6 +55,9 @@
 
 /* Begin PBXFileReference section */
 		08D186E62F83C3701D60F993 /* Pods-luna.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna.release.xcconfig"; path = "Target Support Files/Pods-luna/Pods-luna.release.xcconfig"; sourceTree = "<group>"; };
+		0D7C73A52A67566700677D1E /* Constants.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Constants.strings; sourceTree = "<group>"; };
+		0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		0DBADD952A65FDF100A10FC3 /* luna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = luna.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBADD982A65FDF100A10FC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DBADD9A2A65FDF100A10FC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +121,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D7C73A92A67578500677D1E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADDE42A66041500A10FC3 /* Extensions */,
+				0DBADDD42A6600B800A10FC3 /* Protocols */,
+				0DBADDCE2A65FF6B00A10FC3 /* Modules */,
+				0DBADDCD2A65FF6400A10FC3 /* Components */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0D7C73AA2A6757A500677D1E /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */,
+				0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */,
+				0D7C73A52A67566700677D1E /* Constants.strings */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		0DBADD8C2A65FDF100A10FC3 = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +167,8 @@
 		0DBADD972A65FDF100A10FC3 /* luna */ = {
 			isa = PBXGroup;
 			children = (
-				0DBADDCC2A65FF5700A10FC3 /* UI */,
+				0D7C73AA2A6757A500677D1E /* Constant */,
+				0D7C73A92A67578500677D1E /* UI */,
 				0DBADDCB2A65FF2A00A10FC3 /* Resources */,
 			);
 			path = luna;
@@ -176,17 +204,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		0DBADDCC2A65FF5700A10FC3 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				0DBADDE42A66041500A10FC3 /* Extensions */,
-				0DBADDD42A6600B800A10FC3 /* Protocols */,
-				0DBADDCE2A65FF6B00A10FC3 /* Modules */,
-				0DBADDCD2A65FF6400A10FC3 /* Components */,
-			);
-			name = UI;
-			sourceTree = "<group>";
-		};
 		0DBADDCD2A65FF6400A10FC3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +211,7 @@
 				0DBADE092A6607BB00A10FC3 /* LunaButton.swift */,
 			);
 			name = Components;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		0DBADDCE2A65FF6B00A10FC3 /* Modules */ = {
@@ -202,6 +220,7 @@
 				0DBADDD92A6603C500A10FC3 /* LastDayMenstruation */,
 			);
 			name = Modules;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		0DBADDD12A66003300A10FC3 /* LunaText */ = {
@@ -220,6 +239,7 @@
 				0DBADDD72A66017600A10FC3 /* DrawableView.swift */,
 			);
 			name = Protocols;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		0DBADDD92A6603C500A10FC3 /* LastDayMenstruation */ = {
@@ -241,6 +261,7 @@
 				0DBADDE52A66042F00A10FC3 /* Preview */,
 			);
 			name = Extensions;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		0DBADDE52A66042F00A10FC3 /* Preview */ = {
@@ -303,6 +324,7 @@
 				0DBADD922A65FDF100A10FC3 /* Frameworks */,
 				0DBADD932A65FDF100A10FC3 /* Resources */,
 				E2A77B1EA3955B14217C863A /* [CP] Embed Pods Frameworks */,
+				0D7C73A32A67556C00677D1E /* Run Build Swift Gen */,
 			);
 			buildRules = (
 			);
@@ -400,6 +422,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D7C73A62A67566700677D1E /* Constants.strings in Resources */,
 				0DBADDA82A65FDF300A10FC3 /* LaunchScreen.storyboard in Resources */,
 				0DBADDA52A65FDF300A10FC3 /* Assets.xcassets in Resources */,
 			);
@@ -422,6 +445,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0D7C73A32A67556C00677D1E /* Run Build Swift Gen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Build Swift Gen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/SwiftGen/bin/swiftgen\"\n";
+		};
 		1A6E2E5F053CFE753A02C55D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -538,8 +579,10 @@
 				0DBADDD82A66017600A10FC3 /* DrawableView.swift in Sources */,
 				0DBADD992A65FDF100A10FC3 /* AppDelegate.swift in Sources */,
 				0DBADD9B2A65FDF100A10FC3 /* SceneDelegate.swift in Sources */,
+				0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */,
 				0DBADDDF2A6603F800A10FC3 /* LastDayMenstruationContract.swift in Sources */,
 				0DBADE0C2A6608F300A10FC3 /* LastDayMenstruationView.swift in Sources */,
+				0D7C73AD2A67580D00677D1E /* Strings+Generated.swift in Sources */,
 				0DBADDD32A66005500A10FC3 /* LunaTextViewModel.swift in Sources */,
 				0DBADDE02A6603F800A10FC3 /* LastDayMenstruationPresenter.swift in Sources */,
 				0DBADDD62A6600CD00A10FC3 /* AnyView.swift in Sources */,

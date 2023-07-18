@@ -9,7 +9,6 @@ import UIKit
 import SnapKit
 
 
-
 class LastDayMenstruationView: UIView, AnyView  {
     
     private let background: UIImageView = {
@@ -85,7 +84,6 @@ class LastDayMenstruationView: UIView, AnyView  {
             $0.top.leading.trailing.bottom.equalToSuperview()
         }
     
-        
         stack.snp.makeConstraints{
             $0.centerX.equalToSuperview()
             $0.centerY.equalToSuperview().offset(-6.su)
