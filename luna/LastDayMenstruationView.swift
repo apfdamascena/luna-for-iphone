@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 
 
+
 class LastDayMenstruationView: UIView, AnyView  {
     
     private let background: UIImageView = {
@@ -39,12 +40,14 @@ class LastDayMenstruationView: UIView, AnyView  {
         return label
     }()
     
+    private let datePickerContainer = UIView()
+    
     private(set) var datePicker: UIDatePicker = {
         let picker = UIDatePicker()
         picker.locale = .current
         picker.datePickerMode = .date
         picker.preferredDatePickerStyle = .compact
-        picker.tintColor = .green
+        picker.tintColor = .red
         return picker
     }()
     
@@ -67,12 +70,12 @@ class LastDayMenstruationView: UIView, AnyView  {
     }
     
     func addSubviews() {
-        
         addSubview(background)
         addSubview(stack)
         stack.addArrangedSubview(title)
-        stack.addArrangedSubview(datePicker)
+        stack.addArrangedSubview(datePickerContainer)
         
+        datePickerContainer.addSubview(datePicker)
         addSubview(nextButton)
     }
     
@@ -81,19 +84,27 @@ class LastDayMenstruationView: UIView, AnyView  {
         background.snp.makeConstraints{
             $0.top.leading.trailing.bottom.equalToSuperview()
         }
-        
-        datePicker.backgroundColor = .red
+    
         
         stack.snp.makeConstraints{
-            $0.centerX.centerY.equalToSuperview()
+            $0.centerX.equalToSuperview()
+            $0.centerY.equalToSuperview().offset(-6.su)
             $0.width.equalToSuperview().inset(3.su)
+        }
+        
+        datePickerContainer.snp.makeConstraints{
+            $0.height.equalTo(4.su)
         }
     
         nextButton.snp.makeConstraints{
-            $0.top.equalTo(stack.snp.bottom).offset(2.su)
+            $0.top.equalTo(stack.snp.bottom).offset(5.su)
             $0.centerX.equalToSuperview()
             $0.width.equalTo(16.su)
             $0.height.equalTo(5.su)
+        }
+        
+        datePicker.snp.makeConstraints{
+            $0.centerX.centerY.equalToSuperview()
         }
     }
 }
