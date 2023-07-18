@@ -11,6 +11,13 @@ import SnapKit
 
 class LastDayMenstruationView: UIView, AnyView  {
     
+    private let background: UIImageView = {
+        let image = UIImage(named: "background")
+        let view = UIImageView(image: image)
+        view.contentMode = .scaleAspectFit
+        return view
+    }()
+    
     private let stack: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
@@ -62,6 +69,7 @@ class LastDayMenstruationView: UIView, AnyView  {
     }
     
     func addSubviews() {
+        addSubview(background)
         addSubview(stack)
         stack.addArrangedSubview(title)
         stack.addArrangedSubview(datePicker)
@@ -71,6 +79,10 @@ class LastDayMenstruationView: UIView, AnyView  {
     }
     
     func addConstraints() {
+        
+        background.snp.makeConstraints{
+            $0.top.leading.trailing.bottom.equalToSuperview()
+        }
         
         stack.snp.makeConstraints{
             $0.centerX.centerY.equalToSuperview()
