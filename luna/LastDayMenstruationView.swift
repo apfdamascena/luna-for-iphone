@@ -12,8 +12,7 @@ import SnapKit
 class LastDayMenstruationView: UIView, AnyView  {
     
     private let background: UIImageView = {
-        let image = UIImage(named: "background")
-        let view = UIImageView(image: image)
+        let view = UIImageView(image: Asset.background.image)
         view.contentMode = .scaleAspectFit
         return view
     }()
@@ -32,7 +31,7 @@ class LastDayMenstruationView: UIView, AnyView  {
                                       color: .red,
                                       weight: .heavy)
         
-        label.text = "Quando foi o início da sua última menstruação?"
+        label.text = L10n.Constants.Content.Label.lastDayMenstruation
         label.numberOfLines = 0
         label.textAlignment = .center
         label.draw(model)
@@ -54,7 +53,7 @@ class LastDayMenstruationView: UIView, AnyView  {
         let label = LunaButton()
         let model = LunaButtonViewModel(style: .normal,
                                         textColor: .white,
-                                        text: "Continuar")
+                                        text: L10n.Constants.Content.Button.continue)
         label.draw(model)
         return label
     }()

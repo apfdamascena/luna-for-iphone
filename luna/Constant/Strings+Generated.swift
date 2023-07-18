@@ -10,13 +10,19 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
-  internal enum Teste {
-    internal enum Testinho {
-      /// Constants.strings
-      ///   luna
-      /// 
-      ///   Created by alexdamascena on 18/07/23.
-      internal static let opa = L10n.tr("Constants", "teste.testinho.opa", fallback: "raiga")
+  internal enum Constants {
+    internal enum Content {
+      internal enum Button {
+        /// Continuar
+        internal static let `continue` = L10n.tr("Constants", "constants.content.button.continue", fallback: "Continuar")
+      }
+      internal enum Label {
+        /// Constants.strings
+        ///   luna
+        /// 
+        ///   Created by alexdamascena on 18/07/23.
+        internal static let lastDayMenstruation = L10n.tr("Constants", "constants.content.label.last_day_menstruation", fallback: "Quando foi o início da sua última menstruação?")
+      }
     }
   }
 }

@@ -6,4 +6,6 @@
   
 */
 
-"teste.testinho.opa"="raiga";
+"constants.content.label.last_day_menstruation"="Quando foi o início da sua última menstruação?";
+
+"constants.content.button.continue"="Continuar";
