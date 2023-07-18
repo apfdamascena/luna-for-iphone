@@ -48,8 +48,6 @@ class LastDayMenstruationView: UIView, AnyView  {
         return picker
     }()
     
-    private let nextButtonContainer = UIView()
-    
     private(set) var nextButton: LunaButton = {
         let label = LunaButton()
         let model = LunaButtonViewModel(style: .normal,
@@ -69,13 +67,13 @@ class LastDayMenstruationView: UIView, AnyView  {
     }
     
     func addSubviews() {
+        
         addSubview(background)
         addSubview(stack)
         stack.addArrangedSubview(title)
         stack.addArrangedSubview(datePicker)
-        stack.addArrangedSubview(nextButtonContainer)
         
-        nextButtonContainer.addSubview(nextButton)
+        addSubview(nextButton)
     }
     
     func addConstraints() {
@@ -84,23 +82,18 @@ class LastDayMenstruationView: UIView, AnyView  {
             $0.top.leading.trailing.bottom.equalToSuperview()
         }
         
+        datePicker.backgroundColor = .red
+        
         stack.snp.makeConstraints{
             $0.centerX.centerY.equalToSuperview()
             $0.width.equalToSuperview().inset(3.su)
         }
-        
-        nextButtonContainer.snp.makeConstraints{
+    
+        nextButton.snp.makeConstraints{
+            $0.top.equalTo(stack.snp.bottom).offset(2.su)
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(16.su)
             $0.height.equalTo(5.su)
         }
-        
-        nextButton.snp.makeConstraints{
-            $0.centerX.height.equalToSuperview()
-            $0.width.equalTo(16.su)
-        }
     }
-    
-    func addAdditionalConfiguration() {
-        layer.cornerRadius = 64
-    }
-
 }

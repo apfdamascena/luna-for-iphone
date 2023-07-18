@@ -28,7 +28,7 @@ class LunaButton: UIButton, AnyView, DrawableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        setupView()
     }
     
     required init?(coder: NSCoder) {
@@ -43,6 +43,10 @@ class LunaButton: UIButton, AnyView, DrawableView {
             .font: UIFont.systemFont(ofSize: 17, weight: .bold)])
         
         setAttributedTitle(textAttributes, for: .normal)
+    }
+    
+    func addAdditionalConfiguration() {
+        layer.cornerRadius = 16
     }
     
 }
