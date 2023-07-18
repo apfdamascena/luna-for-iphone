@@ -12,10 +12,12 @@ class LastDayMenstruationViewController: UIViewController {
     
     var presenter: ViewToPresenterLastDayMenstruationProtocol?
     
+    let lastDayMenstruationView = LastDayMenstruationView()
+    
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .yellow
+        view = lastDayMenstruationView
     }
 
 }

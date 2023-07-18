@@ -11,14 +11,43 @@ import SnapKit
 
 class LastDayMenstruationView: UIView, AnyView  {
     
+    private let stack: UIStackView = {
+        let view = UIStackView()
+        view.axis = .vertical
+        view.alignment = .fill
+        view.spacing = 40
+        return view
+    }()
     
     private let title: LunaText = {
         let label = LunaText()
-        let model = LunaTextViewModel(size: 40,
+        let model = LunaTextViewModel(size: 28,
                                       color: .red,
                                       weight: .heavy)
         
         label.text = "Quando foi o início da sua última menstruação?"
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.draw(model)
+        return label
+    }()
+    
+    private(set) var datePicker: UIDatePicker = {
+        let picker = UIDatePicker()
+        picker.locale = .current
+        picker.datePickerMode = .date
+        picker.preferredDatePickerStyle = .compact
+        picker.tintColor = .green
+        return picker
+    }()
+    
+    private let nextButtonContainer = UIView()
+    
+    private(set) var nextButton: LunaButton = {
+        let label = LunaButton()
+        let model = LunaButtonViewModel(style: .normal,
+                                        textColor: .white,
+                                        text: "Continuar")
         label.draw(model)
         return label
     }()
@@ -33,11 +62,33 @@ class LastDayMenstruationView: UIView, AnyView  {
     }
     
     func addSubviews() {
+        addSubview(stack)
+        stack.addArrangedSubview(title)
+        stack.addArrangedSubview(datePicker)
+        stack.addArrangedSubview(nextButtonContainer)
         
+        nextButtonContainer.addSubview(nextButton)
     }
     
     func addConstraints() {
         
+        stack.snp.makeConstraints{
+            $0.centerX.centerY.equalToSuperview()
+            $0.width.equalToSuperview().inset(3.su)
+        }
+        
+        nextButtonContainer.snp.makeConstraints{
+            $0.height.equalTo(5.su)
+        }
+        
+        nextButton.snp.makeConstraints{
+            $0.centerX.height.equalToSuperview()
+            $0.width.equalTo(16.su)
+        }
+    }
+    
+    func addAdditionalConfiguration() {
+        layer.cornerRadius = 64
     }
 
 }

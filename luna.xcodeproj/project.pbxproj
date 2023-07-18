@@ -27,6 +27,7 @@
 		0DBADDE92A66045700A10FC3 /* UIViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDE82A66045700A10FC3 /* UIViewController+Preview.swift */; };
 		0DBADE0A2A6607BB00A10FC3 /* LunaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADE092A6607BB00A10FC3 /* LunaButton.swift */; };
 		0DBADE0C2A6608F300A10FC3 /* LastDayMenstruationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADE0B2A6608F300A10FC3 /* LastDayMenstruationView.swift */; };
+		0DBADE0F2A660AAE00A10FC3 /* Int+Su.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADE0E2A660AAE00A10FC3 /* Int+Su.swift */; };
 		2814909EB8D2BDC1D5AA5874 /* Pods_lunaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33837198E1A2D686B82FD9A5 /* Pods_lunaTests.framework */; };
 		6994CDD4C9481D9C0BE8F427 /* Pods_luna_lunaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72D64B781A7543B9B9BB027 /* Pods_luna_lunaUITests.framework */; };
 		EA84604FAF8A4EF699191266 /* Pods_luna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA252E2368804117A5E627F6 /* Pods_luna.framework */; };
@@ -75,6 +76,7 @@
 		0DBADDE82A66045700A10FC3 /* UIViewController+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
 		0DBADE092A6607BB00A10FC3 /* LunaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaButton.swift; sourceTree = "<group>"; };
 		0DBADE0B2A6608F300A10FC3 /* LastDayMenstruationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastDayMenstruationView.swift; sourceTree = "<group>"; };
+		0DBADE0E2A660AAE00A10FC3 /* Int+Su.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Su.swift"; sourceTree = "<group>"; };
 		33837198E1A2D686B82FD9A5 /* Pods_lunaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lunaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD2EB575C89A943BE87F57E /* Pods-lunaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lunaTests.release.xcconfig"; path = "Target Support Files/Pods-lunaTests/Pods-lunaTests.release.xcconfig"; sourceTree = "<group>"; };
 		40083797C335396142E4E31B /* Pods-luna-lunaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna-lunaUITests.debug.xcconfig"; path = "Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 		0DBADDE42A66041500A10FC3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0DBADE0D2A660A8E00A10FC3 /* Dimensions */,
 				0DBADDE52A66042F00A10FC3 /* Preview */,
 			);
 			name = Extensions;
@@ -255,6 +258,14 @@
 				0DBADE0B2A6608F300A10FC3 /* LastDayMenstruationView.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		0DBADE0D2A660A8E00A10FC3 /* Dimensions */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADE0E2A660AAE00A10FC3 /* Int+Su.swift */,
+			);
+			name = Dimensions;
 			sourceTree = "<group>";
 		};
 		44D481D3F52D76C9157564E0 /* Frameworks */ = {
@@ -523,6 +534,7 @@
 				0DBADDA32A65FDF100A10FC3 /* luna.xcdatamodeld in Sources */,
 				0DBADDD02A66002800A10FC3 /* LunaText.swift in Sources */,
 				0DBADDE22A6603F800A10FC3 /* LastDayMenstruationViewController.swift in Sources */,
+				0DBADE0F2A660AAE00A10FC3 /* Int+Su.swift in Sources */,
 				0DBADDD82A66017600A10FC3 /* DrawableView.swift in Sources */,
 				0DBADD992A65FDF100A10FC3 /* AppDelegate.swift in Sources */,
 				0DBADD9B2A65FDF100A10FC3 /* SceneDelegate.swift in Sources */,

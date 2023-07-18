@@ -17,6 +17,7 @@ struct LunaButtonViewModel {
     
     let style: LunaButtonStyle
     let textColor: UIColor
+    let text: String
     
 }
 
@@ -36,6 +37,12 @@ class LunaButton: UIButton, AnyView, DrawableView {
     
     func draw(_ model: LunaButtonViewModel) {
         backgroundColor = .purple
+        
+        let textAttributes = NSAttributedString(string: model.text, attributes: [
+            .foregroundColor : UIColor.white,
+            .font: UIFont.systemFont(ofSize: 17, weight: .bold)])
+        
+        setAttributedTitle(textAttributes, for: .normal)
     }
     
 }
