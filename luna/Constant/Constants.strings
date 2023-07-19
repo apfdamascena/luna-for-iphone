@@ -1,0 +1,11 @@
+/* 
+  Constants.strings
+  luna
+
+  Created by alexdamascena on 18/07/23.
+  
+*/
+
+"constants.content.label.last_day_menstruation"="Quando foi o início da sua última menstruação?";
+
+"constants.content.button.continue"="Continuar";

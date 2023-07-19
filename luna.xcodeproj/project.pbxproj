@@ -7,16 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D7C73A62A67566700677D1E /* Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D7C73A52A67566700677D1E /* Constants.strings */; };
+		0D7C73AD2A67580D00677D1E /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */; };
+		0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */; };
+		0D7C73B02A67834100677D1E /* TouchableUserEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AF2A67834100677D1E /* TouchableUserEvent.swift */; };
+		0D7C73BA2A678A5600677D1E /* MenstruationDurationContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73B52A678A5600677D1E /* MenstruationDurationContract.swift */; };
+		0D7C73BB2A678A5600677D1E /* MenstruationDurationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73B62A678A5600677D1E /* MenstruationDurationPresenter.swift */; };
+		0D7C73BC2A678A5600677D1E /* MenstruationDurationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73B72A678A5600677D1E /* MenstruationDurationRouter.swift */; };
+		0D7C73BD2A678A5600677D1E /* MenstruationDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73B82A678A5600677D1E /* MenstruationDurationViewController.swift */; };
 		0DBADD992A65FDF100A10FC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADD982A65FDF100A10FC3 /* AppDelegate.swift */; };
 		0DBADD9B2A65FDF100A10FC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADD9A2A65FDF100A10FC3 /* SceneDelegate.swift */; };
-		0DBADD9D2A65FDF100A10FC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADD9C2A65FDF100A10FC3 /* ViewController.swift */; };
-		0DBADDA02A65FDF100A10FC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DBADD9E2A65FDF100A10FC3 /* Main.storyboard */; };
 		0DBADDA32A65FDF100A10FC3 /* luna.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDA12A65FDF100A10FC3 /* luna.xcdatamodeld */; };
 		0DBADDA52A65FDF300A10FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DBADDA42A65FDF300A10FC3 /* Assets.xcassets */; };
 		0DBADDA82A65FDF300A10FC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DBADDA62A65FDF300A10FC3 /* LaunchScreen.storyboard */; };
 		0DBADDB32A65FDF300A10FC3 /* lunaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDB22A65FDF300A10FC3 /* lunaTests.swift */; };
 		0DBADDBD2A65FDF300A10FC3 /* lunaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDBC2A65FDF300A10FC3 /* lunaUITests.swift */; };
 		0DBADDBF2A65FDF300A10FC3 /* lunaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDBE2A65FDF300A10FC3 /* lunaUITestsLaunchTests.swift */; };
+		0DBADDD02A66002800A10FC3 /* LunaText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDCF2A66002800A10FC3 /* LunaText.swift */; };
+		0DBADDD32A66005500A10FC3 /* LunaTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDD22A66005500A10FC3 /* LunaTextViewModel.swift */; };
+		0DBADDD62A6600CD00A10FC3 /* AnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDD52A6600CD00A10FC3 /* AnyView.swift */; };
+		0DBADDD82A66017600A10FC3 /* DrawableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDD72A66017600A10FC3 /* DrawableView.swift */; };
+		0DBADDDF2A6603F800A10FC3 /* LastDayMenstruationContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDDA2A6603F800A10FC3 /* LastDayMenstruationContract.swift */; };
+		0DBADDE02A6603F800A10FC3 /* LastDayMenstruationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDDB2A6603F800A10FC3 /* LastDayMenstruationPresenter.swift */; };
+		0DBADDE12A6603F800A10FC3 /* LastDayMenstruationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDDC2A6603F800A10FC3 /* LastDayMenstruationRouter.swift */; };
+		0DBADDE22A6603F800A10FC3 /* LastDayMenstruationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDDD2A6603F800A10FC3 /* LastDayMenstruationViewController.swift */; };
+		0DBADDE72A66044600A10FC3 /* UIView+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDE62A66044600A10FC3 /* UIView+Preview.swift */; };
+		0DBADDE92A66045700A10FC3 /* UIViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDE82A66045700A10FC3 /* UIViewController+Preview.swift */; };
+		0DBADE0A2A6607BB00A10FC3 /* LunaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADE092A6607BB00A10FC3 /* LunaButton.swift */; };
+		0DBADE0C2A6608F300A10FC3 /* LastDayMenstruationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADE0B2A6608F300A10FC3 /* LastDayMenstruationView.swift */; };
+		0DBADE0F2A660AAE00A10FC3 /* Int+Su.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADE0E2A660AAE00A10FC3 /* Int+Su.swift */; };
+		2814909EB8D2BDC1D5AA5874 /* Pods_lunaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33837198E1A2D686B82FD9A5 /* Pods_lunaTests.framework */; };
+		6994CDD4C9481D9C0BE8F427 /* Pods_luna_lunaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72D64B781A7543B9B9BB027 /* Pods_luna_lunaUITests.framework */; };
+		EA84604FAF8A4EF699191266 /* Pods_luna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA252E2368804117A5E627F6 /* Pods_luna.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +59,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08D186E62F83C3701D60F993 /* Pods-luna.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna.release.xcconfig"; path = "Target Support Files/Pods-luna/Pods-luna.release.xcconfig"; sourceTree = "<group>"; };
+		0D7C73A52A67566700677D1E /* Constants.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Constants.strings; sourceTree = "<group>"; };
+		0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
+		0D7C73AF2A67834100677D1E /* TouchableUserEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchableUserEvent.swift; sourceTree = "<group>"; };
+		0D7C73B52A678A5600677D1E /* MenstruationDurationContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationContract.swift; sourceTree = "<group>"; };
+		0D7C73B62A678A5600677D1E /* MenstruationDurationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationPresenter.swift; sourceTree = "<group>"; };
+		0D7C73B72A678A5600677D1E /* MenstruationDurationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationRouter.swift; sourceTree = "<group>"; };
+		0D7C73B82A678A5600677D1E /* MenstruationDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationViewController.swift; sourceTree = "<group>"; };
 		0DBADD952A65FDF100A10FC3 /* luna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = luna.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBADD982A65FDF100A10FC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DBADD9A2A65FDF100A10FC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0DBADD9C2A65FDF100A10FC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0DBADD9F2A65FDF100A10FC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DBADDA22A65FDF100A10FC3 /* luna.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = luna.xcdatamodel; sourceTree = "<group>"; };
 		0DBADDA42A65FDF300A10FC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DBADDA72A65FDF300A10FC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +80,27 @@
 		0DBADDB82A65FDF300A10FC3 /* lunaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lunaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBADDBC2A65FDF300A10FC3 /* lunaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lunaUITests.swift; sourceTree = "<group>"; };
 		0DBADDBE2A65FDF300A10FC3 /* lunaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lunaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0DBADDCF2A66002800A10FC3 /* LunaText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaText.swift; sourceTree = "<group>"; };
+		0DBADDD22A66005500A10FC3 /* LunaTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaTextViewModel.swift; sourceTree = "<group>"; };
+		0DBADDD52A6600CD00A10FC3 /* AnyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyView.swift; sourceTree = "<group>"; };
+		0DBADDD72A66017600A10FC3 /* DrawableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawableView.swift; sourceTree = "<group>"; };
+		0DBADDDA2A6603F800A10FC3 /* LastDayMenstruationContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastDayMenstruationContract.swift; sourceTree = "<group>"; };
+		0DBADDDB2A6603F800A10FC3 /* LastDayMenstruationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastDayMenstruationPresenter.swift; sourceTree = "<group>"; };
+		0DBADDDC2A6603F800A10FC3 /* LastDayMenstruationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastDayMenstruationRouter.swift; sourceTree = "<group>"; };
+		0DBADDDD2A6603F800A10FC3 /* LastDayMenstruationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastDayMenstruationViewController.swift; sourceTree = "<group>"; };
+		0DBADDE62A66044600A10FC3 /* UIView+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
+		0DBADDE82A66045700A10FC3 /* UIViewController+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
+		0DBADE092A6607BB00A10FC3 /* LunaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaButton.swift; sourceTree = "<group>"; };
+		0DBADE0B2A6608F300A10FC3 /* LastDayMenstruationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastDayMenstruationView.swift; sourceTree = "<group>"; };
+		0DBADE0E2A660AAE00A10FC3 /* Int+Su.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Su.swift"; sourceTree = "<group>"; };
+		33837198E1A2D686B82FD9A5 /* Pods_lunaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lunaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CD2EB575C89A943BE87F57E /* Pods-lunaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lunaTests.release.xcconfig"; path = "Target Support Files/Pods-lunaTests/Pods-lunaTests.release.xcconfig"; sourceTree = "<group>"; };
+		40083797C335396142E4E31B /* Pods-luna-lunaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna-lunaUITests.debug.xcconfig"; path = "Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		46B376156DE621DEBE58A794 /* Pods-luna-lunaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna-lunaUITests.release.xcconfig"; path = "Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5295EDDCBCE10935681952A4 /* Pods-luna.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna.debug.xcconfig"; path = "Target Support Files/Pods-luna/Pods-luna.debug.xcconfig"; sourceTree = "<group>"; };
+		C72D64B781A7543B9B9BB027 /* Pods_luna_lunaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luna_lunaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D479E806F71C261B7BE2C777 /* Pods-lunaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lunaTests.debug.xcconfig"; path = "Target Support Files/Pods-lunaTests/Pods-lunaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA252E2368804117A5E627F6 /* Pods_luna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA84604FAF8A4EF699191266 /* Pods_luna.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2814909EB8D2BDC1D5AA5874 /* Pods_lunaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +124,65 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6994CDD4C9481D9C0BE8F427 /* Pods_luna_lunaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D7C73A92A67578500677D1E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADDE42A66041500A10FC3 /* Extensions */,
+				0DBADDD42A6600B800A10FC3 /* Protocols */,
+				0DBADDCE2A65FF6B00A10FC3 /* Modules */,
+				0DBADDCD2A65FF6400A10FC3 /* Components */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0D7C73AA2A6757A500677D1E /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */,
+				0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */,
+				0D7C73A52A67566700677D1E /* Constants.strings */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		0D7C73B22A67895E00677D1E /* LastDayMenstruation */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADDDA2A6603F800A10FC3 /* LastDayMenstruationContract.swift */,
+				0DBADDDB2A6603F800A10FC3 /* LastDayMenstruationPresenter.swift */,
+				0DBADDDC2A6603F800A10FC3 /* LastDayMenstruationRouter.swift */,
+				0DBADDDD2A6603F800A10FC3 /* LastDayMenstruationViewController.swift */,
+				0D7C73B32A67897500677D1E /* Views */,
+			);
+			path = LastDayMenstruation;
+			sourceTree = "<group>";
+		};
+		0D7C73B32A67897500677D1E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADE0B2A6608F300A10FC3 /* LastDayMenstruationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0D7C73B42A678A3B00677D1E /* MenstruationDuration */ = {
+			isa = PBXGroup;
+			children = (
+				0D7C73B52A678A5600677D1E /* MenstruationDurationContract.swift */,
+				0D7C73B62A678A5600677D1E /* MenstruationDurationPresenter.swift */,
+				0D7C73B72A678A5600677D1E /* MenstruationDurationRouter.swift */,
+				0D7C73B82A678A5600677D1E /* MenstruationDurationViewController.swift */,
+			);
+			path = MenstruationDuration;
+			sourceTree = "<group>";
+		};
 		0DBADD8C2A65FDF100A10FC3 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +190,8 @@
 				0DBADDB12A65FDF300A10FC3 /* lunaTests */,
 				0DBADDBB2A65FDF300A10FC3 /* lunaUITests */,
 				0DBADD962A65FDF100A10FC3 /* Products */,
+				E1362888AE372F99EAD49303 /* Pods */,
+				44D481D3F52D76C9157564E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +208,9 @@
 		0DBADD972A65FDF100A10FC3 /* luna */ = {
 			isa = PBXGroup;
 			children = (
-				0DBADD982A65FDF100A10FC3 /* AppDelegate.swift */,
-				0DBADD9A2A65FDF100A10FC3 /* SceneDelegate.swift */,
-				0DBADD9C2A65FDF100A10FC3 /* ViewController.swift */,
-				0DBADD9E2A65FDF100A10FC3 /* Main.storyboard */,
-				0DBADDA42A65FDF300A10FC3 /* Assets.xcassets */,
-				0DBADDA62A65FDF300A10FC3 /* LaunchScreen.storyboard */,
-				0DBADDA92A65FDF300A10FC3 /* Info.plist */,
-				0DBADDA12A65FDF100A10FC3 /* luna.xcdatamodeld */,
+				0D7C73AA2A6757A500677D1E /* Constant */,
+				0D7C73A92A67578500677D1E /* UI */,
+				0DBADDCB2A65FF2A00A10FC3 /* Resources */,
 			);
 			path = luna;
 			sourceTree = "<group>";
@@ -130,6 +232,109 @@
 			path = lunaUITests;
 			sourceTree = "<group>";
 		};
+		0DBADDCB2A65FF2A00A10FC3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADDA42A65FDF300A10FC3 /* Assets.xcassets */,
+				0DBADDA62A65FDF300A10FC3 /* LaunchScreen.storyboard */,
+				0DBADDA92A65FDF300A10FC3 /* Info.plist */,
+				0DBADDA12A65FDF100A10FC3 /* luna.xcdatamodeld */,
+				0DBADD982A65FDF100A10FC3 /* AppDelegate.swift */,
+				0DBADD9A2A65FDF100A10FC3 /* SceneDelegate.swift */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0DBADDCD2A65FF6400A10FC3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADDD12A66003300A10FC3 /* LunaText */,
+				0DBADE092A6607BB00A10FC3 /* LunaButton.swift */,
+			);
+			name = Components;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0DBADDCE2A65FF6B00A10FC3 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0D7C73B42A678A3B00677D1E /* MenstruationDuration */,
+				0D7C73B22A67895E00677D1E /* LastDayMenstruation */,
+			);
+			name = Modules;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0DBADDD12A66003300A10FC3 /* LunaText */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADDCF2A66002800A10FC3 /* LunaText.swift */,
+				0DBADDD22A66005500A10FC3 /* LunaTextViewModel.swift */,
+			);
+			name = LunaText;
+			sourceTree = "<group>";
+		};
+		0DBADDD42A6600B800A10FC3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADDD52A6600CD00A10FC3 /* AnyView.swift */,
+				0DBADDD72A66017600A10FC3 /* DrawableView.swift */,
+				0D7C73AF2A67834100677D1E /* TouchableUserEvent.swift */,
+			);
+			name = Protocols;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0DBADDE42A66041500A10FC3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADE0D2A660A8E00A10FC3 /* Dimensions */,
+				0DBADDE52A66042F00A10FC3 /* Preview */,
+			);
+			name = Extensions;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0DBADDE52A66042F00A10FC3 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADDE62A66044600A10FC3 /* UIView+Preview.swift */,
+				0DBADDE82A66045700A10FC3 /* UIViewController+Preview.swift */,
+			);
+			name = Preview;
+			sourceTree = "<group>";
+		};
+		0DBADE0D2A660A8E00A10FC3 /* Dimensions */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADE0E2A660AAE00A10FC3 /* Int+Su.swift */,
+			);
+			name = Dimensions;
+			sourceTree = "<group>";
+		};
+		44D481D3F52D76C9157564E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA252E2368804117A5E627F6 /* Pods_luna.framework */,
+				C72D64B781A7543B9B9BB027 /* Pods_luna_lunaUITests.framework */,
+				33837198E1A2D686B82FD9A5 /* Pods_lunaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1362888AE372F99EAD49303 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5295EDDCBCE10935681952A4 /* Pods-luna.debug.xcconfig */,
+				08D186E62F83C3701D60F993 /* Pods-luna.release.xcconfig */,
+				40083797C335396142E4E31B /* Pods-luna-lunaUITests.debug.xcconfig */,
+				46B376156DE621DEBE58A794 /* Pods-luna-lunaUITests.release.xcconfig */,
+				D479E806F71C261B7BE2C777 /* Pods-lunaTests.debug.xcconfig */,
+				3CD2EB575C89A943BE87F57E /* Pods-lunaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +342,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DBADDC22A65FDF300A10FC3 /* Build configuration list for PBXNativeTarget "luna" */;
 			buildPhases = (
+				FD1041872EAABF4892646539 /* [CP] Check Pods Manifest.lock */,
+				0D7C73A32A67556C00677D1E /* Run Build Swift Gen */,
 				0DBADD912A65FDF100A10FC3 /* Sources */,
 				0DBADD922A65FDF100A10FC3 /* Frameworks */,
 				0DBADD932A65FDF100A10FC3 /* Resources */,
+				E2A77B1EA3955B14217C863A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +362,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DBADDC52A65FDF300A10FC3 /* Build configuration list for PBXNativeTarget "lunaTests" */;
 			buildPhases = (
+				82EC186ABB682E650EA75819 /* [CP] Check Pods Manifest.lock */,
 				0DBADDAA2A65FDF300A10FC3 /* Sources */,
 				0DBADDAB2A65FDF300A10FC3 /* Frameworks */,
 				0DBADDAC2A65FDF300A10FC3 /* Resources */,
@@ -172,9 +381,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DBADDC82A65FDF300A10FC3 /* Build configuration list for PBXNativeTarget "lunaUITests" */;
 			buildPhases = (
+				78D7736E3CA4C513F406F810 /* [CP] Check Pods Manifest.lock */,
 				0DBADDB42A65FDF300A10FC3 /* Sources */,
 				0DBADDB52A65FDF300A10FC3 /* Frameworks */,
 				0DBADDB62A65FDF300A10FC3 /* Resources */,
+				1A6E2E5F053CFE753A02C55D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,9 +445,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D7C73A62A67566700677D1E /* Constants.strings in Resources */,
 				0DBADDA82A65FDF300A10FC3 /* LaunchScreen.storyboard in Resources */,
 				0DBADDA52A65FDF300A10FC3 /* Assets.xcassets in Resources */,
-				0DBADDA02A65FDF100A10FC3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,15 +467,155 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D7C73A32A67556C00677D1E /* Run Build Swift Gen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Build Swift Gen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/SwiftGen/bin/swiftgen\"\n";
+		};
+		1A6E2E5F053CFE753A02C55D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78D7736E3CA4C513F406F810 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-luna-lunaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82EC186ABB682E650EA75819 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lunaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2A77B1EA3955B14217C863A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-luna/Pods-luna-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-luna/Pods-luna-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-luna/Pods-luna-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD1041872EAABF4892646539 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-luna-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0DBADD912A65FDF100A10FC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DBADD9D2A65FDF100A10FC3 /* ViewController.swift in Sources */,
+				0DBADDE92A66045700A10FC3 /* UIViewController+Preview.swift in Sources */,
+				0DBADDE12A6603F800A10FC3 /* LastDayMenstruationRouter.swift in Sources */,
 				0DBADDA32A65FDF100A10FC3 /* luna.xcdatamodeld in Sources */,
+				0DBADDD02A66002800A10FC3 /* LunaText.swift in Sources */,
+				0DBADDE22A6603F800A10FC3 /* LastDayMenstruationViewController.swift in Sources */,
+				0D7C73B02A67834100677D1E /* TouchableUserEvent.swift in Sources */,
+				0D7C73BC2A678A5600677D1E /* MenstruationDurationRouter.swift in Sources */,
+				0DBADE0F2A660AAE00A10FC3 /* Int+Su.swift in Sources */,
+				0D7C73BD2A678A5600677D1E /* MenstruationDurationViewController.swift in Sources */,
+				0DBADDD82A66017600A10FC3 /* DrawableView.swift in Sources */,
 				0DBADD992A65FDF100A10FC3 /* AppDelegate.swift in Sources */,
 				0DBADD9B2A65FDF100A10FC3 /* SceneDelegate.swift in Sources */,
+				0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */,
+				0DBADDDF2A6603F800A10FC3 /* LastDayMenstruationContract.swift in Sources */,
+				0D7C73BB2A678A5600677D1E /* MenstruationDurationPresenter.swift in Sources */,
+				0DBADE0C2A6608F300A10FC3 /* LastDayMenstruationView.swift in Sources */,
+				0D7C73AD2A67580D00677D1E /* Strings+Generated.swift in Sources */,
+				0DBADDD32A66005500A10FC3 /* LunaTextViewModel.swift in Sources */,
+				0DBADDE02A6603F800A10FC3 /* LastDayMenstruationPresenter.swift in Sources */,
+				0DBADDD62A6600CD00A10FC3 /* AnyView.swift in Sources */,
+				0DBADDE72A66044600A10FC3 /* UIView+Preview.swift in Sources */,
+				0D7C73BA2A678A5600677D1E /* MenstruationDurationContract.swift in Sources */,
+				0DBADE0A2A6607BB00A10FC3 /* LunaButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +652,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0DBADD9E2A65FDF100A10FC3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0DBADD9F2A65FDF100A10FC3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0DBADDA62A65FDF300A10FC3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -436,6 +779,7 @@
 		};
 		0DBADDC32A65FDF300A10FC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5295EDDCBCE10935681952A4 /* Pods-luna.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -446,7 +790,6 @@
 				INFOPLIST_FILE = luna/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -464,6 +807,7 @@
 		};
 		0DBADDC42A65FDF300A10FC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08D186E62F83C3701D60F993 /* Pods-luna.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -474,7 +818,6 @@
 				INFOPLIST_FILE = luna/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -492,6 +835,7 @@
 		};
 		0DBADDC62A65FDF300A10FC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D479E806F71C261B7BE2C777 /* Pods-lunaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +856,7 @@
 		};
 		0DBADDC72A65FDF300A10FC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CD2EB575C89A943BE87F57E /* Pods-lunaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -532,6 +877,7 @@
 		};
 		0DBADDC92A65FDF300A10FC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40083797C335396142E4E31B /* Pods-luna-lunaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -550,6 +896,7 @@
 		};
 		0DBADDCA2A65FDF300A10FC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46B376156DE621DEBE58A794 /* Pods-luna-lunaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
