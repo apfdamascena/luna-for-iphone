@@ -18,9 +18,14 @@ protocol ViewToPresenterLastDayMenstruationProtocol {
     
     var view: PresenterToViewLastDayMenstruationProtocol? { get set }
     var router: PresenterToRouterLastDayMenstruationProtocol? { get set }
+    
+    
+    func userTappedContinue()
 }
 
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterLastDayMenstruationProtocol {
+    
+    func pushMenstruationDuration(on view: PresenterToViewLastDayMenstruationProtocol)
     
 }

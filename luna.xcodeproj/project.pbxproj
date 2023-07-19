@@ -11,6 +11,10 @@
 		0D7C73AD2A67580D00677D1E /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */; };
 		0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */; };
 		0D7C73B02A67834100677D1E /* TouchableUserEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AF2A67834100677D1E /* TouchableUserEvent.swift */; };
+		0D7C73BA2A678A5600677D1E /* MenstruationDurationContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73B52A678A5600677D1E /* MenstruationDurationContract.swift */; };
+		0D7C73BB2A678A5600677D1E /* MenstruationDurationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73B62A678A5600677D1E /* MenstruationDurationPresenter.swift */; };
+		0D7C73BC2A678A5600677D1E /* MenstruationDurationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73B72A678A5600677D1E /* MenstruationDurationRouter.swift */; };
+		0D7C73BD2A678A5600677D1E /* MenstruationDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73B82A678A5600677D1E /* MenstruationDurationViewController.swift */; };
 		0DBADD992A65FDF100A10FC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADD982A65FDF100A10FC3 /* AppDelegate.swift */; };
 		0DBADD9B2A65FDF100A10FC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADD9A2A65FDF100A10FC3 /* SceneDelegate.swift */; };
 		0DBADDA32A65FDF100A10FC3 /* luna.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDA12A65FDF100A10FC3 /* luna.xcdatamodeld */; };
@@ -60,6 +64,10 @@
 		0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		0D7C73AF2A67834100677D1E /* TouchableUserEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchableUserEvent.swift; sourceTree = "<group>"; };
+		0D7C73B52A678A5600677D1E /* MenstruationDurationContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationContract.swift; sourceTree = "<group>"; };
+		0D7C73B62A678A5600677D1E /* MenstruationDurationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationPresenter.swift; sourceTree = "<group>"; };
+		0D7C73B72A678A5600677D1E /* MenstruationDurationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationRouter.swift; sourceTree = "<group>"; };
+		0D7C73B82A678A5600677D1E /* MenstruationDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationViewController.swift; sourceTree = "<group>"; };
 		0DBADD952A65FDF100A10FC3 /* luna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = luna.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBADD982A65FDF100A10FC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DBADD9A2A65FDF100A10FC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +152,37 @@
 			path = Constant;
 			sourceTree = "<group>";
 		};
+		0D7C73B22A67895E00677D1E /* LastDayMenstruation */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADDDA2A6603F800A10FC3 /* LastDayMenstruationContract.swift */,
+				0DBADDDB2A6603F800A10FC3 /* LastDayMenstruationPresenter.swift */,
+				0DBADDDC2A6603F800A10FC3 /* LastDayMenstruationRouter.swift */,
+				0DBADDDD2A6603F800A10FC3 /* LastDayMenstruationViewController.swift */,
+				0D7C73B32A67897500677D1E /* Views */,
+			);
+			path = LastDayMenstruation;
+			sourceTree = "<group>";
+		};
+		0D7C73B32A67897500677D1E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADE0B2A6608F300A10FC3 /* LastDayMenstruationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0D7C73B42A678A3B00677D1E /* MenstruationDuration */ = {
+			isa = PBXGroup;
+			children = (
+				0D7C73B52A678A5600677D1E /* MenstruationDurationContract.swift */,
+				0D7C73B62A678A5600677D1E /* MenstruationDurationPresenter.swift */,
+				0D7C73B72A678A5600677D1E /* MenstruationDurationRouter.swift */,
+				0D7C73B82A678A5600677D1E /* MenstruationDurationViewController.swift */,
+			);
+			path = MenstruationDuration;
+			sourceTree = "<group>";
+		};
 		0DBADD8C2A65FDF100A10FC3 = {
 			isa = PBXGroup;
 			children = (
@@ -219,7 +258,8 @@
 		0DBADDCE2A65FF6B00A10FC3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				0DBADDD92A6603C500A10FC3 /* LastDayMenstruation */,
+				0D7C73B42A678A3B00677D1E /* MenstruationDuration */,
+				0D7C73B22A67895E00677D1E /* LastDayMenstruation */,
 			);
 			name = Modules;
 			path = ..;
@@ -245,18 +285,6 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		0DBADDD92A6603C500A10FC3 /* LastDayMenstruation */ = {
-			isa = PBXGroup;
-			children = (
-				0DBADE082A6607A200A10FC3 /* Views */,
-				0DBADDDA2A6603F800A10FC3 /* LastDayMenstruationContract.swift */,
-				0DBADDDB2A6603F800A10FC3 /* LastDayMenstruationPresenter.swift */,
-				0DBADDDC2A6603F800A10FC3 /* LastDayMenstruationRouter.swift */,
-				0DBADDDD2A6603F800A10FC3 /* LastDayMenstruationViewController.swift */,
-			);
-			name = LastDayMenstruation;
-			sourceTree = "<group>";
-		};
 		0DBADDE42A66041500A10FC3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,14 +302,6 @@
 				0DBADDE82A66045700A10FC3 /* UIViewController+Preview.swift */,
 			);
 			name = Preview;
-			sourceTree = "<group>";
-		};
-		0DBADE082A6607A200A10FC3 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0DBADE0B2A6608F300A10FC3 /* LastDayMenstruationView.swift */,
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 		0DBADE0D2A660A8E00A10FC3 /* Dimensions */ = {
@@ -579,18 +599,22 @@
 				0DBADDD02A66002800A10FC3 /* LunaText.swift in Sources */,
 				0DBADDE22A6603F800A10FC3 /* LastDayMenstruationViewController.swift in Sources */,
 				0D7C73B02A67834100677D1E /* TouchableUserEvent.swift in Sources */,
+				0D7C73BC2A678A5600677D1E /* MenstruationDurationRouter.swift in Sources */,
 				0DBADE0F2A660AAE00A10FC3 /* Int+Su.swift in Sources */,
+				0D7C73BD2A678A5600677D1E /* MenstruationDurationViewController.swift in Sources */,
 				0DBADDD82A66017600A10FC3 /* DrawableView.swift in Sources */,
 				0DBADD992A65FDF100A10FC3 /* AppDelegate.swift in Sources */,
 				0DBADD9B2A65FDF100A10FC3 /* SceneDelegate.swift in Sources */,
 				0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */,
 				0DBADDDF2A6603F800A10FC3 /* LastDayMenstruationContract.swift in Sources */,
+				0D7C73BB2A678A5600677D1E /* MenstruationDurationPresenter.swift in Sources */,
 				0DBADE0C2A6608F300A10FC3 /* LastDayMenstruationView.swift in Sources */,
 				0D7C73AD2A67580D00677D1E /* Strings+Generated.swift in Sources */,
 				0DBADDD32A66005500A10FC3 /* LunaTextViewModel.swift in Sources */,
 				0DBADDE02A6603F800A10FC3 /* LastDayMenstruationPresenter.swift in Sources */,
 				0DBADDD62A6600CD00A10FC3 /* AnyView.swift in Sources */,
 				0DBADDE72A66044600A10FC3 /* UIView+Preview.swift in Sources */,
+				0D7C73BA2A678A5600677D1E /* MenstruationDurationContract.swift in Sources */,
 				0DBADE0A2A6607BB00A10FC3 /* LunaButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

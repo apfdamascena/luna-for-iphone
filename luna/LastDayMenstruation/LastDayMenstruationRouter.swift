@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class LastDayMenstruationRouter: PresenterToRouterLastDayMenstruationProtocol {
-    
+
     static func createModule() -> UIViewController {
         
         let viewController = LastDayMenstruationViewController()
@@ -22,6 +22,13 @@ class LastDayMenstruationRouter: PresenterToRouterLastDayMenstruationProtocol {
         viewController.presenter?.view = viewController
         
         return viewController
+    }
+    
+    func pushMenstruationDuration(on view: PresenterToViewLastDayMenstruationProtocol) {
+        let menstruationDuration = MenstruationDurationRouter.createModule()
+        
+        guard let lastDayMenstruation = view as? LastDayMenstruationViewController else { return }
+        lastDayMenstruation.navigationController?.pushViewController(menstruationDuration, animated: true)
     }
     
 }

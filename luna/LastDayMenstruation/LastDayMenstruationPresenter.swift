@@ -12,4 +12,13 @@ class LastDayMenstruationPresenter: ViewToPresenterLastDayMenstruationProtocol {
 
     var view: PresenterToViewLastDayMenstruationProtocol?
     var router: PresenterToRouterLastDayMenstruationProtocol?
+    
+    func userTappedContinue() {
+        guard let lastDayMenstruationView = view else { return }
+        
+        DispatchQueue.main.async {
+            self.router?.pushMenstruationDuration(on: lastDayMenstruationView)
+        }
+        
+    }
 }

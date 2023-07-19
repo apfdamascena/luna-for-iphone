@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class LastDayMenstruationViewController: UIViewController,
                                          TouchableUserEvent {
@@ -22,6 +23,8 @@ class LastDayMenstruationViewController: UIViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
         view = lastDayMenstruationView
+        
+        addUserTouchTrigger()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -29,9 +32,9 @@ class LastDayMenstruationViewController: UIViewController,
     }
     
     func addUserTouchTrigger() {
-        lastDayMenstruationView.nextButton.rx.tap {
-            
-        }
+        lastDayMenstruationView.nextButton.rx.tap.bind{
+            self.presenter?.userTappedContinue()
+        }.disposed(by: disposeBag)
     }
 
 }
