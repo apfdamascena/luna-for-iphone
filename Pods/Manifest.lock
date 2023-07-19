@@ -1,24 +1,44 @@
 PODS:
+  - Differentiator (5.0.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
   - SnapKit (5.6.0)
   - SwiftGen (6.6.2)
 
 DEPENDENCIES:
+  - RxCocoa
+  - RxDataSources (~> 5.0)
   - RxSwift
   - SnapKit (~> 5.6.0)
   - SwiftGen (~> 6.0)
 
 SPEC REPOS:
   trunk:
+    - Differentiator
+    - RxCocoa
+    - RxDataSources
+    - RxRelay
     - RxSwift
     - SnapKit
     - SwiftGen
 
 SPEC CHECKSUMS:
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwiftGen: 1366a7f71aeef49954ca5a63ba4bef6b0f24138c
 
-PODFILE CHECKSUM: 8f4de885f0290090ffe67120bdb253b0e376074f
+PODFILE CHECKSUM: 2a44b2fcf3918e1bc4606f86fdf1eb6ba4d23476
 
 COCOAPODS: 1.12.0

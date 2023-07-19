@@ -7,17 +7,31 @@
 //
 
 import UIKit
+import RxSwift
 
-class LastDayMenstruationViewController: UIViewController {
-    
+class LastDayMenstruationViewController: UIViewController,
+                                         TouchableUserEvent {
+
     var presenter: ViewToPresenterLastDayMenstruationProtocol?
     
     let lastDayMenstruationView = LastDayMenstruationView()
+    
+    private var disposeBag = DisposeBag()
     
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view = lastDayMenstruationView
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        disposeBag = DisposeBag()
+    }
+    
+    func addUserTouchTrigger() {
+        lastDayMenstruationView.nextButton.rx.tap {
+            
+        }
     }
 
 }
