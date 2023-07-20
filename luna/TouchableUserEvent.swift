@@ -10,5 +10,6 @@ import Foundation
 
 protocol TouchableUserEvent {
     
+    
     func addUserTouchTrigger()
 }
