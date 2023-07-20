@@ -131,17 +131,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D7C73A92A67578500677D1E /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				0DBADDE42A66041500A10FC3 /* Extensions */,
-				0DBADDD42A6600B800A10FC3 /* Protocols */,
-				0DBADDCE2A65FF6B00A10FC3 /* Modules */,
-				0DBADDCD2A65FF6400A10FC3 /* Components */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
 		0D7C73AA2A6757A500677D1E /* Constant */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,8 +186,8 @@
 		0DBADD972A65FDF100A10FC3 /* luna */ = {
 			isa = PBXGroup;
 			children = (
+				0DDA612E2A69D04100CA15C6 /* UI */,
 				0D7C73AA2A6757A500677D1E /* Constant */,
-				0D7C73A92A67578500677D1E /* UI */,
 				0DBADDCB2A65FF2A00A10FC3 /* Resources */,
 			);
 			path = luna;
@@ -234,73 +223,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		0DBADDCD2A65FF6400A10FC3 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				0DBADDD12A66003300A10FC3 /* LunaText */,
-				0DBADE092A6607BB00A10FC3 /* LunaButton.swift */,
-			);
-			name = Components;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		0DBADDCE2A65FF6B00A10FC3 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				0DDA61212A69CEA600CA15C6 /* MenstruationDurantion */,
-				0D7C73B22A67895E00677D1E /* LastDayMenstruation */,
-			);
-			name = Modules;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		0DBADDD12A66003300A10FC3 /* LunaText */ = {
-			isa = PBXGroup;
-			children = (
-				0DBADDCF2A66002800A10FC3 /* LunaText.swift */,
-				0DBADDD22A66005500A10FC3 /* LunaTextViewModel.swift */,
-			);
-			name = LunaText;
-			sourceTree = "<group>";
-		};
-		0DBADDD42A6600B800A10FC3 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				0DBADDD52A6600CD00A10FC3 /* AnyView.swift */,
-				0DBADDD72A66017600A10FC3 /* DrawableView.swift */,
-				0D7C73AF2A67834100677D1E /* TouchableUserEvent.swift */,
-			);
-			name = Protocols;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		0DBADDE42A66041500A10FC3 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				0DBADE0D2A660A8E00A10FC3 /* Dimensions */,
-				0DBADDE52A66042F00A10FC3 /* Preview */,
-			);
-			name = Extensions;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		0DBADDE52A66042F00A10FC3 /* Preview */ = {
-			isa = PBXGroup;
-			children = (
-				0DBADDE62A66044600A10FC3 /* UIView+Preview.swift */,
-				0DBADDE82A66045700A10FC3 /* UIViewController+Preview.swift */,
-			);
-			name = Preview;
-			sourceTree = "<group>";
-		};
-		0DBADE0D2A660A8E00A10FC3 /* Dimensions */ = {
-			isa = PBXGroup;
-			children = (
-				0DBADE0E2A660AAE00A10FC3 /* Int+Su.swift */,
-			);
-			name = Dimensions;
-			sourceTree = "<group>";
-		};
 		0DDA61212A69CEA600CA15C6 /* MenstruationDurantion */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +232,80 @@
 				0DDA61252A69CEC600CA15C6 /* MenstruationDurationViewController.swift */,
 			);
 			path = MenstruationDurantion;
+			sourceTree = "<group>";
+		};
+		0DDA612E2A69D04100CA15C6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0DDA61352A69D11200CA15C6 /* Components */,
+				0DDA61322A69D0D200CA15C6 /* Extensions */,
+				0DDA61302A69D0A400CA15C6 /* Protocols */,
+				0DDA612F2A69D07900CA15C6 /* Modules */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0DDA612F2A69D07900CA15C6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0DDA61212A69CEA600CA15C6 /* MenstruationDurantion */,
+				0D7C73B22A67895E00677D1E /* LastDayMenstruation */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0DDA61302A69D0A400CA15C6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADDD52A6600CD00A10FC3 /* AnyView.swift */,
+				0DBADDD72A66017600A10FC3 /* DrawableView.swift */,
+				0D7C73AF2A67834100677D1E /* TouchableUserEvent.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0DDA61322A69D0D200CA15C6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0DDA61342A69D0ED00CA15C6 /* Preview */,
+				0DDA61332A69D0DD00CA15C6 /* Dimensions */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0DDA61332A69D0DD00CA15C6 /* Dimensions */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADE0E2A660AAE00A10FC3 /* Int+Su.swift */,
+			);
+			path = Dimensions;
+			sourceTree = "<group>";
+		};
+		0DDA61342A69D0ED00CA15C6 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADDE62A66044600A10FC3 /* UIView+Preview.swift */,
+				0DBADDE82A66045700A10FC3 /* UIViewController+Preview.swift */,
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
+		0DDA61352A69D11200CA15C6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADE092A6607BB00A10FC3 /* LunaButton.swift */,
+				0DDA61362A69D11C00CA15C6 /* LunaText */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0DDA61362A69D11C00CA15C6 /* LunaText */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADDCF2A66002800A10FC3 /* LunaText.swift */,
+				0DBADDD22A66005500A10FC3 /* LunaTextViewModel.swift */,
+			);
+			path = LunaText;
 			sourceTree = "<group>";
 		};
 		44D481D3F52D76C9157564E0 /* Frameworks */ = {
