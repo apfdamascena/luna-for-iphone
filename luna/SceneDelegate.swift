@@ -19,8 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         
         
-        let lastDayMenstruation = LastDayMenstruationRouter.createModule()
-        window.rootViewController = UINavigationController(rootViewController: lastDayMenstruation)
+        let onboardingPageControl = OnboardingPageControlRouter.createModule()
+        window.rootViewController = UINavigationController(rootViewController: onboardingPageControl)
         window.makeKeyAndVisible()
         
     }

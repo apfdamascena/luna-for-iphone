@@ -11,6 +11,11 @@
 		0D7C73AD2A67580D00677D1E /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */; };
 		0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */; };
 		0D7C73B02A67834100677D1E /* TouchableUserEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AF2A67834100677D1E /* TouchableUserEvent.swift */; };
+		0DA56C4E2A6B266D00E056C1 /* OnboardingPageControlContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA56C492A6B266D00E056C1 /* OnboardingPageControlContract.swift */; };
+		0DA56C4F2A6B266D00E056C1 /* OnboardingPageControlPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA56C4A2A6B266D00E056C1 /* OnboardingPageControlPresenter.swift */; };
+		0DA56C502A6B266D00E056C1 /* OnboardingPageControlRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA56C4B2A6B266D00E056C1 /* OnboardingPageControlRouter.swift */; };
+		0DA56C512A6B266D00E056C1 /* OnboardingPageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA56C4C2A6B266D00E056C1 /* OnboardingPageControlViewController.swift */; };
+		0DA56C552A6B33AC00E056C1 /* OnboardingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA56C542A6B33AC00E056C1 /* OnboardingButtonView.swift */; };
 		0DBADD992A65FDF100A10FC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADD982A65FDF100A10FC3 /* AppDelegate.swift */; };
 		0DBADD9B2A65FDF100A10FC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADD9A2A65FDF100A10FC3 /* SceneDelegate.swift */; };
 		0DBADDA32A65FDF100A10FC3 /* luna.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDA12A65FDF100A10FC3 /* luna.xcdatamodeld */; };
@@ -64,6 +69,11 @@
 		0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		0D7C73AF2A67834100677D1E /* TouchableUserEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchableUserEvent.swift; sourceTree = "<group>"; };
+		0DA56C492A6B266D00E056C1 /* OnboardingPageControlContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlContract.swift; sourceTree = "<group>"; };
+		0DA56C4A2A6B266D00E056C1 /* OnboardingPageControlPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlPresenter.swift; sourceTree = "<group>"; };
+		0DA56C4B2A6B266D00E056C1 /* OnboardingPageControlRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlRouter.swift; sourceTree = "<group>"; };
+		0DA56C4C2A6B266D00E056C1 /* OnboardingPageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlViewController.swift; sourceTree = "<group>"; };
+		0DA56C542A6B33AC00E056C1 /* OnboardingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButtonView.swift; sourceTree = "<group>"; };
 		0DBADD952A65FDF100A10FC3 /* luna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = luna.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBADD982A65FDF100A10FC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DBADD9A2A65FDF100A10FC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +171,26 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		0DA56C482A6B263C00E056C1 /* OnboardingPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				0DA56C532A6B338D00E056C1 /* Views */,
+				0DA56C492A6B266D00E056C1 /* OnboardingPageControlContract.swift */,
+				0DA56C4A2A6B266D00E056C1 /* OnboardingPageControlPresenter.swift */,
+				0DA56C4B2A6B266D00E056C1 /* OnboardingPageControlRouter.swift */,
+				0DA56C4C2A6B266D00E056C1 /* OnboardingPageControlViewController.swift */,
+			);
+			path = OnboardingPageControl;
+			sourceTree = "<group>";
+		};
+		0DA56C532A6B338D00E056C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0DA56C542A6B33AC00E056C1 /* OnboardingButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0DBADD8C2A65FDF100A10FC3 = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +278,7 @@
 		0DDA612F2A69D07900CA15C6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0DA56C482A6B263C00E056C1 /* OnboardingPageControl */,
 				0DDA61212A69CEA600CA15C6 /* MenstruationDurantion */,
 				0D7C73B22A67895E00677D1E /* LastDayMenstruation */,
 			);
@@ -594,13 +625,18 @@
 				0DBADDA32A65FDF100A10FC3 /* luna.xcdatamodeld in Sources */,
 				0DBADDD02A66002800A10FC3 /* LunaText.swift in Sources */,
 				0DBADDE22A6603F800A10FC3 /* LastDayMenstruationViewController.swift in Sources */,
+				0DA56C4E2A6B266D00E056C1 /* OnboardingPageControlContract.swift in Sources */,
 				0D7C73B02A67834100677D1E /* TouchableUserEvent.swift in Sources */,
 				0DDA61292A69CEC600CA15C6 /* MenstruationDurationRouter.swift in Sources */,
 				0DBADE0F2A660AAE00A10FC3 /* Int+Su.swift in Sources */,
+				0DA56C512A6B266D00E056C1 /* OnboardingPageControlViewController.swift in Sources */,
 				0DDA612A2A69CEC600CA15C6 /* MenstruationDurationViewController.swift in Sources */,
+				0DA56C552A6B33AC00E056C1 /* OnboardingButtonView.swift in Sources */,
 				0DBADDD82A66017600A10FC3 /* DrawableView.swift in Sources */,
 				0DBADD992A65FDF100A10FC3 /* AppDelegate.swift in Sources */,
 				0DBADD9B2A65FDF100A10FC3 /* SceneDelegate.swift in Sources */,
+				0DA56C4F2A6B266D00E056C1 /* OnboardingPageControlPresenter.swift in Sources */,
+				0DA56C502A6B266D00E056C1 /* OnboardingPageControlRouter.swift in Sources */,
 				0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */,
 				0DBADDDF2A6603F800A10FC3 /* LastDayMenstruationContract.swift in Sources */,
 				0DDA61282A69CEC600CA15C6 /* MenstruationDurationPresenter.swift in Sources */,
