@@ -11,29 +11,24 @@ import SnapKit
 
 class LastDayMenstruationView: UIView, AnyView  {
     
-    private let background: UIImageView = {
-        let view = UIImageView(image: Asset.background.image)
-        view.contentMode = .scaleAspectFit
-        return view
-    }()
     
     private let stack: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
         view.alignment = .fill
-        view.spacing = 40
+        view.spacing = 4.su
         return view
     }()
     
     private let title: LunaText = {
         let label = LunaText()
-        let model = LunaTextViewModel(size: 28,
-                                      color: .red,
-                                      weight: .heavy)
+        let model = LunaTextViewModel(size: 31,
+                                      color: .black,
+                                      weight: .regular)
         
         label.text = L10n.Constants.Content.Label.lastDayMenstruation
         label.numberOfLines = 0
-        label.textAlignment = .center
+        label.textAlignment = .left
         label.draw(model)
         return label
     }()
@@ -44,7 +39,7 @@ class LastDayMenstruationView: UIView, AnyView  {
         let picker = UIDatePicker()
         picker.locale = .current
         picker.datePickerMode = .date
-        picker.preferredDatePickerStyle = .compact
+        picker.preferredDatePickerStyle = .inline
         picker.tintColor = .red
         return picker
     }()
@@ -68,7 +63,6 @@ class LastDayMenstruationView: UIView, AnyView  {
     }
     
     func addSubviews() {
-        addSubview(background)
         addSubview(stack)
         stack.addArrangedSubview(title)
         stack.addArrangedSubview(datePickerContainer)
@@ -79,10 +73,8 @@ class LastDayMenstruationView: UIView, AnyView  {
     
     func addConstraints() {
         
-        background.snp.makeConstraints{
-            $0.top.leading.trailing.bottom.equalToSuperview()
-        }
-    
+        stack.backgroundColor = .yellow
+
         stack.snp.makeConstraints{
             $0.centerX.equalToSuperview()
             $0.centerY.equalToSuperview().offset(-6.su)
@@ -103,5 +95,9 @@ class LastDayMenstruationView: UIView, AnyView  {
         datePicker.snp.makeConstraints{
             $0.centerX.centerY.equalToSuperview()
         }
+    }
+    
+    func addAdditionalConfiguration() {
+        backgroundColor = .white
     }
 }

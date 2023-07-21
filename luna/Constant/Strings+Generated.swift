@@ -21,7 +21,7 @@ internal enum L10n {
         ///   luna
         /// 
         ///   Created by alexdamascena on 18/07/23.
-        internal static let lastDayMenstruation = L10n.tr("Constants", "constants.content.label.last_day_menstruation", fallback: "Quando foi o início da sua última menstruação?")
+        internal static let lastDayMenstruation = L10n.tr("Constants", "constants.content.label.last_day_menstruation", fallback: "Quando foi o início da\nsua última menstruação?")
       }
     }
   }
