@@ -28,9 +28,9 @@ class LastDayMenstruationViewController: UIViewController,
     }
     
     func addUserTouchTrigger() {
-        lastDayMenstruationView.nextButton.rx.tap.bind{
-            self.presenter?.userTappedContinue()
-        }.disposed(by: disposeBag)
+//        lastDayMenstruationView.nextButton.rx.tap.bind{
+//            self.presenter?.userTappedContinue()
+//        }.disposed(by: disposeBag)
     }
 
 }
