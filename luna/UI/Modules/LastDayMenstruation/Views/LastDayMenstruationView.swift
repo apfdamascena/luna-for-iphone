@@ -17,6 +17,7 @@ class LastDayMenstruationView: UIView, AnyView  {
         view.axis = .vertical
         view.alignment = .fill
         view.spacing = 4.su
+    
         return view
     }()
     
@@ -40,19 +41,10 @@ class LastDayMenstruationView: UIView, AnyView  {
         picker.locale = .current
         picker.datePickerMode = .date
         picker.preferredDatePickerStyle = .inline
-        picker.tintColor = .red
+        picker.tintColor = .black
         return picker
     }()
     
-    private(set) var nextButton: LunaButton = {
-        let label = LunaButton()
-        let model = LunaButtonViewModel(style: .normal,
-                                        textColor: .white,
-                                        text: L10n.Constants.Content.Button.continue)
-        label.draw(model)
-        return label
-    }()
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -66,35 +58,25 @@ class LastDayMenstruationView: UIView, AnyView  {
         addSubview(stack)
         stack.addArrangedSubview(title)
         stack.addArrangedSubview(datePickerContainer)
-        
         datePickerContainer.addSubview(datePicker)
-        addSubview(nextButton)
     }
     
     func addConstraints() {
         
-        stack.backgroundColor = .yellow
-
+        
         stack.snp.makeConstraints{
-            $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview().offset(-6.su)
-            $0.width.equalToSuperview().inset(3.su)
+            $0.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(5.su)
+            $0.leading.trailing.equalToSuperview().inset(3.su)
+        }
+        
+        title.snp.makeConstraints{
+            $0.height.equalTo(10.su)
         }
         
         datePickerContainer.snp.makeConstraints{
-            $0.height.equalTo(4.su)
+            $0.height.equalTo(40.su)
         }
     
-        nextButton.snp.makeConstraints{
-            $0.top.equalTo(stack.snp.bottom).offset(5.su)
-            $0.centerX.equalToSuperview()
-            $0.width.equalTo(16.su)
-            $0.height.equalTo(5.su)
-        }
-        
-        datePicker.snp.makeConstraints{
-            $0.centerX.centerY.equalToSuperview()
-        }
     }
     
     func addAdditionalConfiguration() {
