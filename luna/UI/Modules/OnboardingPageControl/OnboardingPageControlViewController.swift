@@ -77,12 +77,19 @@ class OnboardingPageControlViewController: UIPageViewController,
         
         onboardingButtons.nextButton.rx.tap.bind {
             guard let currentPage = try? self.datasource?.pageIndex.value() else { return }
+            
+            if currentPage + 1 == self.datasource?.pages.count {
+                self.datasource?.pageIndex.onCompleted()
+            }
+            
             self.datasource?.pageIndex.onNext(currentPage + 1)
         }.disposed(by: disposeBag)
         
         onboardingButtons.backButton.rx.tap.bind {
             guard let currentPage = try? self.datasource?.pageIndex.value() else { return }
-            self.datasource?.pageIndex.onNext(currentPage - 1)
+            let previousCalculate = currentPage - 1
+            let previousPage = previousCalculate > 0 ? previousCalculate : 0
+            self.datasource?.pageIndex.onNext(previousPage)
         }.disposed(by: disposeBag)
         
     }
@@ -91,7 +98,11 @@ class OnboardingPageControlViewController: UIPageViewController,
         datasource?.pageIndex.subscribe(onNext: { pageIndex in
             guard let controller = self.datasource?.pages[pageIndex] else { return }
             self.setViewControllers([controller], direction: .forward, animated: true)
-        }).disposed(by: disposeBag)
+        }, onCompleted: {
+            print("terminou")
+        }
+        
+        ).disposed(by: disposeBag)
     }
 
 }
