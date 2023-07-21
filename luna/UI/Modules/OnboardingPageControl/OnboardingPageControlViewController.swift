@@ -10,6 +10,22 @@ import UIKit
 import RxSwift
 import SnapKit
 
+protocol OnboardingPageControlDataSource {
+    var pageIndex: BehaviorSubject<Int> { get }
+    var pages: [UIViewController] { get }
+}
+
+class OnboardingPageControlDataSourceImpl: OnboardingPageControlDataSource {
+    var pageIndex: BehaviorSubject<Int> = BehaviorSubject(value: 0)
+    
+    var pages: [UIViewController] = [
+        LastDayMenstruationRouter.createModule(),
+        MenstruationDurationRouter.createModule()
+    ]
+
+}
+
+
 class OnboardingPageControlViewController: UIViewController,
                                            AnyView,
                                            TouchableUserEvent {
@@ -18,8 +34,20 @@ class OnboardingPageControlViewController: UIViewController,
     
     private var disposeBag = DisposeBag()
     
-    
     private let onboardingButtons = OnboardingButtonView()
+    
+    private var datasource: OnboardingPageControlDataSource?
+    
+    init(datasource: OnboardingPageControlDataSource){
+        super.init(nibName: nil, bundle: nil)
+        self.datasource = datasource
+        
+        addUserTouchTrigger()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
@@ -30,9 +58,9 @@ class OnboardingPageControlViewController: UIViewController,
     
     func addUserTouchTrigger() {
         
-//        nextButton.rx.tap.bind{
-//            print("oi oi")
-//        }.disposed(by: disposeBag)
+        onboardingButtons.nextButton.rx.tap.bind {
+            print("oi oi oi oi")
+        }.disposed(by: disposeBag)
     }
     
     func addSubviews() {
@@ -62,7 +90,7 @@ import SwiftUI
 @available(iOS 13, *)
 struct OnboardingPageControlViewController_Preview: PreviewProvider {
     static var previews: some View {
-        OnboardingPageControlViewController().showPreview()
+        OnboardingPageControlViewController(datasource: OnboardingPageControlDataSourceImpl()).showPreview()
     }
 }
 

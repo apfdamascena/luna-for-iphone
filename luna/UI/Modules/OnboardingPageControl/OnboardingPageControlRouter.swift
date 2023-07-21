@@ -13,7 +13,7 @@ class OnboardingPageControlRouter: PresenterToRouterOnboardingPageControlProtoco
     
     static func createModule() -> UIViewController {
         
-        let viewController = OnboardingPageControlViewController()
+        let viewController = OnboardingPageControlViewController(datasource: OnboardingPageControlDataSourceImpl())
         
         let presenter: ViewToPresenterOnboardingPageControlProtocol = OnboardingPageControlPresenter()
         
