@@ -10,9 +10,9 @@ import SnapKit
 
 class MenstruationDurationView: UIView, AnyView {
     
-    private let background: UIImageView = {
-        let view = UIImageView(image: Asset.background.image)
-        view.contentMode = .scaleAspectFit
+    private let background: UIView = {
+        let view = UIView()
+        view.backgroundColor = .red
         return view
     }()
     
@@ -22,7 +22,7 @@ class MenstruationDurationView: UIView, AnyView {
         view.alignment = .fill
         return view
     }()
-        
+            
     private let title: LunaText = {
         let label = LunaText()
         let viewModel = LunaTextViewModel(size: 28,
@@ -30,7 +30,7 @@ class MenstruationDurationView: UIView, AnyView {
                                           weight: .heavy)
         label.text = L10n.Constants.Content.Label.menstruationDuration
         label.numberOfLines = 0
-        label.textAlignment = .center
+        label.textAlignment = .left
         label.draw(viewModel)
         return label
     }()
@@ -53,23 +53,44 @@ class MenstruationDurationView: UIView, AnyView {
     }
     
     func addSubviews() {
-        addSubview(stack)
+        addSubview(background)
+        background.addSubview(stack)
         
-        stack.addArrangedSubview(title)
         stack.addArrangedSubview(pickerContainer)
+        stack.addArrangedSubview(title)
 
         pickerContainer.addSubview(picker)
     }
     
     func addConstraints() {
+        
+        background.snp.makeConstraints{
+            $0.leading.trailing.top.bottom.equalToSuperview()
+        }
+        
         stack.snp.makeConstraints{
-            $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview()
+            $0.centerX.centerY.equalToSuperview()
+            $0.leading.equalToSuperview().offset(3.su)
+            $0.trailing.equalToSuperview().offset(-3.su)
+
+        }
+        
+        title.snp.makeConstraints{
+            $0.height.equalToSuperview().offset(10.su)
+        }
+        
+        pickerContainer.snp.makeConstraints{
+            $0.height.equalToSuperview().offset(10.su)
+        }
+        
+        picker.snp.makeConstraints{
+            $0.height.width.equalToSuperview()
+            
         }
     }
     
     func addAdditionalConfiguration() {
-        
+        pickerContainer.backgroundColor = .blue
     }
     
 }

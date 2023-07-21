@@ -12,10 +12,12 @@ class MenstruationDurationViewController: UIViewController {
     
     var presenter: ViewToPresenterMenstruationDurationProtocol?
     
+    let menstruationDurationView = MenstruationDurationView()
+
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view = menstruationDurationView
     }
 
 }
