@@ -64,7 +64,7 @@ class LastDayMenstruationView: UIView, AnyView  {
     func addConstraints() {
         
         stack.snp.makeConstraints{
-            $0.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(5.su)
+            $0.top.equalTo(safeAreaLayoutGuide.snp.top).offset(5.su)
             $0.leading.trailing.equalToSuperview().inset(3.su)
         }
         
