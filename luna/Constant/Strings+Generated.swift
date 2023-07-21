@@ -22,6 +22,9 @@ internal enum L10n {
         /// 
         ///   Created by alexdamascena on 18/07/23.
         internal static let lastDayMenstruation = L10n.tr("Constants", "constants.content.label.last_day_menstruation", fallback: "Quando foi o início da sua última menstruação?")
+        /// Quantos dias dura a
+        /// sua menstruação?
+        internal static let menstruationDuration = L10n.tr("Constants", "constants.content.label.menstruation_duration", fallback: "Quantos dias dura a\nsua menstruação?")
       }
     }
   }
