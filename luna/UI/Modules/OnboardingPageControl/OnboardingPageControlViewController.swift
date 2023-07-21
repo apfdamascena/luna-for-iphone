@@ -22,20 +22,15 @@ class OnboardingPageControlDataSourceImpl: OnboardingPageControlDataSource {
         LastDayMenstruationRouter.createModule(),
         MenstruationDurationRouter.createModule()
     ]
-
 }
-
 
 class OnboardingPageControlViewController: UIViewController,
                                            AnyView,
                                            TouchableUserEvent {
     
     var presenter: ViewToPresenterOnboardingPageControlProtocol?
-    
     private var disposeBag = DisposeBag()
-    
     private let onboardingButtons = OnboardingButtonView()
-    
     private var datasource: OnboardingPageControlDataSource?
     
     init(datasource: OnboardingPageControlDataSource){
@@ -59,7 +54,8 @@ class OnboardingPageControlViewController: UIViewController,
     func addUserTouchTrigger() {
         
         onboardingButtons.nextButton.rx.tap.bind {
-            print("oi oi oi oi")
+            guard let currentPage = try? self.datasource?.pageIndex.value() else { return }
+            self.datasource?.pageIndex.onNext(currentPage + 1)
         }.disposed(by: disposeBag)
     }
     
