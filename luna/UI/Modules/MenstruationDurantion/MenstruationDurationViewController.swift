@@ -29,7 +29,7 @@ class MenstruationDurationViewController: UIViewController {
             .bind(to: menstruationDurationView.picker.rx.itemTitles) { _, item in
                     return "\(item)"
              }.disposed(by: disposeBag)
-
+            
         menstruationDurationView.picker.rx.itemSelected.asObservable().subscribe(onNext: {item in
 
                 //item.row gives you the index of the selected item, so do what you need with                  it
@@ -37,6 +37,7 @@ class MenstruationDurationViewController: UIViewController {
                 //also here you can call .resignFirstResponder() on whatever element brought up the pickerview (e.g. a button) in order to close the pickerview
 
             }).disposed(by: disposeBag)
+        
 
         menstruationDurationView.picker.selectRow(4, inComponent: 0, animated: true)
 
