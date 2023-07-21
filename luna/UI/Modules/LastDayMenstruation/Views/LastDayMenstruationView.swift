@@ -75,7 +75,6 @@ class LastDayMenstruationView: UIView, AnyView  {
         datePickerContainer.snp.makeConstraints{
             $0.height.equalTo(40.su)
         }
-    
     }
     
     func addAdditionalConfiguration() {
