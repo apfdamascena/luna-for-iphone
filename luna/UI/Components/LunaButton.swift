@@ -36,17 +36,15 @@ class LunaButton: UIButton, AnyView, DrawableView {
     }
     
     func draw(_ model: LunaButtonViewModel) {
-        backgroundColor = .purple
-        
-        let textAttributes = NSAttributedString(string: model.text, attributes: [
-            .foregroundColor : UIColor.white,
-            .font: UIFont.systemFont(ofSize: 17, weight: .bold)])
-        
-        setAttributedTitle(textAttributes, for: .normal)
+        configuration?.background.backgroundColor = .black
+        configuration?.title = model.text
     }
     
     func addAdditionalConfiguration() {
-        layer.cornerRadius = 16
+        layer.cornerRadius = 8
+        var configuration = UIButton.Configuration.filled()
+        configuration.contentInsets = NSDirectionalEdgeInsets(top: 14, leading: 20, bottom: 14, trailing: 20)
+        self.configuration = configuration
     }
     
 }
