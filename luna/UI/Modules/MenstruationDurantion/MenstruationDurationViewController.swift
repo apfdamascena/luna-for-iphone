@@ -9,12 +9,19 @@
 import UIKit
 import RxSwift
 
-protocol MenstruationDurationDataSource {
+protocol RangePickerViewDataSource {
     var elements: Observable<[[String]]> { get }
 }
 
-class MenstruationDurationDataSourceImpl: MenstruationDurationDataSource {
-    var elements: Observable<[[String]]> = Observable.just([["1", "2", "3","4","5", "6","7", "8","9","10"]])
+class RangePickerViewDataSourceImpl: RangePickerViewDataSource {
+    var elements: Observable<[[String]]>
+    
+    init(range: ClosedRange<Int>) {
+        let opa = range.map{ element in
+            return String(element)
+        }
+        self.elements = Observable.just([opa])
+    }
 }
 
 class MenstruationDurationViewController: UIViewController, DataSourceEventObservable {
@@ -24,9 +31,9 @@ class MenstruationDurationViewController: UIViewController, DataSourceEventObser
     let menstruationDurationView = MenstruationDurationView()
 
     private let disposeBag = DisposeBag()
-    private var datasource: MenstruationDurationDataSource?
+    private var datasource: RangePickerViewDataSource?
     
-    init(datasource: MenstruationDurationDataSource) {
+    init(datasource: RangePickerViewDataSource) {
         super.init(nibName: nil, bundle: nil)
         self.datasource = datasource
     }
@@ -62,7 +69,7 @@ import RxSwift
 @available(iOS 13, *)
 struct MenstruationDurationViewController_Preview: PreviewProvider {
     static var previews: some View {
-        MenstruationDurationViewController(datasource: MenstruationDurationDataSourceImpl()).showPreview()
+        MenstruationDurationViewController(datasource: RangePickerViewDataSourceImpl(range: 1...20)).showPreview()
     }
 }
 

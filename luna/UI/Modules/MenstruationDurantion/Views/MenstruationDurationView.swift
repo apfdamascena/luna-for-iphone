@@ -93,12 +93,8 @@ class MenstruationDurationView: UIView, AnyView {
         }
         
         picker.snp.makeConstraints{
-            $0.leading.equalToSuperview().offset(10.su)
-            $0.trailing.equalToSuperview().offset(-10.su)
+            $0.trailing.leading.equalToSuperview().inset(10.su)
         }
-    }
-    
-    func addAdditionalConfiguration() {
     }
     
 }
