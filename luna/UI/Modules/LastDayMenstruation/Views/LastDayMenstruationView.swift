@@ -36,7 +36,7 @@ class LastDayMenstruationView: UIView, AnyView  {
     
     private let datePickerContainer = UIView()
     
-    private(set) var datePicker: UIDatePicker = {
+    private(set) lazy var datePicker: UIDatePicker = {
         let picker = UIDatePicker()
         picker.locale = .current
         picker.datePickerMode = .date
