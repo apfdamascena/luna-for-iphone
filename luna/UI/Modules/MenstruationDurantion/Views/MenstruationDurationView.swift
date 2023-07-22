@@ -41,7 +41,6 @@ class MenstruationDurationView: UIView, AnyView {
         
     private(set) var picker: UIPickerView = {
         let picker = UIPickerView()
-        picker.backgroundColor = .red
         return picker
     }()
     
@@ -100,7 +99,6 @@ class MenstruationDurationView: UIView, AnyView {
     }
     
     func addAdditionalConfiguration() {
-        pickerContainer.backgroundColor = .blue
     }
     
 }

@@ -39,6 +39,7 @@
 		2814909EB8D2BDC1D5AA5874 /* Pods_lunaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33837198E1A2D686B82FD9A5 /* Pods_lunaTests.framework */; };
 		6994CDD4C9481D9C0BE8F427 /* Pods_luna_lunaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72D64B781A7543B9B9BB027 /* Pods_luna_lunaUITests.framework */; };
 		BFCAAD3B2A6B19AE00A91CC0 /* MenstruationDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */; };
+		BFF09AFA2A6B599B00749328 /* PickerViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF09AF92A6B599B00749328 /* PickerViewAdapter.swift */; };
 		EA84604FAF8A4EF699191266 /* Pods_luna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA252E2368804117A5E627F6 /* Pods_luna.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,7 @@
 		46B376156DE621DEBE58A794 /* Pods-luna-lunaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna-lunaUITests.release.xcconfig"; path = "Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5295EDDCBCE10935681952A4 /* Pods-luna.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna.debug.xcconfig"; path = "Target Support Files/Pods-luna/Pods-luna.debug.xcconfig"; sourceTree = "<group>"; };
 		BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationView.swift; sourceTree = "<group>"; };
+		BFF09AF92A6B599B00749328 /* PickerViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewAdapter.swift; sourceTree = "<group>"; };
 		C72D64B781A7543B9B9BB027 /* Pods_luna_lunaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luna_lunaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D479E806F71C261B7BE2C777 /* Pods-lunaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lunaTests.debug.xcconfig"; path = "Target Support Files/Pods-lunaTests/Pods-lunaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DA252E2368804117A5E627F6 /* Pods_luna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,6 +242,7 @@
 		0DDA612E2A69D04100CA15C6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BFF09AF82A6B597600749328 /* Adapters */,
 				0DDA61352A69D11200CA15C6 /* Components */,
 				0DDA61322A69D0D200CA15C6 /* Extensions */,
 				0DDA61302A69D0A400CA15C6 /* Protocols */,
@@ -327,6 +330,14 @@
 				BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BFF09AF82A6B597600749328 /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				BFF09AF92A6B599B00749328 /* PickerViewAdapter.swift */,
+			);
+			path = Adapters;
 			sourceTree = "<group>";
 		};
 		E1362888AE372F99EAD49303 /* Pods */ = {
@@ -613,6 +624,7 @@
 				0DBADD992A65FDF100A10FC3 /* AppDelegate.swift in Sources */,
 				BFCAAD3B2A6B19AE00A91CC0 /* MenstruationDurationView.swift in Sources */,
 				0DBADD9B2A65FDF100A10FC3 /* SceneDelegate.swift in Sources */,
+				BFF09AFA2A6B599B00749328 /* PickerViewAdapter.swift in Sources */,
 				0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */,
 				0DBADDDF2A6603F800A10FC3 /* LastDayMenstruationContract.swift in Sources */,
 				0DDA61282A69CEC600CA15C6 /* MenstruationDurationPresenter.swift in Sources */,
