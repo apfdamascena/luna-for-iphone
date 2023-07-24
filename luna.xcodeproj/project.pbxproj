@@ -18,6 +18,7 @@
 		0D2FC77B2A6F17B50025D8B6 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7762A6F17B50025D8B6 /* HomePresenter.swift */; };
 		0D2FC77C2A6F17B50025D8B6 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7772A6F17B50025D8B6 /* HomeRouter.swift */; };
 		0D2FC77D2A6F17B50025D8B6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7782A6F17B50025D8B6 /* HomeViewController.swift */; };
+		0D2FC7812A6F23290025D8B6 /* UIPageViewControllerDelegateProxy+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7802A6F23290025D8B6 /* UIPageViewControllerDelegateProxy+Rx.swift */; };
 		0D7C73A62A67566700677D1E /* Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D7C73A52A67566700677D1E /* Constants.strings */; };
 		0D7C73AD2A67580D00677D1E /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */; };
 		0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */; };
@@ -105,6 +106,7 @@
 		0D2FC7762A6F17B50025D8B6 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		0D2FC7772A6F17B50025D8B6 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		0D2FC7782A6F17B50025D8B6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0D2FC7802A6F23290025D8B6 /* UIPageViewControllerDelegateProxy+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPageViewControllerDelegateProxy+Rx.swift"; sourceTree = "<group>"; };
 		0D7C73A52A67566700677D1E /* Constants.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Constants.strings; sourceTree = "<group>"; };
 		0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
@@ -229,6 +231,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		0D2FC7822A6F23BD0025D8B6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0D2FC7802A6F23290025D8B6 /* UIPageViewControllerDelegateProxy+Rx.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		0D7C73AA2A6757A500677D1E /* Constant */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +272,7 @@
 		0DA56C482A6B263C00E056C1 /* OnboardingPageControl */ = {
 			isa = PBXGroup;
 			children = (
+				0D2FC7822A6F23BD0025D8B6 /* Extensions */,
 				0D2FC7682A6EF41C0025D8B6 /* Protocols */,
 				0DA56C532A6B338D00E056C1 /* Views */,
 				0DA56C492A6B266D00E056C1 /* OnboardingPageControlContract.swift */,
@@ -857,6 +868,7 @@
 				CA557BD22A6B17C7001DF2BB /* LandingPageView.swift in Sources */,
 				0DBADE0A2A6607BB00A10FC3 /* LunaButton.swift in Sources */,
 				CA557BCE2A6B1743001DF2BB /* LandingPageRouter.swift in Sources */,
+				0D2FC7812A6F23290025D8B6 /* UIPageViewControllerDelegateProxy+Rx.swift in Sources */,
 				A46C05132A6EFE150071ABCE /* CalendarRouter.swift in Sources */,
 				0D2FC7652A6EF3750025D8B6 /* LunaButtonStyle.swift in Sources */,
 				0D2FC7702A6EF4F00025D8B6 /* OnboardingViewFlowDelegate.swift in Sources */,

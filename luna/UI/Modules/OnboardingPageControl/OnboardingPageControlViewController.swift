@@ -27,16 +27,20 @@ class OnboardingPageControlViewController: UIPageViewController,
     
     private(set) var pageControl: OnboardingPageControl
     
+    private var teste: UIPageViewControllerDelegateProxy?
+    
     init(datasource: OnboardingPageControlDataSource){
         self.pageControl = OnboardingPageControl(numberOfPages: 4)
         self.flow = OnboardingViewFlow(numberOfPages: 4)
-        
+  
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
+//        self.teste = UIPageViewControllerDelegateProxy(parentObject: self)
         
         self.datasource = datasource
       
         addUserTouchTrigger()
         addDataSourceEventObservable()
+    
     }
     
     required init?(coder: NSCoder) {
@@ -85,6 +89,8 @@ class OnboardingPageControlViewController: UIPageViewController,
                 self.presenter?.hideContinueAndBackButton()
                 self.presenter?.showLastContinueButton()
             }
+            
+            
 
             self.datasource?.pageIndex.onNext(nextPage)
             self.presenter?.completeOnboardFlowDot(at: nextPage)
@@ -96,10 +102,10 @@ class OnboardingPageControlViewController: UIPageViewController,
             guard let currentPage = try? self.datasource?.pageIndex.value() else { return }
             guard let previousPage = self.flow?.change(newCurrentPage: currentPage - 1) else { return }
             self.datasource?.pageIndex.onNext(previousPage)
-        
+
             self.presenter?.completeOnboardFlowDot(at: previousPage)
         }.disposed(by: disposeBag)
-        
+
         onboardingButtons.lastContinueButton.rx.tap.bind {
             self.presenter?.userTappedContinueButton()
         }.disposed(by: disposeBag)
