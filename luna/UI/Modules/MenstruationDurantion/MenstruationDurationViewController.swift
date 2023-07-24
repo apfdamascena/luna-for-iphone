@@ -53,7 +53,7 @@ class MenstruationDurationViewController: UIViewController, DataSourceEventObser
         datasource?.elements
             .bind(to: menstruationDurationView.picker.rx.items(adapter: PickerViewAdapter()))
             .disposed(by: disposeBag)
-        menstruationDurationView.picker.selectRow(4, inComponent: 0, animated: true)
+        menstruationDurationView.picker.selectRow(5004, inComponent: 0, animated: true)
 
     }
 
