@@ -19,7 +19,7 @@ class OnboardingPageControlPresenter: ViewToPresenterOnboardingPageControlProtoc
         guard let pageViewController = view else { return }
         
         DispatchQueue.main.async {
-            self.router?.pushFourthScreen(on: pageViewController)
+            self.router?.pushCalendarView(on: pageViewController)
         }
     }
     

@@ -29,6 +29,6 @@ protocol ViewToPresenterOnboardingPageControlProtocol {
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterOnboardingPageControlProtocol {
     
-    func pushFourthScreen(on view: PresenterToViewOnboardingPageControlProtocol)
+    func pushCalendarView(on view: PresenterToViewOnboardingPageControlProtocol)
     
 }

@@ -17,6 +17,11 @@ internal enum L10n {
         internal static let `continue` = L10n.tr("Constants", "constants.content.button.continue", fallback: "Continuar")
       }
       internal enum Label {
+        /// Permita que o Luna acesse seu Calendar para planejar seus dias com sabedoria e melhorar o seu bem-estar
+        internal static let calendarSubtitle = L10n.tr("Constants", "constants.content.label.calendar_subtitle", fallback: "Permita que o Luna acesse seu Calendar para planejar seus dias com sabedoria e melhorar o seu bem-estar")
+        /// Consiga ver seu ciclo
+        /// no seu dia a dia
+        internal static let calendarTitle = L10n.tr("Constants", "constants.content.label.calendar_title", fallback: "Consiga ver seu ciclo\nno seu dia a dia")
         /// Constants.strings
         ///   luna
         /// 

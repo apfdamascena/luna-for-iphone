@@ -26,10 +26,10 @@ class OnboardingPageControlRouter: PresenterToRouterOnboardingPageControlProtoco
         return viewController
     }
     
-    func pushFourthScreen(on view: PresenterToViewOnboardingPageControlProtocol) {
-        let fourthScreen = FourthScreenRemoveAfterRouter.createModule()
+    func pushCalendarView(on view: PresenterToViewOnboardingPageControlProtocol) {
+        let calendar = CalendarRouter.createModule()
         
         guard let onboardingController = view as? OnboardingPageControlViewController else { return }
-        onboardingController.navigationController?.pushViewController(fourthScreen, animated: true)
+        onboardingController.navigationController?.pushViewController(calendar, animated: true)
     }
 }
