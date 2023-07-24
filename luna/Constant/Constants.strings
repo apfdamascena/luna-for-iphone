@@ -6,10 +6,15 @@
   
 */
 
-"constants.content.label.last_day_menstruation"="Quando foi o início da sua última menstruação?";
+"constants.content.label.last_day_menstruation"="Quando foi o início da\nsua última menstruação?";
 
 "constants.content.button.continue"="Continuar";
 
+<<<<<<< HEAD
 "constants.content.label.calendar_title"="Consiga ver seu ciclo no seu dia a dia";
 
 "constants.content.label.calendar_subtitle"="Permita que o Luna acesse seu Calendar para planejar seus dias com sabedoria e melhorar o seu bem-estar";
+=======
+
+
+>>>>>>> main

@@ -11,53 +11,39 @@ import SnapKit
 
 class LastDayMenstruationView: UIView, AnyView  {
     
-    private let background: UIImageView = {
-        let view = UIImageView(image: Asset.background.image)
-        view.contentMode = .scaleAspectFit
-        return view
-    }()
-    
     private let stack: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
         view.alignment = .fill
-        view.spacing = 40
+        view.spacing = 4.su
+    
         return view
     }()
     
     private let title: LunaText = {
         let label = LunaText()
-        let model = LunaTextViewModel(size: 28,
-                                      color: .red,
-                                      weight: .heavy)
+        let model = LunaTextViewModel(size: 31,
+                                      color: Asset.primaryGray900.color,
+                                      weight: .regular)
         
         label.text = L10n.Constants.Content.Label.lastDayMenstruation
         label.numberOfLines = 0
-        label.textAlignment = .center
+        label.textAlignment = .left
         label.draw(model)
         return label
     }()
     
     private let datePickerContainer = UIView()
     
-    private(set) var datePicker: UIDatePicker = {
+    private(set) lazy var datePicker: UIDatePicker = {
         let picker = UIDatePicker()
         picker.locale = .current
         picker.datePickerMode = .date
-        picker.preferredDatePickerStyle = .compact
-        picker.tintColor = .red
+        picker.preferredDatePickerStyle = .inline
+        picker.tintColor = Asset.primaryRed500.color
         return picker
     }()
     
-    private(set) var nextButton: LunaButton = {
-        let label = LunaButton()
-        let model = LunaButtonViewModel(style: .normal,
-                                        textColor: .white,
-                                        text: L10n.Constants.Content.Button.continue)
-        label.draw(model)
-        return label
-    }()
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -68,40 +54,29 @@ class LastDayMenstruationView: UIView, AnyView  {
     }
     
     func addSubviews() {
-        addSubview(background)
         addSubview(stack)
         stack.addArrangedSubview(title)
         stack.addArrangedSubview(datePickerContainer)
-        
         datePickerContainer.addSubview(datePicker)
-        addSubview(nextButton)
     }
     
     func addConstraints() {
         
-        background.snp.makeConstraints{
-            $0.top.leading.trailing.bottom.equalToSuperview()
-        }
-    
         stack.snp.makeConstraints{
-            $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview().offset(-6.su)
-            $0.width.equalToSuperview().inset(3.su)
+            $0.top.equalTo(safeAreaLayoutGuide.snp.top).offset(5.su)
+            $0.leading.trailing.equalToSuperview().inset(3.su)
+        }
+        
+        title.snp.makeConstraints{
+            $0.height.equalTo(10.su)
         }
         
         datePickerContainer.snp.makeConstraints{
-            $0.height.equalTo(4.su)
+            $0.height.equalTo(40.su)
         }
+    }
     
-        nextButton.snp.makeConstraints{
-            $0.top.equalTo(stack.snp.bottom).offset(5.su)
-            $0.centerX.equalToSuperview()
-            $0.width.equalTo(16.su)
-            $0.height.equalTo(5.su)
-        }
-        
-        datePicker.snp.makeConstraints{
-            $0.centerX.centerY.equalToSuperview()
-        }
+    func addAdditionalConfiguration() {
+        backgroundColor = .white
     }
 }
