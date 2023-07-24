@@ -15,8 +15,14 @@ internal enum L10n {
       internal enum Button {
         /// Continuar
         internal static let `continue` = L10n.tr("Constants", "constants.content.button.continue", fallback: "Continuar")
+        /// Iniciar
+        internal static let start = L10n.tr("Constants", "constants.content.button.start", fallback: "Iniciar")
       }
       internal enum Label {
+        /// Luna
+        internal static let appName = L10n.tr("Constants", "constants.content.label.app_name", fallback: "Luna")
+        /// Seu ciclo ao seu favor
+        internal static let landingPageDescription = L10n.tr("Constants", "constants.content.label.landing_page_description", fallback: "Seu ciclo ao seu favor")
         /// Constants.strings
         ///   luna
         /// 

@@ -17,8 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        let lastDayMenstruation = LastDayMenstruationRouter.createModule()
-        window.rootViewController = UINavigationController(rootViewController: lastDayMenstruation)
+        let landingPage = LandingPageRouter.createModule()
+        window.rootViewController = UINavigationController(rootViewController: landingPage)
         window.makeKeyAndVisible()
         
     }

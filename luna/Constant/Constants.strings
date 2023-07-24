@@ -6,6 +6,16 @@
   
 */
 
+// Labels
+
 "constants.content.label.last_day_menstruation"="Quando foi o início da sua última menstruação?";
 
+"constants.content.label.app_name"="Luna";
+
+"constants.content.label.landing_page_description"="Seu ciclo ao seu favor";
+
+// Buttons
+
 "constants.content.button.continue"="Continuar";
+
+"constants.content.button.start"="Iniciar";
