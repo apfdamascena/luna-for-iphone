@@ -43,7 +43,6 @@
 		0DCCB9312A6EAFCB00451D63 /* FourthScreenRemoveAfterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCCB92C2A6EAFCB00451D63 /* FourthScreenRemoveAfterPresenter.swift */; };
 		0DCCB9322A6EAFCB00451D63 /* FourthScreenRemoveAfterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCCB92D2A6EAFCB00451D63 /* FourthScreenRemoveAfterRouter.swift */; };
 		0DCCB9332A6EAFCB00451D63 /* FourthScreenRemoveAfterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCCB92E2A6EAFCB00451D63 /* FourthScreenRemoveAfterViewController.swift */; };
-		0DCCB9342A6EAFCB00451D63 /* FourthScreenRemoveAfterComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCCB92F2A6EAFCB00451D63 /* FourthScreenRemoveAfterComponent.swift */; };
 		0DDA61272A69CEC600CA15C6 /* MenstruationDurationContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDA61222A69CEC600CA15C6 /* MenstruationDurationContract.swift */; };
 		0DDA61282A69CEC600CA15C6 /* MenstruationDurationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDA61232A69CEC600CA15C6 /* MenstruationDurationPresenter.swift */; };
 		0DDA61292A69CEC600CA15C6 /* MenstruationDurationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDA61242A69CEC600CA15C6 /* MenstruationDurationRouter.swift */; };
@@ -112,7 +111,6 @@
 		0DCCB92C2A6EAFCB00451D63 /* FourthScreenRemoveAfterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthScreenRemoveAfterPresenter.swift; sourceTree = "<group>"; };
 		0DCCB92D2A6EAFCB00451D63 /* FourthScreenRemoveAfterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthScreenRemoveAfterRouter.swift; sourceTree = "<group>"; };
 		0DCCB92E2A6EAFCB00451D63 /* FourthScreenRemoveAfterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthScreenRemoveAfterViewController.swift; sourceTree = "<group>"; };
-		0DCCB92F2A6EAFCB00451D63 /* FourthScreenRemoveAfterComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthScreenRemoveAfterComponent.swift; sourceTree = "<group>"; };
 		0DDA61222A69CEC600CA15C6 /* MenstruationDurationContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationContract.swift; sourceTree = "<group>"; };
 		0DDA61232A69CEC600CA15C6 /* MenstruationDurationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationPresenter.swift; sourceTree = "<group>"; };
 		0DDA61242A69CEC600CA15C6 /* MenstruationDurationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationRouter.swift; sourceTree = "<group>"; };
@@ -290,7 +288,6 @@
 				0DCCB92C2A6EAFCB00451D63 /* FourthScreenRemoveAfterPresenter.swift */,
 				0DCCB92D2A6EAFCB00451D63 /* FourthScreenRemoveAfterRouter.swift */,
 				0DCCB92E2A6EAFCB00451D63 /* FourthScreenRemoveAfterViewController.swift */,
-				0DCCB92F2A6EAFCB00451D63 /* FourthScreenRemoveAfterComponent.swift */,
 			);
 			path = FourthScreenRemoveAfter;
 			sourceTree = "<group>";
@@ -666,7 +663,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DBADDE92A66045700A10FC3 /* UIViewController+Preview.swift in Sources */,
-				0DCCB9342A6EAFCB00451D63 /* FourthScreenRemoveAfterComponent.swift in Sources */,
 				0DCCB9332A6EAFCB00451D63 /* FourthScreenRemoveAfterViewController.swift in Sources */,
 				0DBADDE12A6603F800A10FC3 /* LastDayMenstruationRouter.swift in Sources */,
 				0DBADDA32A65FDF100A10FC3 /* luna.xcdatamodeld in Sources */,

@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class OnboardingPageControlRouter: PresenterToRouterOnboardingPageControlProtocol {
+
+    
     
     static func createModule() -> UIViewController {
         
@@ -24,4 +26,10 @@ class OnboardingPageControlRouter: PresenterToRouterOnboardingPageControlProtoco
         return viewController
     }
     
+    func pushFourthScreen(on view: PresenterToViewOnboardingPageControlProtocol) {
+        let fourthScreen = FourthScreenRemoveAfterRouter.createModule()
+        
+        guard let onboardingController = view as? OnboardingPageControlViewController else { return }
+        onboardingController.navigationController?.pushViewController(fourthScreen, animated: true)
+    }
 }

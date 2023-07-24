@@ -22,6 +22,8 @@ class OnboardingPageControlDataSourceImpl: OnboardingPageControlDataSource {
     
     var pages: [UIViewController] = [
         LastDayMenstruationRouter.createModule(),
+        MenstruationDurationRouter.createModule(),
+        MenstruationDurationRouter.createModule(),
         MenstruationDurationRouter.createModule()
     ]
 }
@@ -46,7 +48,7 @@ class OnboardingViewFlow: OnboardingViewFlowDelegate {
     
     func change(newCurrentPage: Int) -> Int {
         if newCurrentPage < 0 { return 0 }
-        if newCurrentPage + 1 == numberOfPages { return numberOfPages }
+        if newCurrentPage == numberOfPages  { return numberOfPages  }
         return newCurrentPage
     }
 }
@@ -66,12 +68,14 @@ class OnboardingPageControlViewController: UIPageViewController,
     
     private var disposeBag = DisposeBag()
     
-    private let pageControl = OnboardingPageControl()
+    private(set) var pageControl: OnboardingPageControl
     
     init(datasource: OnboardingPageControlDataSource){
+        self.pageControl = OnboardingPageControl(numberOfPages: 4)
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
+        
         self.datasource = datasource
-        self.flow = OnboardingViewFlow(numberOfPages: 4)
+
         
         addUserTouchTrigger()
         addDataSourceEventObservable()
@@ -123,6 +127,7 @@ class OnboardingPageControlViewController: UIPageViewController,
             }
             
             self.datasource?.pageIndex.onNext(nextPage)
+    
         }.disposed(by: disposeBag)
         
         
@@ -140,10 +145,8 @@ class OnboardingPageControlViewController: UIPageViewController,
             guard let controller = self.datasource?.pages[pageIndex] else { return }
             self.setViewControllers([controller], direction: .forward, animated: true)
         }, onCompleted: {
-            self.presenter.
-        }
-
-        ).disposed(by: disposeBag)
+            self.presenter?.userTappedContinueButton()
+        }).disposed(by: disposeBag)
     }
 
 }
