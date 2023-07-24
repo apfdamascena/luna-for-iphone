@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class OnboardingPageControlRouter: PresenterToRouterOnboardingPageControlProtocol {
+
+    
     
     static func createModule() -> UIViewController {
         
@@ -24,4 +26,10 @@ class OnboardingPageControlRouter: PresenterToRouterOnboardingPageControlProtoco
         return viewController
     }
     
+    func pushCalendarView(on view: PresenterToViewOnboardingPageControlProtocol) {
+        let calendar = CalendarRouter.createModule()
+        
+        guard let onboardingController = view as? OnboardingPageControlViewController else { return }
+        onboardingController.navigationController?.pushViewController(calendar, animated: true)
+    }
 }

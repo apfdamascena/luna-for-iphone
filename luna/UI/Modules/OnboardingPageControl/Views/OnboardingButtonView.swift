@@ -20,7 +20,7 @@ class OnboardingButtonView: UIView, AnyView {
     
     private(set) lazy var nextButton: LunaButton = {
         let button = LunaButton()
-        let model = LunaButtonViewModel(style: .normal,
+        let model = LunaButtonViewModel(style: .primary,
                                         textColor: .white,
                                         text: L10n.Constants.Content.Button.continue)
         
@@ -30,9 +30,9 @@ class OnboardingButtonView: UIView, AnyView {
     
     private(set) lazy var backButton: LunaButton = {
         let button = LunaButton()
-        let model = LunaButtonViewModel(style: .normal,
+        let model = LunaButtonViewModel(style: .secondary,
                                         textColor: .white,
-                                        text: L10n.Constants.Content.Button.continue)
+                                        text: "Voltar")
         button.draw(model)
         return button
     }()

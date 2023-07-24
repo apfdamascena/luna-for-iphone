@@ -9,24 +9,7 @@
 import UIKit
 import RxSwift
 import SnapKit
-
-protocol OnboardingPageControlDataSource {
-    var pageIndex: BehaviorSubject<Int> { get }
-    var pages: [UIViewController] { get }
-}
-
-class OnboardingPageControlDataSourceImpl: OnboardingPageControlDataSource {
-    var pageIndex: BehaviorSubject<Int> = BehaviorSubject(value: 0)
-    
-    var pages: [UIViewController] = [
-        LastDayMenstruationRouter.createModule(),
-        MenstruationDurationRouter.createModule()
-    ]
-}
-
-protocol DataSourceEventObservable {
-    func addDataSourceEventObservable()
-}
+import RxCocoa
 
 class OnboardingPageControlViewController: UIPageViewController,
                                            AnyView,
@@ -34,15 +17,24 @@ class OnboardingPageControlViewController: UIPageViewController,
                                            DataSourceEventObservable {
 
     var presenter: ViewToPresenterOnboardingPageControlProtocol?
-    private var datasource: OnboardingPageControlDataSource?
+    
+    private(set) var datasource: OnboardingPageControlDataSource?
+    private(set) var flow: OnboardingViewFlow?
     
     private let onboardingButtons = OnboardingButtonView()
+    
     private var disposeBag = DisposeBag()
     
+    private(set) var pageControl: OnboardingPageControl
+    
     init(datasource: OnboardingPageControlDataSource){
+        self.pageControl = OnboardingPageControl(numberOfPages: 4)
+        self.flow = OnboardingViewFlow(numberOfPages: 4)
+        
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
+        
         self.datasource = datasource
-
+      
         addUserTouchTrigger()
         addDataSourceEventObservable()
     }
@@ -58,13 +50,22 @@ class OnboardingPageControlViewController: UIPageViewController,
         view.backgroundColor = .white
     }
     
-    func addSubviews() {
-        view.addSubview(onboardingButtons)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.hidesBackButton = true
     }
     
+    func addSubviews() {
+        view.addSubview(onboardingButtons)
+        view.addSubview(pageControl)
+    }
+
     func addConstraints() {
-        onboardingButtons.backgroundColor = .yellow
-    
+        
+        pageControl.snp.makeConstraints{
+            $0.leading.trailing.top.equalTo(view.safeAreaLayoutGuide)
+        }
+
         onboardingButtons.snp.makeConstraints{
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-2.su)
             $0.leading.trailing.equalToSuperview()
@@ -77,36 +78,47 @@ class OnboardingPageControlViewController: UIPageViewController,
         onboardingButtons.nextButton.rx.tap.bind {
             guard let currentPage = try? self.datasource?.pageIndex.value() else { return }
             
-            if currentPage + 1 == self.datasource?.pages.count {
+            guard let nextPage = self.flow?.change(newCurrentPage: currentPage + 1) else { return }
+            if nextPage == self.pageControl.numberOfPages {
                 self.datasource?.pageIndex.onCompleted()
             }
             
-            self.datasource?.pageIndex.onNext(currentPage + 1)
+            self.datasource?.pageIndex.onNext(nextPage)
+            self.presenter?.completeOnboardFlowDot(at: nextPage)
+    
         }.disposed(by: disposeBag)
+        
         
         onboardingButtons.backButton.rx.tap.bind {
             guard let currentPage = try? self.datasource?.pageIndex.value() else { return }
-            let previousCalculate = currentPage - 1
-            let previousPage = previousCalculate > 0 ? previousCalculate : 0
+            guard let previousPage = self.flow?.change(newCurrentPage: currentPage - 1) else { return }
             self.datasource?.pageIndex.onNext(previousPage)
+        
+            self.presenter?.completeOnboardFlowDot(at: previousPage)
         }.disposed(by: disposeBag)
         
     }
     
     func addDataSourceEventObservable() {
+
         datasource?.pageIndex.subscribe(onNext: { pageIndex in
             guard let controller = self.datasource?.pages[pageIndex] else { return }
             self.setViewControllers([controller], direction: .forward, animated: true)
         }, onCompleted: {
-            print("terminou")
-        }
-        
-        ).disposed(by: disposeBag)
+            self.presenter?.userTappedContinueButton()
+        }).disposed(by: disposeBag)
     }
 
 }
 
-extension OnboardingPageControlViewController: PresenterToViewOnboardingPageControlProtocol{
+extension OnboardingPageControlViewController: PresenterToViewOnboardingPageControlProtocol {
+    
+    func completeOnboardFlowDot(at currentPage: Int) {
+        pageControl.completeDotAt(currentPage)
+    }
+    
+    
+    
     // TODO: Implement View Output Methods
 }
 

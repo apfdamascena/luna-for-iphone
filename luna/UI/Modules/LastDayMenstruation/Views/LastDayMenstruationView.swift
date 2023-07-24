@@ -11,7 +11,6 @@ import SnapKit
 
 class LastDayMenstruationView: UIView, AnyView  {
     
-    
     private let stack: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
@@ -24,7 +23,7 @@ class LastDayMenstruationView: UIView, AnyView  {
     private let title: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 31,
-                                      color: .black,
+                                      color: Asset.primaryGray900.color,
                                       weight: .regular)
         
         label.text = L10n.Constants.Content.Label.lastDayMenstruation
@@ -41,7 +40,7 @@ class LastDayMenstruationView: UIView, AnyView  {
         picker.locale = .current
         picker.datePickerMode = .date
         picker.preferredDatePickerStyle = .inline
-        picker.tintColor = .black
+        picker.tintColor = Asset.primaryRed500.color
         return picker
     }()
     
@@ -74,6 +73,10 @@ class LastDayMenstruationView: UIView, AnyView  {
         
         datePickerContainer.snp.makeConstraints{
             $0.height.equalTo(40.su)
+        }
+        
+        datePicker.snp.makeConstraints{
+            $0.leading.trailing.equalToSuperview()
         }
     }
     

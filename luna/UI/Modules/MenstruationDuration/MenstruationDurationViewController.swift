@@ -71,7 +71,7 @@ import RxSwift
 @available(iOS 13, *)
 struct MenstruationDurationViewController_Preview: PreviewProvider {
     static var previews: some View {
-        MenstruationDurationViewController(datasource: RangePickerViewDataSourceImpl(range: 1...20)).showPreview()
+        MenstruationDurationViewController(datasource: RangePickerViewDataSourceImpl(range: 1...30)).showPreview()
     }
 }
 
