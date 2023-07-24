@@ -11,7 +11,6 @@ import SnapKit
 
 class LastDayMenstruationView: UIView, AnyView  {
     
-    
     private let stack: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
