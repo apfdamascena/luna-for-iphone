@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Screen Shot 2022-03-08 at 10.39.57.png",
+      "filename" : "calendarImage.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "calendarImage@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "calendarImage@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

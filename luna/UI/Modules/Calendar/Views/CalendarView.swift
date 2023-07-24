@@ -18,10 +18,9 @@ class CalendarView: UIView, AnyView  {
         return view
     }()
     
-    private let cynara: UIImageView = {
-        let view = UIImageView(image: Asset.cynara.image)
+    private let image: UIImageView = {
+        let view = UIImageView(image: Asset.calendarImage.image)
         view.contentMode = .scaleAspectFit
-        view.layer.cornerRadius = view.frame.height/10
         view.clipsToBounds = true
         return view
     }()
@@ -45,9 +44,14 @@ class CalendarView: UIView, AnyView  {
                                       color: .black,
                                       weight: .regular)
         
-        label.text = L10n.Constants.Content.Label.calendarSubtitle
         label.numberOfLines = 0
         label.textAlignment = .left
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = (0.7).su
+        let attributes: [NSAttributedString.Key: Any] = [.font: label.font, .paragraphStyle: paragraphStyle]
+        label.attributedText = NSAttributedString(string: L10n.Constants.Content.Label.calendarSubtitle, attributes: attributes)
+        
         label.draw(model)
         return label
     }()
@@ -62,7 +66,7 @@ class CalendarView: UIView, AnyView  {
     }
     
     func addSubviews() {
-        addSubview(cynara)
+        addSubview(image)
         addSubview(stack)
         stack.addArrangedSubview(title)
         stack.addArrangedSubview(subtitle)
@@ -70,7 +74,7 @@ class CalendarView: UIView, AnyView  {
     
     func addConstraints() {
         
-        cynara.snp.makeConstraints {
+        image.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalToSuperview().offset(17.su)
             $0.width.equalTo(20.su)
@@ -79,7 +83,7 @@ class CalendarView: UIView, AnyView  {
         
         stack.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.top.equalTo(cynara.snp.bottom).offset(12.su)
+            $0.top.equalTo(image.snp.bottom).offset(12.su)
             $0.width.equalTo(42.su)
             $0.height.equalTo(20.su)
         }
