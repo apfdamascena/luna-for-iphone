@@ -7,19 +7,9 @@
 
 import UIKit
 
-enum LunaButtonStyle {
 
-    case primary
-    case secondary
-}
 
-struct LunaButtonViewModel {
-    
-    let style: LunaButtonStyle
-    let textColor: UIColor
-    let text: String
-    
-}
+
 
 class LunaButton: UIButton, AnyView, DrawableView {
 

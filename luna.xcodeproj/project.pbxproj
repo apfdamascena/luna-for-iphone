@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D2FC7652A6EF3750025D8B6 /* LunaButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7642A6EF3750025D8B6 /* LunaButtonStyle.swift */; };
+		0D2FC7672A6EF3B10025D8B6 /* LunaButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7662A6EF3B10025D8B6 /* LunaButtonViewModel.swift */; };
 		0D7C73A62A67566700677D1E /* Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D7C73A52A67566700677D1E /* Constants.strings */; };
 		0D7C73AD2A67580D00677D1E /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */; };
 		0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */; };
@@ -38,7 +40,6 @@
 		0DBADE0C2A6608F300A10FC3 /* LastDayMenstruationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADE0B2A6608F300A10FC3 /* LastDayMenstruationView.swift */; };
 		0DBADE0F2A660AAE00A10FC3 /* Int+Su.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADE0E2A660AAE00A10FC3 /* Int+Su.swift */; };
 		0DCCB9262A6D82AF00451D63 /* OnboardingPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCCB9252A6D82AF00451D63 /* OnboardingPageControl.swift */; };
-		0DCCB9292A6E1FF600451D63 /* UIPageViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCCB9282A6E1FF600451D63 /* UIPageViewController+Rx.swift */; };
 		0DCCB9302A6EAFCB00451D63 /* FourthScreenRemoveAfterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCCB92B2A6EAFCB00451D63 /* FourthScreenRemoveAfterContract.swift */; };
 		0DCCB9312A6EAFCB00451D63 /* FourthScreenRemoveAfterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCCB92C2A6EAFCB00451D63 /* FourthScreenRemoveAfterPresenter.swift */; };
 		0DCCB9322A6EAFCB00451D63 /* FourthScreenRemoveAfterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCCB92D2A6EAFCB00451D63 /* FourthScreenRemoveAfterRouter.swift */; };
@@ -71,6 +72,8 @@
 
 /* Begin PBXFileReference section */
 		08D186E62F83C3701D60F993 /* Pods-luna.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna.release.xcconfig"; path = "Target Support Files/Pods-luna/Pods-luna.release.xcconfig"; sourceTree = "<group>"; };
+		0D2FC7642A6EF3750025D8B6 /* LunaButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaButtonStyle.swift; sourceTree = "<group>"; };
+		0D2FC7662A6EF3B10025D8B6 /* LunaButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaButtonViewModel.swift; sourceTree = "<group>"; };
 		0D7C73A52A67566700677D1E /* Constants.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Constants.strings; sourceTree = "<group>"; };
 		0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
@@ -106,7 +109,6 @@
 		0DBADE0B2A6608F300A10FC3 /* LastDayMenstruationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastDayMenstruationView.swift; sourceTree = "<group>"; };
 		0DBADE0E2A660AAE00A10FC3 /* Int+Su.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Su.swift"; sourceTree = "<group>"; };
 		0DCCB9252A6D82AF00451D63 /* OnboardingPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControl.swift; sourceTree = "<group>"; };
-		0DCCB9282A6E1FF600451D63 /* UIPageViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPageViewController+Rx.swift"; sourceTree = "<group>"; };
 		0DCCB92B2A6EAFCB00451D63 /* FourthScreenRemoveAfterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthScreenRemoveAfterContract.swift; sourceTree = "<group>"; };
 		0DCCB92C2A6EAFCB00451D63 /* FourthScreenRemoveAfterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthScreenRemoveAfterPresenter.swift; sourceTree = "<group>"; };
 		0DCCB92D2A6EAFCB00451D63 /* FourthScreenRemoveAfterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthScreenRemoveAfterRouter.swift; sourceTree = "<group>"; };
@@ -157,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				0DBADE092A6607BB00A10FC3 /* LunaButton.swift */,
+				0D2FC7642A6EF3750025D8B6 /* LunaButtonStyle.swift */,
+				0D2FC7662A6EF3B10025D8B6 /* LunaButtonViewModel.swift */,
 			);
 			path = LunaButton;
 			sourceTree = "<group>";
@@ -281,14 +285,6 @@
 			path = OnboardingPageControl;
 			sourceTree = "<group>";
 		};
-		0DCCB9272A6E1FDE00451D63 /* Rx */ = {
-			isa = PBXGroup;
-			children = (
-				0DCCB9282A6E1FF600451D63 /* UIPageViewController+Rx.swift */,
-			);
-			path = Rx;
-			sourceTree = "<group>";
-		};
 		0DCCB92A2A6EAF9300451D63 /* FourthScreenRemoveAfter */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,7 +342,6 @@
 		0DDA61322A69D0D200CA15C6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0DCCB9272A6E1FDE00451D63 /* Rx */,
 				0DDA61342A69D0ED00CA15C6 /* Preview */,
 				0DDA61332A69D0DD00CA15C6 /* Dimensions */,
 			);
@@ -682,6 +677,7 @@
 				0DDA61292A69CEC600CA15C6 /* MenstruationDurationRouter.swift in Sources */,
 				0DBADE0F2A660AAE00A10FC3 /* Int+Su.swift in Sources */,
 				0DA56C512A6B266D00E056C1 /* OnboardingPageControlViewController.swift in Sources */,
+				0D2FC7672A6EF3B10025D8B6 /* LunaButtonViewModel.swift in Sources */,
 				0DDA612A2A69CEC600CA15C6 /* MenstruationDurationViewController.swift in Sources */,
 				0DA56C552A6B33AC00E056C1 /* OnboardingButtonView.swift in Sources */,
 				0DBADDD82A66017600A10FC3 /* DrawableView.swift in Sources */,
@@ -698,12 +694,12 @@
 				0D7C73AD2A67580D00677D1E /* Strings+Generated.swift in Sources */,
 				0DBADDD32A66005500A10FC3 /* LunaTextViewModel.swift in Sources */,
 				0DBADDE02A6603F800A10FC3 /* LastDayMenstruationPresenter.swift in Sources */,
-				0DCCB9292A6E1FF600451D63 /* UIPageViewController+Rx.swift in Sources */,
 				0DBADDD62A6600CD00A10FC3 /* AnyView.swift in Sources */,
 				0DCCB9322A6EAFCB00451D63 /* FourthScreenRemoveAfterRouter.swift in Sources */,
 				0DBADDE72A66044600A10FC3 /* UIView+Preview.swift in Sources */,
 				0DDA61272A69CEC600CA15C6 /* MenstruationDurationContract.swift in Sources */,
 				0DBADE0A2A6607BB00A10FC3 /* LunaButton.swift in Sources */,
+				0D2FC7652A6EF3750025D8B6 /* LunaButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
