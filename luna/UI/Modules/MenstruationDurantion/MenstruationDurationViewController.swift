@@ -50,6 +50,8 @@ class MenstruationDurationViewController: UIViewController, DataSourceEventObser
     }
     
     func addDataSourceEventObservable() {
+        menstruationDurationView.picker.selectRow(5, inComponent: 0, animated: true)
+
         datasource?.elements
             .bind(to: menstruationDurationView.picker.rx.items(adapter: PickerViewAdapter()))
             .disposed(by: disposeBag)

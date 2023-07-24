@@ -20,6 +20,7 @@ class MenstruationDurationView: UIView, AnyView {
         let view = UIStackView()
         view.axis = .vertical
         view.alignment = .fill
+        view.spacing = 10.su
         return view
     }()
             
@@ -32,6 +33,7 @@ class MenstruationDurationView: UIView, AnyView {
         label.text = L10n.Constants.Content.Label.menstruationDuration
         label.numberOfLines = 0
         label.textAlignment = .left
+        
         label.draw(model)
         return label
     }()
@@ -42,15 +44,6 @@ class MenstruationDurationView: UIView, AnyView {
     private(set) var picker: UIPickerView = {
         let picker = UIPickerView()
         return picker
-    }()
-    
-    private(set) var label: LunaText = {
-        let label = LunaText()
-        let model = LunaTextViewModel(size: 31,
-                                      color: .black,
-                                      weight: .regular)
-        label.draw(model)
-        return label
     }()
     
     override init(frame: CGRect) {
@@ -71,6 +64,7 @@ class MenstruationDurationView: UIView, AnyView {
 
 
         pickerContainer.addSubview(picker)
+        
     }
     
     func addConstraints() {
@@ -94,6 +88,8 @@ class MenstruationDurationView: UIView, AnyView {
         
         picker.snp.makeConstraints{
             $0.trailing.leading.equalToSuperview().inset(10.su)
+            $0.height.equalToSuperview()
+
         }
     }
     

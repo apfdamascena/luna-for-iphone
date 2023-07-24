@@ -28,17 +28,19 @@ final class PickerViewAdapter: NSObject,
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        let label = UILabel()
+        let label = LunaText()
+        let model = LunaTextViewModel(size: 61,
+                                      color: .black,
+                                      weight: .semibold)
+        label.draw(model)
         label.text = items[component][row].description
-        label.textColor = UIColor.black
-        label.font = UIFont.preferredFont(forTextStyle: .headline)
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 61)
         return label
     }
-        func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-            return 100.0
-        }
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 75.0
+    }
     
     func pickerView(_ pickerView: UIPickerView, observedEvent: Event<Element>) {
         Binder(self) { (adapter, items) in
