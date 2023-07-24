@@ -29,7 +29,7 @@ class OnboardingPageControl: UIView, AnyView {
         
         for index in 1...numberOfPages {
             let dot = UIView()
-            dot.backgroundColor = index == currentPage ? .black : .gray
+            dot.backgroundColor = index == 1 ? .black : .gray
             dot.layer.cornerRadius = 2
             dots.append(dot)
             
@@ -47,6 +47,15 @@ class OnboardingPageControl: UIView, AnyView {
         
             }
         }
-        
+    }
+    
+    func completeDotAt(_ currentPage: Int){
+        dots.enumerated().forEach{ index, dot in
+            dot.backgroundColor = .gray
+            
+            if index <= currentPage {
+                dot.backgroundColor = .black
+            }
+        }
     }
 }

@@ -11,7 +11,6 @@ import Foundation
 class OnboardingPageControlPresenter: ViewToPresenterOnboardingPageControlProtocol {
 
     
-
     var view: PresenterToViewOnboardingPageControlProtocol?
     var router: PresenterToRouterOnboardingPageControlProtocol?
     
@@ -22,5 +21,10 @@ class OnboardingPageControlPresenter: ViewToPresenterOnboardingPageControlProtoc
         DispatchQueue.main.async {
             self.router?.pushFourthScreen(on: pageViewController)
         }
+    }
+    
+    
+    func completeOnboardFlowDot(at currentPage: Int) {
+        view?.completeOnboardFlowDot(at: currentPage)
     }
 }

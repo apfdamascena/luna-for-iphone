@@ -51,6 +51,7 @@ class OnboardingViewFlow: OnboardingViewFlowDelegate {
         if newCurrentPage == numberOfPages  { return numberOfPages  }
         return newCurrentPage
     }
+    
 }
 
 
@@ -72,9 +73,12 @@ class OnboardingPageControlViewController: UIPageViewController,
     
     init(datasource: OnboardingPageControlDataSource){
         self.pageControl = OnboardingPageControl(numberOfPages: 4)
+        self.flow = OnboardingViewFlow(numberOfPages: 4)
+        
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
         
         self.datasource = datasource
+      
 
         
         addUserTouchTrigger()
@@ -103,8 +107,6 @@ class OnboardingPageControlViewController: UIPageViewController,
 
     func addConstraints() {
         
-        pageControl.backgroundColor = .red
-        
         pageControl.snp.makeConstraints{
             $0.leading.trailing.top.equalTo(view.safeAreaLayoutGuide)
         }
@@ -120,13 +122,14 @@ class OnboardingPageControlViewController: UIPageViewController,
         
         onboardingButtons.nextButton.rx.tap.bind {
             guard let currentPage = try? self.datasource?.pageIndex.value() else { return }
-            guard let nextPage = self.flow?.change(newCurrentPage: currentPage + 1) else { return }
             
+            guard let nextPage = self.flow?.change(newCurrentPage: currentPage + 1) else { return }
             if nextPage == self.pageControl.numberOfPages {
                 self.datasource?.pageIndex.onCompleted()
             }
             
             self.datasource?.pageIndex.onNext(nextPage)
+            self.presenter?.completeOnboardFlowDot(at: nextPage)
     
         }.disposed(by: disposeBag)
         
@@ -135,6 +138,8 @@ class OnboardingPageControlViewController: UIPageViewController,
             guard let currentPage = try? self.datasource?.pageIndex.value() else { return }
             guard let previousPage = self.flow?.change(newCurrentPage: currentPage - 1) else { return }
             self.datasource?.pageIndex.onNext(previousPage)
+        
+            self.presenter?.completeOnboardFlowDot(at: previousPage)
         }.disposed(by: disposeBag)
         
     }
@@ -151,7 +156,14 @@ class OnboardingPageControlViewController: UIPageViewController,
 
 }
 
-extension OnboardingPageControlViewController: PresenterToViewOnboardingPageControlProtocol{
+extension OnboardingPageControlViewController: PresenterToViewOnboardingPageControlProtocol {
+    
+    func completeOnboardFlowDot(at currentPage: Int) {
+        pageControl.completeDotAt(currentPage)
+    }
+    
+    
+    
     // TODO: Implement View Output Methods
 }
 

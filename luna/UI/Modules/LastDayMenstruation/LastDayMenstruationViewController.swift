@@ -36,6 +36,8 @@ class LastDayMenstruationViewController: UIViewController,
 }
 
 extension LastDayMenstruationViewController: PresenterToViewLastDayMenstruationProtocol{
+    
+    
     // TODO: Implement View Output Methods
 }
 
