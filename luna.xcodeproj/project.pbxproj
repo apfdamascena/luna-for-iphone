@@ -11,6 +11,9 @@
 		0D2FC7672A6EF3B10025D8B6 /* LunaButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7662A6EF3B10025D8B6 /* LunaButtonViewModel.swift */; };
 		0D2FC76A2A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */; };
 		0D2FC76C2A6EF4810025D8B6 /* DataSourceEventObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */; };
+		0D2FC76E2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76D2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift */; };
+		0D2FC7702A6EF4F00025D8B6 /* OnboardingViewFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76F2A6EF4F00025D8B6 /* OnboardingViewFlowDelegate.swift */; };
+		0D2FC7722A6EF59B0025D8B6 /* OnboardingViewFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7712A6EF59B0025D8B6 /* OnboardingViewFlow.swift */; };
 		0D7C73A62A67566700677D1E /* Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D7C73A52A67566700677D1E /* Constants.strings */; };
 		0D7C73AD2A67580D00677D1E /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */; };
 		0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */; };
@@ -78,6 +81,9 @@
 		0D2FC7662A6EF3B10025D8B6 /* LunaButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaButtonViewModel.swift; sourceTree = "<group>"; };
 		0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSource.swift; sourceTree = "<group>"; };
 		0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceEventObservable.swift; sourceTree = "<group>"; };
+		0D2FC76D2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSourceImpl.swift; sourceTree = "<group>"; };
+		0D2FC76F2A6EF4F00025D8B6 /* OnboardingViewFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewFlowDelegate.swift; sourceTree = "<group>"; };
+		0D2FC7712A6EF59B0025D8B6 /* OnboardingViewFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewFlow.swift; sourceTree = "<group>"; };
 		0D7C73A52A67566700677D1E /* Constants.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Constants.strings; sourceTree = "<group>"; };
 		0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
@@ -173,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */,
+				0D2FC76F2A6EF4F00025D8B6 /* OnboardingViewFlowDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -216,6 +223,8 @@
 				0DA56C4A2A6B266D00E056C1 /* OnboardingPageControlPresenter.swift */,
 				0DA56C4B2A6B266D00E056C1 /* OnboardingPageControlRouter.swift */,
 				0DA56C4C2A6B266D00E056C1 /* OnboardingPageControlViewController.swift */,
+				0D2FC76D2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift */,
+				0D2FC7712A6EF59B0025D8B6 /* OnboardingViewFlow.swift */,
 			);
 			path = OnboardingPageControl;
 			sourceTree = "<group>";
@@ -679,6 +688,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D2FC76E2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift in Sources */,
+				0D2FC7722A6EF59B0025D8B6 /* OnboardingViewFlow.swift in Sources */,
 				0DBADDE92A66045700A10FC3 /* UIViewController+Preview.swift in Sources */,
 				0DCCB9332A6EAFCB00451D63 /* FourthScreenRemoveAfterViewController.swift in Sources */,
 				0DBADDE12A6603F800A10FC3 /* LastDayMenstruationRouter.swift in Sources */,
@@ -716,6 +727,7 @@
 				0DDA61272A69CEC600CA15C6 /* MenstruationDurationContract.swift in Sources */,
 				0DBADE0A2A6607BB00A10FC3 /* LunaButton.swift in Sources */,
 				0D2FC7652A6EF3750025D8B6 /* LunaButtonStyle.swift in Sources */,
+				0D2FC7702A6EF4F00025D8B6 /* OnboardingViewFlowDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,40 +12,6 @@ import SnapKit
 import RxCocoa
 
 
-class OnboardingPageControlDataSourceImpl: OnboardingPageControlDataSource {
-    var pageIndex: BehaviorSubject<Int> = BehaviorSubject(value: 0)
-    
-    var pages: [UIViewController] = [
-        LastDayMenstruationRouter.createModule(),
-        MenstruationDurationRouter.createModule(),
-        MenstruationDurationRouter.createModule(),
-        MenstruationDurationRouter.createModule()
-    ]
-}
-
-
-protocol OnboardingViewFlowDelegate {
-    
-    func change(newCurrentPage: Int) -> Int
-}
-
-class OnboardingViewFlow: OnboardingViewFlowDelegate {
-    
-    let numberOfPages: Int
-    
-    init(numberOfPages: Int){
-        self.numberOfPages = numberOfPages
-    }
-    
-    func change(newCurrentPage: Int) -> Int {
-        if newCurrentPage < 0 { return 0 }
-        if newCurrentPage == numberOfPages  { return numberOfPages  }
-        return newCurrentPage
-    }
-    
-}
-
-
 class OnboardingPageControlViewController: UIPageViewController,
                                            AnyView,
                                            TouchableUserEvent,
