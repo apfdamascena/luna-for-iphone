@@ -79,10 +79,13 @@ class OnboardingPageControlViewController: UIPageViewController,
             guard let currentPage = try? self.datasource?.pageIndex.value() else { return }
             
             guard let nextPage = self.flow?.change(newCurrentPage: currentPage + 1) else { return }
-            if nextPage == self.pageControl.numberOfPages {
-                self.datasource?.pageIndex.onCompleted()
-            }
+
             
+            if nextPage == 3 {
+                self.presenter?.hideContinueAndBackButton()
+                self.presenter?.showLastContinueButton()
+            }
+
             self.datasource?.pageIndex.onNext(nextPage)
             self.presenter?.completeOnboardFlowDot(at: nextPage)
     
@@ -95,6 +98,10 @@ class OnboardingPageControlViewController: UIPageViewController,
             self.datasource?.pageIndex.onNext(previousPage)
         
             self.presenter?.completeOnboardFlowDot(at: previousPage)
+        }.disposed(by: disposeBag)
+        
+        onboardingButtons.lastContinueButton.rx.tap.bind {
+            self.presenter?.userTappedContinueButton()
         }.disposed(by: disposeBag)
         
     }
@@ -112,13 +119,22 @@ class OnboardingPageControlViewController: UIPageViewController,
 }
 
 extension OnboardingPageControlViewController: PresenterToViewOnboardingPageControlProtocol {
-    
+
+
     func completeOnboardFlowDot(at currentPage: Int) {
         pageControl.completeDotAt(currentPage)
     }
     
+    func hideContinueAndBackButton() {
+        onboardingButtons.backButton.isHidden = true
+        onboardingButtons.nextButton.isHidden = true
+     
+    }
     
-    
+    func showLastContinueButton() {
+        onboardingButtons.lastContinueButton.isHidden = false
+    }
+
     // TODO: Implement View Output Methods
 }
 

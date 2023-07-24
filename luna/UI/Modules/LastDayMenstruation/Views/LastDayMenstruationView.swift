@@ -83,5 +83,6 @@ class LastDayMenstruationView: UIView, AnyView  {
     
     func addAdditionalConfiguration() {
         backgroundColor = .white
+        
     }
 }
