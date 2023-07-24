@@ -10,17 +10,17 @@ import UIKit
 import RxSwift
 
 protocol RangePickerViewDataSource {
-    var elements: Observable<[[String]]> { get }
+    var elements: [[String]] { get }
 }
 
 class RangePickerViewDataSourceImpl: RangePickerViewDataSource {
-    var elements: Observable<[[String]]>
+    var elements: [[String]]
     
     init(range: ClosedRange<Int>) {
         let opa = range.map{ element in
             return String(element)
         }
-        self.elements = Observable.just([opa])
+        self.elements = [opa]
     }
 }
 
@@ -31,11 +31,11 @@ class MenstruationDurationViewController: UIViewController, DataSourceEventObser
     let menstruationDurationView = MenstruationDurationView()
 
     private let disposeBag = DisposeBag()
-    private var datasource: RangePickerViewDataSource?
+    private var datasource: RangePickerViewDataSource
     
     init(datasource: RangePickerViewDataSource) {
-        super.init(nibName: nil, bundle: nil)
         self.datasource = datasource
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -50,7 +50,7 @@ class MenstruationDurationViewController: UIViewController, DataSourceEventObser
     }
     
     func addDataSourceEventObservable() {
-        datasource?.elements
+        Observable.just(datasource.elements)
             .bind(to: menstruationDurationView.picker.rx.items(adapter: PickerViewAdapter()))
             .disposed(by: disposeBag)
         menstruationDurationView.picker.selectRow(5004, inComponent: 0, animated: true)
