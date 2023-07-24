@@ -18,9 +18,13 @@ protocol ViewToPresenterLandingPageProtocol {
     
     var view: PresenterToViewLandingPageProtocol? { get set }
     var router: PresenterToRouterLandingPageProtocol? { get set }
+    
+    func userTappedContinue()
 }
 
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterLandingPageProtocol {
+    
+    func pushLastDayMenstruation(on view: PresenterToViewLandingPageProtocol)
     
 }

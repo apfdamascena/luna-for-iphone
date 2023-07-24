@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class LandingPageViewController: UIViewController {
     
@@ -14,10 +16,20 @@ class LandingPageViewController: UIViewController {
     
     let landingPageView = LandingPageView()
     
+    private var disposeBag = DisposeBag()
+    
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = landingPageView
+        
+        addUserTouchTrigger()
+    }
+    
+    func addUserTouchTrigger() {
+        landingPageView.startButton.rx.tap.bind{
+            self.presenter?.userTappedContinue()
+        }.disposed(by: disposeBag)
     }
 
 }
