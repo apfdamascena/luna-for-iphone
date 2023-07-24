@@ -101,9 +101,9 @@ class LandingPageView: UIView, AnyView {
         }
         
         startButton.snp.makeConstraints{
+            $0.trailing.leading.equalToSuperview().inset(3.su)
             $0.bottom.equalToSuperview().offset(-6.su)
-            $0.leading.equalToSuperview().offset(3.su)
-            $0.trailing.equalToSuperview().offset(-3.su)
+            $0.height.equalTo(50)
         }
         
     }
