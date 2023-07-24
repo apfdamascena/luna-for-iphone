@@ -13,7 +13,7 @@ class OnboardingPageControlDataSourceImpl: OnboardingPageControlDataSource {
     var pages: [UIViewController] = [
         LastDayMenstruationRouter.createModule(),
         MenstruationDurationRouter.createModule(),
-        MenstruationDurationRouter.createModule(),
+        CycleDurationRouter.createModule(),
         CalendarRouter.createModule()
     ]
 }

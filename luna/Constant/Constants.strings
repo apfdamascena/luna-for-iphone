@@ -8,6 +8,8 @@
 
 "constants.content.label.last_day_menstruation"="Quando foi o início da\nsua última menstruação?";
 
+"constants.content.label.menstruation_duration"="Quantos dias dura a\nsua menstruação?";
+"constants.content.label.cycle_duration"="Quanto tempo dura o\nseu ciclo menstrual?";
 "constants.content.label.app_name"="Luna";
 "constants.content.label.landing_page_description"="Seu ciclo ao seu favor";
 
@@ -17,6 +19,4 @@
 
 "constants.content.label.calendar_title"="Consiga ver seu ciclo no seu dia a dia";
 "constants.content.label.calendar_subtitle"="Permita que o Luna acesse seu Calendar para planejar seus dias com sabedoria e melhorar o seu bem-estar";
-
-
 

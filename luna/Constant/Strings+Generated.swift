@@ -25,6 +25,9 @@ internal enum L10n {
         internal static let calendarSubtitle = L10n.tr("Constants", "constants.content.label.calendar_subtitle", fallback: "Permita que o Luna acesse seu Calendar para planejar seus dias com sabedoria e melhorar o seu bem-estar")
         /// Consiga ver seu ciclo no seu dia a dia
         internal static let calendarTitle = L10n.tr("Constants", "constants.content.label.calendar_title", fallback: "Consiga ver seu ciclo no seu dia a dia")
+        /// Quanto tempo dura o
+        /// seu ciclo menstrual?
+        internal static let cycleDuration = L10n.tr("Constants", "constants.content.label.cycle_duration", fallback: "Quanto tempo dura o\nseu ciclo menstrual?")
         /// Seu ciclo ao seu favor
         internal static let landingPageDescription = L10n.tr("Constants", "constants.content.label.landing_page_description", fallback: "Seu ciclo ao seu favor")
         /// Constants.strings
@@ -32,6 +35,9 @@ internal enum L10n {
         /// 
         ///   Created by alexdamascena on 18/07/23.
         internal static let lastDayMenstruation = L10n.tr("Constants", "constants.content.label.last_day_menstruation", fallback: "Quando foi o início da\nsua última menstruação?")
+        /// Quantos dias dura a
+        /// sua menstruação?
+        internal static let menstruationDuration = L10n.tr("Constants", "constants.content.label.menstruation_duration", fallback: "Quantos dias dura a\nsua menstruação?")
       }
     }
   }
