@@ -23,10 +23,6 @@ class OnboardingPageControlDataSourceImpl: OnboardingPageControlDataSource {
     ]
 }
 
-protocol DataSourceEventObservable {
-    
-    func addDataSourceEventObservable()
-}
 
 protocol OnboardingViewFlowDelegate {
     
