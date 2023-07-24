@@ -29,7 +29,7 @@ class OnboardingPageControl: UIView, AnyView {
         
         for index in 1...numberOfPages {
             let dot = UIView()
-            dot.backgroundColor = index == 1 ? .black : .gray
+            dot.backgroundColor = index == 1 ? Asset.primaryRed900.color : .gray
             dot.layer.cornerRadius = 2
             dots.append(dot)
             
@@ -54,7 +54,7 @@ class OnboardingPageControl: UIView, AnyView {
             dot.backgroundColor = .gray
             
             if index <= currentPage {
-                dot.backgroundColor = .black
+                dot.backgroundColor = Asset.primaryRed900.color
             }
         }
     }

@@ -153,6 +153,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D2FC7632A6EED0F0025D8B6 /* LunaButton */ = {
+			isa = PBXGroup;
+			children = (
+				0DBADE092A6607BB00A10FC3 /* LunaButton.swift */,
+			);
+			path = LunaButton;
+			sourceTree = "<group>";
+		};
 		0D7C73AA2A6757A500677D1E /* Constant */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,8 +373,8 @@
 		0DDA61352A69D11200CA15C6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0D2FC7632A6EED0F0025D8B6 /* LunaButton */,
 				0DCCB9242A6D828F00451D63 /* OnboardingPageControl */,
-				0DBADE092A6607BB00A10FC3 /* LunaButton.swift */,
 				0DDA61362A69D11C00CA15C6 /* LunaText */,
 			);
 			path = Components;

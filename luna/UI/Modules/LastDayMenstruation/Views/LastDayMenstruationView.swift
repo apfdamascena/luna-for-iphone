@@ -23,7 +23,7 @@ class LastDayMenstruationView: UIView, AnyView  {
     private let title: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 31,
-                                      color: .black,
+                                      color: Asset.primaryGray900.color,
                                       weight: .regular)
         
         label.text = L10n.Constants.Content.Label.lastDayMenstruation
@@ -40,7 +40,7 @@ class LastDayMenstruationView: UIView, AnyView  {
         picker.locale = .current
         picker.datePickerMode = .date
         picker.preferredDatePickerStyle = .inline
-        picker.tintColor = .black
+        picker.tintColor = Asset.primaryRed500.color
         return picker
     }()
     
