@@ -8,11 +8,14 @@
 
 "constants.content.label.last_day_menstruation"="Quando foi o início da\nsua última menstruação?";
 
+"constants.content.label.app_name"="Luna";
+"constants.content.label.landing_page_description"="Seu ciclo ao seu favor";
+
+
 "constants.content.button.continue"="Continuar";
+"constants.content.button.start"="Iniciar";
 
-"constants.content.label.calendar_title"="Consiga ver seu ciclo
-no seu dia a dia";
-
+"constants.content.label.calendar_title"="Consiga ver seu ciclo no seu dia a dia";
 "constants.content.label.calendar_subtitle"="Permita que o Luna acesse seu Calendar para planejar seus dias com sabedoria e melhorar o seu bem-estar";
 
 

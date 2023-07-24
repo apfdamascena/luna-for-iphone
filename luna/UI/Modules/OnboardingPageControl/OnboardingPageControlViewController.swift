@@ -11,7 +11,6 @@ import RxSwift
 import SnapKit
 import RxCocoa
 
-
 class OnboardingPageControlViewController: UIPageViewController,
                                            AnyView,
                                            TouchableUserEvent,
@@ -36,8 +35,6 @@ class OnboardingPageControlViewController: UIPageViewController,
         
         self.datasource = datasource
       
-
-        
         addUserTouchTrigger()
         addDataSourceEventObservable()
     }
@@ -55,6 +52,7 @@ class OnboardingPageControlViewController: UIPageViewController,
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationItem.hidesBackButton = true
     }
     
     func addSubviews() {
