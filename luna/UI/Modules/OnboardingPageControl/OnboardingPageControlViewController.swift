@@ -11,11 +11,6 @@ import RxSwift
 import SnapKit
 import RxCocoa
 
-protocol OnboardingPageControlDataSource {
-    var pageIndex: BehaviorSubject<Int> { get }
-    var pages: [UIViewController] { get }
-}
-
 
 class OnboardingPageControlDataSourceImpl: OnboardingPageControlDataSource {
     var pageIndex: BehaviorSubject<Int> = BehaviorSubject(value: 0)
