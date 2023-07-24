@@ -18,3 +18,14 @@ extension Int {
         return CGFloat(8 * dimensionSize)
     }
 }
+
+extension Double {
+    
+    var su: CGFloat {
+        convertToSu(dimensionSize: CGFloat(self))
+    }
+    
+    private func convertToSu(dimensionSize: CGFloat) -> CGFloat {
+        return CGFloat(8 * dimensionSize)
+    }
+}

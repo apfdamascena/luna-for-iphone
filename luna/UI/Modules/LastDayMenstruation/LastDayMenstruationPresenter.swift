@@ -19,6 +19,9 @@ class LastDayMenstruationPresenter: ViewToPresenterLastDayMenstruationProtocol {
         DispatchQueue.main.async {
             self.router?.pushMenstruationDuration(on: lastDayMenstruationView)
         }
+    }
+    
+    func completeOnboardingFlowDot(at currentPage: Int){
         
     }
 }

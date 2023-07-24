@@ -21,13 +21,17 @@ internal enum L10n {
       internal enum Label {
         /// Luna
         internal static let appName = L10n.tr("Constants", "constants.content.label.app_name", fallback: "Luna")
+        /// Permita que o Luna acesse seu Calendar para planejar seus dias com sabedoria e melhorar o seu bem-estar
+        internal static let calendarSubtitle = L10n.tr("Constants", "constants.content.label.calendar_subtitle", fallback: "Permita que o Luna acesse seu Calendar para planejar seus dias com sabedoria e melhorar o seu bem-estar")
+        /// Consiga ver seu ciclo no seu dia a dia
+        internal static let calendarTitle = L10n.tr("Constants", "constants.content.label.calendar_title", fallback: "Consiga ver seu ciclo no seu dia a dia")
         /// Seu ciclo ao seu favor
         internal static let landingPageDescription = L10n.tr("Constants", "constants.content.label.landing_page_description", fallback: "Seu ciclo ao seu favor")
         /// Constants.strings
         ///   luna
         /// 
         ///   Created by alexdamascena on 18/07/23.
-        internal static let lastDayMenstruation = L10n.tr("Constants", "constants.content.label.last_day_menstruation", fallback: "Quando foi o início da sua última menstruação?")
+        internal static let lastDayMenstruation = L10n.tr("Constants", "constants.content.label.last_day_menstruation", fallback: "Quando foi o início da\nsua última menstruação?")
       }
     }
   }

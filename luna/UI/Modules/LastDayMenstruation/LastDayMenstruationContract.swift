@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: View Output (Presenter -> View)
 protocol PresenterToViewLastDayMenstruationProtocol {
-   
+
 }
 
 // MARK: View Input (View -> Presenter)

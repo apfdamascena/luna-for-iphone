@@ -59,7 +59,7 @@ class LandingPageView: UIView, AnyView {
     
     private(set) var startButton: LunaButton = {
         let label = LunaButton()
-        let model = LunaButtonViewModel(style: .normal,
+        let model = LunaButtonViewModel(style: .primary,
                                         textColor: .white,
                                         text: L10n.Constants.Content.Button.start)
         label.draw(model)
