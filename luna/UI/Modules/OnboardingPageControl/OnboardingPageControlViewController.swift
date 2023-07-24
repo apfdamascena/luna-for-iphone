@@ -16,6 +16,7 @@ protocol OnboardingPageControlDataSource {
     var pages: [UIViewController] { get }
 }
 
+
 class OnboardingPageControlDataSourceImpl: OnboardingPageControlDataSource {
     var pageIndex: BehaviorSubject<Int> = BehaviorSubject(value: 0)
     
@@ -30,18 +31,26 @@ protocol DataSourceEventObservable {
     func addDataSourceEventObservable()
 }
 
-//extension OnboardingPageControlViewController:
-//                               UIPageViewControllerDelegate,
-//                                       UIPageViewControllerDataSource {
-//
-//    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-//        datasource?.pages[0]
-//    }
-//
-//    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-//        datasource?.pages[1]
-//    }
-//}
+protocol OnboardingViewFlowDelegate {
+    
+    func change(newCurrentPage: Int) -> Int
+}
+
+class OnboardingViewFlow: OnboardingViewFlowDelegate {
+    
+    let numberOfPages: Int
+    
+    init(numberOfPages: Int){
+        self.numberOfPages = numberOfPages
+    }
+    
+    func change(newCurrentPage: Int) -> Int {
+        if newCurrentPage < 0 { return 0 }
+        if newCurrentPage + 1 == numberOfPages { return numberOfPages }
+        return newCurrentPage
+    }
+}
+
 
 class OnboardingPageControlViewController: UIPageViewController,
                                            AnyView,
@@ -49,22 +58,20 @@ class OnboardingPageControlViewController: UIPageViewController,
                                            DataSourceEventObservable {
 
     var presenter: ViewToPresenterOnboardingPageControlProtocol?
+    
     private(set) var datasource: OnboardingPageControlDataSource?
+    private(set) var flow: OnboardingViewFlow?
     
     private let onboardingButtons = OnboardingButtonView()
+    
     private var disposeBag = DisposeBag()
     
-    
-    private let pageControl: OnboardingPageControl = {
-        let control = OnboardingPageControl()
-        return control
-    }()
-    
+    private let pageControl = OnboardingPageControl()
     
     init(datasource: OnboardingPageControlDataSource){
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
         self.datasource = datasource
-
+        self.flow = OnboardingViewFlow(numberOfPages: 4)
         
         addUserTouchTrigger()
         addDataSourceEventObservable()
@@ -107,36 +114,36 @@ class OnboardingPageControlViewController: UIPageViewController,
     
     func addUserTouchTrigger() {
         
+        onboardingButtons.nextButton.rx.tap.bind {
+            guard let currentPage = try? self.datasource?.pageIndex.value() else { return }
+            guard let nextPage = self.flow?.change(newCurrentPage: currentPage + 1) else { return }
+            
+            if nextPage == self.pageControl.numberOfPages {
+                self.datasource?.pageIndex.onCompleted()
+            }
+            
+            self.datasource?.pageIndex.onNext(nextPage)
+        }.disposed(by: disposeBag)
         
-//        onboardingButtons.nextButton.rx.tap.bind {
-//            guard let currentPage = try? self.datasource?.pageIndex.value() else { return }
-//
-//            if currentPage + 1 == self.datasource?.pages.count {
-//                self.datasource?.pageIndex.onCompleted()
-//            }
-//
-//            self.datasource?.pageIndex.onNext(currentPage + 1)
-//        }.disposed(by: disposeBag)
-//
-//        onboardingButtons.backButton.rx.tap.bind {
-//            guard let currentPage = try? self.datasource?.pageIndex.value() else { return }
-//            let previousCalculate = currentPage - 1
-//            let previousPage = previousCalculate > 0 ? previousCalculate : 0
-//            self.datasource?.pageIndex.onNext(previousPage)
-//        }.disposed(by: disposeBag)
+        
+        onboardingButtons.backButton.rx.tap.bind {
+            guard let currentPage = try? self.datasource?.pageIndex.value() else { return }
+            guard let previousPage = self.flow?.change(newCurrentPage: currentPage - 1) else { return }
+            self.datasource?.pageIndex.onNext(previousPage)
+        }.disposed(by: disposeBag)
         
     }
     
     func addDataSourceEventObservable() {
 
-//        datasource?.pageIndex.subscribe(onNext: { pageIndex in
-//            guard let controller = self.datasource?.pages[pageIndex] else { return }
-//            self.setViewControllers([controller], direction: .forward, animated: true)
-//        }, onCompleted: {
-//            print("terminou")
-//        }
-//
-//        ).disposed(by: disposeBag)
+        datasource?.pageIndex.subscribe(onNext: { pageIndex in
+            guard let controller = self.datasource?.pages[pageIndex] else { return }
+            self.setViewControllers([controller], direction: .forward, animated: true)
+        }, onCompleted: {
+            self.presenter.
+        }
+
+        ).disposed(by: disposeBag)
     }
 
 }

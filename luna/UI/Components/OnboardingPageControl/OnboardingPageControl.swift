@@ -50,7 +50,6 @@ class OnboardingPageControl: UIView, AnyView {
     func addConstraints() {
         
         dots.enumerated().forEach{ index, dot in
-            print(index)
             dot.snp.makeConstraints{
                 $0.width.equalTo(74)
                 $0.height.equalTo(4)
