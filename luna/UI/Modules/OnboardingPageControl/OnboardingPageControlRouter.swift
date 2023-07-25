@@ -15,7 +15,7 @@ class OnboardingPageControlRouter: PresenterToRouterOnboardingPageControlProtoco
     
     static func createModule() -> UIViewController {
         
-        let viewController = OnboardingPageControlViewController(datasource: OnboardingPageControlDataSourceImpl())
+        let viewController = OnboardingPageControlViewController(datasource: OnboardingPageControlDataSourceImpl(), delegate: OnboardingPageControlDelegateImpl())
         
         let presenter: ViewToPresenterOnboardingPageControlProtocol = OnboardingPageControlPresenter()
         
@@ -26,10 +26,10 @@ class OnboardingPageControlRouter: PresenterToRouterOnboardingPageControlProtoco
         return viewController
     }
     
-    func pushCalendarView(on view: PresenterToViewOnboardingPageControlProtocol) {
-        let calendar = CalendarRouter.createModule()
+    func pushHome(on view: PresenterToViewOnboardingPageControlProtocol) {
+        let home = HomeRouter.createModule()
         
         guard let onboardingController = view as? OnboardingPageControlViewController else { return }
-        onboardingController.navigationController?.pushViewController(calendar, animated: true)
+        onboardingController.navigationController?.pushViewController(home, animated: true)
     }
 }

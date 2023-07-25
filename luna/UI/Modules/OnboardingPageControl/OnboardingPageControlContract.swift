@@ -11,8 +11,10 @@ import Foundation
 // MARK: View Output (Presenter -> View)
 protocol PresenterToViewOnboardingPageControlProtocol {
     
-    
     func completeOnboardFlowDot(at currentPage: Int)
+    
+    func hideContinueAndBackButton()
+    func showLastContinueButton()
     
 }
 
@@ -24,11 +26,14 @@ protocol ViewToPresenterOnboardingPageControlProtocol {
     
     func userTappedContinueButton()
     func completeOnboardFlowDot(at currentPage: Int)
+    
+    func hideContinueAndBackButton()
+    func showLastContinueButton()
 }
 
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterOnboardingPageControlProtocol {
     
-    func pushCalendarView(on view: PresenterToViewOnboardingPageControlProtocol)
+    func pushHome(on view: PresenterToViewOnboardingPageControlProtocol)
     
 }

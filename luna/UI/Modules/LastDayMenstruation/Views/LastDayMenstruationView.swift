@@ -41,6 +41,7 @@ class LastDayMenstruationView: UIView, AnyView  {
         picker.datePickerMode = .date
         picker.preferredDatePickerStyle = .inline
         picker.tintColor = Asset.primaryRed500.color
+        picker.maximumDate = Date()
         return picker
     }()
     
@@ -82,5 +83,6 @@ class LastDayMenstruationView: UIView, AnyView  {
     
     func addAdditionalConfiguration() {
         backgroundColor = .white
+        
     }
 }

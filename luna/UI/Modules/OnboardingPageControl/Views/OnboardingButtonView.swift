@@ -28,7 +28,17 @@ class OnboardingButtonView: UIView, AnyView {
         return button
     }()
     
-    private(set) lazy var backButton: LunaButton = {
+    private(set) lazy var endOnboardingButton: LunaButton = {
+        let button = LunaButton()
+        let model = LunaButtonViewModel(style: .primary,
+                                        textColor: .white,
+                                        text: L10n.Constants.Content.Button.continue)
+        
+        button.draw(model)
+        return button
+    }()
+    
+    private(set) lazy var previousButton: LunaButton = {
         let button = LunaButton()
         let model = LunaButtonViewModel(style: .secondary,
                                         textColor: .white,
@@ -49,8 +59,9 @@ class OnboardingButtonView: UIView, AnyView {
     
     func addSubviews() {
         addSubview(stack)
+        addSubview(endOnboardingButton)
         
-        stack.addArrangedSubview(backButton)
+        stack.addArrangedSubview(previousButton)
         stack.addArrangedSubview(nextButton)
     }
     
@@ -60,6 +71,16 @@ class OnboardingButtonView: UIView, AnyView {
             $0.leading.trailing.equalToSuperview().inset(3.su)
             $0.height.equalTo(8.su)
         }
+        
+        endOnboardingButton.snp.makeConstraints{
+            $0.leading.trailing.equalToSuperview().inset(3.su)
+            $0.bottom.equalTo(safeAreaLayoutGuide)
+            $0.height.equalTo(50)
+        }
+    }
+    
+    func addAdditionalConfiguration() {
+        endOnboardingButton.isHidden = true
     }
     
 }
