@@ -8,6 +8,7 @@
 import RxSwift
 
 class OnboardingPageControlDataSourceImpl: OnboardingPageControlDataSource {
+    
     var pageIndex: BehaviorSubject<Int> = BehaviorSubject(value: 0)
     
     var pages: [UIViewController] = [
