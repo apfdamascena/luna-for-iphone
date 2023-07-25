@@ -18,7 +18,9 @@ class OnboardingPageControlViewController: UIPageViewController,
 
     var presenter: ViewToPresenterOnboardingPageControlProtocol?
     
-    private(set) var datasource: OnboardingPageControlDataSource?
+    private(set) var datasource: OnboardingPageControlDataSource
+    private(set) var delegateActionFor: OnboardingPageControlDelegate
+    
     private(set) var flow: OnboardingViewFlow?
     
     private let onboardingButtons = OnboardingButtonView()
@@ -26,21 +28,20 @@ class OnboardingPageControlViewController: UIPageViewController,
     private var disposeBag = DisposeBag()
     
     private(set) var pageControl: OnboardingPageControl
-    
-    private var teste: UIPageViewControllerDelegateProxy?
-    
-    init(datasource: OnboardingPageControlDataSource){
+
+    init(datasource: OnboardingPageControlDataSource,
+         delegate: OnboardingPageControlDelegate){
+        
         self.pageControl = OnboardingPageControl(numberOfPages: 4)
         self.flow = OnboardingViewFlow(numberOfPages: 4)
-  
-        super.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
-//        self.teste = UIPageViewControllerDelegateProxy(parentObject: self)
         
         self.datasource = datasource
+        self.delegateActionFor = delegate
+        
+        super.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
       
         addUserTouchTrigger()
         addDataSourceEventObservable()
-    
     }
     
     required init?(coder: NSCoder) {
@@ -78,50 +79,60 @@ class OnboardingPageControlViewController: UIPageViewController,
     }
     
     func addUserTouchTrigger() {
+        addUserTouchTriggerForNextButton()
+        addUserTouchTriggerForPreviousButton()
+        addUserTouchTriggerForEndOnboardingButton()
+    }
+    
+    func addDataSourceEventObservable() {
+        
+        Observable.zip(self.delegateActionFor.direction, self.datasource.pageIndex)
+            .asObservable()
+            .subscribe( onNext: { direction, index in
+                let controller = self.datasource.pages[index]
+                self.setViewControllers([controller], direction: direction, animated: true)
+            }, onCompleted: {
+                self.presenter?.userTappedContinueButton()
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func addUserTouchTriggerForNextButton(){
         
         onboardingButtons.nextButton.rx.tap.bind {
-            guard let currentPage = try? self.datasource?.pageIndex.value() else { return }
+            guard let currentPage = try? self.datasource.pageIndex.value() else { return }
             
             guard let nextPage = self.flow?.change(newCurrentPage: currentPage + 1) else { return }
-
             
             if nextPage == 3 {
                 self.presenter?.hideContinueAndBackButton()
                 self.presenter?.showLastContinueButton()
             }
             
-            
-
-            self.datasource?.pageIndex.onNext(nextPage)
+            self.datasource.pageIndex.onNext(nextPage)
+            self.delegateActionFor.direction.onNext(.forward)
             self.presenter?.completeOnboardFlowDot(at: nextPage)
     
         }.disposed(by: disposeBag)
-        
-        
-        onboardingButtons.backButton.rx.tap.bind {
-            guard let currentPage = try? self.datasource?.pageIndex.value() else { return }
-            guard let previousPage = self.flow?.change(newCurrentPage: currentPage - 1) else { return }
-            self.datasource?.pageIndex.onNext(previousPage)
-
-            self.presenter?.completeOnboardFlowDot(at: previousPage)
-        }.disposed(by: disposeBag)
-
-        onboardingButtons.lastContinueButton.rx.tap.bind {
-            self.presenter?.userTappedContinueButton()
-        }.disposed(by: disposeBag)
-        
     }
     
-    func addDataSourceEventObservable() {
-
-        datasource?.pageIndex.subscribe(onNext: { pageIndex in
-            guard let controller = self.datasource?.pages[pageIndex] else { return }
-            self.setViewControllers([controller], direction: .forward, animated: true)
-        }, onCompleted: {
-            self.presenter?.userTappedContinueButton()
-        }).disposed(by: disposeBag)
+    func addUserTouchTriggerForPreviousButton(){
+        onboardingButtons.previousButton.rx.tap.bind {
+            guard let currentPage = try? self.datasource.pageIndex.value() else { return }
+            guard let previousPage = self.flow?.change(newCurrentPage: currentPage - 1) else { return }
+            
+            self.datasource.pageIndex.onNext(previousPage)
+            self.delegateActionFor.direction.onNext(.reverse)
+            self.presenter?.completeOnboardFlowDot(at: previousPage)
+            
+        }.disposed(by: disposeBag)
     }
-
+    
+    func addUserTouchTriggerForEndOnboardingButton(){
+        onboardingButtons.endOnboardingButton.rx.tap.bind {
+            self.presenter?.userTappedContinueButton()
+        }.disposed(by: disposeBag)
+    }
 }
 
 extension OnboardingPageControlViewController: PresenterToViewOnboardingPageControlProtocol {
@@ -132,13 +143,13 @@ extension OnboardingPageControlViewController: PresenterToViewOnboardingPageCont
     }
     
     func hideContinueAndBackButton() {
-        onboardingButtons.backButton.isHidden = true
+        onboardingButtons.previousButton.isHidden = true
         onboardingButtons.nextButton.isHidden = true
      
     }
     
     func showLastContinueButton() {
-        onboardingButtons.lastContinueButton.isHidden = false
+        onboardingButtons.endOnboardingButton.isHidden = false
     }
 
     // TODO: Implement View Output Methods
@@ -151,7 +162,7 @@ import SwiftUI
 @available(iOS 13, *)
 struct OnboardingPageControlViewController_Preview: PreviewProvider {
     static var previews: some View {
-        OnboardingPageControlViewController(datasource: OnboardingPageControlDataSourceImpl()).showPreview()
+        OnboardingPageControlViewController(datasource: OnboardingPageControlDataSourceImpl(), delegate: OnboardingPageControlDelegateImpl()).showPreview()
     }
 }
 

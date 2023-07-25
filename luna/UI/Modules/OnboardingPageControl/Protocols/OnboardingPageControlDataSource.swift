@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 
 protocol OnboardingPageControlDataSource {
+    
     var pageIndex: BehaviorSubject<Int> { get }
     var pages: [UIViewController] { get }
 }

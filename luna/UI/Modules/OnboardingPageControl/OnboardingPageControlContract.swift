@@ -11,7 +11,6 @@ import Foundation
 // MARK: View Output (Presenter -> View)
 protocol PresenterToViewOnboardingPageControlProtocol {
     
-    
     func completeOnboardFlowDot(at currentPage: Int)
     
     func hideContinueAndBackButton()
