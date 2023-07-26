@@ -23,7 +23,8 @@ class OnboardingPageFlowPresenter: ViewToPresenterOnboardingPageFlowProtocol {
         }
     }
     
-    func userTappedOnboardingNextButton() {
+    func userTappedOnboardingNextButton(at page: Int) {
+        interactor?.calculateOnboarding(forNextPage: page+1)
     }
     
     func onboardingFlowDotViewFor(_ currentPage: Int) {
@@ -32,5 +33,10 @@ class OnboardingPageFlowPresenter: ViewToPresenterOnboardingPageFlowProtocol {
 }
 
 extension OnboardingPageFlowPresenter: InteractorToPresenterOnboardingPageFlowProtocol {
+    
+    func goToNextPage(_ page: Int) {
+        view?.goToNextPage(page)
+    }
+    
     
 }

@@ -10,5 +10,5 @@ import Foundation
 
 protocol OnboardingViewFlowDelegate {
     
-    func change(newCurrentPage: Int) -> Int
+    func calculate(newCurrentPage: Int) -> Int
 }

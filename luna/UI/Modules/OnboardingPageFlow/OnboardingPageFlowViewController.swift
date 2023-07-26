@@ -98,23 +98,23 @@ class OnboardingPageFlowViewController: UIPageViewController,
     func addUserTouchTriggerForNextButton(){
         
         onboardingButtons.nextButton.rx.tap.bind {
-            
-            self.presenter?.userTappedOnboardingNextButton()
+            guard let currentPage = try? self.datasource.pageIndex.value() else { return }
+            self.presenter?.userTappedOnboardingNextButton(at: currentPage)
 
 //             lets try to sndo to interactor
             
 //            interactor: api, core data, busniess logic
-            guard let currentPage = try? self.datasource.pageIndex.value() else { return }
+//            guard let currentPage = try? self.datasource.pageIndex.value() else { return }
 
-            guard let nextPage = self.flow?.change(newCurrentPage: currentPage + 1) else { return }
+//            guard let nextPage = self.flow?.change(newCurrentPage: currentPage + 1) else { return }
 
 //            if nextPage == 3 {
 //                self.presenter?.hideContinueAndBackButton()
 //                self.presenter?.showLastContinueButton()
 //            }
 
-            self.datasource.pageIndex.onNext(nextPage)
-            self.datasource.direction.onNext(.forward)
+//            self.datasource.pageIndex.onNext(nextPage)
+//            self.datasource.direction.onNext(.forward)
 //            self.presenter?.completeOnboardFlowDot(at: nextPage)
     
         }.disposed(by: disposeBag)
@@ -123,11 +123,11 @@ class OnboardingPageFlowViewController: UIPageViewController,
     func addUserTouchTriggerForPreviousButton(){
         onboardingButtons.previousButton.rx.tap.bind {
             guard let currentPage = try? self.datasource.pageIndex.value() else { return }
-            guard let previousPage = self.flow?.change(newCurrentPage: currentPage - 1) else { return }
+//            guard let previousPage = self.flow?.change(newCurrentPage: currentPage - 1) else { return }
             
-            self.datasource.pageIndex.onNext(previousPage)
-            self.datasource.direction.onNext(.reverse)
-            self.presenter?.onboardingFlowDotViewFor(previousPage)
+//            self.datasource.pageIndex.onNext(previousPage)
+//            self.datasource.direction.onNext(.reverse)
+//            self.presenter?.onboardingFlowDotViewFor(previousPage)
             
         }.disposed(by: disposeBag)
     }
@@ -140,6 +140,8 @@ class OnboardingPageFlowViewController: UIPageViewController,
 }
 
 extension OnboardingPageFlowViewController: PresenterToViewOnboardingPageFlowProtocol{
+
+    
     // TODO: Implement View Output Methods
     
     func completeOnboardFlowDot(at currentPage: Int) {
@@ -153,6 +155,14 @@ extension OnboardingPageFlowViewController: PresenterToViewOnboardingPageFlowPro
     
     func showLastContinueButton() {
         onboardingButtons.endOnboardingButton.isHidden = false
+    }
+    
+    func goToNextPage(_ page: Int) {
+        print("tá chegando aqui")
+        self.datasource.pageIndex.onNext(page)
+        self.datasource.direction.onNext(.forward)
+        self.presenter?.onboardingFlowDotViewFor(page)
+        
     }
 }
 
