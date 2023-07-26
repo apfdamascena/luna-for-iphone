@@ -20,22 +20,14 @@ class OnboardingPageFlowViewController: UIPageViewController,
     var presenter: ViewToPresenterOnboardingPageFlowProtocol?
     
     private(set) var datasource: OnboardingPageControlDataSource
-    
-    private(set) var flow: OnboardingViewFlow?
-    
+        
     private let onboardingButtons = OnboardingButtonView()
+    private(set) var pageControlView = OnboardingPageControlView(numberOfPages: 4)
     
     private var disposeBag = DisposeBag()
     
-    private(set) var pageControl: OnboardingPageControl
-
     init(datasource: OnboardingPageControlDataSource){
-        
-        self.pageControl = OnboardingPageControl(numberOfPages: 4)
-        self.flow = OnboardingViewFlow(numberOfPages: 4)
-        
         self.datasource = datasource
-        
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
       
         addUserTouchTrigger()
@@ -60,12 +52,12 @@ class OnboardingPageFlowViewController: UIPageViewController,
     
     func addSubviews() {
         view.addSubview(onboardingButtons)
-        view.addSubview(pageControl)
+        view.addSubview(pageControlView)
     }
 
     func addConstraints() {
         
-        pageControl.snp.makeConstraints{
+        pageControlView.snp.makeConstraints{
             $0.leading.trailing.top.equalTo(view.safeAreaLayoutGuide)
         }
 
@@ -127,7 +119,7 @@ extension OnboardingPageFlowViewController: PresenterToViewOnboardingPageFlowPro
     // TODO: Implement View Output Methods
     
     func completeOnboardFlowDot(at currentPage: Int) {
-        pageControl.completeDotAt(currentPage)
+        pageControlView.completeDotAt(currentPage)
     }
     
     func goToNextPage(_ page: Int) {

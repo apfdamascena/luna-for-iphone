@@ -8,7 +8,7 @@
 import UIKit
 
 
-class OnboardingPageControl: UIView, AnyView {
+class OnboardingPageControlView: UIView, AnyView {
     
     var numberOfPages: Int = 0
     var currentPage: Int = 0

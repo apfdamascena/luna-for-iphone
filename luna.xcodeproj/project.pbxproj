@@ -46,7 +46,7 @@
 		0DBADE0A2A6607BB00A10FC3 /* LunaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADE092A6607BB00A10FC3 /* LunaButton.swift */; };
 		0DBADE0C2A6608F300A10FC3 /* LastDayMenstruationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADE0B2A6608F300A10FC3 /* LastDayMenstruationView.swift */; };
 		0DBADE0F2A660AAE00A10FC3 /* Int+Su.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADE0E2A660AAE00A10FC3 /* Int+Su.swift */; };
-		0DCCB9262A6D82AF00451D63 /* OnboardingPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCCB9252A6D82AF00451D63 /* OnboardingPageControl.swift */; };
+		0DCCB9262A6D82AF00451D63 /* OnboardingPageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCCB9252A6D82AF00451D63 /* OnboardingPageControlView.swift */; };
 		0DDA61272A69CEC600CA15C6 /* MenstruationDurationContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDA61222A69CEC600CA15C6 /* MenstruationDurationContract.swift */; };
 		0DDA61282A69CEC600CA15C6 /* MenstruationDurationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDA61232A69CEC600CA15C6 /* MenstruationDurationPresenter.swift */; };
 		0DDA61292A69CEC600CA15C6 /* MenstruationDurationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDA61242A69CEC600CA15C6 /* MenstruationDurationRouter.swift */; };
@@ -140,7 +140,7 @@
 		0DBADE092A6607BB00A10FC3 /* LunaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaButton.swift; sourceTree = "<group>"; };
 		0DBADE0B2A6608F300A10FC3 /* LastDayMenstruationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastDayMenstruationView.swift; sourceTree = "<group>"; };
 		0DBADE0E2A660AAE00A10FC3 /* Int+Su.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Su.swift"; sourceTree = "<group>"; };
-		0DCCB9252A6D82AF00451D63 /* OnboardingPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControl.swift; sourceTree = "<group>"; };
+		0DCCB9252A6D82AF00451D63 /* OnboardingPageControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlView.swift; sourceTree = "<group>"; };
 		0DDA61222A69CEC600CA15C6 /* MenstruationDurationContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationContract.swift; sourceTree = "<group>"; };
 		0DDA61232A69CEC600CA15C6 /* MenstruationDurationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationPresenter.swift; sourceTree = "<group>"; };
 		0DDA61242A69CEC600CA15C6 /* MenstruationDurationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationRouter.swift; sourceTree = "<group>"; };
@@ -338,7 +338,7 @@
 		0DCCB9242A6D828F00451D63 /* OnboardingPageControl */ = {
 			isa = PBXGroup;
 			children = (
-				0DCCB9252A6D82AF00451D63 /* OnboardingPageControl.swift */,
+				0DCCB9252A6D82AF00451D63 /* OnboardingPageControlView.swift */,
 			);
 			path = OnboardingPageControl;
 			sourceTree = "<group>";
@@ -846,7 +846,7 @@
 				0DDC5B512A70B9CE00D4CCAE /* OnboardingPageFlowRouter.swift in Sources */,
 				0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */,
 				0DBADDDF2A6603F800A10FC3 /* LastDayMenstruationContract.swift in Sources */,
-				0DCCB9262A6D82AF00451D63 /* OnboardingPageControl.swift in Sources */,
+				0DCCB9262A6D82AF00451D63 /* OnboardingPageControlView.swift in Sources */,
 				0DDC5B4F2A70B9CE00D4CCAE /* OnboardingPageFlowContract.swift in Sources */,
 				0DDA61282A69CEC600CA15C6 /* MenstruationDurationPresenter.swift in Sources */,
 				0D2FC77C2A6F17B50025D8B6 /* HomeRouter.swift in Sources */,
