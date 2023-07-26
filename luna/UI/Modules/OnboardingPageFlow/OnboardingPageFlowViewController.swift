@@ -1,8 +1,8 @@
 //
-//  OnboardingPageControlViewController.swift
+//  OnboardingPageFlowViewController.swift
 //  luna
 //
-//  Created by alexdamascena on 21/07/23.
+//  Created by alexdamascena on 25/07/23.
 //  
 //
 
@@ -11,12 +11,13 @@ import RxSwift
 import SnapKit
 import RxCocoa
 
-class OnboardingPageControlViewController: UIPageViewController,
-                                           AnyView,
-                                           TouchableUserEvent,
-                                           DataSourceEventObservable {
 
-    var presenter: ViewToPresenterOnboardingPageControlProtocol?
+class OnboardingPageFlowViewController: UIPageViewController,
+                                        AnyView,
+                                        TouchableUserEvent,
+                                        DataSourceEventObservable {
+    
+    var presenter: ViewToPresenterOnboardingPageFlowProtocol?
     
     private(set) var datasource: OnboardingPageControlDataSource
     
@@ -97,24 +98,23 @@ class OnboardingPageControlViewController: UIPageViewController,
     func addUserTouchTriggerForNextButton(){
         
         onboardingButtons.nextButton.rx.tap.bind {
-//            presenter
             
+            self.presenter?.userTappedOnboardingNextButton()
+
+//             lets try to sndo to interactor
             
-    
-            // lets try to sndo to interactor
-            
-            //interactor: api, core data, busniess logic
-//            guard let currentPage = try? self.datasource.pageIndex.value() else { return }
-//
-//            guard let nextPage = self.flow?.change(newCurrentPage: currentPage + 1) else { return }
-//
+//            interactor: api, core data, busniess logic
+            guard let currentPage = try? self.datasource.pageIndex.value() else { return }
+
+            guard let nextPage = self.flow?.change(newCurrentPage: currentPage + 1) else { return }
+
 //            if nextPage == 3 {
 //                self.presenter?.hideContinueAndBackButton()
 //                self.presenter?.showLastContinueButton()
 //            }
-//
-//            self.datasource.pageIndex.onNext(nextPage)
-//            self.datasource.direction.onNext(.forward)
+
+            self.datasource.pageIndex.onNext(nextPage)
+            self.datasource.direction.onNext(.forward)
 //            self.presenter?.completeOnboardFlowDot(at: nextPage)
     
         }.disposed(by: disposeBag)
@@ -139,9 +139,9 @@ class OnboardingPageControlViewController: UIPageViewController,
     }
 }
 
-extension OnboardingPageControlViewController: PresenterToViewOnboardingPageControlProtocol {
-
-
+extension OnboardingPageFlowViewController: PresenterToViewOnboardingPageFlowProtocol{
+    // TODO: Implement View Output Methods
+    
     func completeOnboardFlowDot(at currentPage: Int) {
         pageControl.completeDotAt(currentPage)
     }
@@ -154,8 +154,6 @@ extension OnboardingPageControlViewController: PresenterToViewOnboardingPageCont
     func showLastContinueButton() {
         onboardingButtons.endOnboardingButton.isHidden = false
     }
-
-    // TODO: Implement View Output Methods
 }
 
 
@@ -163,9 +161,9 @@ extension OnboardingPageControlViewController: PresenterToViewOnboardingPageCont
 import SwiftUI
 
 @available(iOS 13, *)
-struct OnboardingPageControlViewController_Preview: PreviewProvider {
+struct OnboardingPageFlowViewController_Preview: PreviewProvider {
     static var previews: some View {
-        OnboardingPageControlViewController(datasource: OnboardingPageControlDataSourceImpl()).showPreview()
+        OnboardingPageFlowViewController(datasource: OnboardingPageControlDataSourceImpl()).showPreview()
     }
 }
 
