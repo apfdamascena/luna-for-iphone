@@ -9,6 +9,8 @@ import RxSwift
 
 class OnboardingPageControlDataSourceImpl: OnboardingPageControlDataSource {
     
+    var direction: BehaviorSubject<UIPageViewController.NavigationDirection> = BehaviorSubject(value: .forward)
+    
     var pageIndex: BehaviorSubject<Int> = BehaviorSubject(value: 0)
     
     var pages: [UIViewController] = [

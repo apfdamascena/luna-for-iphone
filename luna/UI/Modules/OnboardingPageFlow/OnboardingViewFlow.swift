@@ -10,13 +10,14 @@ import Foundation
 
 class OnboardingViewFlow: OnboardingViewFlowDelegate {
     
+    
     let numberOfPages: Int
     
     init(numberOfPages: Int){
         self.numberOfPages = numberOfPages
     }
     
-    func change(newCurrentPage: Int) -> Int {
+    func calculate(newCurrentPage: Int) -> Int {
         if newCurrentPage < 0 { return 0 }
         if newCurrentPage == numberOfPages  { return numberOfPages  }
         return newCurrentPage
