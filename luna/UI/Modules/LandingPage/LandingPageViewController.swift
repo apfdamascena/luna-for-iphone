@@ -28,6 +28,7 @@ class LandingPageViewController: UIViewController {
         addUserTouchTrigger()
 //        let lunaEvent = LunaEvent(title: "porra", startDate: Date(), endDate: Date())
 //        lunaCalendarManager.createEvent(lunaEvent)
+        lunaCalendarManager.firstLoadElementsToCalendar(daysBefore: 3, averageMenstruationDuration: 5, averageCycleDuration: 28)
     }
     
     func addUserTouchTrigger() {

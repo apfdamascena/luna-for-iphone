@@ -39,5 +39,24 @@ class LunaCalendarManager {
         let daysAfterDate = startDate.daysAfter(daysAfter)
         return lunaEventService?.getEventsByDate(firstDate: startDate, finalDate: daysAfterDate)
     }
+    
+    // [MUDAR]: VER COM ALEX COMO FAZER
+
+    func firstLoadElementsToCalendar(daysBefore: Int, averageMenstruationDuration: Int, averageCycleDuration: Int) {
+        let firstDayMenstruation = Date().daysBefore(daysBefore)
+        addCyclePhasesToCalendar(calendar: calendar, firstDayMenstruation: firstDayMenstruation, averageMenstruationDuration: averageMenstruationDuration, averageCycleDuration: averageCycleDuration, lastDayMenstruation: nil)
+    }
+    
+    func addCyclePhasesToCalendar(calendar: EKCalendar?, firstDayMenstruation: Date, averageMenstruationDuration: Int, averageCycleDuration: Int, lastDayMenstruation: Date?) {
+        var monthCycleService = CalculateCyclesService(eventStore: eventStore,
+                                                  firstDayMenstruation: firstDayMenstruation,
+                                                  averageMenstruationDuration: averageMenstruationDuration,
+                                                  averageCycleDuration: averageCycleDuration, lastDayMenstruation: lastDayMenstruation)
+        let phases = monthCycleService.getPhases()
+        for (title, startDate, endDate) in phases {
+            let event = LunaEvent(title: title, startDate: startDate, endDate: endDate)
+            createEvent(event)
+        }
+    }
 
 }

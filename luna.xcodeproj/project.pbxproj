@@ -73,6 +73,7 @@
 		BFD533BA2A7158C00063351E /* LunaCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD533B92A7158C00063351E /* LunaCalendarManager.swift */; };
 		BFD533BC2A7166360063351E /* CalendarEventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD533BB2A7166360063351E /* CalendarEventService.swift */; };
 		BFD533BF2A716BA50063351E /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD533BE2A716BA50063351E /* Date.swift */; };
+		BFD533C22A71B3240063351E /* CalculateCyclesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD533C12A71B3240063351E /* CalculateCyclesService.swift */; };
 		BFF09AFA2A6B599B00749328 /* PickerViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF09AF92A6B599B00749328 /* PickerViewAdapter.swift */; };
 		CA557BCC2A6B1742001DF2BB /* LandingPageContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA557BC82A6B1742001DF2BB /* LandingPageContract.swift */; };
 		CA557BCD2A6B1743001DF2BB /* LandingPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA557BC92A6B1742001DF2BB /* LandingPagePresenter.swift */; };
@@ -174,6 +175,7 @@
 		BFD533B92A7158C00063351E /* LunaCalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaCalendarManager.swift; sourceTree = "<group>"; };
 		BFD533BB2A7166360063351E /* CalendarEventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventService.swift; sourceTree = "<group>"; };
 		BFD533BE2A716BA50063351E /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		BFD533C12A71B3240063351E /* CalculateCyclesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateCyclesService.swift; sourceTree = "<group>"; };
 		BFF09AF92A6B599B00749328 /* PickerViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewAdapter.swift; sourceTree = "<group>"; };
 		C72D64B781A7543B9B9BB027 /* Pods_luna_lunaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luna_lunaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA557BC82A6B1742001DF2BB /* LandingPageContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageContract.swift; sourceTree = "<group>"; };
@@ -529,6 +531,7 @@
 				BFD533B72A7156970063351E /* CalendarProvider.swift */,
 				BFD533B92A7158C00063351E /* LunaCalendarManager.swift */,
 				BFD533BB2A7166360063351E /* CalendarEventService.swift */,
+				BFD533C12A71B3240063351E /* CalculateCyclesService.swift */,
 			);
 			path = LunaCalendar;
 			sourceTree = "<group>";
@@ -903,6 +906,7 @@
 				A46C05132A6EFE150071ABCE /* CalendarRouter.swift in Sources */,
 				BFD533B82A7156970063351E /* CalendarProvider.swift in Sources */,
 				0D2FC7652A6EF3750025D8B6 /* LunaButtonStyle.swift in Sources */,
+				BFD533C22A71B3240063351E /* CalculateCyclesService.swift in Sources */,
 				0D2FC7702A6EF4F00025D8B6 /* OnboardingViewFlowDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
