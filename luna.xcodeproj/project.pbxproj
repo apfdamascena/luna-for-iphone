@@ -56,6 +56,7 @@
 		0DDC5B512A70B9CE00D4CCAE /* OnboardingPageFlowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC5B4C2A70B9CE00D4CCAE /* OnboardingPageFlowRouter.swift */; };
 		0DDC5B522A70B9CE00D4CCAE /* OnboardingPageFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC5B4D2A70B9CE00D4CCAE /* OnboardingPageFlowViewController.swift */; };
 		0DDC5B532A70B9CE00D4CCAE /* OnboardingPageFlowInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC5B4E2A70B9CE00D4CCAE /* OnboardingPageFlowInteractor.swift */; };
+		0DDC5B562A71D23600D4CCAE /* OnboardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC5B552A71D23600D4CCAE /* OnboardingManager.swift */; };
 		2814909EB8D2BDC1D5AA5874 /* Pods_lunaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33837198E1A2D686B82FD9A5 /* Pods_lunaTests.framework */; };
 		6994CDD4C9481D9C0BE8F427 /* Pods_luna_lunaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72D64B781A7543B9B9BB027 /* Pods_luna_lunaUITests.framework */; };
 		A46C05132A6EFE150071ABCE /* CalendarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050D2A6EFE150071ABCE /* CalendarRouter.swift */; };
@@ -150,6 +151,7 @@
 		0DDC5B4C2A70B9CE00D4CCAE /* OnboardingPageFlowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageFlowRouter.swift; sourceTree = "<group>"; };
 		0DDC5B4D2A70B9CE00D4CCAE /* OnboardingPageFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageFlowViewController.swift; sourceTree = "<group>"; };
 		0DDC5B4E2A70B9CE00D4CCAE /* OnboardingPageFlowInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageFlowInteractor.swift; sourceTree = "<group>"; };
+		0DDC5B552A71D23600D4CCAE /* OnboardingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingManager.swift; sourceTree = "<group>"; };
 		33837198E1A2D686B82FD9A5 /* Pods_lunaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lunaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD2EB575C89A943BE87F57E /* Pods-lunaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lunaTests.release.xcconfig"; path = "Target Support Files/Pods-lunaTests/Pods-lunaTests.release.xcconfig"; sourceTree = "<group>"; };
 		40083797C335396142E4E31B /* Pods-luna-lunaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna-lunaUITests.debug.xcconfig"; path = "Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 		0DBADD972A65FDF100A10FC3 /* luna */ = {
 			isa = PBXGroup;
 			children = (
+				0DDC5B542A71CC7C00D4CCAE /* Managers */,
 				0DDA612E2A69D04100CA15C6 /* UI */,
 				0D7C73AA2A6757A500677D1E /* Constant */,
 				0DBADDCB2A65FF2A00A10FC3 /* Resources */,
@@ -453,6 +456,14 @@
 				0DA56C532A6B338D00E056C1 /* Views */,
 			);
 			path = OnboardingPageFlow;
+			sourceTree = "<group>";
+		};
+		0DDC5B542A71CC7C00D4CCAE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0DDC5B552A71D23600D4CCAE /* OnboardingManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		44D481D3F52D76C9157564E0 /* Frameworks */ = {
@@ -852,6 +863,7 @@
 				0D2FC77C2A6F17B50025D8B6 /* HomeRouter.swift in Sources */,
 				CA557BCD2A6B1743001DF2BB /* LandingPagePresenter.swift in Sources */,
 				0DBADE0C2A6608F300A10FC3 /* LastDayMenstruationView.swift in Sources */,
+				0DDC5B562A71D23600D4CCAE /* OnboardingManager.swift in Sources */,
 				A46C05172A6EFE150071ABCE /* CalendarContract.swift in Sources */,
 				0D7C73AD2A67580D00677D1E /* Strings+Generated.swift in Sources */,
 				0DBADDD32A66005500A10FC3 /* LunaTextViewModel.swift in Sources */,
