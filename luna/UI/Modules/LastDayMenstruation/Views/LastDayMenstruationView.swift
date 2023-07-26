@@ -24,7 +24,7 @@ class LastDayMenstruationView: UIView, AnyView  {
         let label = LunaText()
         let model = LunaTextViewModel(size: 31,
                                       color: Asset.primaryGray900.color,
-                                      weight: .regular)
+                                      weight: .medium)
         
         label.text = L10n.Constants.Content.Label.lastDayMenstruation
         label.numberOfLines = 0

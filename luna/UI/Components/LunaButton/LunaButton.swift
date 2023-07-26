@@ -1,15 +1,4 @@
-//
-//  LunaButton.swift
-//  luna
-//
-//  Created by alexdamascena on 17/07/23.
-//
-
 import UIKit
-
-
-
-
 
 class LunaButton: UIButton, AnyView, DrawableView {
 
@@ -37,11 +26,11 @@ class LunaButton: UIButton, AnyView, DrawableView {
             self.layer.borderColor = UIColor(named: Asset.primaryRed900.name)?.cgColor
         }
     
-        
         configuration.contentInsets = NSDirectionalEdgeInsets(top: 14, leading: 20, bottom: 14, trailing: 20)
-
-        configuration.title = model.text
-    
+        
+        var container = AttributeContainer()
+        container.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        configuration.attributedTitle = AttributedString(model.text, attributes: container)
         
         self.configuration = configuration
     }
