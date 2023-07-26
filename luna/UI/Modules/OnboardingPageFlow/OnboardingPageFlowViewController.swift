@@ -69,6 +69,7 @@ class OnboardingPageFlowViewController: UIPageViewController,
     }
     
     func addUserTouchTrigger() {
+        
         addUserTouchTriggerForNextButton()
         addUserTouchTriggerForPreviousButton()
         addUserTouchTriggerForEndOnboardingButton()
@@ -96,18 +97,15 @@ class OnboardingPageFlowViewController: UIPageViewController,
     }
     
     func addUserTouchTriggerForPreviousButton(){
+        
         onboardingButtons.previousButton.rx.tap.bind {
             guard let currentPage = try? self.datasource.pageIndex.value() else { return }
-//            guard let previousPage = self.flow?.change(newCurrentPage: currentPage - 1) else { return }
-            
-//            self.datasource.pageIndex.onNext(previousPage)
-//            self.datasource.direction.onNext(.reverse)
-//            self.presenter?.onboardingFlowDotViewFor(previousPage)
-            
+            self.presenter?.userTappedOnboardingPreviousButton(at: currentPage)
         }.disposed(by: disposeBag)
     }
     
     func addUserTouchTriggerForEndOnboardingButton(){
+        
         onboardingButtons.endOnboardingButton.rx.tap.bind {
             self.presenter?.userTappedEndOnboardingButton()
         }.disposed(by: disposeBag)
@@ -123,17 +121,25 @@ extension OnboardingPageFlowViewController: PresenterToViewOnboardingPageFlowPro
     }
     
     func goToNextPage(_ page: Int) {
+        
         self.datasource.pageIndex.onNext(page)
         self.datasource.direction.onNext(.forward)
         self.presenter?.onboardingFlowDotViewFor(page)
     }
     
+    func goToPreviousPage(_ page: Int) {
+        
+        self.datasource.pageIndex.onNext(page)
+        self.datasource.direction.onNext(.reverse)
+        self.presenter?.onboardingFlowDotViewFor(page)
+    }
+    
     func showEndOnboardingView() {
+        
         onboardingButtons.previousButton.isHidden = true
         onboardingButtons.nextButton.isHidden = true
         onboardingButtons.endOnboardingButton.isHidden = false
     }
-    
 }
 
 

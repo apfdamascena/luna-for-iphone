@@ -23,6 +23,15 @@ class OnboardingPageFlowInteractor: PresenterToInteractorOnboardingPageFlowProto
         } else {
             presenter?.goToNextPage(page)
         }
-
+    }
+    
+    func calculateOnboarding(forPreviousPage: Int){
+        let page = flowCalculator.calculate(newCurrentPage: forPreviousPage)
+        
+        if page == 3 {
+            presenter?.showEndOnboardingView(page)
+        } else {
+            presenter?.goToPreviousPage(page)
+        }
     }
 }

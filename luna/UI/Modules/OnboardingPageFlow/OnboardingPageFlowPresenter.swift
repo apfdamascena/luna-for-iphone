@@ -30,13 +30,20 @@ class OnboardingPageFlowPresenter: ViewToPresenterOnboardingPageFlowProtocol {
     func onboardingFlowDotViewFor(_ currentPage: Int) {
         view?.completeOnboardFlowDot(at: currentPage)
     }
+    
+    func userTappedOnboardingPreviousButton(at page: Int) {
+        interactor?.calculateOnboarding(forPreviousPage: page - 1)
+    }
 }
 
 extension OnboardingPageFlowPresenter: InteractorToPresenterOnboardingPageFlowProtocol {
-
     
     func goToNextPage(_ page: Int) {
         view?.goToNextPage(page)
+    }
+    
+    func goToPreviousPage(_ page: Int) {
+        view?.goToPreviousPage(page)
     }
     
     func showEndOnboardingView(_ page: Int) {
