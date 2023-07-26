@@ -17,10 +17,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        let landingPage = LandingPageRouter.createModule()
-        window.rootViewController = UINavigationController(rootViewController: landingPage)
+        let root = RootScreenViewFactory.createModule()
+        window.rootViewController = root
         window.makeKeyAndVisible()
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

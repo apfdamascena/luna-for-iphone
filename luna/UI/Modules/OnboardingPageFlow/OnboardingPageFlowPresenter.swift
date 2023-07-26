@@ -17,6 +17,7 @@ class OnboardingPageFlowPresenter: ViewToPresenterOnboardingPageFlowProtocol {
     func userTappedEndOnboardingButton() {
         
         guard let pageViewController = view else { return }
+        OnboardingManager.shared.userSawOnboarding()
         
         DispatchQueue.main.async {
             self.router?.pushHome(on: pageViewController)
