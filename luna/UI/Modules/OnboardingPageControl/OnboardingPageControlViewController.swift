@@ -145,7 +145,6 @@ extension OnboardingPageControlViewController: PresenterToViewOnboardingPageCont
     func hideContinueAndBackButton() {
         onboardingButtons.previousButton.isHidden = true
         onboardingButtons.nextButton.isHidden = true
-     
     }
     
     func showLastContinueButton() {
