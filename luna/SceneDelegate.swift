@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        let landingPage = LandingPageRouter.createModule()
+        let root = RootScreenViewFactory.create()
         window.rootViewController = UINavigationController(rootViewController: landingPage)
         window.makeKeyAndVisible()
         

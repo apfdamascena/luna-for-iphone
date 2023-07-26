@@ -20,6 +20,7 @@
 		0D2FC77D2A6F17B50025D8B6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7782A6F17B50025D8B6 /* HomeViewController.swift */; };
 		0D4049D72A7047420058669B /* OnboardingPageControlDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4049D62A7047420058669B /* OnboardingPageControlDelegate.swift */; };
 		0D4049D92A7048000058669B /* OnboardingPageControlDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4049D82A7048000058669B /* OnboardingPageControlDelegateImpl.swift */; };
+		0D6794132A71D53C00382142 /* RootScreenViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6794122A71D53C00382142 /* RootScreenViewFactory.swift */; };
 		0D7C73A62A67566700677D1E /* Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D7C73A52A67566700677D1E /* Constants.strings */; };
 		0D7C73AD2A67580D00677D1E /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */; };
 		0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */; };
@@ -111,6 +112,7 @@
 		0D2FC7782A6F17B50025D8B6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0D4049D62A7047420058669B /* OnboardingPageControlDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDelegate.swift; sourceTree = "<group>"; };
 		0D4049D82A7048000058669B /* OnboardingPageControlDelegateImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDelegateImpl.swift; sourceTree = "<group>"; };
+		0D6794122A71D53C00382142 /* RootScreenViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreenViewFactory.swift; sourceTree = "<group>"; };
 		0D7C73A52A67566700677D1E /* Constants.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Constants.strings; sourceTree = "<group>"; };
 		0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
@@ -235,6 +237,14 @@
 				0D2FC7782A6F17B50025D8B6 /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		0D6794112A71D51800382142 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				0D6794122A71D53C00382142 /* RootScreenViewFactory.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 		0D7C73AA2A6757A500677D1E /* Constant */ = {
@@ -373,6 +383,7 @@
 		0DDA612F2A69D07900CA15C6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0D6794112A71D51800382142 /* Root */,
 				0DDC5B492A70B9B700D4CCAE /* OnboardingPageFlow */,
 				0D2FC7742A6F179E0025D8B6 /* Home */,
 				BF6520D92A6F0D3400E60054 /* CycleDuration */,
@@ -858,6 +869,7 @@
 				0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */,
 				0DBADDDF2A6603F800A10FC3 /* LastDayMenstruationContract.swift in Sources */,
 				0DCCB9262A6D82AF00451D63 /* OnboardingPageControlView.swift in Sources */,
+				0D6794132A71D53C00382142 /* RootScreenViewFactory.swift in Sources */,
 				0DDC5B4F2A70B9CE00D4CCAE /* OnboardingPageFlowContract.swift in Sources */,
 				0DDA61282A69CEC600CA15C6 /* MenstruationDurationPresenter.swift in Sources */,
 				0D2FC77C2A6F17B50025D8B6 /* HomeRouter.swift in Sources */,
