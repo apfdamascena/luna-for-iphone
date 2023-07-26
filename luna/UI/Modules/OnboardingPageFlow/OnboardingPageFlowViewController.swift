@@ -100,23 +100,6 @@ class OnboardingPageFlowViewController: UIPageViewController,
         onboardingButtons.nextButton.rx.tap.bind {
             guard let currentPage = try? self.datasource.pageIndex.value() else { return }
             self.presenter?.userTappedOnboardingNextButton(at: currentPage)
-
-//             lets try to sndo to interactor
-            
-//            interactor: api, core data, busniess logic
-//            guard let currentPage = try? self.datasource.pageIndex.value() else { return }
-
-//            guard let nextPage = self.flow?.change(newCurrentPage: currentPage + 1) else { return }
-
-//            if nextPage == 3 {
-//                self.presenter?.hideContinueAndBackButton()
-//                self.presenter?.showLastContinueButton()
-//            }
-
-//            self.datasource.pageIndex.onNext(nextPage)
-//            self.datasource.direction.onNext(.forward)
-//            self.presenter?.completeOnboardFlowDot(at: nextPage)
-    
         }.disposed(by: disposeBag)
     }
     
@@ -140,7 +123,6 @@ class OnboardingPageFlowViewController: UIPageViewController,
 }
 
 extension OnboardingPageFlowViewController: PresenterToViewOnboardingPageFlowProtocol{
-
     
     // TODO: Implement View Output Methods
     
@@ -148,22 +130,18 @@ extension OnboardingPageFlowViewController: PresenterToViewOnboardingPageFlowPro
         pageControl.completeDotAt(currentPage)
     }
     
-    func hideContinueAndBackButton() {
-        onboardingButtons.previousButton.isHidden = true
-        onboardingButtons.nextButton.isHidden = true
-    }
-    
-    func showLastContinueButton() {
-        onboardingButtons.endOnboardingButton.isHidden = false
-    }
-    
     func goToNextPage(_ page: Int) {
-        print("tá chegando aqui")
         self.datasource.pageIndex.onNext(page)
         self.datasource.direction.onNext(.forward)
         self.presenter?.onboardingFlowDotViewFor(page)
-        
     }
+    
+    func showEndOnboardingView() {
+        onboardingButtons.previousButton.isHidden = true
+        onboardingButtons.nextButton.isHidden = true
+        onboardingButtons.endOnboardingButton.isHidden = false
+    }
+    
 }
 
 

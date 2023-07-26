@@ -33,9 +33,15 @@ class OnboardingPageFlowPresenter: ViewToPresenterOnboardingPageFlowProtocol {
 }
 
 extension OnboardingPageFlowPresenter: InteractorToPresenterOnboardingPageFlowProtocol {
+
     
     func goToNextPage(_ page: Int) {
         view?.goToNextPage(page)
+    }
+    
+    func showEndOnboardingView(_ page: Int) {
+        view?.goToNextPage(page)
+        view?.showEndOnboardingView()
     }
     
     

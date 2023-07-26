@@ -15,6 +15,8 @@ protocol PresenterToViewOnboardingPageFlowProtocol {
     func completeOnboardFlowDot(at currentPage: Int)
     
     func goToNextPage(_ page: Int)
+    
+    func showEndOnboardingView()
 }
 
 
@@ -46,6 +48,7 @@ protocol PresenterToInteractorOnboardingPageFlowProtocol {
 protocol InteractorToPresenterOnboardingPageFlowProtocol {
     
     func goToNextPage(_ page: Int)
+    func showEndOnboardingView(_ page: Int)
     
 }
 
