@@ -9,7 +9,7 @@ import UIKit
 
 class RootScreenViewFactory {
     
-    static func create() -> UINavigationController {
+    static func createModule() -> UINavigationController {
         var rootController = LandingPageRouter.createModule()
         
         if OnboardingManager.shared.wasSeen {
