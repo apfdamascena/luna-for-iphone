@@ -14,7 +14,7 @@ class OnboardingPageControlPresenter: ViewToPresenterOnboardingPageControlProtoc
     var view: PresenterToViewOnboardingPageControlProtocol?
     var router: PresenterToRouterOnboardingPageControlProtocol?
     
-    func userTappedContinueButton() {
+    func userTappedEndOnboardingButton() {
         
         guard let pageViewController = view else { return }
         
@@ -24,7 +24,7 @@ class OnboardingPageControlPresenter: ViewToPresenterOnboardingPageControlProtoc
     }
     
     
-    func completeOnboardFlowDot(at currentPage: Int) {
+    func onboardingFlowDotViewFor(_ currentPage: Int) {
         view?.completeOnboardFlowDot(at: currentPage)
     }
     

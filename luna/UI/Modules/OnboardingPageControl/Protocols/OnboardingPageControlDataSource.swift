@@ -12,4 +12,5 @@ protocol OnboardingPageControlDataSource {
     
     var pageIndex: BehaviorSubject<Int> { get }
     var pages: [UIViewController] { get }
+    var direction: BehaviorSubject<UIPageViewController.NavigationDirection> { get }
 }

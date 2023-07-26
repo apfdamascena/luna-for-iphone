@@ -24,11 +24,12 @@ protocol ViewToPresenterOnboardingPageControlProtocol {
     var view: PresenterToViewOnboardingPageControlProtocol? { get set }
     var router: PresenterToRouterOnboardingPageControlProtocol? { get set }
     
-    func userTappedContinueButton()
-    func completeOnboardFlowDot(at currentPage: Int)
+    func userTappedEndOnboardingButton()
+    func onboardingFlowDotViewFor(_ currentPage: Int)
     
     func hideContinueAndBackButton()
     func showLastContinueButton()
+    
 }
 
 // MARK: Router Input (Presenter -> Router)

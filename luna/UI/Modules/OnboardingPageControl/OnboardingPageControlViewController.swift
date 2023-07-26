@@ -19,7 +19,6 @@ class OnboardingPageControlViewController: UIPageViewController,
     var presenter: ViewToPresenterOnboardingPageControlProtocol?
     
     private(set) var datasource: OnboardingPageControlDataSource
-    private(set) var delegateActionFor: OnboardingPageControlDelegate
     
     private(set) var flow: OnboardingViewFlow?
     
@@ -29,14 +28,12 @@ class OnboardingPageControlViewController: UIPageViewController,
     
     private(set) var pageControl: OnboardingPageControl
 
-    init(datasource: OnboardingPageControlDataSource,
-         delegate: OnboardingPageControlDelegate){
+    init(datasource: OnboardingPageControlDataSource){
         
         self.pageControl = OnboardingPageControl(numberOfPages: 4)
         self.flow = OnboardingViewFlow(numberOfPages: 4)
         
         self.datasource = datasource
-        self.delegateActionFor = delegate
         
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
       
@@ -86,13 +83,13 @@ class OnboardingPageControlViewController: UIPageViewController,
     
     func addDataSourceEventObservable() {
         
-        Observable.zip(self.delegateActionFor.direction, self.datasource.pageIndex)
+        Observable.zip(self.datasource.direction, self.datasource.pageIndex)
             .asObservable()
             .subscribe( onNext: { direction, index in
                 let controller = self.datasource.pages[index]
                 self.setViewControllers([controller], direction: direction, animated: true)
             }, onCompleted: {
-                self.presenter?.userTappedContinueButton()
+                self.presenter?.userTappedEndOnboardingButton()
             })
             .disposed(by: disposeBag)
     }
@@ -100,18 +97,25 @@ class OnboardingPageControlViewController: UIPageViewController,
     func addUserTouchTriggerForNextButton(){
         
         onboardingButtons.nextButton.rx.tap.bind {
-            guard let currentPage = try? self.datasource.pageIndex.value() else { return }
+//            presenter
             
-            guard let nextPage = self.flow?.change(newCurrentPage: currentPage + 1) else { return }
             
-            if nextPage == 3 {
-                self.presenter?.hideContinueAndBackButton()
-                self.presenter?.showLastContinueButton()
-            }
+    
+            // lets try to sndo to interactor
             
-            self.datasource.pageIndex.onNext(nextPage)
-            self.delegateActionFor.direction.onNext(.forward)
-            self.presenter?.completeOnboardFlowDot(at: nextPage)
+            //interactor: api, core data, busniess logic
+//            guard let currentPage = try? self.datasource.pageIndex.value() else { return }
+//
+//            guard let nextPage = self.flow?.change(newCurrentPage: currentPage + 1) else { return }
+//
+//            if nextPage == 3 {
+//                self.presenter?.hideContinueAndBackButton()
+//                self.presenter?.showLastContinueButton()
+//            }
+//
+//            self.datasource.pageIndex.onNext(nextPage)
+//            self.datasource.direction.onNext(.forward)
+//            self.presenter?.completeOnboardFlowDot(at: nextPage)
     
         }.disposed(by: disposeBag)
     }
@@ -122,15 +126,15 @@ class OnboardingPageControlViewController: UIPageViewController,
             guard let previousPage = self.flow?.change(newCurrentPage: currentPage - 1) else { return }
             
             self.datasource.pageIndex.onNext(previousPage)
-            self.delegateActionFor.direction.onNext(.reverse)
-            self.presenter?.completeOnboardFlowDot(at: previousPage)
+            self.datasource.direction.onNext(.reverse)
+            self.presenter?.onboardingFlowDotViewFor(previousPage)
             
         }.disposed(by: disposeBag)
     }
     
     func addUserTouchTriggerForEndOnboardingButton(){
         onboardingButtons.endOnboardingButton.rx.tap.bind {
-            self.presenter?.userTappedContinueButton()
+            self.presenter?.userTappedEndOnboardingButton()
         }.disposed(by: disposeBag)
     }
 }
@@ -161,7 +165,7 @@ import SwiftUI
 @available(iOS 13, *)
 struct OnboardingPageControlViewController_Preview: PreviewProvider {
     static var previews: some View {
-        OnboardingPageControlViewController(datasource: OnboardingPageControlDataSourceImpl(), delegate: OnboardingPageControlDelegateImpl()).showPreview()
+        OnboardingPageControlViewController(datasource: OnboardingPageControlDataSourceImpl()).showPreview()
     }
 }
 
