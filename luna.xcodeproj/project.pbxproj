@@ -68,6 +68,11 @@
 		BF6520E12A6F0D4B00E60054 /* CycleDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520DD2A6F0D4B00E60054 /* CycleDurationViewController.swift */; };
 		BF6520E42A6F0D5D00E60054 /* CycleDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520E32A6F0D5D00E60054 /* CycleDurationView.swift */; };
 		BFCAAD3B2A6B19AE00A91CC0 /* MenstruationDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */; };
+		BFD533B62A71567A0063351E /* CalendarCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD533B52A71567A0063351E /* CalendarCreator.swift */; };
+		BFD533B82A7156970063351E /* CalendarProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD533B72A7156970063351E /* CalendarProvider.swift */; };
+		BFD533BA2A7158C00063351E /* LunaCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD533B92A7158C00063351E /* LunaCalendarManager.swift */; };
+		BFD533BC2A7166360063351E /* CalendarEventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD533BB2A7166360063351E /* CalendarEventService.swift */; };
+		BFD533BF2A716BA50063351E /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD533BE2A716BA50063351E /* Date.swift */; };
 		BFF09AFA2A6B599B00749328 /* PickerViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF09AF92A6B599B00749328 /* PickerViewAdapter.swift */; };
 		CA557BCC2A6B1742001DF2BB /* LandingPageContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA557BC82A6B1742001DF2BB /* LandingPageContract.swift */; };
 		CA557BCD2A6B1743001DF2BB /* LandingPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA557BC92A6B1742001DF2BB /* LandingPagePresenter.swift */; };
@@ -164,6 +169,11 @@
 		BF6520DD2A6F0D4B00E60054 /* CycleDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationViewController.swift; sourceTree = "<group>"; };
 		BF6520E32A6F0D5D00E60054 /* CycleDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationView.swift; sourceTree = "<group>"; };
 		BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationView.swift; sourceTree = "<group>"; };
+		BFD533B52A71567A0063351E /* CalendarCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCreator.swift; sourceTree = "<group>"; };
+		BFD533B72A7156970063351E /* CalendarProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarProvider.swift; sourceTree = "<group>"; };
+		BFD533B92A7158C00063351E /* LunaCalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaCalendarManager.swift; sourceTree = "<group>"; };
+		BFD533BB2A7166360063351E /* CalendarEventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventService.swift; sourceTree = "<group>"; };
+		BFD533BE2A716BA50063351E /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		BFF09AF92A6B599B00749328 /* PickerViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewAdapter.swift; sourceTree = "<group>"; };
 		C72D64B781A7543B9B9BB027 /* Pods_luna_lunaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luna_lunaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA557BC82A6B1742001DF2BB /* LandingPageContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageContract.swift; sourceTree = "<group>"; };
@@ -313,6 +323,8 @@
 		0DBADD972A65FDF100A10FC3 /* luna */ = {
 			isa = PBXGroup;
 			children = (
+				BFD533BD2A716B980063351E /* Extensions */,
+				BFD533B42A71566B0063351E /* LunaCalendar */,
 				0DDA612E2A69D04100CA15C6 /* UI */,
 				0D7C73AA2A6757A500677D1E /* Constant */,
 				0DBADDCB2A65FF2A00A10FC3 /* Resources */,
@@ -508,6 +520,25 @@
 				BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BFD533B42A71566B0063351E /* LunaCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				BFD533B52A71567A0063351E /* CalendarCreator.swift */,
+				BFD533B72A7156970063351E /* CalendarProvider.swift */,
+				BFD533B92A7158C00063351E /* LunaCalendarManager.swift */,
+				BFD533BB2A7166360063351E /* CalendarEventService.swift */,
+			);
+			path = LunaCalendar;
+			sourceTree = "<group>";
+		};
+		BFD533BD2A716B980063351E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFD533BE2A716BA50063351E /* Date.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BFF09AF82A6B597600749328 /* Adapters */ = {
@@ -813,6 +844,7 @@
 				0D2FC7722A6EF59B0025D8B6 /* OnboardingViewFlow.swift in Sources */,
 				0D2FC77D2A6F17B50025D8B6 /* HomeViewController.swift in Sources */,
 				0DBADDE92A66045700A10FC3 /* UIViewController+Preview.swift in Sources */,
+				BFD533BC2A7166360063351E /* CalendarEventService.swift in Sources */,
 				BF6520DF2A6F0D4B00E60054 /* CycleDurationPresenter.swift in Sources */,
 				0DBADDE12A6603F800A10FC3 /* LastDayMenstruationRouter.swift in Sources */,
 				0DBADDA32A65FDF100A10FC3 /* luna.xcdatamodeld in Sources */,
@@ -835,6 +867,7 @@
 				0DDA612A2A69CEC600CA15C6 /* MenstruationDurationViewController.swift in Sources */,
 				0DA56C552A6B33AC00E056C1 /* OnboardingButtonView.swift in Sources */,
 				0D4049D92A7048000058669B /* OnboardingPageControlDelegateImpl.swift in Sources */,
+				BFD533B62A71567A0063351E /* CalendarCreator.swift in Sources */,
 				BF6520E12A6F0D4B00E60054 /* CycleDurationViewController.swift in Sources */,
 				0DBADDD82A66017600A10FC3 /* DrawableView.swift in Sources */,
 				0DBADD992A65FDF100A10FC3 /* AppDelegate.swift in Sources */,
@@ -842,6 +875,7 @@
 				BFCAAD3B2A6B19AE00A91CC0 /* MenstruationDurationView.swift in Sources */,
 				0DBADD9B2A65FDF100A10FC3 /* SceneDelegate.swift in Sources */,
 				BFF09AFA2A6B599B00749328 /* PickerViewAdapter.swift in Sources */,
+				BFD533BF2A716BA50063351E /* Date.swift in Sources */,
 				0DA56C4F2A6B266D00E056C1 /* OnboardingPageControlPresenter.swift in Sources */,
 				0DA56C502A6B266D00E056C1 /* OnboardingPageControlRouter.swift in Sources */,
 				0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */,
@@ -855,6 +889,7 @@
 				0D7C73AD2A67580D00677D1E /* Strings+Generated.swift in Sources */,
 				0DBADDD32A66005500A10FC3 /* LunaTextViewModel.swift in Sources */,
 				0DBADDE02A6603F800A10FC3 /* LastDayMenstruationPresenter.swift in Sources */,
+				BFD533BA2A7158C00063351E /* LunaCalendarManager.swift in Sources */,
 				0D2FC77B2A6F17B50025D8B6 /* HomePresenter.swift in Sources */,
 				0DBADDD62A6600CD00A10FC3 /* AnyView.swift in Sources */,
 				0DBADDE72A66044600A10FC3 /* UIView+Preview.swift in Sources */,
@@ -866,6 +901,7 @@
 				0D4049D72A7047420058669B /* OnboardingPageControlDelegate.swift in Sources */,
 				CA557BCE2A6B1743001DF2BB /* LandingPageRouter.swift in Sources */,
 				A46C05132A6EFE150071ABCE /* CalendarRouter.swift in Sources */,
+				BFD533B82A7156970063351E /* CalendarProvider.swift in Sources */,
 				0D2FC7652A6EF3750025D8B6 /* LunaButtonStyle.swift in Sources */,
 				0D2FC7702A6EF4F00025D8B6 /* OnboardingViewFlowDelegate.swift in Sources */,
 			);
@@ -1040,6 +1076,7 @@
 				DEVELOPMENT_TEAM = M3SKJK6V42;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = luna/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Libere acesso para conseguir usar o app";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1069,6 +1106,7 @@
 				DEVELOPMENT_TEAM = M3SKJK6V42;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = luna/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Libere acesso para conseguir usar o app";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

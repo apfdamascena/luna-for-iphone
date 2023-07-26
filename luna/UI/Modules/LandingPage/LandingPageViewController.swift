@@ -18,12 +18,16 @@ class LandingPageViewController: UIViewController {
     
     private var disposeBag = DisposeBag()
     
+    private var lunaCalendarManager = LunaCalendarManager()
+    
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = landingPageView
         
         addUserTouchTrigger()
+//        let lunaEvent = LunaEvent(title: "porra", startDate: Date(), endDate: Date())
+//        lunaCalendarManager.createEvent(lunaEvent)
     }
     
     func addUserTouchTrigger() {

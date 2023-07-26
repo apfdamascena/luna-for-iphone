@@ -12,6 +12,10 @@ import Foundation
 internal enum L10n {
   internal enum Constants {
     internal enum Content {
+      internal enum Api {
+        /// iCloud
+        internal static let icloud = L10n.tr("Constants", "constants.content.api.icloud", fallback: "iCloud")
+      }
       internal enum Button {
         /// Continuar
         internal static let `continue` = L10n.tr("Constants", "constants.content.button.continue", fallback: "Continuar")
