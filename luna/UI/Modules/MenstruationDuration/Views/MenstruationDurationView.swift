@@ -28,7 +28,7 @@ class MenstruationDurationView: UIView, AnyView {
         let label = LunaText()
         let model = LunaTextViewModel(size: 31,
                                       color: .black,
-                                      weight: .regular)
+                                      weight: .medium)
         
         label.text = L10n.Constants.Content.Label.menstruationDuration
         label.numberOfLines = 0

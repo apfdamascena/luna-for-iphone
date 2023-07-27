@@ -12,6 +12,7 @@ pod 'RxCocoa'
 pod 'SwiftGen', '~> 6.0'
 pod 'SnapKit', '~> 5.6.0'
 pod 'RxDataSources', '~> 5.0'
+pod 'SwiftLint'
 
   target 'lunaTests' do
     inherit! :search_paths

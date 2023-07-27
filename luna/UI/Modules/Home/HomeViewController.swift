@@ -7,20 +7,34 @@
 //
 
 import UIKit
+import RxSwift
 
 class HomeViewController: UIViewController {
     
     var presenter: ViewToPresenterHomeProtocol?
     
+    
+    private var disposeBag = DisposeBag()
+    
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
+        checkUserData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true 
+    }
+    
+    func checkUserData(){
+        
+        print(OnboardingUserCycleInformation.shared.cycleDuration,
+              OnboardingUserCycleInformation.shared.lastMenstruation,
+              OnboardingUserCycleInformation.shared.menstruationDuration
+        )
+        
     }
 
 }
