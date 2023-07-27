@@ -9,11 +9,17 @@
 import UIKit
 import RxSwift
 
+class DatasourceTotal {
+    
+    let dateSelected = BehaviorSubject(value: Date())
+}
+
 protocol RangePickerViewDataSource {
     var elements: [[String]] { get }
 }
 
 class RangePickerViewDataSourceImpl: RangePickerViewDataSource {
+    
     var elements: [[String]]
     
     init(range: ClosedRange<Int>) {
@@ -54,6 +60,12 @@ class MenstruationDurationViewController: UIViewController, DataSourceEventObser
             .bind(to: menstruationDurationView.picker.rx.items(adapter: PickerViewAdapter()))
             .disposed(by: disposeBag)
         menstruationDurationView.picker.selectRow(5004, inComponent: 0, animated: true)
+        
+        menstruationDurationView.picker
+            .rx.itemSelected.asObservable()
+            .subscribe { (row: Int, component: Int) in
+                print(row % 20, component)
+            }
 
     }
 
