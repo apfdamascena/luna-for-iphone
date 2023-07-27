@@ -63,6 +63,9 @@
 		A46C05152A6EFE150071ABCE /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050F2A6EFE150071ABCE /* CalendarViewController.swift */; };
 		A46C05162A6EFE150071ABCE /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C05112A6EFE150071ABCE /* CalendarView.swift */; };
 		A46C05172A6EFE150071ABCE /* CalendarContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C05122A6EFE150071ABCE /* CalendarContract.swift */; };
+		A46C05192A71E1810071ABCE /* CreateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C05182A71E1810071ABCE /* CreateButton.swift */; };
+		A46C051C2A71E29B0071ABCE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C051B2A71E29B0071ABCE /* Button.swift */; };
+		A46C051E2A71EF260071ABCE /* TesteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C051D2A71EF260071ABCE /* TesteView.swift */; };
 		BF6520DE2A6F0D4B00E60054 /* CycleDurationContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520DA2A6F0D4B00E60054 /* CycleDurationContract.swift */; };
 		BF6520DF2A6F0D4B00E60054 /* CycleDurationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520DB2A6F0D4B00E60054 /* CycleDurationPresenter.swift */; };
 		BF6520E02A6F0D4B00E60054 /* CycleDurationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520DC2A6F0D4B00E60054 /* CycleDurationRouter.swift */; };
@@ -160,6 +163,9 @@
 		A46C050F2A6EFE150071ABCE /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		A46C05112A6EFE150071ABCE /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		A46C05122A6EFE150071ABCE /* CalendarContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarContract.swift; sourceTree = "<group>"; };
+		A46C05182A71E1810071ABCE /* CreateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateButton.swift; sourceTree = "<group>"; };
+		A46C051B2A71E29B0071ABCE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		A46C051D2A71EF260071ABCE /* TesteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteView.swift; sourceTree = "<group>"; };
 		BF6520DA2A6F0D4B00E60054 /* CycleDurationContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationContract.swift; sourceTree = "<group>"; };
 		BF6520DB2A6F0D4B00E60054 /* CycleDurationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationPresenter.swift; sourceTree = "<group>"; };
 		BF6520DC2A6F0D4B00E60054 /* CycleDurationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationRouter.swift; sourceTree = "<group>"; };
@@ -421,6 +427,7 @@
 		0DDA61352A69D11200CA15C6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A46C051A2A71E18A0071ABCE /* ButtonFactoryALEX */,
 				0D2FC7632A6EED0F0025D8B6 /* LunaButton */,
 				0DCCB9242A6D828F00451D63 /* OnboardingPageControl */,
 				0DDA61362A69D11C00CA15C6 /* LunaText */,
@@ -483,6 +490,16 @@
 				A46C05112A6EFE150071ABCE /* CalendarView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A46C051A2A71E18A0071ABCE /* ButtonFactoryALEX */ = {
+			isa = PBXGroup;
+			children = (
+				A46C05182A71E1810071ABCE /* CreateButton.swift */,
+				A46C051B2A71E29B0071ABCE /* Button.swift */,
+				A46C051D2A71EF260071ABCE /* TesteView.swift */,
+			);
+			path = ButtonFactoryALEX;
 			sourceTree = "<group>";
 		};
 		BF6520D92A6F0D3400E60054 /* CycleDuration */ = {
@@ -813,9 +830,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D2FC76E2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift in Sources */,
+				A46C05192A71E1810071ABCE /* CreateButton.swift in Sources */,
 				0D2FC7722A6EF59B0025D8B6 /* OnboardingViewFlow.swift in Sources */,
 				0D2FC77D2A6F17B50025D8B6 /* HomeViewController.swift in Sources */,
 				0DBADDE92A66045700A10FC3 /* UIViewController+Preview.swift in Sources */,
+				A46C051C2A71E29B0071ABCE /* Button.swift in Sources */,
 				BF6520DF2A6F0D4B00E60054 /* CycleDurationPresenter.swift in Sources */,
 				0DBADDE12A6603F800A10FC3 /* LastDayMenstruationRouter.swift in Sources */,
 				0DBADDA32A65FDF100A10FC3 /* luna.xcdatamodeld in Sources */,
@@ -827,6 +846,7 @@
 				BF6520DE2A6F0D4B00E60054 /* CycleDurationContract.swift in Sources */,
 				CA557BCF2A6B1743001DF2BB /* LandingPageViewController.swift in Sources */,
 				CA557BCC2A6B1742001DF2BB /* LandingPageContract.swift in Sources */,
+				A46C051E2A71EF260071ABCE /* TesteView.swift in Sources */,
 				0DBADDE22A6603F800A10FC3 /* LastDayMenstruationViewController.swift in Sources */,
 				0D7C73B02A67834100677D1E /* TouchableUserEvent.swift in Sources */,
 				0DDA61292A69CEC600CA15C6 /* MenstruationDurationRouter.swift in Sources */,
