@@ -14,36 +14,25 @@ class OnboardingButtonView: UIView, AnyView {
         let view = UIStackView()
         view.axis = .horizontal
         view.alignment = .center
-        view.spacing = 2.su
+        view.spacing = 12.su
         return view
     }()
     
     private(set) lazy var nextButton: LunaButton = {
         let button = LunaButton()
-        let model = LunaButtonViewModel(style: .primary,
-                                        textColor: .white,
-                                        text: L10n.Constants.Content.Button.continue)
-        
-        button.draw(model)
+        button.draw(style: .next)
         return button
     }()
     
     private(set) lazy var endOnboardingButton: LunaButton = {
         let button = LunaButton()
-        let model = LunaButtonViewModel(style: .primary,
-                                        textColor: .white,
-                                        text: L10n.Constants.Content.Button.continue)
-        
-        button.draw(model)
+        button.draw(style: .next)
         return button
     }()
     
     private(set) lazy var previousButton: LunaButton = {
         let button = LunaButton()
-        let model = LunaButtonViewModel(style: .secondary,
-                                        textColor: .white,
-                                        text: "Voltar")
-        button.draw(model)
+        button.draw(style: .previous)
         return button
     }()
     
@@ -70,6 +59,16 @@ class OnboardingButtonView: UIView, AnyView {
         stack.snp.makeConstraints{
             $0.leading.trailing.equalToSuperview().inset(3.su)
             $0.height.equalTo(8.su)
+        }
+        
+        nextButton.snp.makeConstraints {
+            $0.width.equalTo(20.su)
+            $0.height.equalTo(6.su)
+        }
+        
+        previousButton.snp.makeConstraints {
+            $0.width.equalTo(11.su)
+            $0.height.equalTo(4.su)
         }
         
         endOnboardingButton.snp.makeConstraints{

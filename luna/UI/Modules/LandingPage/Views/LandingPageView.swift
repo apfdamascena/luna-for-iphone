@@ -58,12 +58,9 @@ class LandingPageView: UIView, AnyView {
     }()
     
     private(set) var startButton: LunaButton = {
-        let label = LunaButton()
-        let model = LunaButtonViewModel(style: .primary,
-                                        textColor: .white,
-                                        text: L10n.Constants.Content.Button.start)
-        label.draw(model)
-        return label
+        let button = LunaButton()
+        button.draw(style: .initial)
+        return button
     }()
 
     override init(frame: CGRect) {
