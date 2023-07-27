@@ -44,10 +44,10 @@ class LunaCalendarManager {
 
     func firstLoadElementsToCalendar(daysBefore: Int, averageMenstruationDuration: Int, averageCycleDuration: Int) {
         let firstDayMenstruation = Date().daysBefore(daysBefore)
-        addCyclePhasesToCalendar(calendar: calendar, firstDayMenstruation: firstDayMenstruation, averageMenstruationDuration: averageMenstruationDuration, averageCycleDuration: averageCycleDuration, lastDayMenstruation: nil)
+        addCyclePhasesToCalendar(firstDayMenstruation: firstDayMenstruation, averageMenstruationDuration: averageMenstruationDuration, averageCycleDuration: averageCycleDuration, lastDayMenstruation: nil)
     }
     
-    func addCyclePhasesToCalendar(calendar: EKCalendar?, firstDayMenstruation: Date, averageMenstruationDuration: Int, averageCycleDuration: Int, lastDayMenstruation: Date?) {
+    func addCyclePhasesToCalendar(firstDayMenstruation: Date, averageMenstruationDuration: Int, averageCycleDuration: Int, lastDayMenstruation: Date?) {
         var monthCycleService = CalculateCyclesService(eventStore: eventStore,
                                                   firstDayMenstruation: firstDayMenstruation,
                                                   averageMenstruationDuration: averageMenstruationDuration,

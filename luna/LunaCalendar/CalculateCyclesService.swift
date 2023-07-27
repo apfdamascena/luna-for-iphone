@@ -5,18 +5,19 @@
 //  Created by sml on 26/07/23.
 //
 
-// [MUDAR]: VER COM ALEX COMO FAZER
+// [MUDAR]: VER COMO FAZER PRA NAO REINSTANCIAR TUDO DE NOVO
 // Daqui a 3 dias é diferente de estar menstruada por 3 dias
 
 import EventKit
 
 struct CalculateCyclesService {
+    // fazer disso um struct
     let firstDayMenstruation: Date
     let averageMenstruationDuration: Int
     let averageCycleDuration: Int
-    var monthsFromMenstruation: Int = 0
     var lastDayMenstruation: Date? = nil
-    
+
+    var monthsFromMenstruation: Int = 0
     let eventStore: EKEventStore
     
     init(eventStore: EKEventStore, firstDayMenstruation: Date, averageMenstruationDuration: Int, averageCycleDuration: Int, lastDayMenstruation: Date?) {
@@ -28,12 +29,11 @@ struct CalculateCyclesService {
     }
     
     mutating func getPhases() -> [(String, Date, Date)]{
-        var auxArray: [(String, Date, Date)] = []
-        for _ in 1...12 {
-            auxArray.append(contentsOf: [calculateMenstruationDate(),calculateFolicularDate(), calculateFertileDate(), calculateLutealDate(), calculatePMSDate()])
-            monthsFromMenstruation += 1
+        var cyclePhases: [(String, Date, Date)] = []
+        Array(0...11).forEach { _ in
+            cyclePhases.append(contentsOf: [calculateMenstruationDate(),calculateFolicularDate(), calculateFertileDate(), calculateLutealDate(), calculatePMSDate()])
         }
-        return auxArray
+        return cyclePhases
     }
     
     func calculateMenstruationDate() -> (String, Date, Date) {
