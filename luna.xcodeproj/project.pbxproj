@@ -584,6 +584,7 @@
 			buildConfigurationList = 0DBADDC22A65FDF300A10FC3 /* Build configuration list for PBXNativeTarget "luna" */;
 			buildPhases = (
 				FD1041872EAABF4892646539 /* [CP] Check Pods Manifest.lock */,
+				0D6794152A71F26400382142 /* Swiftlint */,
 				0D7C73A32A67556C00677D1E /* Run Build Swift Gen */,
 				0DBADD912A65FDF100A10FC3 /* Sources */,
 				0DBADD922A65FDF100A10FC3 /* Frameworks */,
@@ -709,8 +710,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0D6794152A71F26400382142 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\" --fix && \"${PODS_ROOT}/SwiftLint/swiftlint\"\n\n";
+		};
 		0D7C73A32A67556C00677D1E /* Run Build Swift Gen */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
