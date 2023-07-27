@@ -414,7 +414,7 @@
 		0DDA61352A69D11200CA15C6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A46C05212A72B6760071ABCE /* LunaButton2 */,
+				A46C05212A72B6760071ABCE /* LunaButton */,
 				0DCCB9242A6D828F00451D63 /* OnboardingPageControl */,
 				0DDA61362A69D11C00CA15C6 /* LunaText */,
 			);
@@ -478,14 +478,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		A46C05212A72B6760071ABCE /* LunaButton2 */ = {
+		A46C05212A72B6760071ABCE /* LunaButton */ = {
 			isa = PBXGroup;
 			children = (
 				A46C05222A72B6820071ABCE /* LunaButton.swift */,
 				A46C05242A72B68D0071ABCE /* LunaButtonStyle.swift */,
 				A46C05262A72C9040071ABCE /* LunaButtonFactory.swift */,
 			);
-			path = LunaButton2;
+			path = LunaButton;
 			sourceTree = "<group>";
 		};
 		BF6520D92A6F0D3400E60054 /* CycleDuration */ = {
