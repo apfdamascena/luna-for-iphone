@@ -19,7 +19,14 @@ final class OnboardingManager {
         return UserDefaults.standard.object(forKey: L10n.Constants.User.Key.forOnboardingWasSeen) != nil
     }
     
+    var wasNotSeen: Bool {
+        return !wasSeen
+    }
+
+    
     func userSawOnboarding(){
         UserDefaults.standard.set(true, forKey: L10n.Constants.User.Key.forOnboardingWasSeen)
     }
+    
+    
 }
