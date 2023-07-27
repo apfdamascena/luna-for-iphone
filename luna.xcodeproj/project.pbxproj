@@ -62,6 +62,7 @@
 		A46C05152A6EFE150071ABCE /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050F2A6EFE150071ABCE /* CalendarViewController.swift */; };
 		A46C05162A6EFE150071ABCE /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C05112A6EFE150071ABCE /* CalendarView.swift */; };
 		A46C05172A6EFE150071ABCE /* CalendarContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C05122A6EFE150071ABCE /* CalendarContract.swift */; };
+		BF4DC2D22A72DC510005BF7E /* CyclePhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DC2D12A72DC510005BF7E /* CyclePhase.swift */; };
 		BF6520DE2A6F0D4B00E60054 /* CycleDurationContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520DA2A6F0D4B00E60054 /* CycleDurationContract.swift */; };
 		BF6520DF2A6F0D4B00E60054 /* CycleDurationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520DB2A6F0D4B00E60054 /* CycleDurationPresenter.swift */; };
 		BF6520E02A6F0D4B00E60054 /* CycleDurationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520DC2A6F0D4B00E60054 /* CycleDurationRouter.swift */; };
@@ -164,6 +165,7 @@
 		A46C050F2A6EFE150071ABCE /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		A46C05112A6EFE150071ABCE /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		A46C05122A6EFE150071ABCE /* CalendarContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarContract.swift; sourceTree = "<group>"; };
+		BF4DC2D12A72DC510005BF7E /* CyclePhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclePhase.swift; sourceTree = "<group>"; };
 		BF6520DA2A6F0D4B00E60054 /* CycleDurationContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationContract.swift; sourceTree = "<group>"; };
 		BF6520DB2A6F0D4B00E60054 /* CycleDurationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationPresenter.swift; sourceTree = "<group>"; };
 		BF6520DC2A6F0D4B00E60054 /* CycleDurationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationRouter.swift; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 		0DBADD972A65FDF100A10FC3 /* luna */ = {
 			isa = PBXGroup;
 			children = (
+				BF4DC2D02A72DC450005BF7E /* Enums */,
 				BFD533BD2A716B980063351E /* Extensions */,
 				BFD533B42A71566B0063351E /* LunaCalendar */,
 				0DDA612E2A69D04100CA15C6 /* UI */,
@@ -494,6 +497,14 @@
 				A46C05112A6EFE150071ABCE /* CalendarView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BF4DC2D02A72DC450005BF7E /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				BF4DC2D12A72DC510005BF7E /* CyclePhase.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		BF6520D92A6F0D3400E60054 /* CycleDuration */ = {
@@ -875,6 +886,7 @@
 				0DBADDD82A66017600A10FC3 /* DrawableView.swift in Sources */,
 				0DBADD992A65FDF100A10FC3 /* AppDelegate.swift in Sources */,
 				BF6520E42A6F0D5D00E60054 /* CycleDurationView.swift in Sources */,
+				BF4DC2D22A72DC510005BF7E /* CyclePhase.swift in Sources */,
 				BFCAAD3B2A6B19AE00A91CC0 /* MenstruationDurationView.swift in Sources */,
 				0DBADD9B2A65FDF100A10FC3 /* SceneDelegate.swift in Sources */,
 				BFF09AFA2A6B599B00749328 /* PickerViewAdapter.swift in Sources */,

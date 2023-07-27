@@ -7,14 +7,6 @@
 
 // [MUDAR]: VER COM ALEX COMO FAZER
 // Daqui a 3 dias é diferente de estar menstruada por 3 dias
-enum CyclePhase: String {
-    case folicular = "⚡️ Fase folicular"
-    case menstruation = "🩸 Menstruação"
-    case luteal  = "⬛️ Fase lútea"
-    case fertile =  "💓 Período fertil"
-    case expectedMenstruation = "Menstruação Prevista"
-    case pms = "😡 TPM"
-}
 
 import EventKit
 

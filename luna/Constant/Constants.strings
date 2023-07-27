@@ -21,3 +21,11 @@
 "constants.content.label.calendar_subtitle"="Permita que o Luna acesse seu Calendar para planejar seus dias com sabedoria e melhorar o seu bem-estar";
 
 "constants.content.api.icloud"= "iCloud";
+
+"constants.content.label.folicular"= "⚡️ Fase folicular";
+"constants.content.label.menstruation"= "🩸 Menstruação";
+"constants.content.label.luteal"= "⬛️ Fase lútea";
+"constants.content.label.fertile"= "💓 Período fertil";
+"constants.content.label.expectedMenstruation"= "Menstruação Prevista";
+"constants.content.label.pms"= "😡 TPM";
+
