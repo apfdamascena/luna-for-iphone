@@ -22,8 +22,6 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
-        presenter?.loadUserCalendar()
-        
     }
 }
 
@@ -32,6 +30,7 @@ extension HomeViewController: PresenterToViewHomeProtocol{
     func userAllowedAccessCalendar() {
         DispatchQueue.main.async {
             self.view.backgroundColor = .yellow
+            self.presenter?.loadUserCalendar()
         }
 
     }
