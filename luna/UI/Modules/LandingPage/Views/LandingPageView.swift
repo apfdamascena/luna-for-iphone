@@ -25,7 +25,7 @@ class LandingPageView: UIView, AnyView {
         let view = UIStackView()
         view.axis = .vertical
         view.alignment = .fill
-        view.spacing = 8
+        view.spacing = 1.su
         return view
     }()
     
@@ -83,36 +83,33 @@ class LandingPageView: UIView, AnyView {
     
     func addConstraints() {
         
-        background.snp.makeConstraints{
+        background.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
         
-        backgroundImage.snp.makeConstraints{
-            $0.top.equalToSuperview()
-            $0.trailing.equalToSuperview()
+        backgroundImage.snp.makeConstraints {
+            $0.top.trailing.equalToSuperview()
             $0.bottom.equalTo(stack.snp.top)
         }
         
-        stack.snp.makeConstraints{
+        stack.snp.makeConstraints {
             $0.bottom.equalTo(startButton.snp.top).offset(-7.su)
             $0.leading.equalToSuperview().offset(3.su)
         }
         
-        title.snp.makeConstraints{
+        title.snp.makeConstraints {
             $0.height.equalTo(6.su)
         }
         
-        landingPageDescription.snp.makeConstraints{
+        landingPageDescription.snp.makeConstraints {
             $0.height.equalTo(5.su)
         }
             
-        
-        startButton.snp.makeConstraints{
+        startButton.snp.makeConstraints {
             $0.trailing.leading.equalToSuperview().inset(3.su)
             $0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-2.su)
             $0.height.equalTo(50)
         }
-        
     }
     
     func addAdditionalConfiguration() {
