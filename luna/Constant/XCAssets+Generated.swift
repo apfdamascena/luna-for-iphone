@@ -28,6 +28,8 @@ internal enum Asset {
   internal static let arrowLeftIcon = ImageAsset(name: "arrow_left_icon")
   internal static let background = ImageAsset(name: "background")
   internal static let calendarImage = ImageAsset(name: "calendarImage")
+  internal static let gray100 = ColorAsset(name: "gray_100")
+  internal static let gray200 = ColorAsset(name: "gray_200")
   internal static let landingPageBackgroundImage = ImageAsset(name: "landingPageBackgroundImage")
   internal static let logo = ImageAsset(name: "logo")
   internal static let primaryGray900 = ColorAsset(name: "primary_gray_900")

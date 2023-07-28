@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view = HomeView()
         presenter?.checkCalendarPermission()
     }
     
