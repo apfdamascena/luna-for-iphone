@@ -2,50 +2,46 @@
 //  HomeViewController.swift
 //  luna
 //
-//  Created by alexdamascena on 24/07/23.
+//  Created by alexdamascena on 27/07/23.
 //  
 //
 
 import UIKit
-import RxSwift
 
 class HomeViewController: UIViewController {
     
     var presenter: ViewToPresenterHomeProtocol?
     
-    private var disposeBag = DisposeBag()
-    
-    private var lunaCalendarManager = LunaCalendarManager()
-
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
-        checkUserData()
+        presenter?.checkCalendarPermission()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationItem.hidesBackButton = true 
+        self.navigationItem.hidesBackButton = true
+        presenter?.loadUserCalendar()
+        
     }
-    
-    func checkUserData(){
-        if !(lunaCalendarManager.lunaEventsExist()) {
-            let firstDayMenstruation = OnboardingUserCycleInformation.shared.lastMenstruation ?? Date()
-            let menstruationDuration = OnboardingUserCycleInformation.shared.menstruationDuration ?? 5
-            let cycleDuration = OnboardingUserCycleInformation.shared.cycleDuration ?? 28
-            lunaCalendarManager.firstLoadElementsToCalendar(firstDayMenstruation: firstDayMenstruation, averageMenstruationDuration: menstruationDuration, averageCycleDuration: cycleDuration)
-            print(firstDayMenstruation, menstruationDuration, cycleDuration)
-        }
-       
- 
-
-//        lunaCalendarManager.firstLoadElementsToCalendar(firstDayMenstruation: firstDayMenstruation, averageMenstruationDuration: menstruationDuration, averageCycleDuration: cycleDuration)
-    }
-
 }
 
 extension HomeViewController: PresenterToViewHomeProtocol{
+    
+    func userAllowedAccessCalendar() {
+        DispatchQueue.main.async {
+            self.view.backgroundColor = .yellow
+        }
+
+    }
+    
+    func userDeniedAccessCalendar() {
+        DispatchQueue.main.async {
+            self.view.backgroundColor = .green
+        }
+    }
+    
     // TODO: Implement View Output Methods
 }
 

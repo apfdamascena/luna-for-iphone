@@ -7,25 +7,41 @@
 
 import EventKit
 
+enum CalendarAccess {
+    case authorized
+    case unauthorized
+}
+
+enum CalendarAccessError: Error {
+    
+    case permissionDenied
+}
+
+typealias PermissionResponse = ((Result<CalendarAccess, Error>) -> Void)
+
 class LunaCalendarManager {
+    
     private let eventStore = EKEventStore()
     private var calendar: EKCalendar?
     private var lunaEventService: CalendarEventService?
     
-    init() {
-        let calendar = CalendarProvider(eventStore).getCalendar()
-        self.lunaEventService = CalendarEventService(with: eventStore, in: calendar)
+    func requestAccessToCalendar(completion: @escaping PermissionResponse ){
+        
+        eventStore.requestAccess(to: .event) {[weak self] success, error in
+            guard error == nil,
+                  success,
+                  let calendarStore = self?.eventStore else {
+                completion(.failure(CalendarAccessError.permissionDenied))
+                return
+            }
 
+            
+            let calendar = CalendarProvider(calendarStore).getCalendar()
+            self?.calendar = calendar
+            self?.lunaEventService = CalendarEventService(with: calendarStore, in: calendar)
+            completion(.success(.authorized))
+        }
     }
-//    func requestAccessToCalendar() {
-//        eventStore.requestAccess(to: .event) {[weak self] _, error in
-//            guard error == nil,
-//                  let calendarStore = self?.eventStore else { return }
-//            let calendar = CalendarProvider(calendarStore).getCalendar()
-//            self?.calendar = calendar
-//            self?.lunaEventService = CalendarEventService(with: calendarStore, in: calendar)
-//        }
-//    }
 
     func createEvent(_ lunaEvent: LunaEvent){
         lunaEventService?.createEvent(lunaEvent)
