@@ -13,9 +13,10 @@ class HomeViewController: UIViewController {
     
     var presenter: ViewToPresenterHomeProtocol?
     
-    
     private var disposeBag = DisposeBag()
     
+    private var lunaCalendarManager = LunaCalendarManager()
+
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +30,17 @@ class HomeViewController: UIViewController {
     }
     
     func checkUserData(){
-        
-        print(OnboardingUserCycleInformation.shared.cycleDuration,
-              OnboardingUserCycleInformation.shared.lastMenstruation,
-              OnboardingUserCycleInformation.shared.menstruationDuration
-        )
-        
+        if !(lunaCalendarManager.lunaEventsExist()) {
+            let firstDayMenstruation = OnboardingUserCycleInformation.shared.lastMenstruation ?? Date()
+            let menstruationDuration = OnboardingUserCycleInformation.shared.menstruationDuration ?? 5
+            let cycleDuration = OnboardingUserCycleInformation.shared.cycleDuration ?? 28
+            lunaCalendarManager.firstLoadElementsToCalendar(firstDayMenstruation: firstDayMenstruation, averageMenstruationDuration: menstruationDuration, averageCycleDuration: cycleDuration)
+            print(firstDayMenstruation, menstruationDuration, cycleDuration)
+        }
+       
+ 
+
+//        lunaCalendarManager.firstLoadElementsToCalendar(firstDayMenstruation: firstDayMenstruation, averageMenstruationDuration: menstruationDuration, averageCycleDuration: cycleDuration)
     }
 
 }

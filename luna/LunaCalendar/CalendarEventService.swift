@@ -8,7 +8,7 @@
 import EventKit
 
 struct LunaEvent {
-    let title: String
+    let title: CyclePhase
     let startDate: Date
     let endDate: Date
 }
@@ -24,12 +24,11 @@ class CalendarEventService {
     
     func createEvent(_ event: LunaEvent) {
         let newEvent = EKEvent(eventStore: self.eventStore)
-        newEvent.title = event.title
+        newEvent.title = event.title.value
         newEvent.startDate = event.startDate
         newEvent.endDate = event.endDate
         newEvent.calendar = self.calendar
         newEvent.isAllDay = true
-        
         DispatchQueue.main.async {
             try? self.eventStore.save(newEvent, span: .thisEvent)
         }
@@ -42,6 +41,17 @@ class CalendarEventService {
         let events = eventStore.events(matching: predicate)
         
         return events
-        
+    }
+    
+    func lunaEventsExist() -> Bool {
+        guard let calendar = calendar else { return false }
+        let oneMonthAgo = Date(timeIntervalSinceNow: -30*24*3600)
+        let oneMonthAfter = Date(timeIntervalSinceNow: 30*24*3600)
+        let predicate =  eventStore.predicateForEvents(withStart: oneMonthAgo, end: oneMonthAfter, calendars: [calendar])
+        let events = eventStore.events(matching: predicate)
+        if events.count == 0 {
+            return false
+        }
+        return true
     }
 }

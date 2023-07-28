@@ -13,18 +13,19 @@ class LunaCalendarManager {
     private var lunaEventService: CalendarEventService?
     
     init() {
-        self.requestAccessToCalendar()
+        let calendar = CalendarProvider(eventStore).getCalendar()
+        self.lunaEventService = CalendarEventService(with: eventStore, in: calendar)
+
     }
-    
-    private func requestAccessToCalendar() {
-        eventStore.requestAccess(to: .event) {[weak self] _, error in
-            guard error == nil,
-                  let calendarStore = self?.eventStore else { return }
-            let calendar = CalendarProvider(calendarStore).getCalendar()
-            self?.calendar = calendar
-            self?.lunaEventService = CalendarEventService(with: calendarStore, in: calendar)
-        }
-    }
+//    func requestAccessToCalendar() {
+//        eventStore.requestAccess(to: .event) {[weak self] _, error in
+//            guard error == nil,
+//                  let calendarStore = self?.eventStore else { return }
+//            let calendar = CalendarProvider(calendarStore).getCalendar()
+//            self?.calendar = calendar
+//            self?.lunaEventService = CalendarEventService(with: calendarStore, in: calendar)
+//        }
+//    }
 
     func createEvent(_ lunaEvent: LunaEvent){
         lunaEventService?.createEvent(lunaEvent)
@@ -42,21 +43,26 @@ class LunaCalendarManager {
     
     // [MUDAR]: VER COM ALEX COMO FAZER
 
-    func firstLoadElementsToCalendar(daysBefore: Int, averageMenstruationDuration: Int, averageCycleDuration: Int) {
-        let firstDayMenstruation = Date().daysBefore(daysBefore)
+    func firstLoadElementsToCalendar(firstDayMenstruation: Date, averageMenstruationDuration: Int, averageCycleDuration: Int) {
         addCyclePhasesToCalendar(firstDayMenstruation: firstDayMenstruation, averageMenstruationDuration: averageMenstruationDuration, averageCycleDuration: averageCycleDuration, lastDayMenstruation: nil)
     }
     
     func addCyclePhasesToCalendar(firstDayMenstruation: Date, averageMenstruationDuration: Int, averageCycleDuration: Int, lastDayMenstruation: Date?) {
+
         var monthCycleService = CalculateCyclesService(eventStore: eventStore,
                                                   firstDayMenstruation: firstDayMenstruation,
                                                   averageMenstruationDuration: averageMenstruationDuration,
                                                   averageCycleDuration: averageCycleDuration, lastDayMenstruation: lastDayMenstruation)
+
         let phases = monthCycleService.getPhases()
-        for (title, startDate, endDate) in phases {
-            let event = LunaEvent(title: title, startDate: startDate, endDate: endDate)
+        for phase in phases {
+            let event = LunaEvent(title: phase.title, startDate: phase.startDate, endDate: phase.endDate)
             createEvent(event)
         }
+    }
+    
+    func lunaEventsExist() -> Bool {
+        return lunaEventService?.lunaEventsExist() ?? false
     }
 
 }
