@@ -30,7 +30,7 @@ class TeachRecordMenstruationView: UIView, AnyView {
     
     private let line: UIView = {
         let view = UIView()
-        view.backgroundColor = .black
+        view.backgroundColor = Asset.gray150.color
         return view
     }()
     

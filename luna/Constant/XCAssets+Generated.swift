@@ -29,6 +29,7 @@ internal enum Asset {
   internal static let background = ImageAsset(name: "background")
   internal static let calendarImage = ImageAsset(name: "calendarImage")
   internal static let cellToTeste = ImageAsset(name: "cell_to_teste")
+  internal static let gray150 = ColorAsset(name: "gray_150")
   internal static let landingPageBackgroundImage = ImageAsset(name: "landingPageBackgroundImage")
   internal static let logo = ImageAsset(name: "logo")
   internal static let primaryGray900 = ColorAsset(name: "primary_gray_900")

@@ -22,7 +22,7 @@ class OnboardingPageFlowViewController: UIPageViewController,
     private(set) var datasource: OnboardingPageControlDataSource
         
     private let onboardingButtons = OnboardingButtonView()
-    private(set) var pageControlView = OnboardingPageControlView(numberOfPages: 4)
+    private(set) var pageControlView = OnboardingPageControlView(numberOfPages: 6)
     
     private var disposeBag = DisposeBag()
     

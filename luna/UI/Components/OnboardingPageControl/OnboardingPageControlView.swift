@@ -41,9 +41,9 @@ class OnboardingPageControlView: UIView, AnyView {
         
         dots.enumerated().forEach{ index, dot in
             dot.snp.makeConstraints{
-                $0.width.equalTo(74)
+                $0.width.equalTo(44)
                 $0.height.equalTo(4)
-                $0.leading.equalTo(24 + 74*(index) + 15*(index))
+                $0.leading.equalTo(24 + 44*(index) + 15*(index))
         
             }
         }
