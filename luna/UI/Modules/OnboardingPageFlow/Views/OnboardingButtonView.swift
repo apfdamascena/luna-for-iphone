@@ -14,7 +14,8 @@ class OnboardingButtonView: UIView, AnyView {
         let view = UIStackView()
         view.axis = .horizontal
         view.alignment = .center
-        view.spacing = 12.su
+        view.distribution = .fillEqually
+//        view.spacing = 12.su
         return view
     }()
     
@@ -62,12 +63,12 @@ class OnboardingButtonView: UIView, AnyView {
         }
         
         nextButton.snp.makeConstraints {
-            $0.width.equalTo(20.su)
             $0.height.equalTo(6.su)
         }
         
+
+        
         previousButton.snp.makeConstraints {
-            $0.width.equalTo(11.su)
             $0.height.equalTo(4.su)
         }
         
