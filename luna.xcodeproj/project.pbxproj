@@ -22,6 +22,11 @@
 		0D6794232A735C1B00382142 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D67941E2A735C1A00382142 /* HomeViewController.swift */; };
 		0D6794242A735C1B00382142 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D67941F2A735C1A00382142 /* HomeInteractor.swift */; };
 		0D6794272A74691000382142 /* OnboardingCyclePhaseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6794262A74691000382142 /* OnboardingCyclePhaseCard.swift */; };
+		0D67942F2A74725200382142 /* TeachRecordMenstruationContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D67942A2A74725200382142 /* TeachRecordMenstruationContract.swift */; };
+		0D6794302A74725200382142 /* TeachRecordMenstruationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D67942B2A74725200382142 /* TeachRecordMenstruationPresenter.swift */; };
+		0D6794312A74725200382142 /* TeachRecordMenstruationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D67942C2A74725200382142 /* TeachRecordMenstruationRouter.swift */; };
+		0D6794322A74725200382142 /* TeachRecordMenstruationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D67942D2A74725200382142 /* TeachRecordMenstruationViewController.swift */; };
+		0D6794332A74725200382142 /* TeachRecordMenstruationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D67942E2A74725200382142 /* TeachRecordMenstruationInteractor.swift */; };
 		0D7C73A62A67566700677D1E /* Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D7C73A52A67566700677D1E /* Constants.strings */; };
 		0D7C73AD2A67580D00677D1E /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */; };
 		0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */; };
@@ -128,6 +133,11 @@
 		0D67941E2A735C1A00382142 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0D67941F2A735C1A00382142 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		0D6794262A74691000382142 /* OnboardingCyclePhaseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCyclePhaseCard.swift; sourceTree = "<group>"; };
+		0D67942A2A74725200382142 /* TeachRecordMenstruationContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachRecordMenstruationContract.swift; sourceTree = "<group>"; };
+		0D67942B2A74725200382142 /* TeachRecordMenstruationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachRecordMenstruationPresenter.swift; sourceTree = "<group>"; };
+		0D67942C2A74725200382142 /* TeachRecordMenstruationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachRecordMenstruationRouter.swift; sourceTree = "<group>"; };
+		0D67942D2A74725200382142 /* TeachRecordMenstruationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachRecordMenstruationViewController.swift; sourceTree = "<group>"; };
+		0D67942E2A74725200382142 /* TeachRecordMenstruationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachRecordMenstruationInteractor.swift; sourceTree = "<group>"; };
 		0D7C73A52A67566700677D1E /* Constants.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Constants.strings; sourceTree = "<group>"; };
 		0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
@@ -274,6 +284,18 @@
 			path = OnboardingCyclePhaseCard;
 			sourceTree = "<group>";
 		};
+		0D6794292A74723600382142 /* TeachRecordMenstruation */ = {
+			isa = PBXGroup;
+			children = (
+				0D67942A2A74725200382142 /* TeachRecordMenstruationContract.swift */,
+				0D67942B2A74725200382142 /* TeachRecordMenstruationPresenter.swift */,
+				0D67942C2A74725200382142 /* TeachRecordMenstruationRouter.swift */,
+				0D67942D2A74725200382142 /* TeachRecordMenstruationViewController.swift */,
+				0D67942E2A74725200382142 /* TeachRecordMenstruationInteractor.swift */,
+			);
+			path = TeachRecordMenstruation;
+			sourceTree = "<group>";
+		};
 		0D7C73AA2A6757A500677D1E /* Constant */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,6 +435,7 @@
 		0DDA612F2A69D07900CA15C6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0D6794292A74723600382142 /* TeachRecordMenstruation */,
 				0D67941A2A735C0800382142 /* Home */,
 				0D6794112A71D51800382142 /* Root */,
 				0DDC5B492A70B9B700D4CCAE /* OnboardingPageFlow */,
@@ -933,6 +956,7 @@
 				0D2FC7722A6EF59B0025D8B6 /* OnboardingViewFlow.swift in Sources */,
 				0DBADDE92A66045700A10FC3 /* UIViewController+Preview.swift in Sources */,
 				BFD533BC2A7166360063351E /* CalendarEventService.swift in Sources */,
+				0D67942F2A74725200382142 /* TeachRecordMenstruationContract.swift in Sources */,
 				BF6520DF2A6F0D4B00E60054 /* CycleDurationPresenter.swift in Sources */,
 				0DBADDE12A6603F800A10FC3 /* LastDayMenstruationRouter.swift in Sources */,
 				0DBADDA32A65FDF100A10FC3 /* luna.xcdatamodeld in Sources */,
@@ -972,14 +996,18 @@
 				0D6794242A735C1B00382142 /* HomeInteractor.swift in Sources */,
 				0DBADDDF2A6603F800A10FC3 /* LastDayMenstruationContract.swift in Sources */,
 				0DCCB9262A6D82AF00451D63 /* OnboardingPageControlView.swift in Sources */,
+				0D6794332A74725200382142 /* TeachRecordMenstruationInteractor.swift in Sources */,
+				0D6794312A74725200382142 /* TeachRecordMenstruationRouter.swift in Sources */,
 				0D6794132A71D53C00382142 /* RootScreenViewFactory.swift in Sources */,
 				0DDC5B4F2A70B9CE00D4CCAE /* OnboardingPageFlowContract.swift in Sources */,
 				0D6794222A735C1B00382142 /* HomeRouter.swift in Sources */,
 				0DDA61282A69CEC600CA15C6 /* MenstruationDurationPresenter.swift in Sources */,
 				CA557BCD2A6B1743001DF2BB /* LandingPagePresenter.swift in Sources */,
+				0D6794322A74725200382142 /* TeachRecordMenstruationViewController.swift in Sources */,
 				0DBADE0C2A6608F300A10FC3 /* LastDayMenstruationView.swift in Sources */,
 				0DDC5B562A71D23600D4CCAE /* OnboardingManager.swift in Sources */,
 				A46C05172A6EFE150071ABCE /* CalendarContract.swift in Sources */,
+				0D6794302A74725200382142 /* TeachRecordMenstruationPresenter.swift in Sources */,
 				0D6794232A735C1B00382142 /* HomeViewController.swift in Sources */,
 				0D7C73AD2A67580D00677D1E /* Strings+Generated.swift in Sources */,
 				0DBADDD32A66005500A10FC3 /* LunaTextViewModel.swift in Sources */,

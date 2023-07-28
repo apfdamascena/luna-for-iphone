@@ -16,7 +16,7 @@ class LandingPageViewController: UIViewController {
     
     let landingPageView = LandingPageView()
     
-    let test = OnboardingCyclePhaseCard()
+//    let test = OnboardingCyclePhaseCard()
     
     private var disposeBag = DisposeBag()
     
@@ -28,13 +28,13 @@ class LandingPageViewController: UIViewController {
         
         addUserTouchTrigger()
         
-        view.addSubview(test)
+//        view.addSubview(test)
         
-        test.snp.makeConstraints{
-            $0.height.equalTo(11.su)
-            $0.width.equalToSuperview().inset(3.su)
-            $0.centerX.centerY.equalToSuperview()
-        }
+//        test.snp.makeConstraints{
+//            $0.height.equalTo(11.su)
+//            $0.width.equalToSuperview().inset(3.su)
+//            $0.centerX.centerY.equalToSuperview()
+//        }
         
     }
     
