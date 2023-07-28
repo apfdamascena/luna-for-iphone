@@ -57,10 +57,11 @@ class LunaCalendarManager {
         return lunaEventService?.getEventsByDate(firstDate: startDate, finalDate: daysAfterDate)
     }
     
-    // [MUDAR]: VER COM ALEX COMO FAZER
 
     func firstLoadElementsToCalendar(firstDayMenstruation: Date, averageMenstruationDuration: Int, averageCycleDuration: Int) {
+        if lunaEventsExist() { return }
         addCyclePhasesToCalendar(firstDayMenstruation: firstDayMenstruation, averageMenstruationDuration: averageMenstruationDuration, averageCycleDuration: averageCycleDuration, lastDayMenstruation: nil)
+        
     }
     
     func addCyclePhasesToCalendar(firstDayMenstruation: Date, averageMenstruationDuration: Int, averageCycleDuration: Int, lastDayMenstruation: Date?) {
