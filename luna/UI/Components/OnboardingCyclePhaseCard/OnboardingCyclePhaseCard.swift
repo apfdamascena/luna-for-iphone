@@ -98,9 +98,5 @@ class OnboardingCyclePhaseCard: UIView, AnyView {
         horizontalStack.snp.makeConstraints{
             $0.leading.trailing.bottom.top.equalToSuperview()
         }
-        
-        
-        
     }
-
 }

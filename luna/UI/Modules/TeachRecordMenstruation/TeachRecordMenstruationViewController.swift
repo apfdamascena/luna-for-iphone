@@ -12,9 +12,12 @@ class TeachRecordMenstruationViewController: UIViewController {
     
     var presenter: ViewToPresenterTeachRecordMenstruationProtocol?
     
+    let teachRecordMenstruationView = TeachRecordMenstruationView()
+    
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        view = teachRecordMenstruationView
     }
 
 }
