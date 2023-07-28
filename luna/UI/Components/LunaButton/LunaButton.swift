@@ -18,8 +18,8 @@ class LunaButton: UIButton {
     }
     
     func draw(style: LunaButtonStyle) {
-        let myButton = LunaButtonFactory.create(button: self, lunaStyle: style)
-        myButton.draw()
+        let newButton = LunaButtonFactory.create(button: self, lunaStyle: style)
+        newButton.draw()
     }
     
 }
@@ -29,8 +29,8 @@ class LunaButtonProceed: DrawableButton {
     let button: UIButton
     let style: LunaButtonStyle
     
-    init(myButton: UIButton, style: LunaButtonStyle) {
-        self.button = myButton
+    init(currentButton: UIButton, style: LunaButtonStyle) {
+        self.button = currentButton
         self.style = style
     }
     
@@ -48,8 +48,8 @@ class LunaButtonBack: DrawableButton {
     
     let button: UIButton
     
-    init(myButton: UIButton) {
-        self.button = myButton
+    init(currentButton: UIButton) {
+        self.button = currentButton
     }
     
     func draw() {

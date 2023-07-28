@@ -11,11 +11,11 @@ class LunaButtonFactory {
     static func create(button: UIButton, lunaStyle: LunaButtonStyle) -> DrawableButton {
         switch lunaStyle{
         case .initial:
-            return LunaButtonProceed(myButton: button, style: lunaStyle)
+            return LunaButtonProceed(currentButton: button, style: lunaStyle)
         case .previous:
-            return LunaButtonBack(myButton: button)
+            return LunaButtonBack(currentButton: button)
         case .next:
-            return LunaButtonProceed(myButton: button, style: lunaStyle)
+            return LunaButtonProceed(currentButton: button, style: lunaStyle)
         }
     }
 }
