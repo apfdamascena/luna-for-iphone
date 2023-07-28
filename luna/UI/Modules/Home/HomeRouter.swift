@@ -2,7 +2,7 @@
 //  HomeRouter.swift
 //  luna
 //
-//  Created by alexdamascena on 24/07/23.
+//  Created by alexdamascena on 27/07/23.
 //  
 //
 
@@ -15,11 +15,13 @@ class HomeRouter: PresenterToRouterHomeProtocol {
         
         let viewController = HomeViewController()
         
-        let presenter: ViewToPresenterHomeProtocol = HomePresenter()
+        let presenter: ViewToPresenterHomeProtocol & InteractorToPresenterHomeProtocol = HomePresenter()
         
         viewController.presenter = presenter
         viewController.presenter?.router = HomeRouter()
         viewController.presenter?.view = viewController
+        viewController.presenter?.interactor = HomeInteractor()
+        viewController.presenter?.interactor?.presenter = presenter
         
         return viewController
     }

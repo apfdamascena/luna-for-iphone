@@ -12,6 +12,10 @@ import Foundation
 internal enum L10n {
   internal enum Constants {
     internal enum Content {
+      internal enum Api {
+        /// iCloud
+        internal static let icloud = L10n.tr("Constants", "constants.content.api.icloud", fallback: "iCloud")
+      }
       internal enum Button {
         /// Continuar
         internal static let `continue` = L10n.tr("Constants", "constants.content.button.continue", fallback: "Continuar")
@@ -30,6 +34,12 @@ internal enum L10n {
         /// Quanto tempo dura o
         /// seu ciclo menstrual?
         internal static let cycleDuration = L10n.tr("Constants", "constants.content.label.cycle_duration", fallback: "Quanto tempo dura o\nseu ciclo menstrual?")
+        /// Menstruação Prevista
+        internal static let expectedMenstruation = L10n.tr("Constants", "constants.content.label.expectedMenstruation", fallback: "Menstruação Prevista")
+        /// 💓 Período fertil
+        internal static let fertile = L10n.tr("Constants", "constants.content.label.fertile", fallback: "💓 Período fertil")
+        /// ⚡️ Fase folicular
+        internal static let folicular = L10n.tr("Constants", "constants.content.label.folicular", fallback: "⚡️ Fase folicular")
         /// Seu ciclo ao seu favor
         internal static let landingPageDescription = L10n.tr("Constants", "constants.content.label.landing_page_description", fallback: "Seu ciclo ao seu favor")
         /// Constants.strings
@@ -37,9 +47,15 @@ internal enum L10n {
         /// 
         ///   Created by alexdamascena on 18/07/23.
         internal static let lastDayMenstruation = L10n.tr("Constants", "constants.content.label.last_day_menstruation", fallback: "Quando foi o início da\nsua última menstruação?")
+        /// ⬛️ Fase lútea
+        internal static let luteal = L10n.tr("Constants", "constants.content.label.luteal", fallback: "⬛️ Fase lútea")
+        /// 🩸 Menstruação
+        internal static let menstruation = L10n.tr("Constants", "constants.content.label.menstruation", fallback: "🩸 Menstruação")
         /// Quantos dias dura a
         /// sua menstruação?
         internal static let menstruationDuration = L10n.tr("Constants", "constants.content.label.menstruation_duration", fallback: "Quantos dias dura a\nsua menstruação?")
+        /// 😡 TPM
+        internal static let pms = L10n.tr("Constants", "constants.content.label.pms", fallback: "😡 TPM")
       }
     }
     internal enum User {

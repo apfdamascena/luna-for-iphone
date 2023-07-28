@@ -18,6 +18,7 @@ class LandingPageViewController: UIViewController {
     
     private var disposeBag = DisposeBag()
     
+
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()

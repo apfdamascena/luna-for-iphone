@@ -2,44 +2,45 @@
 //  HomeViewController.swift
 //  luna
 //
-//  Created by alexdamascena on 24/07/23.
+//  Created by alexdamascena on 27/07/23.
 //  
 //
 
 import UIKit
-import RxSwift
 
 class HomeViewController: UIViewController {
     
     var presenter: ViewToPresenterHomeProtocol?
     
-    
-    private var disposeBag = DisposeBag()
-    
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
-        checkUserData()
+        presenter?.checkCalendarPermission()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationItem.hidesBackButton = true 
+        self.navigationItem.hidesBackButton = true
     }
-    
-    func checkUserData(){
-        
-        print(OnboardingUserCycleInformation.shared.cycleDuration,
-              OnboardingUserCycleInformation.shared.lastMenstruation,
-              OnboardingUserCycleInformation.shared.menstruationDuration
-        )
-        
-    }
-
 }
 
 extension HomeViewController: PresenterToViewHomeProtocol{
+    
+    func userAllowedAccessCalendar() {
+        DispatchQueue.main.async {
+            self.view.backgroundColor = .yellow
+            self.presenter?.loadUserCalendar()
+        }
+
+    }
+    
+    func userDeniedAccessCalendar() {
+        DispatchQueue.main.async {
+            self.view.backgroundColor = .green
+        }
+    }
+    
     // TODO: Implement View Output Methods
 }
 
