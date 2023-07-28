@@ -34,6 +34,14 @@ class TeachRecordMenstruationView: UIView, AnyView {
         return view
     }()
     
+    private let stack: UIStackView = {
+        let view = UIStackView()
+        view.axis = .vertical
+        view.spacing = 4.su
+        return view
+    }()
+    
+    private let cards = [OnboardingCyclePhaseCard(), OnboardingCyclePhaseCard()]
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,6 +58,12 @@ class TeachRecordMenstruationView: UIView, AnyView {
         addSubview(title)
         addSubview(teachRegisterImage)
         addSubview(line)
+        
+        addSubview(stack)
+        
+        cards.forEach { card in
+            stack.addArrangedSubview(card)
+        }
     
     }
     
@@ -65,11 +79,22 @@ class TeachRecordMenstruationView: UIView, AnyView {
             $0.leading.trailing.equalToSuperview()
         }
         
-        line.snp.makeConstraints{
+        line.snp.makeConstraints {
             
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(1)
             $0.top.equalTo(teachRegisterImage.snp.bottom).offset(5.su)
+        }
+        
+        stack.snp.makeConstraints{
+            $0.leading.trailing.equalToSuperview().inset(3.su)
+            $0.top.equalTo(line.snp.bottom).offset(5.su)
+        }
+        
+        cards.forEach { card in
+            card.snp.makeConstraints{
+                $0.height.equalTo(11.su)
+            }
         }
     }
     
