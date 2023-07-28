@@ -16,8 +16,9 @@ class LandingPageView: UIView, AnyView {
     
     private(set) var  collectionView: UICollectionView = {
         let layout = CalendarCollectionViewFlowLayout()
-//        layout.itemSize = CGSize(width: 43, height: 123)
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+//        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 43, height: 123)
+//        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         layout.scrollDirection = .horizontal
         
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -107,7 +108,7 @@ class LandingPageView: UIView, AnyView {
     
     func addConstraints() {
         collectionView.snp.makeConstraints{
-            $0.width.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
             $0.centerY.equalToSuperview()
             $0.height.equalTo(123)
         }

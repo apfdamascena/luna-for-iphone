@@ -14,6 +14,8 @@ class CalendarCollectionViewCell: UICollectionViewCell,
     
     typealias ViewModel = CyclePhaseViewModel
     
+    let daysOfTheWeek = ["D", "S", "T", "Q", "Q", "S", "S"]
+    
     static let IDENTIFIER = "CalendarScrollCollectionViewCell"
     
     private let stack: UIStackView = {
@@ -126,11 +128,20 @@ class CalendarCollectionViewCell: UICollectionViewCell,
         
         cellStatus.layer.opacity = 0.4
         
-        monthDay.layer.opacity = model.day.distance(to: .now) < 1 && model.day.distance(to: .now) > 0 ? 1 : 0.5
+        menstruationStatusToggle.transform = CGAffineTransform(scaleX: 1, y: 1)
+        cellStatus.transform = CGAffineTransform(scaleX: 1, y: 1)
         
-        weekendDay.layer.opacity = model.day.distance(to: .now) < 1 && model.day.distance(to: .now) > 0 ? 1 : 0.5
+        monthDay.layer.opacity = isToday(date: model.day) ? 1 : 0.5
         
-        let model = model.day.distance(to: .now) < 1 && model.day.distance(to: .now) > 0 ? LunaTextViewModel(size: 13,
+        weekendDay.layer.opacity = isToday(date: model.day) ? 1 : 0.5
+        
+//        weekendDay.text = model.day.weekd
+//        let weekday = Calendar.current.component(.weekday, from: model.day)
+        weekendDay.text = getDayOfTheWeek(date: model.day)
+        
+        monthDay.text = getDate(date: model.day)
+        
+        let model = isToday(date: model.day) ? LunaTextViewModel(size: 13,
                                       color: Asset.primaryGray900.color,
                                                                                                              weight: .bold) :
         LunaTextViewModel(size: 13,
@@ -155,11 +166,39 @@ class CalendarCollectionViewCell: UICollectionViewCell,
     
     func transformToStandard() {
         UIView.animate(withDuration: 0.2) {
-//            self.layer.borderWidth = 0
             self.menstruationStatusToggle.transform = CGAffineTransform.identity
             self.cellStatus.transform = CGAffineTransform.identity
             self.cellStatus.layer.opacity = 0.4
         }
     }
+    
+    func getDayOfTheWeek(date: Date) -> String {
+            return daysOfTheWeek[Calendar.current.dateComponents([.weekday], from: date).weekday! - 1]
+           
+        }
+    
+    func isToday(date: Date) -> Bool {
+        let today = Date.now
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        
+        let todayForm = dateFormatter.string(from: today)
+        let dateForm = dateFormatter.string(from: date)
+        
+        if todayForm == dateForm {
+            return true
+        }
+        else{
+            return false
+        }
+    }
+    
+    func getDate(date: Date)-> String{
+            let df = DateFormatter()
+            df.dateStyle = DateFormatter.Style.medium
+            df.timeStyle = DateFormatter.Style.medium
+            let date = (df.string(from: date))
 
+            return String(date.prefix(2))
+        }
 }
