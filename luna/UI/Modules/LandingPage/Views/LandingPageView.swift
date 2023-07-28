@@ -7,8 +7,27 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+
+
 
 class LandingPageView: UIView, AnyView {
+    private var disposeBag = DisposeBag()
+    
+    private(set) var  collectionView: UICollectionView = {
+        let layout = CalendarCollectionViewFlowLayout()
+//        layout.itemSize = CGSize(width: 43, height: 123)
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        layout.scrollDirection = .horizontal
+        
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        
+        collection.backgroundColor = .white
+        collection.register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: CalendarCollectionViewCell.IDENTIFIER)
+        collection.showsHorizontalScrollIndicator = false
+        
+        return collection
+    }()
     
     private let background: UIView = {
         let view = UIView()
@@ -82,9 +101,17 @@ class LandingPageView: UIView, AnyView {
         stack.addArrangedSubview(title)
         stack.addArrangedSubview(landingPageDescription)
         addSubview(startButton)
+        addSubview(collectionView)
+        
     }
     
     func addConstraints() {
+        collectionView.snp.makeConstraints{
+            $0.width.equalToSuperview()
+            $0.centerY.equalToSuperview()
+            $0.height.equalTo(123)
+        }
+        
         background.snp.makeConstraints{
             $0.edges.equalToSuperview()
         }
@@ -107,6 +134,7 @@ class LandingPageView: UIView, AnyView {
         }
         
     }
+    
     
     func addAdditionalConfiguration() {
         background.backgroundColor = .white

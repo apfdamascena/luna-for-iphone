@@ -27,10 +27,17 @@ internal enum Asset {
   internal static let accentColor = ColorAsset(name: "AccentColor")
   internal static let background = ImageAsset(name: "background")
   internal static let calendarImage = ImageAsset(name: "calendarImage")
+  internal static let cinza100 = ColorAsset(name: "cinza-100")
+  internal static let follicularSelected = ImageAsset(name: "follicularSelected")
   internal static let landingPageBackgroundImage = ImageAsset(name: "landingPageBackgroundImage")
+  internal static let lutealSelected = ImageAsset(name: "lutealSelected")
+  internal static let menstruationSelected = ImageAsset(name: "menstruationSelected")
+  internal static let noneSelected = ImageAsset(name: "noneSelected")
+  internal static let ovulationSelected = ImageAsset(name: "ovulationSelected")
   internal static let primaryGray900 = ColorAsset(name: "primary_gray_900")
   internal static let primaryRed500 = ColorAsset(name: "primary_red_500")
   internal static let primaryRed900 = ColorAsset(name: "primary_red_900")
+  internal static let vermelho200 = ColorAsset(name: "vermelho-200")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
