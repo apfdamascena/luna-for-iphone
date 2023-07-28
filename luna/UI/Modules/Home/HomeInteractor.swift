@@ -30,11 +30,10 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
     }
     
     func loadPhasesToUserCalendar() {
-        if calendarPermission == .unauthorized { return }
         
-        guard let lastDayMenstruation = OnboardingUserCycleInformation.shared.lastMenstruation,
-              let menstruationDuration = OnboardingUserCycleInformation.shared.menstruationDuration,
-              let cycleDuration = OnboardingUserCycleInformation.shared.cycleDuration else { return }
+        let lastDayMenstruation = OnboardingUserCycleInformation.shared.lastMenstruation
+        let menstruationDuration = OnboardingUserCycleInformation.shared.menstruationDuration
+        let cycleDuration = OnboardingUserCycleInformation.shared.cycleDuration
               
                   
         lunaCalendarManager.firstLoadElementsToCalendar(firstDayMenstruation: lastDayMenstruation,

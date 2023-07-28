@@ -13,14 +13,14 @@ class OnboardingUserCycleInformation {
     private init(){}
     static let shared = OnboardingUserCycleInformation()
     
-    var lastMenstruation: Date? {
+    var lastMenstruation: Date {
         guard let date =  UserDefaults.standard.object(forKey: "menstruation_date") as? Date else {
             return Date()
         }
         return date
     }
     
-    var menstruationDuration: Int? {
+    var menstruationDuration: Int {
         guard let duration = UserDefaults.standard.object(forKey: "menstruation_duration") as? Int else {
             return 5
         }
@@ -28,7 +28,7 @@ class OnboardingUserCycleInformation {
         return duration
     }
     
-    var cycleDuration: Int? {
+    var cycleDuration: Int {
         guard let duration = UserDefaults.standard.object(forKey: "cycle_duration") as? Int else {
             return 28
         }
