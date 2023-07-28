@@ -62,8 +62,7 @@ class CycleDurationView: UIView, AnyView {
         
         stack.addArrangedSubview(title)
         stack.addArrangedSubview(pickerContainer)
-
-
+        
         pickerContainer.addSubview(picker)
         
     }

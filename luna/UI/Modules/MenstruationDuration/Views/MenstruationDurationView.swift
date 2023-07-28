@@ -20,7 +20,6 @@ class MenstruationDurationView: UIView, AnyView {
         let view = UIStackView()
         view.axis = .vertical
         view.alignment = .fill
-        view.spacing = 10.su
         return view
     }()
             
@@ -76,15 +75,13 @@ class MenstruationDurationView: UIView, AnyView {
         stack.snp.makeConstraints{
             $0.top.equalTo(safeAreaLayoutGuide.snp.top).offset(5.su)
             $0.leading.trailing.equalToSuperview().inset(3.su)
+            $0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-8.su)
         }
         
         title.snp.makeConstraints{
             $0.height.equalTo(10.su)
         }
         
-        pickerContainer.snp.makeConstraints{
-            $0.height.equalTo(40.su)
-        }
         
         picker.snp.makeConstraints{
             $0.trailing.leading.equalToSuperview().inset(10.su)
