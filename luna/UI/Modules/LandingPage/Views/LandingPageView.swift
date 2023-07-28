@@ -45,7 +45,7 @@ class LandingPageView: UIView, AnyView {
     
     private let landingPageDescription: LunaText = {
         let label = LunaText()
-        let model = LunaTextViewModel(size: 31,
+        let model = LunaTextViewModel(size: 28,
                                       color: .black,
                                       weight: .regular)
         
