@@ -54,4 +54,33 @@ class CalendarEventService {
         }
         return true
     }
+    
+    func eventsBefore(daysBefore: Int, finalDate: Date) -> [EKEvent] {
+        let daysBeforeDate = finalDate.daysBefore(daysBefore)
+        return getEventsByDate(firstDate: daysBeforeDate, finalDate: finalDate)
+    }
+    
+    func eventsAfter(daysAfter: Int, startDate: Date) -> [EKEvent] {
+        let daysAfterDate = startDate.daysAfter(daysAfter)
+        return getEventsByDate(firstDate: startDate, finalDate: daysAfterDate)
+    }
+    
+    func removeElementsInCalendarBy(menstruationDate: Date) {
+        let monthsAfter = Date().daysAfter(200)
+        let events = getEventsByDate(firstDate: menstruationDate, finalDate: monthsAfter)
+        for event in events {
+            removeEvent(eventId: event.calendarItemIdentifier)
+        }
+    }
+
+    func removeEvent(eventId: String) {
+        if let eventToDelete = self.eventStore.event(withIdentifier: eventId){
+            do {
+                try eventStore.remove(eventToDelete, span: .thisEvent)
+            } catch let error as NSError {
+                print("failed to save event with error : \(error)")
+            }
+            print("removed Event")
+        }
+    }
 }
