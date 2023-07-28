@@ -23,3 +23,4 @@ class OnboardingViewFlow: OnboardingViewFlowDelegate {
         return newCurrentPage
     }
 }
+

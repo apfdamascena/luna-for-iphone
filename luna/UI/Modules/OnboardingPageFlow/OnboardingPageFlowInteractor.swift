@@ -29,8 +29,8 @@ class OnboardingPageFlowInteractor: PresenterToInteractorOnboardingPageFlowProto
     func calculateOnboarding(forPreviousPage: Int){
         let page = flowCalculator.calculate(newCurrentPage: forPreviousPage)
         
-        if page == 3 {
-            presenter?.showEndOnboardingView(page)
+        if page == 0 {
+            presenter?.goToLandingPage()
         } else {
             presenter?.goToPreviousPage(page)
         }
