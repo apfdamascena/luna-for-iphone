@@ -24,6 +24,9 @@ class InformationalPhaseText: UIView, AnyView {
         let label = LunaText()
         let model = LunaTextViewModel(size: 16, color: .black, weight: .regular)
         label.text = L10n.Constants.Content.Label.Placeholder.big
+        label.textAlignment = .left
+        label.numberOfLines = 0
+        label.draw(model)
         return label
     }()
     
@@ -55,6 +58,26 @@ class InformationalPhaseText: UIView, AnyView {
         return label
     }()
     
+    private let whatToDoText2: LunaText = {
+        let label = LunaText()
+        let model = LunaTextViewModel(size: 16, color: .black, weight: .medium)
+        label.text = L10n.Constants.Content.Label.Placeholder.bullet
+        label.textAlignment = .left
+        label.numberOfLines = 0
+        label.draw(model)
+        return label
+    }()
+    
+    private let whatToDoText3: LunaText = {
+        let label = LunaText()
+        let model = LunaTextViewModel(size: 16, color: .black, weight: .medium)
+        label.text = L10n.Constants.Content.Label.Placeholder.bullet
+        label.textAlignment = .left
+        label.numberOfLines = 0
+        label.draw(model)
+        return label
+    }()
+    
     private let stackWhatToDo: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
@@ -77,6 +100,8 @@ class InformationalPhaseText: UIView, AnyView {
         stackWhatIs.addArrangedSubview(whatIsText)
         stackWhatToDo.addArrangedSubview(whatToDoTitle)
         stackWhatToDo.addArrangedSubview(whatToDoText)
+        stackWhatToDo.addArrangedSubview(whatToDoText2)
+        stackWhatToDo.addArrangedSubview(whatToDoText3)
         addSubview(stackWhatIs)
         addSubview(stackWhatToDo)
     }

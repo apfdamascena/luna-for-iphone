@@ -35,7 +35,7 @@
 "constants.content.label.home.informational.do" = "O que fazer?";
 
 "constants.content.label.placeholder.big" = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.";
-"constants.content.label.placeholder.bullet" = "\u{2022} Sed ut perspiciatis unde";
+"constants.content.label.placeholder.bullet" = "Sed ut perspiciatis unde";
 
 "constants.content.label.calendar_title"="Consiga ver seu ciclo no seu dia a dia";
 "constants.content.label.calendar_subtitle"="Permita que o Luna acesse seu Calendar para planejar seus dias com sabedoria e melhorar o seu bem-estar";

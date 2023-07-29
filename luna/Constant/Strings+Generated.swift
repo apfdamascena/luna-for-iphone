@@ -89,8 +89,8 @@ internal enum L10n {
         internal enum Placeholder {
           /// Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
           internal static let big = L10n.tr("Constants", "constants.content.label.placeholder.big", fallback: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.")
-          /// u{2022} Sed ut perspiciatis unde
-          internal static let bullet = L10n.tr("Constants", "constants.content.label.placeholder.bullet", fallback: "u{2022} Sed ut perspiciatis unde")
+          /// Sed ut perspiciatis unde
+          internal static let bullet = L10n.tr("Constants", "constants.content.label.placeholder.bullet", fallback: "Sed ut perspiciatis unde")
         }
       }
     }

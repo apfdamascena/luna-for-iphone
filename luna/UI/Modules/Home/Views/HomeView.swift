@@ -16,9 +16,14 @@ class HomeView: UIView, AnyView  {
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.isScrollEnabled = true
-        scrollView.showsVerticalScrollIndicator = true
-        scrollView.backgroundColor = .systemPink
+        scrollView.showsVerticalScrollIndicator = false
+        
         return scrollView
+    }()
+    
+    private let contentView: UIView = {
+        let view = UIView()
+        return view
     }()
 
     private let placeHolder: LunaText = {
@@ -96,18 +101,41 @@ class HomeView: UIView, AnyView  {
     }
     
     func addSubviews() {
-        addSubview(placeHolder)
-        addSubview(stackPhaseCycle)
+//        addSubview(placeHolder)
+//        addSubview(stackPhaseCycle)
+//        stackPhaseCycle.addArrangedSubview(youAreInLabel)
+//        stackPhaseCycle.addArrangedSubview(phaseTitle)
+//        stackPhaseLearn.addArrangedSubview(learnCycleTitle)
+//        stackPhaseLearn.addArrangedSubview(cyclePhasesTitle)
+//        addSubview(calendarSyncView)
+//        addSubview(stackPhaseLearn)
+//        addSubview(informationalPhaseTextView)
+        
+        addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        
+        contentView.addSubview(placeHolder)
+        contentView.addSubview(stackPhaseCycle)
         stackPhaseCycle.addArrangedSubview(youAreInLabel)
         stackPhaseCycle.addArrangedSubview(phaseTitle)
         stackPhaseLearn.addArrangedSubview(learnCycleTitle)
         stackPhaseLearn.addArrangedSubview(cyclePhasesTitle)
-        addSubview(calendarSyncView)
-        addSubview(stackPhaseLearn)
-        addSubview(informationalPhaseTextView)
+        contentView.addSubview(calendarSyncView)
+        contentView.addSubview(stackPhaseLearn)
+        contentView.addSubview(informationalPhaseTextView)
+        
     }
     
     func addConstraints() {
+        
+        scrollView.snp.makeConstraints {
+            $0.edges.equalTo(self)
+        }
+        
+        contentView.snp.makeConstraints {
+            $0.top.bottom.width.height.equalTo(scrollView)
+            $0.leading.trailing.equalTo(scrollView)
+        }
         
         placeHolder.snp.makeConstraints {
             $0.centerX.equalToSuperview()
