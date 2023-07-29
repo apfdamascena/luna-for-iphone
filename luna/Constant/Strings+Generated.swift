@@ -79,6 +79,18 @@ internal enum L10n {
           internal static let settingsSubtitle = L10n.tr("Constants", "constants.content.label.home.settings_subtitle", fallback: "1. Vá em ajustes")
           /// Você está na
           internal static let youAreIn = L10n.tr("Constants", "constants.content.label.home.youAreIn", fallback: "Você está na")
+          internal enum Informational {
+            /// O que fazer?
+            internal static let `do` = L10n.tr("Constants", "constants.content.label.home.informational.do", fallback: "O que fazer?")
+            /// O que é?
+            internal static let what = L10n.tr("Constants", "constants.content.label.home.informational.what", fallback: "O que é?")
+          }
+        }
+        internal enum Placeholder {
+          /// Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+          internal static let big = L10n.tr("Constants", "constants.content.label.placeholder.big", fallback: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.")
+          /// u{2022} Sed ut perspiciatis unde
+          internal static let bullet = L10n.tr("Constants", "constants.content.label.placeholder.bullet", fallback: "u{2022} Sed ut perspiciatis unde")
         }
       }
     }

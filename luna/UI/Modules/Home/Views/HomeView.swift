@@ -9,7 +9,17 @@ import UIKit
 import SnapKit
 
 class HomeView: UIView, AnyView  {
-    private let calendarSyncView = CalendarSync()
+    
+    private let calendarSyncView = CalendarSyncCard()
+    private let informationalPhaseTextView = InformationalPhaseText()
+    
+    private let scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.isScrollEnabled = true
+        scrollView.showsVerticalScrollIndicator = true
+        scrollView.backgroundColor = .systemPink
+        return scrollView
+    }()
 
     private let placeHolder: LunaText = {
         let label = LunaText()
@@ -94,6 +104,7 @@ class HomeView: UIView, AnyView  {
         stackPhaseLearn.addArrangedSubview(cyclePhasesTitle)
         addSubview(calendarSyncView)
         addSubview(stackPhaseLearn)
+        addSubview(informationalPhaseTextView)
     }
     
     func addConstraints() {
@@ -116,6 +127,11 @@ class HomeView: UIView, AnyView  {
         stackPhaseLearn.snp.makeConstraints {
             $0.top.equalTo(calendarSyncView.snp.bottom).offset(4.su)
             $0.leading.equalToSuperview().inset(3.su)
+        }
+        
+        informationalPhaseTextView.snp.makeConstraints {
+            $0.top.equalTo(stackPhaseLearn.snp.bottom).offset(5.su)
+            $0.leading.trailing.equalToSuperview().inset(3.su)
         }
 
     }

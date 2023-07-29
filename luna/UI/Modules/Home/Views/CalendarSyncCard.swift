@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class CalendarSync: UIView, AnyView {
+class CalendarSyncCard: UIView, AnyView {
     
     private let calendarTitle: LunaText = {
         let label = LunaText()
@@ -96,7 +96,9 @@ class CalendarSync: UIView, AnyView {
     }
     
     func addAdditionalConfiguration() {
-        backgroundColor = Asset.gray100.color
+//        backgroundColor = Asset.gray100.color
+        // ta diferente a cor ^ pra o que tá no figma e teoricamente ta certo
+        backgroundColor = .systemGray6
         layer.cornerRadius = 1.su
         layer.borderWidth = 1
         layer.borderColor = Asset.gray200.color.cgColor
