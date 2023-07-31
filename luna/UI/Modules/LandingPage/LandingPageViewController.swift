@@ -32,23 +32,23 @@ class LandingPageViewController: UIViewController, UICollectionViewDelegate {
             let centerPoint = CGPoint(x: self.landingPageView.collectionView.frame.size.width / 2 + self.landingPageView.collectionView.contentOffset.x,
                                       y: self.landingPageView.collectionView.frame.size.height / 2 + self.landingPageView.collectionView.contentOffset.y)
             
-            var centerIndex = self.landingPageView.collectionView.indexPathForItem(at: centerPoint)
+            let centerIndex = self.landingPageView.collectionView.indexPathForItem(at: centerPoint)
             let centerCell = (self.landingPageView.collectionView.cellForItem(at: centerIndex!) as! CalendarCollectionViewCell)
             
             
-            var centerXtoCollection = (selectedCell.center.x) - 5.5 - self.landingPageView.collectionView.frame.size.width / 2
+            let centerXtoCollection = (selectedCell.center.x) - 5.5 - self.landingPageView.collectionView.frame.size.width / 2
             
             if centerCell == selectedCell {
                 
                 //Altera Fase
-                print((selectedCell.center.x) - 5.5 - self.landingPageView.collectionView.frame.size.width / 2)
-                print(selectedCell.center.x)
-                print(self.landingPageView.collectionView.frame.size.width / 2)
+//                print((selectedCell.center.x) - 5.5 - self.landingPageView.collectionView.frame.size.width / 2)
+//                print(selectedCell.center.x)
+//                print(self.landingPageView.collectionView.frame.size.width / 2)
                 
             }
             else {
-                print((selectedCell.center.x) - 5.5 - self.landingPageView.collectionView.frame.size.width / 2)
-                print(selectedCell.center.x)
+//                print((selectedCell.center.x) - 5.5 - self.landingPageView.collectionView.frame.size.width / 2)
+//                print(selectedCell.center.x)
                 lastCell?.transformToStandard()
                 self.landingPageView.collectionView.contentOffset.x = centerXtoCollection
             }
