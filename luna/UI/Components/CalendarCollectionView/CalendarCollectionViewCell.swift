@@ -193,7 +193,7 @@ class CalendarCollectionViewCell: UICollectionViewCell,
         }
     }
     
-    func getDate(date: Date)-> String{
+    func getDate(date: Date) -> String{
             let df = DateFormatter()
             df.dateStyle = DateFormatter.Style.medium
             df.timeStyle = DateFormatter.Style.medium

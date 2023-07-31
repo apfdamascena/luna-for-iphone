@@ -14,22 +14,6 @@ import RxSwift
 class LandingPageView: UIView, AnyView {
     private var disposeBag = DisposeBag()
     
-    private(set) var  collectionView: UICollectionView = {
-        let layout = CalendarCollectionViewFlowLayout()
-//        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 43, height: 123)
-//        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        layout.scrollDirection = .horizontal
-        
-        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        
-        collection.backgroundColor = .white
-        collection.register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: CalendarCollectionViewCell.IDENTIFIER)
-        collection.showsHorizontalScrollIndicator = false
-        
-        return collection
-    }()
-    
     private let background: UIView = {
         let view = UIView()
         return view
@@ -78,12 +62,9 @@ class LandingPageView: UIView, AnyView {
     }()
     
     private(set) var startButton: LunaButton = {
-        let label = LunaButton()
-        let model = LunaButtonViewModel(style: .primary,
-                                        textColor: .white,
-                                        text: L10n.Constants.Content.Button.start)
-        label.draw(model)
-        return label
+        let button = LunaButton()
+        button.draw(style: .initial)
+        return button
     }()
 
     override init(frame: CGRect) {
@@ -102,16 +83,10 @@ class LandingPageView: UIView, AnyView {
         stack.addArrangedSubview(title)
         stack.addArrangedSubview(landingPageDescription)
         addSubview(startButton)
-        addSubview(collectionView)
         
     }
     
     func addConstraints() {
-        collectionView.snp.makeConstraints{
-            $0.leading.trailing.equalToSuperview()
-            $0.centerY.equalToSuperview()
-            $0.height.equalTo(123)
-        }
         
         background.snp.makeConstraints{
             $0.edges.equalToSuperview()

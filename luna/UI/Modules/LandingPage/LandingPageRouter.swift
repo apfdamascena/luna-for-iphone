@@ -25,7 +25,7 @@ class LandingPageRouter: PresenterToRouterLandingPageProtocol {
     }
     
     func pushLastDayMenstruation(on view: PresenterToViewLandingPageProtocol) {
-        let pageViewController = OnboardingPageControlRouter.createModule()
+        let pageViewController = OnboardingPageFlowRouter.createModule()
         
         guard let landingPage = view as? LandingPageViewController else { return }
         landingPage.navigationController?.pushViewController(pageViewController, animated: true)

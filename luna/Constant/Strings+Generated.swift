@@ -12,9 +12,17 @@ import Foundation
 internal enum L10n {
   internal enum Constants {
     internal enum Content {
+      internal enum Api {
+        /// iCloud
+        internal static let icloud = L10n.tr("Constants", "constants.content.api.icloud", fallback: "iCloud")
+      }
       internal enum Button {
         /// Continuar
         internal static let `continue` = L10n.tr("Constants", "constants.content.button.continue", fallback: "Continuar")
+        /// Voltar
+        internal static let previous = L10n.tr("Constants", "constants.content.button.previous", fallback: "Voltar")
+        /// Ajustes
+        internal static let settings = L10n.tr("Constants", "constants.content.button.settings", fallback: "Ajustes")
         /// Iniciar
         internal static let start = L10n.tr("Constants", "constants.content.button.start", fallback: "Iniciar")
       }
@@ -28,6 +36,12 @@ internal enum L10n {
         /// Quanto tempo dura o
         /// seu ciclo menstrual?
         internal static let cycleDuration = L10n.tr("Constants", "constants.content.label.cycle_duration", fallback: "Quanto tempo dura o\nseu ciclo menstrual?")
+        /// Menstruação Prevista
+        internal static let expectedMenstruation = L10n.tr("Constants", "constants.content.label.expectedMenstruation", fallback: "Menstruação Prevista")
+        /// 💓 Período fertil
+        internal static let fertile = L10n.tr("Constants", "constants.content.label.fertile", fallback: "💓 Período fertil")
+        /// ⚡️ Fase folicular
+        internal static let folicular = L10n.tr("Constants", "constants.content.label.folicular", fallback: "⚡️ Fase folicular")
         /// Seu ciclo ao seu favor
         internal static let landingPageDescription = L10n.tr("Constants", "constants.content.label.landing_page_description", fallback: "Seu ciclo ao seu favor")
         /// Constants.strings
@@ -35,9 +49,57 @@ internal enum L10n {
         /// 
         ///   Created by alexdamascena on 18/07/23.
         internal static let lastDayMenstruation = L10n.tr("Constants", "constants.content.label.last_day_menstruation", fallback: "Quando foi o início da\nsua última menstruação?")
+        /// ⬛️ Fase lútea
+        internal static let luteal = L10n.tr("Constants", "constants.content.label.luteal", fallback: "⬛️ Fase lútea")
+        /// 🩸 Menstruação
+        internal static let menstruation = L10n.tr("Constants", "constants.content.label.menstruation", fallback: "🩸 Menstruação")
         /// Quantos dias dura a
         /// sua menstruação?
         internal static let menstruationDuration = L10n.tr("Constants", "constants.content.label.menstruation_duration", fallback: "Quantos dias dura a\nsua menstruação?")
+        /// 😡 TPM
+        internal static let pms = L10n.tr("Constants", "constants.content.label.pms", fallback: "😡 TPM")
+        internal enum Home {
+          /// 2. Permita o acesso
+          internal static let acessSubtitle = L10n.tr("Constants", "constants.content.label.home.acess_subtitle", fallback: "2. Permita o acesso")
+          /// Luna precisa estar conectado com o Calendário para salvar seu ciclo
+          internal static let calendarSync = L10n.tr("Constants", "constants.content.label.home.calendar_sync", fallback: "Luna precisa estar conectado com o Calendário para salvar seu ciclo")
+          /// Fases do Ciclo Menstrual
+          internal static let cyclePhases = L10n.tr("Constants", "constants.content.label.home.cycle_phases", fallback: "Fases do Ciclo Menstrual")
+          /// Fase Folicular
+          internal static let follicular = L10n.tr("Constants", "constants.content.label.home.follicular", fallback: "Fase Folicular")
+          /// Aprenda sobre as
+          internal static let learnCycle = L10n.tr("Constants", "constants.content.label.home.learn_cycle", fallback: "Aprenda sobre as")
+          /// Fase Lútea
+          internal static let luteal = L10n.tr("Constants", "constants.content.label.home.luteal", fallback: "Fase Lútea")
+          /// Menstruação
+          internal static let menstruation = L10n.tr("Constants", "constants.content.label.home.menstruation", fallback: "Menstruação")
+          /// Ovulação
+          internal static let ovulation = L10n.tr("Constants", "constants.content.label.home.ovulation", fallback: "Ovulação")
+          /// Menstruação registrada
+          internal static let recordedMenstruation = L10n.tr("Constants", "constants.content.label.home.recordedMenstruation", fallback: "Menstruação registrada")
+          /// 1. Vá em ajustes
+          internal static let settingsSubtitle = L10n.tr("Constants", "constants.content.label.home.settings_subtitle", fallback: "1. Vá em ajustes")
+          /// Você está na
+          internal static let youAreIn = L10n.tr("Constants", "constants.content.label.home.youAreIn", fallback: "Você está na")
+          internal enum Informational {
+            /// O que fazer?
+            internal static let `do` = L10n.tr("Constants", "constants.content.label.home.informational.do", fallback: "O que fazer?")
+            /// O que é?
+            internal static let what = L10n.tr("Constants", "constants.content.label.home.informational.what", fallback: "O que é?")
+          }
+        }
+        internal enum Placeholder {
+          /// Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+          internal static let big = L10n.tr("Constants", "constants.content.label.placeholder.big", fallback: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.")
+          /// Sed ut perspiciatis unde
+          internal static let bullet = L10n.tr("Constants", "constants.content.label.placeholder.bullet", fallback: "Sed ut perspiciatis unde")
+        }
+      }
+    }
+    internal enum User {
+      internal enum Key {
+        /// onboarding
+        internal static let forOnboardingWasSeen = L10n.tr("Constants", "constants.user.key.for_onboarding_was_seen", fallback: "onboarding")
       }
     }
   }

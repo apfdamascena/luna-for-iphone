@@ -8,11 +8,9 @@
 
 import UIKit
 import RxSwift
-import RxCocoa
 
 class LastDayMenstruationViewController: UIViewController,
-                                         TouchableUserEvent {
-
+                                         DataSourceEventObservable {
     var presenter: ViewToPresenterLastDayMenstruationProtocol?
     
     let lastDayMenstruationView = LastDayMenstruationView()
@@ -24,15 +22,17 @@ class LastDayMenstruationViewController: UIViewController,
         super.viewDidLoad()
         view = lastDayMenstruationView
         
-        addUserTouchTrigger()
+        addDataSourceEventObservable()
     }
     
-    func addUserTouchTrigger() {
-//        lastDayMenstruationView.nextButton.rx.tap.bind{
-//            self.presenter?.userTappedContinue()
-//        }.disposed(by: disposeBag)
+    func addDataSourceEventObservable() {
+        
+        lastDayMenstruationView.datePicker
+            .rx.value.changed.asObservable()
+            .subscribe(onNext: { date in
+                OnboardingUserCycleInformation.shared.setLastMenstruation(date)
+            }).disposed(by: disposeBag)
     }
-
 }
 
 extension LastDayMenstruationViewController: PresenterToViewLastDayMenstruationProtocol{
