@@ -18,7 +18,7 @@ class OnboardingPageControlDataSourceImpl: OnboardingPageControlDataSource {
         MenstruationDurationRouter.createModule(),
         CycleDurationRouter.createModule(),
         TeachRecordMenstruationRouter.createModule(),
-        TeachRecordMenstruationRouter.createModule(),
+        OtherCyclePhasesRouter.createModule(),
         CalendarRouter.createModule()
     ]
 }

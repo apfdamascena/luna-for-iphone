@@ -12,10 +12,12 @@ class OtherCyclePhasesViewController: UIViewController {
     
     var presenter: ViewToPresenterOtherCyclePhasesProtocol?
     
+    private let otherCyclePhaseView = OtherCyclePhasesView()
+    
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view = otherCyclePhaseView
     }
 
 }

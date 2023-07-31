@@ -1,13 +1,13 @@
 //
-//  TeachRecordMenstruationView.swift
+//  OtherCyclePhasesView.swift
 //  luna
 //
-//  Created by alexdamascena on 28/07/23.
+//  Created by alexdamascena on 30/07/23.
 //
 
 import UIKit
 
-class TeachRecordMenstruationView: UIView, AnyView {
+class OtherCyclePhasesView: UIView, AnyView {
 
     private let title: LunaText = {
         let label = LunaText()
@@ -15,7 +15,7 @@ class TeachRecordMenstruationView: UIView, AnyView {
                                       color: .black,
                                       weight: .medium)
         
-        label.text = L10n.Constants.Content.Label.registerMenstruation
+        label.text = "Outras fases do ciclo"
         label.numberOfLines = 0
         label.textAlignment = .left
         
@@ -24,8 +24,7 @@ class TeachRecordMenstruationView: UIView, AnyView {
     }()
     
     private let teachRegisterImage: UIImageView = {
-        let view = UIImageView(image: Asset.teachRegisterMenstruation.image)
-        view.contentMode = .scaleAspectFit
+        let view = UIImageView(image: Asset.otherCyclePhases.image)
         return view
     }()
     
@@ -42,7 +41,7 @@ class TeachRecordMenstruationView: UIView, AnyView {
         return view
     }()
     
-    private let cards = [OnboardingCyclePhaseCard(), OnboardingCyclePhaseCard()]
+    private let cards = [OnboardingCyclePhaseCard(), OnboardingCyclePhaseCard(), OnboardingCyclePhaseCard()]
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -52,7 +51,6 @@ class TeachRecordMenstruationView: UIView, AnyView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     func addSubviews() {
         
