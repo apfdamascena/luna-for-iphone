@@ -22,12 +22,13 @@ class OnboardingPageFlowViewController: UIPageViewController,
     private(set) var datasource: OnboardingPageControlDataSource
         
     private let onboardingButtons = OnboardingButtonView()
-    private(set) var pageControlView = OnboardingPageControlView(numberOfPages: 6)
+    private let pageControlView: OnboardingPageControlView
     
     private var disposeBag = DisposeBag()
     
     init(datasource: OnboardingPageControlDataSource){
         self.datasource = datasource
+        self.pageControlView = OnboardingPageControlView(numberOfPages: Onboarding.NUMBER_PAGES)
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
       
         addUserTouchTrigger()
