@@ -18,8 +18,9 @@ class OnboardingViewFlow: OnboardingViewFlowDelegate {
     }
     
     func calculate(newCurrentPage: Int) -> Int {
-        if newCurrentPage < 0 { return 0 }
+        if newCurrentPage < 0 { return -1 }
         if newCurrentPage == numberOfPages  { return numberOfPages  }
         return newCurrentPage
     }
 }
+
