@@ -37,11 +37,13 @@ class OtherCyclePhasesView: UIView, AnyView {
     private let stack: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
-        view.spacing = 3.su
+        view.spacing = 4.su
         return view
     }()
     
-    private let cards = [OnboardingCyclePhaseCard(), OnboardingCyclePhaseCard(), OnboardingCyclePhaseCard()]
+    private let cards = [OnboardingCyclePhaseCard(style: .ovulation),
+                         OnboardingCyclePhaseCard(style: .follicular),
+                         OnboardingCyclePhaseCard(style: .luteal)]
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -87,12 +89,12 @@ class OtherCyclePhasesView: UIView, AnyView {
         
         stack.snp.makeConstraints{
             $0.leading.trailing.equalToSuperview().inset(3.su)
-            $0.top.equalTo(line.snp.bottom).offset(4.su)
+            $0.top.equalTo(line.snp.bottom).offset(5.su)
         }
         
         cards.forEach { card in
             card.snp.makeConstraints{
-                $0.height.equalTo(11.su)
+                $0.height.equalTo(10.su)
             }
         }
     }

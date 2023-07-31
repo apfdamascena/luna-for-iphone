@@ -42,7 +42,7 @@ class TeachRecordMenstruationView: UIView, AnyView {
         return view
     }()
     
-    private let cards = [OnboardingCyclePhaseCard(), OnboardingCyclePhaseCard()]
+    private let cards = [OnboardingCyclePhaseCard(style: .menstruation), OnboardingCyclePhaseCard(style: .forecast)]
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -94,7 +94,7 @@ class TeachRecordMenstruationView: UIView, AnyView {
         
         cards.forEach { card in
             card.snp.makeConstraints{
-                $0.height.equalTo(11.su)
+                $0.height.equalTo(10.su)
             }
         }
     }

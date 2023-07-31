@@ -8,6 +8,30 @@
 import UIKit
 import SnapKit
 
+enum OnboardingCyclePhaseCardType {
+    
+    case menstruation
+    case forecast
+    case ovulation
+    case follicular
+    case luteal
+    
+    var model: OnboardingCyclePhaseContentViewModel {
+        switch self {
+        case .menstruation:
+            return OnboardingCyclePhaseContentViewModel(title: "Menstruação Registada", subtitle: "Pao doce é muito bom vei, todos deveriam comer.")
+        case .forecast:
+            return OnboardingCyclePhaseContentViewModel(title: "Menstruação Registada", subtitle: "Pao doce é muito bom vei, todos deveriam comer.")
+        case .ovulation:
+            return OnboardingCyclePhaseContentViewModel(title: "Menstruação Registada", subtitle: "Pao doce é muito bom vei, todos deveriam comer.")
+        case .follicular:
+            return OnboardingCyclePhaseContentViewModel(title: "Menstruação Registada", subtitle: "Pao doce é muito bom vei, todos deveriam comer.")
+        case .luteal:
+            return OnboardingCyclePhaseContentViewModel(title: "Menstruação Registada", subtitle: "Pao doce é muito bom vei, todos deveriam comer.")
+        }
+    }
+}
+
 class OnboardingCyclePhaseCard: UIView,
                                 AnyView,
                                 DrawableView  {
@@ -27,6 +51,12 @@ class OnboardingCyclePhaseCard: UIView,
         let view = UIImageView(image: Asset.cellToTeste.image)
         return view
     }()
+    
+    init(style: OnboardingCyclePhaseCardType){
+        super.init(frame: .zero)
+        setupView()
+        draw(style.model)
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -48,6 +78,10 @@ class OnboardingCyclePhaseCard: UIView,
         
         horizontalStack.snp.makeConstraints{
             $0.leading.trailing.bottom.top.equalToSuperview()
+        }
+        
+        phase.snp.makeConstraints{
+            $0.width.equalTo(7.su)
         }
     }
     

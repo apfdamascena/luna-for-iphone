@@ -19,6 +19,7 @@ class OnboardingCyclePhaseContent: UIView,
         let view = UIStackView()
         view.axis = .vertical
         view.alignment = .fill
+//        view.distribution = .fillEqually
         view.spacing = 1.su
         return view
     }()
