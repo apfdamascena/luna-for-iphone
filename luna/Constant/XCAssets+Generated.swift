@@ -35,6 +35,8 @@ internal enum Asset {
   internal static let primaryGray900 = ColorAsset(name: "primary_gray_900")
   internal static let primaryRed500 = ColorAsset(name: "primary_red_500")
   internal static let primaryRed900 = ColorAsset(name: "primary_red_900")
+  internal static let secondaryRed100 = ColorAsset(name: "secondary_red_100")
+  internal static let secondaryRed200 = ColorAsset(name: "secondary_red_200")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

@@ -12,12 +12,12 @@ class HomeView: UIView, AnyView  {
     
     private let calendarSyncView = CalendarSyncCard()
     private let informationalPhaseTextView = InformationalPhaseText()
+    private let recordedMenstruationCardView = RecordedMenstruationCard()
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.isScrollEnabled = true
-        scrollView.showsVerticalScrollIndicator = false
-        
+        scrollView.showsVerticalScrollIndicator = true
         return scrollView
     }()
     
@@ -100,67 +100,75 @@ class HomeView: UIView, AnyView  {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     func addSubviews() {
-//        addSubview(placeHolder)
-//        addSubview(stackPhaseCycle)
-//        stackPhaseCycle.addArrangedSubview(youAreInLabel)
-//        stackPhaseCycle.addArrangedSubview(phaseTitle)
-//        stackPhaseLearn.addArrangedSubview(learnCycleTitle)
-//        stackPhaseLearn.addArrangedSubview(cyclePhasesTitle)
-//        addSubview(calendarSyncView)
-//        addSubview(stackPhaseLearn)
-//        addSubview(informationalPhaseTextView)
+        
+        stackPhaseCycle.addArrangedSubview(youAreInLabel)
+        stackPhaseCycle.addArrangedSubview(phaseTitle)
+        stackPhaseLearn.addArrangedSubview(learnCycleTitle)
+        stackPhaseLearn.addArrangedSubview(cyclePhasesTitle)
         
         addSubview(scrollView)
         scrollView.addSubview(contentView)
         
         contentView.addSubview(placeHolder)
         contentView.addSubview(stackPhaseCycle)
-        stackPhaseCycle.addArrangedSubview(youAreInLabel)
-        stackPhaseCycle.addArrangedSubview(phaseTitle)
-        stackPhaseLearn.addArrangedSubview(learnCycleTitle)
-        stackPhaseLearn.addArrangedSubview(cyclePhasesTitle)
+        
         contentView.addSubview(calendarSyncView)
         contentView.addSubview(stackPhaseLearn)
         contentView.addSubview(informationalPhaseTextView)
+//        contentView.addSubview(recordedMenstruationCardView)
         
     }
     
     func addConstraints() {
+        
         
         scrollView.snp.makeConstraints {
             $0.edges.equalTo(self)
         }
         
         contentView.snp.makeConstraints {
-            $0.top.bottom.width.height.equalTo(scrollView)
-            $0.leading.trailing.equalTo(scrollView)
+            $0.top.bottom.equalTo(scrollView)
+//            $0.height.equalTo(1200)
+            $0.height.equalTo(scrollView)
+            $0.leading.trailing.equalTo(self)
         }
         
         placeHolder.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.top.equalTo(15.su)
+            $0.top.equalTo(contentView).offset(15.su)
+            $0.leading.trailing.equalTo(contentView).inset(3.su)
         }
         
         stackPhaseCycle.snp.makeConstraints {
             $0.top.equalTo(placeHolder.snp.bottom).offset(5.su)
-            $0.leading.trailing.equalToSuperview().inset(3.su)
+            $0.leading.trailing.equalTo(contentView).inset(3.su)
         }
         
         calendarSyncView.snp.makeConstraints {
             $0.top.equalTo(stackPhaseCycle.snp.bottom).offset(5.su)
-            $0.leading.trailing.equalToSuperview().inset(3.su)
+            $0.leading.trailing.equalTo(contentView).inset(3.su)
         }
         
         stackPhaseLearn.snp.makeConstraints {
             $0.top.equalTo(calendarSyncView.snp.bottom).offset(4.su)
-            $0.leading.equalToSuperview().inset(3.su)
+            $0.leading.trailing.equalTo(contentView).inset(3.su)
         }
         
         informationalPhaseTextView.snp.makeConstraints {
             $0.top.equalTo(stackPhaseLearn.snp.bottom).offset(5.su)
-            $0.leading.trailing.equalToSuperview().inset(3.su)
+            $0.leading.trailing.equalTo(contentView).inset(3.su)
         }
+        
+//        recordedMenstruationCardView.snp.makeConstraints {
+//            $0.top.equalTo(informationalPhaseTextView.snp.bottom).offset(53)
+//            $0.leading.trailing.equalTo(contentView).inset(3.su)
+//            $0.bottom.equalTo(contentView)
+//        }
+//
+        contentView.backgroundColor = .yellow
+        scrollView.backgroundColor = .green
+        informationalPhaseTextView.backgroundColor = .purple
 
     }
     

@@ -75,6 +75,8 @@ internal enum L10n {
           internal static let menstruation = L10n.tr("Constants", "constants.content.label.home.menstruation", fallback: "Menstruação")
           /// Ovulação
           internal static let ovulation = L10n.tr("Constants", "constants.content.label.home.ovulation", fallback: "Ovulação")
+          /// Menstruação registrada
+          internal static let recordedMenstruation = L10n.tr("Constants", "constants.content.label.home.recordedMenstruation", fallback: "Menstruação registrada")
           /// 1. Vá em ajustes
           internal static let settingsSubtitle = L10n.tr("Constants", "constants.content.label.home.settings_subtitle", fallback: "1. Vá em ajustes")
           /// Você está na

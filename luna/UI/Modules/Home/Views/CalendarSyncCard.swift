@@ -93,6 +93,9 @@ class CalendarSyncCard: UIView, AnyView {
             $0.leading.trailing.equalToSuperview().inset(3.su)
             $0.bottom.equalToSuperview().offset(-4.su)
         }
+        
+        calendarTitle.backgroundColor = .brown
+        
     }
     
     func addAdditionalConfiguration() {

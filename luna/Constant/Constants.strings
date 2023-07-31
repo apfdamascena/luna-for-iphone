@@ -30,6 +30,7 @@
 "constants.content.label.home.acess_subtitle" = "2. Permita o acesso";
 "constants.content.label.home.learn_cycle" = "Aprenda sobre as";
 "constants.content.label.home.cycle_phases" = "Fases do Ciclo Menstrual";
+"constants.content.label.home.recordedMenstruation" = "Menstruação registrada";
 
 "constants.content.label.home.informational.what" = "O que é?";
 "constants.content.label.home.informational.do" = "O que fazer?";

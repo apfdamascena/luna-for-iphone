@@ -29,7 +29,7 @@ extension HomeViewController: PresenterToViewHomeProtocol{
     
     func userAllowedAccessCalendar() {
         DispatchQueue.main.async {
-            self.view.backgroundColor = .white
+            self.view.backgroundColor = .yellow
             self.presenter?.loadUserCalendar()
         }
 

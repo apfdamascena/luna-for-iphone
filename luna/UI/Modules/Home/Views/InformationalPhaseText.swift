@@ -110,14 +110,18 @@ class InformationalPhaseText: UIView, AnyView {
         
         stackWhatIs.snp.makeConstraints {
             $0.top.equalToSuperview().offset(0)
-            $0.leading.trailing.equalToSuperview().inset(60)
+            $0.leading.equalToSuperview().inset(60)
+            $0.trailing.equalToSuperview().inset(4.su)
         }
         
         stackWhatToDo.snp.makeConstraints {
-            $0.top.equalTo(stackWhatIs.snp.bottom).offset(32)
+            $0.top.equalTo(stackWhatIs.snp.bottom).offset(4.su)
             $0.leading.trailing.equalToSuperview().inset(60)
-            $0.bottom.equalToSuperview().offset(-80)
+            $0.bottom.equalToSuperview().offset(-32)
         }
+        
+        stackWhatToDo.backgroundColor = .blue
+        stackWhatIs.backgroundColor = .cyan
         
     }
     
