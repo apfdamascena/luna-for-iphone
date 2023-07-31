@@ -15,7 +15,7 @@ class TeachRecordMenstruationView: UIView, AnyView {
                                       color: .black,
                                       weight: .medium)
         
-        label.text = "Registrar Menstruação"
+        label.text = L10n.Constants.Content.Label.registerMenstruation
         label.numberOfLines = 0
         label.textAlignment = .left
         

@@ -56,6 +56,8 @@ internal enum L10n {
         internal static let menstruationDuration = L10n.tr("Constants", "constants.content.label.menstruation_duration", fallback: "Quantos dias dura a\nsua menstruação?")
         /// 😡 TPM
         internal static let pms = L10n.tr("Constants", "constants.content.label.pms", fallback: "😡 TPM")
+        /// Registrar Menstruação
+        internal static let registerMenstruation = L10n.tr("Constants", "constants.content.label.register_menstruation", fallback: "Registrar Menstruação")
       }
     }
     internal enum User {
