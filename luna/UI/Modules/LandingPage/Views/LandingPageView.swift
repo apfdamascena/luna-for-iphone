@@ -88,11 +88,7 @@ class LandingPageView: UIView, AnyView {
     
     func addConstraints() {
         
-<<<<<<< HEAD
-        background.snp.makeConstraints{
-=======
         background.snp.makeConstraints {
->>>>>>> main
             $0.edges.equalToSuperview()
         }
         
