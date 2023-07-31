@@ -19,14 +19,11 @@ extension UIWindow {
     }
 }
 
-
 extension UIScreen {
     static var current: UIScreen? {
         UIWindow.current?.screen
     }
 }
-
-
 
 class OnboardingPageControlView: UIView, AnyView {
     
