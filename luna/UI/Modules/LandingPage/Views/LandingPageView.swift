@@ -7,8 +7,12 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+
+
 
 class LandingPageView: UIView, AnyView {
+    private var disposeBag = DisposeBag()
     
     private let background: UIView = {
         let view = UIView()
@@ -79,11 +83,16 @@ class LandingPageView: UIView, AnyView {
         stack.addArrangedSubview(title)
         stack.addArrangedSubview(landingPageDescription)
         addSubview(startButton)
+        
     }
     
     func addConstraints() {
         
+<<<<<<< HEAD
+        background.snp.makeConstraints{
+=======
         background.snp.makeConstraints {
+>>>>>>> main
             $0.edges.equalToSuperview()
         }
         
@@ -111,6 +120,7 @@ class LandingPageView: UIView, AnyView {
             $0.height.equalTo(50)
         }
     }
+    
     
     func addAdditionalConfiguration() {
         background.backgroundColor = .white

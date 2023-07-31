@@ -25,14 +25,26 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal static let accentColor = ColorAsset(name: "AccentColor")
+  internal static let menstruationSelected = ImageAsset(name: "MenstruationSelected")
   internal static let arrowLeftIcon = ImageAsset(name: "arrow_left_icon")
   internal static let background = ImageAsset(name: "background")
   internal static let calendarImage = ImageAsset(name: "calendarImage")
+  internal static let cinza100 = ColorAsset(name: "cinza-100")
+  internal static let follicularSelected = ImageAsset(name: "follicularSelected")
+  internal static let gray100 = ColorAsset(name: "gray_100")
+  internal static let gray200 = ColorAsset(name: "gray_200")
   internal static let landingPageBackgroundImage = ImageAsset(name: "landingPageBackgroundImage")
   internal static let logo = ImageAsset(name: "logo")
+  internal static let lutealSelected = ImageAsset(name: "lutealSelected")
+  internal static let noneSelected = ImageAsset(name: "noneSelected")
+  internal static let ovulationSelected = ImageAsset(name: "ovulationSelected")
+  internal static let previsionSelected = ImageAsset(name: "previsionSelected")
   internal static let primaryGray900 = ColorAsset(name: "primary_gray_900")
   internal static let primaryRed500 = ColorAsset(name: "primary_red_500")
   internal static let primaryRed900 = ColorAsset(name: "primary_red_900")
+  internal static let secondaryRed100 = ColorAsset(name: "secondary_red_100")
+  internal static let secondaryRed200 = ColorAsset(name: "secondary_red_200")
+  internal static let vermelho200 = ColorAsset(name: "vermelho-200")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
