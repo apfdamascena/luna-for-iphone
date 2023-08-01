@@ -94,7 +94,7 @@ class TeachRecordMenstruationView: UIView, AnyView {
         
         cards.forEach { card in
             card.snp.makeConstraints{
-                $0.height.equalTo(10.su)
+                $0.height.equalTo(11.su)
             }
         }
     }

@@ -11,10 +11,5 @@ import Foundation
 class TeachRecordMenstruationPresenter: ViewToPresenterTeachRecordMenstruationProtocol {
 
     var view: PresenterToViewTeachRecordMenstruationProtocol?
-    var interactor: PresenterToInteractorTeachRecordMenstruationProtocol?
     var router: PresenterToRouterTeachRecordMenstruationProtocol?
-}
-
-extension TeachRecordMenstruationPresenter: InteractorToPresenterTeachRecordMenstruationProtocol {
-    
 }

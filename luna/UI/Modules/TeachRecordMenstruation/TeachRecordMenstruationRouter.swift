@@ -15,13 +15,11 @@ class TeachRecordMenstruationRouter: PresenterToRouterTeachRecordMenstruationPro
         
         let viewController = TeachRecordMenstruationViewController()
         
-        let presenter: ViewToPresenterTeachRecordMenstruationProtocol & InteractorToPresenterTeachRecordMenstruationProtocol = TeachRecordMenstruationPresenter()
+        let presenter: ViewToPresenterTeachRecordMenstruationProtocol = TeachRecordMenstruationPresenter()
         
         viewController.presenter = presenter
         viewController.presenter?.router = TeachRecordMenstruationRouter()
         viewController.presenter?.view = viewController
-        viewController.presenter?.interactor = TeachRecordMenstruationInteractor()
-        viewController.presenter?.interactor?.presenter = presenter
         
         return viewController
     }

@@ -19,21 +19,7 @@ protocol PresenterToViewTeachRecordMenstruationProtocol {
 protocol ViewToPresenterTeachRecordMenstruationProtocol {
     
     var view: PresenterToViewTeachRecordMenstruationProtocol? { get set }
-    var interactor: PresenterToInteractorTeachRecordMenstruationProtocol? { get set }
     var router: PresenterToRouterTeachRecordMenstruationProtocol? { get set }
-}
-
-
-// MARK: Interactor Input (Presenter -> Interactor)
-protocol PresenterToInteractorTeachRecordMenstruationProtocol {
-    
-    var presenter: InteractorToPresenterTeachRecordMenstruationProtocol? { get set }
-}
-
-
-// MARK: Interactor Output (Interactor -> Presenter)
-protocol InteractorToPresenterTeachRecordMenstruationProtocol {
-    
 }
 
 

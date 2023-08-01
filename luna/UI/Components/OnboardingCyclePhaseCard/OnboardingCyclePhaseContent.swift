@@ -19,8 +19,7 @@ class OnboardingCyclePhaseContent: UIView,
         let view = UIStackView()
         view.axis = .vertical
         view.alignment = .fill
-//        view.distribution = .fillEqually
-        view.spacing = 1.su
+        view.spacing = 0.5.su
         return view
     }()
     
@@ -30,18 +29,16 @@ class OnboardingCyclePhaseContent: UIView,
                                       color: Asset.primaryGray900.color,
                                       weight: .semibold)
         label.draw(model)
-        label.text = "Menstruação registrada"
         return label
     }()
     
     let subtitle: LunaText = {
         let label = LunaText()
-        let model = LunaTextViewModel(size: 17,
+        let model = LunaTextViewModel(size: 16,
                                       color: Asset.primaryGray900.color,
                                       weight: .regular)
         label.draw(model)
         label.numberOfLines = 0
-        label.text = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem"
         return label
     }()
     
