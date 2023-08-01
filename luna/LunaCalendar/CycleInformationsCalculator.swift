@@ -6,7 +6,7 @@
 //
 
 import EventKit
-
+// [MUDAR] Nao ta sendo usado ainda
 class CycleInformationsCalculator {
     func getFirstMenstruationDayFromLastPeriod(events: [EKEvent]) -> Date {
         let cycleEvents = events.filter { event in

@@ -64,14 +64,6 @@ class CalendarEventService {
         let daysAfterDate = startDate.daysAfter(daysAfter)
         return getEventsByDate(firstDate: startDate, finalDate: daysAfterDate)
     }
-    
-    func removeElementsInCalendarBy(menstruationDate: Date) {
-        let monthsAfter = Date().daysAfter(200)
-        let events = getEventsByDate(firstDate: menstruationDate, finalDate: monthsAfter)
-        for event in events {
-            removeEvent(eventId: event.calendarItemIdentifier)
-        }
-    }
 
     func removeEvent(eventId: String) {
         if let eventToDelete = self.eventStore.event(withIdentifier: eventId){

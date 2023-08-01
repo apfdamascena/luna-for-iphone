@@ -17,8 +17,7 @@ struct CycleInformations {
     var lastDayMenstruation: Date? = nil
 }
 
-struct AnualCycleCalculator {
-    // fazer disso um struct
+class AnualCycleCalculator {
     let cycleInformations: CycleInformations
 
     var monthsFromMenstruation: Int = 0
@@ -29,21 +28,23 @@ struct AnualCycleCalculator {
         self.eventStore = eventStore
     }
     
-    mutating func getPhases() -> [LunaEvent]{
-        var cyclePhases: [LunaEvent] = []
+    func getPhases() -> [LunaEvent]{
+        var cyclePhases: [LunaEvent] = [menstruationDay()]
         Array(0...11).forEach { _ in
-            cyclePhases.append(contentsOf: [calculateMenstruationDate(),calculateFolicularDate(), calculateFertileDate(), calculateLutealDate(), calculatePMSDate()])
+            cyclePhases.append(contentsOf: [calculateExpectedMenstruationDay(),calculateFolicularDate(), calculateFertileDate(), calculateLutealDate(), calculatePMSDate()])
             monthsFromMenstruation+=1
         }
         return cyclePhases
+        
     }
     
-    func calculateMenstruationDate() -> LunaEvent {
+    func menstruationDay() -> LunaEvent {
+        return calculatePhaseDate(CyclePhase.menstruation, 0, 0)
+    }
+    
+    func calculateExpectedMenstruationDay() -> LunaEvent {
         if monthsFromMenstruation == 0 {
-            if cycleInformations.lastDayMenstruation == nil {
-                return calculatePhaseDate(CyclePhase.menstruation, 0, cycleInformations.averageMenstruationDuration-1)
-            }
-            return calculatePhaseDate(CyclePhase.menstruation, cycleInformations.firstDayMenstruation.daysBetween(cycleInformations.lastDayMenstruation!), cycleInformations.averageMenstruationDuration+1)
+            return calculatePhaseDate(CyclePhase.expectedMenstruation, 1, cycleInformations.averageMenstruationDuration-1)
         }
         return calculatePhaseDate(CyclePhase.expectedMenstruation, 0, cycleInformations.averageMenstruationDuration-1)
     }
