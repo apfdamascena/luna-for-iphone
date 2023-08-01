@@ -19,15 +19,25 @@ enum OnboardingCyclePhaseCardType {
     var model: OnboardingCyclePhaseContentViewModel {
         switch self {
         case .menstruation:
-            return OnboardingCyclePhaseContentViewModel(title: "Menstruação Registada", subtitle: "Pao doce é muito bom vei, todos deveriam comer.")
+            return OnboardingCyclePhaseContentViewModel(title: "Menstruação Registada",
+                                                        subtitle: "Pao doce é muito bom vei, todos deveriam comer.",
+                                                        image: Asset.menstruationCell.image)
         case .forecast:
-            return OnboardingCyclePhaseContentViewModel(title: "Menstruação Registada", subtitle: "Pao doce é muito bom vei, todos deveriam comer.")
+            return OnboardingCyclePhaseContentViewModel(title: "Menstruação Registada",
+                                                        subtitle: "Pao doce é muito bom vei, todos deveriam comer.",
+                                                        image: Asset.forecastCell.image)
         case .ovulation:
-            return OnboardingCyclePhaseContentViewModel(title: "Menstruação Registada", subtitle: "Pao doce é muito bom vei, todos deveriam comer.")
+            return OnboardingCyclePhaseContentViewModel(title: "Menstruação Registada",
+                                                        subtitle: "Pao doce é muito bom vei, todos deveriam comer.",
+                                                        image: Asset.ovulationCell.image)
         case .follicular:
-            return OnboardingCyclePhaseContentViewModel(title: "Menstruação Registada", subtitle: "Pao doce é muito bom vei, todos deveriam comer.")
+            return OnboardingCyclePhaseContentViewModel(title: "Menstruação Registada",
+                                                        subtitle: "Pao doce é muito bom vei, todos deveriam comer.",
+                                                        image: Asset.foliculeCell.image)
         case .luteal:
-            return OnboardingCyclePhaseContentViewModel(title: "Menstruação Registada", subtitle: "Pao doce é muito bom vei, todos deveriam comer.")
+            return OnboardingCyclePhaseContentViewModel(title: "Menstruação Registada",
+                                                        subtitle: "Pao doce é muito bom vei, todos deveriam comer.",
+                                                        image: Asset.lutealCell.image)
         }
     }
 }
@@ -47,15 +57,12 @@ class OnboardingCyclePhaseCard: UIView,
         return stack
     }()
     
-    let phase: UIImageView = {
-        let view = UIImageView(image: Asset.cellToTeste.image)
-        return view
-    }()
+    let phase = UIImageView()
     
     init(style: OnboardingCyclePhaseCardType){
         super.init(frame: .zero)
         setupView()
-        draw(style.model)
+//        draw(style.model)
     }
     
     override init(frame: CGRect) {
