@@ -16,6 +16,8 @@ class LandingPageViewController: UIViewController, UICollectionViewDelegate {
     
     let landingPageView = LandingPageView()
     
+//    let test = OnboardingCyclePhaseCard()
+    
     private var disposeBag = DisposeBag()
     
     // MARK: - Lifecycle Methods
@@ -24,6 +26,15 @@ class LandingPageViewController: UIViewController, UICollectionViewDelegate {
         self.view = landingPageView
         
         addUserTouchTrigger()
+        
+//        view.addSubview(test)
+        
+//        test.snp.makeConstraints{
+//            $0.height.equalTo(11.su)
+//            $0.width.equalToSuperview().inset(3.su)
+//            $0.centerX.centerY.equalToSuperview()
+//        }
+        
     }
     
     func addUserTouchTrigger() {

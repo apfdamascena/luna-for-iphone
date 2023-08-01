@@ -42,7 +42,7 @@ class CycleDurationView: UIView, AnyView {
         return view
     }()
         
-    private(set) var picker: UIPickerView = {
+    private(set) lazy var picker: UIPickerView = {
         let picker = UIPickerView()
         return picker
     }()

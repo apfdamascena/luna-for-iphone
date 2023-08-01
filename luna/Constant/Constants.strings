@@ -49,5 +49,21 @@
 "constants.content.label.fertile"= "💓 Período fertil";
 "constants.content.label.expectedMenstruation"= "Menstruação Prevista";
 "constants.content.label.pms"= "😡 TPM";
+
 "constants.user.key.for_onboarding_was_seen"="onboarding";
+
+"constants.content.label.onboarding_register_menstruation"="Registrar Menstruação";
+"constants.content.label.onboarding_register_menstruation_description"="O círculo vermelho representa o dia em que ocorreu a menstruação. Basta clicar no botão para registrar!";
+"constants.content.label.onboarding_forecast"="Previsão";
+"constants.content.label.onboarding_forecast_description"="O círculo vermelho claro indica a previsão do provável dia em que sua menstruação ocorrerá.";
+"constants.content.label.onboarding_ovulation"="Ovulação";
+"constants.content.label.onboarding_ovulation_description"="O contorno azul representa quando é provável que você ovule.";
+"constants.content.label.onboarding_folicule"="Fase Folicular";
+"constants.content.label.onboarding_folicule_description"="As estrelas vermelhas representam os dias da sua fase folicular.";
+"constants.content.label.onboarding_luteal"="Fase Lútea";
+"constants.content.label.onboarding_luteal_description"="As nuvens azuis representam os dias que você está na fase lútea.";
+
+
+
+
 

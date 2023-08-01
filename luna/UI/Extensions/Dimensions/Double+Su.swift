@@ -1,14 +1,13 @@
 //
-//  Int+Su.swift
+//  Double+Su.swift
 //  luna
 //
-//  Created by alexdamascena on 17/07/23.
+//  Created by alexdamascena on 30/07/23.
 //
 
-import UIKit
+import Foundation
 
-
-extension Int {
+extension Double {
     
     var su: CGFloat {
         convertToSu(dimensionSize: CGFloat(self))
@@ -18,4 +17,3 @@ extension Int {
         return CGFloat(8 * dimensionSize)
     }
 }
-

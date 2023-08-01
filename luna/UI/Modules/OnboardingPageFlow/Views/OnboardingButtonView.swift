@@ -15,7 +15,6 @@ class OnboardingButtonView: UIView, AnyView {
         view.axis = .horizontal
         view.alignment = .center
         view.distribution = .fillEqually
-//        view.spacing = 12.su
         return view
     }()
     
@@ -66,15 +65,13 @@ class OnboardingButtonView: UIView, AnyView {
             $0.height.equalTo(6.su)
         }
         
-
-        
         previousButton.snp.makeConstraints {
             $0.height.equalTo(4.su)
         }
         
         endOnboardingButton.snp.makeConstraints{
             $0.leading.trailing.equalToSuperview().inset(3.su)
-            $0.bottom.equalTo(safeAreaLayoutGuide)
+            $0.top.equalTo(safeAreaLayoutGuide)
             $0.height.equalTo(50)
         }
     }
