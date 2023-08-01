@@ -24,9 +24,16 @@ class LunaCalendarManager {
     private let eventStore = EKEventStore()
     private var calendar: EKCalendar?
     private var lunaEventService: CalendarEventService?
+    private var cycleInformationsCalculator: CycleInformationsCalculator?
     
+    init(calendar: EKCalendar? = nil, lunaEventService: CalendarEventService? = nil, cycleInformationsCalculator: CycleInformationsCalculator? = nil) {
+        let calendar = CalendarProvider(eventStore).getCalendar()
+        self.calendar = calendar
+        self.lunaEventService = CalendarEventService(with: eventStore, in: calendar)
+        self.cycleInformationsCalculator = CycleInformationsCalculator()
+    }
+
     func requestAccessToCalendar(completion: @escaping PermissionResponse ){
-        
         eventStore.requestAccess(to: .event) {[weak self] success, error in
             guard error == nil,
                   success,
@@ -34,11 +41,11 @@ class LunaCalendarManager {
                 completion(.failure(CalendarAccessError.permissionDenied))
                 return
             }
-
             
             let calendar = CalendarProvider(calendarStore).getCalendar()
             self?.calendar = calendar
             self?.lunaEventService = CalendarEventService(with: calendarStore, in: calendar)
+            self?.cycleInformationsCalculator = CycleInformationsCalculator()
             completion(.success(.authorized))
         }
     }
@@ -61,15 +68,14 @@ class LunaCalendarManager {
     func firstLoadElementsToCalendar(firstDayMenstruation: Date, averageMenstruationDuration: Int, averageCycleDuration: Int) {
         if lunaEventsExist() { return }
         addCyclePhasesToCalendar(firstDayMenstruation: firstDayMenstruation, averageMenstruationDuration: averageMenstruationDuration, averageCycleDuration: averageCycleDuration, lastDayMenstruation: nil)
-        
-    }
-    
-    func addCyclePhasesToCalendar(firstDayMenstruation: Date, averageMenstruationDuration: Int, averageCycleDuration: Int, lastDayMenstruation: Date?) {
 
-        var monthCycleService = CalculateCyclesService(eventStore: eventStore,
-                                                  firstDayMenstruation: firstDayMenstruation,
-                                                  averageMenstruationDuration: averageMenstruationDuration,
-                                                  averageCycleDuration: averageCycleDuration, lastDayMenstruation: lastDayMenstruation)
+    }
+
+    func addCyclePhasesToCalendar(firstDayMenstruation: Date, averageMenstruationDuration: Int, averageCycleDuration: Int, lastDayMenstruation: Date?) {
+        let cycleInformations = CycleInformations(firstDayMenstruation: firstDayMenstruation, averageMenstruationDuration: averageMenstruationDuration, averageCycleDuration: averageCycleDuration, lastDayMenstruation: lastDayMenstruation)
+        
+        var monthCycleService = AnualCycleCalculator(eventStore: eventStore,
+                                                    cycleInformations: cycleInformations)
 
         let phases = monthCycleService.getPhases()
         for phase in phases {
@@ -80,6 +86,51 @@ class LunaCalendarManager {
     
     func lunaEventsExist() -> Bool {
         return lunaEventService?.lunaEventsExist() ?? false
+    }
+    
+    func adjustEventsInCalendarBy(menstruationDate: Date) {
+        removeFutureEvents(menstruationDate: menstruationDate)
+        
+        let menstruationDuration = OnboardingUserCycleInformation.shared.menstruationDuration
+        let cycleDuration = OnboardingUserCycleInformation.shared.cycleDuration
+        
+        addCyclePhasesToCalendar(firstDayMenstruation: menstruationDate, averageMenstruationDuration: menstruationDuration, averageCycleDuration: cycleDuration, lastDayMenstruation: nil)
+    }
+    
+    func hasMenstruationInCycle(menstruationDate: Date) -> Bool {
+        guard let eventService = self.lunaEventService else {
+            return false
+        }
+        
+        var daysNearMenstruation = eventService.eventsAfter(daysAfter: OnboardingUserCycleInformation.shared.menstruationDuration + 5, startDate: menstruationDate)
+        let daysAfterMenstruation = eventService.eventsBefore(daysBefore: OnboardingUserCycleInformation.shared.menstruationDuration - 5, finalDate: menstruationDate)
+        
+        daysNearMenstruation.append(contentsOf: daysAfterMenstruation)
+        daysNearMenstruation = daysNearMenstruation.filter { event in
+            return event.title == CyclePhase.menstruation.value
+        }
+        
+        if daysNearMenstruation.count >= 1 {
+            return true
+        }
+        
+        return false
+    }
+    
+    func removeFutureEvents(menstruationDate: Date)  {
+        guard let eventService = self.lunaEventService else {
+            return
+        }
+        
+        var eventsToRemove = eventService.eventsAfter(daysAfter: 200, startDate: menstruationDate)
+
+        eventsToRemove = eventsToRemove.filter { event in
+            return event.title != CyclePhase.menstruation.value
+        }
+
+        for event in eventsToRemove {
+            eventService.removeEvent(eventId: event.calendarItemIdentifier)
+        }
     }
 
 }
