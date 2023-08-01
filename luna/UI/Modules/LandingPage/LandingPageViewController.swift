@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class LandingPageViewController: UIViewController {
+class LandingPageViewController: UIViewController, UICollectionViewDelegate {
     
     var presenter: ViewToPresenterLandingPageProtocol?
     
@@ -20,7 +20,6 @@ class LandingPageViewController: UIViewController {
     
     private var disposeBag = DisposeBag()
     
-
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +42,8 @@ class LandingPageViewController: UIViewController {
             self.presenter?.userTappedContinue()
         }.disposed(by: disposeBag)
     }
-
 }
+
 
 extension LandingPageViewController: PresenterToViewLandingPageProtocol{
     // TODO: Implement View Output Methods

@@ -17,6 +17,26 @@
 "constants.content.button.continue"="Continuar";
 "constants.content.button.start"="Iniciar";
 "constants.content.button.previous"="Voltar";
+"constants.content.button.settings"="Ajustes";
+
+"constants.content.label.home.youAreIn" = "Você está na";
+"constants.content.label.home.menstruation" = "Menstruação";
+"constants.content.label.home.ovulation" = "Ovulação";
+"constants.content.label.home.luteal" = "Fase Lútea";
+"constants.content.label.home.follicular" = "Fase Folicular";
+
+"constants.content.label.home.calendar_sync" = "Luna precisa estar conectado com o Calendário para salvar seu ciclo";
+"constants.content.label.home.settings_subtitle" = "1. Vá em ajustes";
+"constants.content.label.home.acess_subtitle" = "2. Permita o acesso";
+"constants.content.label.home.learn_cycle" = "Aprenda sobre as";
+"constants.content.label.home.cycle_phases" = "Fases do Ciclo Menstrual";
+"constants.content.label.home.recordedMenstruation" = "Menstruação registrada";
+
+"constants.content.label.home.informational.what" = "O que é?";
+"constants.content.label.home.informational.do" = "O que fazer?";
+
+"constants.content.label.placeholder.big" = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.";
+"constants.content.label.placeholder.bullet" = "Sed ut perspiciatis unde";
 
 "constants.content.label.calendar_title"="Consiga ver seu ciclo no seu dia a dia";
 "constants.content.label.calendar_subtitle"="Permita que o Luna acesse seu Calendar para planejar seus dias com sabedoria e melhorar o seu bem-estar";
