@@ -52,7 +52,6 @@ protocol InteractorToPresenterOnboardingPageFlowProtocol {
     func goToNextPage(_ page: Int)
     func goToPreviousPage(_ page: Int)
     func showEndOnboardingView(_ page: Int)
-    func goToLandingPage()
     
 }
 
@@ -61,6 +60,5 @@ protocol InteractorToPresenterOnboardingPageFlowProtocol {
 protocol PresenterToRouterOnboardingPageFlowProtocol {
     
     func pushHome(on view: PresenterToViewOnboardingPageFlowProtocol)
-    func popToLandingPage(on view: PresenterToViewOnboardingPageFlowProtocol)
     
 }

@@ -17,16 +17,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        
-        if #available(iOS 13.0, *){
-            window.overrideUserInterfaceStyle = .light
-        }
-        
         let root = RootScreenViewFactory.createModule()
         window.rootViewController = root
         window.makeKeyAndVisible()
-        
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

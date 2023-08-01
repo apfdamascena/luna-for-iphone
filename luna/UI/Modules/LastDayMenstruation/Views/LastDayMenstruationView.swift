@@ -22,7 +22,7 @@ class LastDayMenstruationView: UIView, AnyView  {
     
     private let title: LunaText = {
         let label = LunaText()
-        let model = LunaTextViewModel(size: 28,
+        let model = LunaTextViewModel(size: 31,
                                       color: Asset.primaryGray900.color,
                                       weight: .medium)
         

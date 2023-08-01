@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class OnboardingPageFlowRouter: PresenterToRouterOnboardingPageFlowProtocol {
-
     
     static func createModule() -> UIViewController {
         
@@ -32,11 +31,6 @@ class OnboardingPageFlowRouter: PresenterToRouterOnboardingPageFlowProtocol {
         
         guard let onboardingController = view as? OnboardingPageFlowViewController else { return }
         onboardingController.navigationController?.pushViewController(home, animated: true)
-    }
-    
-    func popToLandingPage(on view: PresenterToViewOnboardingPageFlowProtocol) {
-        guard let onboardingController = view as? OnboardingPageFlowViewController else { return }
-        onboardingController.navigationController?.popViewController(animated: true)
     }
     
 }

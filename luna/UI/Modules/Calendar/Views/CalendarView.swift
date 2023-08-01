@@ -27,7 +27,7 @@ class CalendarView: UIView, AnyView  {
     
     private let title: LunaText = {
         let label = LunaText()
-        let model = LunaTextViewModel(size: 28,
+        let model = LunaTextViewModel(size: 31,
                                       color: .black,
                                       weight: .medium)
         

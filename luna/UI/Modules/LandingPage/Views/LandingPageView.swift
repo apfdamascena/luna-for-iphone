@@ -7,12 +7,8 @@
 
 import UIKit
 import SnapKit
-import RxSwift
-
-
 
 class LandingPageView: UIView, AnyView {
-    private var disposeBag = DisposeBag()
     
     private let background: UIView = {
         let view = UIView()
@@ -29,7 +25,7 @@ class LandingPageView: UIView, AnyView {
         let view = UIStackView()
         view.axis = .vertical
         view.alignment = .fill
-        view.spacing = 1.su
+        view.spacing = 8
         return view
     }()
     
@@ -49,7 +45,7 @@ class LandingPageView: UIView, AnyView {
     
     private let landingPageDescription: LunaText = {
         let label = LunaText()
-        let model = LunaTextViewModel(size: 28,
+        let model = LunaTextViewModel(size: 31,
                                       color: .black,
                                       weight: .regular)
         
@@ -83,40 +79,31 @@ class LandingPageView: UIView, AnyView {
         stack.addArrangedSubview(title)
         stack.addArrangedSubview(landingPageDescription)
         addSubview(startButton)
-        
     }
     
     func addConstraints() {
-        
-        background.snp.makeConstraints {
+        background.snp.makeConstraints{
             $0.edges.equalToSuperview()
         }
         
-        backgroundImage.snp.makeConstraints {
-            $0.top.trailing.equalToSuperview()
-            $0.bottom.equalTo(stack.snp.top)
+        backgroundImage.snp.makeConstraints{
+            $0.top.equalToSuperview().offset(0.su)
+            $0.trailing.equalToSuperview()
+            $0.bottom.equalTo(stack.snp_topMargin).offset(0.su)
         }
         
-        stack.snp.makeConstraints {
-            $0.bottom.equalTo(startButton.snp.top).offset(-7.su)
+        stack.snp.makeConstraints{
+            $0.bottom.equalTo(startButton.snp_topMargin).offset(-7.su)
             $0.leading.equalToSuperview().offset(3.su)
         }
         
-        title.snp.makeConstraints {
-            $0.height.equalTo(6.su)
-        }
-        
-        landingPageDescription.snp.makeConstraints {
-            $0.height.equalTo(5.su)
-        }
-            
-        startButton.snp.makeConstraints {
+        startButton.snp.makeConstraints{
             $0.trailing.leading.equalToSuperview().inset(3.su)
-            $0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-2.su)
+            $0.bottom.equalToSuperview().offset(-6.su)
             $0.height.equalTo(50)
         }
+        
     }
-    
     
     func addAdditionalConfiguration() {
         background.backgroundColor = .white

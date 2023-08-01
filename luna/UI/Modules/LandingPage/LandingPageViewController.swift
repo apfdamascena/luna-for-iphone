@@ -10,31 +10,21 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class LandingPageViewController: UIViewController, UICollectionViewDelegate {
+class LandingPageViewController: UIViewController {
     
     var presenter: ViewToPresenterLandingPageProtocol?
     
     let landingPageView = LandingPageView()
     
-//    let test = OnboardingCyclePhaseCard()
-    
     private var disposeBag = DisposeBag()
     
+
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = landingPageView
         
         addUserTouchTrigger()
-        
-//        view.addSubview(test)
-        
-//        test.snp.makeConstraints{
-//            $0.height.equalTo(11.su)
-//            $0.width.equalToSuperview().inset(3.su)
-//            $0.centerX.centerY.equalToSuperview()
-//        }
-        
     }
     
     func addUserTouchTrigger() {
@@ -42,8 +32,8 @@ class LandingPageViewController: UIViewController, UICollectionViewDelegate {
             self.presenter?.userTappedContinue()
         }.disposed(by: disposeBag)
     }
-}
 
+}
 
 extension LandingPageViewController: PresenterToViewLandingPageProtocol{
     // TODO: Implement View Output Methods

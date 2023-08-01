@@ -29,8 +29,7 @@ class LunaButtonBack: DrawableButton {
         
         configuration.image = Asset.arrowLeftIcon.image
         configuration.imagePadding = 1.su
-        configuration.contentInsets = NSDirectionalEdgeInsets(top: 1.su, leading: (1.2).su, bottom: 1.su, trailing: (11).su)
-
+        configuration.contentInsets = NSDirectionalEdgeInsets(top: 1.su, leading: (1.2).su, bottom: 1.su, trailing: (1.2).su)
         
         configuration.background.backgroundColor = .clear
         

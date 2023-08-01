@@ -28,8 +28,6 @@ class LunaButtonProceed: DrawableButton {
         configuration.attributedTitle = AttributedString(style.value, attributes: container)
         configuration.baseForegroundColor = .white
         
-        configuration.contentInsets = NSDirectionalEdgeInsets(top: (1.75).su, leading: (2.5).su, bottom: (1.75).su, trailing: (2.5).su)
-        
         configuration.background.backgroundColor = Asset.primaryRed900.color
         
         self.button.configuration = configuration
