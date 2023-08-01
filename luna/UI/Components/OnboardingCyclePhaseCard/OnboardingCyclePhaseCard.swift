@@ -17,25 +17,26 @@ enum OnboardingCyclePhaseCardType {
     case luteal
     
     var model: OnboardingCyclePhaseContentViewModel {
+        
         switch self {
         case .menstruation:
-            return OnboardingCyclePhaseContentViewModel(title: "Menstruação Registada",
+            return OnboardingCyclePhaseContentViewModel(title: L10n.Constants.Content.Label.onboardingRegisterMenstruation,
                                                         subtitle: "Pao doce é muito bom vei, todos deveriam comer.",
                                                         image: Asset.menstruationCell.image)
         case .forecast:
-            return OnboardingCyclePhaseContentViewModel(title: "Menstruação Registada",
+            return OnboardingCyclePhaseContentViewModel(title: L10n.Constants.Content.Label.onboardingForecast,
                                                         subtitle: "Pao doce é muito bom vei, todos deveriam comer.",
                                                         image: Asset.forecastCell.image)
         case .ovulation:
-            return OnboardingCyclePhaseContentViewModel(title: "Menstruação Registada",
+            return OnboardingCyclePhaseContentViewModel(title: L10n.Constants.Content.Label.onboardingOvulation,
                                                         subtitle: "Pao doce é muito bom vei, todos deveriam comer.",
                                                         image: Asset.ovulationCell.image)
         case .follicular:
-            return OnboardingCyclePhaseContentViewModel(title: "Menstruação Registada",
+            return OnboardingCyclePhaseContentViewModel(title: L10n.Constants.Content.Label.onboardingFolicule,
                                                         subtitle: "Pao doce é muito bom vei, todos deveriam comer.",
                                                         image: Asset.foliculeCell.image)
         case .luteal:
-            return OnboardingCyclePhaseContentViewModel(title: "Menstruação Registada",
+            return OnboardingCyclePhaseContentViewModel(title: L10n.Constants.Content.Label.onboardingLuteal,
                                                         subtitle: "Pao doce é muito bom vei, todos deveriam comer.",
                                                         image: Asset.lutealCell.image)
         }
