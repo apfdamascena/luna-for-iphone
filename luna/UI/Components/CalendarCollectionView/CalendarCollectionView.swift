@@ -57,6 +57,11 @@ class CalendarScrollCollectionView: UICollectionView, AnyView {
         let centerCell = cellForItem(at: indexPath) as? CalendarCollectionViewCell
         
         return centerCell
-        
+    }
+    
+    func setMargin(with width: CGFloat){
+        let layoutMargins: CGFloat = layoutMargins.left + layoutMargins.right
+        let sideInset = ( width / 2) - layoutMargins
+        contentInset = UIEdgeInsets(top: 0, left: sideInset, bottom: 0, right: sideInset)
     }
 }

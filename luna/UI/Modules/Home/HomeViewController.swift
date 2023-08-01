@@ -50,11 +50,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        let layoutMargins: CGFloat = homeView.calendarCollectionView.layoutMargins.left + homeView.calendarCollectionView.layoutMargins.right
-        
-        let sideInset = (self.view.frame.width / 2) - layoutMargins
-        homeView.calendarCollectionView.contentInset = UIEdgeInsets(top: 0, left: sideInset, bottom: 0, right: sideInset)
+        homeView.calendarCollectionView.setMargin(with: self.view.frame.width)
     }
     
     private func addCollectionViewDataSource(){
