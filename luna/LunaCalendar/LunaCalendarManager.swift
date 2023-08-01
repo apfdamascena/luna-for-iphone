@@ -97,6 +97,26 @@ class LunaCalendarManager {
         addCyclePhasesToCalendar(firstDayMenstruation: menstruationDate, averageMenstruationDuration: menstruationDuration, averageCycleDuration: cycleDuration, lastDayMenstruation: nil)
     }
     
+    func hasMenstruationInCycle(menstruationDate: Date) -> Bool {
+        guard let eventService = self.lunaEventService else {
+            return false
+        }
+        
+        var daysNearMenstruation = eventService.eventsAfter(daysAfter: OnboardingUserCycleInformation.shared.menstruationDuration + 5, startDate: menstruationDate)
+        let daysAfterMenstruation = eventService.eventsBefore(daysBefore: OnboardingUserCycleInformation.shared.menstruationDuration - 5, finalDate: menstruationDate)
+        
+        daysNearMenstruation.append(contentsOf: daysAfterMenstruation)
+        daysNearMenstruation = daysNearMenstruation.filter { event in
+            return event.title == CyclePhase.menstruation.value
+        }
+        
+        if daysNearMenstruation.count >= 1 {
+            return true
+        }
+        
+        return false
+    }
+    
     func removeFutureEvents(menstruationDate: Date)  {
         guard let eventService = self.lunaEventService else {
             return

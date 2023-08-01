@@ -13,7 +13,7 @@ class RootScreenViewFactory {
         var rootController = LandingPageRouter.createModule()
         
         if OnboardingManager.shared.wasSeen {
-            rootController = TestCalendarRecalculationRouter.createModule()
+            rootController = HomeRouter.createModule()
         }
         
         return UINavigationController(rootViewController: rootController)
