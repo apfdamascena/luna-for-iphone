@@ -14,7 +14,6 @@ class HomeView: UIView, AnyView  {
     private let informationalPhaseTextView = InformationalPhaseText()
     private let recordedMenstruationCardView = RecordedMenstruationCard()
     
-    
     private(set) var  calendarCollectionView: UICollectionView = {
         let layout = CalendarCollectionViewFlowLayout()
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
@@ -40,16 +39,8 @@ class HomeView: UIView, AnyView  {
         let view = UIStackView()
         view.axis = .vertical
         view.alignment = .fill
+        view.spacing = 4.su
         return view
-    }()
-
-    private let placeHolder: LunaText = {
-        let label = LunaText()
-        let model = LunaTextViewModel(size: 48, color: .black, weight: .bold)
-        label.text = "PLACEHOLDER"
-        label.textAlignment = .center
-        label.draw(model)
-        return label
     }()
     
     private let youAreInLabel: LunaText = {
@@ -120,71 +111,58 @@ class HomeView: UIView, AnyView  {
     
     func addSubviews() {
         
-//        stackPhaseCycle.addArrangedSubview(youAreInLabel)
-//        stackPhaseCycle.addArrangedSubview(phaseTitle)
-//        stackPhaseLearn.addArrangedSubview(learnCycleTitle)
-//        stackPhaseLearn.addArrangedSubview(cyclePhasesTitle)
+        stackPhaseCycle.addArrangedSubview(youAreInLabel)
+        stackPhaseCycle.addArrangedSubview(phaseTitle)
+        stackPhaseLearn.addArrangedSubview(learnCycleTitle)
+        stackPhaseLearn.addArrangedSubview(cyclePhasesTitle)
+        
         addSubview(calendarCollectionView)
         addSubview(scrollView)
         scrollView.addSubview(contentView)
-//
-//        contentView.addSubview(placeHolder)
-//        contentView.addSubview(stackPhaseCycle)
-//
-//        contentView.addSubview(calendarSyncView)
-//        contentView.addSubview(stackPhaseLearn)
-//        contentView.addSubview(informationalPhaseTextView)
+        
+        contentView.addArrangedSubview(stackPhaseCycle)
+        contentView.addArrangedSubview(calendarSyncView)
+        contentView.addArrangedSubview(stackPhaseLearn)
+        contentView.addArrangedSubview(informationalPhaseTextView)
+        
 ////        contentView.addSubview(recordedMenstruationCardView)
         
     }
     
     func addConstraints() {
-//        print(UIScreen.current?.bounds.width)
         
         calendarCollectionView.snp.makeConstraints{
             $0.height.equalTo(123)
             $0.leading.trailing.equalToSuperview()
             $0.top.equalTo(safeAreaLayoutGuide)
         }
-//
-//
+
         scrollView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(3.su)
             $0.bottom.equalTo(safeAreaLayoutGuide)
-            $0.top.equalTo(calendarCollectionView.snp.bottom)
+            $0.top.equalTo(calendarCollectionView.snp.bottom).offset(5.su)
         }
-//
-//        contentView.snp.makeConstraints {
-//            $0.top.equalToSuperview()
-//            $0.width.equalTo(scrollView)
-//        }
+
+        contentView.snp.makeConstraints {
+            $0.top.equalTo(scrollView)
+            $0.leading.width.equalTo(scrollView)
+        }
         
+        calendarSyncView.snp.makeConstraints {
+            $0.height.equalTo(286)
+        }
         
-//
-//        placeHolder.snp.makeConstraints {
-//            $0.top.equalTo(contentView).offset(15.su)
-//            $0.leading.trailing.equalTo(contentView).inset(3.su)
-//        }
-//
-//        stackPhaseCycle.snp.makeConstraints {
-//            $0.top.equalTo(placeHolder.snp.bottom).offset(5.su)
-//            $0.leading.trailing.equalTo(contentView).inset(3.su)
-//        }
-//
-//        calendarSyncView.snp.makeConstraints {
-//            $0.top.equalTo(stackPhaseCycle.snp.bottom).offset(5.su)
-//            $0.leading.trailing.equalTo(contentView).inset(3.su)
-//        }
-//
-//        stackPhaseLearn.snp.makeConstraints {
-//            $0.top.equalTo(calendarSyncView.snp.bottom).offset(4.su)
-//            $0.leading.trailing.equalTo(contentView).inset(3.su)
-//        }
-//
-//        informationalPhaseTextView.snp.makeConstraints {
-//            $0.top.equalTo(stackPhaseLearn.snp.bottom).offset(5.su)
-//            $0.leading.trailing.equalTo(contentView).inset(3.su)
-//        }
+        stackPhaseCycle.snp.makeConstraints {
+            $0.height.equalTo(77)
+        }
+
+        stackPhaseLearn.snp.makeConstraints {
+            $0.height.equalTo(8.su)
+        }
+
+        informationalPhaseTextView.snp.makeConstraints {
+            $0.height.equalTo(280)
+        }
 //
 ////        recordedMenstruationCardView.snp.makeConstraints {
 ////            $0.top.equalTo(informationalPhaseTextView.snp.bottom).offset(53)

@@ -31,7 +31,7 @@ enum CyclePhase: String {
             return L10n.Constants.Content.Label.pms
         }
     }
-    
+        
     var image: UIImage {
         switch self {
         case .folicular:

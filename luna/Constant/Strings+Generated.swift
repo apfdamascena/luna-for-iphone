@@ -108,11 +108,77 @@ internal enum L10n {
             internal static let what = L10n.tr("Constants", "constants.content.label.home.informational.what", fallback: "O que é?")
           }
         }
+        internal enum Phase {
+          /// Menstruação Prevista
+          internal static let expectedMenstruation = L10n.tr("Constants", "constants.content.label.phase.expectedMenstruation", fallback: "Menstruação Prevista")
+          /// Ovulação
+          internal static let fertile = L10n.tr("Constants", "constants.content.label.phase.fertile", fallback: "Ovulação")
+          /// Fase Folicular
+          internal static let folicular = L10n.tr("Constants", "constants.content.label.phase.folicular", fallback: "Fase Folicular")
+          /// Fase Lútea
+          internal static let luteal = L10n.tr("Constants", "constants.content.label.phase.luteal", fallback: "Fase Lútea")
+          /// Menstruação
+          internal static let menstruation = L10n.tr("Constants", "constants.content.label.phase.menstruation", fallback: "Menstruação")
+          /// 😡 TPM
+          internal static let pms = L10n.tr("Constants", "constants.content.label.phase.pms", fallback: "😡 TPM")
+        }
         internal enum Placeholder {
           /// Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
           internal static let big = L10n.tr("Constants", "constants.content.label.placeholder.big", fallback: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.")
           /// Sed ut perspiciatis unde
           internal static let bullet = L10n.tr("Constants", "constants.content.label.placeholder.bullet", fallback: "Sed ut perspiciatis unde")
+        }
+        internal enum Text {
+          internal enum Avoid {
+            /// É o momento de adiar as atividades estressantes. E se o objetivo não for engravidar, lembre-se de proteção. 
+            internal static let fertile = L10n.tr("Constants", "constants.content.label.text.avoid.fertile", fallback: "É o momento de adiar as atividades estressantes. E se o objetivo não for engravidar, lembre-se de proteção. ")
+            /// Nada de passar sede nessa fase. Hidrate-se em abundância! 
+            internal static let folicular = L10n.tr("Constants", "constants.content.label.text.avoid.folicular", fallback: "Nada de passar sede nessa fase. Hidrate-se em abundância! ")
+            /// Seu corpo pode estar retendo mais líquido, pode ser bom evitar alimentos ricos em sal.
+            internal static let luteal = L10n.tr("Constants", "constants.content.label.text.avoid.luteal", fallback: "Seu corpo pode estar retendo mais líquido, pode ser bom evitar alimentos ricos em sal.")
+            /// Atividades sociais intensas podem ficar para depois nessa fase, assim atividades de alto impacto ou força. Foge das roupas apertadas também, fica confortável!
+            internal static let menstruation = L10n.tr("Constants", "constants.content.label.text.avoid.menstruation", fallback: "Atividades sociais intensas podem ficar para depois nessa fase, assim atividades de alto impacto ou força. Foge das roupas apertadas também, fica confortável!")
+          }
+          internal enum BehindSheets {
+            /// O pico de LH (hormônio luteinizante) desencadeia na liberação do óvulo maduro, que tem uma vida útil de cerca de 12 a 24 horas. 
+            internal static let fertile = L10n.tr("Constants", "constants.content.label.text.behind_sheets.fertile", fallback: "O pico de LH (hormônio luteinizante) desencadeia na liberação do óvulo maduro, que tem uma vida útil de cerca de 12 a 24 horas. ")
+            /// Os hormônios foliculoestimulante (FSH) começam  em alta para o desenvolvimento dos folículos. Depois o estrogênio atinge seu pico e você pode notar um muco na vagina. Por fim, há o aumento drástico do hormônio luteinizante (LH) para a ovulação. Ufa!
+            internal static let folicular = L10n.tr("Constants", "constants.content.label.text.behind_sheets.folicular", fallback: "Os hormônios foliculoestimulante (FSH) começam  em alta para o desenvolvimento dos folículos. Depois o estrogênio atinge seu pico e você pode notar um muco na vagina. Por fim, há o aumento drástico do hormônio luteinizante (LH) para a ovulação. Ufa!")
+            /// Níveis de estrogênio e progesterona atingem o pico, se preparando para uma possível gravidez.
+            internal static let luteal = L10n.tr("Constants", "constants.content.label.text.behind_sheets.luteal", fallback: "Níveis de estrogênio e progesterona atingem o pico, se preparando para uma possível gravidez.")
+            /// O sangramento significa que não houve fecundação e os níveis de hormônios estrogênio e progesterona estão bem baixos. 
+            internal static let menstruation = L10n.tr("Constants", "constants.content.label.text.behind_sheets.menstruation", fallback: "O sangramento significa que não houve fecundação e os níveis de hormônios estrogênio e progesterona estão bem baixos. ")
+          }
+          internal enum Help {
+            /// É normal estar desejando mais doces, vai com moderação e seja feliz! Energia também tá em alta, abuse dos exercícios de força.
+            internal static let fertile = L10n.tr("Constants", "constants.content.label.text.help.fertile", fallback: "É normal estar desejando mais doces, vai com moderação e seja feliz! Energia também tá em alta, abuse dos exercícios de força.")
+            /// Manter bons hábitos alimentares e exercícios pode ser interessante, aproveite a energia dessa fase!
+            internal static let folicular = L10n.tr("Constants", "constants.content.label.text.help.folicular", fallback: "Manter bons hábitos alimentares e exercícios pode ser interessante, aproveite a energia dessa fase!")
+            /// A ansiedade vai estar em alta, tenha um pouquinho de paciência. Se preparar para cólicas e náuseas pode ajudar!
+            internal static let luteal = L10n.tr("Constants", "constants.content.label.text.help.luteal", fallback: "A ansiedade vai estar em alta, tenha um pouquinho de paciência. Se preparar para cólicas e náuseas pode ajudar!")
+            /// A liberação de endorfina ao fazer exercício (leves) pode ajudar em cólicas e no humor, então se joga!
+            internal static let menstruation = L10n.tr("Constants", "constants.content.label.text.help.menstruation", fallback: "A liberação de endorfina ao fazer exercício (leves) pode ajudar em cólicas e no humor, então se joga!")
+          }
+          internal enum HowAreYou {
+            /// A sensação de libido pode aumentar e você pode se achar mais atraente também!
+            internal static let fertile = L10n.tr("Constants", "constants.content.label.text.how_are_you.fertile", fallback: "A sensação de libido pode aumentar e você pode se achar mais atraente também!")
+            /// Energia e bem-estar em alta! Aproveita para resolver as broncas da vida. A sua libido pode aumentar, hein?
+            internal static let folicular = L10n.tr("Constants", "constants.content.label.text.how_are_you.folicular", fallback: "Energia e bem-estar em alta! Aproveita para resolver as broncas da vida. A sua libido pode aumentar, hein?")
+            /// Você pode sentir alguns sintomas de TPM (tensão pré-menstrual). Sensibilidade é normal. Vai passar!
+            internal static let luteal = L10n.tr("Constants", "constants.content.label.text.how_are_you.luteal", fallback: "Você pode sentir alguns sintomas de TPM (tensão pré-menstrual). Sensibilidade é normal. Vai passar!")
+            /// Essa fase pode causar maior irritabilidade e você pode ficar mais sensível. Ter cólicas e mudanças de paladar também faz parte. Forças!
+            internal static let menstruation = L10n.tr("Constants", "constants.content.label.text.how_are_you.menstruation", fallback: "Essa fase pode causar maior irritabilidade e você pode ficar mais sensível. Ter cólicas e mudanças de paladar também faz parte. Forças!")
+          }
+          internal enum WhatIs {
+            /// Seu óvulo foi liberado! Ele tá pronto para ser fertilizado por um espermatozoide.
+            internal static let fertile = L10n.tr("Constants", "constants.content.label.text.what_is.fertile", fallback: "Seu óvulo foi liberado! Ele tá pronto para ser fertilizado por um espermatozoide.")
+            /// A preparação começou! Os folículos ovarianos estão amadurecerecendo.
+            internal static let folicular = L10n.tr("Constants", "constants.content.label.text.what_is.folicular", fallback: "A preparação começou! Os folículos ovarianos estão amadurecerecendo.")
+            /// O folículo que liberou o óvulo agora é um corpo lúteo. Hormônios em alta!
+            internal static let luteal = L10n.tr("Constants", "constants.content.label.text.what_is.luteal", fallback: "O folículo que liberou o óvulo agora é um corpo lúteo. Hormônios em alta!")
+            /// Você está literalmente sangrando. O revestimento interno do seu útero (endométrio) está sendo eliminado. 
+            internal static let menstruation = L10n.tr("Constants", "constants.content.label.text.what_is.menstruation", fallback: "Você está literalmente sangrando. O revestimento interno do seu útero (endométrio) está sendo eliminado. ")
+          }
         }
       }
     }

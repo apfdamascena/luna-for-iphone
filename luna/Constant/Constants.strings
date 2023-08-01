@@ -50,6 +50,38 @@
 "constants.content.label.expectedMenstruation"= "Menstruação Prevista";
 "constants.content.label.pms"= "😡 TPM";
 
+"constants.content.label.phase.folicular"= "Fase Folicular";
+"constants.content.label.phase.menstruation"= "Menstruação";
+"constants.content.label.phase.luteal"= "Fase Lútea";
+"constants.content.label.phase.fertile"= "Ovulação";
+"constants.content.label.phase.expectedMenstruation"= "Menstruação Prevista";
+"constants.content.label.phase.pms"= "😡 TPM";
+
+"constants.content.label.text.what_is.folicular"= "A preparação começou! Os folículos ovarianos estão amadurecerecendo.";
+"constants.content.label.text.how_are_you.folicular"= "Energia e bem-estar em alta! Aproveita para resolver as broncas da vida. A sua libido pode aumentar, hein?";
+"constants.content.label.text.avoid.folicular"= "Nada de passar sede nessa fase. Hidrate-se em abundância! ";
+"constants.content.label.text.help.folicular"= "Manter bons hábitos alimentares e exercícios pode ser interessante, aproveite a energia dessa fase!";
+"constants.content.label.text.behind_sheets.folicular"= "Os hormônios foliculoestimulante (FSH) começam  em alta para o desenvolvimento dos folículos. Depois o estrogênio atinge seu pico e você pode notar um muco na vagina. Por fim, há o aumento drástico do hormônio luteinizante (LH) para a ovulação. Ufa!";
+
+
+"constants.content.label.text.what_is.menstruation"= "Você está literalmente sangrando. O revestimento interno do seu útero (endométrio) está sendo eliminado. ";
+"constants.content.label.text.how_are_you.menstruation"= "Essa fase pode causar maior irritabilidade e você pode ficar mais sensível. Ter cólicas e mudanças de paladar também faz parte. Forças!";
+"constants.content.label.text.avoid.menstruation"= "Atividades sociais intensas podem ficar para depois nessa fase, assim atividades de alto impacto ou força. Foge das roupas apertadas também, fica confortável!";
+"constants.content.label.text.help.menstruation"= "A liberação de endorfina ao fazer exercício (leves) pode ajudar em cólicas e no humor, então se joga!";
+"constants.content.label.text.behind_sheets.menstruation"= "O sangramento significa que não houve fecundação e os níveis de hormônios estrogênio e progesterona estão bem baixos. ";
+
+"constants.content.label.text.what_is.luteal"= "O folículo que liberou o óvulo agora é um corpo lúteo. Hormônios em alta!";
+"constants.content.label.text.how_are_you.luteal"= "Você pode sentir alguns sintomas de TPM (tensão pré-menstrual). Sensibilidade é normal. Vai passar!";
+"constants.content.label.text.avoid.luteal"= "Seu corpo pode estar retendo mais líquido, pode ser bom evitar alimentos ricos em sal.";
+"constants.content.label.text.help.luteal"= "A ansiedade vai estar em alta, tenha um pouquinho de paciência. Se preparar para cólicas e náuseas pode ajudar!";
+"constants.content.label.text.behind_sheets.luteal"= "Níveis de estrogênio e progesterona atingem o pico, se preparando para uma possível gravidez.";
+
+"constants.content.label.text.what_is.fertile"= "Seu óvulo foi liberado! Ele tá pronto para ser fertilizado por um espermatozoide.";
+"constants.content.label.text.how_are_you.fertile"= "A sensação de libido pode aumentar e você pode se achar mais atraente também!";
+"constants.content.label.text.avoid.fertile"= "É o momento de adiar as atividades estressantes. E se o objetivo não for engravidar, lembre-se de proteção. ";
+"constants.content.label.text.help.fertile"= "É normal estar desejando mais doces, vai com moderação e seja feliz! Energia também tá em alta, abuse dos exercícios de força.";
+"constants.content.label.text.behind_sheets.fertile"= "O pico de LH (hormônio luteinizante) desencadeia na liberação do óvulo maduro, que tem uma vida útil de cerca de 12 a 24 horas. ";
+
 "constants.user.key.for_onboarding_was_seen"="onboarding";
 
 "constants.content.label.onboarding_register_menstruation"="Registrar Menstruação";
