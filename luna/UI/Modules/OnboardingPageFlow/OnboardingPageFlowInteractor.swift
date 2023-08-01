@@ -11,14 +11,14 @@ import Foundation
 class OnboardingPageFlowInteractor: PresenterToInteractorOnboardingPageFlowProtocol {
 
     var presenter: InteractorToPresenterOnboardingPageFlowProtocol?
-    private let flowCalculator = OnboardingViewFlow(numberOfPages: 4)
+    private let flowCalculator = OnboardingViewFlow(numberOfPages: Onboarding.NUMBER_PAGES)
     private let lunaCalendarRequestAccess = LunaCalendarRequestAccess()
     
     
     func calculateOnboarding(forNextPage: Int){
         let page = flowCalculator.calculate(newCurrentPage: forNextPage)
         
-        if page == 3 {
+        if page == Onboarding.NUMBER_PAGES_0_BASE {
             presenter?.showEndOnboardingView(page)
             lunaCalendarRequestAccess.askForPermission()
         } else {
@@ -29,8 +29,8 @@ class OnboardingPageFlowInteractor: PresenterToInteractorOnboardingPageFlowProto
     func calculateOnboarding(forPreviousPage: Int){
         let page = flowCalculator.calculate(newCurrentPage: forPreviousPage)
         
-        if page == 3 {
-            presenter?.showEndOnboardingView(page)
+        if page < 0 {
+            presenter?.goToLandingPage()
         } else {
             presenter?.goToPreviousPage(page)
         }

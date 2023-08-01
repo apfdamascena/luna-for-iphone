@@ -11,6 +11,7 @@ enum LunaButtonStyle {
     case next
     case previous
     case initial
+    case settings
     
     var value: String {
         switch self {
@@ -20,6 +21,8 @@ enum LunaButtonStyle {
             return L10n.Constants.Content.Button.previous
         case .next:
             return L10n.Constants.Content.Button.continue
+        case.settings:
+            return L10n.Constants.Content.Button.settings
         }
     }
     
