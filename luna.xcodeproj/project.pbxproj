@@ -26,6 +26,10 @@
 		0D6336AD2A7756D000EE9699 /* CGFloat+DynamicFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336AC2A7756D000EE9699 /* CGFloat+DynamicFontSize.swift */; };
 		0D6336AF2A7756DD00EE9699 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336AE2A7756DD00EE9699 /* Device.swift */; };
 		0D6336EC2A789A5700EE9699 /* OnboardingCyclePhaseCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336EB2A789A5700EE9699 /* OnboardingCyclePhaseCardType.swift */; };
+		0D6336EE2A799B3600EE9699 /* CalendarCollectionViewDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336ED2A799B3600EE9699 /* CalendarCollectionViewDelegateProxy.swift */; };
+		0D6336F02A799B6B00EE9699 /* RxCalendarCollectionViewDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336EF2A799B6B00EE9699 /* RxCalendarCollectionViewDelegateProxy.swift */; };
+		0D6336F22A799B8B00EE9699 /* CalendarCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336F12A799B8B00EE9699 /* CalendarCollectionViewDataSource.swift */; };
+		0D6336F42A799BAC00EE9699 /* CalendarCollectionViewDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336F32A799BAC00EE9699 /* CalendarCollectionViewDataSourceImpl.swift */; };
 		0D6794132A71D53C00382142 /* RootScreenViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6794122A71D53C00382142 /* RootScreenViewFactory.swift */; };
 		0D6794192A731B5C00382142 /* OnboardingUserCycleInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6794182A731B5C00382142 /* OnboardingUserCycleInformation.swift */; };
 		0D6794202A735C1B00382142 /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D67941B2A735C1A00382142 /* HomeContract.swift */; };
@@ -39,7 +43,6 @@
 		0D6794312A74725200382142 /* TeachRecordMenstruationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D67942C2A74725200382142 /* TeachRecordMenstruationRouter.swift */; };
 		0D6794322A74725200382142 /* TeachRecordMenstruationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D67942D2A74725200382142 /* TeachRecordMenstruationViewController.swift */; };
 		0D6794362A74729100382142 /* TeachRecordMenstruationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6794352A74729100382142 /* TeachRecordMenstruationView.swift */; };
-		0D7C73A62A67566700677D1E /* Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D7C73A52A67566700677D1E /* Constants.strings */; };
 		0D7C73AD2A67580D00677D1E /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */; };
 		0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */; };
 		0D7C73B02A67834100677D1E /* TouchableUserEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AF2A67834100677D1E /* TouchableUserEvent.swift */; };
@@ -159,6 +162,10 @@
 		0D6336AC2A7756D000EE9699 /* CGFloat+DynamicFontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+DynamicFontSize.swift"; sourceTree = "<group>"; };
 		0D6336AE2A7756DD00EE9699 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		0D6336EB2A789A5700EE9699 /* OnboardingCyclePhaseCardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCyclePhaseCardType.swift; sourceTree = "<group>"; };
+		0D6336ED2A799B3600EE9699 /* CalendarCollectionViewDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewDelegateProxy.swift; sourceTree = "<group>"; };
+		0D6336EF2A799B6B00EE9699 /* RxCalendarCollectionViewDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCalendarCollectionViewDelegateProxy.swift; sourceTree = "<group>"; };
+		0D6336F12A799B8B00EE9699 /* CalendarCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		0D6336F32A799BAC00EE9699 /* CalendarCollectionViewDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewDataSourceImpl.swift; sourceTree = "<group>"; };
 		0D6794122A71D53C00382142 /* RootScreenViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreenViewFactory.swift; sourceTree = "<group>"; };
 		0D6794182A731B5C00382142 /* OnboardingUserCycleInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUserCycleInformation.swift; sourceTree = "<group>"; };
 		0D67941B2A735C1A00382142 /* HomeContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContract.swift; sourceTree = "<group>"; };
@@ -337,6 +344,8 @@
 				0D67941D2A735C1A00382142 /* HomeRouter.swift */,
 				0D67941E2A735C1A00382142 /* HomeViewController.swift */,
 				0D67941F2A735C1A00382142 /* HomeInteractor.swift */,
+				0D6336F12A799B8B00EE9699 /* CalendarCollectionViewDataSource.swift */,
+				0D6336F32A799BAC00EE9699 /* CalendarCollectionViewDataSourceImpl.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -741,6 +750,8 @@
 				CA0D93AC2A70478A0064C1C3 /* CalendarCollectionViewCell.swift */,
 				CA17ED952A71ED750051BF9D /* CyclePhaseFocus.swift */,
 				CA17ED972A71EDCE0051BF9D /* CyclePhaseViewModel.swift */,
+				0D6336ED2A799B3600EE9699 /* CalendarCollectionViewDelegateProxy.swift */,
+				0D6336EF2A799B6B00EE9699 /* RxCalendarCollectionViewDelegateProxy.swift */,
 			);
 			path = CalendarCollectionView;
 			sourceTree = "<group>";
@@ -1068,6 +1079,7 @@
 				0D67942F2A74725200382142 /* TeachRecordMenstruationContract.swift in Sources */,
 				BF6520DF2A6F0D4B00E60054 /* CycleDurationPresenter.swift in Sources */,
 				0DBADDE12A6603F800A10FC3 /* LastDayMenstruationRouter.swift in Sources */,
+				0D6336EE2A799B3600EE9699 /* CalendarCollectionViewDelegateProxy.swift in Sources */,
 				0DBADDA32A65FDF100A10FC3 /* luna.xcdatamodeld in Sources */,
 				BF6520E02A6F0D4B00E60054 /* CycleDurationRouter.swift in Sources */,
 				0D63369E2A774D7A00EE9699 /* OtherCyclePhasesContract.swift in Sources */,
@@ -1082,6 +1094,7 @@
 				CA557BCC2A6B1742001DF2BB /* LandingPageContract.swift in Sources */,
 				0DBADDE22A6603F800A10FC3 /* LastDayMenstruationViewController.swift in Sources */,
 				0D7C73B02A67834100677D1E /* TouchableUserEvent.swift in Sources */,
+				0D6336F22A799B8B00EE9699 /* CalendarCollectionViewDataSource.swift in Sources */,
 				0D6336A02A774D7A00EE9699 /* OtherCyclePhasesRouter.swift in Sources */,
 				0DDA61292A69CEC600CA15C6 /* MenstruationDurationRouter.swift in Sources */,
 				0D6794272A74691000382142 /* OnboardingCyclePhaseCard.swift in Sources */,
@@ -1093,7 +1106,6 @@
 				0D4049D92A7048000058669B /* OnboardingPageControlDelegateImpl.swift in Sources */,
 				0D6794212A735C1B00382142 /* HomePresenter.swift in Sources */,
 				BFD533B62A71567A0063351E /* CalendarCreator.swift in Sources */,
-				A46C05232A72B6820071ABCE /* LunaButton.swift in Sources */,
 				0D6336A12A774D7A00EE9699 /* OtherCyclePhasesViewController.swift in Sources */,
 				BF6520E12A6F0D4B00E60054 /* CycleDurationViewController.swift in Sources */,
 				0DBADDD82A66017600A10FC3 /* DrawableView.swift in Sources */,
@@ -1108,6 +1120,7 @@
 				BFF09AFA2A6B599B00749328 /* PickerViewAdapter.swift in Sources */,
 				BFD533BF2A716BA50063351E /* Date.swift in Sources */,
 				0DDC5B512A70B9CE00D4CCAE /* OnboardingPageFlowRouter.swift in Sources */,
+				0D6336F42A799BAC00EE9699 /* CalendarCollectionViewDataSourceImpl.swift in Sources */,
 				A46C05552A74642C0071ABCE /* HomeView.swift in Sources */,
 				A48B7ECD2A77118400CCC4C0 /* RecordedMenstruationCard.swift in Sources */,
 				0D6794202A735C1B00382142 /* HomeContract.swift in Sources */,
@@ -1136,6 +1149,7 @@
 				0DBADDD32A66005500A10FC3 /* LunaTextViewModel.swift in Sources */,
 				0D6336972A774C7D00EE9699 /* Onboarding.swift in Sources */,
 				0DBADDE02A6603F800A10FC3 /* LastDayMenstruationPresenter.swift in Sources */,
+				0D6336F02A799B6B00EE9699 /* RxCalendarCollectionViewDelegateProxy.swift in Sources */,
 				0D63369F2A774D7A00EE9699 /* OtherCyclePhasesPresenter.swift in Sources */,
 				BFD533BA2A7158C00063351E /* LunaCalendarManager.swift in Sources */,
 				0DDC5B532A70B9CE00D4CCAE /* OnboardingPageFlowInteractor.swift in Sources */,
