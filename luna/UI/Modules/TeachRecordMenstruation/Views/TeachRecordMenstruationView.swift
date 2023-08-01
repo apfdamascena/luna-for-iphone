@@ -81,7 +81,6 @@ class TeachRecordMenstruationView: UIView, AnyView {
         }
         
         line.snp.makeConstraints {
-            
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(1)
             $0.top.equalTo(teachRegisterImage.snp.bottom).offset(5.su)

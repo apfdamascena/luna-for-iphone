@@ -15,7 +15,7 @@ class OnboardingCyclePhaseContent: UIView,
 
     typealias ViewModel = OnboardingCyclePhaseContentViewModel
     
-    let stack: UIStackView = {
+    private let stack: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
         view.alignment = .fill
@@ -23,7 +23,7 @@ class OnboardingCyclePhaseContent: UIView,
         return view
     }()
     
-    let title: LunaText = {
+    private let title: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 22,
                                       color: Asset.primaryGray900.color,
@@ -32,7 +32,7 @@ class OnboardingCyclePhaseContent: UIView,
         return label
     }()
     
-    let subtitle: LunaText = {
+    private let subtitle: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 16,
                                       color: Asset.primaryGray900.color,

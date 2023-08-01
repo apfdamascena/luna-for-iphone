@@ -8,40 +8,7 @@
 import UIKit
 import SnapKit
 
-enum OnboardingCyclePhaseCardType {
-    
-    case menstruation
-    case forecast
-    case ovulation
-    case follicular
-    case luteal
-    
-    var model: OnboardingCyclePhaseContentViewModel {
-        
-        switch self {
-        case .menstruation:
-            return OnboardingCyclePhaseContentViewModel(title: L10n.Constants.Content.Label.onboardingRegisterMenstruation,
-                                                        subtitle: L10n.Constants.Content.Label.onboardingRegisterMenstruationDescription,
-                                                        image: Asset.menstruationCell.image)
-        case .forecast:
-            return OnboardingCyclePhaseContentViewModel(title: L10n.Constants.Content.Label.onboardingForecast,
-                                                        subtitle: L10n.Constants.Content.Label.onboardingForecastDescription,
-                                                        image: Asset.forecastCell.image)
-        case .ovulation:
-            return OnboardingCyclePhaseContentViewModel(title: L10n.Constants.Content.Label.onboardingOvulation,
-                                                        subtitle: L10n.Constants.Content.Label.onboardingOvulationDescription,
-                                                        image: Asset.ovulationCell.image)
-        case .follicular:
-            return OnboardingCyclePhaseContentViewModel(title: L10n.Constants.Content.Label.onboardingFolicule,
-                                                        subtitle: L10n.Constants.Content.Label.onboardingFoliculeDescription,
-                                                        image: Asset.foliculeCell.image)
-        case .luteal:
-            return OnboardingCyclePhaseContentViewModel(title: L10n.Constants.Content.Label.onboardingLuteal,
-                                                        subtitle: L10n.Constants.Content.Label.onboardingLutealDescription,
-                                                        image: Asset.lutealCell.image)
-        }
-    }
-}
+
 
 class OnboardingCyclePhaseCard: UIView,
                                 AnyView,
@@ -49,16 +16,16 @@ class OnboardingCyclePhaseCard: UIView,
     
     typealias ViewModel = OnboardingCyclePhaseContentViewModel
     
-    let phaseCardContent = OnboardingCyclePhaseContent()
+    private let phaseCardContent = OnboardingCyclePhaseContent()
     
-    let horizontalStack: UIStackView = {
+    private let horizontalStack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
         stack.spacing = 2.su
         return stack
     }()
     
-    let phase = UIImageView()
+    private let phase = UIImageView()
     
     init(style: OnboardingCyclePhaseCardType){
         super.init(frame: .zero)

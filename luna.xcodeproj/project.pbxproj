@@ -25,6 +25,7 @@
 		0D6336AB2A7756B200EE9699 /* Double+Su.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336AA2A7756B200EE9699 /* Double+Su.swift */; };
 		0D6336AD2A7756D000EE9699 /* CGFloat+DynamicFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336AC2A7756D000EE9699 /* CGFloat+DynamicFontSize.swift */; };
 		0D6336AF2A7756DD00EE9699 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336AE2A7756DD00EE9699 /* Device.swift */; };
+		0D6336EC2A789A5700EE9699 /* OnboardingCyclePhaseCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336EB2A789A5700EE9699 /* OnboardingCyclePhaseCardType.swift */; };
 		0D6794132A71D53C00382142 /* RootScreenViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6794122A71D53C00382142 /* RootScreenViewFactory.swift */; };
 		0D6794192A731B5C00382142 /* OnboardingUserCycleInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6794182A731B5C00382142 /* OnboardingUserCycleInformation.swift */; };
 		0D6794202A735C1B00382142 /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D67941B2A735C1A00382142 /* HomeContract.swift */; };
@@ -147,6 +148,7 @@
 		0D6336AA2A7756B200EE9699 /* Double+Su.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Su.swift"; sourceTree = "<group>"; };
 		0D6336AC2A7756D000EE9699 /* CGFloat+DynamicFontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+DynamicFontSize.swift"; sourceTree = "<group>"; };
 		0D6336AE2A7756DD00EE9699 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		0D6336EB2A789A5700EE9699 /* OnboardingCyclePhaseCardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCyclePhaseCardType.swift; sourceTree = "<group>"; };
 		0D6794122A71D53C00382142 /* RootScreenViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreenViewFactory.swift; sourceTree = "<group>"; };
 		0D6794182A731B5C00382142 /* OnboardingUserCycleInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUserCycleInformation.swift; sourceTree = "<group>"; };
 		0D67941B2A735C1A00382142 /* HomeContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContract.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				0D6794262A74691000382142 /* OnboardingCyclePhaseCard.swift */,
 				0D6336A32A7750EF00EE9699 /* OnboardingCyclePhaseContentViewModel.swift */,
 				0D6336A52A77510400EE9699 /* OnboardingCyclePhaseContent.swift */,
+				0D6336EB2A789A5700EE9699 /* OnboardingCyclePhaseCardType.swift */,
 			);
 			path = OnboardingCyclePhaseCard;
 			sourceTree = "<group>";
@@ -1061,6 +1064,7 @@
 				0DBADDDF2A6603F800A10FC3 /* LastDayMenstruationContract.swift in Sources */,
 				0DCCB9262A6D82AF00451D63 /* OnboardingPageControlView.swift in Sources */,
 				0D6794312A74725200382142 /* TeachRecordMenstruationRouter.swift in Sources */,
+				0D6336EC2A789A5700EE9699 /* OnboardingCyclePhaseCardType.swift in Sources */,
 				0D6794132A71D53C00382142 /* RootScreenViewFactory.swift in Sources */,
 				0DDC5B4F2A70B9CE00D4CCAE /* OnboardingPageFlowContract.swift in Sources */,
 				0D6794222A735C1B00382142 /* HomeRouter.swift in Sources */,
