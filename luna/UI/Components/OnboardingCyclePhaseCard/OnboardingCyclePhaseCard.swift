@@ -62,7 +62,7 @@ class OnboardingCyclePhaseCard: UIView,
     init(style: OnboardingCyclePhaseCardType){
         super.init(frame: .zero)
         setupView()
-//        draw(style.model)
+        draw(style.model)
     }
     
     override init(frame: CGRect) {
@@ -94,5 +94,6 @@ class OnboardingCyclePhaseCard: UIView,
     
     func draw(_ model: OnboardingCyclePhaseContentViewModel) {
         phaseCardContent.draw(model)
+        phase.image = model.image
     }
 }
