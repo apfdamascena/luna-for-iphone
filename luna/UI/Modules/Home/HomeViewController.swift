@@ -18,7 +18,6 @@ class HomeViewController: UIViewController {
     
     private var disposeBag = DisposeBag()
     
-//    private var days: Observable<[CyclePhaseViewModel]>
     private var datasource: CalendarCollectionViewDataSource
     
     private let proxy: CalendarCollectionViewDelegateProxy
@@ -26,7 +25,6 @@ class HomeViewController: UIViewController {
     init(datasource: CalendarCollectionViewDataSource, proxy: CalendarCollectionViewDelegateProxy ){
         self.proxy = proxy
         self.datasource = datasource
-//        self.days = Observable.of(datasource.data)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -47,11 +45,13 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
         presenter?.loadCalendarToCollection()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         homeView.calendarCollectionView.setMargin(with: self.view.frame.width)
+        moveInitialCollection()
     }
     
     private func addCollectionViewDataSource(){
@@ -84,20 +84,22 @@ class HomeViewController: UIViewController {
                                            andMoveCenter: centerXtoCollection)
             }.disposed(by: disposeBag)
     }
+    
+    func moveInitialCollection() {
+        guard let initialOffset = homeView.calendarCollectionView.getInitialOffset() else {
+            return
+        }
+        
+        homeView.calendarCollectionView.contentOffset.x = initialOffset
+    }
 }
 
 
 extension HomeViewController: PresenterToViewHomeProtocol {
+    
     func teste(collectionDataSource: [CyclePhaseViewModel]) {
-
-        
         datasource.data.onNext(collectionDataSource)
-
     }
-    
-
-    // TODO: Implement View Output Methods
-    
     
     func moveCalendarCollection(toXAxis: CGFloat) {
         self.datasource.lastCell?.transformToStandard()

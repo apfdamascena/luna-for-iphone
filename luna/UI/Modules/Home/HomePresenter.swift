@@ -47,10 +47,13 @@ class HomePresenter: ViewToPresenterHomeProtocol {
         
         if centerCell == selectedCell {
             view?.changeSelectedCell()
+            
+            
         } else {
             view?.moveCalendarCollection(toXAxis: centerXtoCollection)
         }
     }
+    
     
     func change(_ centerCell: CalendarCollectionViewCell?) {
         guard let centerCell = centerCell else { return }
