@@ -13,12 +13,10 @@ class CalendarViewController: UIViewController {
     var presenter: ViewToPresenterCalendarProtocol?
     
     private let calendarView = CalendarView()
-//    private let lunaCalendarManager = LunaCalendarRequestAccess()
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view = calendarView
-//        lunaCalendarManager.requestAccessToCalendar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
