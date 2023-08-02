@@ -11,12 +11,7 @@ import SnapKit
 class CardHomeInformation: UIView, AnyView {
     
     private let subtitleContainer = UIView()
-//    private var titleText: String
-//    private var subtitleText: String
-//    private var 
-    // title text
-    // subtitle text
-    // ball color
+
     
     private let lineComponent: UIImageView = {
         let view = UIImageView(image: Asset.redLine.image)
@@ -47,7 +42,7 @@ class CardHomeInformation: UIView, AnyView {
     }()
     
     
-    private let subtitle: LunaText = {
+    private var subtitle: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 16, color: .black, weight: .regular)
         label.text = L10n.Constants.Content.Label.Placeholder.big
@@ -69,7 +64,6 @@ class CardHomeInformation: UIView, AnyView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-//        self.titleText = titleText
         setupView()
     }
     
@@ -110,6 +104,10 @@ class CardHomeInformation: UIView, AnyView {
     
     func addAdditionalConfiguration() {
     
+    }
+    
+    func draw(_ model: CyclePhaseTextViewModel){
+        subtitle.text = model.whatIsDescription
     }
     
 }

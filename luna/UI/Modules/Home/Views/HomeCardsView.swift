@@ -45,8 +45,16 @@ class HomeCardView: UIView, AnyView {
         }
     }
     
-    func setLearningCards(_ cards: [CardHomeInformation]){
-        self.cards = cards
+    func setLearningCards(_ cards: [CyclePhaseText]){
+        
+        let teste = cards.map{ card in
+            let opa = CardHomeInformation()
+            let model = CyclePhaseTextFactory.create(phase: card)
+            opa.draw(model)
+            
+            return opa
+        }
+        self.cards = teste
         DispatchQueue.main.async {
             self.addSubviews()
         }

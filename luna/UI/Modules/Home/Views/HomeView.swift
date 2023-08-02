@@ -168,14 +168,14 @@ class HomeView: UIView, AnyView  {
     func userDeniedAccessCalendar() {
         stackPhaseCycle.isHidden = true
         
-        cardsView.setLearningCards([CardHomeInformation(), CardHomeInformation(), CardHomeInformation(), CardHomeInformation()])
+        cardsView.setLearningCards([.fertile, .folicular, .luteal])
     }
     
     func userAllowedAccessCalendar() {
         calendarSyncView.isHidden = true
         stackPhaseLearn.isHidden = true
         
-        cardsView.setLearningCards([CardHomeInformation(), CardHomeInformation(), CardHomeInformation(), CardHomeInformation(), CardHomeInformation()])
+        cardsView.setLearningCards([.fertile, .folicular, .luteal])
     }
     
     func cardFeedbackDisappear() {
