@@ -132,5 +132,10 @@ class LunaCalendarManager {
             eventService.removeEvent(eventId: event.calendarItemIdentifier)
         }
     }
+    
+    func getEventsByDate(firstDate: Date, finalDate: Date) -> [EKEvent] {
+        guard let eventService = self.lunaEventService else { return [] }
+        return eventService.getEventsByDate(firstDate: firstDate, finalDate: finalDate)
+    }
 
 }

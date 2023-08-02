@@ -39,7 +39,6 @@ class CalendarEventService {
         
         let predicate =  eventStore.predicateForEvents(withStart: firstDate, end: finalDate, calendars: [calendar])
         let events = eventStore.events(matching: predicate)
-        
         return events
     }
     

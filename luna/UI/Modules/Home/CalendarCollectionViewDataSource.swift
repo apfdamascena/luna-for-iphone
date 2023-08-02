@@ -6,8 +6,12 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol CalendarCollectionViewDataSource {
-    var data: [CyclePhaseViewModel] { get }
+    
+//    var data: [CyclePhaseViewModel] { get }
+    
+    var data: PublishSubject<[CyclePhaseViewModel]> { get }
     var lastCell: CalendarCollectionViewCell? { get set }
 }

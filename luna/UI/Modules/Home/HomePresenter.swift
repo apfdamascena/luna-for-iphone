@@ -32,6 +32,11 @@ class HomePresenter: ViewToPresenterHomeProtocol {
         interactor?.loadPhasesToUserCalendar()
     }
     
+    func loadCalendarToCollection() {
+        let collectionDataSource = interactor?.loadCalendarToCollection()
+        view?.teste(collectionDataSource: collectionDataSource ?? [])
+    }
+    
     func userSelect(_ cell: CalendarCollectionViewCell?,
                     center centerCell: CalendarCollectionViewCell?,
                     andMoveCenter centerXtoCollection: CGFloat?) {

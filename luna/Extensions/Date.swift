@@ -20,4 +20,9 @@ extension Date {
         return Calendar.current.date(byAdding: .day, value: numberOfDays, to: self) ?? Date()
     }
     
+    func formatToString() -> String {
+        let oi = self.formatted(date: .complete, time: .omitted)
+        return oi
+    }
+    
 }

@@ -113,30 +113,18 @@ class CalendarCollectionViewCell: UICollectionViewCell,
     func draw(_ model: CyclePhaseViewModel) {
         cellStatus.image = model.phase.image
         
-//        menstruationStatusToggle.snp.makeConstraints{
-//            $0.height.equalTo(model.focus == .selected ? 81 : 67)
-//        }
-//
-//        menstruationStatusToggle.snp.makeConstraints{
-//            $0.width.equalTo(model.focus == .selected ? 54 : 43)
-//        }
-        
-//        menstruationStatusToggle.layer.cornerRadius = model.focus == .selected ? 27 : 22
         menstruationStatusToggle.layer.cornerRadius = 22
-        
-//        cellStatus.layer.opacity = model.focus == .selected ? 1 : 0.4
         
         cellStatus.layer.opacity = 0.4
         
         menstruationStatusToggle.transform = CGAffineTransform(scaleX: 1, y: 1)
+        
         cellStatus.transform = CGAffineTransform(scaleX: 1, y: 1)
         
         monthDay.layer.opacity = isToday(date: model.day) ? 1 : 0.5
         
         weekendDay.layer.opacity = isToday(date: model.day) ? 1 : 0.5
         
-//        weekendDay.text = model.day.weekd
-//        let weekday = Calendar.current.component(.weekday, from: model.day)
         weekendDay.text = getDayOfTheWeek(date: model.day)
         
         monthDay.text = getDate(date: model.day)
