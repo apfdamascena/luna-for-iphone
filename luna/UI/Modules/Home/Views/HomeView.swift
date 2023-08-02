@@ -14,20 +14,7 @@ class HomeView: UIView, AnyView  {
     private let informationalPhaseTextView = InformationalPhaseText()
     private let recordedMenstruationCardView = RecordedMenstruationCard()
     
-    
-    private(set) var  calendarCollectionView: UICollectionView = {
-        let layout = CalendarCollectionViewFlowLayout()
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        layout.scrollDirection = .horizontal
-        
-        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        
-        collection.backgroundColor = .white
-        collection.register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: CalendarCollectionViewCell.IDENTIFIER)
-        collection.showsHorizontalScrollIndicator = false
-        
-        return collection
-    }()
+    private(set) var calendarCollectionView = CalendarScrollCollectionView()
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -203,6 +190,17 @@ class HomeView: UIView, AnyView  {
         scrollView.backgroundColor = .yellow
         contentView.backgroundColor = .blue
     }
+    
+//    func getCenterCellFromCollectionView(at indexPath: IndexPath) -> CalendarCollectionViewCell? {
+//        return nil
+//        guard let selectedCell = calendarCollectionView.cellForItem(at: indexPath) as? CalendarCollectionViewCell else { return }
+//
+//        let centerPoint = CGPoint(x: calendarCollectionView.frame.size.width / 2 + calendarCollectionView.contentOffset.x,
+//                                  y: calendarCollectionView.frame.size.height / 2 + calendarCollectionView.contentOffset.y)
+//
+//        guard let centerIndex = calendarCollectionView.indexPathForItem(at: centerPoint) else { }
+//        guard let centerCell = calendarCollectionView.cellForItem(at: centerIndex) as? CalendarCollectionViewCell else { return }
+//    }
     
 }
 

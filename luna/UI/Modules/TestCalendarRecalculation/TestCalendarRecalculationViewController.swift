@@ -29,7 +29,6 @@ class TestCalendarRecalculationViewController: UIViewController, DataSourceEvent
             .rx.value.changed.asObservable()
             .subscribe(onNext: { date in
                 if self.lunaCalendarManager.hasMenstruationInCycle(menstruationDate: date) {
-                    print("aqui boy")
                 }
 //                self.lunaCalendarManager.adjustEventsInCalendarBy(menstruationDate: date)
             }).disposed(by: disposeBag)

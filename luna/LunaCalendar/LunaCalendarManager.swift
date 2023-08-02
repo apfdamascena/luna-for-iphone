@@ -74,7 +74,7 @@ class LunaCalendarManager {
     func addCyclePhasesToCalendar(firstDayMenstruation: Date, averageMenstruationDuration: Int, averageCycleDuration: Int, lastDayMenstruation: Date?) {
         let cycleInformations = CycleInformations(firstDayMenstruation: firstDayMenstruation, averageMenstruationDuration: averageMenstruationDuration, averageCycleDuration: averageCycleDuration, lastDayMenstruation: lastDayMenstruation)
         
-        var monthCycleService = AnualCycleCalculator(eventStore: eventStore,
+        let monthCycleService = AnualCycleCalculator(eventStore: eventStore,
                                                     cycleInformations: cycleInformations)
 
         let phases = monthCycleService.getPhases()
