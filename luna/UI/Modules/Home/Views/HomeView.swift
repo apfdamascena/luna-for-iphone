@@ -13,23 +13,10 @@ class HomeView: UIView, AnyView  {
     private let calendarSyncView = CalendarSyncCard()
     private let informationalPhaseTextView = InformationalPhaseText()
     private let recordedMenstruationCardView = RecordedMenstruationCard()
-//    private let cards = [CardHomeInformation(), CardHomeInformation(), CardHomeInformation()]
+    
+    private(set) var calendarCollectionView = CalendarScrollCollectionView()
     
     private let cardsView = HomeCardView()
-    
-    private(set) var  calendarCollectionView: UICollectionView = {
-        let layout = CalendarCollectionViewFlowLayout()
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        layout.scrollDirection = .horizontal
-        
-        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        
-        collection.backgroundColor = .white
-        collection.register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: CalendarCollectionViewCell.IDENTIFIER)
-        collection.showsHorizontalScrollIndicator = false
-        
-        return collection
-    }()
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -121,28 +108,36 @@ class HomeView: UIView, AnyView  {
         
         addSubview(calendarCollectionView)
         addSubview(scrollView)
-        scrollView.addSubview(contentView)
         
+        scrollView.addSubview(contentView)
         contentView.addArrangedSubview(stackPhaseCycle)
         contentView.addArrangedSubview(calendarSyncView)
         contentView.addArrangedSubview(stackPhaseLearn)
     
         contentView.addArrangedSubview(cardsView)
     
-        contentView.addArrangedSubview(recordedMenstruationCardView)
+//        contentView.addArrangedSubview(recordedMenstruationCardView)
+        
+        addSubview(recordedMenstruationCardView)
         
     }
     
     func addConstraints() {
         
+        recordedMenstruationCardView.snp.makeConstraints {
+            $0.top.equalTo(safeAreaLayoutGuide).offset(2.su)
+            $0.leading.trailing.equalToSuperview().inset(3.su)
+            $0.height.equalTo(50)
+        }
+        
         calendarCollectionView.snp.makeConstraints{
             $0.height.equalTo(123)
             $0.leading.trailing.equalToSuperview()
-            $0.top.equalTo(safeAreaLayoutGuide)
+            $0.top.equalTo(recordedMenstruationCardView.snp.bottom).offset(3.su)
         }
-
+        
         scrollView.snp.makeConstraints {
-            $0.top.equalTo(calendarCollectionView.snp.bottom).offset(5.su)
+            $0.top.equalTo(calendarCollectionView.snp.bottom).offset(3.su)
             $0.leading.trailing.bottom.equalTo(self).inset(3.su)
         }
 
@@ -163,15 +158,6 @@ class HomeView: UIView, AnyView  {
             $0.height.equalTo(8.su)
         }
         
-        cardsView.snp.makeConstraints {
-            $0.height.equalTo(512)
-        }
-        
-        recordedMenstruationCardView.snp.makeConstraints {
-            $0.height.equalTo(50)
-        }
-        
-            
     }
     
     func addAdditionalConfiguration() {
@@ -179,5 +165,39 @@ class HomeView: UIView, AnyView  {
         scrollView.showsVerticalScrollIndicator = false
     }
     
+    func userDeniedAccessCalendar() {
+        stackPhaseCycle.isHidden = true
+        
+        cardsView.setLearningCards([CardHomeInformation(), CardHomeInformation(), CardHomeInformation(), CardHomeInformation()])
+    }
+    
+    func userAllowedAccessCalendar() {
+        calendarSyncView.isHidden = true
+        stackPhaseLearn.isHidden = true
+        
+        cardsView.setLearningCards([CardHomeInformation(), CardHomeInformation(), CardHomeInformation(), CardHomeInformation(), CardHomeInformation()])
+    }
+    
+    func cardFeedbackDisappear() {
+        recordedMenstruationCardView.isHidden = true
+    }
+    
+    
+    
+//    func getCenterCellFromCollectionView(at indexPath: IndexPath) -> CalendarCollectionViewCell? {
+//        return nil
+//        guard let selectedCell = calendarCollectionView.cellForItem(at: indexPath) as? CalendarCollectionViewCell else { return }
+//
+//        let centerPoint = CGPoint(x: calendarCollectionView.frame.size.width / 2 + calendarCollectionView.contentOffset.x,
+//                                  y: calendarCollectionView.frame.size.height / 2 + calendarCollectionView.contentOffset.y)
+//
+//        guard let centerIndex = calendarCollectionView.indexPathForItem(at: centerPoint) else { }
+//        guard let centerCell = calendarCollectionView.cellForItem(at: centerIndex) as? CalendarCollectionViewCell else { return }
+//    }
+    
 }
+
+//let cardsLearn = [
+//    CardHomeInformation()
+//]
 

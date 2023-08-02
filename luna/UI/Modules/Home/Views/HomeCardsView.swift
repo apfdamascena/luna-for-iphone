@@ -8,10 +8,9 @@
 import UIKit
 
 
-class HomeCardView<T: UIView>: UIView, AnyView {
+class HomeCardView: UIView, AnyView {
     
-    private let cards = [CardHomeInformation(), CardHomeInformation(), CardHomeInformation(), CardHomeInformation()]
-
+    private var cards: [CardHomeInformation] = []
     
     private let stack: UIStackView = {
         let view = UIStackView()
@@ -31,6 +30,7 @@ class HomeCardView<T: UIView>: UIView, AnyView {
     
     func addSubviews() {
         
+        
         cards.forEach{ card in
             stack.addArrangedSubview(card)
         }
@@ -45,5 +45,14 @@ class HomeCardView<T: UIView>: UIView, AnyView {
         }
     }
     
+    func setLearningCards(_ cards: [CardHomeInformation]){
+        self.cards = cards
+        DispatchQueue.main.async {
+            self.addSubviews()
+        }
+  
+    }
+    
 }
+
 

@@ -11,6 +11,9 @@ import SnapKit
 class CardHomeInformation: UIView, AnyView {
     
     private let subtitleContainer = UIView()
+//    private var titleText: String
+//    private var subtitleText: String
+//    private var 
     // title text
     // subtitle text
     // ball color
@@ -66,6 +69,7 @@ class CardHomeInformation: UIView, AnyView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+//        self.titleText = titleText
         setupView()
     }
     

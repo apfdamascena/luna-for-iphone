@@ -14,6 +14,10 @@ protocol PresenterToViewHomeProtocol {
     
     func userAllowedAccessCalendar()
     func userDeniedAccessCalendar()
+    
+    func changeSelectedCell()
+    func moveCalendarCollection(toXAxis: CGFloat)
+    func updateView(_ center: CalendarCollectionViewCell)
    
 }
 
@@ -27,6 +31,12 @@ protocol ViewToPresenterHomeProtocol {
     
     func checkCalendarPermission()
     func loadUserCalendar()
+    
+    func userSelect(_ cell: CalendarCollectionViewCell?,
+                    center: CalendarCollectionViewCell?,
+                    andMoveCenter: CGFloat?)
+    
+    func change(_ centerCell: CalendarCollectionViewCell?)
 }
 
 

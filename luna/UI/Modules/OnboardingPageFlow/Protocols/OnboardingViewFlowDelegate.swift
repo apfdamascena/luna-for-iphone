@@ -12,3 +12,4 @@ protocol OnboardingViewFlowDelegate {
     
     func calculate(newCurrentPage: Int) -> Int
 }
+
