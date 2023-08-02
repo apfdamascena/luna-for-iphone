@@ -13,6 +13,9 @@ class HomeView: UIView, AnyView  {
     private let calendarSyncView = CalendarSyncCard()
     private let informationalPhaseTextView = InformationalPhaseText()
     private let recordedMenstruationCardView = RecordedMenstruationCard()
+//    private let cards = [CardHomeInformation(), CardHomeInformation(), CardHomeInformation()]
+    
+    private let cardsView = HomeCardView()
     
     private(set) var  calendarCollectionView: UICollectionView = {
         let layout = CalendarCollectionViewFlowLayout()
@@ -123,9 +126,10 @@ class HomeView: UIView, AnyView  {
         contentView.addArrangedSubview(stackPhaseCycle)
         contentView.addArrangedSubview(calendarSyncView)
         contentView.addArrangedSubview(stackPhaseLearn)
-        contentView.addArrangedSubview(informationalPhaseTextView)
-        
-////        contentView.addSubview(recordedMenstruationCardView)
+    
+        contentView.addArrangedSubview(cardsView)
+    
+        contentView.addArrangedSubview(recordedMenstruationCardView)
         
     }
     
@@ -138,13 +142,12 @@ class HomeView: UIView, AnyView  {
         }
 
         scrollView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview().inset(3.su)
-            $0.bottom.equalTo(safeAreaLayoutGuide)
             $0.top.equalTo(calendarCollectionView.snp.bottom).offset(5.su)
+            $0.leading.trailing.bottom.equalTo(self).inset(3.su)
         }
 
         contentView.snp.makeConstraints {
-            $0.top.equalTo(scrollView)
+            $0.top.bottom.equalTo(scrollView)
             $0.leading.width.equalTo(scrollView)
         }
         
@@ -159,27 +162,21 @@ class HomeView: UIView, AnyView  {
         stackPhaseLearn.snp.makeConstraints {
             $0.height.equalTo(8.su)
         }
-
-        informationalPhaseTextView.snp.makeConstraints {
-            $0.height.equalTo(280)
+        
+        cardsView.snp.makeConstraints {
+            $0.height.equalTo(512)
         }
-//
-////        recordedMenstruationCardView.snp.makeConstraints {
-////            $0.top.equalTo(informationalPhaseTextView.snp.bottom).offset(53)
-////            $0.leading.trailing.equalTo(contentView).inset(3.su)
-////            $0.bottom.equalTo(contentView)
-////        }
-////
-//        contentView.backgroundColor = .yellow
-//        scrollView.backgroundColor = .green
-//        informationalPhaseTextView.backgroundColor = .purple
-//
+        
+        recordedMenstruationCardView.snp.makeConstraints {
+            $0.height.equalTo(50)
+        }
+        
+            
     }
     
     func addAdditionalConfiguration() {
         backgroundColor = .white
-        scrollView.backgroundColor = .yellow
-        contentView.backgroundColor = .blue
+        scrollView.showsVerticalScrollIndicator = false
     }
     
 }

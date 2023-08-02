@@ -35,7 +35,7 @@ class RecordedMenstruationCard: UIView, AnyView {
     
     func addConstraints() {
         recordedMenstruationText.snp.makeConstraints {
-            $0.top.bottom.equalToSuperview().offset(14)
+            $0.centerY.equalToSuperview()
             $0.leading.trailing.equalToSuperview().offset(20)
         }
     }
