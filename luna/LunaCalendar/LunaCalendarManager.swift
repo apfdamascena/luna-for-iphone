@@ -103,9 +103,10 @@ class LunaCalendarManager {
         }
         
         var daysNearMenstruation = eventService.eventsAfter(daysAfter: OnboardingUserCycleInformation.shared.menstruationDuration + 5, startDate: menstruationDate)
-        let daysAfterMenstruation = eventService.eventsBefore(daysBefore: OnboardingUserCycleInformation.shared.menstruationDuration - 5, finalDate: menstruationDate)
+        let daysBeforeMenstruation = eventService.eventsBefore(daysBefore: OnboardingUserCycleInformation.shared.menstruationDuration + 5, finalDate: menstruationDate)
         
-        daysNearMenstruation.append(contentsOf: daysAfterMenstruation)
+        daysNearMenstruation.append(contentsOf: daysBeforeMenstruation)
+        
         daysNearMenstruation = daysNearMenstruation.filter { event in
             return event.title == CyclePhase.menstruation.value
         }
@@ -121,6 +122,7 @@ class LunaCalendarManager {
         guard let eventService = self.lunaEventService else {
             return
         }
+        // [MUDAR]: se clicar e for menstruation, tira o menstruation e bota expected msm
         
         var eventsToRemove = eventService.eventsAfter(daysAfter: 200, startDate: menstruationDate)
 

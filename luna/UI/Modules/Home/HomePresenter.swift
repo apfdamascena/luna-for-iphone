@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class HomePresenter: ViewToPresenterHomeProtocol {
 
@@ -46,12 +47,15 @@ class HomePresenter: ViewToPresenterHomeProtocol {
               let centerXtoCollection = centerXtoCollection else { return }
         
         if centerCell == selectedCell {
-            view?.changeSelectedCell()
-            
-            
+            view?.changeSelectedCell(selectedCell: selectedCell)
         } else {
             view?.moveCalendarCollection(toXAxis: centerXtoCollection)
         }
+    }
+    
+    func insertMenstruation(selectedDate: Date) -> Bool {
+        guard let insertedMenstruation = interactor?.insertedMenstruationToCollection(selectedDate: selectedDate) else { return false }
+        return insertedMenstruation
     }
     
     

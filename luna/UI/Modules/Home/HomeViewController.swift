@@ -96,6 +96,11 @@ class HomeViewController: UIViewController {
 
 
 extension HomeViewController: PresenterToViewHomeProtocol {
+    func loadCalendarToCollection(date: Date) {
+        
+    }
+    
+    
     
     func teste(collectionDataSource: [CyclePhaseViewModel]) {
         datasource.data.onNext(collectionDataSource)
@@ -106,10 +111,46 @@ extension HomeViewController: PresenterToViewHomeProtocol {
         self.homeView.calendarCollectionView.contentOffset.x = toXAxis
     }
     
-    func changeSelectedCell() {
+    func changeSelectedCell(selectedCell: CalendarCollectionViewCell) {
+        let selectedIsBeforeToday = selectedCell.day! < Date()
         
+        if selectedIsBeforeToday {
+            let selectedDay = selectedCell.getDate()
+            
+//            let insertedMenstruation = presenter?.insertMenstruation(selectedDate: selectedDay)
+            
+            guard let insertedMenstruation = presenter?.insertMenstruation(selectedDate: selectedDay) else { return }
+            
+            if insertedMenstruation {
+                presenter?.loadCalendarToCollection()
+            }
+            else {
+                
+                let alert = UIAlertController(title: "Aviso",
+                                              message: "Você não pode marcar um dia próximo a outra menstruação marcada",
+                                              preferredStyle: .alert)
+
+                alert.addAction(UIAlertAction(title: "OK",
+                                              style: .default,
+                                              handler: { _ in
+                }))
+
+                present(alert, animated: true, completion: nil)
+            }
+        }
+        else {
+            let alert = UIAlertController(title: "Aviso",
+                                          message: "Você não pode marcar em dias futuros",
+                                          preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "OK",
+                                          style: .default,
+                                          handler: { _ in
+            }))
+
+            present(alert, animated: true, completion: nil)
+        }
     }
-    
     
     func userAllowedAccessCalendar() {
         presenter?.loadUserCalendar()

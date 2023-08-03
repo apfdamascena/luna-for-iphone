@@ -29,9 +29,8 @@ class CalendarEventService {
         newEvent.endDate = event.endDate
         newEvent.calendar = self.calendar
         newEvent.isAllDay = true
-        DispatchQueue.main.async {
-            try? self.eventStore.save(newEvent, span: .thisEvent)
-        }
+        try? self.eventStore.save(newEvent, span: .thisEvent)
+        
     }
     
     func getEventsByDate(firstDate: Date, finalDate: Date) -> [EKEvent] {

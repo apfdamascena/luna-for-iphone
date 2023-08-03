@@ -18,6 +18,8 @@ class CalendarCollectionViewCell: UICollectionViewCell,
     
     static let IDENTIFIER = "CalendarScrollCollectionViewCell"
     
+    var day: Date?
+    
     private let stack: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
@@ -129,6 +131,8 @@ class CalendarCollectionViewCell: UICollectionViewCell,
         
         monthDay.text = getDate(date: model.day)
         
+        day = model.day
+        
         let model = isToday(date: model.day) ? LunaTextViewModel(size: 13,
                                       color: Asset.primaryGray900.color,
                                                                                                              weight: .bold) :
@@ -179,6 +183,10 @@ class CalendarCollectionViewCell: UICollectionViewCell,
         else{
             return false
         }
+    }
+    
+    func getDate() -> Date {
+        return self.day ?? .now
     }
     
     func getDate(date: Date) -> String{

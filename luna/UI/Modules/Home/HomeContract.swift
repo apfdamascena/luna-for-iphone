@@ -15,12 +15,12 @@ protocol PresenterToViewHomeProtocol {
     func userAllowedAccessCalendar()
     func userDeniedAccessCalendar()
     
-    func changeSelectedCell()
+    func changeSelectedCell(selectedCell: CalendarCollectionViewCell) 
     func moveCalendarCollection(toXAxis: CGFloat)
     func updateView(_ center: CalendarCollectionViewCell)
     
     func teste(collectionDataSource: [CyclePhaseViewModel])
-   
+    func loadCalendarToCollection(date: Date)
 }
 
 
@@ -34,6 +34,9 @@ protocol ViewToPresenterHomeProtocol {
     func checkCalendarPermission()
     func loadUserCalendar()
     func loadCalendarToCollection()
+    func insertMenstruation(selectedDate: Date) -> Bool 
+
+    
 
     
     func userSelect(_ cell: CalendarCollectionViewCell?,
@@ -51,7 +54,8 @@ protocol PresenterToInteractorHomeProtocol {
     
     func checkIfUserGivePermission(completion: @escaping PermissionResponse)
     func loadPhasesToUserCalendar()
-    func loadCalendarToCollection() -> [CyclePhaseViewModel] 
+    func loadCalendarToCollection() -> [CyclePhaseViewModel]
+    func insertedMenstruationToCollection(selectedDate: Date) -> Bool
 }
 
 

@@ -54,5 +54,16 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
         return collectionViewDataSource
     }
     
+    func insertedMenstruationToCollection(selectedDate: Date) -> Bool {
+        let hasMenstruationInCycle = lunaCalendarManager.hasMenstruationInCycle(menstruationDate: selectedDate)
+        if hasMenstruationInCycle {
+            return false
+        }
+        else {
+            lunaCalendarManager.adjustEventsInCalendarBy(menstruationDate: selectedDate)
+            return true
+        }
+    }
+    
     
 }
