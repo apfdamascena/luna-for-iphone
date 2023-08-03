@@ -73,4 +73,15 @@ class CalendarEventService {
             print("removed Event")
         }
     }
+    
+    func removedEventIfEqualToPhase(cyclePhase: CyclePhase, menstruationDate: Date) -> Bool {
+        let teste = getEventsByDate(firstDate: menstruationDate, finalDate: menstruationDate)
+        if teste.first?.title == cyclePhase.value {
+            removeEvent(eventId: teste.first?.eventIdentifier ?? "")
+            return true
+        }
+        return false
+
+    }
+    
 }
