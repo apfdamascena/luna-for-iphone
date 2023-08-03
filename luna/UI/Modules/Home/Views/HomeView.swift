@@ -171,8 +171,6 @@ class HomeView: UIView, AnyView  {
         stackPhaseCycle.isHidden = true
         cardsView.isHidden = true
         
-        learnView.phasesText()
-        
         calendarSyncView.isHidden = false
         stackPhaseLearn.isHidden = false
         learnView.isHidden = false

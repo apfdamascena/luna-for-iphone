@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum CyclePhase: String {
+enum CyclePhase: String, CaseIterable {
     case folicular
     case menstruation
     case luteal

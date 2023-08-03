@@ -10,33 +10,8 @@ import SnapKit
 
 class HomeLearnView: UIView, AnyView {
     
-    private let menstruation: CardHomeInformation = {
-        let container = CardHomeInformation()
-        container.title.text = "Menstruação"
-        container.subtitle.text = "Você está literalmente sangrando. O revestimento interno do seu útero (endométrio) está sendo eliminado."
-        return container
-    }()
-    
-    private let folicular: CardHomeInformation = {
-        let container = CardHomeInformation()
-        container.title.text = "Fase Folicular"
-        container.subtitle.text = "A preparação começou! Os folículos ovarianos estão amadurecerecendo."
-        return container
-    }()
-    
-    private let fertile: CardHomeInformation = {
-        let container = CardHomeInformation()
-        container.title.text = "Ovulação"
-        container.subtitle.text = "Seu óvulo foi liberado! Ele tá pronto para ser fertilizado por um espermatozoide."
-        return container
-    }()
-    
-    private let luteal: CardHomeInformation = {
-        let container = CardHomeInformation()
-        container.title.text = "Fase Lútea"
-        container.subtitle.text = "O folículo que liberou o óvulo agora é um corpo lúteo. Hormônios em alta!"
-        return container
-    }()
+    private var teste: [CardHomeInformation] = []
+    private let stopIndex = 4
     
     private let stack: UIStackView = {
         let view = UIStackView()
@@ -56,10 +31,18 @@ class HomeLearnView: UIView, AnyView {
     
     func addSubviews() {
         addSubview(stack)
-        stack.addArrangedSubview(menstruation)
-        stack.addArrangedSubview(folicular)
-        stack.addArrangedSubview(fertile)
-        stack.addArrangedSubview(luteal)
+        
+        CyclePhase.allCases.enumerated().forEach { index, phase in
+            guard index < stopIndex else { return }
+            
+            let card = CardHomeInformation()
+            let model = CyclePhaseTextFactory.create(phase: phase)
+            card.draw(model)
+            card.title.text = model.name
+            card.subtitle.text = model.whatIsDescription
+            stack.addArrangedSubview(card)
+        }
+    
     }
     
     func addConstraints() {
@@ -67,9 +50,4 @@ class HomeLearnView: UIView, AnyView {
             $0.edges.equalToSuperview()
         }
     }
-    
-    func phasesText(){
-        
-    }
-    
 }
