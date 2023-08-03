@@ -9,7 +9,7 @@ import UIKit
 
 class CyclePhaseTextFactory {
     
-    static func create(phase: CyclePhaseText) -> CyclePhaseTextViewModel {
+    static func create(phase: CyclePhase) -> CyclePhaseTextViewModel {
         switch phase {
         case .menstruation:
             return CyclePhaseTextViewModel(
@@ -48,6 +48,15 @@ class CyclePhaseTextFactory {
                 behindSheets: L10n.Constants.Content.Label.Text.BehindSheets.folicular
             )
             
+        default:
+            return CyclePhaseTextViewModel(
+                name: "Cynara Valéria",
+                whatIsDescription: L10n.Constants.Content.Label.Text.WhatIs.folicular,
+                howAreYouDescription: L10n.Constants.Content.Label.Text.HowAreYou.folicular,
+                avoidDescription: L10n.Constants.Content.Label.Text.Avoid.folicular,
+                helpDescription: L10n.Constants.Content.Label.Text.Help.folicular,
+                behindSheets: L10n.Constants.Content.Label.Text.BehindSheets.folicular
+            )
         }
     }
         

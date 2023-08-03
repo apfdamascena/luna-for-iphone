@@ -41,6 +41,7 @@ class HomeViewController: UIViewController {
         presenter?.checkCalendarPermission()
         addCollectionViewDataSource()
         collectionViewEventObservable()
+        addCyclePhaseEventObservable()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,6 +84,16 @@ class HomeViewController: UIViewController {
                                            andMoveCenter: centerXtoCollection)
             }.disposed(by: disposeBag)
     }
+    
+    func addCyclePhaseEventObservable() {
+
+        datasource.cyclePhase
+            .asObservable()
+            .subscribe(onNext: { cycle in
+                self.homeView.phaseChanged(to: cycle)
+        }).disposed(by: disposeBag)
+        
+    }
 }
 
 
@@ -103,6 +114,7 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     
     func userAllowedAccessCalendar() {
         DispatchQueue.main.async {
+            self.datasource.cyclePhase.onNext(.folicular)
             self.homeView.userAllowedAccessCalendar()
         }
     }

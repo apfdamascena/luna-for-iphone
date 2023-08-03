@@ -11,12 +11,12 @@ import SnapKit
 class HomeView: UIView, AnyView  {
     
     private let calendarSyncView = CalendarSyncCard()
-    private let informationalPhaseTextView = InformationalPhaseText()
     private let recordedMenstruationCardView = RecordedMenstruationCard()
     
     private(set) var calendarCollectionView = CalendarScrollCollectionView()
     
     private let cardsView = HomeCardView()
+    private let learnView = HomeLearnView()
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -115,7 +115,8 @@ class HomeView: UIView, AnyView  {
         contentView.addArrangedSubview(stackPhaseLearn)
     
         contentView.addArrangedSubview(cardsView)
-    
+        contentView.addArrangedSubview(learnView)
+        
 //        contentView.addArrangedSubview(recordedMenstruationCardView)
         
         addSubview(recordedMenstruationCardView)
@@ -138,7 +139,8 @@ class HomeView: UIView, AnyView  {
         
         scrollView.snp.makeConstraints {
             $0.top.equalTo(calendarCollectionView.snp.bottom).offset(3.su)
-            $0.leading.trailing.bottom.equalTo(self).inset(3.su)
+            $0.leading.trailing.equalTo(self).inset(3.su)
+            $0.bottom.equalTo(safeAreaLayoutGuide)
         }
 
         contentView.snp.makeConstraints {
@@ -167,37 +169,36 @@ class HomeView: UIView, AnyView  {
     
     func userDeniedAccessCalendar() {
         stackPhaseCycle.isHidden = true
+        cardsView.isHidden = true
         
-        cardsView.setLearningCards([.fertile, .folicular, .luteal])
+        learnView.phasesText()
+        
+        calendarSyncView.isHidden = false
+        stackPhaseLearn.isHidden = false
+        learnView.isHidden = false
     }
     
     func userAllowedAccessCalendar() {
         calendarSyncView.isHidden = true
         stackPhaseLearn.isHidden = true
+        learnView.isHidden = true
         
-        cardsView.setLearningCards([.fertile, .folicular, .luteal])
+        stackPhaseCycle.isHidden = false
+        cardsView.isHidden = false
     }
     
     func cardFeedbackDisappear() {
         recordedMenstruationCardView.isHidden = true
     }
     
-    
-    
-//    func getCenterCellFromCollectionView(at indexPath: IndexPath) -> CalendarCollectionViewCell? {
-//        return nil
-//        guard let selectedCell = calendarCollectionView.cellForItem(at: indexPath) as? CalendarCollectionViewCell else { return }
-//
-//        let centerPoint = CGPoint(x: calendarCollectionView.frame.size.width / 2 + calendarCollectionView.contentOffset.x,
-//                                  y: calendarCollectionView.frame.size.height / 2 + calendarCollectionView.contentOffset.y)
-//
-//        guard let centerIndex = calendarCollectionView.indexPathForItem(at: centerPoint) else { }
-//        guard let centerCell = calendarCollectionView.cellForItem(at: centerIndex) as? CalendarCollectionViewCell else { return }
-//    }
+    func phaseChanged(to cycle: CyclePhase) {
+        DispatchQueue.main.async {
+            let model = CyclePhaseTextFactory.create(phase: cycle)
+            self.phaseTitle.text = model.name
+            self.cardsView.draw(model)
+        }
+    }
     
 }
 
-//let cardsLearn = [
-//    CardHomeInformation()
-//]
 

@@ -30,7 +30,7 @@ class CardHomeInformation: UIView, AnyView {
         return view
     }()
     
-    private let title: LunaText = {
+    var title: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 20, color: .black, weight: .medium)
         label.text = L10n.Constants.Content.Label.Home.Informational.what
@@ -42,7 +42,7 @@ class CardHomeInformation: UIView, AnyView {
     }()
     
     
-    private var subtitle: LunaText = {
+    var subtitle: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 16, color: .black, weight: .regular)
         label.text = L10n.Constants.Content.Label.Placeholder.big
