@@ -97,8 +97,6 @@ class CalendarSyncCard: UIView, AnyView {
     }
     
     func addAdditionalConfiguration() {
-//        backgroundColor = Asset.gray100.color
-        // ta diferente a cor ^ pra o que tá no figma e teoricamente ta certo
         backgroundColor = .systemGray6
         layer.cornerRadius = 1.su
         layer.borderWidth = 1

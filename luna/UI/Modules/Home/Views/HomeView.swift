@@ -117,8 +117,6 @@ class HomeView: UIView, AnyView  {
         contentView.addArrangedSubview(cardsView)
         contentView.addArrangedSubview(learnView)
         
-//        contentView.addArrangedSubview(recordedMenstruationCardView)
-        
         addSubview(recordedMenstruationCardView)
         
     }
@@ -126,7 +124,7 @@ class HomeView: UIView, AnyView  {
     func addConstraints() {
         
         recordedMenstruationCardView.snp.makeConstraints {
-            $0.top.equalTo(safeAreaLayoutGuide).offset(2.su)
+            $0.bottom.equalTo(safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview().inset(3.su)
             $0.height.equalTo(50)
         }
@@ -134,7 +132,7 @@ class HomeView: UIView, AnyView  {
         calendarCollectionView.snp.makeConstraints{
             $0.height.equalTo(123)
             $0.leading.trailing.equalToSuperview()
-            $0.top.equalTo(recordedMenstruationCardView.snp.bottom).offset(3.su)
+            $0.top.equalTo(safeAreaLayoutGuide)
         }
         
         scrollView.snp.makeConstraints {
