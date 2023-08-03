@@ -9,8 +9,6 @@ import UIKit
 import SnapKit
 
 class CardHomeInformation: UIView, AnyView {
-    
-    private let subtitleContainer = UIView()
 
     private let line = SegmentedLine()
     
@@ -34,7 +32,6 @@ class CardHomeInformation: UIView, AnyView {
         return label
     }()
     
-    
     var subtitle: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 16, color: .black, weight: .regular)
@@ -56,7 +53,6 @@ class CardHomeInformation: UIView, AnyView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     func addSubviews() {
         
         addSubview(line)
@@ -65,34 +61,25 @@ class CardHomeInformation: UIView, AnyView {
         
         verticalStack.addArrangedSubview(title)
         verticalStack.addArrangedSubview(subtitle)
-//
-//        subtitleContainer.addSubview(subtitle)
-//
-//        horizontalStack.addArrangedSubview(line)
-//        horizontalStack.addArrangedSubview(verticalStack)
-//
-//        addSubview(horizontalStack)
-        
     }
     
     func addConstraints() {
         
-        verticalStack.snp.makeConstraints{
+        verticalStack.snp.makeConstraints {
             $0.leading.equalTo(line.snp.trailing).offset(2.su)
             $0.top.trailing.equalToSuperview()
         }
         
-        line.snp.makeConstraints{
+        line.snp.makeConstraints {
             $0.top.height.equalToSuperview()
             $0.leading.equalToSuperview().offset(0.5.su)
             $0.width.equalTo(15)
             $0.height.equalTo(verticalStack).multipliedBy(1.4)
         }
-        
     }
 
     func draw(_ model: CyclePhaseTextViewModel){
-//        subtitle.text = model.whatIsDescription
+        subtitle.text = model.whatIsDescription
     }
     
 }
