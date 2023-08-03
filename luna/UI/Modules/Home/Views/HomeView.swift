@@ -124,7 +124,7 @@ class HomeView: UIView, AnyView  {
     func addConstraints() {
         
         recordedMenstruationCardView.snp.makeConstraints {
-            $0.bottom.equalTo(safeAreaLayoutGuide)
+            $0.bottom.equalTo(safeAreaLayoutGuide).offset(-3.su)
             $0.leading.trailing.equalToSuperview().inset(3.su)
             $0.height.equalTo(50)
         }
