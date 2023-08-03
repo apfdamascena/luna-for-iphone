@@ -31,6 +31,7 @@
 		0D6336F42A799BAC00EE9699 /* CalendarCollectionViewDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336F32A799BAC00EE9699 /* CalendarCollectionViewDataSourceImpl.swift */; };
 		0D6336FE2A7A88D900EE9699 /* AnualCycleCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336FD2A7A88D900EE9699 /* AnualCycleCalculator.swift */; };
 		0D6337002A7A893F00EE9699 /* OnboardingViewFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336FF2A7A893F00EE9699 /* OnboardingViewFlowDelegate.swift */; };
+		0D63371B2A7C749000EE9699 /* SegmentedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63371A2A7C749000EE9699 /* SegmentedLine.swift */; };
 		0D6794132A71D53C00382142 /* RootScreenViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6794122A71D53C00382142 /* RootScreenViewFactory.swift */; };
 		0D6794192A731B5C00382142 /* OnboardingUserCycleInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6794182A731B5C00382142 /* OnboardingUserCycleInformation.swift */; };
 		0D6794202A735C1B00382142 /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D67941B2A735C1A00382142 /* HomeContract.swift */; };
@@ -179,6 +180,7 @@
 		0D6336F32A799BAC00EE9699 /* CalendarCollectionViewDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewDataSourceImpl.swift; sourceTree = "<group>"; };
 		0D6336FD2A7A88D900EE9699 /* AnualCycleCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnualCycleCalculator.swift; sourceTree = "<group>"; };
 		0D6336FF2A7A893F00EE9699 /* OnboardingViewFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewFlowDelegate.swift; sourceTree = "<group>"; };
+		0D63371A2A7C749000EE9699 /* SegmentedLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedLine.swift; sourceTree = "<group>"; };
 		0D6794122A71D53C00382142 /* RootScreenViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreenViewFactory.swift; sourceTree = "<group>"; };
 		0D6794182A731B5C00382142 /* OnboardingUserCycleInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUserCycleInformation.swift; sourceTree = "<group>"; };
 		0D67941B2A735C1A00382142 /* HomeContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContract.swift; sourceTree = "<group>"; };
@@ -349,6 +351,14 @@
 				0D6336A82A77525800EE9699 /* OtherCyclePhasesView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0D6337192A7C747F00EE9699 /* SegmentedLine */ = {
+			isa = PBXGroup;
+			children = (
+				0D63371A2A7C749000EE9699 /* SegmentedLine.swift */,
+			);
+			path = SegmentedLine;
 			sourceTree = "<group>";
 		};
 		0D6794112A71D51800382142 /* Root */ = {
@@ -604,6 +614,7 @@
 		0DDA61352A69D11200CA15C6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0D6337192A7C747F00EE9699 /* SegmentedLine */,
 				A48B7ECE2A7993CE00CCC4C0 /* CyclePhaseText */,
 				0D6794252A74683F00382142 /* OnboardingCyclePhaseCard */,
 				CA0D93A92A7046ED0064C1C3 /* CalendarCollectionView */,
@@ -1142,6 +1153,7 @@
 				0D2FC76A2A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift in Sources */,
 				A46C05202A72B63B0071ABCE /* DrawableButton.swift in Sources */,
 				0DBADDD02A66002800A10FC3 /* LunaText.swift in Sources */,
+				0D63371B2A7C749000EE9699 /* SegmentedLine.swift in Sources */,
 				BF6520DE2A6F0D4B00E60054 /* CycleDurationContract.swift in Sources */,
 				CA557BCF2A6B1743001DF2BB /* LandingPageViewController.swift in Sources */,
 				BF4DC2EB2A744A3D0005BF7E /* CycleInformationsCalculator.swift in Sources */,
