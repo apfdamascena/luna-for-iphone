@@ -8,18 +8,57 @@
 import UIKit
 import SnapKit
 
+class SegmentedLine: UIView, AnyView {
+    
+    private let ball: UIImageView = {
+        let view = UIImageView(image: Asset.ball.image)
+        return view
+    }()
+    
+    private let line: UIView = {
+        let view = UIView()
+        view.backgroundColor = Asset.gray200.color
+        return view
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func addSubviews() {
+        
+        addSubview(ball)
+        addSubview(line)
+    }
+    
+    func addConstraints() {
+        
+        ball.snp.makeConstraints{
+            $0.centerX.top.equalToSuperview()
+        }
+        
+        line.snp.makeConstraints{
+            $0.top.centerX.equalTo(ball)
+            $0.bottom.equalToSuperview()
+            $0.width.equalTo(1)
+        }
+    }
+    
+    func addAdditionalConfiguration() {
+        ball.layer.zPosition = 13
+    }
+}
+
 class CardHomeInformation: UIView, AnyView {
     
     private let subtitleContainer = UIView()
 
-    
-    private let lineComponent: UIImageView = {
-        let view = UIImageView(image: Asset.redLine.image)
-        view.contentMode = .scaleAspectFit
-        view.setContentHuggingPriority(.defaultHigh, for: .horizontal)
-        view.clipsToBounds = true
-        return view
-    }()
+    private let line = SegmentedLine()
     
     private let verticalStack: UIStackView = {
         let view = UIStackView()
@@ -45,21 +84,13 @@ class CardHomeInformation: UIView, AnyView {
     var subtitle: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 16, color: .black, weight: .regular)
-        label.text = L10n.Constants.Content.Label.Placeholder.big
+        label.text = L10n.Constants.Content.Label.Text.HowAreYou.menstruation
         label.setContentHuggingPriority(.defaultLow, for: .vertical)
         label.numberOfLines = 0
         label.textAlignment = .left
         label.sizeToFit()
         label.draw(model)
         return label
-    }()
-    
-    private let horizontalStack: UIStackView = {
-        let view = UIStackView()
-        view.axis = .horizontal
-        view.alignment = .fill
-        view.spacing = 16
-        return view
     }()
     
     override init(frame: CGRect) {
@@ -74,40 +105,40 @@ class CardHomeInformation: UIView, AnyView {
     
     func addSubviews() {
         
+        addSubview(line)
+        
+        addSubview(verticalStack)
+        
         verticalStack.addArrangedSubview(title)
-        verticalStack.addArrangedSubview(subtitleContainer)
-        
-        subtitleContainer.addSubview(subtitle)
-        
-        horizontalStack.addArrangedSubview(lineComponent)
-        horizontalStack.addArrangedSubview(verticalStack)
-        
-        addSubview(horizontalStack)
+        verticalStack.addArrangedSubview(subtitle)
+//
+//        subtitleContainer.addSubview(subtitle)
+//
+//        horizontalStack.addArrangedSubview(line)
+//        horizontalStack.addArrangedSubview(verticalStack)
+//
+//        addSubview(horizontalStack)
         
     }
     
     func addConstraints() {
         
-        horizontalStack.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+        verticalStack.snp.makeConstraints{
+            $0.leading.equalTo(line.snp.trailing).offset(2.su)
+            $0.top.trailing.equalToSuperview()
         }
         
-        subtitle.snp.makeConstraints {
-            $0.top.leading.trailing.equalToSuperview()
-        }
-        
-        lineComponent.snp.makeConstraints {
-            $0.height.equalToSuperview()
+        line.snp.makeConstraints{
+            $0.top.height.equalToSuperview()
+            $0.leading.equalToSuperview().offset(0.5.su)
+            $0.width.equalTo(15)
+            $0.height.equalTo(verticalStack).multipliedBy(1.4)
         }
         
     }
-    
-    func addAdditionalConfiguration() {
-    
-    }
-    
+
     func draw(_ model: CyclePhaseTextViewModel){
-        subtitle.text = model.whatIsDescription
+//        subtitle.text = model.whatIsDescription
     }
     
 }

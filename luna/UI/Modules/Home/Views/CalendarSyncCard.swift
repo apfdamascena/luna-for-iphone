@@ -55,7 +55,6 @@ class CalendarSyncCard: UIView, AnyView {
         let view = UIStackView()
         view.axis = .vertical
         view.alignment = .leading
-        view.spacing = 0
         return view
     }()
     

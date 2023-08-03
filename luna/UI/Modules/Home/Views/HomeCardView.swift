@@ -58,6 +58,7 @@ class HomeCardView: UIView, AnyView {
     
     func addSubviews() {
         addSubview(stack)
+    
         stack.addArrangedSubview(whatIsCardInformation)
         stack.addArrangedSubview(howAreYouCardInformation)
         stack.addArrangedSubview(betterAvoidCardInformation)
