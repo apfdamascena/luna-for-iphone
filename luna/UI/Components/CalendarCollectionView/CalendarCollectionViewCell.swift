@@ -20,6 +20,8 @@ class CalendarCollectionViewCell: UICollectionViewCell,
     
     var day: Date?
     
+    var phase: CyclePhase?
+    
     private let stack: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
@@ -133,6 +135,8 @@ class CalendarCollectionViewCell: UICollectionViewCell,
         
         day = model.day
         
+        phase = model.phase
+        
         let model = isToday(date: model.day) ? LunaTextViewModel(size: 13,
                                       color: Asset.primaryGray900.color,
                                                                                                              weight: .bold) :
@@ -187,6 +191,10 @@ class CalendarCollectionViewCell: UICollectionViewCell,
     
     func getDate() -> Date {
         return self.day ?? .now
+    }
+    
+    func getPhase() -> CyclePhase {
+        return self.phase ?? .none
     }
     
     func getDate(date: Date) -> String{

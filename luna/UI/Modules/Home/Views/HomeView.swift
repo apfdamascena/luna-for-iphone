@@ -25,6 +25,7 @@ class HomeView: UIView, AnyView  {
     private let recordedMenstruationFeedback: FeedbackCard = {
         let card = FeedbackCard()
         card.message(for: .recordedMenstruation)
+        card.isHidden = true
         return card
     }()
         
@@ -190,6 +191,10 @@ class HomeView: UIView, AnyView  {
     
     func cardFeedbackDisappear() {
         recordedMenstruationFeedback.isHidden = true
+    }
+    
+    func cardFeedbackAppear() {
+        recordedMenstruationFeedback.isHidden = false
     }
     
     func phaseChanged(to cycle: CyclePhase) {
