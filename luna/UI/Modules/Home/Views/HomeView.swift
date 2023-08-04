@@ -31,6 +31,23 @@ class HomeView: UIView, AnyView  {
     private let menstrualPhaseBehaviorsView = MenstrualPhaseBehaviorsView()
     private let learnAboutMenstrualCyclePhasesView = LearnAboutMenstrualCyclePhasesView()
     
+    private let iconCalendar: UIImageView = {
+        let view = UIImageView(image: Asset.calendarIcon.image)
+        view.contentMode = .scaleAspectFit
+        view.clipsToBounds = true
+        return view
+    }()
+    
+    public var monthText: LunaText = {
+        let label = LunaText()
+        let model = LunaTextViewModel(size: 20, color: .black, weight: .regular)
+        label.text = Date.now.formatMonthToString().capitalized
+        label.numberOfLines = 0
+        label.textAlignment = .left
+        label.draw(model)
+        return label
+    }()
+    
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.isScrollEnabled = true
@@ -94,6 +111,14 @@ class HomeView: UIView, AnyView  {
         return view
     }()
     
+    private let stackMonthTag: UIStackView = {
+        let view = UIStackView()
+        view.axis = .horizontal
+        view.alignment = .leading
+        view.spacing = 1.su
+        return view
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -110,6 +135,10 @@ class HomeView: UIView, AnyView  {
         stackPhaseLearn.addArrangedSubview(learnCycleTitle)
         stackPhaseLearn.addArrangedSubview(cyclePhasesTitle)
         
+        stackMonthTag.addArrangedSubview(iconCalendar)
+        stackMonthTag.addArrangedSubview(monthText)
+        
+        addSubview(stackMonthTag)
         addSubview(calendarCollectionView)
         addSubview(scrollView)
         
@@ -134,10 +163,17 @@ class HomeView: UIView, AnyView  {
             $0.height.equalTo(50)
         }
         
+        stackMonthTag.snp.makeConstraints {
+            $0.top.equalTo(safeAreaLayoutGuide)
+            $0.leading.trailing.equalToSuperview().inset(3.su)
+            $0.height.equalTo(3.su)
+        }
+        
         calendarCollectionView.snp.makeConstraints{
             $0.height.equalTo(123)
             $0.leading.trailing.equalToSuperview()
-            $0.top.equalTo(safeAreaLayoutGuide)
+//            $0.top.equalTo(safeAreaLayoutGuide)
+            $0.top.equalTo(stackMonthTag.snp.bottom).offset(3.su)
         }
         
         scrollView.snp.makeConstraints {
@@ -197,6 +233,12 @@ class HomeView: UIView, AnyView  {
             let model = CyclePhaseTextFactory.create(phase: cycle)
             self.phaseTitle.text = model.name
             self.menstrualPhaseBehaviorsView.draw(model)
+        }
+    }
+    
+    func monthChanged(to date: Date) {
+        DispatchQueue.main.async {
+            self.monthText.text = date.formatMonthToString().capitalized
         }
     }
     
