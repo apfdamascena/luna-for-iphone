@@ -120,6 +120,12 @@ class HomeView: UIView, AnyView  {
         return view
     }()
     
+    private let warningNoMenstrualData: WarningNoMenstrualData = {
+        let view = WarningNoMenstrualData()
+        view.isHidden = true
+        return view
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -147,13 +153,12 @@ class HomeView: UIView, AnyView  {
         allContentStackView.addArrangedSubview(stackPhaseCycle)
         allContentStackView.addArrangedSubview(warningCalendarAccess)
         allContentStackView.addArrangedSubview(stackPhaseLearn)
-    
         allContentStackView.addArrangedSubview(menstrualPhaseBehaviorsView)
-        
         allContentStackView.addArrangedSubview(learnAboutMenstrualCyclePhasesView)
         
-        addSubview(recordedMenstruationFeedback)
+        allContentStackView.addArrangedSubview(warningNoMenstrualData)
         
+        addSubview(recordedMenstruationFeedback)
     }
     
     func addConstraints() {
@@ -173,7 +178,6 @@ class HomeView: UIView, AnyView  {
         calendarCollectionView.snp.makeConstraints{
             $0.height.equalTo(123)
             $0.leading.trailing.equalToSuperview()
-//            $0.top.equalTo(safeAreaLayoutGuide)
             $0.top.equalTo(stackMonthTag.snp.bottom).offset(3.su)
         }
         
@@ -198,6 +202,10 @@ class HomeView: UIView, AnyView  {
 
         stackPhaseLearn.snp.makeConstraints {
             $0.height.equalTo(8.su)
+        }
+        
+        warningNoMenstrualData.snp.makeConstraints{
+            $0.height.equalTo(20.su)
         }
         
     }
@@ -234,10 +242,7 @@ class HomeView: UIView, AnyView  {
     }
     
     func phaseChanged(to cycle: CyclePhase) {
-//        if cycle == .none {
-//            
-//        }
-        
+
         DispatchQueue.main.async {
             let model = CyclePhaseTextFactory.create(phase: cycle)
             self.phaseTitle.text = model.name
@@ -248,6 +253,18 @@ class HomeView: UIView, AnyView  {
     func monthChanged(to date: Date) {
         DispatchQueue.main.async {
             self.monthText.text = date.formatMonthToString().capitalized
+        }
+    }
+    
+    func showWarningNoMenstrualData(if cycle: CyclePhase){
+        menstrualPhaseBehaviorsView.isHidden = false
+        stackPhaseCycle.isHidden = false
+        warningNoMenstrualData.isHidden = true
+        
+        if cycle == .none {
+            menstrualPhaseBehaviorsView.isHidden = true
+            stackPhaseCycle.isHidden = true
+            warningNoMenstrualData.isHidden = false
         }
     }
     

@@ -102,6 +102,7 @@ class HomeViewController: UIViewController {
             .asObservable()
             .subscribe(onNext: { cycle in
                 self.homeView.phaseChanged(to: cycle)
+                self.homeView.showWarningNoMenstrualData(if: cycle)
         }).disposed(by: disposeBag)
     }
     
