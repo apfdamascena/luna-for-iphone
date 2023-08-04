@@ -34,7 +34,6 @@ class WarningCalendarAccess: UIView, AnyView {
     
     private let settingsSubtitle: LunaText = {
         let label = LunaText()
-        label.backgroundColor = .cyan
         let model = LunaTextViewModel(size: 16, color: .black, weight: .regular)
         label.text = L10n.Constants.Content.Label.Home.settingsSubtitle
         label.textAlignment = .left
