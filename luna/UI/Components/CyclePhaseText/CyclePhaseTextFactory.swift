@@ -50,12 +50,12 @@ class CyclePhaseTextFactory {
             
         default:
             return CyclePhaseTextViewModel(
-                name: "Cynara Valéria",
-                whatIsDescription: L10n.Constants.Content.Label.Text.WhatIs.folicular,
-                howAreYouDescription: L10n.Constants.Content.Label.Text.HowAreYou.folicular,
-                avoidDescription: L10n.Constants.Content.Label.Text.Avoid.folicular,
-                helpDescription: L10n.Constants.Content.Label.Text.Help.folicular,
-                behindSheets: L10n.Constants.Content.Label.Text.BehindSheets.folicular
+                name: "Fase do Seu Ciclo",
+                whatIsDescription: "",
+                howAreYouDescription: "",
+                avoidDescription: "",
+                helpDescription: "",
+                behindSheets: ""
             )
         }
     }
