@@ -10,6 +10,9 @@ import RxSwift
 
 
 class CalendarCollectionViewDataSourceImpl: CalendarCollectionViewDataSource {
+    
+    var accessToCalendar: BehaviorSubject<CalendarAccess> = BehaviorSubject(value: .unauthorized)
+    
     var data: PublishSubject<[CyclePhaseViewModel]> = PublishSubject()
 
     var lastCell: CalendarCollectionViewCell?

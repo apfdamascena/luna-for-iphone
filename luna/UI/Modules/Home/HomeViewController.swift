@@ -41,6 +41,7 @@ class HomeViewController: UIViewController {
         collectionViewEventObservable()
         addCyclePhaseEventObservable()
         addSettingsHandlerEvent()
+        addAccesCalendarHandler()
         
     }
     
@@ -48,8 +49,6 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
         presenter?.loadCalendarToCollection()
-//        self.datasource.cyclePhase.onNext(celuladomeio)
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -96,21 +95,15 @@ class HomeViewController: UIViewController {
     func moveInitialCollection() {
         guard let initialOffset = homeView.calendarCollectionView.getInitialOffset() else { return }
         homeView.calendarCollectionView.contentOffset.x = initialOffset
-        
-        setInitialPhase()
     }
     
-    func setInitialPhase() {
-//        let (_, centerCell ,_) = homeView.calendarCollectionView.getSelectedAndCenterCell(at: [0,100])
-//        print("Cacete",centerCell)
-    }
-
     func addCyclePhaseEventObservable() {
 
         datasource.cyclePhase
             .asObservable()
             .subscribe(onNext: { cycle in
                 self.homeView.phaseChanged(to: cycle)
+                self.homeView.showWarningNoMenstrualData(if: cycle)
         }).disposed(by: disposeBag)
     }
     
@@ -122,6 +115,15 @@ class HomeViewController: UIViewController {
                 self.presenter?.userOpenDeviceSettings()
 
             }.disposed(by: disposeBag)
+    }
+    
+    func addAccesCalendarHandler(){
+
+        datasource.accessToCalendar
+            .asObservable()
+            .subscribe(onNext: { access in
+                self.homeView.accessToCalendar(allowed: access)
+            })
     }
 }
 
@@ -189,12 +191,14 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     
     func userAllowedAccessCalendar() {
         presenter?.loadUserCalendar()
+        datasource.accessToCalendar.onNext(.authorized)
         DispatchQueue.main.async {
             self.homeView.userAllowedAccessCalendar()
         }
     }
     
     func userDeniedAccessCalendar() {
+        datasource.accessToCalendar.onNext(.unauthorized)
         DispatchQueue.main.async {
             self.homeView.userDeniedAccessCalendar()
         }
