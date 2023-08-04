@@ -234,6 +234,10 @@ class HomeView: UIView, AnyView  {
     }
     
     func phaseChanged(to cycle: CyclePhase) {
+//        if cycle == .none {
+//            
+//        }
+        
         DispatchQueue.main.async {
             let model = CyclePhaseTextFactory.create(phase: cycle)
             self.phaseTitle.text = model.name

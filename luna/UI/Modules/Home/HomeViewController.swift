@@ -48,8 +48,6 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
         presenter?.loadCalendarToCollection()
-//        self.datasource.cyclePhase.onNext(celuladomeio)
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -96,15 +94,8 @@ class HomeViewController: UIViewController {
     func moveInitialCollection() {
         guard let initialOffset = homeView.calendarCollectionView.getInitialOffset() else { return }
         homeView.calendarCollectionView.contentOffset.x = initialOffset
-        
-        setInitialPhase()
     }
     
-    func setInitialPhase() {
-//        let (_, centerCell ,_) = homeView.calendarCollectionView.getSelectedAndCenterCell(at: [0,100])
-//        print("Cacete",centerCell)
-    }
-
     func addCyclePhaseEventObservable() {
 
         datasource.cyclePhase
