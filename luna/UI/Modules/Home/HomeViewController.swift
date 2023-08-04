@@ -90,11 +90,19 @@ class HomeViewController: UIViewController {
                                            center: centerCell,
                                            andMoveCenter: centerXtoCollection)
             }.disposed(by: disposeBag)
+        
     }
     
     func moveInitialCollection() {
         guard let initialOffset = homeView.calendarCollectionView.getInitialOffset() else { return }
         homeView.calendarCollectionView.contentOffset.x = initialOffset
+        
+        setInitialPhase()
+    }
+    
+    func setInitialPhase() {
+//        let (_, centerCell ,_) = homeView.calendarCollectionView.getSelectedAndCenterCell(at: [0,100])
+//        print("Cacete",centerCell)
     }
 
     func addCyclePhaseEventObservable() {
@@ -125,6 +133,7 @@ extension HomeViewController: PresenterToViewHomeProtocol {
 
     func load(collectionDataSource: [CyclePhaseViewModel]) {
         datasource.data.onNext(collectionDataSource)
+        self.datasource.cyclePhase.onNext(collectionDataSource[HomeCollection.COLLECTION_RANGE/2].phase)
     }
     
     func moveCalendarCollection(toXAxis: CGFloat) {
