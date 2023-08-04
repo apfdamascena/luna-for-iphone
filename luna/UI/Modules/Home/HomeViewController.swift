@@ -41,6 +41,7 @@ class HomeViewController: UIViewController {
         collectionViewEventObservable()
         addCyclePhaseEventObservable()
         addSettingsHandlerEvent()
+        addAccesCalendarHandler()
         
     }
     
@@ -115,6 +116,15 @@ class HomeViewController: UIViewController {
 
             }.disposed(by: disposeBag)
     }
+    
+    func addAccesCalendarHandler(){
+
+        datasource.accessToCalendar
+            .asObservable()
+            .subscribe(onNext: { access in
+                self.homeView.accessToCalendar(allowed: access)
+            })
+    }
 }
 
 
@@ -181,12 +191,14 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     
     func userAllowedAccessCalendar() {
         presenter?.loadUserCalendar()
+        datasource.accessToCalendar.onNext(.authorized)
         DispatchQueue.main.async {
             self.homeView.userAllowedAccessCalendar()
         }
     }
     
     func userDeniedAccessCalendar() {
+        datasource.accessToCalendar.onNext(.unauthorized)
         DispatchQueue.main.async {
             self.homeView.userDeniedAccessCalendar()
         }

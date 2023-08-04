@@ -10,6 +10,8 @@ import SnapKit
 
 class HomeView: UIView, AnyView  {
     
+    private var hasAcessToCalendar: CalendarAccess = .unauthorized
+    
     private let allContentStackView: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
@@ -257,15 +259,28 @@ class HomeView: UIView, AnyView  {
     }
     
     func showWarningNoMenstrualData(if cycle: CyclePhase){
+        
+        if hasAcessToCalendar == .unauthorized {
+            menstrualPhaseBehaviorsView.isHidden = true
+            stackPhaseCycle.isHidden = true
+            warningNoMenstrualData.isHidden = true
+            return
+        }
+        
         menstrualPhaseBehaviorsView.isHidden = false
         stackPhaseCycle.isHidden = false
         warningNoMenstrualData.isHidden = true
         
+    
         if cycle == .none {
             menstrualPhaseBehaviorsView.isHidden = true
             stackPhaseCycle.isHidden = true
             warningNoMenstrualData.isHidden = false
         }
+    }
+    
+    func accessToCalendar(allowed: CalendarAccess){
+        self.hasAcessToCalendar = allowed
     }
     
 }
