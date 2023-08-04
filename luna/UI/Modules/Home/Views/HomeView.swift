@@ -28,8 +28,8 @@ class HomeView: UIView, AnyView  {
         return card
     }()
         
-    private let cardsView = HomeCardView()
-    private let learnView = HomeLearnView()
+    private let menstrualPhaseBehaviorsView = MenstrualPhaseBehaviorsView()
+    private let learnAboutMenstrualCyclePhasesView = LearnAboutMenstrualCyclePhasesView()
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -118,8 +118,9 @@ class HomeView: UIView, AnyView  {
         allContentStackView.addArrangedSubview(warningCalendarAccess)
         allContentStackView.addArrangedSubview(stackPhaseLearn)
     
-        allContentStackView.addArrangedSubview(cardsView)
-        allContentStackView.addArrangedSubview(learnView)
+        allContentStackView.addArrangedSubview(menstrualPhaseBehaviorsView)
+        
+        allContentStackView.addArrangedSubview(learnAboutMenstrualCyclePhasesView)
         
         addSubview(recordedMenstruationFeedback)
         
@@ -171,20 +172,20 @@ class HomeView: UIView, AnyView  {
     
     func userDeniedAccessCalendar() {
         stackPhaseCycle.isHidden = true
-        cardsView.isHidden = true
+        menstrualPhaseBehaviorsView.isHidden = true
         
         warningCalendarAccess.isHidden = false
         stackPhaseLearn.isHidden = false
-        learnView.isHidden = false
+        learnAboutMenstrualCyclePhasesView.isHidden = false
     }
     
     func userAllowedAccessCalendar() {
         warningCalendarAccess.isHidden = true
         stackPhaseLearn.isHidden = true
-        learnView.isHidden = true
+        learnAboutMenstrualCyclePhasesView.isHidden = true
         
         stackPhaseCycle.isHidden = false
-        cardsView.isHidden = false
+        menstrualPhaseBehaviorsView.isHidden = false
     }
     
     func cardFeedbackDisappear() {
@@ -195,7 +196,7 @@ class HomeView: UIView, AnyView  {
         DispatchQueue.main.async {
             let model = CyclePhaseTextFactory.create(phase: cycle)
             self.phaseTitle.text = model.name
-            self.cardsView.draw(model)
+            self.menstrualPhaseBehaviorsView.draw(model)
         }
     }
     

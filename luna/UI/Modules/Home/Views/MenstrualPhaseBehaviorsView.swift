@@ -8,7 +8,7 @@
 import UIKit
 
 
-class HomeCardView: UIView, AnyView {
+class MenstrualPhaseBehaviorsView: UIView, AnyView {
     
     private let whatIsCardInformation: CardHomeInformation = {
         let container = CardHomeInformation()

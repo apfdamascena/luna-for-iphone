@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class HomeLearnView: UIView, AnyView {
+class LearnAboutMenstrualCyclePhasesView: UIView, AnyView {
     
     private var teste: [CardHomeInformation] = []
     private let stopIndex = 4

@@ -96,14 +96,14 @@
 		A46C05542A74642C0071ABCE /* WarningCalendarAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C05522A74642C0071ABCE /* WarningCalendarAccess.swift */; };
 		A46C05552A74642C0071ABCE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C05532A74642C0071ABCE /* HomeView.swift */; };
 		A46C05572A7464970071ABCE /* LunaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C05562A7464970071ABCE /* LunaButton.swift */; };
-		A48B7ECB2A75A02700CCC4C0 /* HomeLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7ECA2A75A02700CCC4C0 /* HomeLearnView.swift */; };
+		A48B7ECB2A75A02700CCC4C0 /* LearnAboutMenstrualCyclePhasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7ECA2A75A02700CCC4C0 /* LearnAboutMenstrualCyclePhasesView.swift */; };
 		A48B7ECD2A77118400CCC4C0 /* FeedbackCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7ECC2A77118400CCC4C0 /* FeedbackCard.swift */; };
 		A48B7ED02A7993E800CCC4C0 /* CyclePhaseTextFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7ECF2A7993E800CCC4C0 /* CyclePhaseTextFactory.swift */; };
 		A48B7ED22A7993FB00CCC4C0 /* CyclePhaseTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7ED12A7993FB00CCC4C0 /* CyclePhaseTextViewModel.swift */; };
 		A48B7ED42A79994200CCC4C0 /* CyclePhaseText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7ED32A79994200CCC4C0 /* CyclePhaseText.swift */; };
 		A48B7EDA2A7ACBCD00CCC4C0 /* CardHomeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7ED92A7ACBCD00CCC4C0 /* CardHomeInformation.swift */; };
 		A48B7EDC2A7AD3AD00CCC4C0 /* Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = A48B7EDB2A7AD3AD00CCC4C0 /* Constants.strings */; };
-		A48B7EDE2A7ADD6500CCC4C0 /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7EDD2A7ADD6500CCC4C0 /* HomeCardView.swift */; };
+		A48B7EDE2A7ADD6500CCC4C0 /* MenstrualPhaseBehaviorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7EDD2A7ADD6500CCC4C0 /* MenstrualPhaseBehaviorsView.swift */; };
 		A48B7EE02A7AF48E00CCC4C0 /* LineComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7EDF2A7AF48E00CCC4C0 /* LineComponent.swift */; };
 		BF4DC2D22A72DC510005BF7E /* CyclePhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DC2D12A72DC510005BF7E /* CyclePhase.swift */; };
 		BF4DC2D62A7341B20005BF7E /* LunaCalendarRequestAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DC2D52A7341B20005BF7E /* LunaCalendarRequestAccess.swift */; };
@@ -254,14 +254,14 @@
 		A46C05522A74642C0071ABCE /* WarningCalendarAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarningCalendarAccess.swift; sourceTree = "<group>"; };
 		A46C05532A74642C0071ABCE /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A46C05562A7464970071ABCE /* LunaButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunaButton.swift; sourceTree = "<group>"; };
-		A48B7ECA2A75A02700CCC4C0 /* HomeLearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLearnView.swift; sourceTree = "<group>"; };
+		A48B7ECA2A75A02700CCC4C0 /* LearnAboutMenstrualCyclePhasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnAboutMenstrualCyclePhasesView.swift; sourceTree = "<group>"; };
 		A48B7ECC2A77118400CCC4C0 /* FeedbackCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackCard.swift; sourceTree = "<group>"; };
 		A48B7ECF2A7993E800CCC4C0 /* CyclePhaseTextFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclePhaseTextFactory.swift; sourceTree = "<group>"; };
 		A48B7ED12A7993FB00CCC4C0 /* CyclePhaseTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclePhaseTextViewModel.swift; sourceTree = "<group>"; };
 		A48B7ED32A79994200CCC4C0 /* CyclePhaseText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclePhaseText.swift; sourceTree = "<group>"; };
 		A48B7ED92A7ACBCD00CCC4C0 /* CardHomeInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHomeInformation.swift; sourceTree = "<group>"; };
 		A48B7EDB2A7AD3AD00CCC4C0 /* Constants.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Constants.strings; sourceTree = "<group>"; };
-		A48B7EDD2A7ADD6500CCC4C0 /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
+		A48B7EDD2A7ADD6500CCC4C0 /* MenstrualPhaseBehaviorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstrualPhaseBehaviorsView.swift; sourceTree = "<group>"; };
 		A48B7EDF2A7AF48E00CCC4C0 /* LineComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineComponent.swift; sourceTree = "<group>"; };
 		BF4DC2D12A72DC510005BF7E /* CyclePhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclePhase.swift; sourceTree = "<group>"; };
 		BF4DC2D52A7341B20005BF7E /* LunaCalendarRequestAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaCalendarRequestAccess.swift; sourceTree = "<group>"; };
@@ -728,9 +728,9 @@
 			isa = PBXGroup;
 			children = (
 				A46C05532A74642C0071ABCE /* HomeView.swift */,
-				A48B7ECA2A75A02700CCC4C0 /* HomeLearnView.swift */,
+				A48B7ECA2A75A02700CCC4C0 /* LearnAboutMenstrualCyclePhasesView.swift */,
 				A48B7ED92A7ACBCD00CCC4C0 /* CardHomeInformation.swift */,
-				A48B7EDD2A7ADD6500CCC4C0 /* HomeCardView.swift */,
+				A48B7EDD2A7ADD6500CCC4C0 /* MenstrualPhaseBehaviorsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1151,7 +1151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A48B7EDE2A7ADD6500CCC4C0 /* HomeCardView.swift in Sources */,
+				A48B7EDE2A7ADD6500CCC4C0 /* MenstrualPhaseBehaviorsView.swift in Sources */,
 				0D6336A42A7750EF00EE9699 /* OnboardingCyclePhaseContentViewModel.swift in Sources */,
 				0D2FC76E2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift in Sources */,
 				0D2FC7722A6EF59B0025D8B6 /* OnboardingViewFlow.swift in Sources */,
@@ -1221,7 +1221,7 @@
 				0D6794242A735C1B00382142 /* HomeInteractor.swift in Sources */,
 				0D6336AF2A7756DD00EE9699 /* Device.swift in Sources */,
 				0DBADDDF2A6603F800A10FC3 /* LastDayMenstruationContract.swift in Sources */,
-				A48B7ECB2A75A02700CCC4C0 /* HomeLearnView.swift in Sources */,
+				A48B7ECB2A75A02700CCC4C0 /* LearnAboutMenstrualCyclePhasesView.swift in Sources */,
 				0DCCB9262A6D82AF00451D63 /* OnboardingPageControlView.swift in Sources */,
 				0D6794312A74725200382142 /* TeachRecordMenstruationRouter.swift in Sources */,
 				0D6336EC2A789A5700EE9699 /* OnboardingCyclePhaseCardType.swift in Sources */,
