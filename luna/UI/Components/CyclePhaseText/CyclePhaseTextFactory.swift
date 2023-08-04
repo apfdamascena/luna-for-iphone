@@ -11,7 +11,7 @@ class CyclePhaseTextFactory {
     
     static func create(phase: CyclePhase) -> CyclePhaseTextViewModel {
         switch phase {
-        case .menstruation:
+        case .menstruation, .expectedMenstruation:
             return CyclePhaseTextViewModel(
                 name: L10n.Constants.Content.Label.Phase.menstruation,
                 whatIsDescription: L10n.Constants.Content.Label.Text.WhatIs.menstruation,

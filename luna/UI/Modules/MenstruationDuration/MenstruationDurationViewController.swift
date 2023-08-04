@@ -64,7 +64,7 @@ class MenstruationDurationViewController: UIViewController, DataSourceEventObser
         menstruationDurationView.picker
             .rx.itemSelected.asObservable()
             .subscribe { (row: Int, component: Int) in
-                guard let duration = Int(self.datasource.elements[0][row%Onboarding.CYCLE_DURATION_QUANTITY]) else { return }
+                guard let duration = Int(self.datasource.elements[0][row%Onboarding.MENSTRUATION_DURATION_QUANTITY]) else { return }
                 OnboardingUserCycleInformation.shared.setMenstruation(duration)
             }.disposed(by: disposeBag)
 

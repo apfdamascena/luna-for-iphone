@@ -65,6 +65,7 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
             }
             else {
                 lunaCalendarManager.adjustEventsInCalendarBy(menstruationDate: selectedDate)
+                presenter?.showFeedbackRegisterMenstruation()
                 return true
             }
         }

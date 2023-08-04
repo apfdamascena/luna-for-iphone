@@ -41,13 +41,15 @@ class HomeViewController: UIViewController {
         collectionViewEventObservable()
         addCyclePhaseEventObservable()
         addSettingsHandlerEvent()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
         presenter?.loadCalendarToCollection()
-        
+//        self.datasource.cyclePhase.onNext(celuladomeio)
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -67,12 +69,13 @@ class HomeViewController: UIViewController {
     }
     
     func collectionViewEventObservable() {
-        
         homeView.calendarCollectionView.rx
             .didScroll.asObservable()
             .subscribe { _ in
                 let centerCell = self.proxy.scrollViewDidScroll(self.homeView.calendarCollectionView)
                 self.presenter?.change(centerCell)
+                guard let centerCellPhase = centerCell?.getPhase() else { return }
+                self.datasource.cyclePhase.onNext(centerCellPhase)
                 guard let month = centerCell?.getDate() else { return }
                 self.homeView.monthChanged(to: month)
             }.disposed(by: disposeBag)
@@ -120,8 +123,7 @@ extension HomeViewController: PresenterToViewHomeProtocol {
         
     }
 
-    
-    func teste(collectionDataSource: [CyclePhaseViewModel]) {
+    func load(collectionDataSource: [CyclePhaseViewModel]) {
         datasource.data.onNext(collectionDataSource)
     }
     
@@ -130,23 +132,28 @@ extension HomeViewController: PresenterToViewHomeProtocol {
         self.homeView.calendarCollectionView.contentOffset.x = toXAxis
     }
     
+    func showFeedbackRegisterMenstruation() {
+        self.homeView.cardFeedbackAppear()
+        Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { timer in
+            self.homeView.cardFeedbackDisappear()
+        }
+    }
+    
     func changeSelectedCell(selectedCell: CalendarCollectionViewCell) {
         let selectedIsBeforeToday = selectedCell.day! < Date()
-        
+
         if selectedIsBeforeToday {
             let selectedDay = selectedCell.getDate()
-            
-//            let insertedMenstruation = presenter?.insertMenstruation(selectedDate: selectedDay)
-            
+                        
             guard let insertedMenstruation = presenter?.insertMenstruation(selectedDate: selectedDay) else { return }
             
             if insertedMenstruation {
                 presenter?.loadCalendarToCollection()
             }
             else {
-                
+                // MUDAR ALERTA, MUDAR TEXTO
                 let alert = UIAlertController(title: "Aviso",
-                                              message: "Você não pode marcar um dia próximo a outra menstruação marcada",
+                                              message: "Você não pode marcar um dia próximo a outra menstruação",
                                               preferredStyle: .alert)
 
                 alert.addAction(UIAlertAction(title: "OK",
@@ -174,7 +181,6 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     func userAllowedAccessCalendar() {
         presenter?.loadUserCalendar()
         DispatchQueue.main.async {
-            self.datasource.cyclePhase.onNext(.folicular)
             self.homeView.userAllowedAccessCalendar()
         }
     }

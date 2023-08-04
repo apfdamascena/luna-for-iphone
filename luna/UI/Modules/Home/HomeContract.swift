@@ -18,8 +18,10 @@ protocol PresenterToViewHomeProtocol {
     func changeSelectedCell(selectedCell: CalendarCollectionViewCell) 
     func moveCalendarCollection(toXAxis: CGFloat)
     func updateView(_ center: CalendarCollectionViewCell)
+    func showFeedbackRegisterMenstruation()
+
     
-    func teste(collectionDataSource: [CyclePhaseViewModel])
+    func load(collectionDataSource: [CyclePhaseViewModel])
     func loadCalendarToCollection(date: Date)
 }
 
@@ -35,10 +37,7 @@ protocol ViewToPresenterHomeProtocol {
     func loadUserCalendar()
     func loadCalendarToCollection()
     func insertMenstruation(selectedDate: Date) -> Bool 
-
-    
-
-    
+        
     func userSelect(_ cell: CalendarCollectionViewCell?,
                     center: CalendarCollectionViewCell?,
                     andMoveCenter: CGFloat?)
@@ -67,6 +66,7 @@ protocol InteractorToPresenterHomeProtocol {
     
     func accessAllowed()
     func accessDenied()
+    func showFeedbackRegisterMenstruation()
     
 }
 

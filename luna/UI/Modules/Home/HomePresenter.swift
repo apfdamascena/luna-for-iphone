@@ -33,7 +33,7 @@ class HomePresenter: ViewToPresenterHomeProtocol {
     
     func loadCalendarToCollection() {
         let collectionDataSource = interactor?.loadCalendarToCollection()
-        view?.teste(collectionDataSource: collectionDataSource ?? [])
+        view?.load(collectionDataSource: collectionDataSource ?? [])
     }
     
     func userSelect(_ cell: CalendarCollectionViewCell?,
@@ -55,7 +55,7 @@ class HomePresenter: ViewToPresenterHomeProtocol {
         guard let insertedMenstruation = interactor?.insertedMenstruationToCollection(selectedDate: selectedDate) else { return false }
         return insertedMenstruation
     }
-    
+
     
     func change(_ centerCell: CalendarCollectionViewCell?) {
         guard let centerCell = centerCell else { return }
@@ -76,4 +76,9 @@ extension HomePresenter: InteractorToPresenterHomeProtocol {
     func accessDenied() {
         view?.userDeniedAccessCalendar()
     }
+    
+    func showFeedbackRegisterMenstruation() {
+        view?.showFeedbackRegisterMenstruation()
+    }
+    
 }
