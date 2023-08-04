@@ -10,10 +10,23 @@ import SnapKit
 
 class HomeView: UIView, AnyView  {
     
+    private let allContentStackView: UIStackView = {
+        let view = UIStackView()
+        view.axis = .vertical
+        view.alignment = .fill
+        view.spacing = 4.su
+        return view
+    }()
+    
     private(set) var calendarCollectionView = CalendarScrollCollectionView()
     
-    private let calendarSyncView = WarningCalendarAccess()
-    private let recordedMenstruationCardView = FeedbackCard()
+    private let warningCalendarAccess = WarningCalendarAccess()
+    
+    private let recordedMenstruationFeedback: FeedbackCard = {
+        let card = FeedbackCard()
+        card.message(for: .recordedMenstruation)
+        return card
+    }()
         
     private let cardsView = HomeCardView()
     private let learnView = HomeLearnView()
@@ -23,14 +36,6 @@ class HomeView: UIView, AnyView  {
         scrollView.isScrollEnabled = true
         scrollView.showsVerticalScrollIndicator = true
         return scrollView
-    }()
-    
-    private let contentView: UIStackView = {
-        let view = UIStackView()
-        view.axis = .vertical
-        view.alignment = .fill
-        view.spacing = 4.su
-        return view
     }()
     
     private let youAreInLabel: LunaText = {
@@ -108,21 +113,21 @@ class HomeView: UIView, AnyView  {
         addSubview(calendarCollectionView)
         addSubview(scrollView)
         
-        scrollView.addSubview(contentView)
-        contentView.addArrangedSubview(stackPhaseCycle)
-        contentView.addArrangedSubview(calendarSyncView)
-        contentView.addArrangedSubview(stackPhaseLearn)
+        scrollView.addSubview(allContentStackView)
+        allContentStackView.addArrangedSubview(stackPhaseCycle)
+        allContentStackView.addArrangedSubview(warningCalendarAccess)
+        allContentStackView.addArrangedSubview(stackPhaseLearn)
     
-        contentView.addArrangedSubview(cardsView)
-        contentView.addArrangedSubview(learnView)
+        allContentStackView.addArrangedSubview(cardsView)
+        allContentStackView.addArrangedSubview(learnView)
         
-        addSubview(recordedMenstruationCardView)
+        addSubview(recordedMenstruationFeedback)
         
     }
     
     func addConstraints() {
         
-        recordedMenstruationCardView.snp.makeConstraints {
+        recordedMenstruationFeedback.snp.makeConstraints {
             $0.bottom.equalTo(safeAreaLayoutGuide).offset(-3.su)
             $0.leading.trailing.equalToSuperview().inset(3.su)
             $0.height.equalTo(50)
@@ -140,12 +145,12 @@ class HomeView: UIView, AnyView  {
             $0.bottom.equalTo(safeAreaLayoutGuide)
         }
 
-        contentView.snp.makeConstraints {
+        allContentStackView.snp.makeConstraints {
             $0.top.bottom.equalTo(scrollView)
             $0.leading.width.equalTo(scrollView)
         }
         
-        calendarSyncView.snp.makeConstraints {
+        warningCalendarAccess.snp.makeConstraints {
             $0.height.equalTo(286)
         }
         
@@ -168,13 +173,13 @@ class HomeView: UIView, AnyView  {
         stackPhaseCycle.isHidden = true
         cardsView.isHidden = true
         
-        calendarSyncView.isHidden = false
+        warningCalendarAccess.isHidden = false
         stackPhaseLearn.isHidden = false
         learnView.isHidden = false
     }
     
     func userAllowedAccessCalendar() {
-        calendarSyncView.isHidden = true
+        warningCalendarAccess.isHidden = true
         stackPhaseLearn.isHidden = true
         learnView.isHidden = true
         
@@ -183,7 +188,7 @@ class HomeView: UIView, AnyView  {
     }
     
     func cardFeedbackDisappear() {
-        recordedMenstruationCardView.isHidden = true
+        recordedMenstruationFeedback.isHidden = true
     }
     
     func phaseChanged(to cycle: CyclePhase) {
