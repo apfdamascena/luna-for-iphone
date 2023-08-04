@@ -13,7 +13,7 @@ class MenstruationDurationRouter: PresenterToRouterMenstruationDurationProtocol 
     
     static func createModule() -> UIViewController {
         
-        let viewController = MenstruationDurationViewController(datasource: RangePickerViewDataSourceImpl(range: 1...20))
+        let viewController = MenstruationDurationViewController(datasource: RangePickerViewDataSourceImpl(range: Onboarding.MENSTRUATION_DURATION_RANGE))
         
         let presenter: ViewToPresenterMenstruationDurationProtocol = MenstruationDurationPresenter()
         
