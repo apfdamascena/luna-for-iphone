@@ -10,11 +10,11 @@ import SnapKit
 
 class HomeView: UIView, AnyView  {
     
-    private let calendarSyncView = CalendarSyncCard()
-    private let recordedMenstruationCardView = RecordedMenstruationCard()
-    
     private(set) var calendarCollectionView = CalendarScrollCollectionView()
     
+    private let calendarSyncView = WarningCalendarAccess()
+    private let recordedMenstruationCardView = RecordedMenstruationCard()
+        
     private let cardsView = HomeCardView()
     private let learnView = HomeLearnView()
     
@@ -97,7 +97,6 @@ class HomeView: UIView, AnyView  {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     func addSubviews() {
         

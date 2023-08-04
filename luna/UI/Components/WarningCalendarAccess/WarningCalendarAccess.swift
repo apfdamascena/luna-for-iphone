@@ -8,9 +8,16 @@
 import UIKit
 import SnapKit
 
-class CalendarSyncCard: UIView, AnyView {
+class WarningCalendarAccess: UIView, AnyView {
     
-    private let calendarTitle: LunaText = {
+    private let stack: UIStackView = {
+        let view = UIStackView()
+        view.axis = .vertical
+        view.alignment = .leading
+        return view
+    }()
+    
+    private let title: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 20, color: .black, weight: .medium)
         
@@ -27,6 +34,7 @@ class CalendarSyncCard: UIView, AnyView {
     
     private let settingsSubtitle: LunaText = {
         let label = LunaText()
+        label.backgroundColor = .cyan
         let model = LunaTextViewModel(size: 16, color: .black, weight: .regular)
         label.text = L10n.Constants.Content.Label.Home.settingsSubtitle
         label.textAlignment = .left
@@ -51,13 +59,6 @@ class CalendarSyncCard: UIView, AnyView {
         return button
     }()
     
-    private let stack: UIStackView = {
-        let view = UIStackView()
-        view.axis = .vertical
-        view.alignment = .leading
-        return view
-    }()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -68,25 +69,28 @@ class CalendarSyncCard: UIView, AnyView {
     }
     
     func addSubviews() {
+        addSubview(title)
+        addSubview(stack)
+        addSubview(settingsButton)
+        
         stack.addArrangedSubview(settingsSubtitle)
         stack.addArrangedSubview(acessSubtitle)
-        addSubview(stack)
-        addSubview(calendarTitle)
-        addSubview(settingsButton)
+
     }
     
     func addConstraints() {
         
-        calendarTitle.snp.makeConstraints {
+        stack.snp.makeConstraints {
+            $0.top.equalTo(title.snp.bottom).offset((1.5).su)
+            $0.leading.trailing.equalToSuperview().inset(3.su)
+        }
+        
+        title.snp.makeConstraints {
             $0.top.equalToSuperview().offset(4.su)
             $0.leading.trailing.equalToSuperview().inset(3.su)
         }
         
-        stack.snp.makeConstraints {
-            $0.top.equalTo(calendarTitle.snp.bottom).offset((1.5).su)
-            $0.leading.trailing.equalToSuperview().inset(3.su)
-        }
-        
+
         settingsButton.snp.makeConstraints {
             $0.top.equalTo(stack.snp.bottom).offset(3.su)
             $0.leading.trailing.equalToSuperview().inset(3.su)
