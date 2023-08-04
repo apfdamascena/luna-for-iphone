@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum CyclePhase: String {
+enum CyclePhase: String, CaseIterable {
     case folicular
     case menstruation
     case luteal
@@ -31,7 +31,7 @@ enum CyclePhase: String {
             return L10n.Constants.Content.Label.pms
         }
     }
-    
+        
     var image: UIImage {
         switch self {
         case .folicular:

@@ -8,12 +8,13 @@
 import UIKit
 import SnapKit
 
-class RecordedMenstruationCard: UIView, AnyView {
+
+
+class FeedbackCard: UIView, AnyView {
     
-    private let recordedMenstruationText: LunaText = {
+    private let message: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 13, color: .black, weight: .regular)
-        label.text = L10n.Constants.Content.Label.Home.recordedMenstruation
         label.numberOfLines = 0
         label.textAlignment = .left
         label.draw(model)
@@ -30,12 +31,12 @@ class RecordedMenstruationCard: UIView, AnyView {
     }
     
     func addSubviews() {
-        addSubview(recordedMenstruationText)
+        addSubview(message)
     }
     
     func addConstraints() {
-        recordedMenstruationText.snp.makeConstraints {
-            $0.top.bottom.equalToSuperview().offset(14)
+        message.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
             $0.leading.trailing.equalToSuperview().offset(20)
         }
     }
@@ -45,6 +46,10 @@ class RecordedMenstruationCard: UIView, AnyView {
         layer.cornerRadius = 1.su
         layer.borderWidth = 1
         layer.borderColor = Asset.secondaryRed200.color.cgColor
+    }
+    
+    func message(for action: FeedbackAfterAction){
+        message.text = action.value
     }
     
 }

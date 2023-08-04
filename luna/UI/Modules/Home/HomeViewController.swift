@@ -41,6 +41,8 @@ class HomeViewController: UIViewController {
         presenter?.checkCalendarPermission()
         addCollectionViewDataSource()
         collectionViewEventObservable()
+        addCyclePhaseEventObservable()
+        addSettingsHandlerEvent()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,6 +85,25 @@ class HomeViewController: UIViewController {
                                            andMoveCenter: centerXtoCollection)
             }.disposed(by: disposeBag)
     }
+    
+    func addCyclePhaseEventObservable() {
+
+        datasource.cyclePhase
+            .asObservable()
+            .subscribe(onNext: { cycle in
+                self.homeView.phaseChanged(to: cycle)
+        }).disposed(by: disposeBag)
+    }
+    
+    func addSettingsHandlerEvent(){
+        
+        homeView
+            .warningCalendarAccess
+            .settingsButton.rx.tap.bind {
+                self.presenter?.userOpenDeviceSettings()
+
+            }.disposed(by: disposeBag)
+    }
 }
 
 
@@ -102,10 +123,22 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     
     
     func userAllowedAccessCalendar() {
+        DispatchQueue.main.async {
+            self.datasource.cyclePhase.onNext(.folicular)
+            self.homeView.userAllowedAccessCalendar()
+        }
     }
     
     func userDeniedAccessCalendar() {
-        
+        DispatchQueue.main.async {
+            self.homeView.userDeniedAccessCalendar()
+        }
+    }
+    
+    func cardFeedbackDisappear() {
+         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0){
+             self.homeView.cardFeedbackDisappear()
+         }
     }
     
     func updateView(_ center: CalendarCollectionViewCell) {

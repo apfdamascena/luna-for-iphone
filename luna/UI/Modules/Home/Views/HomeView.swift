@@ -10,33 +10,32 @@ import SnapKit
 
 class HomeView: UIView, AnyView  {
     
-    private let calendarSyncView = CalendarSyncCard()
-    private let informationalPhaseTextView = InformationalPhaseText()
-    private let recordedMenstruationCardView = RecordedMenstruationCard()
+    private let allContentStackView: UIStackView = {
+        let view = UIStackView()
+        view.axis = .vertical
+        view.alignment = .fill
+        view.spacing = 4.su
+        return view
+    }()
     
     private(set) var calendarCollectionView = CalendarScrollCollectionView()
+    
+    private(set) var warningCalendarAccess = WarningCalendarAccess()
+    
+    private let recordedMenstruationFeedback: FeedbackCard = {
+        let card = FeedbackCard()
+        card.message(for: .recordedMenstruation)
+        return card
+    }()
+        
+    private let menstrualPhaseBehaviorsView = MenstrualPhaseBehaviorsView()
+    private let learnAboutMenstrualCyclePhasesView = LearnAboutMenstrualCyclePhasesView()
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.isScrollEnabled = true
         scrollView.showsVerticalScrollIndicator = true
         return scrollView
-    }()
-    
-    private let contentView: UIStackView = {
-        let view = UIStackView()
-        view.axis = .vertical
-        view.alignment = .fill
-        return view
-    }()
-
-    private let placeHolder: LunaText = {
-        let label = LunaText()
-        let model = LunaTextViewModel(size: 48, color: .black, weight: .bold)
-        label.text = "PLACEHOLDER"
-        label.textAlignment = .center
-        label.draw(model)
-        return label
     }()
     
     private let youAreInLabel: LunaText = {
@@ -104,103 +103,103 @@ class HomeView: UIView, AnyView  {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     func addSubviews() {
         
-//        stackPhaseCycle.addArrangedSubview(youAreInLabel)
-//        stackPhaseCycle.addArrangedSubview(phaseTitle)
-//        stackPhaseLearn.addArrangedSubview(learnCycleTitle)
-//        stackPhaseLearn.addArrangedSubview(cyclePhasesTitle)
+        stackPhaseCycle.addArrangedSubview(youAreInLabel)
+        stackPhaseCycle.addArrangedSubview(phaseTitle)
+        stackPhaseLearn.addArrangedSubview(learnCycleTitle)
+        stackPhaseLearn.addArrangedSubview(cyclePhasesTitle)
+        
         addSubview(calendarCollectionView)
         addSubview(scrollView)
-        scrollView.addSubview(contentView)
-//
-//        contentView.addSubview(placeHolder)
-//        contentView.addSubview(stackPhaseCycle)
-//
-//        contentView.addSubview(calendarSyncView)
-//        contentView.addSubview(stackPhaseLearn)
-//        contentView.addSubview(informationalPhaseTextView)
-////        contentView.addSubview(recordedMenstruationCardView)
+        
+        scrollView.addSubview(allContentStackView)
+        allContentStackView.addArrangedSubview(stackPhaseCycle)
+        allContentStackView.addArrangedSubview(warningCalendarAccess)
+        allContentStackView.addArrangedSubview(stackPhaseLearn)
+    
+        allContentStackView.addArrangedSubview(menstrualPhaseBehaviorsView)
+        
+        allContentStackView.addArrangedSubview(learnAboutMenstrualCyclePhasesView)
+        
+        addSubview(recordedMenstruationFeedback)
         
     }
     
     func addConstraints() {
-//        print(UIScreen.current?.bounds.width)
+        
+        recordedMenstruationFeedback.snp.makeConstraints {
+            $0.bottom.equalTo(safeAreaLayoutGuide).offset(-3.su)
+            $0.leading.trailing.equalToSuperview().inset(3.su)
+            $0.height.equalTo(50)
+        }
         
         calendarCollectionView.snp.makeConstraints{
             $0.height.equalTo(123)
             $0.leading.trailing.equalToSuperview()
             $0.top.equalTo(safeAreaLayoutGuide)
         }
-//
-//
+        
         scrollView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview().inset(3.su)
+            $0.top.equalTo(calendarCollectionView.snp.bottom).offset(3.su)
+            $0.leading.trailing.equalTo(self).inset(3.su)
             $0.bottom.equalTo(safeAreaLayoutGuide)
-            $0.top.equalTo(calendarCollectionView.snp.bottom)
         }
-//
-//        contentView.snp.makeConstraints {
-//            $0.top.equalToSuperview()
-//            $0.width.equalTo(scrollView)
-//        }
+
+        allContentStackView.snp.makeConstraints {
+            $0.top.bottom.equalTo(scrollView)
+            $0.leading.width.equalTo(scrollView)
+        }
         
+        warningCalendarAccess.snp.makeConstraints {
+            $0.height.equalTo(286)
+        }
         
-//
-//        placeHolder.snp.makeConstraints {
-//            $0.top.equalTo(contentView).offset(15.su)
-//            $0.leading.trailing.equalTo(contentView).inset(3.su)
-//        }
-//
-//        stackPhaseCycle.snp.makeConstraints {
-//            $0.top.equalTo(placeHolder.snp.bottom).offset(5.su)
-//            $0.leading.trailing.equalTo(contentView).inset(3.su)
-//        }
-//
-//        calendarSyncView.snp.makeConstraints {
-//            $0.top.equalTo(stackPhaseCycle.snp.bottom).offset(5.su)
-//            $0.leading.trailing.equalTo(contentView).inset(3.su)
-//        }
-//
-//        stackPhaseLearn.snp.makeConstraints {
-//            $0.top.equalTo(calendarSyncView.snp.bottom).offset(4.su)
-//            $0.leading.trailing.equalTo(contentView).inset(3.su)
-//        }
-//
-//        informationalPhaseTextView.snp.makeConstraints {
-//            $0.top.equalTo(stackPhaseLearn.snp.bottom).offset(5.su)
-//            $0.leading.trailing.equalTo(contentView).inset(3.su)
-//        }
-//
-////        recordedMenstruationCardView.snp.makeConstraints {
-////            $0.top.equalTo(informationalPhaseTextView.snp.bottom).offset(53)
-////            $0.leading.trailing.equalTo(contentView).inset(3.su)
-////            $0.bottom.equalTo(contentView)
-////        }
-////
-//        contentView.backgroundColor = .yellow
-//        scrollView.backgroundColor = .green
-//        informationalPhaseTextView.backgroundColor = .purple
-//
+        stackPhaseCycle.snp.makeConstraints {
+            $0.height.equalTo(77)
+        }
+
+        stackPhaseLearn.snp.makeConstraints {
+            $0.height.equalTo(8.su)
+        }
+        
     }
     
     func addAdditionalConfiguration() {
         backgroundColor = .white
-        scrollView.backgroundColor = .yellow
-        contentView.backgroundColor = .blue
+        scrollView.showsVerticalScrollIndicator = false
     }
     
-//    func getCenterCellFromCollectionView(at indexPath: IndexPath) -> CalendarCollectionViewCell? {
-//        return nil
-//        guard let selectedCell = calendarCollectionView.cellForItem(at: indexPath) as? CalendarCollectionViewCell else { return }
-//
-//        let centerPoint = CGPoint(x: calendarCollectionView.frame.size.width / 2 + calendarCollectionView.contentOffset.x,
-//                                  y: calendarCollectionView.frame.size.height / 2 + calendarCollectionView.contentOffset.y)
-//
-//        guard let centerIndex = calendarCollectionView.indexPathForItem(at: centerPoint) else { }
-//        guard let centerCell = calendarCollectionView.cellForItem(at: centerIndex) as? CalendarCollectionViewCell else { return }
-//    }
+    func userDeniedAccessCalendar() {
+        stackPhaseCycle.isHidden = true
+        menstrualPhaseBehaviorsView.isHidden = true
+        
+        warningCalendarAccess.isHidden = false
+        stackPhaseLearn.isHidden = false
+        learnAboutMenstrualCyclePhasesView.isHidden = false
+    }
+    
+    func userAllowedAccessCalendar() {
+        warningCalendarAccess.isHidden = true
+        stackPhaseLearn.isHidden = true
+        learnAboutMenstrualCyclePhasesView.isHidden = true
+        
+        stackPhaseCycle.isHidden = false
+        menstrualPhaseBehaviorsView.isHidden = false
+    }
+    
+    func cardFeedbackDisappear() {
+        recordedMenstruationFeedback.isHidden = true
+    }
+    
+    func phaseChanged(to cycle: CyclePhase) {
+        DispatchQueue.main.async {
+            let model = CyclePhaseTextFactory.create(phase: cycle)
+            self.phaseTitle.text = model.name
+            self.menstrualPhaseBehaviorsView.draw(model)
+        }
+    }
     
 }
+
 
