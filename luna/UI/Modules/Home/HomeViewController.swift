@@ -71,8 +71,10 @@ class HomeViewController: UIViewController {
         homeView.calendarCollectionView.rx
             .didScroll.asObservable()
             .subscribe { _ in
-                 let centerCell = self.proxy.scrollViewDidScroll(self.homeView.calendarCollectionView)
+                let centerCell = self.proxy.scrollViewDidScroll(self.homeView.calendarCollectionView)
                 self.presenter?.change(centerCell)
+                guard let month = centerCell?.getDate() else { return }
+                self.homeView.monthChanged(to: month)
             }.disposed(by: disposeBag)
         
         homeView

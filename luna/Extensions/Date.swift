@@ -25,4 +25,11 @@ extension Date {
         return oi
     }
     
+    func formatMonthToString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM"
+        let month = dateFormatter.string(from: self)
+        return month
+    }
+    
 }
