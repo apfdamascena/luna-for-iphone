@@ -14,6 +14,7 @@ enum CyclePhase: String, CaseIterable {
     case fertile
     case expectedMenstruation
     case pms
+    case none
     
     var value: String {
         switch self {
@@ -29,7 +30,11 @@ enum CyclePhase: String, CaseIterable {
             return L10n.Constants.Content.Label.expectedMenstruation
         case .pms:
             return L10n.Constants.Content.Label.pms
+            
+        default:
+            return ""
         }
+        
     }
         
     var image: UIImage {

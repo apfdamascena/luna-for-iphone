@@ -88,7 +88,16 @@ class LunaCalendarManager {
         return lunaEventService?.lunaEventsExist() ?? false
     }
     
+    func removedEventIfEqualToPhase(menstruationDate: Date) -> Bool {
+        guard let eventService = self.lunaEventService else { return false }
+
+        return eventService.removedEventIfEqualToPhase(cyclePhase: .menstruation, menstruationDate: menstruationDate)
+    }
+    
     func adjustEventsInCalendarBy(menstruationDate: Date) {
+        guard let eventService = self.lunaEventService else { return }
+        
+
         removeFutureEvents(menstruationDate: menstruationDate)
         
         let menstruationDuration = OnboardingUserCycleInformation.shared.menstruationDuration
@@ -101,11 +110,12 @@ class LunaCalendarManager {
         guard let eventService = self.lunaEventService else {
             return false
         }
-        
+            
         var daysNearMenstruation = eventService.eventsAfter(daysAfter: OnboardingUserCycleInformation.shared.menstruationDuration + 5, startDate: menstruationDate)
-        let daysAfterMenstruation = eventService.eventsBefore(daysBefore: OnboardingUserCycleInformation.shared.menstruationDuration - 5, finalDate: menstruationDate)
+        let daysBeforeMenstruation = eventService.eventsBefore(daysBefore: OnboardingUserCycleInformation.shared.menstruationDuration + 5, finalDate: menstruationDate)
         
-        daysNearMenstruation.append(contentsOf: daysAfterMenstruation)
+        daysNearMenstruation.append(contentsOf: daysBeforeMenstruation)
+        
         daysNearMenstruation = daysNearMenstruation.filter { event in
             return event.title == CyclePhase.menstruation.value
         }
@@ -117,12 +127,14 @@ class LunaCalendarManager {
         return false
     }
     
+    
+    
     func removeFutureEvents(menstruationDate: Date)  {
         guard let eventService = self.lunaEventService else {
             return
         }
         
-        var eventsToRemove = eventService.eventsAfter(daysAfter: 200, startDate: menstruationDate)
+        var eventsToRemove = eventService.eventsAfter(daysAfter: HomeCollection.COLLECTION_RANGE, startDate: menstruationDate)
 
         eventsToRemove = eventsToRemove.filter { event in
             return event.title != CyclePhase.menstruation.value
@@ -131,6 +143,12 @@ class LunaCalendarManager {
         for event in eventsToRemove {
             eventService.removeEvent(eventId: event.calendarItemIdentifier)
         }
+    }
+    
+    
+    func getEventsByDate(firstDate: Date, finalDate: Date) -> [EKEvent] {
+        guard let eventService = self.lunaEventService else { return [] }
+        return eventService.getEventsByDate(firstDate: firstDate, finalDate: finalDate)
     }
 
 }

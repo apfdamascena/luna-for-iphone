@@ -10,5 +10,4 @@ import Foundation
 struct CyclePhaseViewModel {
     let phase: CyclePhase
     let day: Date
-    let focus: CyclePhaseFocus
 }

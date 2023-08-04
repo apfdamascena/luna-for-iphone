@@ -40,7 +40,37 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
         lunaCalendarManager.firstLoadElementsToCalendar(firstDayMenstruation: lastDayMenstruation,
                                                         averageMenstruationDuration: menstruationDuration,
                                                         averageCycleDuration: cycleDuration)
+                
+        
     }
+    
+    func loadCalendarToCollection() -> [CyclePhaseViewModel] {
+        
+        let firstDate = Date().daysBefore(HomeCollection.COLLECTION_RANGE/2)
+        let finalDate = Date().daysAfter(HomeCollection.COLLECTION_RANGE/2)
+        
+        let events = lunaCalendarManager.getEventsByDate(firstDate: firstDate, finalDate: finalDate)
+
+        let collectionViewDataSource = CalendarCollectionConverter().turnDaysIntoCyclePhase(events: events)
+        return collectionViewDataSource
+    }
+    
+    func insertedMenstruationToCollection(selectedDate: Date) -> Bool {
+        let removedMenstruation = lunaCalendarManager.removedEventIfEqualToPhase(menstruationDate: selectedDate)
+        
+        if !removedMenstruation {
+            let hasMenstruationInCycle = lunaCalendarManager.hasMenstruationInCycle(menstruationDate: selectedDate)
+            if hasMenstruationInCycle {
+                return false
+            }
+            else {
+                lunaCalendarManager.adjustEventsInCalendarBy(menstruationDate: selectedDate)
+                return true
+            }
+        }
+        return true
+    }
+    
     
     func openDeviceSettings() {
         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class HomePresenter: ViewToPresenterHomeProtocol {
     
@@ -30,6 +31,11 @@ class HomePresenter: ViewToPresenterHomeProtocol {
         interactor?.loadPhasesToUserCalendar()
     }
     
+    func loadCalendarToCollection() {
+        let collectionDataSource = interactor?.loadCalendarToCollection()
+        view?.teste(collectionDataSource: collectionDataSource ?? [])
+    }
+    
     func userSelect(_ cell: CalendarCollectionViewCell?,
                     center centerCell: CalendarCollectionViewCell?,
                     andMoveCenter centerXtoCollection: CGFloat?) {
@@ -39,11 +45,17 @@ class HomePresenter: ViewToPresenterHomeProtocol {
               let centerXtoCollection = centerXtoCollection else { return }
         
         if centerCell == selectedCell {
-            view?.changeSelectedCell()
+            view?.changeSelectedCell(selectedCell: selectedCell)
         } else {
             view?.moveCalendarCollection(toXAxis: centerXtoCollection)
         }
     }
+    
+    func insertMenstruation(selectedDate: Date) -> Bool {
+        guard let insertedMenstruation = interactor?.insertedMenstruationToCollection(selectedDate: selectedDate) else { return false }
+        return insertedMenstruation
+    }
+    
     
     func change(_ centerCell: CalendarCollectionViewCell?) {
         guard let centerCell = centerCell else { return }

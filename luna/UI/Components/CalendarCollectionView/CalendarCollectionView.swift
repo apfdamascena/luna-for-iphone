@@ -47,6 +47,21 @@ class CalendarScrollCollectionView: UICollectionView, AnyView {
         return (selectedCell, centerCell, centerXtoCollection)
     }
     
+    func getInitialOffset() -> (CGFloat?) {
+
+        guard let (firstCell, secondCell) = (cellForItem(at: [0,0]), cellForItem(at: [0,1])) as? (CalendarCollectionViewCell, CalendarCollectionViewCell) else {
+            return (nil)
+        }
+        
+        let firstCellCenterX = firstCell.center.x - 5.5 - frame.size.width / 2
+        
+        let distanceBetween = (secondCell.center.x - 5.5 - frame.size.width / 2) - firstCellCenterX
+        
+        let initialOffset = firstCellCenterX + CGFloat((HomeCollection.COLLECTION_RANGE/2))*distanceBetween
+        
+        return (initialOffset)
+    }
+    
     func getCenterCell(on scroll: UIScrollView) -> CalendarCollectionViewCell? {
         
         let centerPoint = CGPoint(x: frame.size.width / 2 + scroll.contentOffset.x,

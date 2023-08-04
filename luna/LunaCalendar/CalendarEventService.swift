@@ -29,9 +29,8 @@ class CalendarEventService {
         newEvent.endDate = event.endDate
         newEvent.calendar = self.calendar
         newEvent.isAllDay = true
-        DispatchQueue.main.async {
-            try? self.eventStore.save(newEvent, span: .thisEvent)
-        }
+        try? self.eventStore.save(newEvent, span: .thisEvent)
+        
     }
     
     func getEventsByDate(firstDate: Date, finalDate: Date) -> [EKEvent] {
@@ -39,7 +38,6 @@ class CalendarEventService {
         
         let predicate =  eventStore.predicateForEvents(withStart: firstDate, end: finalDate, calendars: [calendar])
         let events = eventStore.events(matching: predicate)
-        
         return events
     }
     
@@ -75,4 +73,15 @@ class CalendarEventService {
             print("removed Event")
         }
     }
+    
+    func removedEventIfEqualToPhase(cyclePhase: CyclePhase, menstruationDate: Date) -> Bool {
+        let teste = getEventsByDate(firstDate: menstruationDate, finalDate: menstruationDate)
+        if teste.first?.title == cyclePhase.value {
+            removeEvent(eventId: teste.first?.eventIdentifier ?? "")
+            return true
+        }
+        return false
+
+    }
+    
 }

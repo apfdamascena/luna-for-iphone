@@ -18,7 +18,6 @@ class HomeViewController: UIViewController {
     
     private var disposeBag = DisposeBag()
     
-    private let days: Observable<[CyclePhaseViewModel]>
     private var datasource: CalendarCollectionViewDataSource
     
     private let proxy: CalendarCollectionViewDelegateProxy
@@ -26,7 +25,6 @@ class HomeViewController: UIViewController {
     init(datasource: CalendarCollectionViewDataSource, proxy: CalendarCollectionViewDelegateProxy ){
         self.proxy = proxy
         self.datasource = datasource
-        self.days = Observable.of(datasource.data)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -48,16 +46,19 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
+        presenter?.loadCalendarToCollection()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         homeView.calendarCollectionView.setMargin(with: self.view.frame.width)
+        moveInitialCollection()
     }
     
     private func addCollectionViewDataSource(){
         
-        days.bind(to: homeView.calendarCollectionView
+        datasource.data.bind(to: homeView.calendarCollectionView
             .rx.items(cellIdentifier: CalendarCollectionViewCell.IDENTIFIER,
                       cellType: CalendarCollectionViewCell.self)){ _, day, cell in
             cell.draw(day)
@@ -86,6 +87,11 @@ class HomeViewController: UIViewController {
             }.disposed(by: disposeBag)
     }
     
+    func moveInitialCollection() {
+        guard let initialOffset = homeView.calendarCollectionView.getInitialOffset() else { return }
+        homeView.calendarCollectionView.contentOffset.x = initialOffset
+    }
+
     func addCyclePhaseEventObservable() {
 
         datasource.cyclePhase
@@ -108,21 +114,63 @@ class HomeViewController: UIViewController {
 
 
 extension HomeViewController: PresenterToViewHomeProtocol {
+    func loadCalendarToCollection(date: Date) {
+        
+    }
 
-    // TODO: Implement View Output Methods
     
+    func teste(collectionDataSource: [CyclePhaseViewModel]) {
+        datasource.data.onNext(collectionDataSource)
+    }
     
     func moveCalendarCollection(toXAxis: CGFloat) {
         self.datasource.lastCell?.transformToStandard()
         self.homeView.calendarCollectionView.contentOffset.x = toXAxis
     }
     
-    func changeSelectedCell() {
+    func changeSelectedCell(selectedCell: CalendarCollectionViewCell) {
+        let selectedIsBeforeToday = selectedCell.day! < Date()
         
+        if selectedIsBeforeToday {
+            let selectedDay = selectedCell.getDate()
+            
+//            let insertedMenstruation = presenter?.insertMenstruation(selectedDate: selectedDay)
+            
+            guard let insertedMenstruation = presenter?.insertMenstruation(selectedDate: selectedDay) else { return }
+            
+            if insertedMenstruation {
+                presenter?.loadCalendarToCollection()
+            }
+            else {
+                
+                let alert = UIAlertController(title: "Aviso",
+                                              message: "Você não pode marcar um dia próximo a outra menstruação marcada",
+                                              preferredStyle: .alert)
+
+                alert.addAction(UIAlertAction(title: "OK",
+                                              style: .default,
+                                              handler: { _ in
+                }))
+
+                present(alert, animated: true, completion: nil)
+            }
+        }
+        else {
+            let alert = UIAlertController(title: "Aviso",
+                                          message: "Você não pode marcar em dias futuros",
+                                          preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "OK",
+                                          style: .default,
+                                          handler: { _ in
+            }))
+
+            present(alert, animated: true, completion: nil)
+        }
     }
     
-    
     func userAllowedAccessCalendar() {
+        presenter?.loadUserCalendar()
         DispatchQueue.main.async {
             self.datasource.cyclePhase.onNext(.folicular)
             self.homeView.userAllowedAccessCalendar()
