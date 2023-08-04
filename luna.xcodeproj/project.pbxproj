@@ -101,7 +101,7 @@
 		A48B7ED02A7993E800CCC4C0 /* CyclePhaseTextFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7ECF2A7993E800CCC4C0 /* CyclePhaseTextFactory.swift */; };
 		A48B7ED22A7993FB00CCC4C0 /* CyclePhaseTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7ED12A7993FB00CCC4C0 /* CyclePhaseTextViewModel.swift */; };
 		A48B7ED42A79994200CCC4C0 /* CyclePhaseText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7ED32A79994200CCC4C0 /* CyclePhaseText.swift */; };
-		A48B7EDA2A7ACBCD00CCC4C0 /* CardHomeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7ED92A7ACBCD00CCC4C0 /* CardHomeInformation.swift */; };
+		A48B7EDA2A7ACBCD00CCC4C0 /* CycleDetailsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7ED92A7ACBCD00CCC4C0 /* CycleDetailsCard.swift */; };
 		A48B7EDC2A7AD3AD00CCC4C0 /* Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = A48B7EDB2A7AD3AD00CCC4C0 /* Constants.strings */; };
 		A48B7EDE2A7ADD6500CCC4C0 /* MenstrualPhaseBehaviorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7EDD2A7ADD6500CCC4C0 /* MenstrualPhaseBehaviorsView.swift */; };
 		A48B7EE02A7AF48E00CCC4C0 /* LineComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7EDF2A7AF48E00CCC4C0 /* LineComponent.swift */; };
@@ -259,7 +259,7 @@
 		A48B7ECF2A7993E800CCC4C0 /* CyclePhaseTextFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclePhaseTextFactory.swift; sourceTree = "<group>"; };
 		A48B7ED12A7993FB00CCC4C0 /* CyclePhaseTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclePhaseTextViewModel.swift; sourceTree = "<group>"; };
 		A48B7ED32A79994200CCC4C0 /* CyclePhaseText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclePhaseText.swift; sourceTree = "<group>"; };
-		A48B7ED92A7ACBCD00CCC4C0 /* CardHomeInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHomeInformation.swift; sourceTree = "<group>"; };
+		A48B7ED92A7ACBCD00CCC4C0 /* CycleDetailsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDetailsCard.swift; sourceTree = "<group>"; };
 		A48B7EDB2A7AD3AD00CCC4C0 /* Constants.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Constants.strings; sourceTree = "<group>"; };
 		A48B7EDD2A7ADD6500CCC4C0 /* MenstrualPhaseBehaviorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstrualPhaseBehaviorsView.swift; sourceTree = "<group>"; };
 		A48B7EDF2A7AF48E00CCC4C0 /* LineComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineComponent.swift; sourceTree = "<group>"; };
@@ -378,6 +378,14 @@
 				0D63371E2A7C7D1300EE9699 /* FeedbackAfterAction.swift */,
 			);
 			path = FeedbackCard;
+			sourceTree = "<group>";
+		};
+		0D6337202A7C80C000EE9699 /* CycleDetailsCard */ = {
+			isa = PBXGroup;
+			children = (
+				A48B7ED92A7ACBCD00CCC4C0 /* CycleDetailsCard.swift */,
+			);
+			path = CycleDetailsCard;
 			sourceTree = "<group>";
 		};
 		0D6794112A71D51800382142 /* Root */ = {
@@ -633,6 +641,7 @@
 		0DDA61352A69D11200CA15C6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0D6337202A7C80C000EE9699 /* CycleDetailsCard */,
 				0D63371D2A7C7B4E00EE9699 /* FeedbackCard */,
 				0D63371C2A7C791900EE9699 /* WarningCalendarAccess */,
 				0D6337192A7C747F00EE9699 /* SegmentedLine */,
@@ -729,7 +738,6 @@
 			children = (
 				A46C05532A74642C0071ABCE /* HomeView.swift */,
 				A48B7ECA2A75A02700CCC4C0 /* LearnAboutMenstrualCyclePhasesView.swift */,
-				A48B7ED92A7ACBCD00CCC4C0 /* CardHomeInformation.swift */,
 				A48B7EDD2A7ADD6500CCC4C0 /* MenstrualPhaseBehaviorsView.swift */,
 			);
 			path = Views;
@@ -1263,7 +1271,7 @@
 				0D4049D72A7047420058669B /* OnboardingPageControlDelegate.swift in Sources */,
 				0D6336A62A77510400EE9699 /* OnboardingCyclePhaseContent.swift in Sources */,
 				A46C054D2A74641E0071ABCE /* LunaButtonBack.swift in Sources */,
-				A48B7EDA2A7ACBCD00CCC4C0 /* CardHomeInformation.swift in Sources */,
+				A48B7EDA2A7ACBCD00CCC4C0 /* CycleDetailsCard.swift in Sources */,
 				CA557BCE2A6B1743001DF2BB /* LandingPageRouter.swift in Sources */,
 				0D6794192A731B5C00382142 /* OnboardingUserCycleInformation.swift in Sources */,
 				A46C054F2A74641E0071ABCE /* LunaButtonStyle.swift in Sources */,

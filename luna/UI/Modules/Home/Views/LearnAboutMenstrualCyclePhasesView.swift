@@ -10,7 +10,7 @@ import SnapKit
 
 class LearnAboutMenstrualCyclePhasesView: UIView, AnyView {
     
-    private var teste: [CardHomeInformation] = []
+    private var teste: [CycleDetailsCard] = []
     private let stopIndex = 4
     
     private let stack: UIStackView = {
@@ -35,7 +35,7 @@ class LearnAboutMenstrualCyclePhasesView: UIView, AnyView {
         CyclePhase.allCases.enumerated().forEach { index, phase in
             guard index < stopIndex else { return }
             
-            let card = CardHomeInformation()
+            let card = CycleDetailsCard()
             let model = CyclePhaseTextFactory.create(phase: phase)
             card.draw(model)
             card.title.text = model.name

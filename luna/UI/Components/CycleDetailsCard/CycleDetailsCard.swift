@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class CardHomeInformation: UIView, AnyView {
+class CycleDetailsCard: UIView, AnyView {
 
     private let line = SegmentedLine()
     

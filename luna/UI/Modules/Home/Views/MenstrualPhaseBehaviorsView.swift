@@ -10,32 +10,32 @@ import UIKit
 
 class MenstrualPhaseBehaviorsView: UIView, AnyView {
     
-    private let whatIsCardInformation: CardHomeInformation = {
-        let container = CardHomeInformation()
+    private let whatIsCardInformation: CycleDetailsCard = {
+        let container = CycleDetailsCard()
         container.title.text = "O que é?"
         return container
     }()
     
-    private let howAreYouCardInformation: CardHomeInformation = {
-        let container = CardHomeInformation()
+    private let howAreYouCardInformation: CycleDetailsCard = {
+        let container = CycleDetailsCard()
         container.title.text = "Como você está?"
         return container
     }()
     
-    private let betterAvoidCardInformation: CardHomeInformation = {
-        let container = CardHomeInformation()
+    private let betterAvoidCardInformation: CycleDetailsCard = {
+        let container = CycleDetailsCard()
         container.title.text = "Melhor evitar, hein!"
         return container
     }()
     
-    private let wannaHelpCardInformation: CardHomeInformation = {
-        let container = CardHomeInformation()
+    private let wannaHelpCardInformation: CycleDetailsCard = {
+        let container = CycleDetailsCard()
         container.title.text = "Quer uma ajuda?"
         return container
     }()
     
-    private let behindSheetsCardInformation: CardHomeInformation = {
-        let container = CardHomeInformation()
+    private let behindSheetsCardInformation: CycleDetailsCard = {
+        let container = CycleDetailsCard()
         container.title.text = "Por trás dos panos"
         return container
     }()
