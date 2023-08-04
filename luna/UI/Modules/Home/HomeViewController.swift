@@ -93,7 +93,6 @@ class HomeViewController: UIViewController {
     func moveInitialCollection() {
         guard let initialOffset = homeView.calendarCollectionView.getInitialOffset() else { return }
         homeView.calendarCollectionView.contentOffset.x = initialOffset
-        print("cacete",datasource.data)
     }
 
     func addCyclePhaseEventObservable() {
