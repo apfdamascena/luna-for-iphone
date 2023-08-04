@@ -13,7 +13,7 @@ class HomeView: UIView, AnyView  {
     private(set) var calendarCollectionView = CalendarScrollCollectionView()
     
     private let calendarSyncView = WarningCalendarAccess()
-    private let recordedMenstruationCardView = RecordedMenstruationCard()
+    private let recordedMenstruationCardView = FeedbackCard()
         
     private let cardsView = HomeCardView()
     private let learnView = HomeLearnView()
