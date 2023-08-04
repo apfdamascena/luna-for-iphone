@@ -37,6 +37,7 @@ protocol ViewToPresenterHomeProtocol {
                     andMoveCenter: CGFloat?)
     
     func change(_ centerCell: CalendarCollectionViewCell?)
+    func userOpenDeviceSettings()
 }
 
 
@@ -47,6 +48,8 @@ protocol PresenterToInteractorHomeProtocol {
     
     func checkIfUserGivePermission(completion: @escaping PermissionResponse)
     func loadPhasesToUserCalendar()
+    
+    func openDeviceSettings()
 }
 
 

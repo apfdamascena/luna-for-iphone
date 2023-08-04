@@ -20,7 +20,7 @@ class HomeView: UIView, AnyView  {
     
     private(set) var calendarCollectionView = CalendarScrollCollectionView()
     
-    private let warningCalendarAccess = WarningCalendarAccess()
+    private(set) var warningCalendarAccess = WarningCalendarAccess()
     
     private let recordedMenstruationFeedback: FeedbackCard = {
         let card = FeedbackCard()

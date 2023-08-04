@@ -42,6 +42,7 @@ class HomeViewController: UIViewController {
         addCollectionViewDataSource()
         collectionViewEventObservable()
         addCyclePhaseEventObservable()
+        addSettingsHandlerEvent()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -92,7 +93,16 @@ class HomeViewController: UIViewController {
             .subscribe(onNext: { cycle in
                 self.homeView.phaseChanged(to: cycle)
         }).disposed(by: disposeBag)
+    }
+    
+    func addSettingsHandlerEvent(){
         
+        homeView
+            .warningCalendarAccess
+            .settingsButton.rx.tap.bind {
+                self.presenter?.userOpenDeviceSettings()
+
+            }.disposed(by: disposeBag)
     }
 }
 

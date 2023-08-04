@@ -52,7 +52,7 @@ class WarningCalendarAccess: UIView, AnyView {
         return label
     }()
     
-    private let settingsButton: LunaButton = {
+    private(set) var settingsButton: LunaButton = {
         let button = LunaButton()
         button.draw(style: .settings)
         return button
