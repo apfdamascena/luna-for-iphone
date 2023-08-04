@@ -44,6 +44,7 @@ protocol ViewToPresenterHomeProtocol {
                     andMoveCenter: CGFloat?)
     
     func change(_ centerCell: CalendarCollectionViewCell?)
+    func userOpenDeviceSettings()
 }
 
 
@@ -56,6 +57,8 @@ protocol PresenterToInteractorHomeProtocol {
     func loadPhasesToUserCalendar()
     func loadCalendarToCollection() -> [CyclePhaseViewModel]
     func insertedMenstruationToCollection(selectedDate: Date) -> Bool
+    
+    func openDeviceSettings()
 }
 
 

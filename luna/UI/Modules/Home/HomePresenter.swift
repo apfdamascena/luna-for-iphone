@@ -10,9 +10,7 @@ import Foundation
 import UIKit
 
 class HomePresenter: ViewToPresenterHomeProtocol {
-
     
-
     var view: PresenterToViewHomeProtocol?
     var interactor: PresenterToInteractorHomeProtocol?
     var router: PresenterToRouterHomeProtocol?
@@ -62,6 +60,10 @@ class HomePresenter: ViewToPresenterHomeProtocol {
     func change(_ centerCell: CalendarCollectionViewCell?) {
         guard let centerCell = centerCell else { return }
         view?.updateView(centerCell)
+    }
+    
+    func userOpenDeviceSettings() {
+        interactor?.openDeviceSettings()
     }
 }
 

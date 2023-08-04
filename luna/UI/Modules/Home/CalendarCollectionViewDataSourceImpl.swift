@@ -8,9 +8,12 @@
 import Foundation
 import RxSwift
 
+
 class CalendarCollectionViewDataSourceImpl: CalendarCollectionViewDataSource {
     var data: PublishSubject<[CyclePhaseViewModel]> = PublishSubject()
 
     var lastCell: CalendarCollectionViewCell?
+    
+    var cyclePhase: PublishSubject<CyclePhase> = PublishSubject()
     
 }

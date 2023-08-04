@@ -14,4 +14,5 @@ protocol CalendarCollectionViewDataSource {
     
     var data: PublishSubject<[CyclePhaseViewModel]> { get }
     var lastCell: CalendarCollectionViewCell? { get set }
+    var cyclePhase: PublishSubject<CyclePhase> { get }
 }

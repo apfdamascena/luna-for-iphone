@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class HomeInteractor: PresenterToInteractorHomeProtocol {
 
@@ -71,4 +72,11 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
     }
     
     
+    func openDeviceSettings() {
+        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
+
+        if UIApplication.shared.canOpenURL(settingsUrl) {
+            UIApplication.shared.open(settingsUrl, completionHandler: { _ in })
+        }
+    }
 }
