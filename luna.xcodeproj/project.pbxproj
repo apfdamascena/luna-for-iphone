@@ -1476,7 +1476,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9YF48LKAWG;
+				DEVELOPMENT_TEAM = M3SKJK6V42;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = luna/Info.plist;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Libere acesso para conseguir usar o app";
@@ -1506,7 +1506,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9YF48LKAWG;
+				DEVELOPMENT_TEAM = M3SKJK6V42;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = luna/Info.plist;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Libere acesso para conseguir usar o app";

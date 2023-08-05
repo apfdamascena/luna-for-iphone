@@ -49,7 +49,6 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
         DispatchQueue.main.async {
-            
             self.presenter?.loadCalendarToCollection()
         }
     }
@@ -58,6 +57,9 @@ class HomeViewController: UIViewController {
         super.viewDidAppear(animated)
         homeView.calendarCollectionView.setMargin(with: self.view.frame.width)
         moveInitialCollection()
+        DispatchQueue.main.async {
+            self.presenter?.loadCalendarToCollection()
+        }
     }
     
     private func addCollectionViewDataSource(){
