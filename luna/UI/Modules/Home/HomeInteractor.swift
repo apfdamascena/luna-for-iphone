@@ -40,8 +40,6 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
         lunaCalendarManager.firstLoadElementsToCalendar(firstDayMenstruation: lastDayMenstruation,
                                                         averageMenstruationDuration: menstruationDuration,
                                                         averageCycleDuration: cycleDuration)
-                
-        
     }
     
     func loadCalendarToCollection() -> [CyclePhaseViewModel] {
