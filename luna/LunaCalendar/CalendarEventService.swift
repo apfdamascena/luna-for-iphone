@@ -30,7 +30,7 @@ class CalendarEventService {
         newEvent.calendar = self.calendar
         newEvent.isAllDay = true
         try? self.eventStore.save(newEvent, span: .thisEvent)
-        
+
     }
     
     func getEventsByDate(firstDate: Date, finalDate: Date) -> [EKEvent] {

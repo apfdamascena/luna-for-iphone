@@ -24,7 +24,7 @@ final class PickerViewAdapter: NSObject,
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return Onboarding.INFINITE_PICKER_SIZE
+        return items[0].count
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
