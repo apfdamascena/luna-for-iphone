@@ -19,7 +19,7 @@ class CyclePhaseTextFactory {
                 avoidDescription: L10n.Constants.Content.Label.Text.Avoid.menstruation,
                 helpDescription: L10n.Constants.Content.Label.Text.Help.menstruation,
                 behindSheets: L10n.Constants.Content.Label.Text.BehindSheets.menstruation,
-                colorBall: ballComponent.red
+                colorBall: BallComponent.red
             )
         case .fertile:
             return CyclePhaseTextViewModel(
@@ -29,7 +29,7 @@ class CyclePhaseTextFactory {
                 avoidDescription: L10n.Constants.Content.Label.Text.Avoid.fertile,
                 helpDescription: L10n.Constants.Content.Label.Text.Help.fertile,
                 behindSheets: L10n.Constants.Content.Label.Text.BehindSheets.fertile,
-                colorBall: ballComponent.blue
+                colorBall: BallComponent.blue
             )
         case .luteal:
             return CyclePhaseTextViewModel(
@@ -39,7 +39,7 @@ class CyclePhaseTextFactory {
                 avoidDescription: L10n.Constants.Content.Label.Text.Avoid.luteal,
                 helpDescription: L10n.Constants.Content.Label.Text.Help.luteal,
                 behindSheets: L10n.Constants.Content.Label.Text.BehindSheets.luteal,
-                colorBall: ballComponent.blue
+                colorBall: BallComponent.blue
             )
         case .folicular:
             return CyclePhaseTextViewModel(
@@ -49,7 +49,7 @@ class CyclePhaseTextFactory {
                 avoidDescription: L10n.Constants.Content.Label.Text.Avoid.folicular,
                 helpDescription: L10n.Constants.Content.Label.Text.Help.folicular,
                 behindSheets: L10n.Constants.Content.Label.Text.BehindSheets.folicular,
-                colorBall: ballComponent.red
+                colorBall: BallComponent.red
             )
             
         default:
@@ -60,7 +60,7 @@ class CyclePhaseTextFactory {
                 avoidDescription: "",
                 helpDescription: "",
                 behindSheets: "",
-                colorBall: ballComponent.red
+                colorBall: BallComponent.red
             )
         }
     }
