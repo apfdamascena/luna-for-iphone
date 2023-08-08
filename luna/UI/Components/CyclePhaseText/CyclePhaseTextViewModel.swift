@@ -8,6 +8,7 @@ struct CyclePhaseTextViewModel {
     let avoidDescription: String
     let helpDescription: String
     let behindSheets: String
+    let colorBall: ballComponent
     
 }
 

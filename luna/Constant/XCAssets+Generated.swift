@@ -30,6 +30,7 @@ internal enum Asset {
   internal static let background = ImageAsset(name: "background")
   internal static let ball = ImageAsset(name: "ball")
   internal static let blueLine = ImageAsset(name: "blue-line")
+  internal static let blueBall = ImageAsset(name: "blue_ball")
   internal static let calendarIcon = ImageAsset(name: "calendar-icon")
   internal static let calendarImage = ImageAsset(name: "calendarImage")
   internal static let cinza100 = ColorAsset(name: "cinza-100")
