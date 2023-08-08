@@ -9,7 +9,7 @@ import UIKit
 
 class SegmentedLine: UIView, AnyView {
     
-    private let ball: UIImageView = {
+    var ball: UIImageView = {
         let view = UIImageView(image: Asset.ball.image)
         return view
     }()
@@ -51,4 +51,9 @@ class SegmentedLine: UIView, AnyView {
     func addAdditionalConfiguration() {
         ball.layer.zPosition = 13
     }
+    
+    func draw(_ color: ballComponent){
+        
+    }
+    
 }
