@@ -17,6 +17,7 @@
 "constants.content.button.start"="Iniciar";
 "constants.content.button.previous"="Voltar";
 "constants.content.button.settings"="Ajustes";
+"constants.content.button.see-more" = "Saiba mais";
 
 "constants.content.label.home.youAreIn" = "Você está na";
 "constants.content.label.home.menstruation" = "Menstruação";
