@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum ballComponent {
+enum BallComponent {
     case blue
     case red
     

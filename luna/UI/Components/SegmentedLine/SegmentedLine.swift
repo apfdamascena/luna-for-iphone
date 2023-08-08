@@ -52,7 +52,7 @@ class SegmentedLine: UIView, AnyView {
         ball.layer.zPosition = 13
     }
     
-    func draw(_ color: ballComponent){
+    func draw(_ color: BallComponent){
         
     }
     

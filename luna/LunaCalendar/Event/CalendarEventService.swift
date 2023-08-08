@@ -81,7 +81,6 @@ class CalendarEventService {
             return true
         }
         return false
-
     }
     
 }
