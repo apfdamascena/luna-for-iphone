@@ -200,7 +200,6 @@
 		0D67942C2A74725200382142 /* TeachRecordMenstruationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachRecordMenstruationRouter.swift; sourceTree = "<group>"; };
 		0D67942D2A74725200382142 /* TeachRecordMenstruationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachRecordMenstruationViewController.swift; sourceTree = "<group>"; };
 		0D6794352A74729100382142 /* TeachRecordMenstruationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachRecordMenstruationView.swift; sourceTree = "<group>"; };
-		0D7C73A52A67566700677D1E /* Constants.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Constants.strings; sourceTree = "<group>"; };
 		0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		0D7C73AF2A67834100677D1E /* TouchableUserEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchableUserEvent.swift; sourceTree = "<group>"; };
@@ -461,7 +460,6 @@
 			children = (
 				0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */,
 				0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */,
-				0D7C73A52A67566700677D1E /* Constants.strings */,
 				A48B7EDB2A7AD3AD00CCC4C0 /* Constants.strings */,
 				0D6336962A774C7D00EE9699 /* Onboarding.swift */,
 				CAE579A32A7ADE2D004EE21C /* HomeCollection.swift */,

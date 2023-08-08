@@ -21,8 +21,7 @@ extension Date {
     }
     
     func formatToString() -> String {
-        let oi = self.formatted(date: .complete, time: .omitted)
-        return oi
+        return self.formatted(date: .complete, time: .omitted)
     }
     
     func formatMonthToString() -> String {

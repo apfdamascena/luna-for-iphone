@@ -40,10 +40,8 @@ class CalendarCollectionConverter {
                 case CyclePhase.folicular.value:
                     defaultPhase = .folicular
                     
-                    
                 case CyclePhase.expectedMenstruation.value:
                     defaultPhase = .expectedMenstruation
-                    
                     
                 case CyclePhase.fertile.value:
                     defaultPhase = .fertile
