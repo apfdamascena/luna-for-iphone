@@ -6,16 +6,8 @@
 //
 
 // [MUDAR]: VER COMO FAZER PRA NAO REINSTANCIAR TUDO DE NOVO
-// Daqui a 3 dias é diferente de estar menstruada por 3 dias
 
 import EventKit
-
-struct CycleInformations {
-    let firstDayMenstruation: Date
-    let averageMenstruationDuration: Int
-    let averageCycleDuration: Int
-    var lastDayMenstruation: Date? = nil
-}
 
 class AnualCycleCalculator {
     let cycleInformations: CycleInformations
@@ -35,7 +27,6 @@ class AnualCycleCalculator {
             monthsFromMenstruation+=1
         }
         return cyclePhases
-        
     }
     
     func menstruationDay() -> LunaEvent {

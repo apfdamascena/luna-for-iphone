@@ -60,8 +60,7 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
             let hasMenstruationInCycle = lunaCalendarManager.hasMenstruationInCycle(menstruationDate: selectedDate)
             if hasMenstruationInCycle {
                 return false
-            }
-            else {
+            } else {
                 lunaCalendarManager.adjustEventsInCalendarBy(menstruationDate: selectedDate)
                 presenter?.showFeedbackRegisterMenstruation()
                 return true
