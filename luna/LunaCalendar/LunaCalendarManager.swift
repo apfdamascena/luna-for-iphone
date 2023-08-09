@@ -7,16 +7,6 @@
 
 import EventKit
 
-enum CalendarAccess {
-    case authorized
-    case unauthorized
-}
-
-enum CalendarAccessError: Error {
-    
-    case permissionDenied
-}
-
 typealias PermissionResponse = ((Result<CalendarAccess, Error>) -> Void)
 
 class LunaCalendarManager {
@@ -59,9 +49,18 @@ class LunaCalendarManager {
         return lunaEventService?.getEventsByDate(firstDate: daysBeforeDate, finalDate: finalDate)
     }
     
+    func lunaEventsExist() -> Bool {
+        return lunaEventService?.lunaEventsExist() ?? false
+    }
+    
     func eventsAfter(daysAfter: Int, startDate: Date) -> [EKEvent]? {
         let daysAfterDate = startDate.daysAfter(daysAfter)
         return lunaEventService?.getEventsByDate(firstDate: startDate, finalDate: daysAfterDate)
+    }
+    
+    func getEventsByDate(firstDate: Date, finalDate: Date) -> [EKEvent] {
+        guard let eventService = self.lunaEventService else { return [] }
+        return eventService.getEventsByDate(firstDate: firstDate, finalDate: finalDate)
     }
     
 
@@ -84,10 +83,8 @@ class LunaCalendarManager {
         }
     }
     
-    func lunaEventsExist() -> Bool {
-        return lunaEventService?.lunaEventsExist() ?? false
-    }
-    
+    // [MUDAR] -  Provavelmente vai ter que refazer muita coisa aqui
+
     func removedEventIfEqualToPhase(menstruationDate: Date) -> Bool {
         guard let eventService = self.lunaEventService else { return false }
 
@@ -127,8 +124,6 @@ class LunaCalendarManager {
         return false
     }
     
-    
-    
     func removeFutureEvents(menstruationDate: Date)  {
         guard let eventService = self.lunaEventService else {
             return
@@ -144,11 +139,6 @@ class LunaCalendarManager {
             eventService.removeEvent(eventId: event.calendarItemIdentifier)
         }
     }
-    
-    
-    func getEventsByDate(firstDate: Date, finalDate: Date) -> [EKEvent] {
-        guard let eventService = self.lunaEventService else { return [] }
-        return eventService.getEventsByDate(firstDate: firstDate, finalDate: finalDate)
-    }
+
 
 }
