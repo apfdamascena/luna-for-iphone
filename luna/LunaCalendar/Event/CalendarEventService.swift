@@ -7,12 +7,6 @@
 
 import EventKit
 
-struct LunaEvent {
-    let title: CyclePhase
-    let startDate: Date
-    let endDate: Date
-}
-
 class CalendarEventService {
     private let eventStore: EKEventStore
     private let calendar: EKCalendar?
@@ -30,7 +24,6 @@ class CalendarEventService {
         newEvent.calendar = self.calendar
         newEvent.isAllDay = true
         try? self.eventStore.save(newEvent, span: .thisEvent)
-
     }
     
     func getEventsByDate(firstDate: Date, finalDate: Date) -> [EKEvent] {
