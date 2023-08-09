@@ -15,15 +15,12 @@ class HomeViewController: UIViewController {
     var presenter: ViewToPresenterHomeProtocol?
     
     private let homeView = HomeView()
-    
     private var disposeBag = DisposeBag()
     
     private var datasource: CalendarCollectionViewDataSource
+    private(set) var proxy: CalendarCollectionViewDelegateProxy = RxCalendarCollectionViewDelegateProxy()
     
-    private let proxy: CalendarCollectionViewDelegateProxy
-    
-    init(datasource: CalendarCollectionViewDataSource, proxy: CalendarCollectionViewDelegateProxy ){
-        self.proxy = proxy
+    init(datasource: CalendarCollectionViewDataSource){
         self.datasource = datasource
         super.init(nibName: nil, bundle: nil)
     }
@@ -32,18 +29,22 @@ class HomeViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func loadView() {
+        super.loadView()
+        view = homeView
+    }
+    
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        view = homeView
         presenter?.checkCalendarPermission()
+        
         addCollectionViewDataSource()
         collectionViewEventObservable()
         addCyclePhaseEventObservable()
         addSettingsHandlerEvent()
         addAccesCalendarHandler()
         seeMoreButtonTouchTrigger()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +54,6 @@ class HomeViewController: UIViewController {
             self.presenter?.loadCalendarToCollection()
         }
     }
-    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -65,6 +65,7 @@ class HomeViewController: UIViewController {
     }
     
     private func addCollectionViewDataSource(){
+        
         datasource.data.bind(to: homeView.calendarCollectionView
             .rx.items(cellIdentifier: CalendarCollectionViewCell.IDENTIFIER,
                       cellType: CalendarCollectionViewCell.self)){ _, day, cell in
@@ -73,6 +74,7 @@ class HomeViewController: UIViewController {
     }
     
     func collectionViewEventObservable() {
+        
         homeView.calendarCollectionView.rx
             .didScroll.asObservable()
             .subscribe { _ in
@@ -83,17 +85,14 @@ class HomeViewController: UIViewController {
                 guard let month = centerCell?.getDate() else { return }
                 self.homeView.monthChanged(to: month)
             }.disposed(by: disposeBag)
-        
-        homeView
-            .calendarCollectionView
-            .rx.itemSelected
-            .map { indexPath in
-                self.homeView.calendarCollectionView.getSelectedAndCenterCell(at: indexPath)
-            }.subscribe { selectedCell, centerCell, centerXtoCollection in
-                self.presenter?.userSelect(selectedCell,
-                                           center: centerCell,
+                
+        homeView.calendarCollectionView
+            .rx.selectItemAtCalendar
+            .subscribe(onNext: { selectedCell, centerCell, centerXtoCollection in
+                self.presenter?.userSelect(selectedCell, center: centerCell,
                                            andMoveCenter: centerXtoCollection)
-            }.disposed(by: disposeBag)
+            })
+            .disposed(by: disposeBag)
         
     }
     
@@ -118,7 +117,6 @@ class HomeViewController: UIViewController {
             .warningCalendarAccess
             .settingsButton.rx.tap.bind {
                 self.presenter?.userOpenDeviceSettings()
-
             }.disposed(by: disposeBag)
     }
     
@@ -128,15 +126,14 @@ class HomeViewController: UIViewController {
             .asObservable()
             .subscribe(onNext: { access in
                 self.homeView.accessToCalendar(allowed: access)
-            })
+            }).disposed(by: disposeBag)
     }
     
     func seeMoreButtonTouchTrigger() {
         
         homeView.seeMoreButton.rx.tap.bind {
             self.presenter?.callReferencesSheet()
-        }
-
+        }.disposed(by: disposeBag)
     }
 }
 
@@ -230,7 +227,6 @@ extension HomeViewController: PresenterToViewHomeProtocol {
             self.datasource.lastCell = center
             center.transformToLarge()
         }
-
     }
  
 }
