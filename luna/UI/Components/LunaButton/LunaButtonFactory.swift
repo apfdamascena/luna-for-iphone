@@ -18,6 +18,8 @@ class LunaButtonFactory {
             return LunaButtonProceed(button, style: lunaStyle)
         case .settings:
             return LunaButtonProceed(button, style: lunaStyle)
+        case .seeMore:
+            return LunaButtonSeeMore(button)
         }
     }
 }

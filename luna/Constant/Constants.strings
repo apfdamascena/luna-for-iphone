@@ -17,6 +17,7 @@
 "constants.content.button.start"="Iniciar";
 "constants.content.button.previous"="Voltar";
 "constants.content.button.settings"="Ajustes";
+"constants.content.button.see-more" = "Saiba Mais";
 
 "constants.content.label.home.youAreIn" = "Você está na";
 "constants.content.label.home.menstruation" = "Menstruação";
@@ -94,7 +95,22 @@
 "constants.content.label.onboarding_luteal"="Fase Lútea";
 "constants.content.label.onboarding_luteal_description"="As nuvens azuis representam os dias que você está na fase lútea.";
 
+"constants.content.label.home.text.references.first" = "Mesen TB, Young SL. Progesterone and the luteal phase: a requisite to reproduction. Obstet Gynecol Clin North Am. 2015 Mar;42(1):135-51. PMID: 25681845; PMCID: PMC4436586.";
 
+"constants.content.label.home.text.references.second" = "Jukic AM, Weinberg CR, Baird DD, Wilcox AJ. Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular. J Womens Health (Larchmt). 2007 Nov;16(9):1340-7. PMID: 18001191; PMCID: PMC2834565.";
 
+"constants.content.label.home.text.references.third" = "Lima MP, Moreira MA, Maynard DC, Cruz MFA (2021) Alterações fisiológicas e comportamentais da mulher no ciclo menstrual e o impacto da suplementação nutricional / Physiological and behavioral changes in women during the menstrual cycle and the impact of nutritional supplementation. Published: 16/12/2021]. Revista de Saúde e Nutrição 28(1): e021001.";
 
+"constants.content.label.home.text.references.fourth" = "Ponzo S, Wickham A, Bamford R, Radovic T, Zhaunova L, Peven K, Klepchukova A, Payne JL. Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app. Digit Health. 2022 Dec 15;8:20552076221145852. PMID: 36544535; PMCID: PMC9761221.";
 
+"constants.content.label.home.text.references.fifth" = "Souza EG, Ramos MG, Hara C, Stumpf BP, Rocha FL. Neuropsychological performance and menstrual cycle: a literature review. Trends Psychiatry Psychother. 2012;34(1):5-12.";
+
+"constants.content.label.home.link.references.first" = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4436586/";
+
+"constants.content.label.home.link.references.second" = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2834565/";
+
+"constants.content.label.home.link.references.third" = "https://rsdjournal.org/index.php/rsd/article/view/23925/21106";
+
+"constants.content.label.home.link.references.fourth" = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9761221/";
+
+"constants.content.label.home.link.references.fifth" = "https://www.scielo.br/j/trends/a/sCgf4Rzvkvjmmv4bSMzV6vk/?format=pdf&lang=en";

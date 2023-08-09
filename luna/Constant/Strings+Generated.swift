@@ -21,6 +21,8 @@ internal enum L10n {
         internal static let `continue` = L10n.tr("Constants", "constants.content.button.continue", fallback: "Continuar")
         /// Voltar
         internal static let previous = L10n.tr("Constants", "constants.content.button.previous", fallback: "Voltar")
+        /// Saiba Mais
+        internal static let seeMore = L10n.tr("Constants", "constants.content.button.see-more", fallback: "Saiba Mais")
         /// Ajustes
         internal static let settings = L10n.tr("Constants", "constants.content.button.settings", fallback: "Ajustes")
         /// Iniciar
@@ -106,6 +108,34 @@ internal enum L10n {
             internal static let `do` = L10n.tr("Constants", "constants.content.label.home.informational.do", fallback: "O que fazer?")
             /// O que é?
             internal static let what = L10n.tr("Constants", "constants.content.label.home.informational.what", fallback: "O que é?")
+          }
+          internal enum Link {
+            internal enum References {
+              /// https://www.scielo.br/j/trends/a/sCgf4Rzvkvjmmv4bSMzV6vk/?format=pdf&lang=en
+              internal static let fifth = L10n.tr("Constants", "constants.content.label.home.link.references.fifth", fallback: "https://www.scielo.br/j/trends/a/sCgf4Rzvkvjmmv4bSMzV6vk/?format=pdf&lang=en")
+              /// https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4436586/
+              internal static let first = L10n.tr("Constants", "constants.content.label.home.link.references.first", fallback: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4436586/")
+              /// https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9761221/
+              internal static let fourth = L10n.tr("Constants", "constants.content.label.home.link.references.fourth", fallback: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9761221/")
+              /// https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2834565/
+              internal static let second = L10n.tr("Constants", "constants.content.label.home.link.references.second", fallback: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2834565/")
+              /// https://rsdjournal.org/index.php/rsd/article/view/23925/21106
+              internal static let third = L10n.tr("Constants", "constants.content.label.home.link.references.third", fallback: "https://rsdjournal.org/index.php/rsd/article/view/23925/21106")
+            }
+          }
+          internal enum Text {
+            internal enum References {
+              /// Souza EG, Ramos MG, Hara C, Stumpf BP, Rocha FL. Neuropsychological performance and menstrual cycle: a literature review. Trends Psychiatry Psychother. 2012;34(1):5-12.
+              internal static let fifth = L10n.tr("Constants", "constants.content.label.home.text.references.fifth", fallback: "Souza EG, Ramos MG, Hara C, Stumpf BP, Rocha FL. Neuropsychological performance and menstrual cycle: a literature review. Trends Psychiatry Psychother. 2012;34(1):5-12.")
+              /// Mesen TB, Young SL. Progesterone and the luteal phase: a requisite to reproduction. Obstet Gynecol Clin North Am. 2015 Mar;42(1):135-51. PMID: 25681845; PMCID: PMC4436586.
+              internal static let first = L10n.tr("Constants", "constants.content.label.home.text.references.first", fallback: "Mesen TB, Young SL. Progesterone and the luteal phase: a requisite to reproduction. Obstet Gynecol Clin North Am. 2015 Mar;42(1):135-51. PMID: 25681845; PMCID: PMC4436586.")
+              /// Ponzo S, Wickham A, Bamford R, Radovic T, Zhaunova L, Peven K, Klepchukova A, Payne JL. Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app. Digit Health. 2022 Dec 15;8:20552076221145852. PMID: 36544535; PMCID: PMC9761221.
+              internal static let fourth = L10n.tr("Constants", "constants.content.label.home.text.references.fourth", fallback: "Ponzo S, Wickham A, Bamford R, Radovic T, Zhaunova L, Peven K, Klepchukova A, Payne JL. Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app. Digit Health. 2022 Dec 15;8:20552076221145852. PMID: 36544535; PMCID: PMC9761221.")
+              /// Jukic AM, Weinberg CR, Baird DD, Wilcox AJ. Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular. J Womens Health (Larchmt). 2007 Nov;16(9):1340-7. PMID: 18001191; PMCID: PMC2834565.
+              internal static let second = L10n.tr("Constants", "constants.content.label.home.text.references.second", fallback: "Jukic AM, Weinberg CR, Baird DD, Wilcox AJ. Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular. J Womens Health (Larchmt). 2007 Nov;16(9):1340-7. PMID: 18001191; PMCID: PMC2834565.")
+              /// Lima MP, Moreira MA, Maynard DC, Cruz MFA (2021) Alterações fisiológicas e comportamentais da mulher no ciclo menstrual e o impacto da suplementação nutricional / Physiological and behavioral changes in women during the menstrual cycle and the impact of nutritional supplementation. Published: 16/12/2021]. Revista de Saúde e Nutrição 28(1): e021001.
+              internal static let third = L10n.tr("Constants", "constants.content.label.home.text.references.third", fallback: "Lima MP, Moreira MA, Maynard DC, Cruz MFA (2021) Alterações fisiológicas e comportamentais da mulher no ciclo menstrual e o impacto da suplementação nutricional / Physiological and behavioral changes in women during the menstrual cycle and the impact of nutritional supplementation. Published: 16/12/2021]. Revista de Saúde e Nutrição 28(1): e021001.")
+            }
           }
         }
         internal enum Phase {

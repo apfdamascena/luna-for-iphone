@@ -51,6 +51,21 @@ class HomeView: UIView, AnyView  {
         return label
     }()
     
+    let seeMoreButton: LunaButton = {
+        let button = LunaButton()
+        button.draw(style: .seeMore)
+        button.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        return button
+    }()
+    
+    private let ball: UIImageView = {
+        let view = UIImageView(image: Asset.ball.image)
+        view.contentMode = .scaleAspectFit
+        view.clipsToBounds = true
+        view.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        return view
+    }()
+    
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.isScrollEnabled = true
@@ -122,6 +137,14 @@ class HomeView: UIView, AnyView  {
         return view
     }()
     
+    private let stackSeeMore: UIStackView = {
+        let view = UIStackView()
+        view.axis = .horizontal
+        view.alignment = .center
+        view.distribution = .fill
+        return view
+    }()
+    
     private let warningNoMenstrualData: WarningNoMenstrualData = {
         let view = WarningNoMenstrualData()
         view.isHidden = true
@@ -139,6 +162,21 @@ class HomeView: UIView, AnyView  {
     
     func addSubviews() {
         
+        addSubview(stackMonthTag)
+        addSubview(calendarCollectionView)
+        addSubview(scrollView)
+        addSubview(recordedMenstruationFeedback)
+        
+        scrollView.addSubview(allContentStackView)
+        
+        allContentStackView.addArrangedSubview(stackPhaseCycle)
+        allContentStackView.addArrangedSubview(warningCalendarAccess)
+        allContentStackView.addArrangedSubview(stackPhaseLearn)
+        allContentStackView.addArrangedSubview(menstrualPhaseBehaviorsView)
+        menstrualPhaseBehaviorsView.stack.addArrangedSubview(stackSeeMore)
+        allContentStackView.addArrangedSubview(learnAboutMenstrualCyclePhasesView)
+        allContentStackView.addArrangedSubview(warningNoMenstrualData)
+        
         stackPhaseCycle.addArrangedSubview(youAreInLabel)
         stackPhaseCycle.addArrangedSubview(phaseTitle)
         stackPhaseLearn.addArrangedSubview(learnCycleTitle)
@@ -147,20 +185,8 @@ class HomeView: UIView, AnyView  {
         stackMonthTag.addArrangedSubview(iconCalendar)
         stackMonthTag.addArrangedSubview(monthText)
         
-        addSubview(stackMonthTag)
-        addSubview(calendarCollectionView)
-        addSubview(scrollView)
-        
-        scrollView.addSubview(allContentStackView)
-        allContentStackView.addArrangedSubview(stackPhaseCycle)
-        allContentStackView.addArrangedSubview(warningCalendarAccess)
-        allContentStackView.addArrangedSubview(stackPhaseLearn)
-        allContentStackView.addArrangedSubview(menstrualPhaseBehaviorsView)
-        allContentStackView.addArrangedSubview(learnAboutMenstrualCyclePhasesView)
-        
-        allContentStackView.addArrangedSubview(warningNoMenstrualData)
-        
-        addSubview(recordedMenstruationFeedback)
+        stackSeeMore.addArrangedSubview(ball)
+        stackSeeMore.addArrangedSubview(seeMoreButton)
     }
     
     func addConstraints() {
@@ -215,6 +241,9 @@ class HomeView: UIView, AnyView  {
     func addAdditionalConfiguration() {
         backgroundColor = .white
         scrollView.showsVerticalScrollIndicator = false
+//        stackSeeMore.backgroundColor = .green
+//        ball.backgroundColor = .systemPink
+//        seeMoreButton.backgroundColor = .orange
     }
     
     func userDeniedAccessCalendar() {
