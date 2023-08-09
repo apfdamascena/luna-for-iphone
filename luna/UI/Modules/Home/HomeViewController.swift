@@ -40,7 +40,7 @@ class HomeViewController: UIViewController {
         presenter?.checkCalendarPermission()
         
         addCollectionViewDataSource()
-        collectionViewEventObservable()
+        addCalendarEventObservable()
         addCyclePhaseEventObservable()
         addSettingsHandlerEvent()
         addAccesCalendarHandler()
@@ -73,16 +73,18 @@ class HomeViewController: UIViewController {
         }.disposed(by: disposeBag)
     }
     
-    func collectionViewEventObservable() {
+    func addCalendarEventObservable() {
         
         homeView.calendarCollectionView
             .rx.scrollToCenter
             .subscribe(onNext: { centerCell, phase, month in
-                guard let phase = phase,
-                      let month = month else { return }
-                self.presenter?.change(centerCell)
-                self.datasource.cyclePhase.onNext(phase)
-                self.homeView.monthChanged(to: month)
+                guard let menstruationPhase = phase,
+                      let calendarMonth = month else { return }
+                
+                self.presenter?.moveTo(centerCell)
+                self.presenter?.scrollMonth(to: calendarMonth)
+                self.datasource.cyclePhase.onNext(menstruationPhase)
+
             }).disposed(by: disposeBag)
         
         
@@ -138,6 +140,11 @@ class HomeViewController: UIViewController {
 
 
 extension HomeViewController: PresenterToViewHomeProtocol {
+    
+    func moveMonth(to month: Date) {
+        self.homeView.monthChanged(to: month)
+    }
+    
     func loadCalendarToCollection(date: Date) {
         
     }
