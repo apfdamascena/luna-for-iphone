@@ -63,7 +63,7 @@ class HomePresenter: ViewToPresenterHomeProtocol {
     }
 
     
-    func change(_ centerCell: CalendarCollectionViewCell?) {
+    func moveTo(_ centerCell: CalendarCollectionViewCell?) {
         guard let centerCell = centerCell else { return }
         view?.updateView(centerCell)
     }
@@ -71,6 +71,11 @@ class HomePresenter: ViewToPresenterHomeProtocol {
     func userOpenDeviceSettings() {
         interactor?.openDeviceSettings()
     }
+    
+    func moveTo(_ month: Date) {
+        view?.moveTo(month)
+    }
+    
 }
 
 extension HomePresenter: InteractorToPresenterHomeProtocol {

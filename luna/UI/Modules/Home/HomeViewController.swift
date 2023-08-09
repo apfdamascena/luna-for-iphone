@@ -15,15 +15,11 @@ class HomeViewController: UIViewController {
     var presenter: ViewToPresenterHomeProtocol?
     
     private let homeView = HomeView()
-    
     private var disposeBag = DisposeBag()
     
     private var datasource: CalendarCollectionViewDataSource
     
-    private let proxy: CalendarCollectionViewDelegateProxy
-    
-    init(datasource: CalendarCollectionViewDataSource, proxy: CalendarCollectionViewDelegateProxy ){
-        self.proxy = proxy
+    init(datasource: CalendarCollectionViewDataSource){
         self.datasource = datasource
         super.init(nibName: nil, bundle: nil)
     }
@@ -32,18 +28,22 @@ class HomeViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func loadView() {
+        super.loadView()
+        view = homeView
+    }
+    
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        view = homeView
         presenter?.checkCalendarPermission()
+        
         addCollectionViewDataSource()
-        collectionViewEventObservable()
+        addCalendarEventObservable()
         addCyclePhaseEventObservable()
         addSettingsHandlerEvent()
         addAccesCalendarHandler()
         seeMoreButtonTouchTrigger()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +53,6 @@ class HomeViewController: UIViewController {
             self.presenter?.loadCalendarToCollection()
         }
     }
-    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -65,6 +64,7 @@ class HomeViewController: UIViewController {
     }
     
     private func addCollectionViewDataSource(){
+        
         datasource.data.bind(to: homeView.calendarCollectionView
             .rx.items(cellIdentifier: CalendarCollectionViewCell.IDENTIFIER,
                       cellType: CalendarCollectionViewCell.self)){ _, day, cell in
@@ -72,28 +72,27 @@ class HomeViewController: UIViewController {
         }.disposed(by: disposeBag)
     }
     
-    func collectionViewEventObservable() {
-        homeView.calendarCollectionView.rx
-            .didScroll.asObservable()
-            .subscribe { _ in
-                let centerCell = self.proxy.scrollViewDidScroll(self.homeView.calendarCollectionView)
-                self.presenter?.change(centerCell)
-                guard let centerCellPhase = centerCell?.getPhase() else { return }
-                self.datasource.cyclePhase.onNext(centerCellPhase)
-                guard let month = centerCell?.getDate() else { return }
-                self.homeView.monthChanged(to: month)
-            }.disposed(by: disposeBag)
+    func addCalendarEventObservable() {
         
-        homeView
-            .calendarCollectionView
-            .rx.itemSelected
-            .map { indexPath in
-                self.homeView.calendarCollectionView.getSelectedAndCenterCell(at: indexPath)
-            }.subscribe { selectedCell, centerCell, centerXtoCollection in
-                self.presenter?.userSelect(selectedCell,
-                                           center: centerCell,
+        homeView.calendarCollectionView
+            .rx.scrollToCenter
+            .subscribe(onNext: { centerCell, phase, month in
+                guard let menstruationPhase = phase,
+                      let calendarMonth = month else { return }
+                
+                self.presenter?.moveTo(centerCell)
+                self.presenter?.moveTo(calendarMonth)
+                self.datasource.cyclePhase.onNext(menstruationPhase)
+
+            }).disposed(by: disposeBag)
+        
+        
+        homeView.calendarCollectionView
+            .rx.selectItemAtCalendar
+            .subscribe(onNext: { selectedCell, centerCell, centerXtoCollection in
+                self.presenter?.userSelect(selectedCell, center: centerCell,
                                            andMoveCenter: centerXtoCollection)
-            }.disposed(by: disposeBag)
+            }).disposed(by: disposeBag)
         
     }
     
@@ -118,7 +117,6 @@ class HomeViewController: UIViewController {
             .warningCalendarAccess
             .settingsButton.rx.tap.bind {
                 self.presenter?.userOpenDeviceSettings()
-
             }.disposed(by: disposeBag)
     }
     
@@ -128,20 +126,24 @@ class HomeViewController: UIViewController {
             .asObservable()
             .subscribe(onNext: { access in
                 self.homeView.accessToCalendar(allowed: access)
-            })
+            }).disposed(by: disposeBag)
     }
     
     func seeMoreButtonTouchTrigger() {
         
         homeView.seeMoreButton.rx.tap.bind {
             self.presenter?.callReferencesSheet()
-        }
-
+        }.disposed(by: disposeBag)
     }
 }
 
 
 extension HomeViewController: PresenterToViewHomeProtocol {
+    
+    func moveTo(_ month: Date) {
+        self.homeView.monthChanged(to: month)
+    }
+    
     func loadCalendarToCollection(date: Date) {
         
     }
@@ -230,7 +232,6 @@ extension HomeViewController: PresenterToViewHomeProtocol {
             self.datasource.lastCell = center
             center.transformToLarge()
         }
-
     }
  
 }

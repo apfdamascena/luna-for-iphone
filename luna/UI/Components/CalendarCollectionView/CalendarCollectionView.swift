@@ -79,4 +79,11 @@ class CalendarScrollCollectionView: UICollectionView, AnyView {
         let sideInset = ( width / 2) - layoutMargins
         contentInset = UIEdgeInsets(top: 0, left: sideInset, bottom: 0, right: sideInset)
     }
+    
+    
+    func scrollViewDidScroll() -> CalendarCollectionViewCell? {
+        guard let centerCell = self.getCenterCell(on: self) else { return nil }
+        
+        return centerCell
+    }
 }

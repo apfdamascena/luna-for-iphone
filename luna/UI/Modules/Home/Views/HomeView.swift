@@ -241,9 +241,6 @@ class HomeView: UIView, AnyView  {
     func addAdditionalConfiguration() {
         backgroundColor = .white
         scrollView.showsVerticalScrollIndicator = false
-//        stackSeeMore.backgroundColor = .green
-//        ball.backgroundColor = .systemPink
-//        seeMoreButton.backgroundColor = .orange
     }
     
     func userDeniedAccessCalendar() {

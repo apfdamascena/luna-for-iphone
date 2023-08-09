@@ -31,8 +31,7 @@ class HomeRouter: PresenterToRouterHomeProtocol {
     
     static func createModule() -> UIViewController {
         
-        let viewController = HomeViewController(datasource: CalendarCollectionViewDataSourceImpl(),
-                                                proxy: RxCalendarCollectionViewDelegateProxy())
+        let viewController = HomeViewController(datasource: CalendarCollectionViewDataSourceImpl())
         
         let presenter: ViewToPresenterHomeProtocol & InteractorToPresenterHomeProtocol = HomePresenter()
         
