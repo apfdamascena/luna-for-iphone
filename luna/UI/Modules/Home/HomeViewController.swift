@@ -42,7 +42,7 @@ class HomeViewController: UIViewController {
         addCyclePhaseEventObservable()
         addSettingsHandlerEvent()
         addAccesCalendarHandler()
-        self.presenter?.callReferencesSheet()
+        seeMoreButtonTouchTrigger()
         
     }
     
@@ -54,6 +54,7 @@ class HomeViewController: UIViewController {
         }
     }
     
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         homeView.calendarCollectionView.setMargin(with: self.view.frame.width)
@@ -64,13 +65,11 @@ class HomeViewController: UIViewController {
     }
     
     private func addCollectionViewDataSource(){
-        
         datasource.data.bind(to: homeView.calendarCollectionView
             .rx.items(cellIdentifier: CalendarCollectionViewCell.IDENTIFIER,
                       cellType: CalendarCollectionViewCell.self)){ _, day, cell in
             cell.draw(day)
         }.disposed(by: disposeBag)
-        
     }
     
     func collectionViewEventObservable() {
@@ -130,6 +129,14 @@ class HomeViewController: UIViewController {
             .subscribe(onNext: { access in
                 self.homeView.accessToCalendar(allowed: access)
             })
+    }
+    
+    func seeMoreButtonTouchTrigger() {
+        
+        homeView.seeMoreButton.rx.tap.bind {
+            self.presenter?.callReferencesSheet()
+        }
+
     }
 }
 

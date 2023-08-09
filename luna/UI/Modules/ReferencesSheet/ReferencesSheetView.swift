@@ -19,74 +19,72 @@ class ReferencesSheetView: UIView, AnyView {
         label.text = "Referências"
         label.numberOfLines = 0
         label.textAlignment = .left
-        
         label.draw(model)
         return label
     }()
     
-    private let reference1: LunaText = {
-        let label = LunaText()
-        let model = LunaTextViewModel(size: 20,
-                                      color: .black,
-                                      weight: .medium)
-        
-        label.text = "Mesen TB, Young SL. Progesterone and the luteal phase: a requisite to reproduction. Obstet Gynecol Clin North Am. 2015 Mar;42(1):135-51. PMID: 25681845; PMCID: PMC4436586."
-        label.numberOfLines = 0
-        label.textAlignment = .left
-        
-        label.draw(model)
-        return label
+    private let firstReference: ReferenceCard = {
+        let card = ReferenceCard()
+        let viewModel = ReferenceTextViewModel(
+            number: "1.",
+            reference: L10n.Constants.Content.Label.Home.Text.References.first,
+            link: L10n.Constants.Content.Label.Home.Link.References.first)
+        card.draw(viewModel)
+        return card
     }()
     
-    private let reference2: LunaText = {
-        let label = LunaText()
-        let model = LunaTextViewModel(size: 20,
-                                      color: .black,
-                                      weight: .medium)
-        
-        label.text = "Mesen TB, Young SL. Progesterone and the luteal phase: a requisite to reproduction. Obstet Gynecol Clin North Am. 2015 Mar;42(1):135-51. PMID: 25681845; PMCID: PMC4436586."
-        label.numberOfLines = 0
-        label.textAlignment = .left
-        
-        label.draw(model)
-        return label
+    private let secondReference: ReferenceCard = {
+        let card = ReferenceCard()
+        let viewModel = ReferenceTextViewModel(
+            number: "2.",
+            reference: L10n.Constants.Content.Label.Home.Text.References.second,
+            link: L10n.Constants.Content.Label.Home.Link.References.second)
+        card.draw(viewModel)
+        return card
     }()
     
-    private let reference3: LunaText = {
-        let label = LunaText()
-        let model = LunaTextViewModel(size: 20,
-                                      color: .black,
-                                      weight: .medium)
-        
-        label.text = "Mesen TB, Young SL. Progesterone and the luteal phase: a requisite to reproduction. Obstet Gynecol Clin North Am. 2015 Mar;42(1):135-51. PMID: 25681845; PMCID: PMC4436586."
-        label.numberOfLines = 0
-        label.textAlignment = .left
-        
-        label.draw(model)
-        return label
+    private let thirdReference: ReferenceCard = {
+        let card = ReferenceCard()
+        let viewModel = ReferenceTextViewModel(
+            number: "3.",
+            reference: L10n.Constants.Content.Label.Home.Text.References.third,
+            link: L10n.Constants.Content.Label.Home.Link.References.third)
+        card.draw(viewModel)
+        return card
     }()
     
-    private let reference4: LunaText = {
-        let label = LunaText()
-        let model = LunaTextViewModel(size: 20,
-                                      color: .black,
-                                      weight: .medium)
-        
-        label.text = "Mesen TB, Young SL. Progesterone and the luteal phase: a requisite to reproduction. Obstet Gynecol Clin North Am. 2015 Mar;42(1):135-51. PMID: 25681845; PMCID: PMC4436586."
-        label.numberOfLines = 0
-        label.textAlignment = .left
-        
-        label.draw(model)
-        return label
+    private let fourthReference: ReferenceCard = {
+        let card = ReferenceCard()
+        let viewModel = ReferenceTextViewModel(
+            number: "4.",
+            reference: L10n.Constants.Content.Label.Home.Text.References.fourth,
+            link: L10n.Constants.Content.Label.Home.Link.References.fourth)
+        card.draw(viewModel)
+        return card
+    }()
+    
+    private let fifthReference: ReferenceCard = {
+        let card = ReferenceCard()
+        let viewModel = ReferenceTextViewModel(
+            number: "5.",
+            reference: L10n.Constants.Content.Label.Home.Text.References.fifth,
+            link: L10n.Constants.Content.Label.Home.Link.References.fifth)
+        card.draw(viewModel)
+        return card
     }()
     
     private let stack: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
-        view.alignment = .leading
-        view.distribution = .equalCentering
-        view.spacing = 1.su
+        view.spacing = 3.su
         return view
+    }()
+    
+    private let scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.isScrollEnabled = true
+        scrollView.showsVerticalScrollIndicator = true
+        return scrollView
     }()
     
     private let resizeIndicator = UIView()
@@ -102,12 +100,16 @@ class ReferencesSheetView: UIView, AnyView {
     
     func addSubviews() {
         addSubview(resizeIndicator)
-        addSubview(stack)
+        addSubview(scrollView)
+        
+        scrollView.addSubview(stack)
+        
         stack.addArrangedSubview(referencesTitle)
-        stack.addArrangedSubview(reference1)
-        stack.addArrangedSubview(reference2)
-        stack.addArrangedSubview(reference3)
-        stack.addArrangedSubview(reference4)
+        stack.addArrangedSubview(firstReference)
+        stack.addArrangedSubview(secondReference)
+        stack.addArrangedSubview(thirdReference)
+        stack.addArrangedSubview(fourthReference)
+        stack.addArrangedSubview(fifthReference)
     }
     
     func addConstraints() {
@@ -118,16 +120,16 @@ class ReferencesSheetView: UIView, AnyView {
             $0.top.equalToSuperview().offset(6)
         }
         
-        stack.snp.makeConstraints {
+        scrollView.snp.makeConstraints {
             $0.top.equalTo(resizeIndicator.snp.bottom).offset(1.su)
-            $0.leading.equalToSuperview().offset(2.su)
-            $0.trailing.equalToSuperview().offset(-2.su)
+            $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalTo(safeAreaLayoutGuide)
         }
-        
-        reference1.snp.makeConstraints {
-            $0.width.equalToSuperview()
+
+        stack.snp.makeConstraints {
+            $0.top.bottom.equalTo(scrollView)
+            $0.leading.width.equalTo(scrollView).inset(2.su)
         }
-    
     }
     
     func addAdditionalConfiguration() {

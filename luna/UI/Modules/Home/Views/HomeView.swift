@@ -51,7 +51,7 @@ class HomeView: UIView, AnyView  {
         return label
     }()
     
-    private let seeMoreButton: LunaButton = {
+    let seeMoreButton: LunaButton = {
         let button = LunaButton()
         button.draw(style: .seeMore)
         button.setContentHuggingPriority(.defaultLow, for: .horizontal)
@@ -141,7 +141,6 @@ class HomeView: UIView, AnyView  {
         let view = UIStackView()
         view.axis = .horizontal
         view.alignment = .center
-        view.spacing = 2.su
         view.distribution = .fill
         return view
     }()
@@ -163,8 +162,6 @@ class HomeView: UIView, AnyView  {
     
     func addSubviews() {
         
-        
-        
         addSubview(stackMonthTag)
         addSubview(calendarCollectionView)
         addSubview(scrollView)
@@ -176,7 +173,7 @@ class HomeView: UIView, AnyView  {
         allContentStackView.addArrangedSubview(warningCalendarAccess)
         allContentStackView.addArrangedSubview(stackPhaseLearn)
         allContentStackView.addArrangedSubview(menstrualPhaseBehaviorsView)
-        allContentStackView.addArrangedSubview(stackSeeMore)
+        menstrualPhaseBehaviorsView.stack.addArrangedSubview(stackSeeMore)
         allContentStackView.addArrangedSubview(learnAboutMenstrualCyclePhasesView)
         allContentStackView.addArrangedSubview(warningNoMenstrualData)
         
@@ -190,7 +187,6 @@ class HomeView: UIView, AnyView  {
         
         stackSeeMore.addArrangedSubview(ball)
         stackSeeMore.addArrangedSubview(seeMoreButton)
-        
     }
     
     func addConstraints() {

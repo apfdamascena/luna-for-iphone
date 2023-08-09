@@ -121,6 +121,8 @@
 		BF6520E12A6F0D4B00E60054 /* CycleDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520DD2A6F0D4B00E60054 /* CycleDurationViewController.swift */; };
 		BF6520E42A6F0D5D00E60054 /* CycleDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520E32A6F0D5D00E60054 /* CycleDurationView.swift */; };
 		BFCAAD3B2A6B19AE00A91CC0 /* MenstruationDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */; };
+		BFD1A0202A8329E700F420B5 /* ReferenceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A01F2A8329E700F420B5 /* ReferenceCard.swift */; };
+		BFD1A0242A833A9900F420B5 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A0232A833A9900F420B5 /* Link.swift */; };
 		BFD533B62A71567A0063351E /* CalendarCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD533B52A71567A0063351E /* CalendarCreator.swift */; };
 		BFD533B82A7156970063351E /* CalendarProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD533B72A7156970063351E /* CalendarProvider.swift */; };
 		BFD533BA2A7158C00063351E /* LunaCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD533B92A7158C00063351E /* LunaCalendarManager.swift */; };
@@ -284,6 +286,8 @@
 		BF6520DD2A6F0D4B00E60054 /* CycleDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationViewController.swift; sourceTree = "<group>"; };
 		BF6520E32A6F0D5D00E60054 /* CycleDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationView.swift; sourceTree = "<group>"; };
 		BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationView.swift; sourceTree = "<group>"; };
+		BFD1A01F2A8329E700F420B5 /* ReferenceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceCard.swift; sourceTree = "<group>"; };
+		BFD1A0232A833A9900F420B5 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		BFD533B52A71567A0063351E /* CalendarCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCreator.swift; sourceTree = "<group>"; };
 		BFD533B72A7156970063351E /* CalendarProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarProvider.swift; sourceTree = "<group>"; };
 		BFD533B92A7158C00063351E /* LunaCalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaCalendarManager.swift; sourceTree = "<group>"; };
@@ -662,6 +666,8 @@
 		0DDA61352A69D11200CA15C6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				BFD1A0212A833A8700F420B5 /* Link */,
+				BFD1A01E2A8329D000F420B5 /* ReferenceCard */,
 				0D15FE922A7DB0B600FD64E4 /* WarningNoMenstrualData */,
 				0D6337202A7C80C000EE9699 /* CycleDetailsCard */,
 				0D63371D2A7C7B4E00EE9699 /* FeedbackCard */,
@@ -823,6 +829,22 @@
 				BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BFD1A01E2A8329D000F420B5 /* ReferenceCard */ = {
+			isa = PBXGroup;
+			children = (
+				BFD1A01F2A8329E700F420B5 /* ReferenceCard.swift */,
+			);
+			path = ReferenceCard;
+			sourceTree = "<group>";
+		};
+		BFD1A0212A833A8700F420B5 /* Link */ = {
+			isa = PBXGroup;
+			children = (
+				BFD1A0232A833A9900F420B5 /* Link.swift */,
+			);
+			path = Link;
 			sourceTree = "<group>";
 		};
 		BFD533B42A71566B0063351E /* LunaCalendar */ = {
@@ -1304,6 +1326,7 @@
 				0DDC5B532A70B9CE00D4CCAE /* OnboardingPageFlowInteractor.swift in Sources */,
 				0DDC5B522A70B9CE00D4CCAE /* OnboardingPageFlowViewController.swift in Sources */,
 				0D6336FE2A7A88D900EE9699 /* AnualCycleCalculator.swift in Sources */,
+				BFD1A0202A8329E700F420B5 /* ReferenceCard.swift in Sources */,
 				0DBADDD62A6600CD00A10FC3 /* AnyView.swift in Sources */,
 				0DBADDE72A66044600A10FC3 /* UIView+Preview.swift in Sources */,
 				0D2FC76C2A6EF4810025D8B6 /* DataSourceEventObservable.swift in Sources */,
@@ -1313,6 +1336,7 @@
 				0D6794362A74729100382142 /* TeachRecordMenstruationView.swift in Sources */,
 				CA557BD22A6B17C7001DF2BB /* LandingPageView.swift in Sources */,
 				CABCFF722A733E79004B171C /* CalendarCollectionViewFlowLayout.swift in Sources */,
+				BFD1A0242A833A9900F420B5 /* Link.swift in Sources */,
 				0DDC5B502A70B9CE00D4CCAE /* OnboardingPageFlowPresenter.swift in Sources */,
 				0D4049D72A7047420058669B /* OnboardingPageControlDelegate.swift in Sources */,
 				0D6336A62A77510400EE9699 /* OnboardingCyclePhaseContent.swift in Sources */,

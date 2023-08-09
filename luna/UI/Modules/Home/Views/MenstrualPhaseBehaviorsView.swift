@@ -40,7 +40,7 @@ class MenstrualPhaseBehaviorsView: UIView, AnyView {
         return container
     }()
     
-    private let stack: UIStackView = {
+    let stack: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
         view.alignment = .fill
