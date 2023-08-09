@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
     private var disposeBag = DisposeBag()
     
     private var datasource: CalendarCollectionViewDataSource
-    private(set) var proxy: CalendarCollectionViewDelegateProxy = RxCalendarCollectionViewDelegateProxy()
+    private(set) var proxy = RxCalendarCollectionViewDelegateProxy()
     
     init(datasource: CalendarCollectionViewDataSource){
         self.datasource = datasource
@@ -75,24 +75,23 @@ class HomeViewController: UIViewController {
     
     func collectionViewEventObservable() {
         
-        homeView.calendarCollectionView.rx
-            .didScroll.asObservable()
-            .subscribe { _ in
-                let centerCell = self.proxy.scrollViewDidScroll(self.homeView.calendarCollectionView)
+        homeView.calendarCollectionView
+            .rx.scrollToCenter
+            .subscribe(onNext: { centerCell, phase, month in
+                guard let phase = phase,
+                      let month = month else { return }
                 self.presenter?.change(centerCell)
-                guard let centerCellPhase = centerCell?.getPhase() else { return }
-                self.datasource.cyclePhase.onNext(centerCellPhase)
-                guard let month = centerCell?.getDate() else { return }
+                self.datasource.cyclePhase.onNext(phase)
                 self.homeView.monthChanged(to: month)
-            }.disposed(by: disposeBag)
-                
+            }).disposed(by: disposeBag)
+        
+        
         homeView.calendarCollectionView
             .rx.selectItemAtCalendar
             .subscribe(onNext: { selectedCell, centerCell, centerXtoCollection in
                 self.presenter?.userSelect(selectedCell, center: centerCell,
                                            andMoveCenter: centerXtoCollection)
-            })
-            .disposed(by: disposeBag)
+            }).disposed(by: disposeBag)
         
     }
     

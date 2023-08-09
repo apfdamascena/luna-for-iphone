@@ -18,12 +18,14 @@ extension Reactive where Base: CalendarScrollCollectionView {
             }.asObservable()
     }
     
-    var scrollToCenter: String {
-        self.base.rx
-            .didScroll
-            .map{
-            
-                
+    var scrollToCenter: Observable<(CalendarCollectionViewCell?, CyclePhase?, Date?)> {
+        
+        self.base.rx.didScroll
+            .map {
+                return self.base.scrollViewDidScroll()
             }
+            .map { cell in
+                return (cell, cell?.getPhase(), cell?.getDate())
+            }.asObservable()
     }
 }
