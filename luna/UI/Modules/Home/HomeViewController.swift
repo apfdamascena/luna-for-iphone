@@ -18,7 +18,6 @@ class HomeViewController: UIViewController {
     private var disposeBag = DisposeBag()
     
     private var datasource: CalendarCollectionViewDataSource
-    private(set) var proxy = RxCalendarCollectionViewDelegateProxy()
     
     init(datasource: CalendarCollectionViewDataSource){
         self.datasource = datasource
@@ -82,7 +81,7 @@ class HomeViewController: UIViewController {
                       let calendarMonth = month else { return }
                 
                 self.presenter?.moveTo(centerCell)
-                self.presenter?.scrollMonth(to: calendarMonth)
+                self.presenter?.moveTo(calendarMonth)
                 self.datasource.cyclePhase.onNext(menstruationPhase)
 
             }).disposed(by: disposeBag)
@@ -141,7 +140,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: PresenterToViewHomeProtocol {
     
-    func moveMonth(to month: Date) {
+    func moveTo(_ month: Date) {
         self.homeView.monthChanged(to: month)
     }
     

@@ -72,8 +72,8 @@ class HomePresenter: ViewToPresenterHomeProtocol {
         interactor?.openDeviceSettings()
     }
     
-    func scrollMonth(to month: Date) {
-        view?.moveMonth(to: month)
+    func moveTo(_ month: Date) {
+        view?.moveTo(month)
     }
     
 }

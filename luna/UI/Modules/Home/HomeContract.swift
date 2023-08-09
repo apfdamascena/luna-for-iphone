@@ -24,7 +24,7 @@ protocol PresenterToViewHomeProtocol {
     func load(collectionDataSource: [CyclePhaseViewModel])
     func loadCalendarToCollection(date: Date)
     
-    func moveMonth(to month: Date)
+    func moveTo(_ month: Date)
 }
 
 
@@ -45,7 +45,7 @@ protocol ViewToPresenterHomeProtocol {
                     andMoveCenter: CGFloat?)
     
     func moveTo(_ centerCell: CalendarCollectionViewCell?)
-    func scrollMonth(to month: Date)
+    func moveTo(_ month: Date)
     func userOpenDeviceSettings()
     
     func callReferencesSheet()
