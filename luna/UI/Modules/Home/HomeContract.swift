@@ -44,6 +44,8 @@ protocol ViewToPresenterHomeProtocol {
     
     func change(_ centerCell: CalendarCollectionViewCell?)
     func userOpenDeviceSettings()
+    
+    func callReferencesSheet()
 }
 
 
@@ -73,5 +75,5 @@ protocol InteractorToPresenterHomeProtocol {
 
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterHomeProtocol {
-    
+    func pushReferencesSheet(on view: PresenterToViewHomeProtocol)
 }

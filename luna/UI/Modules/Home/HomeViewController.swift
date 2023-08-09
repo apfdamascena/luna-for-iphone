@@ -42,6 +42,7 @@ class HomeViewController: UIViewController {
         addCyclePhaseEventObservable()
         addSettingsHandlerEvent()
         addAccesCalendarHandler()
+        self.presenter?.callReferencesSheet()
         
     }
     

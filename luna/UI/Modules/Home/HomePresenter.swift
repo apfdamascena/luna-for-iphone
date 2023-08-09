@@ -27,6 +27,12 @@ class HomePresenter: ViewToPresenterHomeProtocol {
         }
     }
     
+    func callReferencesSheet() {
+        guard let homePresenterView = view else { return }
+        
+        self.router?.pushReferencesSheet(on: homePresenterView)
+    }
+    
     func loadUserCalendar() {
         interactor?.loadPhasesToUserCalendar()
     }
