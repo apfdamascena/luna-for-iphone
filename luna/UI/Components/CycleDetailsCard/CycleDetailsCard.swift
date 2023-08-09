@@ -10,7 +10,7 @@ import SnapKit
 
 class CycleDetailsCard: UIView, AnyView {
 
-    private let line = SegmentedLine()
+    let line = SegmentedLine()
     
     private let verticalStack: UIStackView = {
         let view = UIStackView()
@@ -80,6 +80,7 @@ class CycleDetailsCard: UIView, AnyView {
 
     func draw(_ model: CyclePhaseTextViewModel){
         subtitle.text = model.whatIsDescription
+         
     }
     
 }

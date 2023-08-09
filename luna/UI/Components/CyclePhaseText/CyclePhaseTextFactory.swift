@@ -18,7 +18,8 @@ class CyclePhaseTextFactory {
                 howAreYouDescription: L10n.Constants.Content.Label.Text.HowAreYou.menstruation,
                 avoidDescription: L10n.Constants.Content.Label.Text.Avoid.menstruation,
                 helpDescription: L10n.Constants.Content.Label.Text.Help.menstruation,
-                behindSheets: L10n.Constants.Content.Label.Text.BehindSheets.menstruation
+                behindSheets: L10n.Constants.Content.Label.Text.BehindSheets.menstruation,
+                colorBall: ballComponent.red
             )
         case .fertile:
             return CyclePhaseTextViewModel(
@@ -27,7 +28,8 @@ class CyclePhaseTextFactory {
                 howAreYouDescription: L10n.Constants.Content.Label.Text.HowAreYou.fertile,
                 avoidDescription: L10n.Constants.Content.Label.Text.Avoid.fertile,
                 helpDescription: L10n.Constants.Content.Label.Text.Help.fertile,
-                behindSheets: L10n.Constants.Content.Label.Text.BehindSheets.fertile
+                behindSheets: L10n.Constants.Content.Label.Text.BehindSheets.fertile,
+                colorBall: ballComponent.blue
             )
         case .luteal:
             return CyclePhaseTextViewModel(
@@ -36,7 +38,8 @@ class CyclePhaseTextFactory {
                 howAreYouDescription: L10n.Constants.Content.Label.Text.HowAreYou.luteal,
                 avoidDescription: L10n.Constants.Content.Label.Text.Avoid.luteal,
                 helpDescription: L10n.Constants.Content.Label.Text.Help.luteal,
-                behindSheets: L10n.Constants.Content.Label.Text.BehindSheets.luteal
+                behindSheets: L10n.Constants.Content.Label.Text.BehindSheets.luteal,
+                colorBall: ballComponent.blue
             )
         case .folicular:
             return CyclePhaseTextViewModel(
@@ -45,7 +48,8 @@ class CyclePhaseTextFactory {
                 howAreYouDescription: L10n.Constants.Content.Label.Text.HowAreYou.folicular,
                 avoidDescription: L10n.Constants.Content.Label.Text.Avoid.folicular,
                 helpDescription: L10n.Constants.Content.Label.Text.Help.folicular,
-                behindSheets: L10n.Constants.Content.Label.Text.BehindSheets.folicular
+                behindSheets: L10n.Constants.Content.Label.Text.BehindSheets.folicular,
+                colorBall: ballComponent.red
             )
             
         default:
@@ -55,7 +59,8 @@ class CyclePhaseTextFactory {
                 howAreYouDescription: "",
                 avoidDescription: "",
                 helpDescription: "",
-                behindSheets: ""
+                behindSheets: "",
+                colorBall: ballComponent.red
             )
         }
     }

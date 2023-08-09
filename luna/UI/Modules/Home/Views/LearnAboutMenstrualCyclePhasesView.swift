@@ -10,7 +10,6 @@ import SnapKit
 
 class LearnAboutMenstrualCyclePhasesView: UIView, AnyView {
     
-    private var teste: [CycleDetailsCard] = []
     private let stopIndex = 4
     
     private let stack: UIStackView = {
@@ -40,6 +39,7 @@ class LearnAboutMenstrualCyclePhasesView: UIView, AnyView {
             card.draw(model)
             card.title.text = model.name
             card.subtitle.text = model.whatIsDescription
+            card.line.ball.image = model.colorBall.image
             stack.addArrangedSubview(card)
         }
     

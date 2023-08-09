@@ -7,16 +7,16 @@
 
 import UIKit
 
-enum LineComponent {
+enum ballComponent {
     case blue
     case red
     
     var image: UIImage {
         switch self {
         case .blue:
-            return Asset.blueLine.image
+            return Asset.blueBall.image
         case .red:
-            return Asset.redLine.image
+            return Asset.ball.image
         }
     }
     

@@ -10,31 +10,31 @@ import UIKit
 
 class MenstrualPhaseBehaviorsView: UIView, AnyView {
     
-    private let whatIsCardInformation: CycleDetailsCard = {
+    let whatIsCardInformation: CycleDetailsCard = {
         let container = CycleDetailsCard()
         container.title.text = "O que é?"
         return container
     }()
     
-    private let howAreYouCardInformation: CycleDetailsCard = {
+    let howAreYouCardInformation: CycleDetailsCard = {
         let container = CycleDetailsCard()
         container.title.text = "Como você está?"
         return container
     }()
     
-    private let betterAvoidCardInformation: CycleDetailsCard = {
+    let betterAvoidCardInformation: CycleDetailsCard = {
         let container = CycleDetailsCard()
         container.title.text = "Melhor evitar, hein!"
         return container
     }()
     
-    private let wannaHelpCardInformation: CycleDetailsCard = {
+    let wannaHelpCardInformation: CycleDetailsCard = {
         let container = CycleDetailsCard()
         container.title.text = "Quer uma ajuda?"
         return container
     }()
     
-    private let behindSheetsCardInformation: CycleDetailsCard = {
+    let behindSheetsCardInformation: CycleDetailsCard = {
         let container = CycleDetailsCard()
         container.title.text = "Por trás dos panos"
         return container
@@ -75,10 +75,19 @@ class MenstrualPhaseBehaviorsView: UIView, AnyView {
     
     func draw(_ model: CyclePhaseTextViewModel){
         whatIsCardInformation.subtitle.text = model.whatIsDescription
+        whatIsCardInformation.line.ball.image = model.colorBall.image
+        
         howAreYouCardInformation.subtitle.text = model.howAreYouDescription
+        howAreYouCardInformation.line.ball.image = model.colorBall.image
+        
         betterAvoidCardInformation.subtitle.text = model.avoidDescription
+        betterAvoidCardInformation.line.ball.image = model.colorBall.image
+        
         wannaHelpCardInformation.subtitle.text = model.helpDescription
+        wannaHelpCardInformation.line.ball.image = model.colorBall.image
+        
         behindSheetsCardInformation.subtitle.text = model.behindSheets
+        behindSheetsCardInformation.line.ball.image = model.colorBall.image
     }
     
 }
