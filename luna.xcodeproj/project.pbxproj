@@ -26,8 +26,6 @@
 		0D6336AD2A7756D000EE9699 /* CGFloat+DynamicFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336AC2A7756D000EE9699 /* CGFloat+DynamicFontSize.swift */; };
 		0D6336AF2A7756DD00EE9699 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336AE2A7756DD00EE9699 /* Device.swift */; };
 		0D6336EC2A789A5700EE9699 /* OnboardingCyclePhaseCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336EB2A789A5700EE9699 /* OnboardingCyclePhaseCardType.swift */; };
-		0D6336EE2A799B3600EE9699 /* CalendarCollectionViewDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336ED2A799B3600EE9699 /* CalendarCollectionViewDelegateProxy.swift */; };
-		0D6336F02A799B6B00EE9699 /* RxCalendarCollectionViewDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336EF2A799B6B00EE9699 /* RxCalendarCollectionViewDelegateProxy.swift */; };
 		0D6336F22A799B8B00EE9699 /* CalendarCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336F12A799B8B00EE9699 /* CalendarCollectionViewDataSource.swift */; };
 		0D6336F42A799BAC00EE9699 /* CalendarCollectionViewDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336F32A799BAC00EE9699 /* CalendarCollectionViewDataSourceImpl.swift */; };
 		0D6336FE2A7A88D900EE9699 /* AnualCycleCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6336FD2A7A88D900EE9699 /* AnualCycleCalculator.swift */; };
@@ -187,8 +185,6 @@
 		0D6336AC2A7756D000EE9699 /* CGFloat+DynamicFontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+DynamicFontSize.swift"; sourceTree = "<group>"; };
 		0D6336AE2A7756DD00EE9699 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		0D6336EB2A789A5700EE9699 /* OnboardingCyclePhaseCardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCyclePhaseCardType.swift; sourceTree = "<group>"; };
-		0D6336ED2A799B3600EE9699 /* CalendarCollectionViewDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewDelegateProxy.swift; sourceTree = "<group>"; };
-		0D6336EF2A799B6B00EE9699 /* RxCalendarCollectionViewDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCalendarCollectionViewDelegateProxy.swift; sourceTree = "<group>"; };
 		0D6336F12A799B8B00EE9699 /* CalendarCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		0D6336F32A799BAC00EE9699 /* CalendarCollectionViewDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewDataSourceImpl.swift; sourceTree = "<group>"; };
 		0D6336FD2A7A88D900EE9699 /* AnualCycleCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnualCycleCalculator.swift; sourceTree = "<group>"; };
@@ -436,7 +432,6 @@
 				0D67941F2A735C1A00382142 /* HomeInteractor.swift */,
 				0D6336F12A799B8B00EE9699 /* CalendarCollectionViewDataSource.swift */,
 				0D6336F32A799BAC00EE9699 /* CalendarCollectionViewDataSourceImpl.swift */,
-				0DF410622A840E8C00A10405 /* CalendarCollectionView+Rx.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -914,12 +909,11 @@
 		CA0D93A92A7046ED0064C1C3 /* CalendarCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				0DF410622A840E8C00A10405 /* CalendarCollectionView+Rx.swift */,
 				CA0D93AA2A70472A0064C1C3 /* CalendarCollectionView.swift */,
 				CA0D93AC2A70478A0064C1C3 /* CalendarCollectionViewCell.swift */,
 				CA17ED952A71ED750051BF9D /* CyclePhaseFocus.swift */,
 				CA17ED972A71EDCE0051BF9D /* CyclePhaseViewModel.swift */,
-				0D6336ED2A799B3600EE9699 /* CalendarCollectionViewDelegateProxy.swift */,
-				0D6336EF2A799B6B00EE9699 /* RxCalendarCollectionViewDelegateProxy.swift */,
 			);
 			path = CalendarCollectionView;
 			sourceTree = "<group>";
@@ -1266,7 +1260,6 @@
 				0D67942F2A74725200382142 /* TeachRecordMenstruationContract.swift in Sources */,
 				BF6520DF2A6F0D4B00E60054 /* CycleDurationPresenter.swift in Sources */,
 				0DBADDE12A6603F800A10FC3 /* LastDayMenstruationRouter.swift in Sources */,
-				0D6336EE2A799B3600EE9699 /* CalendarCollectionViewDelegateProxy.swift in Sources */,
 				0DBADDA32A65FDF100A10FC3 /* luna.xcdatamodeld in Sources */,
 				BF6520E02A6F0D4B00E60054 /* CycleDurationRouter.swift in Sources */,
 				0D63369E2A774D7A00EE9699 /* OtherCyclePhasesContract.swift in Sources */,
@@ -1356,7 +1349,6 @@
 				0DBADDD32A66005500A10FC3 /* LunaTextViewModel.swift in Sources */,
 				0D6336972A774C7D00EE9699 /* Onboarding.swift in Sources */,
 				0DBADDE02A6603F800A10FC3 /* LastDayMenstruationPresenter.swift in Sources */,
-				0D6336F02A799B6B00EE9699 /* RxCalendarCollectionViewDelegateProxy.swift in Sources */,
 				0D63369F2A774D7A00EE9699 /* OtherCyclePhasesPresenter.swift in Sources */,
 				BFD533BA2A7158C00063351E /* LunaCalendarManager.swift in Sources */,
 				0DDC5B532A70B9CE00D4CCAE /* OnboardingPageFlowInteractor.swift in Sources */,
