@@ -20,9 +20,7 @@ class HomeRouter: PresenterToRouterHomeProtocol {
                 sheet.detents = [.custom { context in
                     return context.maximumDetentValue * 0.8
                 }, .large()]
-            } else {
-                // [mudar]
-            }
+            } 
             sheet.largestUndimmedDetentIdentifier = .medium
             sheet.prefersScrollingExpandsWhenScrolledToEdge = false
             sheet.prefersEdgeAttachedInCompactHeight = true
