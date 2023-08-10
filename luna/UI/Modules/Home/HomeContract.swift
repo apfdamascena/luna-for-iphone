@@ -48,7 +48,7 @@ protocol ViewToPresenterHomeProtocol {
     func moveTo(_ month: Date)
     func userOpenDeviceSettings()
     
-    func callReferencesSheet()
+    func showCyclePhaseReferencesSheet()
 }
 
 

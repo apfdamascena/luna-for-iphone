@@ -132,9 +132,11 @@ class HomeViewController: UIViewController {
     
     func seeMoreButtonTouchTrigger() {
         
-//        homeView.seeMoreButton.rx.tap.bind {
-//            self.presenter?.callReferencesSheet()
-//        }.disposed(by: disposeBag)
+        homeView.menstrualPhaseBehaviorsView
+            .seeMoreButton.rx
+            .tap.bind {
+                self.presenter?.showCyclePhaseReferencesSheet()
+            }.disposed(by: disposeBag)
     }
 }
 

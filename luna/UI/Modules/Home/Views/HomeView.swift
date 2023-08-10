@@ -12,7 +12,7 @@ class HomeView: UIView, AnyView  {
     
     private var hasAcessToCalendar: CalendarAccess = .unauthorized
 
-    private let menstrualPhaseBehaviorsView = MenstrualPhaseBehaviorsView()
+    private(set) var menstrualPhaseBehaviorsView = MenstrualPhaseBehaviorsView()
     private let learnAboutMenstrualCyclePhasesView = LearnAboutMenstrualCyclePhasesView()
     
     private(set) var calendarCollectionView = CalendarScrollCollectionView()

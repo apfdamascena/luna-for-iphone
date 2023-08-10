@@ -9,6 +9,10 @@ import UIKit
 
 class MenstrualPhaseBehaviorsView: UIView, AnyView {
     
+    var seeMoreButton: UIButton {
+        return seeMoreCard.seeMoreButton
+    }
+    
     let whatIsCardInformation: CycleDetailsCard = {
         let container = CycleDetailsCard()
         container.title.text = "O que é?"
