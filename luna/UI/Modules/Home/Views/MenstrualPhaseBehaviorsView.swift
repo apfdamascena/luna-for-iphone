@@ -12,31 +12,31 @@ class MenstrualPhaseBehaviorsView: UIView, AnyView {
     
     let whatIsCardInformation: CycleDetailsCard = {
         let container = CycleDetailsCard()
-        container.title.text = "O que é?"
+        container.title.text = L10n.Constants.Content.Label.Home.Behavior.what
         return container
     }()
     
     let howAreYouCardInformation: CycleDetailsCard = {
         let container = CycleDetailsCard()
-        container.title.text = "Como você está?"
+        container.title.text = L10n.Constants.Content.Label.Home.Behavior.how
         return container
     }()
     
     let betterAvoidCardInformation: CycleDetailsCard = {
         let container = CycleDetailsCard()
-        container.title.text = "Melhor evitar, hein!"
+        container.title.text = L10n.Constants.Content.Label.Home.Behavior.better
         return container
     }()
     
     let wannaHelpCardInformation: CycleDetailsCard = {
         let container = CycleDetailsCard()
-        container.title.text = "Quer uma ajuda?"
+        container.title.text = L10n.Constants.Content.Label.Home.Behavior.help
         return container
     }()
     
     let behindSheetsCardInformation: CycleDetailsCard = {
         let container = CycleDetailsCard()
-        container.title.text = "Por trás dos panos"
+        container.title.text = L10n.Constants.Content.Label.Home.Behavior.behind
         return container
     }()
     

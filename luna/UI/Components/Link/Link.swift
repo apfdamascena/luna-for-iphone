@@ -38,8 +38,9 @@ class Link: UIView, AnyView {
     }
 
     func draw(_ link: String){
-        let attributedString = NSMutableAttributedString(string: "Disponível aqui!")
-        attributedString.addAttribute(.link, value: link, range: NSRange(location: 0, length: 16))
+        let attributedString = NSMutableAttributedString(string: L10n.Constants.Content.Label.Sheet.link)
+        let sizeString = attributedString.length
+        attributedString.addAttribute(.link, value: link, range: NSRange(location: 0, length: sizeString))
         linkTextView.attributedText = attributedString
         let font = UIFont.systemFont(ofSize: 17)
         linkTextView.font = font

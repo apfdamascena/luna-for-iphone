@@ -35,13 +35,19 @@
 "constants.content.label.home.informational.what" = "O que é?";
 "constants.content.label.home.informational.do" = "O que fazer?";
 
-"constants.content.label.placeholder.big" = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.";
-"constants.content.label.placeholder.bullet" = "Sed ut perspiciatis unde";
+"constants.content.label.home.behavior.what" = "O que é?";
+"constants.content.label.home.behavior.how" = "Como você está?";
+"constants.content.label.home.behavior.better" = "Melhor evitar, hein!";
+"constants.content.label.home.behavior.help" = "Quer uma ajuda?";
+"constants.content.label.home.behavior.behind" = "Por trás dos panos";
 
 "constants.content.label.calendar_title"="Consiga ver seu ciclo no seu dia a dia";
 "constants.content.label.calendar_subtitle"="Permita que o Luna acesse seu Calendar para planejar seus dias com sabedoria e melhorar o seu bem-estar";
 
 "constants.content.api.icloud"= "iCloud";
+
+"constants.content.label.sheet.title" = "Referências";
+"constants.content.label.sheet.link" = "Disponível aqui!";
 
 "constants.content.label.folicular"= "⚡️ Fase folicular";
 "constants.content.label.menstruation"= "🩸 Menstruação";
