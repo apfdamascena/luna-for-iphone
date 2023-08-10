@@ -38,34 +38,11 @@ class HomeView: UIView, AnyView  {
         return card
     }()
     
-    let seeMoreButton: LunaButton = {
-        let button = LunaButton()
-        button.draw(style: .seeMore)
-        button.setContentHuggingPriority(.defaultLow, for: .horizontal)
-        return button
-    }()
-    
-    private let ball: UIImageView = {
-        let view = UIImageView(image: Asset.ball.image)
-        view.contentMode = .scaleAspectFit
-        view.clipsToBounds = true
-        view.setContentHuggingPriority(.defaultHigh, for: .horizontal)
-        return view
-    }()
-    
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.isScrollEnabled = true
         scrollView.showsVerticalScrollIndicator = true
         return scrollView
-    }()
-        
-    private let stackSeeMore: UIStackView = {
-        let view = UIStackView()
-        view.axis = .horizontal
-        view.alignment = .center
-        view.distribution = .fill
-        return view
     }()
     
     private let warningNoMenstrualData: WarningNoMenstrualData = {
@@ -98,11 +75,6 @@ class HomeView: UIView, AnyView  {
         allContentStackView.addArrangedSubview(menstrualPhaseBehaviorsView)
         allContentStackView.addArrangedSubview(learnAboutMenstrualCyclePhasesView)
         allContentStackView.addArrangedSubview(warningNoMenstrualData)
-
-//        menstrualPhaseBehaviorsView.stack.addArrangedSubview(stackSeeMore)
-        
-//        stackSeeMore.addArrangedSubview(ball)
-//        stackSeeMore.addArrangedSubview(seeMoreButton)
     }
     
     func addConstraints() {

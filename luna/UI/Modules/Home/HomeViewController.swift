@@ -57,6 +57,7 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         homeView.calendarCollectionView.setMargin(with: self.view.frame.width)
+        
         moveInitialCollection()
         DispatchQueue.main.async {
             self.presenter?.loadCalendarToCollection()
@@ -131,9 +132,9 @@ class HomeViewController: UIViewController {
     
     func seeMoreButtonTouchTrigger() {
         
-        homeView.seeMoreButton.rx.tap.bind {
-            self.presenter?.callReferencesSheet()
-        }.disposed(by: disposeBag)
+//        homeView.seeMoreButton.rx.tap.bind {
+//            self.presenter?.callReferencesSheet()
+//        }.disposed(by: disposeBag)
     }
 }
 

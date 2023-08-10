@@ -7,6 +7,71 @@
 
 import UIKit
 
+class SeeMoreCard: UIView, AnyView {
+    
+    private let line = SegmentedLine()
+    
+//    private let stack: UIStackView = {
+//        let view = UIStackView()
+//        view.axis = .horizontal
+//        view.alignment = .top
+//        return view
+//    }()
+    
+    private(set) var seeMoreButton: LunaButton = {
+        let button = LunaButton()
+        button.draw(style: .seeMore)
+        button.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        return button
+    }()
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func addSubviews() {
+        
+        addSubview(line)
+        addSubview(seeMoreButton)
+        seeMoreButton.backgroundColor = .green
+//        addSubview(stack)
+//        stack.addArrangedSubview(seeMoreButton)
+    }
+    
+    func addConstraints() {
+        
+        seeMoreButton.snp.makeConstraints{
+            $0.leading.equalTo(line.snp.trailing)
+//            $0.bottom.equalToSuperview().offset(0.5)
+        }
+        
+//        stack.snp.makeConstraints {
+//            $0.leading.equalTo(line.snp.trailing).offset(2.su)
+//            $0.trailing.equalToSuperview()
+//            $0.top.equalTo(line.snp.top)
+//        }
+//
+        line.backgroundColor = .yellow
+//        stack.backgroundColor = .brown
+        
+        line.snp.makeConstraints {
+            $0.top.height.equalToSuperview()
+            $0.leading.equalToSuperview().offset(0.5.su)
+            $0.width.equalTo(14)
+            $0.height.equalTo(seeMoreButton).multipliedBy(1.4)
+        }
+    }
+    
+    func addAdditionalConfiguration() {
+        
+    }
+}
+
 
 class MenstrualPhaseBehaviorsView: UIView, AnyView {
     
@@ -37,6 +102,7 @@ class MenstrualPhaseBehaviorsView: UIView, AnyView {
     let behindSheetsCardInformation: CycleDetailsCard = {
         let container = CycleDetailsCard()
         container.title.text = "Por trás dos panos"
+        container.backgroundColor = .red
         return container
     }()
     
@@ -46,6 +112,8 @@ class MenstrualPhaseBehaviorsView: UIView, AnyView {
         view.alignment = .fill
         return view
     }()
+    
+    private let seeMoreCard = SeeMoreCard()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -64,6 +132,9 @@ class MenstrualPhaseBehaviorsView: UIView, AnyView {
         stack.addArrangedSubview(betterAvoidCardInformation)
         stack.addArrangedSubview(wannaHelpCardInformation)
         stack.addArrangedSubview(behindSheetsCardInformation)
+        stack.addArrangedSubview(seeMoreCard)
+        
+        
     }
     
     func addConstraints() {
