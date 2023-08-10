@@ -11,6 +11,14 @@ import SnapKit
 class HomeView: UIView, AnyView  {
     
     private var hasAcessToCalendar: CalendarAccess = .unauthorized
+
+    private let menstrualPhaseBehaviorsView = MenstrualPhaseBehaviorsView()
+    private let learnAboutMenstrualCyclePhasesView = LearnAboutMenstrualCyclePhasesView()
+    
+    private(set) var calendarCollectionView = CalendarScrollCollectionView()
+    private(set) var warningCalendarAccess = WarningCalendarAccess()
+    
+    private let monthTag = MonthTag()
     
     private let allContentStackView: UIStackView = {
         let view = UIStackView()
@@ -20,36 +28,40 @@ class HomeView: UIView, AnyView  {
         return view
     }()
     
-    private(set) var calendarCollectionView = CalendarScrollCollectionView()
-    
-    private(set) var warningCalendarAccess = WarningCalendarAccess()
-    
     private let recordedMenstruationFeedback: FeedbackCard = {
         let card = FeedbackCard()
         card.message(for: .recordedMenstruation)
         card.isHidden = true
         return card
     }()
+    
+    
+    // esse trecho aqui ele poderia tá em outra view
+    
+//    private let stackMonthTag: UIStackView = {
+//        let view = UIStackView()
+//        view.axis = .horizontal
+//        view.alignment = .leading
+//        view.spacing = 1.su
+//        return view
+//    }()
         
-    private let menstrualPhaseBehaviorsView = MenstrualPhaseBehaviorsView()
-    private let learnAboutMenstrualCyclePhasesView = LearnAboutMenstrualCyclePhasesView()
+//    private let iconCalendar: UIImageView = {
+//        let view = UIImageView(image: Asset.calendarIcon.image)
+//        view.contentMode = .scaleAspectFit
+//        view.clipsToBounds = true
+//        return view
+//    }()
     
-    private let iconCalendar: UIImageView = {
-        let view = UIImageView(image: Asset.calendarIcon.image)
-        view.contentMode = .scaleAspectFit
-        view.clipsToBounds = true
-        return view
-    }()
-    
-    public var monthText: LunaText = {
-        let label = LunaText()
-        let model = LunaTextViewModel(size: 20, color: .black, weight: .regular)
-        label.text = Date.now.formatMonthToString().capitalized
-        label.numberOfLines = 0
-        label.textAlignment = .left
-        label.draw(model)
-        return label
-    }()
+//    public var monthText: LunaText = {
+//        let label = LunaText()
+//        let model = LunaTextViewModel(size: 20, color: .black, weight: .regular)
+//        label.text = Date.now.formatMonthToString().capitalized
+//        label.numberOfLines = 0
+//        label.textAlignment = .left
+//        label.draw(model)
+//        return label
+//    }()
     
     let seeMoreButton: LunaButton = {
         let button = LunaButton()
@@ -129,13 +141,7 @@ class HomeView: UIView, AnyView  {
         return view
     }()
     
-    private let stackMonthTag: UIStackView = {
-        let view = UIStackView()
-        view.axis = .horizontal
-        view.alignment = .leading
-        view.spacing = 1.su
-        return view
-    }()
+
     
     private let stackSeeMore: UIStackView = {
         let view = UIStackView()
@@ -162,7 +168,7 @@ class HomeView: UIView, AnyView  {
     
     func addSubviews() {
         
-        addSubview(stackMonthTag)
+        addSubview(monthTag)
         addSubview(calendarCollectionView)
         addSubview(scrollView)
         addSubview(recordedMenstruationFeedback)
@@ -181,9 +187,9 @@ class HomeView: UIView, AnyView  {
         stackPhaseCycle.addArrangedSubview(phaseTitle)
         stackPhaseLearn.addArrangedSubview(learnCycleTitle)
         stackPhaseLearn.addArrangedSubview(cyclePhasesTitle)
-        
-        stackMonthTag.addArrangedSubview(iconCalendar)
-        stackMonthTag.addArrangedSubview(monthText)
+//
+//        stackMonthTag.addArrangedSubview(iconCalendar)
+//        stackMonthTag.addArrangedSubview(monthText)
         
         stackSeeMore.addArrangedSubview(ball)
         stackSeeMore.addArrangedSubview(seeMoreButton)
@@ -197,7 +203,7 @@ class HomeView: UIView, AnyView  {
             $0.height.equalTo(50)
         }
         
-        stackMonthTag.snp.makeConstraints {
+        monthTag.snp.makeConstraints {
             $0.top.equalTo(safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview().inset(3.su)
             $0.height.equalTo(3.su)
@@ -206,7 +212,7 @@ class HomeView: UIView, AnyView  {
         calendarCollectionView.snp.makeConstraints{
             $0.height.equalTo(123)
             $0.leading.trailing.equalToSuperview()
-            $0.top.equalTo(stackMonthTag.snp.bottom).offset(3.su)
+            $0.top.equalTo(monthTag.snp.bottom).offset(3.su)
         }
         
         scrollView.snp.makeConstraints {
@@ -280,7 +286,7 @@ class HomeView: UIView, AnyView  {
     
     func monthChanged(to date: Date) {
         DispatchQueue.main.async {
-            self.monthText.text = date.formatMonthToString().capitalized
+            self.monthTag.monthText.text = date.formatMonthToString().capitalized
         }
     }
     
