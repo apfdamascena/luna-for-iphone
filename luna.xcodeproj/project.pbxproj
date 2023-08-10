@@ -142,7 +142,6 @@
 		CAAB60F22A82CB080003F770 /* ReferencesSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB60F12A82CB080003F770 /* ReferencesSheetView.swift */; };
 		CAAB60F42A82CE980003F770 /* ReferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB60F32A82CE980003F770 /* ReferencesViewController.swift */; };
 		CABCFF722A733E79004B171C /* CalendarCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABCFF712A733E79004B171C /* CalendarCollectionViewFlowLayout.swift */; };
-		CACB96F22A85662400EB66DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CACB96F42A85662400EB66DD /* Localizable.strings */; };
 		CACB96F62A85670300EB66DD /* Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = CACB96F82A85670300EB66DD /* Constants.strings */; };
 		CAE579A22A7AD8A1004EE21C /* CalendarCollectionConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE579A12A7AD8A1004EE21C /* CalendarCollectionConverter.swift */; };
 		CAE579A42A7ADE2D004EE21C /* HomeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE579A32A7ADE2D004EE21C /* HomeCollection.swift */; };
@@ -311,10 +310,8 @@
 		CAAB60F12A82CB080003F770 /* ReferencesSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencesSheetView.swift; sourceTree = "<group>"; };
 		CAAB60F32A82CE980003F770 /* ReferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencesViewController.swift; sourceTree = "<group>"; };
 		CABCFF712A733E79004B171C /* CalendarCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
-		CACB96F52A85668000EB66DD /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		CACB96F72A85670300EB66DD /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Constants.strings"; sourceTree = "<group>"; };
 		CACB96FA2A856C5B00EB66DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Constants.strings; sourceTree = "<group>"; };
-		CACB96FB2A856C5B00EB66DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CAE579A12A7AD8A1004EE21C /* CalendarCollectionConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionConverter.swift; sourceTree = "<group>"; };
 		CAE579A32A7ADE2D004EE21C /* HomeCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollection.swift; sourceTree = "<group>"; };
 		D479E806F71C261B7BE2C777 /* Pods-lunaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lunaTests.debug.xcconfig"; path = "Target Support Files/Pods-lunaTests/Pods-lunaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -576,7 +573,6 @@
 				0DBADDA12A65FDF100A10FC3 /* luna.xcdatamodeld */,
 				0DBADD982A65FDF100A10FC3 /* AppDelegate.swift */,
 				0DBADD9A2A65FDF100A10FC3 /* SceneDelegate.swift */,
-				CACB96F42A85662400EB66DD /* Localizable.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1090,7 +1086,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DBADDA82A65FDF300A10FC3 /* LaunchScreen.storyboard in Resources */,
-				CACB96F22A85662400EB66DD /* Localizable.strings in Resources */,
 				CACB96F62A85670300EB66DD /* Constants.strings in Resources */,
 				0DBADDA52A65FDF300A10FC3 /* Assets.xcassets in Resources */,
 			);
@@ -1430,15 +1425,6 @@
 				0DBADDA72A65FDF300A10FC3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		CACB96F42A85662400EB66DD /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CACB96F52A85668000EB66DD /* pt-BR */,
-				CACB96FB2A856C5B00EB66DD /* en */,
-			);
-			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		CACB96F82A85670300EB66DD /* Constants.strings */ = {
