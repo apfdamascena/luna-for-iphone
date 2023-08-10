@@ -82,6 +82,8 @@
 		0DDC5B562A71D23600D4CCAE /* OnboardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC5B552A71D23600D4CCAE /* OnboardingManager.swift */; };
 		0DF410632A840E8C00A10405 /* CalendarCollectionView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF410622A840E8C00A10405 /* CalendarCollectionView+Rx.swift */; };
 		0DF410672A85656300A10405 /* MonthTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF410662A85656300A10405 /* MonthTag.swift */; };
+		0DF410692A856A6300A10405 /* PhaseCycleTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF410682A856A6300A10405 /* PhaseCycleTitle.swift */; };
+		0DF4106B2A85712E00A10405 /* LearnCycleTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4106A2A85712E00A10405 /* LearnCycleTitle.swift */; };
 		2814909EB8D2BDC1D5AA5874 /* Pods_lunaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33837198E1A2D686B82FD9A5 /* Pods_lunaTests.framework */; };
 		6994CDD4C9481D9C0BE8F427 /* Pods_luna_lunaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72D64B781A7543B9B9BB027 /* Pods_luna_lunaUITests.framework */; };
 		A46C05132A6EFE150071ABCE /* CalendarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050D2A6EFE150071ABCE /* CalendarRouter.swift */; };
@@ -248,6 +250,8 @@
 		0DDC5B552A71D23600D4CCAE /* OnboardingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingManager.swift; sourceTree = "<group>"; };
 		0DF410622A840E8C00A10405 /* CalendarCollectionView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalendarCollectionView+Rx.swift"; sourceTree = "<group>"; };
 		0DF410662A85656300A10405 /* MonthTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthTag.swift; sourceTree = "<group>"; };
+		0DF410682A856A6300A10405 /* PhaseCycleTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseCycleTitle.swift; sourceTree = "<group>"; };
+		0DF4106A2A85712E00A10405 /* LearnCycleTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnCycleTitle.swift; sourceTree = "<group>"; };
 		33837198E1A2D686B82FD9A5 /* Pods_lunaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lunaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD2EB575C89A943BE87F57E /* Pods-lunaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lunaTests.release.xcconfig"; path = "Target Support Files/Pods-lunaTests/Pods-lunaTests.release.xcconfig"; sourceTree = "<group>"; };
 		40083797C335396142E4E31B /* Pods-luna-lunaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna-lunaUITests.debug.xcconfig"; path = "Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -785,6 +789,8 @@
 				A48B7ECA2A75A02700CCC4C0 /* LearnAboutMenstrualCyclePhasesView.swift */,
 				A48B7EDD2A7ADD6500CCC4C0 /* MenstrualPhaseBehaviorsView.swift */,
 				0DF410662A85656300A10405 /* MonthTag.swift */,
+				0DF410682A856A6300A10405 /* PhaseCycleTitle.swift */,
+				0DF4106A2A85712E00A10405 /* LearnCycleTitle.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1327,6 +1333,7 @@
 				CAE579A22A7AD8A1004EE21C /* CalendarCollectionConverter.swift in Sources */,
 				BF4DC2E52A74456F0005BF7E /* TestCalendarRecalculationPresenter.swift in Sources */,
 				0D6336A12A774D7A00EE9699 /* OtherCyclePhasesViewController.swift in Sources */,
+				0DF4106B2A85712E00A10405 /* LearnCycleTitle.swift in Sources */,
 				CAE579A42A7ADE2D004EE21C /* HomeCollection.swift in Sources */,
 				BF6520E12A6F0D4B00E60054 /* CycleDurationViewController.swift in Sources */,
 				0DBADDD82A66017600A10FC3 /* DrawableView.swift in Sources */,
@@ -1346,6 +1353,7 @@
 				0D6336F42A799BAC00EE9699 /* CalendarCollectionViewDataSourceImpl.swift in Sources */,
 				A46C05552A74642C0071ABCE /* HomeView.swift in Sources */,
 				A48B7ECD2A77118400CCC4C0 /* FeedbackCard.swift in Sources */,
+				0DF410692A856A6300A10405 /* PhaseCycleTitle.swift in Sources */,
 				0D6794202A735C1B00382142 /* HomeContract.swift in Sources */,
 				0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */,
 				0D6794242A735C1B00382142 /* HomeInteractor.swift in Sources */,
@@ -1574,7 +1582,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M3SKJK6V42;
+				DEVELOPMENT_TEAM = 4UVYB4V5UN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = luna/Info.plist;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Calendário é usado para salvar o cálculo de seu ciclo e visualizá-lo no \"Luna\".";
@@ -1607,7 +1615,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M3SKJK6V42;
+				DEVELOPMENT_TEAM = 4UVYB4V5UN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = luna/Info.plist;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Calendário é usado para salvar o cálculo de seu ciclo e visualizá-lo no \"Luna\".";
