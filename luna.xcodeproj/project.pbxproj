@@ -84,6 +84,7 @@
 		0DF410672A85656300A10405 /* MonthTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF410662A85656300A10405 /* MonthTag.swift */; };
 		0DF410692A856A6300A10405 /* PhaseCycleTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF410682A856A6300A10405 /* PhaseCycleTitle.swift */; };
 		0DF4106B2A85712E00A10405 /* LearnCycleTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4106A2A85712E00A10405 /* LearnCycleTitle.swift */; };
+		0DF4106E2A85820D00A10405 /* SeeMoreCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4106D2A85820D00A10405 /* SeeMoreCard.swift */; };
 		2814909EB8D2BDC1D5AA5874 /* Pods_lunaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33837198E1A2D686B82FD9A5 /* Pods_lunaTests.framework */; };
 		6994CDD4C9481D9C0BE8F427 /* Pods_luna_lunaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72D64B781A7543B9B9BB027 /* Pods_luna_lunaUITests.framework */; };
 		A46C05132A6EFE150071ABCE /* CalendarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050D2A6EFE150071ABCE /* CalendarRouter.swift */; };
@@ -252,6 +253,7 @@
 		0DF410662A85656300A10405 /* MonthTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthTag.swift; sourceTree = "<group>"; };
 		0DF410682A856A6300A10405 /* PhaseCycleTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseCycleTitle.swift; sourceTree = "<group>"; };
 		0DF4106A2A85712E00A10405 /* LearnCycleTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnCycleTitle.swift; sourceTree = "<group>"; };
+		0DF4106D2A85820D00A10405 /* SeeMoreCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMoreCard.swift; sourceTree = "<group>"; };
 		33837198E1A2D686B82FD9A5 /* Pods_lunaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lunaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD2EB575C89A943BE87F57E /* Pods-lunaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lunaTests.release.xcconfig"; path = "Target Support Files/Pods-lunaTests/Pods-lunaTests.release.xcconfig"; sourceTree = "<group>"; };
 		40083797C335396142E4E31B /* Pods-luna-lunaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna-lunaUITests.debug.xcconfig"; path = "Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -677,6 +679,7 @@
 		0DDA61352A69D11200CA15C6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0DF4106C2A8581FC00A10405 /* SeeMoreCard */,
 				BFD1A0212A833A8700F420B5 /* Link */,
 				BFD1A01E2A8329D000F420B5 /* ReferenceCard */,
 				0D15FE922A7DB0B600FD64E4 /* WarningNoMenstrualData */,
@@ -737,6 +740,14 @@
 				0D6336F32A799BAC00EE9699 /* CalendarCollectionViewDataSourceImpl.swift */,
 			);
 			path = datasource;
+			sourceTree = "<group>";
+		};
+		0DF4106C2A8581FC00A10405 /* SeeMoreCard */ = {
+			isa = PBXGroup;
+			children = (
+				0DF4106D2A85820D00A10405 /* SeeMoreCard.swift */,
+			);
+			path = SeeMoreCard;
 			sourceTree = "<group>";
 		};
 		44D481D3F52D76C9157564E0 /* Frameworks */ = {
@@ -1309,6 +1320,7 @@
 				0DF410672A85656300A10405 /* MonthTag.swift in Sources */,
 				CA557BCC2A6B1742001DF2BB /* LandingPageContract.swift in Sources */,
 				0DBADDE22A6603F800A10FC3 /* LastDayMenstruationViewController.swift in Sources */,
+				0DF4106E2A85820D00A10405 /* SeeMoreCard.swift in Sources */,
 				0D7C73B02A67834100677D1E /* TouchableUserEvent.swift in Sources */,
 				0D6336F22A799B8B00EE9699 /* CalendarCollectionViewDataSource.swift in Sources */,
 				0D6336A02A774D7A00EE9699 /* OtherCyclePhasesRouter.swift in Sources */,
