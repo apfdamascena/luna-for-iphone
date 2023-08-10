@@ -74,7 +74,7 @@ class CycleDetailsCard: UIView, AnyView {
             $0.top.height.equalToSuperview()
             $0.leading.equalToSuperview().offset(0.5.su)
             $0.width.equalTo(14)
-            $0.height.equalTo(verticalStack).multipliedBy(1.4)
+            $0.height.equalTo(verticalStack).multipliedBy(1.25)
         }
     }
 
