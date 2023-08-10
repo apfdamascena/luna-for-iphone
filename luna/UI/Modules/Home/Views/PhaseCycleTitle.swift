@@ -49,7 +49,6 @@ class PhaseCycleTitle: UIStackView, AnyView {
         axis = .vertical
         alignment = .leading
         spacing = 0
-        backgroundColor = .blue
     }
 
 }

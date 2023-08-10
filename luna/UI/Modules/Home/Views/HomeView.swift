@@ -94,15 +94,15 @@ class HomeView: UIView, AnyView  {
         
         allContentStackView.addArrangedSubview(warningCalendarAccess)
         allContentStackView.addArrangedSubview(learnCycleTitle)
+        allContentStackView.addArrangedSubview(phaseCycleTitle)
         allContentStackView.addArrangedSubview(menstrualPhaseBehaviorsView)
         allContentStackView.addArrangedSubview(learnAboutMenstrualCyclePhasesView)
         allContentStackView.addArrangedSubview(warningNoMenstrualData)
-        allContentStackView.addArrangedSubview(phaseCycleTitle)
+
+//        menstrualPhaseBehaviorsView.stack.addArrangedSubview(stackSeeMore)
         
-        menstrualPhaseBehaviorsView.stack.addArrangedSubview(stackSeeMore)
-        
-        stackSeeMore.addArrangedSubview(ball)
-        stackSeeMore.addArrangedSubview(seeMoreButton)
+//        stackSeeMore.addArrangedSubview(ball)
+//        stackSeeMore.addArrangedSubview(seeMoreButton)
     }
     
     func addConstraints() {
