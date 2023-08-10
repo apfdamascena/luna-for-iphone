@@ -46,7 +46,6 @@ class SeeMoreCard: UIView, AnyView {
             $0.height.equalTo(35)
         }
     }
-
 }
 
 
