@@ -428,14 +428,13 @@
 		0D67941A2A735C0800382142 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0DF410642A85603300A10405 /* datasource */,
 				A46C05512A7464230071ABCE /* Views */,
 				0D67941B2A735C1A00382142 /* HomeContract.swift */,
 				0D67941C2A735C1A00382142 /* HomePresenter.swift */,
 				0D67941D2A735C1A00382142 /* HomeRouter.swift */,
 				0D67941E2A735C1A00382142 /* HomeViewController.swift */,
 				0D67941F2A735C1A00382142 /* HomeInteractor.swift */,
-				0D6336F12A799B8B00EE9699 /* CalendarCollectionViewDataSource.swift */,
-				0D6336F32A799BAC00EE9699 /* CalendarCollectionViewDataSourceImpl.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -723,6 +722,15 @@
 				0D6794182A731B5C00382142 /* OnboardingUserCycleInformation.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		0DF410642A85603300A10405 /* datasource */ = {
+			isa = PBXGroup;
+			children = (
+				0D6336F12A799B8B00EE9699 /* CalendarCollectionViewDataSource.swift */,
+				0D6336F32A799BAC00EE9699 /* CalendarCollectionViewDataSourceImpl.swift */,
+			);
+			path = datasource;
 			sourceTree = "<group>";
 		};
 		44D481D3F52D76C9157564E0 /* Frameworks */ = {
