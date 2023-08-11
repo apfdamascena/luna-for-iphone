@@ -11,12 +11,13 @@ import UIKit
 
 class HomePresenter: ViewToPresenterHomeProtocol {
     
+
     var view: PresenterToViewHomeProtocol?
     var interactor: PresenterToInteractorHomeProtocol?
     var router: PresenterToRouterHomeProtocol?
     
     func checkCalendarPermission() {
-        interactor?.checkIfUserGivePermission{ permission in
+        interactor?.checkIfUserGivePermission { permission in
             
             switch permission {
             case .success:
@@ -27,7 +28,7 @@ class HomePresenter: ViewToPresenterHomeProtocol {
         }
     }
     
-    func callReferencesSheet() {
+    func showCyclePhaseReferencesSheet() {
         guard let homePresenterView = view else { return }
         
         self.router?.pushReferencesSheet(on: homePresenterView)
@@ -75,7 +76,6 @@ class HomePresenter: ViewToPresenterHomeProtocol {
     func moveTo(_ month: Date) {
         view?.moveTo(month)
     }
-    
 }
 
 extension HomePresenter: InteractorToPresenterHomeProtocol {

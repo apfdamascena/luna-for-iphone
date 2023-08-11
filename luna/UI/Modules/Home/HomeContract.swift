@@ -18,13 +18,13 @@ protocol PresenterToViewHomeProtocol {
     func changeSelectedCell(selectedCell: CalendarCollectionViewCell) 
     func moveCalendarCollection(toXAxis: CGFloat)
     func updateView(_ center: CalendarCollectionViewCell)
-    func showFeedbackRegisterMenstruation()
-
     
     func load(collectionDataSource: [CyclePhaseViewModel])
     func loadCalendarToCollection(date: Date)
     
     func moveTo(_ month: Date)
+    func showFeedbackRegisterMenstruation()
+
 }
 
 
@@ -48,7 +48,7 @@ protocol ViewToPresenterHomeProtocol {
     func moveTo(_ month: Date)
     func userOpenDeviceSettings()
     
-    func callReferencesSheet()
+    func showCyclePhaseReferencesSheet()
 }
 
 

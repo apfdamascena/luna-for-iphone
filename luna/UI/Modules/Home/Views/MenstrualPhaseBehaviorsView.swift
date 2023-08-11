@@ -7,8 +7,11 @@
 
 import UIKit
 
-
 class MenstrualPhaseBehaviorsView: UIView, AnyView {
+    
+    var seeMoreButton: UIButton {
+        return seeMoreCard.seeMoreButton
+    }
     
     let whatIsCardInformation: CycleDetailsCard = {
         let container = CycleDetailsCard()
@@ -47,6 +50,8 @@ class MenstrualPhaseBehaviorsView: UIView, AnyView {
         return view
     }()
     
+    private let seeMoreCard = SeeMoreCard()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -64,6 +69,7 @@ class MenstrualPhaseBehaviorsView: UIView, AnyView {
         stack.addArrangedSubview(betterAvoidCardInformation)
         stack.addArrangedSubview(wannaHelpCardInformation)
         stack.addArrangedSubview(behindSheetsCardInformation)
+        stack.addArrangedSubview(seeMoreCard)        
     }
     
     func addConstraints() {

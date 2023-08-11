@@ -30,11 +30,12 @@ class LunaButtonSeeMore: DrawableButton {
         configuration.image = Asset.arrowLeftIcon.image.withHorizontallyFlippedOrientation()
         configuration.imagePadding = 1.su
         configuration.imagePlacement = .trailing
-//        configuration.contentInsets = NSDirectionalEdgeInsets(top: 1.su, leading: (1.2).su, bottom: 1.su, trailing: (11).su)
         
+        configuration.contentInsets = NSDirectionalEdgeInsets(top: 0,
+                                                              leading: 0,
+                                                              bottom: 0,
+                                                              trailing: 0)
 
-        
-        
         configuration.background.backgroundColor = .clear
         
         button.semanticContentAttribute = .forceLeftToRight

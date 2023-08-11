@@ -42,7 +42,6 @@ class HomeViewController: UIViewController {
         addCalendarEventObservable()
         addCyclePhaseEventObservable()
         addSettingsHandlerEvent()
-        addAccesCalendarHandler()
         seeMoreButtonTouchTrigger()
     }
     
@@ -57,6 +56,7 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         homeView.calendarCollectionView.setMargin(with: self.view.frame.width)
+        
         moveInitialCollection()
         DispatchQueue.main.async {
             self.presenter?.loadCalendarToCollection()
@@ -119,21 +119,15 @@ class HomeViewController: UIViewController {
                 self.presenter?.userOpenDeviceSettings()
             }.disposed(by: disposeBag)
     }
-    
-    func addAccesCalendarHandler(){
 
-        datasource.accessToCalendar
-            .asObservable()
-            .subscribe(onNext: { access in
-                self.homeView.accessToCalendar(allowed: access)
-            }).disposed(by: disposeBag)
-    }
     
     func seeMoreButtonTouchTrigger() {
         
-        homeView.seeMoreButton.rx.tap.bind {
-            self.presenter?.callReferencesSheet()
-        }.disposed(by: disposeBag)
+        homeView.menstrualPhaseBehaviorsView
+            .seeMoreButton.rx
+            .tap.bind {
+                self.presenter?.showCyclePhaseReferencesSheet()
+            }.disposed(by: disposeBag)
     }
 }
 
@@ -206,14 +200,12 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     
     func userAllowedAccessCalendar() {
         presenter?.loadUserCalendar()
-        datasource.accessToCalendar.onNext(.authorized)
         DispatchQueue.main.async {
             self.homeView.userAllowedAccessCalendar()
         }
     }
     
     func userDeniedAccessCalendar() {
-        datasource.accessToCalendar.onNext(.unauthorized)
         DispatchQueue.main.async {
             self.homeView.userDeniedAccessCalendar()
         }
