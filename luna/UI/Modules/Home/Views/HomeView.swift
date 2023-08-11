@@ -132,21 +132,14 @@ class HomeView: UIView, AnyView  {
     }
     
     func userDeniedAccessCalendar() {
-        phaseCycleTitle.isHidden = true
-        menstrualPhaseBehaviorsView.isHidden = true
-        
-        warningCalendarAccess.isHidden = false
-        learnCycleTitle.isHidden = false
-        learnAboutMenstrualCyclePhasesView.isHidden = false
+        self.toggleCalendarViewIfUserAccess(to: false)
+        self.hasAcessToCalendar = .unauthorized
     }
     
     func userAllowedAccessCalendar() {
-        warningCalendarAccess.isHidden = true
-        learnCycleTitle.isHidden = true
-        learnAboutMenstrualCyclePhasesView.isHidden = true
-
-        phaseCycleTitle.isHidden =  false
-        menstrualPhaseBehaviorsView.isHidden = false
+        self.hasAcessToCalendar = .authorized
+        self.toggleCalendarViewIfUserAccess(to: true)
+        
     }
     
     func cardFeedbackDisappear() {
@@ -155,21 +148,6 @@ class HomeView: UIView, AnyView  {
     
     func cardFeedbackAppear() {
         recordedMenstruationFeedback.isHidden = false
-    }
-    
-    func phaseChanged(to cycle: CyclePhase) {
-
-        DispatchQueue.main.async {
-            let model = CyclePhaseTextFactory.create(phase: cycle)
-            self.phaseCycleTitle.phaseTitle.text = model.name
-            self.menstrualPhaseBehaviorsView.draw(model)
-        }
-    }
-    
-    func monthChanged(to date: Date) {
-        DispatchQueue.main.async {
-            self.monthTag.monthText.text = date.formatMonthToString().capitalized
-        }
     }
     
     func showWarningNoMenstrualData(if cycle: CyclePhase){
@@ -196,6 +174,31 @@ class HomeView: UIView, AnyView  {
     
     func accessToCalendar(allowed: CalendarAccess){
         self.hasAcessToCalendar = allowed
+    }
+    
+    private func toggleCalendarViewIfUserAccess(to value: Bool){
+        [warningCalendarAccess, learnCycleTitle, learnAboutMenstrualCyclePhasesView]
+            .forEach{
+                $0.isHidden = value
+            }
+        [phaseCycleTitle, menstrualPhaseBehaviorsView].forEach{
+            $0.isHidden = !value
+        }
+    }
+    
+    func phaseChanged(to cycle: CyclePhase) {
+
+        DispatchQueue.main.async {
+            let model = CyclePhaseTextFactory.create(phase: cycle)
+            self.phaseCycleTitle.phaseTitle.text = model.name
+            self.menstrualPhaseBehaviorsView.draw(model)
+        }
+    }
+    
+    func monthChanged(to date: Date) {
+        DispatchQueue.main.async {
+            self.monthTag.monthText.text = date.formatMonthToString().capitalized
+        }
     }
     
 }
