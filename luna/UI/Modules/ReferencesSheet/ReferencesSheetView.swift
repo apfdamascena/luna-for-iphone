@@ -16,7 +16,7 @@ class ReferencesSheetView: UIView, AnyView {
                                       color: .black,
                                       weight: .medium)
         
-        label.text = "Referências"
+        label.text = L10n.Constants.Content.Label.Sheet.title
         label.numberOfLines = 0
         label.textAlignment = .left
         label.draw(model)
@@ -83,7 +83,7 @@ class ReferencesSheetView: UIView, AnyView {
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.isScrollEnabled = true
-        scrollView.showsVerticalScrollIndicator = true
+        scrollView.showsVerticalScrollIndicator = false
         return scrollView
     }()
     

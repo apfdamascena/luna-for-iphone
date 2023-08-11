@@ -21,8 +21,8 @@ internal enum L10n {
         internal static let `continue` = L10n.tr("Constants", "constants.content.button.continue", fallback: "Continuar")
         /// Voltar
         internal static let previous = L10n.tr("Constants", "constants.content.button.previous", fallback: "Voltar")
-        /// Saiba Mais
-        internal static let seeMore = L10n.tr("Constants", "constants.content.button.see-more", fallback: "Saiba Mais")
+        /// Referências
+        internal static let seeMore = L10n.tr("Constants", "constants.content.button.see-more", fallback: "Referências")
         /// Ajustes
         internal static let settings = L10n.tr("Constants", "constants.content.button.settings", fallback: "Ajustes")
         /// Iniciar
@@ -103,6 +103,18 @@ internal enum L10n {
           internal static let settingsSubtitle = L10n.tr("Constants", "constants.content.label.home.settings_subtitle", fallback: "1. Vá em ajustes")
           /// Você está na
           internal static let youAreIn = L10n.tr("Constants", "constants.content.label.home.youAreIn", fallback: "Você está na")
+          internal enum Behavior {
+            /// Por trás dos panos
+            internal static let behind = L10n.tr("Constants", "constants.content.label.home.behavior.behind", fallback: "Por trás dos panos")
+            /// Melhor evitar, hein!
+            internal static let better = L10n.tr("Constants", "constants.content.label.home.behavior.better", fallback: "Melhor evitar, hein!")
+            /// Quer uma ajuda?
+            internal static let help = L10n.tr("Constants", "constants.content.label.home.behavior.help", fallback: "Quer uma ajuda?")
+            /// Como você está?
+            internal static let how = L10n.tr("Constants", "constants.content.label.home.behavior.how", fallback: "Como você está?")
+            /// O que é?
+            internal static let what = L10n.tr("Constants", "constants.content.label.home.behavior.what", fallback: "O que é?")
+          }
           internal enum Informational {
             /// O que fazer?
             internal static let `do` = L10n.tr("Constants", "constants.content.label.home.informational.do", fallback: "O que fazer?")
@@ -152,11 +164,11 @@ internal enum L10n {
           /// 😡 TPM
           internal static let pms = L10n.tr("Constants", "constants.content.label.phase.pms", fallback: "😡 TPM")
         }
-        internal enum Placeholder {
-          /// Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-          internal static let big = L10n.tr("Constants", "constants.content.label.placeholder.big", fallback: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.")
-          /// Sed ut perspiciatis unde
-          internal static let bullet = L10n.tr("Constants", "constants.content.label.placeholder.bullet", fallback: "Sed ut perspiciatis unde")
+        internal enum Sheet {
+          /// Disponível aqui!
+          internal static let link = L10n.tr("Constants", "constants.content.label.sheet.link", fallback: "Disponível aqui!")
+          /// Referências
+          internal static let title = L10n.tr("Constants", "constants.content.label.sheet.title", fallback: "Referências")
         }
         internal enum Text {
           internal enum Avoid {

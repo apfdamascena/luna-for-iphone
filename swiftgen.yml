@@ -13,7 +13,7 @@
 
  strings:
    inputs:
-     - luna/Constant/Constants.strings
+     - luna/Constant/pt-BR.lproj/Constants.strings
    outputs:
      - templateName: structured-swift5
        output: luna/Constant/Strings+Generated.swift

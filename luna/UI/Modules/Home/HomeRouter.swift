@@ -16,9 +16,11 @@ class HomeRouter: PresenterToRouterHomeProtocol {
         let referencesSheetVC = ReferencesViewController()
         
         if let sheet = referencesSheetVC.sheetPresentationController {
-            sheet.detents = [.custom { context in
-                return context.maximumDetentValue * 0.8
-            }, .large()]
+            if #available(iOS 16.0, *) {
+                sheet.detents = [.custom { context in
+                    return context.maximumDetentValue * 0.8
+                }, .large()]
+            } 
             sheet.largestUndimmedDetentIdentifier = .medium
             sheet.prefersScrollingExpandsWhenScrolledToEdge = false
             sheet.prefersEdgeAttachedInCompactHeight = true
