@@ -1610,6 +1610,7 @@
 				DEVELOPMENT_TEAM = 4UVYB4V5UN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = luna/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Luna;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Calendário é usado para salvar o cálculo de seu ciclo e visualizá-lo no \"Luna\".";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1643,6 +1644,7 @@
 				DEVELOPMENT_TEAM = 4UVYB4V5UN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = luna/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Luna;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Calendário é usado para salvar o cálculo de seu ciclo e visualizá-lo no \"Luna\".";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
