@@ -218,14 +218,22 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     }
     
     func updateView(_ center: CalendarCollectionViewCell) {
+        if center != self.datasource.lastCell {
+            vibrateDevice()
+        }
         
         DispatchQueue.main.async {
             self.datasource.lastCell?.transformToStandard()
-            self.datasource.lastCell = center
             center.transformToLarge()
+            self.datasource.lastCell = center
+            
         }
     }
- 
+    
+    func vibrateDevice() {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
+    }
 }
 
 
