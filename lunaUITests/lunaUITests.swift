@@ -6,28 +6,119 @@
 //
 
 import XCTest
+@testable import luna
 
 final class lunaUITests: XCTestCase {
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testOnboardingAppWithPermissionToCalendar() throws {
         let app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let buttonInit = app.buttons["Iniciar"]
+        XCTAssertTrue(buttonInit.exists, "Iniciar label button not found")
+        buttonInit.tap()
+        
+        let daySelectedDatePicker = app.scrollViews.otherElements.datePickers.collectionViews.staticTexts["8"]
+        XCTAssertTrue(daySelectedDatePicker.exists, "Day 8 of DatePicker not found")
+        daySelectedDatePicker.tap()
+        
+        let buttonContinue = app.buttons["Continuar"]
+        XCTAssertTrue(buttonContinue.exists, "Continuar label button not found")
+        buttonContinue.tap()
+        
+        let pickerDayMenstruation = app.scrollViews.otherElements.pickerWheels
+        pickerDayMenstruation["5"].adjust(toPickerWheelValue: "14")
+        pickerDayMenstruation["14"].tap()
+        
+        buttonContinue.tap()
+        
+        let buttonBack = app.buttons["Voltar"]
+        XCTAssertTrue(buttonBack.exists, "Voltar label button not found")
+        buttonBack.tap()
+        
+        buttonContinue.tap()
+        
+        let pickerTimeCycle = app.scrollViews.otherElements.pickerWheels
+        XCTAssertTrue(pickerTimeCycle["28"].exists, "Picker Time Menstruation Cycle 28 days not found")
+        pickerTimeCycle["28"].tap()
+    
+        buttonContinue.tap()
+        buttonContinue.tap()
+        buttonBack.tap()
+        buttonContinue.tap()
+        buttonContinue.tap()
+        
+        let locationDialogMonitor = addUIInterruptionMonitor(withDescription: "“luna” Deseja Ter Acesso ao Seu Calendário") { (alertElement) in
+            let partialPermissionMessage = "Deseja Ter Acesso ao Seu Calendário"
+            guard alertElement.label.contains(partialPermissionMessage) else { return false }
+            alertElement.buttons["OK"].tap()
+            return true
+        }
+        
+        buttonContinue.tap()
+        
+        let homeViewWithPermissionToCalendar = app.staticTexts["Você está na"]
+        XCTAssertTrue(homeViewWithPermissionToCalendar.exists)
+    }
+    
+    func testOnboardingAppWithNoPermissionToCalendar() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let buttonInit = app.buttons["Iniciar"]
+        XCTAssertTrue(buttonInit.exists, "Iniciar label button not found")
+        buttonInit.tap()
+        
+        let daySelectedDatePicker = app.scrollViews.otherElements.datePickers.collectionViews.staticTexts["3"]
+        XCTAssertTrue(daySelectedDatePicker.exists, "Day 3 of DatePicker not found")
+        daySelectedDatePicker.tap()
+        
+        let buttonContinue = app.buttons["Continuar"]
+        XCTAssertTrue(buttonContinue.exists, "Continuar label button not found")
+        buttonContinue.tap()
+        
+        let pickerDayMenstruation = app.scrollViews.otherElements.pickerWheels
+        pickerDayMenstruation["5"].adjust(toPickerWheelValue: "2")
+        pickerDayMenstruation["2"].tap()
+        
+        buttonContinue.tap()
+        
+        let buttonBack = app.buttons["Voltar"]
+        XCTAssertTrue(buttonBack.exists, "Voltar label button not found")
+        buttonBack.tap()
+        
+        buttonContinue.tap()
+        
+        let pickerTimeCycle = app.scrollViews.otherElements.pickerWheels
+        pickerTimeCycle["28"].adjust(toPickerWheelValue: "10")
+        XCTAssertTrue(pickerTimeCycle["10"].exists, "Picker Time Menstruation Cycle 10 days not found")
+        pickerTimeCycle["10"].tap()
+    
+        buttonContinue.tap()
+        buttonContinue.tap()
+        buttonBack.tap()
+        buttonContinue.tap()
+        buttonContinue.tap()
+        
+        let locationDialogMonitor = addUIInterruptionMonitor(withDescription: "“luna” Deseja Ter Acesso ao Seu Calendário") { (alertElement) in
+            let partialPermissionMessage = "Deseja Ter Acesso ao Seu Calendário"
+            guard alertElement.label.contains(partialPermissionMessage) else { return false }
+            alertElement.buttons["Não Permitir"].tap()
+            return true
+        }
+        
+        buttonContinue.tap()
+        
+        let homeViewWithPermissionToCalendar = app.staticTexts["Aprenda sobre as"]
+        XCTAssertTrue(homeViewWithPermissionToCalendar.exists)
     }
 
     func testLaunchPerformance() throws {
@@ -39,3 +130,5 @@ final class lunaUITests: XCTestCase {
         }
     }
 }
+
+// 
