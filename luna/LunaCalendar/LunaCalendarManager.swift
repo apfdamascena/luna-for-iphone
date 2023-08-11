@@ -67,22 +67,26 @@ class LunaCalendarManager {
     func firstLoadElementsToCalendar(firstDayMenstruation: Date, averageMenstruationDuration: Int, averageCycleDuration: Int) {
         if lunaEventsExist() { return }
         addCyclePhasesToCalendar(firstDayMenstruation: firstDayMenstruation, averageMenstruationDuration: averageMenstruationDuration, averageCycleDuration: averageCycleDuration, lastDayMenstruation: nil)
-
     }
 
     func addCyclePhasesToCalendar(firstDayMenstruation: Date, averageMenstruationDuration: Int, averageCycleDuration: Int, lastDayMenstruation: Date?) {
-        let cycleInformations = CycleInformations(firstDayMenstruation: firstDayMenstruation, averageMenstruationDuration: averageMenstruationDuration, averageCycleDuration: averageCycleDuration, lastDayMenstruation: lastDayMenstruation)
+        let cycleInformations = CycleInformations(
+            firstDayMenstruation: firstDayMenstruation, averageMenstruationDuration: averageMenstruationDuration, averageCycleDuration: averageCycleDuration, lastDayMenstruation: lastDayMenstruation)
         
-        let monthCycleService = AnualCycleCalculator(eventStore: eventStore,
-                                                    cycleInformations: cycleInformations)
+        let monthCycleService = AnualCycleCalculator(
+            eventStore: eventStore,
+            cycleInformations: cycleInformations)
 
         let phases = monthCycleService.getPhases()
         for phase in phases {
-            let event = LunaEvent(title: phase.title, startDate: phase.startDate, endDate: phase.endDate)
+            let event = LunaEvent(
+                title: phase.title,
+                startDate: phase.startDate,
+                endDate: phase.endDate)
             createEvent(event)
         }
     }
-    
+
     // [MUDAR] -  Provavelmente vai ter que refazer muita coisa aqui
 
     func removedEventIfEqualToPhase(menstruationDate: Date) -> Bool {

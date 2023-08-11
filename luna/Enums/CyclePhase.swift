@@ -14,6 +14,7 @@ enum CyclePhase: String, CaseIterable {
     case fertile
     case expectedMenstruation
     case pms
+    case possibleMenstruation
     case none
     
     var value: String {
@@ -30,7 +31,8 @@ enum CyclePhase: String, CaseIterable {
             return L10n.Constants.Content.Label.expectedMenstruation
         case .pms:
             return L10n.Constants.Content.Label.pms
-            
+        case .possibleMenstruation:
+            return "Possível menstruação"
         default:
             return ""
         }
