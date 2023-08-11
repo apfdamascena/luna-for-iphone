@@ -156,8 +156,7 @@ class CalendarCollectionViewCell: UICollectionViewCell,
             
         }
         
-        let generator = UIImpactFeedbackGenerator(style: .light)
-        generator.impactOccurred()
+        
     }
     
     func transformToStandard() {
