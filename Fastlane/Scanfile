@@ -1,0 +1,9 @@
+
+workspace "luna.xcworkspace"
+scheme "luna"
+sdk "iphonesimulator"
+device "iPhone 11"
+code_coverage true
+xcargs '-parallelizeTargets'
+prelaunch_simulator true
+derived_data_path "Build/"
