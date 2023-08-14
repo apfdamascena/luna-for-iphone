@@ -12,12 +12,19 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        resetStateIfUITesting()
         Thread.sleep(forTimeInterval: 0.5)
         // Override point for customization after application launch.
         return true
     }
 
     // MARK: UISceneSession Lifecycle
+    
+    private func resetStateIfUITesting() {
+        if ProcessInfo().arguments.contains("UI-Testing") {
+            UserDefaults.standard.removeObject(forKey: L10n.Constants.User.Key.forOnboardingWasSeen)
+        }
+    }
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
