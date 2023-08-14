@@ -31,6 +31,14 @@ class HomeView: UIView, AnyView  {
         return view
     }()
     
+    private let descriptionStackView: UIStackView = {
+        let view = UIStackView()
+        view.axis = .vertical
+        view.alignment = .fill
+        view.spacing = 4.su
+        return view
+    }()
+    
     private let recordedMenstruationFeedback: FeedbackCard = {
         let card = FeedbackCard()
         card.message(for: .recordedMenstruation)
@@ -62,19 +70,23 @@ class HomeView: UIView, AnyView  {
     
     func addSubviews() {
         
-        addSubview(monthTag)
-        addSubview(calendarCollectionView)
+//        addSubview(monthTag)
+//        addSubview(calendarCollectionView)
         addSubview(scrollView)
         
         addSubview(recordedMenstruationFeedback)
         scrollView.addSubview(allContentStackView)
         
-        allContentStackView.addArrangedSubview(warningCalendarAccess)
-        allContentStackView.addArrangedSubview(learnCycleTitle)
-        allContentStackView.addArrangedSubview(phaseCycleTitle)
-        allContentStackView.addArrangedSubview(menstrualPhaseBehaviorsView)
-        allContentStackView.addArrangedSubview(learnAboutMenstrualCyclePhasesView)
-        allContentStackView.addArrangedSubview(warningNoMenstrualData)
+        allContentStackView.addArrangedSubview(monthTag)
+        allContentStackView.addArrangedSubview(calendarCollectionView)
+        allContentStackView.addArrangedSubview(descriptionStackView)
+        
+        descriptionStackView.addArrangedSubview(warningCalendarAccess)
+        descriptionStackView.addArrangedSubview(learnCycleTitle)
+        descriptionStackView.addArrangedSubview(phaseCycleTitle)
+        descriptionStackView.addArrangedSubview(menstrualPhaseBehaviorsView)
+        descriptionStackView.addArrangedSubview(learnAboutMenstrualCyclePhasesView)
+        descriptionStackView.addArrangedSubview(warningNoMenstrualData)
     }
     
     func addConstraints() {
@@ -85,22 +97,23 @@ class HomeView: UIView, AnyView  {
             $0.height.equalTo(50)
         }
         
-        monthTag.snp.makeConstraints {
-            $0.top.equalTo(safeAreaLayoutGuide)
-            $0.leading.trailing.equalToSuperview().inset(3.su)
-            $0.height.equalTo(3.su)
-        }
-        
         calendarCollectionView.snp.makeConstraints{
             $0.height.equalTo(123)
             $0.leading.trailing.equalToSuperview()
-            $0.top.equalTo(monthTag.snp.bottom).offset(3.su)
         }
         
         scrollView.snp.makeConstraints {
-            $0.top.equalTo(calendarCollectionView.snp.bottom).offset(3.su)
-            $0.leading.trailing.equalTo(self).inset(3.su)
+            $0.top.equalTo(safeAreaLayoutGuide)
+            $0.leading.trailing.equalToSuperview()
             $0.bottom.equalTo(safeAreaLayoutGuide)
+        }
+        
+        monthTag.snp.makeConstraints {
+            $0.leading.equalToSuperview().inset(3.su)
+        }
+        
+        descriptionStackView.snp.makeConstraints {
+            $0.leading.trailing.equalTo(self).inset(3.su)
         }
 
         allContentStackView.snp.makeConstraints {
