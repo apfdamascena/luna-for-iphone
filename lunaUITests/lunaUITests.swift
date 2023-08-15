@@ -18,6 +18,7 @@ final class lunaUITests: XCTestCase {
         app.launch()
         
         let buttonInit = app.buttons["Start"]
+        print(buttonInit.exists)
         XCTAssertTrue(buttonInit.exists, "Iniciar label button not found")
         buttonInit.tap()
         
@@ -26,6 +27,8 @@ final class lunaUITests: XCTestCase {
         daySelectedDatePicker.tap()
         
         let buttonContinue = app.buttons["Continue"]
+        
+        print(buttonContinue.exists)
         XCTAssertTrue(buttonContinue.exists, "Continuar label button not found")
         buttonContinue.tap()
         
@@ -36,6 +39,7 @@ final class lunaUITests: XCTestCase {
         buttonContinue.tap()
         
         let buttonBack = app.buttons["Back"]
+        print(buttonBack.exists)
         XCTAssertTrue(buttonBack.exists, "Voltar label button not found")
         buttonBack.tap()
         
