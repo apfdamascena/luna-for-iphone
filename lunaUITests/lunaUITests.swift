@@ -17,7 +17,7 @@ final class lunaUITests: XCTestCase {
         app.resetAuthorizationStatus(for: .calendar)
         app.launch()
         
-        let buttonInit = app.buttons["Iniciar"]
+        let buttonInit = app.buttons[L10n.Constants.Content.Button.start]
         XCTAssertTrue(buttonInit.exists, "Iniciar label button not found")
         buttonInit.tap()
         
@@ -25,7 +25,7 @@ final class lunaUITests: XCTestCase {
         XCTAssertTrue(daySelectedDatePicker.exists, "Day 3 of DatePicker not found")
         daySelectedDatePicker.tap()
         
-        let buttonContinue = app.buttons["Continuar"]
+        let buttonContinue = app.buttons[L10n.Constants.Content.Button.continue]
         XCTAssertTrue(buttonContinue.exists, "Continuar label button not found")
         buttonContinue.tap()
         
@@ -35,7 +35,7 @@ final class lunaUITests: XCTestCase {
         
         buttonContinue.tap()
         
-        let buttonBack = app.buttons["Voltar"]
+        let buttonBack = app.buttons[L10n.Constants.Content.Button.previous]
         XCTAssertTrue(buttonBack.exists, "Voltar label button not found")
         buttonBack.tap()
         
@@ -113,7 +113,7 @@ final class lunaUITests: XCTestCase {
         
         buttonContinue.tap()
         
-        let homeViewWithPermissionToCalendar = app.staticTexts["Você está na"]
+        let homeViewWithPermissionToCalendar = app.staticTexts[L10n.Constants.Content.Label.Home.youAreIn]
         XCTAssertTrue(homeViewWithPermissionToCalendar.exists)
     }
     
