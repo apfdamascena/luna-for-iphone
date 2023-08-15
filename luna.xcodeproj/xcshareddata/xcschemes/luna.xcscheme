@@ -29,7 +29,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:../luna.xctestplan"
+            reference = "container:luna.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>

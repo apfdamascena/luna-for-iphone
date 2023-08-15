@@ -9,9 +9,10 @@ module Fastlane
         UI.message "Slather report"
         
         Actions::SlatherAction.run(
-          scheme: 'pipeline-ios',
-          proj: 'pipeline-ios.xcodeproj',
-          output_directory: "fastlane/code_coverage", 
+          scheme: 'luna',
+          proj: 'luna.xcodeproj',
+          workspace: 'luna.xcworkspace',
+          output_directory: "Fastlane/code_coverage", 
           html: true
       )
 

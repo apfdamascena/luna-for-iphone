@@ -1,0 +1,33 @@
+{
+  "configurations" : [
+    {
+      "id" : "6F772F7B-B633-45E9-AE02-C91E99A3B187",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:luna.xcodeproj",
+        "identifier" : "0DBADDB72A65FDF300A10FC3",
+        "name" : "lunaUITests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:luna.xcodeproj",
+        "identifier" : "0DBADDAD2A65FDF300A10FC3",
+        "name" : "lunaTests"
+      }
+    }
+  ],
+  "version" : 1
+}
