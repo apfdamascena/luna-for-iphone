@@ -58,7 +58,7 @@ module Fastlane
           server_url: "https://api.github.com",
           api_token: ENV["API_TOKEN"],
           http_method: "POST",
-          path: "/repos/apfdamascena/pipeline-ios/statuses/#{commit_sha}",
+          path: "/repos/apfdamascena/luna-for-iphone/statuses/#{commit_sha}",
           raw_body:"{\"state\":\"success\", \"description\": \"#{message}\", \"context\": \"coverage\"}",
           error_handlers: {
             404 => proc do |result|

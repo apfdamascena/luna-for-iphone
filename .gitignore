@@ -1,9 +1,11 @@
 ### others
 
+.env
+
 Fastlane/code_coverage/
 ./Fastlane/test_output
 ./Fastlane/report.xml
-./Fastlane/README.md
+Fastlane/README.md
 
 
 
