@@ -8,7 +8,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  test_all_app_for_merge:
+  code-coverage:
+    permissions: write-all
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
