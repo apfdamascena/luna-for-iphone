@@ -12,12 +12,19 @@ final class lunaUITests: XCTestCase {
     
     private let app = XCUIApplication()
     
+    struct Constants {
+        static let t1 = "Start"
+        static let t2 = "Continue"
+        static let t3 = "Back"
+        static let t4 = "Learn about"
+    }
+    
     func testOnboardingAppWithNoPermissionToCalendar() throws {
         app.launchArguments += ["UI-Testing"]
         app.resetAuthorizationStatus(for: .calendar)
         app.launch()
         
-        let buttonInit = app.buttons[L10n.Constants.Content.Button.start]
+        let buttonInit = app.buttons[Constants.t1]
         XCTAssertTrue(buttonInit.exists, "Iniciar label button not found")
         buttonInit.tap()
         
@@ -25,7 +32,7 @@ final class lunaUITests: XCTestCase {
         XCTAssertTrue(daySelectedDatePicker.exists, "Day 3 of DatePicker not found")
         daySelectedDatePicker.tap()
         
-        let buttonContinue = app.buttons[L10n.Constants.Content.Button.continue]
+        let buttonContinue = app.buttons[Constants.t2]
         XCTAssertTrue(buttonContinue.exists, "Continuar label button not found")
         buttonContinue.tap()
         
@@ -35,7 +42,7 @@ final class lunaUITests: XCTestCase {
         
         buttonContinue.tap()
         
-        let buttonBack = app.buttons[L10n.Constants.Content.Button.previous]
+        let buttonBack = app.buttons[Constants.t3]
         XCTAssertTrue(buttonBack.exists, "Voltar label button not found")
         buttonBack.tap()
         
@@ -61,7 +68,7 @@ final class lunaUITests: XCTestCase {
         
         buttonContinue.tap()
         
-        let homeViewWithPermissionToCalendar = app.staticTexts["Aprenda sobre as"]
+        let homeViewWithPermissionToCalendar = app.staticTexts[Constants.t4]
         XCTAssertTrue(homeViewWithPermissionToCalendar.exists)
     }
 
