@@ -116,7 +116,7 @@ final class lunaUITests: XCTestCase {
 
         buttonContinue.tap()
 
-        let homeViewWithPermissionToCalendar = app.staticTexts[L10n.Constants.Content.Label.Home.youAreIn]
+        let homeViewWithPermissionToCalendar = app.staticTexts["Você está na"]
         XCTAssertTrue(homeViewWithPermissionToCalendar.exists)
     }
     
