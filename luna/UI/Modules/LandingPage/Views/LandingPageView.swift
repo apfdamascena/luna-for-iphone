@@ -37,7 +37,7 @@ class LandingPageView: UIView, AnyView {
         let label = LunaText()
         let model = LunaTextViewModel(size: 39,
                                       color: .black,
-                                      weight: .bold)
+                                      weight: .semibold)
         
         label.text = L10n.Constants.Content.Label.appName
         label.numberOfLines = 0

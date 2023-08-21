@@ -22,10 +22,10 @@ class LunaButtonBack: DrawableButton {
         
         var container = AttributeContainer()
         container.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        container.foregroundColor = Asset.primaryRed900.color
+        container.foregroundColor = Asset.red600.color
         
         configuration.attributedTitle = AttributedString(L10n.Constants.Content.Button.previous, attributes: container)
-        configuration.baseForegroundColor = Asset.primaryRed900.color
+        configuration.baseForegroundColor = Asset.red600.color
         
         configuration.image = Asset.arrowLeftIcon.image
         configuration.imagePadding = 1.su
