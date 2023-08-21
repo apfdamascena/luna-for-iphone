@@ -13,7 +13,7 @@ class CycleDurationRouter: PresenterToRouterCycleDurationProtocol {
     
     static func createModule() -> UIViewController {
         
-        let viewController = CycleDurationViewController(datasource: RangePickerViewDataSourceImpl(range: Onboarding.CYCLE_DURATION_RANGE))
+        let viewController = CycleDurationViewController(datasource: RangePickerViewDataSourceImpl(range: OnboardingInformation.CYCLE_DURATION_RANGE))
         
         let presenter: ViewToPresenterCycleDurationProtocol = CycleDurationPresenter()
         

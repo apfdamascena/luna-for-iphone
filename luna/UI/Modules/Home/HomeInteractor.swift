@@ -32,9 +32,9 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
     
     func loadPhasesToUserCalendar() {
         
-        let lastDayMenstruation = OnboardingUserCycleInformation.shared.lastMenstruation
-        let menstruationDuration = OnboardingUserCycleInformation.shared.menstruationDuration
-        let cycleDuration = OnboardingUserCycleInformation.shared.cycleDuration
+        let lastDayMenstruation = UserCycleInformation.shared.lastMenstruation
+        let menstruationDuration = UserCycleInformation.shared.menstruationDuration
+        let cycleDuration = UserCycleInformation.shared.cycleDuration
               
                   
         lunaCalendarManager.firstLoadElementsToCalendar(firstDayMenstruation: lastDayMenstruation,
@@ -46,7 +46,8 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
         
         let firstDate = Date().daysBefore(HomeCollection.COLLECTION_RANGE/2)
         let finalDate = Date().daysAfter(HomeCollection.COLLECTION_RANGE/2)
-        
+        lunaCalendarManager.transformExpectedToMenstruation()
+
         let events = lunaCalendarManager.getEventsByDate(firstDate: firstDate, finalDate: finalDate)
 
         let collectionViewDataSource = CalendarCollectionConverter().turnDaysIntoCyclePhase(events: events)
@@ -54,19 +55,11 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
     }
     
     func insertedMenstruationToCollection(selectedDate: Date) -> Bool {
-        let removedMenstruation = lunaCalendarManager.removedEventIfEqualToPhase(menstruationDate: selectedDate)
-        
-        if !removedMenstruation {
-            let hasMenstruationInCycle = lunaCalendarManager.hasMenstruationInCycle(menstruationDate: selectedDate)
-            if hasMenstruationInCycle {
-                return false
-            } else {
-                lunaCalendarManager.adjustEventsInCalendarBy(menstruationDate: selectedDate)
-                presenter?.showFeedbackRegisterMenstruation()
-                return true
-            }
+        let response = lunaCalendarManager.changeCycleBy(selectedDate: selectedDate)
+        if response == ChangeCycleResponse.hasMenstruationNearDate {
+            return true
         }
-        return true
+        return false
     }
     
     

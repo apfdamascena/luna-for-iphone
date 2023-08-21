@@ -137,10 +137,6 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     func moveTo(_ month: Date) {
         self.homeView.monthChanged(to: month)
     }
-    
-    func loadCalendarToCollection(date: Date) {
-        
-    }
 
     func load(collectionDataSource: [CyclePhaseViewModel]) {
         datasource.data.onNext(collectionDataSource)
