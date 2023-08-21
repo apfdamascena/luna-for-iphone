@@ -776,7 +776,7 @@
 		809C5FAB588354C9BA37DC3EAB8CB45C /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B7A4F00FE9681379A3A92F437CD9D5 /* UISegmentedControl+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISegmentedControl+Rx.swift"; path = "RxCocoa/iOS/UISegmentedControl+Rx.swift"; sourceTree = "<group>"; };
 		811980FBC2E0966A9631F65C81A91233 /* Maybe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Maybe.swift; path = RxSwift/Traits/PrimitiveSequence/Maybe.swift; sourceTree = "<group>"; };
-		811C76DDF35CC14208C29BEA9A123A50 /* Pods-lunaTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-lunaTests"; path = Pods_lunaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		811C76DDF35CC14208C29BEA9A123A50 /* Pods_lunaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lunaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C0060E688E24B6E27D6A351360F9F2 /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapKit.modulemap; sourceTree = "<group>"; };
 		834A0305829FD9934017C33F026D98DD /* UINavigationController+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Rx.swift"; path = "RxCocoa/iOS/UINavigationController+Rx.swift"; sourceTree = "<group>"; };
 		83908AC79114EA304505AEF8EE9FA484 /* UITabBarController+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITabBarController+Rx.swift"; path = "RxCocoa/iOS/UITabBarController+Rx.swift"; sourceTree = "<group>"; };
@@ -904,7 +904,7 @@
 		CAABD6515CC656142747F9B4AF10EADF /* AnimatableSectionModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatableSectionModel.swift; path = Sources/Differentiator/AnimatableSectionModel.swift; sourceTree = "<group>"; };
 		CAB506E5948C9F0BB8C66C8081ECB282 /* UIApplication+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+Rx.swift"; path = "RxCocoa/iOS/UIApplication+Rx.swift"; sourceTree = "<group>"; };
 		CB25C43D7000B71F4CFFAC3EEFE22CD5 /* Observable+Bind.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Observable+Bind.swift"; path = "RxCocoa/Common/Observable+Bind.swift"; sourceTree = "<group>"; };
-		CB4C395B4FCC5B803BD222E4CCA8A7DB /* Pods-luna-lunaUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-luna-lunaUITests"; path = Pods_luna_lunaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB4C395B4FCC5B803BD222E4CCA8A7DB /* Pods_luna_lunaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luna_lunaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF7047B9F3A248999FE6905CBC2937B /* DistinctUntilChanged.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DistinctUntilChanged.swift; path = RxSwift/Observables/DistinctUntilChanged.swift; sourceTree = "<group>"; };
 		CC2CDAD22C933E4FE52CFE5A5A1710D3 /* _RXObjCRuntime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _RXObjCRuntime.h; path = RxCocoa/Runtime/include/_RXObjCRuntime.h; sourceTree = "<group>"; };
 		CC6137C34C739F99CAA54ECF38E589A9 /* Platform.Linux.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Platform.Linux.swift; path = Platform/Platform.Linux.swift; sourceTree = "<group>"; };
@@ -1128,8 +1128,8 @@
 			children = (
 				D51C3D0C53D23B97B032E3BDD4F82C82 /* Differentiator.framework */,
 				DAFA0BDB76DF305C4589106B5B8C0D42 /* Pods-luna */,
-				CB4C395B4FCC5B803BD222E4CCA8A7DB /* Pods-luna-lunaUITests */,
-				811C76DDF35CC14208C29BEA9A123A50 /* Pods-lunaTests */,
+				CB4C395B4FCC5B803BD222E4CCA8A7DB /* Pods_luna_lunaUITests.framework */,
+				811C76DDF35CC14208C29BEA9A123A50 /* Pods_lunaTests.framework */,
 				BC432FD48A5932251F1CAFBC4BF74894 /* RxCocoa.framework */,
 				692F92D73EC27270EA9CC9575C3E65B6 /* RxDataSources.framework */,
 				FF8B264DFE802855D5D67E7CDDABFC3C /* RxRelay.framework */,
@@ -1822,7 +1822,7 @@
 			);
 			name = "Pods-luna-lunaUITests";
 			productName = Pods_luna_lunaUITests;
-			productReference = CB4C395B4FCC5B803BD222E4CCA8A7DB /* Pods-luna-lunaUITests */;
+			productReference = CB4C395B4FCC5B803BD222E4CCA8A7DB /* Pods_luna_lunaUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		212F79CE462FC723AF42979B57FBB8A6 /* Differentiator */ = {
@@ -1919,7 +1919,7 @@
 			);
 			name = "Pods-lunaTests";
 			productName = Pods_lunaTests;
-			productReference = 811C76DDF35CC14208C29BEA9A123A50 /* Pods-lunaTests */;
+			productReference = 811C76DDF35CC14208C29BEA9A123A50 /* Pods_lunaTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E9A23D2EF7AF89A1381A91AA2919F77E /* Pods-luna */ = {
@@ -2687,7 +2687,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2956,7 +2956,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3063,7 +3063,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-lunaTests/Pods-lunaTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3433,7 +3433,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-lunaTests/Pods-lunaTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

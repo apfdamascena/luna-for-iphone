@@ -48,6 +48,7 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
+        self.navigationController?.isNavigationBarHidden = true
         DispatchQueue.main.async {
             self.presenter?.loadCalendarToCollection()
         }

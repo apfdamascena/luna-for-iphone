@@ -44,7 +44,7 @@ class MonthTag: UIStackView, AnyView {
     func addAdditionalConfiguration() {
         
         axis = .horizontal
-        alignment = .leading
+        alignment = .center
         spacing = 1.su
     }
 }
