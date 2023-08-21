@@ -30,7 +30,12 @@ class OnboardingPageControlView: UIView, AnyView {
     var numberOfPages: Int = 0
     var currentPage: Int = 0
     
-    var dots: [UIView] = []
+    var dots: [UIImageView] = [
+        UIImageView(),
+        UIImageView(),
+        UIImageView(),
+        UIImageView()
+    ]
     
     private var dotSizeFlow: Int = 0
     
@@ -47,29 +52,12 @@ class OnboardingPageControlView: UIView, AnyView {
     
     func addSubviews() {
         
-        Array(1...numberOfPages).forEach{ index in
-            let dot = UIView()
-            dot.backgroundColor = index == 1 ? changeColorBy(index-1) : Asset.gray100.color
-            dot.layer.cornerRadius = 2
-            dots.append(dot)
+        dots.forEach{ dot in
             addSubview(dot)
+            dot.image = Asset.dotNone.image
         }
-    }
-    
-    private func changeColorBy(_ index: Int) -> UIColor {
-        switch index {
-        case 0:
-            return .blue
-        case 1:
-            return .brown
-        case 2:
-            return .orange
-        case 3:
-            return .cyan
-            
-        default:
-            return .gray
-        }
+        
+        dots[0].image = Asset.dot1.image
     }
     
     struct DotViewConstant {
@@ -103,26 +91,29 @@ class OnboardingPageControlView: UIView, AnyView {
     
     func completeDotAt(_ currentPage: Int){
         dots.enumerated().forEach{ index, dot in
-            dot.backgroundColor = .gray
-            dot.layer.sublayers?.popLast()
+            dot.image = Asset.dotNone.image
             
-            if index <= currentPage {
-                
-                let gradient = CAGradientLayer()
-                gradient.frame = dot.bounds
-            
-                gradient.colors = [Asset.dot11.color.cgColor,
-                                   Asset.dot12.color.cgColor,
-                                   Asset.dot13.color.cgColor]
-                
-                gradient.startPoint = CGPoint(x: 0, y: 0)
-                gradient.endPoint = CGPoint(x: 1, y: 0)
-                
-                
-                dot.layer.insertSublayer(gradient, at: 0)
+            if(index <= currentPage){
+                let image = updateDotsFlow(with: index)
+                dot.image = image
             }
         }
     }
     
-//    private func
+    
+    private func updateDotsFlow(with index: Int) -> UIImage {
+        switch index {
+        case 0:
+            return Asset.dot1.image
+        case 1:
+            return Asset.dot2.image
+        case 2:
+            return Asset.dot3.image
+        case 3:
+            return Asset.dot4.image
+        default:
+            return Asset.dotNone.image
+            
+        }
+    }
 }
