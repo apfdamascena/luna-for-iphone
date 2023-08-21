@@ -25,8 +25,6 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal static let accentColor = ColorAsset(name: "AccentColor")
-  internal static let color1 = ColorAsset(name: "Color 1")
-  internal static let color = ColorAsset(name: "Color")
   internal static let menstruationSelected = ImageAsset(name: "MenstruationSelected")
   internal static let arrowLeftIcon = ImageAsset(name: "arrow_left_icon")
   internal static let background = ImageAsset(name: "background")
@@ -36,6 +34,9 @@ internal enum Asset {
   internal static let calendarIcon = ImageAsset(name: "calendar-icon")
   internal static let calendarImage = ImageAsset(name: "calendarImage")
   internal static let cinza100 = ColorAsset(name: "cinza-100")
+  internal static let dot11 = ColorAsset(name: "dot-1-1")
+  internal static let dot12 = ColorAsset(name: "dot-1-2")
+  internal static let dot13 = ColorAsset(name: "dot-1-3")
   internal static let foliculeCell = ImageAsset(name: "folicule_cell")
   internal static let follicularSelected = ImageAsset(name: "follicularSelected")
   internal static let forecastCell = ImageAsset(name: "forecast_cell")
