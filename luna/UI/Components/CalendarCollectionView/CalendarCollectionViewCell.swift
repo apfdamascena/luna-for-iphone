@@ -9,8 +9,8 @@ import UIKit
 import SnapKit
 
 class CalendarCollectionViewCell: UICollectionViewCell,
-                                        AnyView,
-                                        DrawableView {
+                                  AnyView,
+                                  DrawableView {
     
     typealias ViewModel = CyclePhaseViewModel
     
@@ -33,17 +33,17 @@ class CalendarCollectionViewCell: UICollectionViewCell,
     private let weekendDay: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 13,
-                                      color: Asset.primaryGray900.color,
+                                      color: Asset.gray400.color,
                                       weight: .regular)
         
         label.layer.opacity = 0.5
         label.text = "Q"
         label.textAlignment = .center
-
+        
         label.draw(model)
         return label
     }()
-
+    
     private let menstruationStatusToggle = UIView()
     
     private let cellStatus: UIImageView = {
@@ -51,20 +51,20 @@ class CalendarCollectionViewCell: UICollectionViewCell,
         return imageView
     }()
     
-
+    
     private let monthDay: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 13,
-                                      color: Asset.primaryGray900.color,
+                                      color: Asset.gray400.color,
                                       weight: .regular)
         label.layer.opacity = 0.5
         label.text = "10"
         label.textAlignment = .center
-
+        
         label.draw(model)
         return label
     }()
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -86,8 +86,8 @@ class CalendarCollectionViewCell: UICollectionViewCell,
     func addConstraints() {
         menstruationStatusToggle.snp.makeConstraints{
             $0.width.equalToSuperview()
-            $0.height.equalTo(67)
-            $0.width.equalTo(43)
+            $0.height.equalTo(66)
+            $0.width.equalTo(42)
         }
         
         stack.snp.makeConstraints{
@@ -111,7 +111,7 @@ class CalendarCollectionViewCell: UICollectionViewCell,
     }
     
     func addAdditionalConfiguration() {
-        menstruationStatusToggle.backgroundColor = Asset.cinza100.color
+        menstruationStatusToggle.backgroundColor = Asset.gray50.color
     }
     
     func draw(_ model: CyclePhaseViewModel) {
@@ -138,11 +138,11 @@ class CalendarCollectionViewCell: UICollectionViewCell,
         phase = model.phase
         
         let model = isToday(date: model.day) ? LunaTextViewModel(size: 13,
-                                      color: Asset.primaryGray900.color,
-                                                                                                             weight: .bold) :
+                                                                 color: Asset.gray950.color,
+                                                                 weight: .semibold) :
         LunaTextViewModel(size: 13,
-                                      color: Asset.primaryGray900.color,
-                                      weight: .regular)
+                          color: Asset.gray400.color,
+                          weight: .regular)
         
         monthDay.draw(model)
         weekendDay.draw(model)
@@ -150,8 +150,8 @@ class CalendarCollectionViewCell: UICollectionViewCell,
     
     func transformToLarge() {
         UIView.animate(withDuration: 0.2) {
-            self.menstruationStatusToggle.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
-            self.cellStatus.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            self.menstruationStatusToggle.transform = CGAffineTransform(scaleX: 1.238, y: 1.21)
+            self.cellStatus.transform = CGAffineTransform(scaleX: 1.238, y: 1.21)
             self.cellStatus.layer.opacity = 1
             
         }
@@ -168,9 +168,9 @@ class CalendarCollectionViewCell: UICollectionViewCell,
     }
     
     func getDayOfTheWeek(date: Date) -> String {
-            return daysOfTheWeek[Calendar.current.dateComponents([.weekday], from: date).weekday! - 1]
-           
-        }
+        return daysOfTheWeek[Calendar.current.dateComponents([.weekday], from: date).weekday! - 1]
+        
+    }
     
     func isToday(date: Date) -> Bool {
         let today = Date.now
@@ -197,11 +197,11 @@ class CalendarCollectionViewCell: UICollectionViewCell,
     }
     
     func getDate(date: Date) -> String{
-            let df = DateFormatter()
-            df.dateStyle = DateFormatter.Style.medium
-            df.timeStyle = DateFormatter.Style.medium
-            let date = (df.string(from: date))
-
-            return String(date.prefix(2))
-        }
+        let df = DateFormatter()
+        df.dateStyle = DateFormatter.Style.medium
+        df.timeStyle = DateFormatter.Style.medium
+        let date = (df.string(from: date))
+        
+        return String(date.prefix(2))
+    }
 }
