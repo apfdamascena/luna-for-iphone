@@ -14,14 +14,9 @@ import RxSwift
 class LandingPageView: UIView, AnyView {
     private var disposeBag = DisposeBag()
     
-    private let background: UIView = {
-        let view = UIView()
-        return view
-    }()
-    
     private let backgroundImage: UIImageView = {
         let view = UIImageView(image: Asset.landingPageBackgroundImage.image)
-        view.contentMode = .left
+        view.contentMode = .scaleAspectFill
         return view
     }()
     
@@ -39,27 +34,14 @@ class LandingPageView: UIView, AnyView {
                                       color: .black,
                                       weight: .semibold)
         
-        label.text = L10n.Constants.Content.Label.appName
+        label.text = "Desperte seu própro ritmo"
         label.numberOfLines = 0
-        label.textAlignment = .left
-        
+        label.textAlignment = .center
         label.draw(model)
+        label.font = UIFont(name: "Cocon-Regular", size: 38)
         return label
     }()
     
-    private let landingPageDescription: LunaText = {
-        let label = LunaText()
-        let model = LunaTextViewModel(size: 28,
-                                      color: .black,
-                                      weight: .regular)
-        
-        label.text = L10n.Constants.Content.Label.landingPageDescription
-        label.numberOfLines = 0
-        label.textAlignment = .left
-        
-        label.draw(model)
-        return label
-    }()
     
     private(set) var startButton: LunaButton = {
         let button = LunaButton()
@@ -77,39 +59,28 @@ class LandingPageView: UIView, AnyView {
     }
     
     func addSubviews() {
-        addSubview(background)
         addSubview(backgroundImage)
         addSubview(stack)
         stack.addArrangedSubview(title)
-        stack.addArrangedSubview(landingPageDescription)
         addSubview(startButton)
         
     }
     
     func addConstraints() {
         
-        background.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
-        
         backgroundImage.snp.makeConstraints {
-            $0.top.trailing.equalToSuperview()
-            $0.bottom.equalTo(stack.snp.top)
+            $0.top.leading.trailing.bottom.equalToSuperview()
         }
         
         stack.snp.makeConstraints {
             $0.bottom.equalTo(startButton.snp.top).offset(-7.su)
-            $0.leading.equalToSuperview().offset(3.su)
+            $0.trailing.leading.equalToSuperview().inset(3.su)
         }
         
         title.snp.makeConstraints {
-            $0.height.equalTo(6.su)
+            $0.height.equalTo(12.su)
         }
         
-        landingPageDescription.snp.makeConstraints {
-            $0.height.equalTo(5.su)
-        }
-            
         startButton.snp.makeConstraints {
             $0.trailing.leading.equalToSuperview().inset(3.su)
             $0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-2.su)
@@ -119,6 +90,6 @@ class LandingPageView: UIView, AnyView {
     
     
     func addAdditionalConfiguration() {
-        background.backgroundColor = .white
+        backgroundColor = .white
     }
 }

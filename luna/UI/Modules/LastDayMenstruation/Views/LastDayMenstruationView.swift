@@ -40,7 +40,7 @@ class LastDayMenstruationView: UIView, AnyView  {
         picker.locale = .current
         picker.datePickerMode = .date
         picker.preferredDatePickerStyle = .inline
-        picker.tintColor = Asset.primaryRed500.color
+        picker.tintColor = Asset.red500.color
         picker.maximumDate = Date()
         return picker
     }()
