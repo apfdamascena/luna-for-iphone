@@ -210,9 +210,7 @@ class HomeView: UIView, AnyView  {
     
     func monthChanged(to date: Date) {
         DispatchQueue.main.async {
-            self.monthTag.monthText.text = date.formatMonthToString().lowercased()
-            self.monthTag.dayText.text = ("\(date.formatDayToString().lowercased()) de")
-            
+            self.monthTag.formattText(day: date.formatDayToString().lowercased(), month: date.formatMonthToString().lowercased())
         }
     }
     
