@@ -109,7 +109,7 @@ class HomeView: UIView, AnyView  {
         }
         
         monthTag.snp.makeConstraints {
-            $0.leading.equalToSuperview().inset(3.su)
+            $0.leading.trailing.equalToSuperview().inset(3.su)
         }
         
         descriptionStackView.snp.makeConstraints {
@@ -210,7 +210,9 @@ class HomeView: UIView, AnyView  {
     
     func monthChanged(to date: Date) {
         DispatchQueue.main.async {
-            self.monthTag.monthText.text = date.formatMonthToString().capitalized
+            self.monthTag.monthText.text = date.formatMonthToString().lowercased()
+            self.monthTag.dayText.text = ("\(date.formatDayToString().lowercased()) de")
+            
         }
     }
     
