@@ -44,10 +44,9 @@ class CycleDurationViewController: UIViewController, DataSourceEventObservable {
         
         cycleDurationView.picker
             .rx.itemSelected.asObservable()
-            .subscribe { (row: Int, _) in
+            .subscribe { (row: Int, component: Int) in
                 guard let duration = Int(self.datasource.elements[0][row]) else { return }
                 OnboardingUserCycleInformation.shared.setCycle(duration)
-                
             }.disposed(by: disposeBag)
     }
 

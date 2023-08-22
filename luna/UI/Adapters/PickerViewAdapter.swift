@@ -23,6 +23,7 @@ final class PickerViewAdapter: NSObject,
         items.count
     }
     
+
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return items[0].count
     }
@@ -36,6 +37,7 @@ final class PickerViewAdapter: NSObject,
         label.draw(model)
         label.text = items[component][row%items[0].count].description
         label.textAlignment = .center
+        
         return label
     }
     
