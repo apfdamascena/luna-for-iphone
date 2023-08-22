@@ -21,7 +21,7 @@ class PhaseCycleTitle: UIStackView, AnyView {
     
     var phaseTitle: LunaText = {
         let label = LunaText()
-        let model = LunaTextViewModel(size: 40, color: .black, weight: .semibold)
+        let model = LunaTextViewModel(size: 34, color: .black, weight: .semibold)
         label.text = L10n.Constants.Content.Label.Home.menstruation
         label.numberOfLines = 0
         label.textAlignment = .left

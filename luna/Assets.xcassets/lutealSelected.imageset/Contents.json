@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Phase=Luteal, Status=Selected.png",
+      "filename" : "LutealSelected.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Phase=Luteal, Status=Selected@2x.png",
+      "filename" : "LutealSelected@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Phase=Luteal, Status=Selected@3x.png",
+      "filename" : "LutealSelected@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

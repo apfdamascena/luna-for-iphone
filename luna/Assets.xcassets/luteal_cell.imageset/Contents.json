@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Phase cells.png",
+      "filename" : "Luteal_cell.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Phase cells@2x.png",
+      "filename" : "Luteal_cell@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Phase cells@3x.png",
+      "filename" : "Luteal_cell@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
