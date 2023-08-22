@@ -31,4 +31,11 @@ extension Date {
         return month
     }
     
+    func formatDayToString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd"
+        let day = dateFormatter.string(from: self)
+        return day
+    }
+    
 }
