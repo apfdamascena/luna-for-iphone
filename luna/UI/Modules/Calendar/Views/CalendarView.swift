@@ -20,8 +20,7 @@ class CalendarView: UIView, AnyView  {
     
     private let image: UIImageView = {
         let view = UIImageView(image: Asset.calendarImage.image)
-        view.contentMode = .scaleAspectFit
-        view.clipsToBounds = true
+        view.contentMode = .scaleAspectFill
         return view
     }()
     
@@ -40,7 +39,7 @@ class CalendarView: UIView, AnyView  {
     
     private let subtitle: LunaText = {
         let label = LunaText()
-        let model = LunaTextViewModel(size: 16,
+        let model = LunaTextViewModel(size: 17,
                                       color: .black,
                                       weight: .regular)
         
@@ -77,13 +76,12 @@ class CalendarView: UIView, AnyView  {
         image.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.centerY.equalToSuperview().offset(-17.su)
-            $0.width.equalTo(20.su)
-            $0.height.equalTo(20.su)
+            $0.width.equalTo(27.su)
         }
-        
+    
         stack.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.top.equalTo(image.snp.bottom).offset(12.su)
+            $0.top.equalTo(image.snp.bottom).offset(7.5.su)
             $0.width.equalTo(42.su)
             $0.height.equalTo(20.su)
         }

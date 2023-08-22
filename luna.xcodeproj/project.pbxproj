@@ -49,6 +49,9 @@
 		0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */; };
 		0D7C73B02A67834100677D1E /* TouchableUserEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AF2A67834100677D1E /* TouchableUserEvent.swift */; };
 		0DA56C552A6B33AC00E056C1 /* OnboardingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA56C542A6B33AC00E056C1 /* OnboardingButtonView.swift */; };
+		0DA74C762A9549CB0021EC40 /* CoconRegularFont.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0DA74C752A9549CB0021EC40 /* CoconRegularFont.otf */; };
+		0DA74C772A9549CB0021EC40 /* CoconRegularFont.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0DA74C752A9549CB0021EC40 /* CoconRegularFont.otf */; };
+		0DA74C782A9549CB0021EC40 /* CoconRegularFont.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0DA74C752A9549CB0021EC40 /* CoconRegularFont.otf */; };
 		0DBADD992A65FDF100A10FC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADD982A65FDF100A10FC3 /* AppDelegate.swift */; };
 		0DBADD9B2A65FDF100A10FC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADD9A2A65FDF100A10FC3 /* SceneDelegate.swift */; };
 		0DBADDA32A65FDF100A10FC3 /* luna.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0DBADDA12A65FDF100A10FC3 /* luna.xcdatamodeld */; };
@@ -215,6 +218,7 @@
 		0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		0D7C73AF2A67834100677D1E /* TouchableUserEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchableUserEvent.swift; sourceTree = "<group>"; };
 		0DA56C542A6B33AC00E056C1 /* OnboardingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButtonView.swift; sourceTree = "<group>"; };
+		0DA74C752A9549CB0021EC40 /* CoconRegularFont.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoconRegularFont.otf; sourceTree = "<group>"; };
 		0DBADD952A65FDF100A10FC3 /* luna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = luna.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBADD982A65FDF100A10FC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DBADD9A2A65FDF100A10FC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -520,6 +524,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		0DA74C742A9549AA0021EC40 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0DA74C752A9549CB0021EC40 /* CoconRegularFont.otf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		0DBADD8C2A65FDF100A10FC3 = {
 			isa = PBXGroup;
 			children = (
@@ -578,6 +590,7 @@
 		0DBADDCB2A65FF2A00A10FC3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0DA74C742A9549AA0021EC40 /* fonts */,
 				0DBADDA42A65FDF300A10FC3 /* Assets.xcassets */,
 				0DBADDA62A65FDF300A10FC3 /* LaunchScreen.storyboard */,
 				0DBADDA92A65FDF300A10FC3 /* Info.plist */,
@@ -1128,6 +1141,7 @@
 			files = (
 				0DBADDA82A65FDF300A10FC3 /* LaunchScreen.storyboard in Resources */,
 				CACB96F62A85670300EB66DD /* Constants.strings in Resources */,
+				0DA74C762A9549CB0021EC40 /* CoconRegularFont.otf in Resources */,
 				0DBADDA52A65FDF300A10FC3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1136,6 +1150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DA74C772A9549CB0021EC40 /* CoconRegularFont.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1143,6 +1158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DA74C782A9549CB0021EC40 /* CoconRegularFont.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
