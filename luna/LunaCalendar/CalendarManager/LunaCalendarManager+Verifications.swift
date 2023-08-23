@@ -8,11 +8,9 @@
 import EventKit
 
 extension LunaCalendarManager {
-    // [MUDAR] CODIGO MUITO FEIO
     func transformExpectedToMenstruation() {
         guard let eventService = self.lunaEventService else { return }
         
-
         guard let eventsBefore = eventsBefore(daysBefore: HomeCollection.COLLECTION_RANGE/2, finalDate: Date()) else {
             return
         }

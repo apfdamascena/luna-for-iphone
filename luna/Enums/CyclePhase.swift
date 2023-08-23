@@ -17,6 +17,25 @@ enum CyclePhase: String, CaseIterable {
     case possibleMenstruation
     case none
     
+    init?(rawValue: String) {
+        switch rawValue {
+        case L10n.Constants.Content.Label.folicular:
+            self = .folicular
+        case L10n.Constants.Content.Label.menstruation:
+            self = .menstruation
+        case L10n.Constants.Content.Label.luteal:
+            self = .luteal
+        case L10n.Constants.Content.Label.fertile:
+            self = .fertile
+        case L10n.Constants.Content.Label.expectedMenstruation:
+            self = .expectedMenstruation
+        case L10n.Constants.Content.Label.pms:
+            self = .pms
+        default:
+            self = .none
+        }
+    }
+    
     var value: String {
         switch self {
         case .folicular:
@@ -36,7 +55,6 @@ enum CyclePhase: String, CaseIterable {
         default:
             return ""
         }
-        
     }
         
     var image: UIImage {

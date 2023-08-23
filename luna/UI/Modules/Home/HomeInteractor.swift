@@ -47,7 +47,7 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
         let firstDate = Date().daysBefore(HomeCollection.COLLECTION_RANGE/2)
         let finalDate = Date().daysAfter(HomeCollection.COLLECTION_RANGE/2)
         lunaCalendarManager.transformExpectedToMenstruation()
-
+        
         let events = lunaCalendarManager.getEventsByDate(firstDate: firstDate, finalDate: finalDate)
 
         let collectionViewDataSource = CalendarCollectionConverter().turnDaysIntoCyclePhase(events: events)
@@ -55,11 +55,16 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
     }
     
     func insertedMenstruationToCollection(selectedDate: Date) -> Bool {
-        let response = lunaCalendarManager.changeCycleBy(selectedDate: selectedDate)
+        let response = lunaCalendarManager.changeDayPhaseBy(selectedDate: selectedDate)
+        var isRemove = false
+        if response == ChangeCycleResponse.isMenstruation {
+            isRemove = true
+        }
+        lunaCalendarManager.adjustEventsInCalendar(isRemove: isRemove)
         if response == ChangeCycleResponse.hasMenstruationNearDate {
             return true
         }
-        return false
+        return true
     }
     
     

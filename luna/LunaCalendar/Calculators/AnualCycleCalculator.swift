@@ -14,14 +14,16 @@ class AnualCycleCalculator {
 
     var monthsFromMenstruation: Int = 0
     let eventStore: EKEventStore
-    
-    init(eventStore: EKEventStore, cycleInformations: CycleInformations) {
+    let isFirst: Bool
+
+    init(eventStore: EKEventStore, cycleInformations: CycleInformations, isFirst: Bool) {
         self.cycleInformations = cycleInformations
         self.eventStore = eventStore
+        self.isFirst = isFirst
     }
     
     func getPhases() -> [LunaEvent]{
-        var cyclePhases: [LunaEvent] = [menstruationDay()]
+        var cyclePhases: [LunaEvent] = []
         Array(0...11).forEach { _ in
             cyclePhases.append(contentsOf: [calculateExpectedMenstruationDay(),calculateFolicularDate(), calculateFertileDate(), calculateLutealDate(), calculatePMSDate()])
             monthsFromMenstruation+=1
@@ -34,9 +36,6 @@ class AnualCycleCalculator {
     }
     
     func calculateExpectedMenstruationDay() -> LunaEvent {
-        if monthsFromMenstruation == 0 {
-            return calculatePhaseDate(CyclePhase.expectedMenstruation, 1, cycleInformations.averageMenstruationDuration-1)
-        }
         return calculatePhaseDate(CyclePhase.expectedMenstruation, 0, cycleInformations.averageMenstruationDuration-1)
     }
     
@@ -62,7 +61,10 @@ class AnualCycleCalculator {
     
     private func calculatePhaseDate(_ phase: CyclePhase, _ firstDayDistanceFromCycle: Int, _ lastDayDistanceFromCycle: Int) -> LunaEvent {
         let firstDayValue = (cycleInformations.averageCycleDuration*monthsFromMenstruation)+firstDayDistanceFromCycle
-        let lastDayValue = (cycleInformations.averageCycleDuration*monthsFromMenstruation)+lastDayDistanceFromCycle
+        var lastDayValue = (cycleInformations.averageCycleDuration*monthsFromMenstruation)+lastDayDistanceFromCycle
+        if !isFirst {
+            lastDayValue += 1
+        }
         let firstDay = cycleInformations.firstDayMenstruation.daysAfter(firstDayValue)
         let lastDay = cycleInformations.firstDayMenstruation.daysAfter(lastDayValue)
         return LunaEvent(title: phase, startDate: firstDay, endDate: lastDay)
