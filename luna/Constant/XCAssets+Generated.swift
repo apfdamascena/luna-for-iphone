@@ -30,6 +30,11 @@ internal enum Asset {
   internal static let pmsSelected = ImageAsset(name: "PmsSelected")
   internal static let arrowLeftIcon = ImageAsset(name: "arrow_left_icon")
   internal static let background = ImageAsset(name: "background")
+  internal static let backgroundFolicule1 = ImageAsset(name: "background_folicule_1")
+  internal static let backgroundLuteal1 = ImageAsset(name: "background_luteal_1")
+  internal static let backgroundMenstruation1 = ImageAsset(name: "background_menstruation_1")
+  internal static let backgroundOvulation1 = ImageAsset(name: "background_ovulation_1")
+  internal static let backgroundPms1 = ImageAsset(name: "background_pms_1")
   internal static let ball = ImageAsset(name: "ball")
   internal static let blueLine = ImageAsset(name: "blue-line")
   internal static let blueBall = ImageAsset(name: "blue_ball")
@@ -75,6 +80,7 @@ internal enum Asset {
   internal static let secondaryRed100 = ColorAsset(name: "secondary_red_100")
   internal static let secondaryRed200 = ColorAsset(name: "secondary_red_200")
   internal static let teachRegisterMenstruation = ImageAsset(name: "teach_register_menstruation")
+  internal static let testBar = ImageAsset(name: "test_bar")
   internal static let vermelho200 = ColorAsset(name: "vermelho-200")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

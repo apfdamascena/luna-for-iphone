@@ -25,6 +25,8 @@
 "constants.content.label.home.luteal" = "Fase Lútea";
 "constants.content.label.home.follicular" = "Fase Folicular";
 
+"constants.content.label.home.about" = "Tudo sobre";
+
 "constants.content.label.home.calendar_sync" = "Luna precisa estar conectado com o Calendário para salvar seu ciclo";
 "constants.content.label.home.settings_subtitle" = "1. Vá em ajustes";
 "constants.content.label.home.acess_subtitle" = "2. Permita o acesso";

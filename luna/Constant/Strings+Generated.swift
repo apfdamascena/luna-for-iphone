@@ -81,6 +81,8 @@ internal enum L10n {
         /// 😡 TPM
         internal static let pms = L10n.tr("Constants", "constants.content.label.pms", fallback: "😡 TPM")
         internal enum Home {
+          /// Tudo sobre
+          internal static let about = L10n.tr("Constants", "constants.content.label.home.about", fallback: "Tudo sobre")
           /// 2. Permita o acesso
           internal static let acessSubtitle = L10n.tr("Constants", "constants.content.label.home.acess_subtitle", fallback: "2. Permita o acesso")
           /// Luna precisa estar conectado com o Calendário para salvar seu ciclo
