@@ -50,7 +50,13 @@ class CycleInformationsCalculator {
             return
         }
         
-        UserCycleInformation.shared.setMenstruation( lastMenstruation.startDate.daysBetween(lastMenstruation.endDate) + 1)
+        var menstruationDuration = lastMenstruation.startDate.daysBetween(lastMenstruation.endDate) + 1
+        
+        menstruationDuration = min(menstruationDuration, 10)
+        menstruationDuration = max(menstruationDuration, 4)
+
+        
+        UserCycleInformation.shared.setMenstruation(menstruationDuration)
 
         
     }

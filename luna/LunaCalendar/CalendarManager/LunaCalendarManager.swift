@@ -70,7 +70,6 @@ class LunaCalendarManager {
     }
 
     func addCyclePhasesToCalendar(firstDayMenstruation: Date, averageMenstruationDuration: Int, averageCycleDuration: Int, isFirst: Bool) {
-        print("CARALHO", firstDayMenstruation, averageCycleDuration, averageMenstruationDuration)
         let cycleInformations = CycleInformations(
             firstDayMenstruation: firstDayMenstruation, averageMenstruationDuration: averageMenstruationDuration, averageCycleDuration: averageCycleDuration)
         
