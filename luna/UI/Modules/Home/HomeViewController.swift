@@ -251,7 +251,8 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     
     func changeCurrentIndexCardPhase(at newIndex: Int) {
         self.cardPhaseDataSource.index.onNext(newIndex)
-        print(newIndex)
+        let model = self.cardPhaseDataSource.cardsPhase
+        self.homeView.updateCardPhase(model, newIndex)
     }
     
 }

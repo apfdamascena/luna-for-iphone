@@ -81,4 +81,8 @@ class CycleCardView: UIView, AnyView {
         title.text = model.titleText
     }
     
+    func updateCardPhase(model: DynamicCardPhaseViewModel, newIndex: Int) {
+        self.backgroundColor = UIColor(patternImage: model.backgroundImage)
+    }
+    
 }
