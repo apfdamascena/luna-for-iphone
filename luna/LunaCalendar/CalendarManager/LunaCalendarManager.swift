@@ -86,7 +86,15 @@ class LunaCalendarManager {
                 title: phase.title,
                 startDate: phase.startDate,
                 endDate: phase.endDate)
-            createEvent(event)
+            if event.startDate.formatToInt() > Date().formatToInt() || isFirst {
+                createEvent(event)
+            } else if event.endDate.formatToInt() > Date().formatToInt() {
+                let event = LunaEvent(
+                    title: phase.title,
+                    startDate: Date().daysAfter(1),
+                    endDate: phase.endDate)
+                createEvent(event)
+            }
         }
     }
     
@@ -106,7 +114,7 @@ class LunaCalendarManager {
         let lastMenstruation = UserCycleInformation.shared.lastMenstruation
         let menstruationDuration = UserCycleInformation.shared.menstruationDuration
         let cycleDuration = UserCycleInformation.shared.cycleDuration
-        removeFutureEvents(menstruationDate: lastMenstruation)
+        removeFutureEvents(menstruationDate: Date().daysAfter(1))
 
         addCyclePhasesToCalendar(firstDayMenstruation: lastMenstruation, averageMenstruationDuration: menstruationDuration, averageCycleDuration: cycleDuration, isFirst: false)
     }
