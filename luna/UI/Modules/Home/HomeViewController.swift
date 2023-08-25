@@ -18,9 +18,11 @@ class HomeViewController: UIViewController {
     private var disposeBag = DisposeBag()
     
     private var datasource: CalendarCollectionViewDataSource
+    private var cardPhaseDataSource: CardPhaseControlDataSource
     
-    init(datasource: CalendarCollectionViewDataSource){
+    init(datasource: CalendarCollectionViewDataSource, cardPhaseDataSource: CardPhaseControlDataSource){
         self.datasource = datasource
+        self.cardPhaseDataSource = cardPhaseDataSource
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -43,6 +45,7 @@ class HomeViewController: UIViewController {
         addCyclePhaseEventObservable()
         addSettingsHandlerEvent()
         seeMoreButtonTouchTrigger()
+        userTapCardCycle()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -113,12 +116,22 @@ class HomeViewController: UIViewController {
     }
     
     func addSettingsHandlerEvent(){
-        
         homeView
             .warningCalendarAccess
             .settingsButton.rx.tap.bind {
                 self.presenter?.userOpenDeviceSettings()
             }.disposed(by: disposeBag)
+    }
+    
+    func userTapCardCycle() {
+        
+        let tapGesture = UITapGestureRecognizer()
+        homeView.cardCycle.addGestureRecognizer(tapGesture)
+        tapGesture.rx.event.bind(onNext: { _ in
+            guard let currentIndex = try? self.cardPhaseDataSource.index.value() else { return }
+            self.presenter?.userTappedCardPhase(at: currentIndex)
+        })
+        .disposed(by: disposeBag)
     }
 
     
@@ -235,6 +248,12 @@ extension HomeViewController: PresenterToViewHomeProtocol {
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
     }
+    
+    func changeCurrentIndexCardPhase(at newIndex: Int) {
+        self.cardPhaseDataSource.index.onNext(newIndex)
+        print(newIndex)
+    }
+    
 }
 
 

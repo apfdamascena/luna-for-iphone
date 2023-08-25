@@ -22,7 +22,7 @@ class HomeView: UIView, AnyView  {
     
     private let phaseCycleTitle = PhaseCycleTitle()
     private let learnCycleTitle = LearnCycleTitle()
-    private let card = CycleCardView()
+    private(set) var cardCycle = CycleCardView()
     
     private let allContentStackView: UIStackView = {
         let view = UIStackView()
@@ -85,7 +85,7 @@ class HomeView: UIView, AnyView  {
         descriptionStackView.addArrangedSubview(warningCalendarAccess)
         descriptionStackView.addArrangedSubview(learnCycleTitle)
         
-        descriptionStackView.addArrangedSubview(card)
+        descriptionStackView.addArrangedSubview(cardCycle)
         
         descriptionStackView.addArrangedSubview(phaseCycleTitle)
         descriptionStackView.addArrangedSubview(menstrualPhaseBehaviorsView)
@@ -133,7 +133,7 @@ class HomeView: UIView, AnyView  {
             $0.height.equalTo(77)
         }
         
-        card.snp.makeConstraints {
+        cardCycle.snp.makeConstraints {
             $0.height.equalTo(206)
         }
 
@@ -177,21 +177,21 @@ class HomeView: UIView, AnyView  {
             menstrualPhaseBehaviorsView.isHidden = true
             phaseCycleTitle.isHidden = true
             warningNoMenstrualData.isHidden = true
-            card.isHidden = true
+            cardCycle.isHidden = true
             return
         }
         
         menstrualPhaseBehaviorsView.isHidden = false
         phaseCycleTitle.isHidden = false
         warningNoMenstrualData.isHidden = true
-        card.isHidden = false
+        cardCycle.isHidden = false
         
     
         if cycle == .none {
             menstrualPhaseBehaviorsView.isHidden = true
 
             phaseCycleTitle.isHidden = true
-            card.isHidden = true
+            cardCycle.isHidden = true
             warningNoMenstrualData.isHidden = false
         }
     }
@@ -217,7 +217,7 @@ class HomeView: UIView, AnyView  {
             let modelCard = DynamicCardPhaseFactory.create(phase: cycle)
             self.phaseCycleTitle.phaseTitle.text = model.name
             self.menstrualPhaseBehaviorsView.draw(model)
-            self.card.draw(modelCard)
+            self.cardCycle.draw(modelCard)
         }
     }
     

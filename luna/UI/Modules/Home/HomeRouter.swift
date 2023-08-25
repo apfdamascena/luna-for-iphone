@@ -33,7 +33,7 @@ class HomeRouter: PresenterToRouterHomeProtocol {
     
     static func createModule() -> UIViewController {
         
-        let viewController = HomeViewController(datasource: CalendarCollectionViewDataSourceImpl())
+        let viewController = HomeViewController(datasource: CalendarCollectionViewDataSourceImpl(), cardPhaseDataSource: CardPhaseControlDataSourceImpl())
         
         let presenter: ViewToPresenterHomeProtocol & InteractorToPresenterHomeProtocol = HomePresenter()
         

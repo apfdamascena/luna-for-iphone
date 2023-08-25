@@ -24,6 +24,8 @@ protocol PresenterToViewHomeProtocol {
     
     func moveTo(_ month: Date)
     func showFeedbackRegisterMenstruation()
+    
+    func changeCurrentIndexCardPhase(at newIndex: Int)
 
 }
 
@@ -49,6 +51,8 @@ protocol ViewToPresenterHomeProtocol {
     func userOpenDeviceSettings()
     
     func showCyclePhaseReferencesSheet()
+    
+    func userTappedCardPhase(at index: Int)
 }
 
 
@@ -63,6 +67,9 @@ protocol PresenterToInteractorHomeProtocol {
     func insertedMenstruationToCollection(selectedDate: Date) -> Bool
     
     func openDeviceSettings()
+    
+    func nextIndexForCardPhase(at index: Int) -> Int
+    
 }
 
 
