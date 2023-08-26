@@ -8,6 +8,6 @@
 import UIKit
 
 struct DynamicCardPhaseViewModel {
-    let backgroundImage: UIImage
-    let titleText: String
+    let backgroundImage: [UIImage]
+    let titleText: [String]
 }

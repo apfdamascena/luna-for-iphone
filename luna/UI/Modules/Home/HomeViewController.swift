@@ -250,9 +250,24 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     }
     
     func changeCurrentIndexCardPhase(at newIndex: Int) {
-        self.cardPhaseDataSource.index.onNext(newIndex)
-        let model = self.cardPhaseDataSource.cardsPhase
-        self.homeView.updateCardPhase(model, newIndex)
+//        self.cardPhaseDataSource.index.onNext(newIndex)
+////        let model = self.cardPhaseDataSource.cardsPhase
+//        let image = DynamicCardPhaseFactory.create(phase: self.datasource.cyclePhase)
+//        self.homeView.cardCycle.updateCardPhase(model: model)
+        
+        homeView.calendarCollectionView
+            .rx.scrollToCenter
+            .subscribe(onNext: { centerCell, phase, month in
+                guard let menstruationPhase = phase else { return }
+                
+//                self.datasource.cyclePhase.onNext(menstruationPhase)
+                
+                self.cardPhaseDataSource.index.onNext(newIndex)
+                let model = DynamicCardPhaseFactory.create(phase: menstruationPhase)
+                self.homeView.cardCycle.updateCardPhase(image: model.backgroundImage[newIndex], text: model.titleText[newIndex])
+
+            }).disposed(by: disposeBag)
+        
     }
     
 }

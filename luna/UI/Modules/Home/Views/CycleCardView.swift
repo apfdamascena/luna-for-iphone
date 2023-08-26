@@ -76,13 +76,15 @@ class CycleCardView: UIView, AnyView {
         
     }
     
+    // precisa mudar pra nao lidar com o index aqui!
     func draw(_ model: DynamicCardPhaseViewModel) {
-        self.backgroundColor = UIColor(patternImage: model.backgroundImage)
-        title.text = model.titleText
+        self.backgroundColor = UIColor(patternImage: model.backgroundImage[0])
+        title.text = model.titleText[0]
     }
     
-    func updateCardPhase(model: DynamicCardPhaseViewModel, newIndex: Int) {
-        self.backgroundColor = UIColor(patternImage: model.backgroundImage)
+    func updateCardPhase(image: UIImage, text: String) {
+        self.backgroundColor = UIColor(patternImage: image)
+        title.text = text
     }
     
 }
