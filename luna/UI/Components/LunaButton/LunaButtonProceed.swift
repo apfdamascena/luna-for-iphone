@@ -22,7 +22,7 @@ class LunaButtonProceed: DrawableButton {
         var configuration = UIButton.Configuration.plain()
         
         var container = AttributeContainer()
-        container.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        container.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         container.foregroundColor = .white
         
         configuration.attributedTitle = AttributedString(style.value, attributes: container)
@@ -30,7 +30,7 @@ class LunaButtonProceed: DrawableButton {
         
         configuration.contentInsets = NSDirectionalEdgeInsets(top: (1.75).su, leading: (2.5).su, bottom: (1.75).su, trailing: (2.5).su)
         
-        configuration.background.backgroundColor = Asset.primaryRed900.color
+        configuration.background.backgroundColor = Asset.red600.color
         
         self.button.configuration = configuration
     }

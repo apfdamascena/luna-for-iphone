@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Logo outline.png",
+      "filename" : "Pre-Onboarding.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Logo outline@2x.png",
+      "filename" : "Pre-Onboarding@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Logo outline@3x.png",
+      "filename" : "Pre-Onboarding@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

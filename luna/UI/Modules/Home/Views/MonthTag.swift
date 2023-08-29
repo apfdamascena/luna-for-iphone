@@ -16,10 +16,10 @@ class MonthTag: UIStackView, AnyView {
         return view
     }()
     
-    public var monthText: LunaText = {
+    public var dateText: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 20, color: .black, weight: .regular)
-        label.text = Date.now.formatMonthToString().capitalized
+        label.text = ("\(Date.now.formatDayToString().lowercased()) de \(Date.now.formatMonthToString().lowercased())")
         label.numberOfLines = 0
         label.textAlignment = .left
         label.draw(model)
@@ -29,7 +29,6 @@ class MonthTag: UIStackView, AnyView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
-        
     }
     
     required init(coder: NSCoder) {
@@ -38,13 +37,18 @@ class MonthTag: UIStackView, AnyView {
     
     func addSubviews() {
         addArrangedSubview(iconCalendar)
-        addArrangedSubview(monthText)
+        addArrangedSubview(dateText)
     }
 
     func addAdditionalConfiguration() {
-        
         axis = .horizontal
-        alignment = .center
+        alignment = .fill
         spacing = 1.su
     }
+    
+    func formattText(day: String, month: String) {
+        dateText.text = ("\(day) de \(month)")
+    }
+    
+    
 }

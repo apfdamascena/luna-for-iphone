@@ -30,12 +30,20 @@ class OnboardingPageControlView: UIView, AnyView {
     var numberOfPages: Int = 0
     var currentPage: Int = 0
     
-    var dots: [UIView] = []
+    var dots: [UIImageView] = [
+        UIImageView(),
+        UIImageView(),
+        UIImageView(),
+        UIImageView()
+    ]
+    
+    private var dotSizeFlow: Int = 0
     
     init(numberOfPages: Int){
         super.init(frame: .zero)
         self.numberOfPages = numberOfPages
         setupView()
+
     }
     
     required init?(coder: NSCoder) {
@@ -44,13 +52,12 @@ class OnboardingPageControlView: UIView, AnyView {
     
     func addSubviews() {
         
-        Array(1...numberOfPages).forEach{ index in
-            let dot = UIView()
-            dot.backgroundColor = index == 1 ? Asset.primaryRed900.color : .gray
-            dot.layer.cornerRadius = 2
-            dots.append(dot)
+        dots.forEach{ dot in
             addSubview(dot)
+            dot.image = Asset.dotNone.image
         }
+        
+        dots[0].image = Asset.dot1.image
     }
     
     struct DotViewConstant {
@@ -58,6 +65,7 @@ class OnboardingPageControlView: UIView, AnyView {
         static let LEFT_MARGIN_CONTENT = 24
         static let SPACING_DOT = 15
     }
+    
     
     func addConstraints() {
         
@@ -69,6 +77,7 @@ class OnboardingPageControlView: UIView, AnyView {
         let remainScreenSize = Int(screenSize) - spaceBeetwenDots - margin
         
         let dotSize = remainScreenSize / numberOfPages
+        self.dotSizeFlow = dotSize
         
         dots.enumerated().forEach{ index, dot in
             let leadingSize = DotViewConstant.LEFT_MARGIN_CONTENT + dotSize*(index) + DotViewConstant.SPACING_DOT*(index)
@@ -82,11 +91,29 @@ class OnboardingPageControlView: UIView, AnyView {
     
     func completeDotAt(_ currentPage: Int){
         dots.enumerated().forEach{ index, dot in
-            dot.backgroundColor = .gray
+            dot.image = Asset.dotNone.image
             
-            if index <= currentPage {
-                dot.backgroundColor = Asset.primaryRed900.color
+            if(index <= currentPage){
+                let image = updateDotsFlow(with: index)
+                dot.image = image
             }
+        }
+    }
+    
+    
+    private func updateDotsFlow(with index: Int) -> UIImage {
+        switch index {
+        case 0:
+            return Asset.dot1.image
+        case 1:
+            return Asset.dot2.image
+        case 2:
+            return Asset.dot3.image
+        case 3:
+            return Asset.dot4.image
+        default:
+            return Asset.dotNone.image
+            
         }
     }
 }
