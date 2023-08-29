@@ -128,13 +128,13 @@ class HomeViewController: UIViewController {
     }
     
     func seeMoreButtonTouchTrigger() {
-        
-        homeView.menstrualPhaseBehaviorsView
-            .seeMoreButton.rx
+
+        homeView.referencesButton
+            .rx
             .tap.bind {
                 self.presenter?.showCyclePhaseReferencesSheet()
             }.disposed(by: disposeBag)
-        
+
     }
     
     func addTapCardCycleEventObservable() {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LunaButtonSeeMore: DrawableButton {
+class LunaButtonReferences: DrawableButton {
     
     let button: UIButton
     
@@ -21,14 +21,15 @@ class LunaButtonSeeMore: DrawableButton {
         
         
         var container = AttributeContainer()
-        container.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        container.foregroundColor = Asset.primaryRed900.color
+        container.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        container.foregroundColor = Asset.gray400.color
         
-        configuration.attributedTitle = AttributedString(L10n.Constants.Content.Button.seeMore, attributes: container)
+        configuration.attributedTitle = AttributedString(L10n.Constants.Content.Button.references, attributes: container)
         configuration.baseForegroundColor = Asset.primaryRed900.color
         
-        configuration.image = Asset.arrowLeftIcon.image.withHorizontallyFlippedOrientation()
-        configuration.imagePadding = 1.su
+//        configuration.image = Asset.arrowLeftIcon.image.withHorizontallyFlippedOrientation()
+        configuration.image = Asset.arrowRightIcon.image
+        configuration.imagePadding = (0.5).su
         configuration.imagePlacement = .trailing
         
         configuration.contentInsets = NSDirectionalEdgeInsets(top: 0,

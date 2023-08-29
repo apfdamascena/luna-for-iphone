@@ -13,7 +13,7 @@ class SeeMoreCard: UIView, AnyView {
     
     private(set) var seeMoreButton: LunaButton = {
         let button = LunaButton()
-        button.draw(style: .seeMore)
+        button.draw(style: .references)
         button.setContentHuggingPriority(.defaultLow, for: .horizontal)
         return button
     }()
