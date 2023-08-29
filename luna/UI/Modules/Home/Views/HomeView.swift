@@ -12,9 +12,6 @@ class HomeView: UIView, AnyView  {
     
     private var hasAcessToCalendar: CalendarAccess = .unauthorized
     
-    //    private(set) var menstrualPhaseBehaviorsView = MenstrualPhaseBehaviorsView()
-    private let learnAboutMenstrualCyclePhasesView = LearnAboutMenstrualCyclePhasesView()
-    
     private(set) var calendarCollectionView = CalendarScrollCollectionView()
     private(set) var warningCalendarAccess = WarningCalendarAccess()
     
@@ -26,7 +23,6 @@ class HomeView: UIView, AnyView  {
         return phaseCycleTitle.readReferencesButton
     }
     
-    private let learnCycleTitle = LearnCycleTitle()
     private(set) var cardCycle = CycleCardView()
     
     private let allContentStackView: UIStackView = {
@@ -76,8 +72,6 @@ class HomeView: UIView, AnyView  {
     
     func addSubviews() {
         
-//        addSubview(monthTag)
-//        addSubview(calendarCollectionView)
         addSubview(scrollView)
         
         addSubview(recordedMenstruationFeedback)
@@ -88,18 +82,17 @@ class HomeView: UIView, AnyView  {
         allContentStackView.addArrangedSubview(descriptionStackView)
         
         descriptionStackView.addArrangedSubview(warningCalendarAccess)
-        descriptionStackView.addArrangedSubview(learnCycleTitle)
         
         
         descriptionStackView.addArrangedSubview(phaseCycleTitle)
         
         descriptionStackView.addArrangedSubview(cardCycle)
         
-        descriptionStackView.addArrangedSubview(learnAboutMenstrualCyclePhasesView)
         descriptionStackView.addArrangedSubview(warningNoMenstrualData)
     }
     
     func addConstraints() {
+        
         
         recordedMenstruationFeedback.snp.makeConstraints {
             $0.bottom.equalTo(safeAreaLayoutGuide).offset(-3.su)
@@ -113,7 +106,7 @@ class HomeView: UIView, AnyView  {
         }
         
         scrollView.snp.makeConstraints {
-            $0.top.equalTo(safeAreaLayoutGuide)
+            $0.top.equalToSuperview().offset(10.su)
             $0.leading.trailing.equalToSuperview()
             $0.bottom.equalTo(safeAreaLayoutGuide)
         }
@@ -136,15 +129,11 @@ class HomeView: UIView, AnyView  {
         }
         
         phaseCycleTitle.snp.makeConstraints {
-            $0.height.equalTo(88)
+            $0.height.equalTo(96)
         }
         
         cardCycle.snp.makeConstraints {
             $0.height.equalTo(206)
-        }
-
-        learnCycleTitle.snp.makeConstraints {
-            $0.height.equalTo(8.su)
         }
         
         warningNoMenstrualData.snp.makeConstraints{
@@ -207,7 +196,7 @@ class HomeView: UIView, AnyView  {
     }
     
     private func toggleCalendarViewIfUserAccess(to value: Bool){
-        [warningCalendarAccess, learnCycleTitle, learnAboutMenstrualCyclePhasesView]
+        [warningCalendarAccess]
             .forEach{
                 $0.isHidden = value
             }

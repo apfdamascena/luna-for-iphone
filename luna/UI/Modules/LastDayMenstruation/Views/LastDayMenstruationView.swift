@@ -42,6 +42,7 @@ class LastDayMenstruationView: UIView, AnyView  {
         picker.preferredDatePickerStyle = .inline
         picker.tintColor = Asset.red500.color
         picker.maximumDate = Date()
+        picker.minimumDate = Calendar.current.date(byAdding: .day, value: -360, to: Date())
         return picker
     }()
     

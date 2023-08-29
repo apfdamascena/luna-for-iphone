@@ -55,7 +55,7 @@ class PhaseCycleTitle: UIStackView, AnyView {
     func addAdditionalConfiguration() {
         axis = .vertical
         alignment = .leading
-        spacing = (0.5).su
+        spacing = (0.7).su
     }
 
 }
