@@ -36,7 +36,7 @@ class CycleCardView: UIView, AnyView {
     
     public var title: LunaText = {
         let label = LunaText()
-        let model = LunaTextViewModel(size: 20, color: .black, weight: .regular)
+        let model = LunaTextViewModel(size: 17, color: .black, weight: .regular)
         label.text = "Você está literalmente sangrando!"
         label.numberOfLines = 0
         label.textAlignment = .left
