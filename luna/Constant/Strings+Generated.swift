@@ -227,8 +227,8 @@ internal enum L10n {
           internal static let luteal = L10n.tr("Constants", "constants.content.label.phase.luteal", fallback: "Fase Lútea")
           /// Menstruação
           internal static let menstruation = L10n.tr("Constants", "constants.content.label.phase.menstruation", fallback: "Menstruação")
-          /// 😡 TPM
-          internal static let pms = L10n.tr("Constants", "constants.content.label.phase.pms", fallback: "😡 TPM")
+          /// TPM
+          internal static let pms = L10n.tr("Constants", "constants.content.label.phase.pms", fallback: "TPM")
         }
         internal enum Sheet {
           /// Disponível aqui!

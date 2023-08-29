@@ -117,6 +117,7 @@
 		A48F4A372A9690C000BB5058 /* DynamicCardPhaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A362A9690C000BB5058 /* DynamicCardPhaseFactory.swift */; };
 		A48F4A3A2A993BEC00BB5058 /* CardPhaseControlDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A392A993BEC00BB5058 /* CardPhaseControlDataSource.swift */; };
 		A48F4A3E2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A3D2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift */; };
+		A48F4A402A9E8AED00BB5058 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A3F2A9E8AED00BB5058 /* String.swift */; };
 		BF4144312A93DC2F00517910 /* LunaCalendarManager+Check.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4144302A93DC2F00517910 /* LunaCalendarManager+Check.swift */; };
 		BF42D2162A8AC67A00E09472 /* CalendarVerifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42D2152A8AC67A00E09472 /* CalendarVerifications.swift */; };
 		BF4DC2D22A72DC510005BF7E /* CyclePhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DC2D12A72DC510005BF7E /* CyclePhase.swift */; };
@@ -294,6 +295,7 @@
 		A48F4A362A9690C000BB5058 /* DynamicCardPhaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCardPhaseFactory.swift; sourceTree = "<group>"; };
 		A48F4A392A993BEC00BB5058 /* CardPhaseControlDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPhaseControlDataSource.swift; sourceTree = "<group>"; };
 		A48F4A3D2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPhaseControlDataSourceImpl.swift; sourceTree = "<group>"; };
+		A48F4A3F2A9E8AED00BB5058 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		BF4144302A93DC2F00517910 /* LunaCalendarManager+Check.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LunaCalendarManager+Check.swift"; sourceTree = "<group>"; };
 		BF42D2152A8AC67A00E09472 /* CalendarVerifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVerifications.swift; sourceTree = "<group>"; };
 		BF4DC2D12A72DC510005BF7E /* CyclePhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclePhase.swift; sourceTree = "<group>"; };
@@ -985,6 +987,7 @@
 			children = (
 				BFD533BE2A716BA50063351E /* Date.swift */,
 				0D6336AE2A7756DD00EE9699 /* Device.swift */,
+				A48F4A3F2A9E8AED00BB5058 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1423,6 +1426,7 @@
 				0D6794202A735C1B00382142 /* HomeContract.swift in Sources */,
 				0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */,
 				0D6794242A735C1B00382142 /* HomeInteractor.swift in Sources */,
+				A48F4A402A9E8AED00BB5058 /* String.swift in Sources */,
 				0D6336AF2A7756DD00EE9699 /* Device.swift in Sources */,
 				0DBADDDF2A6603F800A10FC3 /* LastDayMenstruationContract.swift in Sources */,
 				A48B7ECB2A75A02700CCC4C0 /* LearnAboutMenstrualCyclePhasesView.swift in Sources */,
@@ -1662,7 +1666,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M3SKJK6V42;
+				DEVELOPMENT_TEAM = 9YF48LKAWG;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = luna/Info.plist;
@@ -1697,7 +1701,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M3SKJK6V42;
+				DEVELOPMENT_TEAM = 9YF48LKAWG;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = luna/Info.plist;

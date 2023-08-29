@@ -52,6 +52,18 @@ class CyclePhaseTextFactory {
                 colorBall: BallComponent.red
             )
             
+        case .pms:
+            return CyclePhaseTextViewModel(
+                name: L10n.Constants.Content.Label.Phase.pms,
+                whatIsDescription: L10n.Constants.Content.Label.Text.WhatIs.folicular,
+                howAreYouDescription: L10n.Constants.Content.Label.Text.HowAreYou.folicular,
+                avoidDescription: L10n.Constants.Content.Label.Text.Avoid.folicular,
+                helpDescription: L10n.Constants.Content.Label.Text.Help.folicular,
+                behindSheets: L10n.Constants.Content.Label.Text.BehindSheets.folicular,
+                colorBall: BallComponent.red
+            )
+
+            
         default:
             return CyclePhaseTextViewModel(
                 name: "Fase do Seu Ciclo",
