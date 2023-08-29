@@ -196,7 +196,7 @@ class CalendarCollectionViewCell: UICollectionViewCell,
         return self.phase ?? .none
     }
     
-    func getDate(date: Date) -> String{
+    func getDate(date: Date) -> String {
         if (Locale.current.language.languageCode?.identifier != "pt") {
             let df = DateFormatter()
             df.dateStyle = DateFormatter.Style.medium
