@@ -150,6 +150,7 @@ class HomeView: UIView, AnyView  {
     func addAdditionalConfiguration() {
         backgroundColor = .white
         scrollView.showsVerticalScrollIndicator = false
+        cardCycle.contentMode = .scaleAspectFit
     }
     
     func userDeniedAccessCalendar() {
@@ -224,6 +225,12 @@ class HomeView: UIView, AnyView  {
     func monthChanged(to date: Date) {
         DispatchQueue.main.async {
             self.monthTag.formattText(day: date.formatDayToString().lowercased(), month: date.formatMonthToString().lowercased())
+        }
+    }
+    
+    func flowIndexChanged(to index: Int) {
+        DispatchQueue.main.async {
+            self.cardCycle.updateFlowIndex(index: index)
         }
     }
     

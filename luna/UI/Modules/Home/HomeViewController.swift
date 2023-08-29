@@ -154,6 +154,7 @@ class HomeViewController: UIViewController {
             .subscribe(onNext: { cycle, index in
                 let model = DynamicCardPhaseFactory.create(phase: cycle)
                 self.homeView.cardCycle.updateCardPhase(image: model.backgroundImage[index], text: model.titleText[index])
+                self.homeView.flowIndexChanged(to: index)
             })
             .disposed(by: disposeBag)
     }

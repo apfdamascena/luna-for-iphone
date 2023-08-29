@@ -28,8 +28,13 @@ class CycleCardView: UIView, AnyView {
         return label
     }()
     
-    public let testBar: UIImageView = {
-        let view = UIImageView(image: Asset.testBar.image)
+    private let cardImage: UIImageView = {
+        let view = UIImageView()
+        return view
+    }()
+    
+    public let FlowIndex: UIImageView = {
+        let view = UIImageView(image: Asset.flowCardIndex0.image)
         view.contentMode = .scaleAspectFit
         return view
     }()
@@ -54,10 +59,11 @@ class CycleCardView: UIView, AnyView {
     }
     
     func addSubviews() {
+        addSubview(cardImage)
         addSubview(stack)
         addSubview(title)
         stack.addArrangedSubview(aboutText)
-        stack.addArrangedSubview(testBar)
+        stack.addArrangedSubview(FlowIndex)
     }
     
     func addConstraints() {
@@ -73,16 +79,31 @@ class CycleCardView: UIView, AnyView {
             
         }
         
+        cardImage.snp.makeConstraints{
+            $0.edges.equalToSuperview()
+        }
+        
     }
     
     func draw(_ model: DynamicCardPhaseViewModel) {
-        self.insertSubview(UIImageView(image: model.backgroundImage[0]), at: 0)
+        cardImage.image = model.backgroundImage[0]
         title.text = model.titleText[0]
     }
     
     func updateCardPhase(image: UIImage, text: String) {
-        self.insertSubview(UIImageView(image: image), at: 0)
+        cardImage.image = image
         title.text = text
+    }
+    
+    func updateFlowIndex(index: Int) {
+        let flowIndexImages: [UIImage] = [
+            Asset.flowCardIndex0.image,
+            Asset.flowCardIndex1.image,
+            Asset.flowCardIndex2.image,
+            Asset.flowCardIndex3.image,
+            Asset.flowCardIndex4.image,
+        ]
+        FlowIndex.image = flowIndexImages[index]
     }
     
 }
