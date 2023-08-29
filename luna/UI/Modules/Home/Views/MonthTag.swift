@@ -18,8 +18,9 @@ class MonthTag: UIStackView, AnyView {
     
     public var dateText: LunaText = {
         let label = LunaText()
-        let model = LunaTextViewModel(size: 17, color: .black, weight: .regular)
-        label.text = ("\(Date.now.formatDayToString().lowercased()) de \(Date.now.formatMonthToString().lowercased())")
+        let model = LunaTextViewModel(size: 20, color: .black, weight: .regular)
+        label.text = "".checkInternationalization(Date.now.formatDayToString(), Date.now.formatMonthToString())
+//        label.text = checkInternationalization(Date.now.formatDayToString(), Date.now.formatMonthToString())
         label.numberOfLines = 0
         label.textAlignment = .left
         label.draw(model)
@@ -47,13 +48,9 @@ class MonthTag: UIStackView, AnyView {
     }
     
     func formattText(day: String, month: String) {
-        if (Locale.current.language.languageCode?.identifier != "pt") {
-            dateText.text = ("\(month), \(day)")
-        } else {
-            dateText.text = ("\(day) de \(month)")
-        }
-        
+        dateText.text = "".checkInternationalization(day, month)
     }
+    
     
     
 }
