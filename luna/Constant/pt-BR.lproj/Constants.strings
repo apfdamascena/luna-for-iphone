@@ -62,7 +62,7 @@
 "constants.content.label.phase.luteal"= "Fase Lútea";
 "constants.content.label.phase.fertile"= "Ovulação";
 "constants.content.label.phase.expectedMenstruation"= "Menstruação Prevista";
-"constants.content.label.phase.pms"= "😡 TPM";
+"constants.content.label.phase.pms"= "TPM";
 
 "constants.content.label.text.what_is.folicular"= "A preparação começou! Os folículos ovarianos estão amadurecerecendo.";
 "constants.content.label.text.how_are_you.folicular"= "Energia e bem-estar em alta! Aproveita para resolver as broncas da vida. A sua libido pode aumentar, hein?";

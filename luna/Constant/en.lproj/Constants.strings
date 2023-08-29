@@ -61,7 +61,7 @@
 "constants.content.label.phase.luteal"= "Luteal Phase";
 "constants.content.label.phase.fertile"= "Ovulation";
 "constants.content.label.phase.expectedMenstruation"= "Expected Menstruation";
-"constants.content.label.phase.pms"= "😡 PMS";
+"constants.content.label.phase.pms"= "PMS";
 
 "constants.content.label.text.what_is.folicular"= "Preparation has begun! Ovarian follicles are maturing.";
 "constants.content.label.text.how_are_you.folicular"= "Energy and well-being are high! Take care of any pending tasks. Your libido might increase, too!";
