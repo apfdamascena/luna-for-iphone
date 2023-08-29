@@ -11,5 +11,4 @@ struct CycleInformations {
     let firstDayMenstruation: Date
     let averageMenstruationDuration: Int
     let averageCycleDuration: Int
-    var lastDayMenstruation: Date? = nil
 }

@@ -20,7 +20,6 @@ protocol PresenterToViewHomeProtocol {
     func updateView(_ center: CalendarCollectionViewCell)
     
     func load(collectionDataSource: [CyclePhaseViewModel])
-    func loadCalendarToCollection(date: Date)
     
     func moveTo(_ month: Date)
     func showFeedbackRegisterMenstruation()

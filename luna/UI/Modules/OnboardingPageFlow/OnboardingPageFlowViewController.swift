@@ -28,7 +28,7 @@ class OnboardingPageFlowViewController: UIPageViewController,
     
     init(datasource: OnboardingPageControlDataSource){
         self.datasource = datasource
-        self.pageControlView = OnboardingPageControlView(numberOfPages: Onboarding.NUMBER_PAGES)
+        self.pageControlView = OnboardingPageControlView(numberOfPages: OnboardingInformation.NUMBER_PAGES)
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
       
         addUserTouchTrigger()

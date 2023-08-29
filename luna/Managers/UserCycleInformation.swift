@@ -8,10 +8,10 @@
 import Foundation
 
 
-class OnboardingUserCycleInformation {
+class UserCycleInformation {
     
     private init(){}
-    static let shared = OnboardingUserCycleInformation()
+    static let shared = UserCycleInformation()
     
     var lastMenstruation: Date {
         guard let date =  UserDefaults.standard.object(forKey: "menstruation_date") as? Date else {
@@ -34,6 +34,8 @@ class OnboardingUserCycleInformation {
         }
         return duration
     }
+    
+    var MAX_MENSTRUATION_DURATION = 10
     
 
     func setLastMenstruation(_ date: Date){
