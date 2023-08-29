@@ -44,8 +44,9 @@ class HomeViewController: UIViewController {
         addCalendarEventObservable()
         addCyclePhaseEventObservable()
         addSettingsHandlerEvent()
+        cardCyclePhaseHandler()
         seeMoreButtonTouchTrigger()
-        userTapCardCycle()
+        addTapCardCycleEventObservable()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -112,7 +113,10 @@ class HomeViewController: UIViewController {
             .subscribe(onNext: { cycle in
                 self.homeView.phaseChanged(to: cycle)
                 self.homeView.showWarningNoMenstrualData(if: cycle)
+                self.cardPhaseDataSource.index.onNext(0)
         }).disposed(by: disposeBag)
+        
+        
     }
     
     func addSettingsHandlerEvent(){
@@ -123,7 +127,17 @@ class HomeViewController: UIViewController {
             }.disposed(by: disposeBag)
     }
     
-    func userTapCardCycle() {
+    func seeMoreButtonTouchTrigger() {
+        
+        homeView.menstrualPhaseBehaviorsView
+            .seeMoreButton.rx
+            .tap.bind {
+                self.presenter?.showCyclePhaseReferencesSheet()
+            }.disposed(by: disposeBag)
+        
+    }
+    
+    func addTapCardCycleEventObservable() {
         
         let tapGesture = UITapGestureRecognizer()
         homeView.cardCycle.addGestureRecognizer(tapGesture)
@@ -133,16 +147,18 @@ class HomeViewController: UIViewController {
         })
         .disposed(by: disposeBag)
     }
-
     
-    func seeMoreButtonTouchTrigger() {
-        
-        homeView.menstrualPhaseBehaviorsView
-            .seeMoreButton.rx
-            .tap.bind {
-                self.presenter?.showCyclePhaseReferencesSheet()
-            }.disposed(by: disposeBag)
+    func cardCyclePhaseHandler() {
+        Observable.combineLatest(datasource.cyclePhase, cardPhaseDataSource.index)
+            .asObservable()
+            .subscribe(onNext: { cycle, index in
+                let model = DynamicCardPhaseFactory.create(phase: cycle)
+                self.homeView.cardCycle.updateCardPhase(image: model.backgroundImage[index], text: model.titleText[index])
+                self.homeView.flowIndexChanged(to: index)
+            })
+            .disposed(by: disposeBag)
     }
+    
 }
 
 
@@ -150,10 +166,6 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     
     func moveTo(_ month: Date) {
         self.homeView.monthChanged(to: month)
-    }
-    
-    func loadCalendarToCollection(date: Date) {
-        
     }
 
     func load(collectionDataSource: [CyclePhaseViewModel]) {
@@ -250,27 +262,12 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     }
     
     func changeCurrentIndexCardPhase(at newIndex: Int) {
-//        self.cardPhaseDataSource.index.onNext(newIndex)
-////        let model = self.cardPhaseDataSource.cardsPhase
-//        let image = DynamicCardPhaseFactory.create(phase: self.datasource.cyclePhase)
-//        self.homeView.cardCycle.updateCardPhase(model: model)
-        
-        homeView.calendarCollectionView
-            .rx.scrollToCenter
-            .subscribe(onNext: { centerCell, phase, month in
-                guard let menstruationPhase = phase else { return }
-                
-//                self.datasource.cyclePhase.onNext(menstruationPhase)
-                
-                self.cardPhaseDataSource.index.onNext(newIndex)
-                let model = DynamicCardPhaseFactory.create(phase: menstruationPhase)
-                self.homeView.cardCycle.updateCardPhase(image: model.backgroundImage[newIndex], text: model.titleText[newIndex])
-
-            }).disposed(by: disposeBag)
+        self.cardPhaseDataSource.index.onNext(newIndex)
         
     }
     
 }
+
 
 
 

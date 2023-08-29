@@ -10,5 +10,5 @@ import RxSwift
 
 protocol CardPhaseControlDataSource {
     var index: BehaviorSubject<Int> { get }
-//    var cardsPhase: DynamicCardPhaseViewModel { get }
+//    var cyclePhase: PublishSubject<CyclePhase> { get }
 }

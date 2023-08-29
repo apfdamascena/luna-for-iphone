@@ -68,6 +68,11 @@ internal enum Asset {
   internal static let dot3 = ImageAsset(name: "dot3")
   internal static let dot4 = ImageAsset(name: "dot4")
   internal static let dotNone = ImageAsset(name: "dotNone")
+  internal static let flowCardIndex0 = ImageAsset(name: "flowCardIndex0")
+  internal static let flowCardIndex1 = ImageAsset(name: "flowCardIndex1")
+  internal static let flowCardIndex2 = ImageAsset(name: "flowCardIndex2")
+  internal static let flowCardIndex3 = ImageAsset(name: "flowCardIndex3")
+  internal static let flowCardIndex4 = ImageAsset(name: "flowCardIndex4")
   internal static let foliculeCell = ImageAsset(name: "folicule_cell")
   internal static let follicularSelected = ImageAsset(name: "follicularSelected")
   internal static let forecastCell = ImageAsset(name: "forecast_cell")
@@ -100,7 +105,6 @@ internal enum Asset {
   internal static let secondaryRed100 = ColorAsset(name: "secondary_red_100")
   internal static let secondaryRed200 = ColorAsset(name: "secondary_red_200")
   internal static let teachRegisterMenstruation = ImageAsset(name: "teach_register_menstruation")
-  internal static let testBar = ImageAsset(name: "test_bar")
   internal static let vermelho200 = ColorAsset(name: "vermelho-200")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

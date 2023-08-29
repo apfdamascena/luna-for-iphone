@@ -28,15 +28,20 @@ class CycleCardView: UIView, AnyView {
         return label
     }()
     
-    public let testBar: UIImageView = {
-        let view = UIImageView(image: Asset.testBar.image)
+    private let cardImage: UIImageView = {
+        let view = UIImageView()
+        return view
+    }()
+    
+    public let FlowIndex: UIImageView = {
+        let view = UIImageView(image: Asset.flowCardIndex0.image)
         view.contentMode = .scaleAspectFit
         return view
     }()
     
     public var title: LunaText = {
         let label = LunaText()
-        let model = LunaTextViewModel(size: 20, color: .black, weight: .regular)
+        let model = LunaTextViewModel(size: 17, color: .black, weight: .regular)
         label.text = "Você está literalmente sangrando!"
         label.numberOfLines = 0
         label.textAlignment = .left
@@ -54,10 +59,11 @@ class CycleCardView: UIView, AnyView {
     }
     
     func addSubviews() {
+        addSubview(cardImage)
         addSubview(stack)
         addSubview(title)
         stack.addArrangedSubview(aboutText)
-        stack.addArrangedSubview(testBar)
+        stack.addArrangedSubview(FlowIndex)
     }
     
     func addConstraints() {
@@ -66,7 +72,6 @@ class CycleCardView: UIView, AnyView {
             $0.leading.trailing.equalToSuperview().inset(2.su)
             $0.top.equalToSuperview().offset(3.su)
         }
-
         title.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(2.su)
             $0.trailing.equalToSuperview().offset(-129)
@@ -74,17 +79,31 @@ class CycleCardView: UIView, AnyView {
             
         }
         
+        cardImage.snp.makeConstraints{
+            $0.edges.equalToSuperview()
+        }
+        
     }
     
-    // precisa mudar pra nao lidar com o index aqui!
     func draw(_ model: DynamicCardPhaseViewModel) {
-        self.backgroundColor = UIColor(patternImage: model.backgroundImage[0])
+        cardImage.image = model.backgroundImage[0]
         title.text = model.titleText[0]
     }
     
     func updateCardPhase(image: UIImage, text: String) {
-        self.backgroundColor = UIColor(patternImage: image)
+        cardImage.image = image
         title.text = text
+    }
+    
+    func updateFlowIndex(index: Int) {
+        let flowIndexImages: [UIImage] = [
+            Asset.flowCardIndex0.image,
+            Asset.flowCardIndex1.image,
+            Asset.flowCardIndex2.image,
+            Asset.flowCardIndex3.image,
+            Asset.flowCardIndex4.image,
+        ]
+        FlowIndex.image = flowIndexImages[index]
     }
     
 }

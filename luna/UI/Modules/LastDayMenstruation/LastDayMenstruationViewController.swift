@@ -30,7 +30,7 @@ class LastDayMenstruationViewController: UIViewController,
         lastDayMenstruationView.datePicker
             .rx.value.changed.asObservable()
             .subscribe(onNext: { date in
-                OnboardingUserCycleInformation.shared.setLastMenstruation(date)
+                UserCycleInformation.shared.setLastMenstruation(date)
             }).disposed(by: disposeBag)
     }
 }
