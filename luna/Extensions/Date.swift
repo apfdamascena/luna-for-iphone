@@ -38,4 +38,11 @@ extension Date {
         return day
     }
     
+    func formatDayOfTheWeekToString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        let day = dateFormatter.string(from: self)
+        return String(day.prefix(1))
+    }
+    
 }

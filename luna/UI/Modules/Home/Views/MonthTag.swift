@@ -47,7 +47,12 @@ class MonthTag: UIStackView, AnyView {
     }
     
     func formattText(day: String, month: String) {
-        dateText.text = ("\(day) de \(month)")
+        if (Locale.current.language.languageCode?.identifier != "pt") {
+            dateText.text = ("\(month), \(day)")
+        } else {
+            dateText.text = ("\(day) de \(month)")
+        }
+        
     }
     
     

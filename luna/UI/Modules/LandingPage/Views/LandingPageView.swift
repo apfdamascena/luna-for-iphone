@@ -33,8 +33,8 @@ class LandingPageView: UIView, AnyView {
         let model = LunaTextViewModel(size: 39,
                                       color: .black,
                                       weight: .semibold)
-        
-        label.text = "Desperte seu própro ritmo"
+
+        label.text = L10n.Constants.Content.Label.onboardingLandingPage
         label.numberOfLines = 0
         label.textAlignment = .center
         label.draw(model)
