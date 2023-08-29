@@ -48,6 +48,8 @@ class CalendarCollectionConverter {
                     
                 case CyclePhase.luteal.value:
                     defaultPhase = .luteal
+                case CyclePhase.pms.value:
+                    defaultPhase = .pms
                 
                 default:
                     defaultPhase = .none
