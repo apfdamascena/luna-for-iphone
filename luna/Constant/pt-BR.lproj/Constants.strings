@@ -5,7 +5,6 @@
   Created by alexdamascena on 18/07/23.
   
 */
-
 "constants.content.label.last_day_menstruation"="Quando foi o início da\nsua última menstruação?";
 "constants.content.label.menstruation_duration"="Quantos dias dura a\nsua menstruação?";
 "constants.content.label.cycle_duration"="Quanto tempo dura o\nseu ciclo menstrual?";
@@ -152,3 +151,5 @@
 "constants.content.label.home.card.folicular.three" = "A sua libido pode aumentar, hein?";
 "constants.content.label.home.card.folicular.four" = "Nada de passar sede nessa fase. Hidrate-se em abundância!";
 "constants.content.label.home.card.folicular.five" = "Mantenha bons hábitos alimentares e de exercício";
+
+"constants.content.label.onboarding_landing_page"="Desperte seu própro ritmo";

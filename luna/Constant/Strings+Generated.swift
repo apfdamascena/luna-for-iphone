@@ -66,6 +66,8 @@ internal enum L10n {
         internal static let onboardingForecast = L10n.tr("Constants", "constants.content.label.onboarding_forecast", fallback: "Previsão")
         /// O círculo vermelho claro indica a previsão do provável dia em que sua menstruação ocorrerá.
         internal static let onboardingForecastDescription = L10n.tr("Constants", "constants.content.label.onboarding_forecast_description", fallback: "O círculo vermelho claro indica a previsão do provável dia em que sua menstruação ocorrerá.")
+        /// Desperte seu própro ritmo
+        internal static let onboardingLandingPage = L10n.tr("Constants", "constants.content.label.onboarding_landing_page", fallback: "Desperte seu própro ritmo")
         /// Fase Lútea
         internal static let onboardingLuteal = L10n.tr("Constants", "constants.content.label.onboarding_luteal", fallback: "Fase Lútea")
         /// As nuvens azuis representam os dias que você está na fase lútea.

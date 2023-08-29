@@ -5,7 +5,6 @@
   Created by alexdamascena on 18/07/23.
   
 */
-
 "constants.content.label.last_day_menstruation"="When was the start of\nyour last menstruation?";
 "constants.content.label.menstruation_duration"="How many days does your\nmenstruation last?";
 "constants.content.label.cycle_duration"="How long does your\nmenstrual cycle last?";
@@ -121,3 +120,35 @@
 "constants.content.label.home.link.references.fourth" = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9761221/";
 
 "constants.content.label.home.link.references.fifth" = "https://www.scielo.br/j/trends/a/sCgf4Rzvkvjmmv4bSMzV6vk/?format=pdf&lang=en";
+
+"constants.content.label.home.card.menstruation.one" = "You're literally bleeding!";
+"constants.content.label.home.card.menstruation.two" = "Heads up, you might become more sensitive and irritable.";
+"constants.content.label.home.card.menstruation.three" = "Having cramps and changes in taste are part of menstruation. Stay strong!";
+"constants.content.label.home.card.menstruation.four" = "Intense social activities might have to wait, huh.";
+"constants.content.label.home.card.menstruation.five" = "Gentle exercises can help with cramps and mood. So go for it!";
+
+"constants.content.label.home.card.ovulation.one" = "Whoa, your egg could be released on any of these days.";
+"constants.content.label.home.card.ovulation.two" = "Libido might increase, and you might feel more attractive too!";
+"constants.content.label.home.card.ovulation.three" = "It's time to postpone stressful activities.";
+"constants.content.label.home.card.ovulation.four" = "Craving sweets is normal, enjoy in moderation and be happy!";
+"constants.content.label.home.card.ovulation.five" = "Energy is also high, take advantage with strength exercises.";
+
+"constants.content.label.home.card.luteal.one" = "The egg is now a corpus luteum. Hormones are high!";
+"constants.content.label.home.card.luteal.two" = "Only good vibes! It could be a day of peace and tranquility.";
+"constants.content.label.home.card.luteal.three" = "Your mood might fluctuate, and that's okay, alright?";
+"constants.content.label.home.card.luteal.four" = "It's good to avoid important decisions or big changes.";
+"constants.content.label.home.card.luteal.five" = "Make the most of this time for calm activities.";
+
+"constants.content.label.home.card.pms.one" = "Here she comes... PMS! A true mix of emotions.";
+"constants.content.label.home.card.pms.two" = "Oh boy, you could easily go from 0 to 60 in mood.";
+"constants.content.label.home.card.pms.three" = "Cramps and body aches can be common.";
+"constants.content.label.home.card.pms.four" = "Your body might retain more fluid, so it's good to avoid salty foods.";
+"constants.content.label.home.card.pms.five" = "Anxiety will be high, have a little patience.";
+
+"constants.content.label.home.card.folicular.one" = "High energy and well-being! The follicular phase has arrived.";
+"constants.content.label.home.card.folicular.two" = "High energy and well-being! Use this time to tackle life's challenges.";
+"constants.content.label.home.card.folicular.three" = "Your libido might increase, huh?";
+"constants.content.label.home.card.folicular.four" = "Don't let yourself get thirsty during this phase. Hydrate abundantly!";
+"constants.content.label.home.card.folicular.five" = "Maintain good eating and exercise habits.";
+
+"constants.content.label.onboarding_landing_page"="Awake your own cycle";

@@ -168,7 +168,7 @@ class CalendarCollectionViewCell: UICollectionViewCell,
     }
     
     func getDayOfTheWeek(date: Date) -> String {
-        return daysOfTheWeek[Calendar.current.dateComponents([.weekday], from: date).weekday! - 1]
+        return date.formatDayOfTheWeekToString().uppercased()
         
     }
     
@@ -197,11 +197,19 @@ class CalendarCollectionViewCell: UICollectionViewCell,
     }
     
     func getDate(date: Date) -> String{
-        let df = DateFormatter()
-        df.dateStyle = DateFormatter.Style.medium
-        df.timeStyle = DateFormatter.Style.medium
-        let date = (df.string(from: date))
-        
-        return String(date.prefix(2))
+        if (Locale.current.language.languageCode?.identifier != "pt") {
+            let df = DateFormatter()
+            df.dateStyle = DateFormatter.Style.medium
+            df.timeStyle = DateFormatter.Style.medium
+            let date = (df.string(from: date))
+            return String(String(date.prefix(6)).suffix(2))
+        } else {
+            let df = DateFormatter()
+            df.dateStyle = DateFormatter.Style.medium
+            df.timeStyle = DateFormatter.Style.medium
+            let date = (df.string(from: date))
+            
+            return String(date.prefix(2))
+        }
     }
 }
