@@ -29,6 +29,12 @@ class PhaseCycleTitle: UIStackView, AnyView {
         return label
     }()
     
+    private(set) var readReferencesButton: LunaButton = {
+        let button = LunaButton()
+        button.draw(style: .references)
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -42,13 +48,14 @@ class PhaseCycleTitle: UIStackView, AnyView {
         
         addArrangedSubview(youAreInLabel)
         addArrangedSubview(phaseTitle)
+        addArrangedSubview(readReferencesButton)
         
     }
     
     func addAdditionalConfiguration() {
         axis = .vertical
         alignment = .leading
-        spacing = 0
+        spacing = (0.5).su
     }
 
 }

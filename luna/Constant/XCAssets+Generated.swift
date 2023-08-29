@@ -27,6 +27,7 @@ internal enum Asset {
   internal static let accentColor = ColorAsset(name: "AccentColor")
   internal static let menstruationSelected = ImageAsset(name: "MenstruationSelected")
   internal static let arrowLeftIcon = ImageAsset(name: "arrow_left_icon")
+  internal static let arrowRightIcon = ImageAsset(name: "arrow_right_icon")
   internal static let background = ImageAsset(name: "background")
   internal static let backgroundFolicule1 = ImageAsset(name: "background_folicule_1")
   internal static let backgroundFolicule2 = ImageAsset(name: "background_folicule_2")

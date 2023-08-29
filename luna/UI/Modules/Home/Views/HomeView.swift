@@ -11,8 +11,8 @@ import SnapKit
 class HomeView: UIView, AnyView  {
     
     private var hasAcessToCalendar: CalendarAccess = .unauthorized
-
-    private(set) var menstrualPhaseBehaviorsView = MenstrualPhaseBehaviorsView()
+    
+    //    private(set) var menstrualPhaseBehaviorsView = MenstrualPhaseBehaviorsView()
     private let learnAboutMenstrualCyclePhasesView = LearnAboutMenstrualCyclePhasesView()
     
     private(set) var calendarCollectionView = CalendarScrollCollectionView()
@@ -21,6 +21,11 @@ class HomeView: UIView, AnyView  {
     private let monthTag = MonthTag()
     
     private let phaseCycleTitle = PhaseCycleTitle()
+    
+    var referencesButton: LunaButton {
+        return phaseCycleTitle.readReferencesButton
+    }
+    
     private let learnCycleTitle = LearnCycleTitle()
     private(set) var cardCycle = CycleCardView()
     
@@ -85,10 +90,11 @@ class HomeView: UIView, AnyView  {
         descriptionStackView.addArrangedSubview(warningCalendarAccess)
         descriptionStackView.addArrangedSubview(learnCycleTitle)
         
-        descriptionStackView.addArrangedSubview(cardCycle)
         
         descriptionStackView.addArrangedSubview(phaseCycleTitle)
-        descriptionStackView.addArrangedSubview(menstrualPhaseBehaviorsView)
+        
+        descriptionStackView.addArrangedSubview(cardCycle)
+        
         descriptionStackView.addArrangedSubview(learnAboutMenstrualCyclePhasesView)
         descriptionStackView.addArrangedSubview(warningNoMenstrualData)
     }
@@ -130,7 +136,7 @@ class HomeView: UIView, AnyView  {
         }
         
         phaseCycleTitle.snp.makeConstraints {
-            $0.height.equalTo(77)
+            $0.height.equalTo(88)
         }
         
         cardCycle.snp.makeConstraints {
@@ -175,21 +181,20 @@ class HomeView: UIView, AnyView  {
     func showWarningNoMenstrualData(if cycle: CyclePhase){
         
         if hasAcessToCalendar == .unauthorized {
-            menstrualPhaseBehaviorsView.isHidden = true
+            
             phaseCycleTitle.isHidden = true
             warningNoMenstrualData.isHidden = true
             cardCycle.isHidden = true
             return
         }
         
-        menstrualPhaseBehaviorsView.isHidden = false
+        
         phaseCycleTitle.isHidden = false
         warningNoMenstrualData.isHidden = true
         cardCycle.isHidden = false
         
     
         if cycle == .none {
-            menstrualPhaseBehaviorsView.isHidden = true
 
             phaseCycleTitle.isHidden = true
             cardCycle.isHidden = true
@@ -206,7 +211,7 @@ class HomeView: UIView, AnyView  {
             .forEach{
                 $0.isHidden = value
             }
-        [phaseCycleTitle, menstrualPhaseBehaviorsView].forEach{
+        [phaseCycleTitle].forEach{
             $0.isHidden = !value
         }
     }
@@ -217,7 +222,6 @@ class HomeView: UIView, AnyView  {
             let model = CyclePhaseTextFactory.create(phase: cycle)
             let modelCard = DynamicCardPhaseFactory.create(phase: cycle)
             self.phaseCycleTitle.phaseTitle.text = model.name
-            self.menstrualPhaseBehaviorsView.draw(model)
             self.cardCycle.draw(modelCard)
         }
     }
