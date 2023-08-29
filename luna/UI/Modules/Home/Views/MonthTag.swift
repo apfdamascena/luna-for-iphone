@@ -18,7 +18,7 @@ class MonthTag: UIStackView, AnyView {
     
     public var dateText: LunaText = {
         let label = LunaText()
-        let model = LunaTextViewModel(size: 20, color: .black, weight: .regular)
+        let model = LunaTextViewModel(size: 17, color: .black, weight: .regular)
         label.text = ("\(Date.now.formatDayToString().lowercased()) de \(Date.now.formatMonthToString().lowercased())")
         label.numberOfLines = 0
         label.textAlignment = .left
