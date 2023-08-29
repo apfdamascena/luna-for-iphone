@@ -112,6 +112,11 @@
 		A48B7EDE2A7ADD6500CCC4C0 /* MenstrualPhaseBehaviorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7EDD2A7ADD6500CCC4C0 /* MenstrualPhaseBehaviorsView.swift */; };
 		A48B7EE02A7AF48E00CCC4C0 /* BallComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7EDF2A7AF48E00CCC4C0 /* BallComponent.swift */; };
 		A48F4A242A82DC8800BB5058 /* LunaButtonSeeMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A232A82DC8800BB5058 /* LunaButtonSeeMore.swift */; };
+		A48F4A322A9684B600BB5058 /* CycleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A312A9684B600BB5058 /* CycleCardView.swift */; };
+		A48F4A352A96906E00BB5058 /* DynamicCardPhaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A342A96906E00BB5058 /* DynamicCardPhaseViewModel.swift */; };
+		A48F4A372A9690C000BB5058 /* DynamicCardPhaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A362A9690C000BB5058 /* DynamicCardPhaseFactory.swift */; };
+		A48F4A3A2A993BEC00BB5058 /* CardPhaseControlDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A392A993BEC00BB5058 /* CardPhaseControlDataSource.swift */; };
+		A48F4A3E2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A3D2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift */; };
 		BF4144312A93DC2F00517910 /* LunaCalendarManager+Check.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4144302A93DC2F00517910 /* LunaCalendarManager+Check.swift */; };
 		BF42D2162A8AC67A00E09472 /* CalendarVerifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42D2152A8AC67A00E09472 /* CalendarVerifications.swift */; };
 		BF4DC2D22A72DC510005BF7E /* CyclePhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DC2D12A72DC510005BF7E /* CyclePhase.swift */; };
@@ -284,6 +289,11 @@
 		A48B7EDD2A7ADD6500CCC4C0 /* MenstrualPhaseBehaviorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstrualPhaseBehaviorsView.swift; sourceTree = "<group>"; };
 		A48B7EDF2A7AF48E00CCC4C0 /* BallComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallComponent.swift; sourceTree = "<group>"; };
 		A48F4A232A82DC8800BB5058 /* LunaButtonSeeMore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaButtonSeeMore.swift; sourceTree = "<group>"; };
+		A48F4A312A9684B600BB5058 /* CycleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleCardView.swift; sourceTree = "<group>"; };
+		A48F4A342A96906E00BB5058 /* DynamicCardPhaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCardPhaseViewModel.swift; sourceTree = "<group>"; };
+		A48F4A362A9690C000BB5058 /* DynamicCardPhaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCardPhaseFactory.swift; sourceTree = "<group>"; };
+		A48F4A392A993BEC00BB5058 /* CardPhaseControlDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPhaseControlDataSource.swift; sourceTree = "<group>"; };
+		A48F4A3D2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPhaseControlDataSourceImpl.swift; sourceTree = "<group>"; };
 		BF4144302A93DC2F00517910 /* LunaCalendarManager+Check.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LunaCalendarManager+Check.swift"; sourceTree = "<group>"; };
 		BF42D2152A8AC67A00E09472 /* CalendarVerifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVerifications.swift; sourceTree = "<group>"; };
 		BF4DC2D12A72DC510005BF7E /* CyclePhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclePhase.swift; sourceTree = "<group>"; };
@@ -430,6 +440,7 @@
 		0D6794112A71D51800382142 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				A48F4A3B2A993C4700BB5058 /* CardPhaseControl */,
 				0D6794122A71D53C00382142 /* RootScreenViewFactory.swift */,
 			);
 			path = Root;
@@ -632,6 +643,7 @@
 		0DDA612F2A69D07900CA15C6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A48F4A3C2A993C6E00BB5058 /* CardPhaseControl */,
 				CAAB60F02A82C98C0003F770 /* ReferencesSheet */,
 				0D6336982A774D5700EE9699 /* OtherCyclePhases */,
 				0D6794292A74723600382142 /* TeachRecordMenstruation */,
@@ -690,6 +702,7 @@
 		0DDA61352A69D11200CA15C6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A48F4A332A96904800BB5058 /* DynamicCardPhase */,
 				0DF4106C2A8581FC00A10405 /* SeeMoreCard */,
 				BFD1A0212A833A8700F420B5 /* Link */,
 				BFD1A01E2A8329D000F420B5 /* ReferenceCard */,
@@ -813,6 +826,7 @@
 				0DF410662A85656300A10405 /* MonthTag.swift */,
 				0DF410682A856A6300A10405 /* PhaseCycleTitle.swift */,
 				0DF4106A2A85712E00A10405 /* LearnCycleTitle.swift */,
+				A48F4A312A9684B600BB5058 /* CycleCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -824,6 +838,31 @@
 				A48B7ED12A7993FB00CCC4C0 /* CyclePhaseTextViewModel.swift */,
 			);
 			path = CyclePhaseText;
+			sourceTree = "<group>";
+		};
+		A48F4A332A96904800BB5058 /* DynamicCardPhase */ = {
+			isa = PBXGroup;
+			children = (
+				A48F4A342A96906E00BB5058 /* DynamicCardPhaseViewModel.swift */,
+				A48F4A362A9690C000BB5058 /* DynamicCardPhaseFactory.swift */,
+			);
+			path = DynamicCardPhase;
+			sourceTree = "<group>";
+		};
+		A48F4A3B2A993C4700BB5058 /* CardPhaseControl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CardPhaseControl;
+			sourceTree = "<group>";
+		};
+		A48F4A3C2A993C6E00BB5058 /* CardPhaseControl */ = {
+			isa = PBXGroup;
+			children = (
+				A48F4A392A993BEC00BB5058 /* CardPhaseControlDataSource.swift */,
+				A48F4A3D2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift */,
+			);
+			path = CardPhaseControl;
 			sourceTree = "<group>";
 		};
 		BF4DC2D02A72DC450005BF7E /* Enums */ = {
@@ -1307,6 +1346,7 @@
 				A48B7EDE2A7ADD6500CCC4C0 /* MenstrualPhaseBehaviorsView.swift in Sources */,
 				0D6336A42A7750EF00EE9699 /* OnboardingCyclePhaseContentViewModel.swift in Sources */,
 				0D2FC76E2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift in Sources */,
+				A48F4A322A9684B600BB5058 /* CycleCardView.swift in Sources */,
 				BFD1A01B2A82E18600F420B5 /* CalendarAccess.swift in Sources */,
 				0D2FC7722A6EF59B0025D8B6 /* OnboardingViewFlow.swift in Sources */,
 				0DBADDE92A66045700A10FC3 /* UIViewController+Preview.swift in Sources */,
@@ -1325,6 +1365,7 @@
 				A46C05162A6EFE150071ABCE /* CalendarView.swift in Sources */,
 				A46C05572A7464970071ABCE /* LunaButton.swift in Sources */,
 				A46C05142A6EFE150071ABCE /* CalendarPresenter.swift in Sources */,
+				A48F4A372A9690C000BB5058 /* DynamicCardPhaseFactory.swift in Sources */,
 				0D2FC76A2A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift in Sources */,
 				0DF410632A840E8C00A10405 /* CalendarCollectionView+Rx.swift in Sources */,
 				A46C05202A72B63B0071ABCE /* DrawableButton.swift in Sources */,
@@ -1355,6 +1396,8 @@
 				BFD533B62A71567A0063351E /* CalendarCreator.swift in Sources */,
 				A48F4A242A82DC8800BB5058 /* LunaButtonSeeMore.swift in Sources */,
 				CAE579A22A7AD8A1004EE21C /* CalendarCollectionConverter.swift in Sources */,
+				BF4DC2E52A74456F0005BF7E /* TestCalendarRecalculationPresenter.swift in Sources */,
+				A48F4A3E2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift in Sources */,
 				0D6336A12A774D7A00EE9699 /* OtherCyclePhasesViewController.swift in Sources */,
 				0DF4106B2A85712E00A10405 /* LearnCycleTitle.swift in Sources */,
 				CAE579A42A7ADE2D004EE21C /* HomeCollection.swift in Sources */,
@@ -1367,6 +1410,7 @@
 				BF6520E42A6F0D5D00E60054 /* CycleDurationView.swift in Sources */,
 				BF4DC2D22A72DC510005BF7E /* CyclePhase.swift in Sources */,
 				BFCAAD3B2A6B19AE00A91CC0 /* MenstruationDurationView.swift in Sources */,
+				A48F4A3A2A993BEC00BB5058 /* CardPhaseControlDataSource.swift in Sources */,
 				0DBADD9B2A65FDF100A10FC3 /* SceneDelegate.swift in Sources */,
 				A46C054E2A74641E0071ABCE /* LunaButtonProceed.swift in Sources */,
 				BFF09AFA2A6B599B00749328 /* PickerViewAdapter.swift in Sources */,
@@ -1420,6 +1464,7 @@
 				0D2FC76C2A6EF4810025D8B6 /* DataSourceEventObservable.swift in Sources */,
 				BF4DC2D62A7341B20005BF7E /* LunaCalendarRequestAccess.swift in Sources */,
 				A46C05152A6EFE150071ABCE /* CalendarViewController.swift in Sources */,
+				A48F4A352A96906E00BB5058 /* DynamicCardPhaseViewModel.swift in Sources */,
 				0DDA61272A69CEC600CA15C6 /* MenstruationDurationContract.swift in Sources */,
 				0D6794362A74729100382142 /* TeachRecordMenstruationView.swift in Sources */,
 				CA557BD22A6B17C7001DF2BB /* LandingPageView.swift in Sources */,

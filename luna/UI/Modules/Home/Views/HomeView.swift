@@ -22,6 +22,7 @@ class HomeView: UIView, AnyView  {
     
     private let phaseCycleTitle = PhaseCycleTitle()
     private let learnCycleTitle = LearnCycleTitle()
+    private(set) var cardCycle = CycleCardView()
     
     private let allContentStackView: UIStackView = {
         let view = UIStackView()
@@ -83,6 +84,9 @@ class HomeView: UIView, AnyView  {
         
         descriptionStackView.addArrangedSubview(warningCalendarAccess)
         descriptionStackView.addArrangedSubview(learnCycleTitle)
+        
+        descriptionStackView.addArrangedSubview(cardCycle)
+        
         descriptionStackView.addArrangedSubview(phaseCycleTitle)
         descriptionStackView.addArrangedSubview(menstrualPhaseBehaviorsView)
         descriptionStackView.addArrangedSubview(learnAboutMenstrualCyclePhasesView)
@@ -128,6 +132,10 @@ class HomeView: UIView, AnyView  {
         phaseCycleTitle.snp.makeConstraints {
             $0.height.equalTo(77)
         }
+        
+        cardCycle.snp.makeConstraints {
+            $0.height.equalTo(206)
+        }
 
         learnCycleTitle.snp.makeConstraints {
             $0.height.equalTo(8.su)
@@ -142,6 +150,7 @@ class HomeView: UIView, AnyView  {
     func addAdditionalConfiguration() {
         backgroundColor = .white
         scrollView.showsVerticalScrollIndicator = false
+        cardCycle.contentMode = .scaleAspectFit
     }
     
     func userDeniedAccessCalendar() {
@@ -169,18 +178,21 @@ class HomeView: UIView, AnyView  {
             menstrualPhaseBehaviorsView.isHidden = true
             phaseCycleTitle.isHidden = true
             warningNoMenstrualData.isHidden = true
+            cardCycle.isHidden = true
             return
         }
         
         menstrualPhaseBehaviorsView.isHidden = false
         phaseCycleTitle.isHidden = false
         warningNoMenstrualData.isHidden = true
+        cardCycle.isHidden = false
         
     
         if cycle == .none {
             menstrualPhaseBehaviorsView.isHidden = true
 
             phaseCycleTitle.isHidden = true
+            cardCycle.isHidden = true
             warningNoMenstrualData.isHidden = false
         }
     }
@@ -203,14 +215,22 @@ class HomeView: UIView, AnyView  {
 
         DispatchQueue.main.async {
             let model = CyclePhaseTextFactory.create(phase: cycle)
+            let modelCard = DynamicCardPhaseFactory.create(phase: cycle)
             self.phaseCycleTitle.phaseTitle.text = model.name
             self.menstrualPhaseBehaviorsView.draw(model)
+            self.cardCycle.draw(modelCard)
         }
     }
     
     func monthChanged(to date: Date) {
         DispatchQueue.main.async {
             self.monthTag.formattText(day: date.formatDayToString().lowercased(), month: date.formatMonthToString().lowercased())
+        }
+    }
+    
+    func flowIndexChanged(to index: Int) {
+        DispatchQueue.main.async {
+            self.cardCycle.updateFlowIndex(index: index)
         }
     }
     

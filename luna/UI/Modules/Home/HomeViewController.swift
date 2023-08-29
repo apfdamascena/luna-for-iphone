@@ -18,9 +18,11 @@ class HomeViewController: UIViewController {
     private var disposeBag = DisposeBag()
     
     private var datasource: CalendarCollectionViewDataSource
+    private var cardPhaseDataSource: CardPhaseControlDataSource
     
-    init(datasource: CalendarCollectionViewDataSource){
+    init(datasource: CalendarCollectionViewDataSource, cardPhaseDataSource: CardPhaseControlDataSource){
         self.datasource = datasource
+        self.cardPhaseDataSource = cardPhaseDataSource
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -42,7 +44,9 @@ class HomeViewController: UIViewController {
         addCalendarEventObservable()
         addCyclePhaseEventObservable()
         addSettingsHandlerEvent()
+        cardCyclePhaseHandler()
         seeMoreButtonTouchTrigger()
+        addTapCardCycleEventObservable()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -109,18 +113,19 @@ class HomeViewController: UIViewController {
             .subscribe(onNext: { cycle in
                 self.homeView.phaseChanged(to: cycle)
                 self.homeView.showWarningNoMenstrualData(if: cycle)
+                self.cardPhaseDataSource.index.onNext(0)
         }).disposed(by: disposeBag)
+        
+        
     }
     
     func addSettingsHandlerEvent(){
-        
         homeView
             .warningCalendarAccess
             .settingsButton.rx.tap.bind {
                 self.presenter?.userOpenDeviceSettings()
             }.disposed(by: disposeBag)
     }
-
     
     func seeMoreButtonTouchTrigger() {
         
@@ -129,7 +134,31 @@ class HomeViewController: UIViewController {
             .tap.bind {
                 self.presenter?.showCyclePhaseReferencesSheet()
             }.disposed(by: disposeBag)
+        
     }
+    
+    func addTapCardCycleEventObservable() {
+        
+        let tapGesture = UITapGestureRecognizer()
+        homeView.cardCycle.addGestureRecognizer(tapGesture)
+        tapGesture.rx.event.bind(onNext: { _ in
+            guard let currentIndex = try? self.cardPhaseDataSource.index.value() else { return }
+            self.presenter?.userTappedCardPhase(at: currentIndex)
+        })
+        .disposed(by: disposeBag)
+    }
+    
+    func cardCyclePhaseHandler() {
+        Observable.combineLatest(datasource.cyclePhase, cardPhaseDataSource.index)
+            .asObservable()
+            .subscribe(onNext: { cycle, index in
+                let model = DynamicCardPhaseFactory.create(phase: cycle)
+                self.homeView.cardCycle.updateCardPhase(image: model.backgroundImage[index], text: model.titleText[index])
+                self.homeView.flowIndexChanged(to: index)
+            })
+            .disposed(by: disposeBag)
+    }
+    
 }
 
 
@@ -231,7 +260,14 @@ extension HomeViewController: PresenterToViewHomeProtocol {
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
     }
+    
+    func changeCurrentIndexCardPhase(at newIndex: Int) {
+        self.cardPhaseDataSource.index.onNext(newIndex)
+        
+    }
+    
 }
+
 
 
 

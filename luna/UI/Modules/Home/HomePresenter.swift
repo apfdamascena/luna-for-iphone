@@ -76,6 +76,12 @@ class HomePresenter: ViewToPresenterHomeProtocol {
     func moveTo(_ month: Date) {
         view?.moveTo(month)
     }
+    
+    func userTappedCardPhase(at index: Int) {
+        guard let newCardPhaseIndex = interactor?.nextIndexForCardPhase(at: index) else { return }
+        view?.changeCurrentIndexCardPhase(at: newCardPhaseIndex)
+    }
+    
 }
 
 extension HomePresenter: InteractorToPresenterHomeProtocol {

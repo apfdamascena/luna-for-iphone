@@ -75,4 +75,9 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
             UIApplication.shared.open(settingsUrl, completionHandler: { _ in })
         }
     }
+    
+    func nextIndexForCardPhase(at index: Int) -> Int {
+        return (index + 1) % 5
+    }
+    
 }
