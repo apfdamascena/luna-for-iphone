@@ -69,7 +69,6 @@ class HomeViewController: UIViewController {
     }
     
     private func addCollectionViewDataSource(){
-        
         datasource.data.bind(to: homeView.calendarCollectionView
             .rx.items(cellIdentifier: CalendarCollectionViewCell.IDENTIFIER,
                       cellType: CalendarCollectionViewCell.self)){ _, day, cell in
@@ -84,13 +83,10 @@ class HomeViewController: UIViewController {
             .subscribe(onNext: { centerCell, phase, month in
                 guard let menstruationPhase = phase,
                       let calendarMonth = month else { return }
-                
                 self.presenter?.moveTo(centerCell)
                 self.presenter?.moveTo(calendarMonth)
                 self.datasource.cyclePhase.onNext(menstruationPhase)
-
             }).disposed(by: disposeBag)
-        
         
         homeView.calendarCollectionView
             .rx.selectItemAtCalendar
@@ -107,7 +103,6 @@ class HomeViewController: UIViewController {
     }
     
     func addCyclePhaseEventObservable() {
-
         datasource.cyclePhase
             .asObservable()
             .subscribe(onNext: { cycle in
@@ -115,8 +110,6 @@ class HomeViewController: UIViewController {
                 self.homeView.showWarningNoMenstrualData(if: cycle)
                 self.cardPhaseDataSource.index.onNext(0)
         }).disposed(by: disposeBag)
-        
-        
     }
     
     func addSettingsHandlerEvent(){
@@ -128,17 +121,14 @@ class HomeViewController: UIViewController {
     }
     
     func seeMoreButtonTouchTrigger() {
-
         homeView.referencesButton
             .rx
             .tap.bind {
                 self.presenter?.showCyclePhaseReferencesSheet()
             }.disposed(by: disposeBag)
-
     }
     
     func addTapCardCycleEventObservable() {
-        
         let tapGesture = UITapGestureRecognizer()
         homeView.cardCycle.addGestureRecognizer(tapGesture)
         tapGesture.rx.event.bind(onNext: { _ in
