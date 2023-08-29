@@ -68,8 +68,9 @@ enum CyclePhase: String, CaseIterable {
         case .fertile:
             return Asset.ovulationSelected.image
         case .expectedMenstruation:
-            return Asset.previsionSelected.image
-            
+            return Asset.expectedMenstruationSelected.image
+        case .pms:
+            return Asset.pmsSelected.image
         default:
             return Asset.noneSelected.image
         }

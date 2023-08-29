@@ -26,7 +26,6 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 internal enum Asset {
   internal static let accentColor = ColorAsset(name: "AccentColor")
   internal static let menstruationSelected = ImageAsset(name: "MenstruationSelected")
-  internal static let pmsSelected = ImageAsset(name: "PmsSelected")
   internal static let arrowLeftIcon = ImageAsset(name: "arrow_left_icon")
   internal static let background = ImageAsset(name: "background")
   internal static let backgroundFolicule1 = ImageAsset(name: "background_folicule_1")
@@ -68,6 +67,7 @@ internal enum Asset {
   internal static let dot3 = ImageAsset(name: "dot3")
   internal static let dot4 = ImageAsset(name: "dot4")
   internal static let dotNone = ImageAsset(name: "dotNone")
+  internal static let expectedMenstruationSelected = ImageAsset(name: "expectedMenstruationSelected")
   internal static let flowCardIndex0 = ImageAsset(name: "flowCardIndex0")
   internal static let flowCardIndex1 = ImageAsset(name: "flowCardIndex1")
   internal static let flowCardIndex2 = ImageAsset(name: "flowCardIndex2")
@@ -91,6 +91,7 @@ internal enum Asset {
   internal static let otherCyclePhases = ImageAsset(name: "other_cycle_phases")
   internal static let ovulationSelected = ImageAsset(name: "ovulationSelected")
   internal static let ovulationCell = ImageAsset(name: "ovulation_cell")
+  internal static let pmsSelected = ImageAsset(name: "pmsSelected")
   internal static let pmsCell = ImageAsset(name: "pms_cell")
   internal static let previsionSelected = ImageAsset(name: "previsionSelected")
   internal static let primaryGray900 = ColorAsset(name: "primary_gray_900")
