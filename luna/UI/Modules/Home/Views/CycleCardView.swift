@@ -66,7 +66,6 @@ class CycleCardView: UIView, AnyView {
             $0.leading.trailing.equalToSuperview().inset(2.su)
             $0.top.equalToSuperview().offset(3.su)
         }
-
         title.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(2.su)
             $0.trailing.equalToSuperview().offset(-129)
@@ -76,14 +75,13 @@ class CycleCardView: UIView, AnyView {
         
     }
     
-    // precisa mudar pra nao lidar com o index aqui!
     func draw(_ model: DynamicCardPhaseViewModel) {
-        self.backgroundColor = UIColor(patternImage: model.backgroundImage[0])
+        self.insertSubview(UIImageView(image: model.backgroundImage[0]), at: 0)
         title.text = model.titleText[0]
     }
     
     func updateCardPhase(image: UIImage, text: String) {
-        self.backgroundColor = UIColor(patternImage: image)
+        self.insertSubview(UIImageView(image: image), at: 0)
         title.text = text
     }
     
