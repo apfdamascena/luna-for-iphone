@@ -41,8 +41,8 @@ class Notification {
         content.title = body.title
         content.body = body.body
         var components = Calendar.current.dateComponents([.year, .month, .day], from: date)
-        components.hour = 16
-        components.minute = 07 
+        components.hour = 12
+        components.minute = 10
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
         let request = UNNotificationRequest(identifier: "luna-notification",

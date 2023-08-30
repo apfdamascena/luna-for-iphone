@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D0B28C92A9FB15D0048722A /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28C82A9FB15D0048722A /* Notification.swift */; };
+		0D0B28CB2A9FD8A10048722A /* NotificationFilterCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28CA2A9FD8A10048722A /* NotificationFilterCommand.swift */; };
 		0D15FE942A7DB12100FD64E4 /* WarningNoMenstrualData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15FE932A7DB12100FD64E4 /* WarningNoMenstrualData.swift */; };
 		0D2FC76A2A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */; };
 		0D2FC76C2A6EF4810025D8B6 /* DataSourceEventObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */; };
@@ -181,6 +182,7 @@
 /* Begin PBXFileReference section */
 		08D186E62F83C3701D60F993 /* Pods-luna.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna.release.xcconfig"; path = "Target Support Files/Pods-luna/Pods-luna.release.xcconfig"; sourceTree = "<group>"; };
 		0D0B28C82A9FB15D0048722A /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		0D0B28CA2A9FD8A10048722A /* NotificationFilterCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFilterCommand.swift; sourceTree = "<group>"; };
 		0D15FE932A7DB12100FD64E4 /* WarningNoMenstrualData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningNoMenstrualData.swift; sourceTree = "<group>"; };
 		0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSource.swift; sourceTree = "<group>"; };
 		0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceEventObservable.swift; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				0D0B28C82A9FB15D0048722A /* Notification.swift */,
+				0D0B28CA2A9FD8A10048722A /* NotificationFilterCommand.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -1364,6 +1367,7 @@
 				BFD1A01B2A82E18600F420B5 /* CalendarAccess.swift in Sources */,
 				0D2FC7722A6EF59B0025D8B6 /* OnboardingViewFlow.swift in Sources */,
 				0DBADDE92A66045700A10FC3 /* UIViewController+Preview.swift in Sources */,
+				0D0B28CB2A9FD8A10048722A /* NotificationFilterCommand.swift in Sources */,
 				CA17ED982A71EDCE0051BF9D /* CyclePhaseViewModel.swift in Sources */,
 				BF4144312A93DC2F00517910 /* LunaCalendarManager+Check.swift in Sources */,
 				BFD533BC2A7166360063351E /* CalendarEventService.swift in Sources */,

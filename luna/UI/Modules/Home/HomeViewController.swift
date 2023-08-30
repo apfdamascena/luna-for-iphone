@@ -47,6 +47,7 @@ class HomeViewController: UIViewController {
         cardCyclePhaseHandler()
         seeMoreButtonTouchTrigger()
         addTapCardCycleEventObservable()
+        addNotificationEventObservable()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,6 +61,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        Notification.shared.requestAccess()
         homeView.calendarCollectionView.setMargin(with: self.view.frame.width)
         
         moveInitialCollection()
@@ -74,6 +76,18 @@ class HomeViewController: UIViewController {
                       cellType: CalendarCollectionViewCell.self)){ _, day, cell in
             cell.draw(day)
         }.disposed(by: disposeBag)
+    }
+    
+    private func addNotificationEventObservable(){
+        
+        datasource.data
+            .asObservable()
+            .subscribe(onNext: { amountDays in
+                let today =  amountDays[HomeCollection.COLLECTION_RANGE/2]
+                
+    
+            })
+            .disposed(by: disposeBag)
     }
     
     func addCalendarEventObservable() {
