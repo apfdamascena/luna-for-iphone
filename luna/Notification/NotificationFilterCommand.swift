@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import UserNotifications
 
 
 protocol NotificationFilterCommand {
     
-    func execute()
+    func execute() -> [UNMutableNotificationContent]
 }

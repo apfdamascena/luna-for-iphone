@@ -40,6 +40,7 @@ class Notification {
         let content = UNMutableNotificationContent()
         content.title = body.title
         content.body = body.body
+        
         var components = Calendar.current.dateComponents([.year, .month, .day], from: date)
         components.hour = 12
         components.minute = 10
