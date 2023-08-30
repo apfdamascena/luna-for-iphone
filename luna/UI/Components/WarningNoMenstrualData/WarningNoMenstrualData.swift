@@ -21,7 +21,7 @@ class WarningNoMenstrualData: UIView, AnyView {
         let model = LunaTextViewModel(size: 20,
                                       color: .black,
                                       weight: .semibold)
-        label.text = "Nesta dia, ainda não tínhamos os seus dados"
+        label.text = L10n.Constants.Content.Label.Home.noData
         label.draw(model)
         label.numberOfLines = 0
         return label
@@ -33,7 +33,7 @@ class WarningNoMenstrualData: UIView, AnyView {
                                       color: Asset.primaryGray900.color,
                                       weight: .regular)
         label.draw(model)
-        label.text = "Explore os dias futuros!"
+        label.text = L10n.Constants.Content.Label.Home.noDataDescripition
         return label
     }()
 

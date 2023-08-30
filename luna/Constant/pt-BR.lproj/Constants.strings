@@ -7,7 +7,7 @@
 */
 "constants.content.label.last_day_menstruation"="Quando foi o início da\nsua última menstruação?";
 "constants.content.label.menstruation_duration"="Quantos dias dura a\nsua menstruação?";
-"constants.content.label.cycle_duration"="Quanto tempo dura o\nseu ciclo menstrual?";
+"constants.content.label.cycle_duration"="Quantos dias dura o\nseu ciclo menstrual?";
 "constants.content.label.app_name"="Luna";
 "constants.content.label.landing_page_description"="Seu ciclo ao seu favor";
 
@@ -153,3 +153,6 @@
 "constants.content.label.home.card.folicular.five" = "Mantenha bons hábitos alimentares e de exercício";
 
 "constants.content.label.onboarding_landing_page"="Desperte seu próprio ritmo";
+
+"constants.content.label.home.no_data"="Nesta dia, ainda não tínhamos os seus dados";
+"constants.content.label.home.no_data_descripition" = "Explore os dias futuros!";

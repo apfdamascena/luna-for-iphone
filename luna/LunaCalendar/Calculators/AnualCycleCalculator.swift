@@ -24,7 +24,11 @@ class AnualCycleCalculator {
     
     func getPhases() -> [LunaEvent]{
         var cyclePhases: [LunaEvent] = []
-        Array(0...5).forEach { _ in
+        var months =  Array(0...5)
+        if isFirst {
+            months = Array(0...11)
+        }
+        months.forEach { _ in
             cyclePhases.append(contentsOf: [calculateExpectedMenstruationDay(),calculateFolicularDate(), calculateFertileDate(), calculateLutealDate(), calculatePMSDate()])
             monthsFromMenstruation+=1
         }
