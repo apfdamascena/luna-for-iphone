@@ -55,11 +55,17 @@ class NotificationPhaseFirstDay: NotificationFilterCommand {
             return phase == .fertile || phase == .folicular || phase == .luteal || phase == .pms
         }
         
-        
-        
-        
-        
-        return []
+        let notification = daysPhaseToNotify.map{ days in
+            let notification = UNMutableNotificationContent()
+            
+            let information = NotificationFactoryMessage.create(for: days.phase)
+            notification.title = information.title
+            notification.body = information.body
+            
+            return notification
+        }
+    
+        return notification
     }
 
 }
