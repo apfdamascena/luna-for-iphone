@@ -8,6 +8,13 @@
 import Foundation
 import UserNotifications
 
+struct NotificationBody {
+    
+    let title: String
+    let body: String
+    
+}
+
 
 class Notification {
     
@@ -28,5 +35,7 @@ class Notification {
     }
     
     
-    func addNotification()
+    func addNotification(at date: Date, with body: NotificationBody){
+    
+    }
 }
