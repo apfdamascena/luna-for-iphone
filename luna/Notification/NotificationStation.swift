@@ -18,16 +18,13 @@ class NotificationStation {
     }
     
     func addScheduleNotification(for cycleDays: [CyclePhaseViewModel]){
+        Notification.shared.removeAllNotifications()
+        let daysForNotify = notificationFilter.execute(for: cycleDays)
         
-        let daysForNotificate = notificationFilter.execute(for: cycleDays)
-        
-        daysForNotificate.forEach{ p, d in
-            print("xereta \(p) \(d)")
+        daysForNotify.forEach { notification, date in
+            Notification.shared.addNotification(at: date,
+                                                with: notification)
+            
         }
     }
-    
-    func removeAllScheduleNotification(){
-        Notification.shared.removeAllNotifications()
-    }
-    
 }
