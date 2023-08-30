@@ -197,19 +197,7 @@ class CalendarCollectionViewCell: UICollectionViewCell,
     }
     
     func getDate(date: Date) -> String {
-        if (Locale.current.language.languageCode?.identifier != "pt") {
-            let df = DateFormatter()
-            df.dateStyle = DateFormatter.Style.medium
-            df.timeStyle = DateFormatter.Style.medium
-            let date = (df.string(from: date))
-            return String(String(date.prefix(6)).suffix(2))
-        } else {
-            let df = DateFormatter()
-            df.dateStyle = DateFormatter.Style.medium
-            df.timeStyle = DateFormatter.Style.medium
-            let date = (df.string(from: date))
-            
-            return String(date.prefix(2))
-        }
+        return date.formatDayToString()
+       
     }
 }
