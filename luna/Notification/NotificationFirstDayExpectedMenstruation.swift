@@ -12,9 +12,23 @@ import UserNotifications
 class NotificationFirstDayExpectedMenstruation: NotificationFilterCommand {
     
     func execute(for cycleDays: [CyclePhaseViewModel]) -> [UNMutableNotificationContent] {
-        return []
+        
+        let firstExpectedMenstruations = cycleDays.filter { cycleDay in
+            return cycleDay.phase == .expectedMenstruation
+        }
+        
+        let firstExpectedMenstruationNotifications = firstExpectedMenstruations.map{ expected in
+    
+            let notification = UNMutableNotificationContent()
+            notification.title = "Ding Dong, cheguei 🩸"
+            notification.body = "Você entrará na fase menstrual nos próximos dias. Registre em Luna!"
+            return notification
+        }
+        
+        return firstExpectedMenstruationNotifications
         
     }
-    
-    
 }
+
+// eu tou em uma outra fase e meu proximo primeiro dia de menstruação vem logo em seguida.
+// eu estou na menstruação e qual é o meu proximo dia de menstruação esperada?

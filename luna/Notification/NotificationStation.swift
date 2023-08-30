@@ -19,7 +19,8 @@ class NotificationStation {
     
     func addScheduleNotification(for cycleDays: [CyclePhaseViewModel]){
         
-//        let daysForNotificate = notificationFilter.execute()
+        let daysForNotificate = notificationFilter.execute(for: cycleDays)
+        
         
     }
     

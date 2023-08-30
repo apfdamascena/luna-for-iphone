@@ -11,19 +11,19 @@ import UserNotifications
 
 class NotificationFilter: NotificationFilterCommand {
     
-    private let commands: [NotificationFilterCommand] = [ NotificationPhaseFirstDay(),
-                                                          NotificationFirstDayExpectedMenstruation() ]
-    
+    private let commands: [NotificationFilterCommand] = [ NotificationFirstDayExpectedMenstruation(),
+                                                          NotificationPhaseFirstDay()]
+                                                          
     func execute(for cycleDays: [CyclePhaseViewModel]) -> [UNMutableNotificationContent] {
         
         var schedules: [UNMutableNotificationContent] = []
         
         commands.forEach{ command in
-//            let schedule = command.execute()
-//            schedules.append(contentsOf: schedule)
+            let schedule = command.execute(for: cycleDays)
+            schedules.append(contentsOf: schedule)
         }
           
-        return []
+        return schedules
     }
     
     
