@@ -22,7 +22,7 @@ class NotificationFilter: NotificationFilterCommand {
             let schedule = command.execute(for: cycleDays)
             schedules.append(contentsOf: schedule)
         }
-          
+                  
         return schedules
     }
     
