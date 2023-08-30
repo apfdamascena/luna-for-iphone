@@ -17,8 +17,14 @@ class NotificationStation {
         self.notificationFilter = NotificationFilter()
     }
     
-    func addScheduleNotification(on data: [CyclePhaseViewModel]){
+    func addScheduleNotification(for cycleDays: [CyclePhaseViewModel]){
         
+//        let daysForNotificate = notificationFilter.execute()
+        
+    }
+    
+    func removeAllScheduleNotification(){
+        Notification.shared.removeAllNotifications()
     }
     
 }

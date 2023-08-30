@@ -13,13 +13,14 @@ class NotificationFilter: NotificationFilterCommand {
     
     private let commands: [NotificationFilterCommand] = [ NotificationPhaseFirstDay(),
                                                           NotificationFirstDayExpectedMenstruation() ]
-    func execute() -> [UNMutableNotificationContent] {
+    
+    func execute(for cycleDays: [CyclePhaseViewModel]) -> [UNMutableNotificationContent] {
         
         var schedules: [UNMutableNotificationContent] = []
         
         commands.forEach{ command in
-            let schedule = command.execute()
-            schedules.append(contentsOf: schedule)
+//            let schedule = command.execute()
+//            schedules.append(contentsOf: schedule)
         }
           
         return []

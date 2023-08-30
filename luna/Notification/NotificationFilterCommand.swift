@@ -11,5 +11,5 @@ import UserNotifications
 
 protocol NotificationFilterCommand {
     
-    func execute() -> [UNMutableNotificationContent]
+    func execute(for cycleDays: [CyclePhaseViewModel]) -> [UNMutableNotificationContent]
 }
