@@ -36,6 +36,14 @@ class Notification {
     
     
     func addNotification(at date: Date, with body: NotificationBody){
-    
+        let content = UNMutableNotificationContent()
+        content.title = body.title
+        content.body = body.body
+        let components = Calendar.current.dateComponents([.year, .month, .day], from: date)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+        let request = UNNotificationRequest(identifier: "luna-notification",
+                                            content: content,
+                                            trigger: trigger)
+        center.add(request)
     }
 }
