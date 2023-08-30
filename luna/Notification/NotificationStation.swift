@@ -24,7 +24,16 @@ class NotificationStation {
         daysForNotify.forEach { notification, date in
             Notification.shared.addNotification(at: date,
                                                 with: notification)
-            
         }
+        
+        
+        
+//        Notification.shared.center.getPendingNotificationRequests(completionHandler: { requests in
+//            for request in requests {
+//                print("request \(request)")
+//            }
+//        })
+        
+    
     }
 }
