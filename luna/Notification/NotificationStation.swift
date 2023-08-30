@@ -22,7 +22,6 @@ class NotificationStation {
         let daysForNotificate = notificationFilter.execute(for: cycleDays)
         
         daysForNotificate.forEach{ p in
-            print("xereta \(p.title)")
         }
     }
     

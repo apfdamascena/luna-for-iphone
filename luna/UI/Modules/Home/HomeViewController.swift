@@ -21,6 +21,8 @@ class HomeViewController: UIViewController {
     private var datasource: CalendarCollectionViewDataSource
     private var cardPhaseDataSource: CardPhaseControlDataSource
     
+    private let notificationStation = NotificationStation()
+    
     init(datasource: CalendarCollectionViewDataSource,
          cardPhaseDataSource: CardPhaseControlDataSource){
         self.datasource = datasource
@@ -86,7 +88,7 @@ class HomeViewController: UIViewController {
             .asObservable()
             .subscribe(onNext: { cycleDays in
                 let cycleDaysFromToday = cycleDays.filter{ $0.day > Date() }
-                
+                self.notificationStation.addScheduleNotification(for: cycleDaysFromToday)
             })
             .disposed(by: disposeBag)
     }
