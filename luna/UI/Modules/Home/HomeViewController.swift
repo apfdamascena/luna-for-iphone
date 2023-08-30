@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+
 class HomeViewController: UIViewController {
     
     var presenter: ViewToPresenterHomeProtocol?
@@ -20,7 +21,8 @@ class HomeViewController: UIViewController {
     private var datasource: CalendarCollectionViewDataSource
     private var cardPhaseDataSource: CardPhaseControlDataSource
     
-    init(datasource: CalendarCollectionViewDataSource, cardPhaseDataSource: CardPhaseControlDataSource){
+    init(datasource: CalendarCollectionViewDataSource,
+         cardPhaseDataSource: CardPhaseControlDataSource){
         self.datasource = datasource
         self.cardPhaseDataSource = cardPhaseDataSource
         super.init(nibName: nil, bundle: nil)
@@ -82,10 +84,9 @@ class HomeViewController: UIViewController {
         
         datasource.data
             .asObservable()
-            .subscribe(onNext: { amountDays in
-                let today =  amountDays[HomeCollection.COLLECTION_RANGE/2]
+            .subscribe(onNext: { cycleDays in
+                let cycleDaysFromToday = cycleDays.filter{ $0.day > Date() }
                 
-    
             })
             .disposed(by: disposeBag)
     }

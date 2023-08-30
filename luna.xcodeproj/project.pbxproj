@@ -12,6 +12,7 @@
 		0D0B28CD2A9FD90C0048722A /* NotificationPhaseFirstDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28CC2A9FD90C0048722A /* NotificationPhaseFirstDay.swift */; };
 		0D0B28CF2A9FD9FA0048722A /* NotificationFirstDayExpectedMenstruation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28CE2A9FD9FA0048722A /* NotificationFirstDayExpectedMenstruation.swift */; };
 		0D0B28D12A9FDBB60048722A /* NotificationFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28D02A9FDBB60048722A /* NotificationFilter.swift */; };
+		0D0B28D32A9FF8400048722A /* NotificationStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28D22A9FF8400048722A /* NotificationStation.swift */; };
 		0D15FE942A7DB12100FD64E4 /* WarningNoMenstrualData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15FE932A7DB12100FD64E4 /* WarningNoMenstrualData.swift */; };
 		0D2FC76A2A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */; };
 		0D2FC76C2A6EF4810025D8B6 /* DataSourceEventObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */; };
@@ -189,6 +190,7 @@
 		0D0B28CC2A9FD90C0048722A /* NotificationPhaseFirstDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPhaseFirstDay.swift; sourceTree = "<group>"; };
 		0D0B28CE2A9FD9FA0048722A /* NotificationFirstDayExpectedMenstruation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFirstDayExpectedMenstruation.swift; sourceTree = "<group>"; };
 		0D0B28D02A9FDBB60048722A /* NotificationFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFilter.swift; sourceTree = "<group>"; };
+		0D0B28D22A9FF8400048722A /* NotificationStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationStation.swift; sourceTree = "<group>"; };
 		0D15FE932A7DB12100FD64E4 /* WarningNoMenstrualData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningNoMenstrualData.swift; sourceTree = "<group>"; };
 		0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSource.swift; sourceTree = "<group>"; };
 		0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceEventObservable.swift; sourceTree = "<group>"; };
@@ -387,6 +389,7 @@
 				0D0B28CC2A9FD90C0048722A /* NotificationPhaseFirstDay.swift */,
 				0D0B28CE2A9FD9FA0048722A /* NotificationFirstDayExpectedMenstruation.swift */,
 				0D0B28D02A9FDBB60048722A /* NotificationFilter.swift */,
+				0D0B28D22A9FF8400048722A /* NotificationStation.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -1419,6 +1422,7 @@
 				0DDA612A2A69CEC600CA15C6 /* MenstruationDurationViewController.swift in Sources */,
 				CA17ED962A71ED750051BF9D /* CyclePhaseFocus.swift in Sources */,
 				0DA56C552A6B33AC00E056C1 /* OnboardingButtonView.swift in Sources */,
+				0D0B28D32A9FF8400048722A /* NotificationStation.swift in Sources */,
 				0D4049D92A7048000058669B /* OnboardingPageControlDelegateImpl.swift in Sources */,
 				0D6794212A735C1B00382142 /* HomePresenter.swift in Sources */,
 				BFD533B62A71567A0063351E /* CalendarCreator.swift in Sources */,

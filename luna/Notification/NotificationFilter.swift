@@ -18,10 +18,8 @@ class NotificationFilter: NotificationFilterCommand {
         var schedules: [UNMutableNotificationContent] = []
         
         commands.forEach{ command in
-            
             let schedule = command.execute()
             schedules.append(contentsOf: schedule)
-            
         }
           
         return []
