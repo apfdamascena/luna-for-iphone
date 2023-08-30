@@ -8,13 +8,6 @@
 import Foundation
 import UserNotifications
 
-struct NotificationBody {
-    
-    let title: String
-    let body: String
-    
-}
-
 
 class Notification {
     
