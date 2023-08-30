@@ -35,7 +35,7 @@ class Notification {
         components.minute = 10
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
-        let request = UNNotificationRequest(identifier: "luna-notification",
+        let request = UNNotificationRequest(identifier: UUID().uuidString,
                                             content: notification,
                                             trigger: trigger)
         center.add(request)
