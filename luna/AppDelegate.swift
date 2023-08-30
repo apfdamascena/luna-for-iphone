@@ -7,7 +7,7 @@
 
 import UIKit
 import CoreData
-
+import UserNotifications
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,6 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         resetStateIfUITesting()
         Thread.sleep(forTimeInterval: 0.5)
         // Override point for customization after application launch.
+        
+        Notification.shared.requestAccess()
+        Notification.shared.addNotification(at: Date(),
+                                            with: NotificationBody(title: "Caganeira",
+                                                                               body: "Para de encher o saco, caganeira"))
+        
+        
+        Notification.shared.center.getPendingNotificationRequests{  requests in
+            for request in requests {
+                print("PENDING \(request)")
+            }
+
+        }
+        
+//        Notification.shared.removeAllNotifications()
         return true
     }
     
