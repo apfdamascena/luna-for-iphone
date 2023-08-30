@@ -40,11 +40,11 @@ class AnualCycleCalculator {
     }
     
     private func calculateFolicularDate() -> LunaEvent {
-        return calculatePhaseDate(CyclePhase.folicular, cycleInformations.averageMenstruationDuration, 9)
+        return calculatePhaseDate(CyclePhase.folicular, cycleInformations.averageMenstruationDuration, 10)
     }
     
     private func calculateFertileDate() -> LunaEvent {
-        return calculatePhaseDate(CyclePhase.fertile, 10, 16)
+        return calculatePhaseDate(CyclePhase.fertile, 11, 16)
     }
     
     private func calculateLutealDate() -> LunaEvent {

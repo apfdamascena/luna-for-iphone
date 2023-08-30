@@ -206,7 +206,6 @@ class HomeView: UIView, AnyView  {
     }
     
     func phaseChanged(to cycle: CyclePhase) {
-
         DispatchQueue.main.async {
             let model = CyclePhaseTextFactory.create(phase: cycle)
             let modelCard = DynamicCardPhaseFactory.create(phase: cycle)
