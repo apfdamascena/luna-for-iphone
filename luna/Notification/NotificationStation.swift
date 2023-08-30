@@ -21,7 +21,8 @@ class NotificationStation {
         
         let daysForNotificate = notificationFilter.execute(for: cycleDays)
         
-        daysForNotificate.forEach{ p in
+        daysForNotificate.forEach{ p, d in
+            print("xereta \(p) \(d)")
         }
     }
     

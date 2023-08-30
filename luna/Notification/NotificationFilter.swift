@@ -14,7 +14,7 @@ class NotificationFilter: NotificationFilterCommand {
     private let commands: [NotificationFilterCommand] = [ NotificationFirstDayExpectedMenstruation(),
                                                           NotificationPhaseFirstDay()]
                                                           
-    func execute(for cycleDays: [CyclePhaseViewModel]) -> [(UNMutableNotificationContent, Date)] {
+    func execute(for cycleDays: [CyclePhaseViewModel]) -> NotificationFiltered {
         
         var schedules: [(UNMutableNotificationContent, Date)] = []
         

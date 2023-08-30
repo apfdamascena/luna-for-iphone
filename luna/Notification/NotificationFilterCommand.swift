@@ -9,7 +9,9 @@ import Foundation
 import UserNotifications
 
 
+typealias NotificationFiltered = [(UNMutableNotificationContent, Date)]
+
 protocol NotificationFilterCommand {
     
-    func execute(for cycleDays: [CyclePhaseViewModel]) -> [(UNMutableNotificationContent, Date)]
+    func execute(for cycleDays: [CyclePhaseViewModel]) -> NotificationFiltered
 }

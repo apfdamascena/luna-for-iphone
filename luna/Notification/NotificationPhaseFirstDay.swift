@@ -11,7 +11,7 @@ import UserNotifications
 
 class NotificationPhaseFirstDay: NotificationFilterCommand {
     
-    func execute(for cycleDays: [CyclePhaseViewModel]) -> [(UNMutableNotificationContent, Date)] {
+    func execute(for cycleDays: [CyclePhaseViewModel]) -> NotificationFiltered {
         
         var daysToNotify: [CyclePhaseViewModel] = []
         

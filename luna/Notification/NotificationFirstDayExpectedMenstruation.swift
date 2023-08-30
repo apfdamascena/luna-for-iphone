@@ -11,7 +11,7 @@ import UserNotifications
 
 class NotificationFirstDayExpectedMenstruation: NotificationFilterCommand {
     
-    func execute(for cycleDays: [CyclePhaseViewModel]) -> [(UNMutableNotificationContent, Date)] {
+    func execute(for cycleDays: [CyclePhaseViewModel]) -> NotificationFiltered {
         
         let firstExpectedMenstruations = cycleDays.filter { cycleDay in
             return cycleDay.phase == .expectedMenstruation
