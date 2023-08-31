@@ -24,14 +24,7 @@ class NotificationPhaseFirstDay: NotificationFilterCommand {
             }
         }
         
-        
-        let daysPhaseToNotify = daysToNotify.filter { days in
-            let phase = days.phase
-            
-            return phase == .fertile || phase == .folicular || phase == .luteal || phase == .pms
-        }
-        
-        let notification = daysPhaseToNotify.map{ days in
+        let notification = daysToNotify.map{ days in
             let notification = UNMutableNotificationContent()
             
             let information = NotificationFactoryMessage.create(for: days.phase)
