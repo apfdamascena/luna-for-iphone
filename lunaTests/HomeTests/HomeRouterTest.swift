@@ -11,33 +11,30 @@ import XCTest
 
 final class HomeRouterTest: XCTestCase {
     
-    func testSeila(){
+    func testPushReferenceSheetWhenUserTap(){
         let (sut, view) = makeSUT()
-        
         sut.pushReferencesSheet(on: view)
-        XCTAssertTrue(sut.isCalled)
         
+        XCTAssertTrue(sut.isPushReferencesSheetCalled)
+        XCTAssertTrue(view.navigationController?.presentedViewController is ReferencesViewController?)
     }
 }
 
-protocol Home
+typealias HomeRouterSut = PresenterToRouterHomeProtocol & HomeRouterSpy
+
 
 extension HomeRouterTest {
     
     typealias SutAndDoubles = (
-        sut: HomeRouterMock,
-        doubles: PresenterToViewHomeProtocol & HomeViewControllerMock
+        sut: HomeRouterSut,
+        doubles: HomeViewControllerMock
     )
     
-    
     func makeSUT() -> SutAndDoubles {
-        
         let module = HomeRouterMock.createModule()
-
-        let view = module as! HomeViewControllerMock & PresenterToViewHomeProtocol
-        let presenter = view.presenter?.router as! HomeRouterMock
-
-        return (presenter, view)
+        let view = module as! HomeViewControllerMock
+        let router = view.presenter?.router as! HomeRouterMock
+        return (router, view)
     }
 }
 
@@ -192,10 +189,8 @@ class HomeRouterMock: PresenterToRouterHomeProtocol, HomeRouterSpy {
     func pushReferencesSheet(on view: luna.PresenterToViewHomeProtocol) {
         isPushReferencesSheetCalled = true
         guard let controller = view as? HomeViewControllerMock else { return }
-        let references = ReferencesShee
-        controller.navigationController?.pushViewController(ReferencesS, animated: <#T##Bool#>)
-
-        
+        let references = ReferencesViewController()
+        controller.navigationController?.present(references, animated: true)
     }
     
     
