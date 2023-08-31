@@ -31,8 +31,8 @@ class Notification {
     func addNotification(at date: Date, with notification: UNMutableNotificationContent){
     
         var components = Calendar.current.dateComponents([.year, .month, .day], from: date)
-        components.hour = 12
-        components.minute = 10
+        components.hour = 15
+        components.minute = 40
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
         let request = UNNotificationRequest(identifier: UUID().uuidString,

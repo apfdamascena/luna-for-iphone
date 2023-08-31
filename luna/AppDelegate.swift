@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Thread.sleep(forTimeInterval: 0.5)
         // Override point for customization after application launch.
         
+        let content = UNMutableNotificationContent()
+        content.title = "Alana é baixa"
+        content.body = "Para crescer, tome calcitran b12"
+        
+        Notification.shared.addNotification(at: Date(), with: content)
+        
         return true
     }
     
