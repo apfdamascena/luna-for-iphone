@@ -10,7 +10,6 @@
 		0D0B28C92A9FB15D0048722A /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28C82A9FB15D0048722A /* Notification.swift */; };
 		0D0B28CB2A9FD8A10048722A /* NotificationFilterCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28CA2A9FD8A10048722A /* NotificationFilterCommand.swift */; };
 		0D0B28CD2A9FD90C0048722A /* NotificationPhaseFirstDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28CC2A9FD90C0048722A /* NotificationPhaseFirstDay.swift */; };
-		0D0B28CF2A9FD9FA0048722A /* NotificationFirstDayExpectedMenstruation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28CE2A9FD9FA0048722A /* NotificationFirstDayExpectedMenstruation.swift */; };
 		0D0B28D12A9FDBB60048722A /* NotificationFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28D02A9FDBB60048722A /* NotificationFilter.swift */; };
 		0D0B28D32A9FF8400048722A /* NotificationStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28D22A9FF8400048722A /* NotificationStation.swift */; };
 		0D0B28D52AA004500048722A /* NotificationFactoryMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28D42AA004500048722A /* NotificationFactoryMessage.swift */; };
@@ -190,7 +189,6 @@
 		0D0B28C82A9FB15D0048722A /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		0D0B28CA2A9FD8A10048722A /* NotificationFilterCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFilterCommand.swift; sourceTree = "<group>"; };
 		0D0B28CC2A9FD90C0048722A /* NotificationPhaseFirstDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPhaseFirstDay.swift; sourceTree = "<group>"; };
-		0D0B28CE2A9FD9FA0048722A /* NotificationFirstDayExpectedMenstruation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFirstDayExpectedMenstruation.swift; sourceTree = "<group>"; };
 		0D0B28D02A9FDBB60048722A /* NotificationFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFilter.swift; sourceTree = "<group>"; };
 		0D0B28D22A9FF8400048722A /* NotificationStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationStation.swift; sourceTree = "<group>"; };
 		0D0B28D42AA004500048722A /* NotificationFactoryMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFactoryMessage.swift; sourceTree = "<group>"; };
@@ -391,7 +389,6 @@
 				0D0B28C82A9FB15D0048722A /* Notification.swift */,
 				0D0B28CA2A9FD8A10048722A /* NotificationFilterCommand.swift */,
 				0D0B28CC2A9FD90C0048722A /* NotificationPhaseFirstDay.swift */,
-				0D0B28CE2A9FD9FA0048722A /* NotificationFirstDayExpectedMenstruation.swift */,
 				0D0B28D02A9FDBB60048722A /* NotificationFilter.swift */,
 				0D0B28D22A9FF8400048722A /* NotificationStation.swift */,
 				0D0B28D42AA004500048722A /* NotificationFactoryMessage.swift */,
@@ -1518,7 +1515,6 @@
 				A46C054D2A74641E0071ABCE /* LunaButtonBack.swift in Sources */,
 				A48B7EDA2A7ACBCD00CCC4C0 /* CycleDetailsCard.swift in Sources */,
 				CA557BCE2A6B1743001DF2BB /* LandingPageRouter.swift in Sources */,
-				0D0B28CF2A9FD9FA0048722A /* NotificationFirstDayExpectedMenstruation.swift in Sources */,
 				0D6794192A731B5C00382142 /* UserCycleInformation.swift in Sources */,
 				A46C054F2A74641E0071ABCE /* LunaButtonStyle.swift in Sources */,
 				A46C05132A6EFE150071ABCE /* CalendarRouter.swift in Sources */,

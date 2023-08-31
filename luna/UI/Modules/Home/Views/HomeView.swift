@@ -229,4 +229,3 @@ class HomeView: UIView, AnyView  {
     
 }
 
-
