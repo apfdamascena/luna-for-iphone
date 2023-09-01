@@ -12,7 +12,6 @@ import UIKit
 
 class HomeRouterMock: PresenterToRouterHomeProtocol, HomeRouterSpy {
 
-        
     var isPushReferencesSheetCalled: Bool = false
     
     func pushReferencesSheet(on view: luna.PresenterToViewHomeProtocol) {

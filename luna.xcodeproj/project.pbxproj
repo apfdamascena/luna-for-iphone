@@ -11,6 +11,11 @@
 		0D0B291A2AA151490048722A /* HomeRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B29192AA151490048722A /* HomeRouterMock.swift */; };
 		0D0B291C2AA151C10048722A /* HomeRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B291B2AA151C10048722A /* HomeRouterSpy.swift */; };
 		0D0B291E2AA23C920048722A /* HomePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B291D2AA23C920048722A /* HomePresenterTest.swift */; };
+		0D0B29202AA263C80048722A /* HomeViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B291F2AA263C80048722A /* HomeViewControllerMock.swift */; };
+		0D0B29222AA264220048722A /* HomeViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B29212AA264220048722A /* HomeViewControllerSpy.swift */; };
+		0D0B29242AA264540048722A /* HomePresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B29232AA264540048722A /* HomePresenterMock.swift */; };
+		0D0B29262AA264A70048722A /* HomePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B29252AA264A70048722A /* HomePresenterSpy.swift */; };
+		0D0B29282AA265F50048722A /* HomeInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B29272AA265F50048722A /* HomeInteractorMock.swift */; };
 		0D15FE942A7DB12100FD64E4 /* WarningNoMenstrualData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15FE932A7DB12100FD64E4 /* WarningNoMenstrualData.swift */; };
 		0D2FC76A2A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */; };
 		0D2FC76C2A6EF4810025D8B6 /* DataSourceEventObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */; };
@@ -187,6 +192,11 @@
 		0D0B29192AA151490048722A /* HomeRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterMock.swift; sourceTree = "<group>"; };
 		0D0B291B2AA151C10048722A /* HomeRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterSpy.swift; sourceTree = "<group>"; };
 		0D0B291D2AA23C920048722A /* HomePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTest.swift; sourceTree = "<group>"; };
+		0D0B291F2AA263C80048722A /* HomeViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerMock.swift; sourceTree = "<group>"; };
+		0D0B29212AA264220048722A /* HomeViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerSpy.swift; sourceTree = "<group>"; };
+		0D0B29232AA264540048722A /* HomePresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterMock.swift; sourceTree = "<group>"; };
+		0D0B29252AA264A70048722A /* HomePresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterSpy.swift; sourceTree = "<group>"; };
+		0D0B29272AA265F50048722A /* HomeInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorMock.swift; sourceTree = "<group>"; };
 		0D15FE932A7DB12100FD64E4 /* WarningNoMenstrualData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningNoMenstrualData.swift; sourceTree = "<group>"; };
 		0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSource.swift; sourceTree = "<group>"; };
 		0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceEventObservable.swift; sourceTree = "<group>"; };
@@ -380,20 +390,25 @@
 		0D0B29152AA11EA80048722A /* HomeTests */ = {
 			isa = PBXGroup;
 			children = (
-				0D0B29182AA151380048722A /* Mocks */,
+				0D0B29182AA151380048722A /* Doubles */,
 				0D0B29162AA11EC70048722A /* HomeRouterTest.swift */,
 				0D0B291D2AA23C920048722A /* HomePresenterTest.swift */,
 			);
 			path = HomeTests;
 			sourceTree = "<group>";
 		};
-		0D0B29182AA151380048722A /* Mocks */ = {
+		0D0B29182AA151380048722A /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
 				0D0B29192AA151490048722A /* HomeRouterMock.swift */,
 				0D0B291B2AA151C10048722A /* HomeRouterSpy.swift */,
+				0D0B291F2AA263C80048722A /* HomeViewControllerMock.swift */,
+				0D0B29212AA264220048722A /* HomeViewControllerSpy.swift */,
+				0D0B29232AA264540048722A /* HomePresenterMock.swift */,
+				0D0B29252AA264A70048722A /* HomePresenterSpy.swift */,
+				0D0B29272AA265F50048722A /* HomeInteractorMock.swift */,
 			);
-			path = Mocks;
+			path = Doubles;
 			sourceTree = "<group>";
 		};
 		0D15FE922A7DB0B600FD64E4 /* WarningNoMenstrualData */ = {
@@ -1523,8 +1538,13 @@
 				0D0B291C2AA151C10048722A /* HomeRouterSpy.swift in Sources */,
 				0D0B29172AA11EC70048722A /* HomeRouterTest.swift in Sources */,
 				0D0B291A2AA151490048722A /* HomeRouterMock.swift in Sources */,
+				0D0B29282AA265F50048722A /* HomeInteractorMock.swift in Sources */,
 				0D0B291E2AA23C920048722A /* HomePresenterTest.swift in Sources */,
+				0D0B29222AA264220048722A /* HomeViewControllerSpy.swift in Sources */,
+				0D0B29262AA264A70048722A /* HomePresenterSpy.swift in Sources */,
+				0D0B29242AA264540048722A /* HomePresenterMock.swift in Sources */,
 				0DBADDB32A65FDF300A10FC3 /* lunaTests.swift in Sources */,
+				0D0B29202AA263C80048722A /* HomeViewControllerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
