@@ -10,12 +10,16 @@ import Foundation
 import UIKit
 
 class HomeInteractor: PresenterToInteractorHomeProtocol {
+    var lunaCalendarManager: CalendarManager
+    
 
     var presenter: InteractorToPresenterHomeProtocol?
     
-    private var lunaCalendarManager = LunaCalendarManager()
-    
     private var calendarPermission: CalendarAccess = .unauthorized
+    
+    init(){
+        self.lunaCalendarManager = LunaCalendarManager()
+    }
     
 
     func checkIfUserGivePermission(completion: @escaping PermissionResponse) {

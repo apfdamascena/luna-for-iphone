@@ -17,7 +17,9 @@ class HomePresenterMock: ViewToPresenterHomeProtocol, HomePresenterSpy {
     
     var userTappedCardPhaseCalled: Bool = false
     
+    
     func checkCalendarPermission() {
+        
     }
     
     func loadUserCalendar() {
