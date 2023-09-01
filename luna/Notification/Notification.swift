@@ -18,7 +18,7 @@ class Notification {
     
     
     func requestAccess(){
-        center.requestAuthorization(options: [.alert, .sound ]){ granted, error in
+        center.requestAuthorization(options: [.alert, .badge, .provisional, .sound ]){ granted, error in
             if granted {
                 print("permission ok")
             } else {
@@ -31,9 +31,10 @@ class Notification {
     func addNotification(at date: Date, with notification: UNMutableNotificationContent){
     
         var components = Calendar.current.dateComponents([.year, .month, .day], from: date)
-        components.hour = 15
-        components.minute = 40
-        
+        components.hour = 17
+        components.minute = 27
+    
+
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
         let request = UNNotificationRequest(identifier: UUID().uuidString,
                                             content: notification,

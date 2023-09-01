@@ -9,19 +9,21 @@ import UIKit
 import CoreData
 import UserNotifications
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+    
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions)
+        -> Void) {
+            completionHandler([.banner, .list, .badge, .sound])
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        UNUserNotificationCenter.current().delegate = self
         resetStateIfUITesting()
         Thread.sleep(forTimeInterval: 0.5)
         // Override point for customization after application launch.
-        
-        let content = UNMutableNotificationContent()
-        content.title = "Alana é baixa"
-        content.body = "Para crescer, tome calcitran b12"
-        
-        Notification.shared.addNotification(at: Date(), with: content)
-        
         return true
     }
     

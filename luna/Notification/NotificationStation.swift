@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UserNotifications
 
 
 class NotificationStation {
@@ -23,7 +24,12 @@ class NotificationStation {
         
         let (content, _) = daysForNotify[0]
         
-//        Notification.shared.addNotification(at: Date(), with: content)
+        let content2 = UNMutableNotificationContent()
+        content2.title = "Cheguei, mores  💅"
+        content2.body = "Fase ovulatória à vista! A boa é evitar estresses hoje, hein? Saiba mais"
+        
+        Notification.shared.addNotification(at: Date(), with: content2)
+        
         
     
         

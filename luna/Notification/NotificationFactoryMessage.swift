@@ -14,7 +14,7 @@ class NotificationFactoryMessage {
         switch phase {
         case .fertile:
             return NotificationBody(title: "Cheguei, mores  💅" ,
-                                    body: "Fase ovulatória à vista! A boa é evitar estresses hoje, hein? Saiba mais ")
+                                    body: "Fase ovulatória à vista! A boa é evitar estresses hoje, hein? Saiba mais")
         case .folicular:
             return NotificationBody(title: "Chegou a famosa ⚡️", body: "Ela mesmo, a Fase Folicular! Energia pode estar em alta hoje. Veja como aproveitar!")
             
