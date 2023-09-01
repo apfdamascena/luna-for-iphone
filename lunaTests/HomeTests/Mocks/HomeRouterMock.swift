@@ -11,11 +11,14 @@ import UIKit
 
 
 class HomeRouterMock: PresenterToRouterHomeProtocol, HomeRouterSpy {
-    
+
+        
+    var pushReferencesArgs: PresenterToViewHomeProtocol?
     var isPushReferencesSheetCalled: Bool = false
     
     func pushReferencesSheet(on view: luna.PresenterToViewHomeProtocol) {
         isPushReferencesSheetCalled = true
+        pushReferencesArgs = view
         guard let controller = view as? HomeViewControllerMock else { return }
         let references = ReferencesViewController()
         controller.navigationController?.present(references, animated: true)

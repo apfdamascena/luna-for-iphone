@@ -14,15 +14,15 @@ final class HomeRouterTest: XCTestCase {
     func testPushReferenceSheetWhenUserTap(){
         let (sut, view) = makeSUT()
         sut.pushReferencesSheet(on: view)
-        
         XCTAssertTrue(sut.isPushReferencesSheetCalled)
         XCTAssertTrue(view.navigationController?.presentedViewController is ReferencesViewController?)
     }
 }
 
-typealias HomeRouterSut = PresenterToRouterHomeProtocol & HomeRouterSpy
 
 extension HomeRouterTest {
+    
+    typealias HomeRouterSut = PresenterToRouterHomeProtocol & HomeRouterSpy
     
     typealias SutAndDoubles = (
         sut: HomeRouterSut,
@@ -38,9 +38,25 @@ extension HomeRouterTest {
 }
 
 
-class HomeViewControllerMock: UIViewController, PresenterToViewHomeProtocol {
+
+protocol HomeViewControllerSpy {
+    
+    var shouldChangeCardPhase: Bool { get }
+    var cardPhaseFake: Int { get }
+}
+
+
+class HomeViewControllerMock: UIViewController, HomeViewControllerSpy {
+    
+    var cardPhaseFake: Int = 0
+    var shouldChangeCardPhase: Bool = false
     
     var presenter: ViewToPresenterHomeProtocol?
+    
+}
+
+
+extension HomeViewControllerMock: PresenterToViewHomeProtocol {
     
     func userAllowedAccessCalendar() {
         
@@ -75,89 +91,14 @@ class HomeViewControllerMock: UIViewController, PresenterToViewHomeProtocol {
     }
     
     func changeCurrentIndexCardPhase(at newIndex: Int) {
-        
+        shouldChangeCardPhase = true
+        cardPhaseFake = newIndex
     }
-    
     
 }
 
-class HomeInteractorMock: PresenterToInteractorHomeProtocol {
-    
-    var presenter: luna.InteractorToPresenterHomeProtocol?
-    
-    func checkIfUserGivePermission(completion: @escaping luna.PermissionResponse) {
-        
-    }
-    
-    func loadPhasesToUserCalendar() {
-        
-    }
-    
-    func loadCalendarToCollection() -> [luna.CyclePhaseViewModel] {
-        return []
-    }
-    
-    func insertedMenstruationToCollection(selectedDate: Date) -> Bool {
-        return false
-        
-    }
-    
-    func openDeviceSettings() {
-        
-    }
-    
-    func nextIndexForCardPhase(at index: Int) -> Int {
-        return 0
-        
-    }
-}
 
-class HomePresenterMock: ViewToPresenterHomeProtocol {
-    
-    var view: luna.PresenterToViewHomeProtocol?
-    var interactor: luna.PresenterToInteractorHomeProtocol?
-    var router: luna.PresenterToRouterHomeProtocol?
-    
-    func checkCalendarPermission() {
-        
-    }
-    
-    func loadUserCalendar() {
-        
-    }
-    
-    func loadCalendarToCollection() {
-        
-    }
-    
-    func insertMenstruation(selectedDate: Date) -> Bool {
-        return false
-    }
-    
-    func userSelect(_ cell: luna.CalendarCollectionViewCell?, center: luna.CalendarCollectionViewCell?, andMoveCenter: CGFloat?) {
-        
-    }
-    
-    func moveTo(_ centerCell: luna.CalendarCollectionViewCell?) {
-        
-    }
-    
-    func moveTo(_ month: Date) {
-        
-    }
-    
-    func userOpenDeviceSettings() {
-        
-    }
-    
-    func showCyclePhaseReferencesSheet() {
-        
-    }
-    
-    func userTappedCardPhase(at index: Int) {
-        
-    }
-}
+
 
 extension HomePresenterMock: InteractorToPresenterHomeProtocol {
     
