@@ -10,8 +10,6 @@ import XCTest
 
 final class HomePresenterTest: XCTestCase {
     
-    
-    
     func testShouldMoveCardWhenUserTappedCardPhase(){
         
         let (sut, view ) = makeSUT()
@@ -35,8 +33,6 @@ final class HomePresenterTest: XCTestCase {
         XCTAssertTrue(view.shouldChangeCardPhase)
         XCTAssertEqual(view.cardPhaseFake, expectedCardPhase)
     }
-    
-    
 }
 
 
@@ -52,7 +48,7 @@ extension HomePresenterTest {
     func makeSUT() -> SutAndDoubles {
         let module = HomeRouterMock.createModule()
         let view = module as! HomeViewControllerMock
-        let presenter  = view.presenter!
+        let presenter  = view.presenter as! HomePresenterSUT
         return (presenter, view)
     }
 }
