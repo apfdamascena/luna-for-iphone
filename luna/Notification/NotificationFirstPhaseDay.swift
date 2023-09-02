@@ -9,7 +9,7 @@ import Foundation
 import UserNotifications
 
 
-class NotificationPhaseFirstDay: NotificationFilterCommand {
+class NotificationFirstPhaseDay: NotificationFilterCommand {
     
     func execute(for cycleDays: [CyclePhaseViewModel]) -> NotificationFiltered {
         
@@ -27,7 +27,7 @@ class NotificationPhaseFirstDay: NotificationFilterCommand {
         let notification = daysToNotify.map{ days in
             let notification = UNMutableNotificationContent()
             
-            let information = NotificationFactoryMessage.create(for: days.phase)
+            let information = NotificationFirstPhaseDayMessageFactory.create(for: days.phase)
             notification.title = information.title
             notification.body = information.body
             

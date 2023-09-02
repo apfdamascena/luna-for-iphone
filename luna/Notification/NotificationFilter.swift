@@ -9,20 +9,26 @@ import Foundation
 import UserNotifications
 
 
+
+
 class NotificationFilter: NotificationFilterCommand {
     
-    private let commands: [NotificationFilterCommand] = [NotificationPhaseFirstDay()]
+    private let commands: [NotificationFilterCommand] = [NotificationCurrentPhaseInformation()]
                                                           
     func execute(for cycleDays: [CyclePhaseViewModel]) -> NotificationFiltered {
         
-        var schedules: [(UNMutableNotificationContent, Date)] = []
+        var schedules: NotificationFiltered  = []
         
-        commands.forEach{ command in
+        commands.forEach { command in
             let schedule = command.execute(for: cycleDays)
             schedules.append(contentsOf: schedule)
         }
-                  
-        return schedules
+        
+        schedules.forEach{ (notification, date) in
+            print("schedules \(notification.title) - \(date)")
+        }
+        
+        return []
     }
     
     

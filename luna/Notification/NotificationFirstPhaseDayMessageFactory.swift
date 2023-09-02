@@ -8,7 +8,7 @@
 import Foundation
 
 
-class NotificationFactoryMessage {
+class NotificationFirstPhaseDayMessageFactory {
     
     static func create(for phase: CyclePhase) -> NotificationBody {
         switch phase {

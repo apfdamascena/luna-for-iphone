@@ -22,7 +22,6 @@ protocol ScheduleNotificationFilterable {
 class NotificationStation: ScheduleNotificationStation,
                            ScheduleNotificationFilterable {
     
-    
     var notificationFilter: NotificationFilter
     
     init() {
