@@ -21,9 +21,9 @@ class Notification {
         
         center.requestAuthorization(options: [.alert, .badge, .provisional, .sound ]){ granted, error in
             if granted {
-                print("permission ok")
+                NSLog("notification permission allowed")
             } else {
-                print("permission deniedd")
+                NSLog("notification permission not allowed")
             }
         }
     }
@@ -31,9 +31,8 @@ class Notification {
     func addNotification(at date: Date, with notification: UNMutableNotificationContent){
     
         var components = Calendar.current.dateComponents([.year, .month, .day], from: date)
-        components.hour = 17
-        components.minute = 27
-    
+        components.hour = 12
+        components.minute = 00
 
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
         let request = UNNotificationRequest(identifier: UUID().uuidString,

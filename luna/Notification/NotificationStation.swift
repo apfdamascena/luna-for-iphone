@@ -21,25 +21,13 @@ class NotificationStation {
     func addScheduleNotification(for cycleDays: [CyclePhaseViewModel]){
         Notification.shared.removeAllNotifications()
         let daysForNotify = notificationFilter.execute(for: cycleDays)
-        
-        let (content, _) = daysForNotify[0]
-        
-        let content2 = UNMutableNotificationContent()
-        content2.title = "Cheguei, mores  💅"
-        content2.body = "Fase ovulatória à vista! A boa é evitar estresses hoje, hein? Saiba mais"
-        
-        Notification.shared.addNotification(at: Date(), with: content2)
-        
+    
+        daysForNotify.forEach { notification, date in
+            Notification.shared.addNotification(at: date,
+                                                with: notification)
+        }
         
     
-        
-//        daysForNotify.forEach { notification, date in
-//            Notification.shared.addNotification(at: date,
-//                                                with: notification)
-//        }
-        
-        
-        
         Notification.shared.center.getPendingNotificationRequests(completionHandler: { requests in
             for request in requests {
                 print("request \(request)")
