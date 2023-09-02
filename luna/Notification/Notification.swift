@@ -18,6 +18,7 @@ class Notification {
     
     
     func requestAccess(){
+        
         center.requestAuthorization(options: [.alert, .badge, .provisional, .sound ]){ granted, error in
             if granted {
                 print("permission ok")
@@ -26,7 +27,6 @@ class Notification {
             }
         }
     }
-    
     
     func addNotification(at date: Date, with notification: UNMutableNotificationContent){
     
