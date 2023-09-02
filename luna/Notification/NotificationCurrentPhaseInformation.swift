@@ -20,13 +20,11 @@ class NotificationCurrentPhaseInformation: NotificationFilterCommand {
             }
             .map { index, cycleDay in
                 let notification = UNMutableNotificationContent()
-                let information = NotificationFirstPhaseDayMessageFactory.create(for: cycleDay.phase)
+                let information = NotificationCurrentPhaseInformationMessageFactory.shared.create(for: cycleDay.phase)
                 notification.title = information.title
                 notification.body = information.body
                 return (notification, cycleDay.day)
-                                        
             }
-    
         return daysToNotify
     }
 

@@ -13,7 +13,7 @@ import UserNotifications
 
 class NotificationFilter: NotificationFilterCommand {
     
-    private let commands: [NotificationFilterCommand] = [NotificationCurrentPhaseInformation()]
+    private let commands: [NotificationFilterCommand] = [ NotificationFirstPhaseDay(), NotificationCurrentPhaseInformation()]
                                                           
     func execute(for cycleDays: [CyclePhaseViewModel]) -> NotificationFiltered {
         
@@ -24,11 +24,7 @@ class NotificationFilter: NotificationFilterCommand {
             schedules.append(contentsOf: schedule)
         }
         
-        schedules.forEach{ (notification, date) in
-            print("schedules \(notification.title) - \(date)")
-        }
-        
-        return []
+        return schedules
     }
     
     
