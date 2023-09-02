@@ -8,17 +8,29 @@
 import Foundation
 import UserNotifications
 
+protocol ScheduleNotificationStation {
 
-class NotificationStation {
+    func addScheduleNotification(for cycleDays: [CyclePhaseViewModel])
+}
+
+protocol ScheduleNotificationFilterable {
+    
+    var notificationFilter: NotificationFilter { get }
+}
+
+
+class NotificationStation: ScheduleNotificationStation,
+                           ScheduleNotificationFilterable {
     
     
-    private let notificationFilter: NotificationFilter
+    var notificationFilter: NotificationFilter
     
     init() {
         self.notificationFilter = NotificationFilter()
     }
     
     func addScheduleNotification(for cycleDays: [CyclePhaseViewModel]){
+        
         Notification.shared.removeAllNotifications()
         let daysForNotify = notificationFilter.execute(for: cycleDays)
     
@@ -26,14 +38,5 @@ class NotificationStation {
             Notification.shared.addNotification(at: date,
                                                 with: notification)
         }
-        
-    
-        Notification.shared.center.getPendingNotificationRequests(completionHandler: { requests in
-            for request in requests {
-                print("request \(request)")
-            }
-        })
-        
-    
     }
 }
