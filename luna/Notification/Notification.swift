@@ -14,12 +14,16 @@ class Notification {
     
     static let shared = Notification()
     
+    private init(){}
+    
     let center = UNUserNotificationCenter.current()
-    
-    
+
     func requestAccess(){
         
-        center.requestAuthorization(options: [.alert, .badge, .provisional, .sound ]){ granted, error in
+        center.requestAuthorization(options: [.alert,
+                                              .badge,
+                                              .criticalAlert,
+                                              .sound ]){ granted, error in
             if granted {
                 NSLog("notification permission allowed")
             } else {
@@ -38,6 +42,8 @@ class Notification {
         let request = UNNotificationRequest(identifier: UUID().uuidString,
                                             content: notification,
                                             trigger: trigger)
+        
+        
         center.add(request)
     }
     

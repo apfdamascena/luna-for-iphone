@@ -58,6 +58,8 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
         self.navigationController?.isNavigationBarHidden = true
+        Notification.shared.requestAccess()
+        
         DispatchQueue.main.async {
             self.presenter?.loadCalendarToCollection()
         }
@@ -65,7 +67,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Notification.shared.requestAccess()
         homeView.calendarCollectionView.setMargin(with: self.view.frame.width)
         
         moveInitialCollection()

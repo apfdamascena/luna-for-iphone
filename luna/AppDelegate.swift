@@ -8,6 +8,7 @@
 import UIKit
 import CoreData
 import UserNotifications
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     
@@ -24,6 +25,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         resetStateIfUITesting()
         Thread.sleep(forTimeInterval: 0.5)
         // Override point for customization after application launch.
+        
+        let content = UNMutableNotificationContent()
+        content.title = "LUNAAAAAAAAAAAAAA"
+        content.body = "funcionou dms carai"
+        
+        Notification.shared.addNotification(at: Date(), with: content)
+        
+        Notification.shared.center.getPendingNotificationRequests{ requests in
+            for request in requests {
+                print("request: \(request)")
+                
+            }
+        }
+        
         return true
     }
     
