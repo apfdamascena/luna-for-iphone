@@ -289,6 +289,16 @@ internal enum L10n {
           }
         }
       }
+      internal enum Notification {
+        internal enum FirstPhaseDay {
+          internal enum ExpectedMenstruation {
+            /// Você entrará na fase menstrual nos próximos dias. Registre em Luna!
+            internal static let body = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.expected_menstruation.body", fallback: "Você entrará na fase menstrual nos próximos dias. Registre em Luna!")
+            /// Ding Dong, cheguei 🩸
+            internal static let title = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.expected_menstruation.title", fallback: "Ding Dong, cheguei 🩸")
+          }
+        }
+      }
     }
     internal enum User {
       internal enum Key {

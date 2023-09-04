@@ -26,7 +26,8 @@ class NotificationFirstPhaseDayMessageFactory {
             return NotificationBody(title: "Sem gracinha hoje ", body: "Sintomas da TPM podem aparecer nos próximos dias. Saiba mais sobre essa fase 👉")
             
         case .expectedMenstruation:
-            return NotificationBody(title: "Ding Dong, cheguei 🩸", body: "Você entrará na fase menstrual nos próximos dias. Registre em Luna!")
+            return NotificationBody(title: L10n.Constants.Content.Notification.FirstPhaseDay.ExpectedMenstruation.title,
+                                    body: L10n.Constants.Content.Notification.FirstPhaseDay.ExpectedMenstruation.body)
             
         default:
             return NotificationBody(title: "", body: "")

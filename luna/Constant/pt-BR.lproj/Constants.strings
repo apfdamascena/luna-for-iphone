@@ -153,3 +153,8 @@
 "constants.content.label.home.card.folicular.five" = "Mantenha bons hábitos alimentares e de exercício";
 
 "constants.content.label.onboarding_landing_page"="Desperte seu próprio ritmo";
+
+
+"constants.content.notification.firstPhaseDay.expected_menstruation.title"="Ding Dong, cheguei 🩸";
+"constants.content.notification.firstPhaseDay.expected_menstruation.body"="Você entrará na fase menstrual nos próximos dias. Registre em Luna!";
+
