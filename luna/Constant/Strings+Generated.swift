@@ -298,10 +298,28 @@ internal enum L10n {
             internal static let title = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.expected_menstruation.title", fallback: "Ding Dong, cheguei 🩸")
           }
           internal enum Fertile {
-            /// Fase ovulatória à vista! A boa é evitar estresses hoje, hein? Saiba mais
-            internal static let body = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.fertile.body", fallback: "Fase ovulatória à vista! A boa é evitar estresses hoje, hein? Saiba mais")
+            /// Fase ovulatória à vista! Saiba o que pode acontecer nessa fase 👉
+            internal static let body = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.fertile.body", fallback: "Fase ovulatória à vista! Saiba o que pode acontecer nessa fase 👉")
             /// Cheguei, mores  💅
             internal static let title = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.fertile.title", fallback: "Cheguei, mores  💅")
+          }
+          internal enum Folicular {
+            /// Ela mesmo, a Fase Folicular! Energia pode estar em alta hoje, veja como aproveitar!
+            internal static let body = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.folicular.body", fallback: "Ela mesmo, a Fase Folicular! Energia pode estar em alta hoje, veja como aproveitar!")
+            /// Chegou a famosa ⚡️
+            internal static let title = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.folicular.title", fallback: "Chegou a famosa ⚡️")
+          }
+          internal enum Luteal {
+            /// Fase Lútea on! Hormônios em alta. Saiba o que pode acontecer nessa fase 👉
+            internal static let body = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.luteal.body", fallback: "Fase Lútea on! Hormônios em alta. Saiba o que pode acontecer nessa fase 👉")
+            /// Piscou e eu cheguei
+            internal static let title = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.luteal.title", fallback: "Piscou e eu cheguei")
+          }
+          internal enum Pms {
+            /// Sintomas da TPM podem aparecer nos próximos dias. Saiba mais sobre essa fase 👉
+            internal static let body = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.pms.body", fallback: "Sintomas da TPM podem aparecer nos próximos dias. Saiba mais sobre essa fase 👉")
+            /// Sem gracinha hoje
+            internal static let title = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.pms.title", fallback: "Sem gracinha hoje")
           }
         }
       }

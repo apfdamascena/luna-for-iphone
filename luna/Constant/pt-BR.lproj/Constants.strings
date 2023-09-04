@@ -159,5 +159,14 @@
 "constants.content.notification.firstPhaseDay.expected_menstruation.body"="Você entrará na fase menstrual nos próximos dias. Registre em Luna!";
 
 "constants.content.notification.firstPhaseDay.fertile.title"="Cheguei, mores  💅";
-"constants.content.notification.firstPhaseDay.fertile.body"="Fase ovulatória à vista! A boa é evitar estresses hoje, hein? Saiba mais";
+"constants.content.notification.firstPhaseDay.fertile.body"="Fase ovulatória à vista! Saiba o que pode acontecer nessa fase 👉";
+
+"constants.content.notification.firstPhaseDay.folicular.title"="Chegou a famosa ⚡️";
+"constants.content.notification.firstPhaseDay.folicular.body"="Ela mesmo, a Fase Folicular! Energia pode estar em alta hoje, veja como aproveitar!";
+
+"constants.content.notification.firstPhaseDay.luteal.title"="Piscou e eu cheguei";
+"constants.content.notification.firstPhaseDay.luteal.body"="Fase Lútea on! Hormônios em alta. Saiba o que pode acontecer nessa fase 👉";
+
+"constants.content.notification.firstPhaseDay.pms.title"="Sem gracinha hoje";
+"constants.content.notification.firstPhaseDay.pms.body"="Sintomas da TPM podem aparecer nos próximos dias. Saiba mais sobre essa fase 👉";
 

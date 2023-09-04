@@ -16,14 +16,16 @@ class NotificationFirstPhaseDayMessageFactory {
             return NotificationBody(title: L10n.Constants.Content.Notification.FirstPhaseDay.Fertile.title ,
                                     body: L10n.Constants.Content.Notification.FirstPhaseDay.Fertile.body)
         case .folicular:
-            return NotificationBody(title: "Chegou a famosa ⚡️", body: "Ela mesmo, a Fase Folicular! Energia pode estar em alta hoje. Veja como aproveitar!")
+            return NotificationBody(title: L10n.Constants.Content.Notification.FirstPhaseDay.Folicular.title,
+                                    body: L10n.Constants.Content.Notification.FirstPhaseDay.Folicular.body)
             
         case .luteal:
-            return NotificationBody(title: "Piscou e eu cheguei",
-                                    body: "Fase Lútea on! Hormônios em alta. Saiba o que pode acontecer nessa fase 👉")
+            return NotificationBody(title: L10n.Constants.Content.Notification.FirstPhaseDay.Luteal.title,
+                                    body: L10n.Constants.Content.Notification.FirstPhaseDay.Luteal.body)
             
         case .pms:
-            return NotificationBody(title: "Sem gracinha hoje ", body: "Sintomas da TPM podem aparecer nos próximos dias. Saiba mais sobre essa fase 👉")
+            return NotificationBody(title: L10n.Constants.Content.Notification.FirstPhaseDay.Pms.title,
+                                    body: L10n.Constants.Content.Notification.FirstPhaseDay.Pms.body)
             
         case .expectedMenstruation:
             return NotificationBody(title: L10n.Constants.Content.Notification.FirstPhaseDay.ExpectedMenstruation.title,
