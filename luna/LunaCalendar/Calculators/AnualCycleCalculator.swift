@@ -5,7 +5,9 @@
 //  Created by sml on 26/07/23.
 //
 
-// [MUDAR]: VER COMO FAZER PRA NAO REINSTANCIAR TUDO DE NOVO
+// [MUDAR]: VER COMO VAI SER PRA RECALCULAR O INICIO
+// IDEIAS: SEMPRE SALVAR O TEMPO DE CICLO EXATO QUE A PESSOA COLOCOU (NAO O MINIMO)
+// AI NO PRIMEIRO EXPECTED MENSTRUATION VAI COLOCAR A DATA DESSE CERTO
 
 import EventKit
 
@@ -15,11 +17,13 @@ class AnualCycleCalculator {
     var monthsFromMenstruation: Int = 0
     let eventStore: EKEventStore
     let isFirst: Bool
+    let firstMenstruationTime: Int?
 
-    init(eventStore: EKEventStore, cycleInformations: CycleInformations, isFirst: Bool) {
+    init(eventStore: EKEventStore, cycleInformations: CycleInformations, isFirst: Bool, firstMenstruationTime: Int? = nil) {
         self.cycleInformations = cycleInformations
         self.eventStore = eventStore
         self.isFirst = isFirst
+        self.firstMenstruationTime = firstMenstruationTime
     }
     
     func getPhases() -> [LunaEvent]{
@@ -28,19 +32,33 @@ class AnualCycleCalculator {
         if isFirst {
             months = Array(0...11)
         }
-        months.forEach { _ in
-            cyclePhases.append(contentsOf: [calculateExpectedMenstruationDay(),calculateFolicularDate(), calculateFertileDate(), calculateLutealDate(), calculatePMSDate()])
-            monthsFromMenstruation+=1
+        if isFirst {
+            months.forEach { _ in
+                cyclePhases.append(contentsOf: [calculateExpectedMenstruationDay(),calculateFolicularDate(), calculateFertileDate(), calculateLutealDate(), calculatePMSDate()])
+                monthsFromMenstruation+=1
+            }
+        } else {
+            cyclePhases.append(contentsOf: [calculateFirstFolicularDate(), calculateFertileDate(), calculateLutealDate(), calculatePMSDate()])
+            monthsFromMenstruation += 1
+            months.forEach { index in
+                cyclePhases.append(contentsOf: [calculateExpectedMenstruationDay(),calculateFolicularDate(), calculateFertileDate(), calculateLutealDate(), calculatePMSDate()])
+                monthsFromMenstruation+=1
+            }
         }
         return cyclePhases
     }
     
     func menstruationDay() -> LunaEvent {
+        
         return calculatePhaseDate(CyclePhase.menstruation, 0, 0)
     }
     
     func calculateExpectedMenstruationDay() -> LunaEvent {
         return calculatePhaseDate(CyclePhase.expectedMenstruation, 0, cycleInformations.averageMenstruationDuration-1)
+    }
+    
+    private func calculateFirstFolicularDate() -> LunaEvent {
+        return calculatePhaseDate(CyclePhase.folicular, (firstMenstruationTime! + 1) ?? cycleInformations.averageMenstruationDuration, 10)
     }
     
     private func calculateFolicularDate() -> LunaEvent {
@@ -62,7 +80,7 @@ class AnualCycleCalculator {
     private func calculatePossibleMenstruationDate() -> LunaEvent {
         return calculatePhaseDate(CyclePhase.possibleMenstruation, cycleInformations.averageCycleDuration-3, cycleInformations.averageCycleDuration-1)
     }
-    
+
     private func calculatePhaseDate(_ phase: CyclePhase, _ firstDayDistanceFromCycle: Int, _ lastDayDistanceFromCycle: Int) -> LunaEvent {
         let firstDayValue = (cycleInformations.averageCycleDuration*monthsFromMenstruation)+firstDayDistanceFromCycle
         var lastDayValue = (cycleInformations.averageCycleDuration*monthsFromMenstruation)+lastDayDistanceFromCycle
