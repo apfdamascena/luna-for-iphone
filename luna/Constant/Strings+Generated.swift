@@ -290,6 +290,22 @@ internal enum L10n {
         }
       }
       internal enum Notification {
+        internal enum Dataset {
+          internal enum ExpectedMenstruation {
+            /// Organize suas tarefas para quando sua energia voltar ao máximo. Luna te ajuda com isso! 👉
+            internal static let body = L10n.tr("Constants", "constants.content.notification.dataset.expected_menstruation.body", fallback: "Organize suas tarefas para quando sua energia voltar ao máximo. Luna te ajuda com isso! 👉")
+            /// Segundo as previsões de Luna, você está na fase menstrual. Lembre-se de registrar!
+            internal static let body1 = L10n.tr("Constants", "constants.content.notification.dataset.expected_menstruation.body1", fallback: "Segundo as previsões de Luna, você está na fase menstrual. Lembre-se de registrar!")
+            /// Tire um tempo para relaxar e pratique coisas que ajude a aliviar o estresse. Saiba mais
+            internal static let body3 = L10n.tr("Constants", "constants.content.notification.dataset.expected_menstruation.body3", fallback: "Tire um tempo para relaxar e pratique coisas que ajude a aliviar o estresse. Saiba mais")
+            /// Aqueles dias 🩸
+            internal static let title = L10n.tr("Constants", "constants.content.notification.dataset.expected_menstruation.title", fallback: "Aqueles dias 🩸")
+            /// Como você está? ❤️
+            internal static let title1 = L10n.tr("Constants", "constants.content.notification.dataset.expected_menstruation.title1", fallback: "Como você está? ❤️")
+            /// Previsão: hora de se cuidar! ⏰
+            internal static let title2 = L10n.tr("Constants", "constants.content.notification.dataset.expected_menstruation.title2", fallback: "Previsão: hora de se cuidar! ⏰")
+          }
+        }
         internal enum FirstPhaseDay {
           internal enum ExpectedMenstruation {
             /// Você entrará na fase menstrual nos próximos dias. Registre em Luna!

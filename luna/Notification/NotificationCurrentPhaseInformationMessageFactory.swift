@@ -17,7 +17,16 @@ class NotificationCurrentPhaseInformationMessageFactory {
     private var pms = 0
     
     private let fertilePhase = [
-        NotificationBody(title: "É literalmente uma fase!", body: "Hoje tá sendo uma mistura de sentimentos, né? Entenda mais sobre essa fase 👉")
+        NotificationBody(title: "É literalmente uma fase!", body: "Hoje tá sendo uma mistura de sentimentos, né? Entenda mais sobre essa fase 👉"),
+    ]
+    
+    private let expectedMenstruationPhase = [
+        NotificationBody(title: L10n.Constants.Content.Notification.Dataset.ExpectedMenstruation.title,
+                         body: L10n.Constants.Content.Notification.Dataset.ExpectedMenstruation.body),
+        NotificationBody(title: L10n.Constants.Content.Notification.Dataset.ExpectedMenstruation.title1,
+                         body: L10n.Constants.Content.Notification.Dataset.ExpectedMenstruation.body1),
+        NotificationBody(title: L10n.Constants.Content.Notification.Dataset.ExpectedMenstruation.title2,
+                         body: L10n.Constants.Content.Notification.Dataset.ExpectedMenstruation.body3),
     ]
 
     private let folicularPhase =  [
