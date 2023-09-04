@@ -297,6 +297,12 @@ internal enum L10n {
             /// Ding Dong, cheguei 🩸
             internal static let title = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.expected_menstruation.title", fallback: "Ding Dong, cheguei 🩸")
           }
+          internal enum Fertile {
+            /// Fase ovulatória à vista! A boa é evitar estresses hoje, hein? Saiba mais
+            internal static let body = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.fertile.body", fallback: "Fase ovulatória à vista! A boa é evitar estresses hoje, hein? Saiba mais")
+            /// Cheguei, mores  💅
+            internal static let title = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.fertile.title", fallback: "Cheguei, mores  💅")
+          }
         }
       }
     }

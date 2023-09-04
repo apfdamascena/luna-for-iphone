@@ -158,3 +158,6 @@
 "constants.content.notification.firstPhaseDay.expected_menstruation.title"="Ding Dong, cheguei 🩸";
 "constants.content.notification.firstPhaseDay.expected_menstruation.body"="Você entrará na fase menstrual nos próximos dias. Registre em Luna!";
 
+"constants.content.notification.firstPhaseDay.fertile.title"="Cheguei, mores  💅";
+"constants.content.notification.firstPhaseDay.fertile.body"="Fase ovulatória à vista! A boa é evitar estresses hoje, hein? Saiba mais";
+
