@@ -7,7 +7,7 @@
 
 import EventKit
 
-typealias PermissionResponse = ((Result<CalendarAccess, Error>) -> Void)
+typealias PermissionResponse = ((Result<CalendarAccess, CalendarAccessError>) -> Void)
 
 protocol CalendarManager {
     

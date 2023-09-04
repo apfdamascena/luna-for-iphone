@@ -10,29 +10,13 @@ import Foundation
 import UIKit
 
 
-class HomeRouterMock: PresenterToRouterHomeProtocol, HomeRouterSpy {
+class HomeRouterMock: HomeRouter, HomeRouterSpy {
 
     var isPushReferencesSheetCalled: Bool = false
     
-    func pushReferencesSheet(on view: luna.PresenterToViewHomeProtocol) {
+    override func pushReferencesSheet(on view: luna.PresenterToViewHomeProtocol) {
         isPushReferencesSheetCalled = true
-        guard let controller = view as? HomeViewControllerMock else { return }
-        let references = ReferencesViewController()
-        controller.navigationController?.present(references, animated: true)
+        super.pushReferencesSheet(on: view)
     }
     
-    
-    static func createModule() -> UIViewController {
-        
-        let viewController = HomeViewControllerMock()
-        let presenter: ViewToPresenterHomeProtocol & InteractorToPresenterHomeProtocol =  HomePresenterMock()
-
-        viewController.presenter = presenter
-        viewController.presenter?.router = HomeRouterMock()
-        viewController.presenter?.view = viewController
-        viewController.presenter?.interactor = HomeInteractorMock()
-        viewController.presenter?.interactor?.presenter = presenter
-        
-        return viewController
-    }
 }

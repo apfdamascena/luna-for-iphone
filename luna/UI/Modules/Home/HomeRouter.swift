@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class HomeRouter: PresenterToRouterHomeProtocol {
+
     
     func pushReferencesSheet(on view: PresenterToViewHomeProtocol) {
         guard let homeVC = view as? HomeViewController else { return }
@@ -33,7 +34,7 @@ class HomeRouter: PresenterToRouterHomeProtocol {
     
     static func createModule() -> UIViewController {
         
-        let viewController = HomeViewController(datasource: CalendarCollectionViewDataSourceImpl(), cardPhaseDataSource: CardPhaseControlDataSourceImpl())
+        let viewController = HomeViewController()
         
         let presenter: ViewToPresenterHomeProtocol & InteractorToPresenterHomeProtocol = HomePresenter()
         

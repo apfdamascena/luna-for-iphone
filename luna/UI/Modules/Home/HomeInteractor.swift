@@ -14,13 +14,12 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
     var lunaCalendarManager: CalendarManager?
     var presenter: InteractorToPresenterHomeProtocol?
     
-    private var calendarPermission: CalendarAccess = .unauthorized
+    var calendarPermission: CalendarAccess = .unauthorized
     
-    init(){
-        self.lunaCalendarManager = LunaCalendarManager()
+    init(lunaCalendarManager: CalendarManager = LunaCalendarManager()){
+        self.lunaCalendarManager = lunaCalendarManager
     }
     
-
     func checkIfUserGivePermission(completion: @escaping PermissionResponse) {
 
         lunaCalendarManager?.requestAccessToCalendar{ permission in

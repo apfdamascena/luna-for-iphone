@@ -71,6 +71,8 @@ protocol PresenterToInteractorHomeProtocol {
     
     func nextIndexForCardPhase(at index: Int) -> Int
     
+    var calendarPermission: CalendarAccess { get }
+    
 }
 
 

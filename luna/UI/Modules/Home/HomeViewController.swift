@@ -20,7 +20,10 @@ class HomeViewController: UIViewController {
     private var datasource: CalendarCollectionViewDataSource
     private var cardPhaseDataSource: CardPhaseControlDataSource
     
-    init(datasource: CalendarCollectionViewDataSource, cardPhaseDataSource: CardPhaseControlDataSource){
+    init(
+        datasource: CalendarCollectionViewDataSource = CalendarCollectionViewDataSourceImpl(),
+        cardPhaseDataSource: CardPhaseControlDataSource = CardPhaseControlDataSourceImpl()
+    ){
         self.datasource = datasource
         self.cardPhaseDataSource = cardPhaseDataSource
         super.init(nibName: nil, bundle: nil)
@@ -254,7 +257,7 @@ extension HomeViewController: PresenterToViewHomeProtocol {
         generator.impactOccurred()
     }
     
-    func changeCurrentIndexCardPhase(at newIndex: Int) {
+    @objc func changeCurrentIndexCardPhase(at newIndex: Int) {
         self.cardPhaseDataSource.index.onNext(newIndex)
         
     }

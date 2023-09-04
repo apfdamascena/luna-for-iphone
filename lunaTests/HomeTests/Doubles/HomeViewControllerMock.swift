@@ -9,52 +9,22 @@
 import UIKit
 
 
-class HomeViewControllerMock: UIViewController, HomeViewControllerSpy {
+class HomeViewControllerMock: HomeViewController, HomeViewControllerSpy {
     
+    var hasBeenPresented = false
+    var presentedView: UIViewController?
     var cardPhaseFake: Int = 0
     var shouldChangeCardPhase: Bool = false
     
-    var presenter: ViewToPresenterHomeProtocol?
+    override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
+        hasBeenPresented = true
+        presentedView = viewControllerToPresent
+    }
 }
-
-
-extension HomeViewControllerMock: PresenterToViewHomeProtocol {
+extension HomeViewControllerMock {
     
-    func userAllowedAccessCalendar() {
-        
-    }
-    
-    func userDeniedAccessCalendar() {
-        
-    }
-    
-    func changeSelectedCell(selectedCell: luna.CalendarCollectionViewCell) {
-        
-    }
-    
-    func moveCalendarCollection(toXAxis: CGFloat) {
-        
-    }
-    
-    func updateView(_ center: luna.CalendarCollectionViewCell) {
-        
-    }
-    
-    func load(collectionDataSource: [luna.CyclePhaseViewModel]) {
-        
-    }
-    
-    func moveTo(_ month: Date) {
-        
-    }
-    
-    func showFeedbackRegisterMenstruation() {
-        
-    }
-    
-    func changeCurrentIndexCardPhase(at newIndex: Int) {
+    override func changeCurrentIndexCardPhase(at newIndex: Int) {
         shouldChangeCardPhase = true
         cardPhaseFake = newIndex
     }
-    
 }

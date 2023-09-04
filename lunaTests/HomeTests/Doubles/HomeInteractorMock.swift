@@ -11,6 +11,8 @@ import UIKit
 
 class HomeInteractorMock: PresenterToInteractorHomeProtocol {
     
+    var calendarPermission: luna.CalendarAccess = .authorized
+    
     var lunaCalendarManager: luna.CalendarManager?
     var presenter: luna.InteractorToPresenterHomeProtocol?
     
