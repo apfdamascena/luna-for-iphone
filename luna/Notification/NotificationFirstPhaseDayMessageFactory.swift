@@ -11,6 +11,7 @@ import Foundation
 class NotificationFirstPhaseDayMessageFactory {
     
     static func create(for phase: CyclePhase) -> NotificationBody {
+        
         switch phase {
         case .fertile:
             return NotificationBody(title: L10n.Constants.Content.Notification.FirstPhaseDay.Fertile.title ,
