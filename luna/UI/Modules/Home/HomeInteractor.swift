@@ -10,9 +10,8 @@ import Foundation
 import UIKit
 
 class HomeInteractor: PresenterToInteractorHomeProtocol {
-    var lunaCalendarManager: CalendarManager
     
-
+    var lunaCalendarManager: CalendarManager?
     var presenter: InteractorToPresenterHomeProtocol?
     
     private var calendarPermission: CalendarAccess = .unauthorized
@@ -24,7 +23,7 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
 
     func checkIfUserGivePermission(completion: @escaping PermissionResponse) {
 
-        lunaCalendarManager.requestAccessToCalendar{ permission in
+        lunaCalendarManager?.requestAccessToCalendar{ permission in
             switch permission {
             case .success:
                 self.calendarPermission = .authorized
@@ -43,7 +42,7 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
         let cycleDuration = UserCycleInformation.shared.cycleDuration
               
                   
-        lunaCalendarManager.firstLoadElementsToCalendar(firstDayMenstruation: lastDayMenstruation,
+        lunaCalendarManager?.firstLoadElementsToCalendar(firstDayMenstruation: lastDayMenstruation,
                                                         averageMenstruationDuration: menstruationDuration,
                                                         averageCycleDuration: cycleDuration)
     }
@@ -52,21 +51,24 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
         
         let firstDate = Date().daysBefore(HomeCollection.COLLECTION_RANGE/2)
         let finalDate = Date().daysAfter(HomeCollection.COLLECTION_RANGE/2)
-        lunaCalendarManager.transformExpectedToMenstruation()
+        lunaCalendarManager?.transformExpectedToMenstruation()
         
-        let events = lunaCalendarManager.getEventsByDate(firstDate: firstDate, finalDate: finalDate)
+        guard let events = lunaCalendarManager?.getEventsByDate(firstDate: firstDate, finalDate: finalDate) else { return [] }
 
         let collectionViewDataSource = CalendarCollectionConverter().turnDaysIntoCyclePhase(events: events)
         return collectionViewDataSource
     }
     
     func insertedMenstruationToCollection(selectedDate: Date) -> Bool {
-        let response = lunaCalendarManager.changeDayPhaseBy(selectedDate: selectedDate)
+        guard let response = lunaCalendarManager?.changeDayPhaseBy(selectedDate: selectedDate) else { return false }
+        
         var isRemove = false
         if response == ChangeCycleResponse.isMenstruation {
             isRemove = true
         }
-        lunaCalendarManager.adjustEventsInCalendar(isRemove: isRemove)
+        
+        lunaCalendarManager?.adjustEventsInCalendar(isRemove: isRemove)
+        
         if response == ChangeCycleResponse.hasMenstruationNearDate {
             return true
         }

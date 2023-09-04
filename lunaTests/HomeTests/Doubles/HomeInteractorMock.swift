@@ -11,10 +11,11 @@ import UIKit
 
 class HomeInteractorMock: PresenterToInteractorHomeProtocol {
     
+    var lunaCalendarManager: luna.CalendarManager?
     var presenter: luna.InteractorToPresenterHomeProtocol?
     
+    
     func checkIfUserGivePermission(completion: @escaping luna.PermissionResponse) {
-        
     }
     
     func loadPhasesToUserCalendar() {
