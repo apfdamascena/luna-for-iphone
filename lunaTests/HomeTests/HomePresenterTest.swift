@@ -40,31 +40,13 @@ final class HomePresenterTest: XCTestCase {
                                       interactor: interactor,
                                       router: router)
         
-        let fakeCard = 4
+        let fakeCardPhase  = 4
         let expectedCardPhase = 0
         
-        presenter.userTappedCardPhase(at: fakeCard)
+        presenter.userTappedCardPhase(at: fakeCardPhase)
         
         XCTAssertTrue(interactor.nextIndexForCardPhaseCalled)
         XCTAssertEqual(view.cardPhaseFake, expectedCardPhase)
     }
 }
-
-
-//extension HomePresenterTest {
-//
-//    typealias HomePresenterSUT = ViewToPresenterHomeProtocol & HomePresenterSpy
-//
-//    typealias SutAndDoubles = (
-//        sut: HomePresenterSUT,
-//        doubles: HomeViewControllerMock
-//    )
-//
-//    func makeSUT() -> SutAndDoubles {
-//        let module = HomeRouterMock.createModule()
-//        let view = module as! HomeViewControllerMock
-//        let presenter  = view.presenter as! HomePresenterSUT
-//        return (presenter, view)
-//    }
-//}
 

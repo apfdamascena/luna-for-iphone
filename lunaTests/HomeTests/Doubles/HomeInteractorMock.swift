@@ -8,11 +8,6 @@
 @testable import luna
 import UIKit
 
-protocol HomeInteractorSpy {
-    
-    var nextIndexForCardPhaseCalled: Bool { get }
-}
-
 
 class HomeInteractorMock: HomeInteractor, HomeInteractorSpy  {
 
