@@ -297,13 +297,69 @@ internal enum L10n {
             /// Segundo as previsões de Luna, você está na fase menstrual. Lembre-se de registrar!
             internal static let body1 = L10n.tr("Constants", "constants.content.notification.dataset.expected_menstruation.body1", fallback: "Segundo as previsões de Luna, você está na fase menstrual. Lembre-se de registrar!")
             /// Tire um tempo para relaxar e pratique coisas que ajude a aliviar o estresse. Saiba mais
-            internal static let body3 = L10n.tr("Constants", "constants.content.notification.dataset.expected_menstruation.body3", fallback: "Tire um tempo para relaxar e pratique coisas que ajude a aliviar o estresse. Saiba mais")
+            internal static let body2 = L10n.tr("Constants", "constants.content.notification.dataset.expected_menstruation.body2", fallback: "Tire um tempo para relaxar e pratique coisas que ajude a aliviar o estresse. Saiba mais")
             /// Aqueles dias 🩸
             internal static let title = L10n.tr("Constants", "constants.content.notification.dataset.expected_menstruation.title", fallback: "Aqueles dias 🩸")
             /// Como você está? ❤️
             internal static let title1 = L10n.tr("Constants", "constants.content.notification.dataset.expected_menstruation.title1", fallback: "Como você está? ❤️")
             /// Previsão: hora de se cuidar! ⏰
             internal static let title2 = L10n.tr("Constants", "constants.content.notification.dataset.expected_menstruation.title2", fallback: "Previsão: hora de se cuidar! ⏰")
+          }
+          internal enum Fertile {
+            /// Aproveite o pico de determinação dessa fase para trabalhar nas suas metas!
+            internal static let body = L10n.tr("Constants", "constants.content.notification.dataset.fertile.body", fallback: "Aproveite o pico de determinação dessa fase para trabalhar nas suas metas!")
+            /// Aproveite a energia em alta para treinos mais intensos! Veja mais sobre a fase atual!
+            internal static let body1 = L10n.tr("Constants", "constants.content.notification.dataset.fertile.body1", fallback: "Aproveite a energia em alta para treinos mais intensos! Veja mais sobre a fase atual!")
+            /// Hoje tá sendo uma mistura de sentimentos, né? Entenda mais sobre essa fase 👉
+            internal static let body2 = L10n.tr("Constants", "constants.content.notification.dataset.fertile.body2", fallback: "Hoje tá sendo uma mistura de sentimentos, né? Entenda mais sobre essa fase 👉")
+            /// Dose extra! 🔋
+            internal static let title = L10n.tr("Constants", "constants.content.notification.dataset.fertile.title", fallback: "Dose extra! 🔋")
+            /// Eu ouvi intensidade? 💪
+            internal static let title1 = L10n.tr("Constants", "constants.content.notification.dataset.fertile.title1", fallback: "Eu ouvi intensidade? 💪")
+            /// Carro da água passando…💧
+            internal static let title2 = L10n.tr("Constants", "constants.content.notification.dataset.fertile.title2", fallback: "Carro da água passando…💧")
+          }
+          internal enum Folicular {
+            /// Você pode sentir mais energia hoje, abuse dos treinos de força. Saiba mais
+            internal static let body = L10n.tr("Constants", "constants.content.notification.dataset.folicular.body", fallback: "Você pode sentir mais energia hoje, abuse dos treinos de força. Saiba mais")
+            /// Hora de beber água, meu bem. Vamos lá, hidrate-se e seu corpo agradece!
+            internal static let body1 = L10n.tr("Constants", "constants.content.notification.dataset.folicular.body1", fallback: "Hora de beber água, meu bem. Vamos lá, hidrate-se e seu corpo agradece!")
+            /// Você pode ter mais disposição hoje! Que tal realizar as pendências da semana?
+            internal static let body2 = L10n.tr("Constants", "constants.content.notification.dataset.folicular.body2", fallback: "Você pode ter mais disposição hoje! Que tal realizar as pendências da semana?")
+            /// Se arruma e vamos! 🏃‍♀️
+            internal static let title = L10n.tr("Constants", "constants.content.notification.dataset.folicular.title", fallback: "Se arruma e vamos! 🏃‍♀️")
+            /// GRAVE: chegou a hora 🚨
+            internal static let title1 = L10n.tr("Constants", "constants.content.notification.dataset.folicular.title1", fallback: "GRAVE: chegou a hora 🚨")
+            /// Energia em alta!
+            internal static let title2 = L10n.tr("Constants", "constants.content.notification.dataset.folicular.title2", fallback: "Energia em alta!")
+          }
+          internal enum Luteal {
+            /// Os níveis de estrogênio e progesterona atingem o pico nessa fase. Saiba como isso pode interferir na sua rotina 👉
+            internal static let body = L10n.tr("Constants", "constants.content.notification.dataset.luteal.body", fallback: "Os níveis de estrogênio e progesterona atingem o pico nessa fase. Saiba como isso pode interferir na sua rotina 👉")
+            /// É um bom momento para fazer atividades tranquilas. Saiba mais sobre essa fase!
+            internal static let body1 = L10n.tr("Constants", "constants.content.notification.dataset.luteal.body1", fallback: "É um bom momento para fazer atividades tranquilas. Saiba mais sobre essa fase!")
+            /// Seu humor pode variar hoje, é bom evitar grandes mudanças, hein? Saiba mais 👉
+            internal static let body2 = L10n.tr("Constants", "constants.content.notification.dataset.luteal.body2", fallback: "Seu humor pode variar hoje, é bom evitar grandes mudanças, hein? Saiba mais 👉")
+            /// Hormônios em alta!
+            internal static let title = L10n.tr("Constants", "constants.content.notification.dataset.luteal.title", fallback: "Hormônios em alta!")
+            /// Mó paz ✌️
+            internal static let title1 = L10n.tr("Constants", "constants.content.notification.dataset.luteal.title1", fallback: "Mó paz ✌️")
+            /// 8 ou 80?
+            internal static let title2 = L10n.tr("Constants", "constants.content.notification.dataset.luteal.title2", fallback: "8 ou 80?")
+          }
+          internal enum Pms {
+            /// Seu corpo pode estar retendo mais líquido. Evitar excesso de alimentos ricos em sal pode ajudar.
+            internal static let body = L10n.tr("Constants", "constants.content.notification.dataset.pms.body", fallback: "Seu corpo pode estar retendo mais líquido. Evitar excesso de alimentos ricos em sal pode ajudar.")
+            /// Você pode sentir cólica e outras dores no corpo nessa fase. Veja o que mais pode acontecer 👉
+            internal static let body1 = L10n.tr("Constants", "constants.content.notification.dataset.pms.body1", fallback: "Você pode sentir cólica e outras dores no corpo nessa fase. Veja o que mais pode acontecer 👉")
+            /// Hoje tá sendo uma mistura de sentimentos, né? Entenda mais sobre essa fase 👉
+            internal static let body2 = L10n.tr("Constants", "constants.content.notification.dataset.pms.body2", fallback: "Hoje tá sendo uma mistura de sentimentos, né? Entenda mais sobre essa fase 👉")
+            /// Dica do dia ✨
+            internal static let title = L10n.tr("Constants", "constants.content.notification.dataset.pms.title", fallback: "Dica do dia ✨")
+            /// Forças!
+            internal static let title1 = L10n.tr("Constants", "constants.content.notification.dataset.pms.title1", fallback: "Forças!")
+            /// É literalmente uma fase!
+            internal static let title2 = L10n.tr("Constants", "constants.content.notification.dataset.pms.title2", fallback: "É literalmente uma fase!")
           }
         }
         internal enum FirstPhaseDay {
