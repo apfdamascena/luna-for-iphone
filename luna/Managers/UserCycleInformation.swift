@@ -35,11 +35,22 @@ class UserCycleInformation {
         return duration
     }
     
+    var cycleDurationFirstInput: Int {
+        guard let duration = UserDefaults.standard.object(forKey: "cycle_duration_first_input") as? Int else {
+            return 28
+        }
+        return duration
+    }
+    
     var MAX_MENSTRUATION_DURATION = 10
     
 
     func setLastMenstruation(_ date: Date){
         UserDefaults.standard.set(date, forKey: "menstruation_date")
+    }
+    
+    func setCycleFirstInput(_ date: Int){
+        UserDefaults.standard.set(date, forKey: "cycle_duration_first_input")
     }
     
     func setMenstruation(_ duration: Int){

@@ -47,6 +47,8 @@ class CycleDurationViewController: UIViewController, DataSourceEventObservable {
             .subscribe { (row: Int, component: Int) in
                 guard let duration = Int(self.datasource.elements[0][row]) else { return }
                 UserCycleInformation.shared.setCycle(duration)
+                UserCycleInformation.shared.setCycleFirstInput(duration)
+
             }.disposed(by: disposeBag)
     }
 

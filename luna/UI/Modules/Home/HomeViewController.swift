@@ -69,10 +69,13 @@ class HomeViewController: UIViewController {
         super.viewDidAppear(animated)
         homeView.calendarCollectionView.setMargin(with: self.view.frame.width)
         
-        moveInitialCollection()
         DispatchQueue.main.async {
             self.presenter?.loadCalendarToCollection()
         }
+        
+    }
+    override func viewWillLayoutSubviews() {
+        moveInitialCollection()
     }
     
     private func addCollectionViewDataSource(){

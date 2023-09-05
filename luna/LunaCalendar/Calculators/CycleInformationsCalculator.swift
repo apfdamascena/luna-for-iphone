@@ -17,12 +17,27 @@ class CycleInformationsCalculator {
         UserCycleInformation.shared.setLastMenstruation(lastMenstruation.startDate)
     }
     
-    func saveLastCycleDuration(events: [EKEvent]) {
+    func saveLastCycleDuration(events: [EKEvent], tomorrowEvents: [EKEvent], todayEvents: [EKEvent]) {
         var menstruationEvents = events.filter { event in
             return event.title == CyclePhase.menstruation.value
         }
-        
-        if menstruationEvents.count > 1 {
+        let tomorrowEvent = tomorrowEvents.first
+        let todayEvent = todayEvents.first
+
+
+        if tomorrowEvent?.title == CyclePhase.expectedMenstruation.value && todayEvent?.title != CyclePhase.menstruation.value {
+            guard let lastMenstruation = menstruationEvents.popLast() else { return }
+            
+            var cycleDuration = tomorrowEvent?.startDate.daysBetween(lastMenstruation.startDate) ?? 28
+            cycleDuration = max(cycleDuration, 20)
+            cycleDuration = min(cycleDuration, 32)
+            print(menstruationEvents.count)
+            if menstruationEvents.count <= 1 {
+                cycleDuration = UserCycleInformation.shared.cycleDurationFirstInput
+            }
+
+            UserCycleInformation.shared.setCycle(cycleDuration)
+        } else if menstruationEvents.count > 1 {
             guard let lastMenstruation = menstruationEvents.popLast() else { return }
             guard let penultimateMenstruation = menstruationEvents.last else { return }
             
@@ -32,6 +47,8 @@ class CycleInformationsCalculator {
             cycleDuration = min(cycleDuration, 32)
 
             UserCycleInformation.shared.setCycle(cycleDuration)
+        } else {
+            UserCycleInformation.shared.setCycle(UserCycleInformation.shared.cycleDurationFirstInput)
         }
         
     }

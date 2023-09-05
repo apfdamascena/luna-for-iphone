@@ -61,7 +61,6 @@ extension LunaCalendarManager {
     }
     
     func adjustMenstruationAfter(selectedDate: Date, menstruationEvent: EKEvent, eventService: CalendarEventService) -> ChangeCycleResponse {
-        
         eventService.removeEvent(eventId: menstruationEvent.eventIdentifier)
         
 //        if selectedDate.daysBetween(menstruationEvent.endDate) > 10 {
@@ -83,6 +82,7 @@ extension LunaCalendarManager {
         
         notMenstruationEvents.forEach { event in
             eventService.removeEvent(eventId: event.eventIdentifier)
+
         }
 
         let newEventToAdjust = LunaEvent(title: CyclePhase(rawValue: eventToAdjust.title) ?? CyclePhase.none, startDate: eventToAdjust.startDate, endDate: selectedDate.daysBefore(1))
@@ -122,11 +122,10 @@ extension LunaCalendarManager {
     func addMenstruation(selectedDate: Date, eventService: CalendarEventService) -> ChangeCycleResponse {
         
         let selectedEvent = eventService.getEventsByDate(firstDate: selectedDate, finalDate: selectedDate).first
-        
+
         let newMenstruationEvent = LunaEvent(title: CyclePhase.menstruation, startDate: selectedDate, endDate: selectedDate)
-        
+
         createEvent(newMenstruationEvent)
-    
         
         if (selectedEvent != nil) {
             eventService.removeEvent(eventId: selectedEvent!.eventIdentifier)
@@ -143,7 +142,7 @@ extension LunaCalendarManager {
         
         if selectedDate.formatToString() == selectedEvent.startDate.formatToString() {
             eventService.removeEvent(eventId: selectedEvent.eventIdentifier)
-            
+
             let newMenstruationEvent = LunaEvent(title: CyclePhase.menstruation, startDate: selectedEvent.startDate.daysAfter(1), endDate: selectedEvent.endDate)
             
             createEvent(newMenstruationEvent)

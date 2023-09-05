@@ -35,9 +35,9 @@ internal enum L10n {
         internal static let calendarSubtitle = L10n.tr("Constants", "constants.content.label.calendar_subtitle", fallback: "Permita que o Luna acesse seu Calendar para planejar seus dias com sabedoria e melhorar o seu bem-estar")
         /// Sintonize com seu dia a dia
         internal static let calendarTitle = L10n.tr("Constants", "constants.content.label.calendar_title", fallback: "Sintonize com seu dia a dia")
-        /// Quanto tempo dura o
+        /// Quantos dias dura o
         /// seu ciclo menstrual?
-        internal static let cycleDuration = L10n.tr("Constants", "constants.content.label.cycle_duration", fallback: "Quanto tempo dura o\nseu ciclo menstrual?")
+        internal static let cycleDuration = L10n.tr("Constants", "constants.content.label.cycle_duration", fallback: "Quantos dias dura o\nseu ciclo menstrual?")
         /// Menstruação Prevista
         internal static let expectedMenstruation = L10n.tr("Constants", "constants.content.label.expectedMenstruation", fallback: "Menstruação Prevista")
         /// 💓 Período fertil
@@ -99,6 +99,10 @@ internal enum L10n {
           internal static let luteal = L10n.tr("Constants", "constants.content.label.home.luteal", fallback: "Fase Lútea")
           /// Menstruação
           internal static let menstruation = L10n.tr("Constants", "constants.content.label.home.menstruation", fallback: "Menstruação")
+          /// Nesta dia, ainda não tínhamos os seus dados
+          internal static let noData = L10n.tr("Constants", "constants.content.label.home.no_data", fallback: "Nesta dia, ainda não tínhamos os seus dados")
+          /// Explore os dias futuros!
+          internal static let noDataDescripition = L10n.tr("Constants", "constants.content.label.home.no_data_descripition", fallback: "Explore os dias futuros!")
           /// Ovulação
           internal static let ovulation = L10n.tr("Constants", "constants.content.label.home.ovulation", fallback: "Ovulação")
           /// Menstruação registrada

@@ -7,7 +7,7 @@
 */
 "constants.content.label.last_day_menstruation"="When was the start of\nyour last menstruation?";
 "constants.content.label.menstruation_duration"="How many days does your\nmenstruation last?";
-"constants.content.label.cycle_duration"="How long does your\nmenstrual cycle last?";
+"constants.content.label.cycle_duration"="How many days does your\nmenstrual cycle last?";
 "constants.content.label.app_name"="Luna";
 "constants.content.label.landing_page_description"="Your cycle in your favor";
 
@@ -248,3 +248,7 @@
 "constants.content.notification.dataset.fertile.title2" = "Waterworks...💧";
 
 "constants.content.notification.dataset.fertile.body2" = "Today seems like a mix of emotions, right? Learn more about this phase 👉";
+"constants.content.label.onboarding_landing_page"="Find your own cycle";
+
+"constants.content.label.home.no_data"="On this day, we didn't have your data yet.";
+"constants.content.label.home.no_data_descripition" = "Explore the upcoming days!";
