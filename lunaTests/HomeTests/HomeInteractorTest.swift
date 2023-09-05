@@ -7,30 +7,28 @@
 @testable import luna
 import XCTest
 
-final class HomeInteractorTest: XCTestCase {
-
-    class LunaCalendarManagerMock: LunaCalendarManager {
-        
-        private var requestAccessToCalendarCompletion: Result<CalendarAccess, CalendarAccessError>
-        
-        init(with completion: Result<CalendarAccess, CalendarAccessError> = .failure(.permissionDenied)) {
-            self.requestAccessToCalendarCompletion = completion
-        }
-        
-        override func requestAccessToCalendar(completion: @escaping PermissionResponse) {
-            completion(requestAccessToCalendarCompletion)
-        }
+class LunaCalendarManagerMock: LunaCalendarManager {
+    
+    private var requestAccessToCalendarCompletion: Result<CalendarAccess, CalendarAccessError>
+    
+    init(with completion: Result<CalendarAccess, CalendarAccessError> = .failure(.permissionDenied)) {
+        self.requestAccessToCalendarCompletion = completion
     }
+    
+    override func requestAccessToCalendar(completion: @escaping PermissionResponse) {
+        completion(requestAccessToCalendarCompletion)
+    }
+}
+
+
+
+final class HomeInteractorTest: XCTestCase {
 
     func testCheckIfUserGavePermission() throws {
         let calendarMock = LunaCalendarManagerMock(with: .success(.authorized))
         let interactor = HomeInteractor(lunaCalendarManager: calendarMock)
         
-        var result: Result<CalendarAccess, CalendarAccessError>?
-        
-        interactor.checkIfUserGivePermission { r in
-            result = r
-        }
+        interactor.checkIfUserGivePermission { _ in }
         
         XCTAssertEqual(interactor.calendarPermission, .authorized)
     }
@@ -39,15 +37,8 @@ final class HomeInteractorTest: XCTestCase {
         let calendarMock = LunaCalendarManagerMock(with: .failure(.permissionDenied))
         let interactor = HomeInteractor(lunaCalendarManager: calendarMock)
         
-        var result: Result<CalendarAccess, CalendarAccessError>?
-        
-        interactor.checkIfUserGivePermission{ r in
-            result = r
-        }
+        interactor.checkIfUserGivePermission{ _ in }
         
         XCTAssertEqual(interactor.calendarPermission, .unauthorized)
     }
-
-
-
 }

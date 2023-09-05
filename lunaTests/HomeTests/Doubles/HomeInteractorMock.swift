@@ -10,12 +10,13 @@ import UIKit
 
 
 class HomeInteractorMock: HomeInteractor, HomeInteractorSpy  {
-
+    
     var nextIndexForCardPhaseCalled: Bool = false
     
     override func nextIndexForCardPhase(at index: Int) -> Int {
         nextIndexForCardPhaseCalled = true
         return super.nextIndexForCardPhase(at: index)
     }
+    
     
 }

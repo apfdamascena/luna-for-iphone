@@ -58,7 +58,5 @@ final class HomePresenterTest: XCTestCase {
         
         XCTAssertTrue(router.isPushReferencesSheetCalled)
     }
-    
-    
 }
 
