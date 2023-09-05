@@ -9,4 +9,5 @@
 protocol HomeInteractorSpy {
     
     var nextIndexForCardPhaseCalled: Bool { get }
+    var openSettingsHasBeenCalled: Bool { get }
 }

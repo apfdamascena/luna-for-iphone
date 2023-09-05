@@ -11,6 +11,7 @@ import UIKit
 
 class HomeInteractorMock: HomeInteractor, HomeInteractorSpy  {
     
+    var openSettingsHasBeenCalled: Bool = false
     var nextIndexForCardPhaseCalled: Bool = false
     
     override func nextIndexForCardPhase(at index: Int) -> Int {
@@ -18,5 +19,8 @@ class HomeInteractorMock: HomeInteractor, HomeInteractorSpy  {
         return super.nextIndexForCardPhase(at: index)
     }
     
-    
+    override func openDeviceSettings() {
+        openSettingsHasBeenCalled = true
+        super.openDeviceSettings()
+    }
 }

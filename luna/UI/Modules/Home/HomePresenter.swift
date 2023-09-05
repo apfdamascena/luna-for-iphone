@@ -16,7 +16,9 @@ class HomePresenter: ViewToPresenterHomeProtocol {
     var interactor: PresenterToInteractorHomeProtocol?
     var router: PresenterToRouterHomeProtocol?
     
-    init(view: PresenterToViewHomeProtocol? = nil, interactor: PresenterToInteractorHomeProtocol? = nil, router: PresenterToRouterHomeProtocol? = nil) {
+    init(view: PresenterToViewHomeProtocol? = nil,
+         interactor: PresenterToInteractorHomeProtocol? = nil,
+         router: PresenterToRouterHomeProtocol? = nil) {
         self.view = view
         self.interactor = interactor
         self.router = router

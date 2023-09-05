@@ -97,7 +97,8 @@ class HomeViewController: UIViewController {
         homeView.calendarCollectionView
             .rx.selectItemAtCalendar
             .subscribe(onNext: { selectedCell, centerCell, centerXtoCollection in
-                self.presenter?.userSelect(selectedCell, center: centerCell,
+                self.presenter?.userSelect(selectedCell,
+                                           center: centerCell,
                                            andMoveCenter: centerXtoCollection)
             }).disposed(by: disposeBag)
         

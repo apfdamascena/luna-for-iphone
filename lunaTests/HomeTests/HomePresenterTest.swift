@@ -58,5 +58,14 @@ final class HomePresenterTest: XCTestCase {
         
         XCTAssertTrue(router.isPushReferencesSheetCalled)
     }
+    
+    func testShouldOpenPermissionsDeviceWhenUserTapSettings(){
+        let interactorMock = HomeInteractorMock()
+        let presenter = HomePresenter(interactor: interactorMock)
+        
+        presenter.userOpenDeviceSettings()
+        
+        XCTAssertTrue(interactorMock.openSettingsHasBeenCalled)
+    }
 }
 
