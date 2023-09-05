@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import FirebaseAnalytics
 
 class HomeViewController: UIViewController {
     
@@ -104,6 +105,16 @@ class HomeViewController: UIViewController {
         guard let initialOffset = homeView.calendarCollectionView.getInitialOffset() else { return }
         homeView.calendarCollectionView.contentOffset.x = initialOffset
     }
+    func a() {
+        print("CARALHO")
+        Analytics.logEvent("click_phase_card", parameters: ["phase":"pms"])
+//        Eventss.shared.post(.homeV) {
+//                   Analytics.logEvent(
+//                       $0.eventName,
+//                       parameters: ["teste":"teste"]
+//                   )
+//               }
+    }
     
     func addCyclePhaseEventObservable() {
         datasource.cyclePhase
@@ -127,6 +138,7 @@ class HomeViewController: UIViewController {
         homeView.referencesButton
             .rx
             .tap.bind {
+                self.a()
                 self.presenter?.showCyclePhaseReferencesSheet()
             }.disposed(by: disposeBag)
     }
