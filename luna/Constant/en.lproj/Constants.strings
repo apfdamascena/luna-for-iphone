@@ -151,6 +151,103 @@
 "constants.content.label.home.card.folicular.four" = "Don't let yourself get thirsty during this phase. Hydrate abundantly!";
 "constants.content.label.home.card.folicular.five" = "Maintain good eating and exercise habits.";
 
+"constants.content.label.onboarding_landing_page"="Awake your own cycle";
+
+
+"constants.content.notification.firstPhaseDay.expected_menstruation.title"="Ding Dong, cheguei 🩸";
+"constants.content.notification.firstPhaseDay.expected_menstruation.body"="Você entrará na fase menstrual nos próximos dias. Registre em Luna!";
+
+"constants.content.notification.firstPhaseDay.fertile.title"="Cheguei, mores  💅";
+"constants.content.notification.firstPhaseDay.fertile.body"="Fase ovulatória à vista! Saiba o que pode acontecer nessa fase 👉";
+
+"constants.content.notification.firstPhaseDay.folicular.title"="Chegou a famosa ⚡️";
+"constants.content.notification.firstPhaseDay.folicular.body"="Ela mesmo, a Fase Folicular! Energia pode estar em alta hoje, veja como aproveitar!";
+
+"constants.content.notification.firstPhaseDay.luteal.title"="Piscou e eu cheguei";
+"constants.content.notification.firstPhaseDay.luteal.body"="Fase Lútea on! Hormônios em alta. Saiba o que pode acontecer nessa fase 👉";
+
+"constants.content.notification.firstPhaseDay.pms.title"="Sem gracinha hoje";
+"constants.content.notification.firstPhaseDay.pms.body"="Sintomas da TPM podem aparecer nos próximos dias. Saiba mais sobre essa fase 👉";
+
+"constants.content.notification.firstPhaseDay.expected_menstruation.title" = "Ding Dong, I've arrived 🩸";
+
+"constants.content.notification.firstPhaseDay.expected_menstruation.body" = "You will enter the menstrual phase in the next few days. Record it in Luna!";
+
+"constants.content.notification.firstPhaseDay.fertile.title" = "I'm here, darlings 💅";
+
+"constants.content.notification.firstPhaseDay.fertile.body" = "Ovulatory phase ahead! Learn what can happen in this phase 👉";
+
+"constants.content.notification.firstPhaseDay.folicular.title" = "The famous one has arrived ⚡️";
+
+"constants.content.notification.firstPhaseDay.folicular.body" = "It's here, the Follicular Phase! Energy might be high today, see how to make the most of it!";
+
+"constants.content.notification.firstPhaseDay.luteal.title" = "Blink, and I'm here";
+
+"constants.content.notification.firstPhaseDay.luteal.body" = "Luteal Phase on! Hormones are on the rise. Find out what can happen in this phase 👉";
+
+"constants.content.notification.firstPhaseDay.pms.title" = "No kidding today";
+
+"constants.content.notification.firstPhaseDay.pms.body" = "PMS symptoms may appear in the next few days. Learn more about this phase 👉";
+
+"constants.content.notification.dataset.expected_menstruation.title" = "Those days 🩸";
+
+"constants.content.notification.dataset.expected_menstruation.body" = "Organize your tasks for when your energy returns to its peak. Luna helps you with that! 👉";
+
+"constants.content.notification.dataset.expected_menstruation.title1" = "How are you? ❤️";
+
+"constants.content.notification.dataset.expected_menstruation.body1" = "According to Luna's predictions, you are in the menstrual phase. Remember to record it!";
+
+"constants.content.notification.dataset.expected_menstruation.title2" = "Forecast: time to take care! ⏰";
+
+"constants.content.notification.dataset.expected_menstruation.body2" = "Take some time to relax and engage in activities that help relieve stress. Learn more";
+
+"constants.content.notification.dataset.folicular.title" = "Get ready, let's go! 🏃‍♀️";
+
+"constants.content.notification.dataset.folicular.body" = "You might feel more energetic today, so go for strength workouts. Learn more";
+
+"constants.content.notification.dataset.folicular.title1" = "SERIOUS: it's time 🚨";
+
+"constants.content.notification.dataset.folicular.body1" = "Time to hydrate, my friend. Come on, stay hydrated, and your body will thank you!";
+
+"constants.content.notification.dataset.folicular.title2" = "High energy!";
+
+"constants.content.notification.dataset.folicular.body2" = "You may have more motivation today! How about tackling your weekly tasks?";
+
+"constants.content.notification.dataset.luteal.title" = "Hormones are surging!";
+
+"constants.content.notification.dataset.luteal.body" = "Estrogen and progesterone levels peak in this phase. Find out how this can affect your routine 👉";
+
+"constants.content.notification.dataset.luteal.title1" = "Total peace ✌️";
+
+"constants.content.notification.dataset.luteal.body1" = "It's a good time for calm activities. Learn more about this phase!";
+
+"constants.content.notification.dataset.luteal.title2" = "8 or 80?";
+
+"constants.content.notification.dataset.luteal.body2" = "Your mood may vary today, so it's best to avoid major changes, okay? Learn more 👉";
+
+"constants.content.notification.dataset.pms.title" = "Tip of the day ✨";
+
+"constants.content.notification.dataset.pms.body" = "Your body may be retaining more fluids. Avoiding excessive salty foods can help.";
+
+"constants.content.notification.dataset.pms.title1" = "Stay strong!";
+
+"constants.content.notification.dataset.pms.body1" = "You may experience cramps and other body pains in this phase. See what else might happen 👉";
+
+"constants.content.notification.dataset.pms.title2" = "It's literally a phase!";
+
+"constants.content.notification.dataset.pms.body2" = "Today seems like a mix of emotions, right? Learn more about this phase 👉";
+
+"constants.content.notification.dataset.fertile.title" = "Extra dose! 🔋";
+
+"constants.content.notification.dataset.fertile.body" = "Make the most of the determination peak in this phase to work on your goals!";
+
+"constants.content.notification.dataset.fertile.title1" = "Did I hear intensity? 💪";
+
+"constants.content.notification.dataset.fertile.body1" = "Take advantage of the high energy for more intense workouts! Learn more about the current phase!";
+
+"constants.content.notification.dataset.fertile.title2" = "Waterworks...💧";
+
+"constants.content.notification.dataset.fertile.body2" = "Today seems like a mix of emotions, right? Learn more about this phase 👉";
 "constants.content.label.onboarding_landing_page"="Find your own cycle";
 
 "constants.content.label.home.no_data"="On this day, we didn't have your data yet.";
