@@ -57,7 +57,7 @@
 		0D7C73AD2A67580D00677D1E /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */; };
 		0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */; };
 		0D7C73B02A67834100677D1E /* TouchableUserEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C73AF2A67834100677D1E /* TouchableUserEvent.swift */; };
-		0D9D8A0D2AA699A400B64E2D /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D8A0C2AA699A400B64E2D /* HomeInteractor.swift */; };
+		0D9D8A0D2AA699A400B64E2D /* HomeInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D8A0C2AA699A400B64E2D /* HomeInteractorTest.swift */; };
 		0DA56C552A6B33AC00E056C1 /* OnboardingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA56C542A6B33AC00E056C1 /* OnboardingButtonView.swift */; };
 		0DA74C762A9549CB0021EC40 /* CoconRegularFont.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0DA74C752A9549CB0021EC40 /* CoconRegularFont.otf */; };
 		0DA74C772A9549CB0021EC40 /* CoconRegularFont.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0DA74C752A9549CB0021EC40 /* CoconRegularFont.otf */; };
@@ -240,7 +240,7 @@
 		0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		0D7C73AF2A67834100677D1E /* TouchableUserEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchableUserEvent.swift; sourceTree = "<group>"; };
-		0D9D8A0C2AA699A400B64E2D /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		0D9D8A0C2AA699A400B64E2D /* HomeInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTest.swift; sourceTree = "<group>"; };
 		0DA56C542A6B33AC00E056C1 /* OnboardingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButtonView.swift; sourceTree = "<group>"; };
 		0DA74C752A9549CB0021EC40 /* CoconRegularFont.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoconRegularFont.otf; sourceTree = "<group>"; };
 		0DBADD952A65FDF100A10FC3 /* luna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = luna.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -395,7 +395,7 @@
 				0D0B29182AA151380048722A /* Doubles */,
 				0D0B29162AA11EC70048722A /* HomeRouterTest.swift */,
 				0D0B291D2AA23C920048722A /* HomePresenterTest.swift */,
-				0D9D8A0C2AA699A400B64E2D /* HomeInteractor.swift */,
+				0D9D8A0C2AA699A400B64E2D /* HomeInteractorTest.swift */,
 			);
 			path = HomeTests;
 			sourceTree = "<group>";
@@ -1539,7 +1539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D0B291C2AA151C10048722A /* HomeRouterSpy.swift in Sources */,
-				0D9D8A0D2AA699A400B64E2D /* HomeInteractor.swift in Sources */,
+				0D9D8A0D2AA699A400B64E2D /* HomeInteractorTest.swift in Sources */,
 				0D0B29172AA11EC70048722A /* HomeRouterTest.swift in Sources */,
 				0D0B291A2AA151490048722A /* HomeRouterMock.swift in Sources */,
 				0D0B29282AA265F50048722A /* HomeInteractorMock.swift in Sources */,

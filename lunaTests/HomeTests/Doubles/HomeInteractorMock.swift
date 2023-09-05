@@ -8,36 +8,20 @@
 @testable import luna
 import UIKit
 
+protocol HomeInteractorSpy {
+    
+    var nextIndexForCardPhaseCalled: Bool { get }
+}
 
-class HomeInteractorMock: PresenterToInteractorHomeProtocol {
+
+class HomeInteractorMock: HomeInteractor, HomeInteractorSpy  {
+
+    var nextIndexForCardPhaseCalled: Bool = false
     
-    var calendarPermission: luna.CalendarAccess = .authorized
-    
-    var lunaCalendarManager: luna.CalendarManager?
-    var presenter: luna.InteractorToPresenterHomeProtocol?
-    
-    
-    func checkIfUserGivePermission(completion: @escaping luna.PermissionResponse) {
-    }
-    
-    func loadPhasesToUserCalendar() {
+    override func nextIndexForCardPhase(at index: Int) -> Int {
+        nextIndexForCardPhaseCalled = true
         
+        return super.nextIndexForCardPhase(at: index)
     }
     
-    func loadCalendarToCollection() -> [luna.CyclePhaseViewModel] {
-        return []
-    }
-    
-    func insertedMenstruationToCollection(selectedDate: Date) -> Bool {
-        return false
-        
-    }
-    
-    func openDeviceSettings() {
-        
-    }
-    
-    func nextIndexForCardPhase(at index: Int) -> Int {
-        return (index + 1) % 5
-    }
 }
