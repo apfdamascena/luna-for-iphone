@@ -26,24 +26,27 @@ final class HomePresenterTest: XCTestCase {
         presenter.userTappedCardPhase(at: fakeCard)
         
         XCTAssertTrue(interactor.nextIndexForCardPhaseCalled)
-        XCTAssertEqual(interactor.nextIndexCardPhase, expectedCardPhase)
-        
-        
-        
-        
+        XCTAssertEqual(view.cardPhaseFake, expectedCardPhase)
         
     }
     
     func testShouldRestartCardViewWhenUserTapLastCardPhase(){
-//        let (sut, view ) = makeSUT()
-//        let currentCardPhase = 4
-//        let expectedCardPhase = 0
-//        sut.userTappedCardPhase(at: currentCardPhase)
-//
-//
-//        XCTAssertTrue(sut.userTappedCardPhaseCalled)
-//        XCTAssertTrue(view.shouldChangeCardPhase)
-//        XCTAssertEqual(view.cardPhaseFake, expectedCardPhase)
+        
+        let view = HomeViewControllerMock()
+        let router = HomeRouterMock()
+        let interactor = HomeInteractorMock()
+        
+        let presenter = HomePresenter(view: view,
+                                      interactor: interactor,
+                                      router: router)
+        
+        let fakeCard = 4
+        let expectedCardPhase = 0
+        
+        presenter.userTappedCardPhase(at: fakeCard)
+        
+        XCTAssertTrue(interactor.nextIndexForCardPhaseCalled)
+        XCTAssertEqual(view.cardPhaseFake, expectedCardPhase)
     }
 }
 

@@ -20,7 +20,6 @@ class HomeInteractorMock: HomeInteractor, HomeInteractorSpy  {
     
     override func nextIndexForCardPhase(at index: Int) -> Int {
         nextIndexForCardPhaseCalled = true
-        
         return super.nextIndexForCardPhase(at: index)
     }
     
