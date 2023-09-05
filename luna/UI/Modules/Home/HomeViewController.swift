@@ -128,7 +128,12 @@ class HomeViewController: UIViewController {
             .rx
             .tap.bind {
                 self.presenter?.showCyclePhaseReferencesSheet()
+                self.addActivity()
             }.disposed(by: disposeBag)
+    }
+    
+    func addActivity() {
+        presenter?.insertActivity(title: "teste", initialDate: Date(), finalDate: Date().daysAfter(1))
     }
     
     func addTapCardCycleEventObservable() {

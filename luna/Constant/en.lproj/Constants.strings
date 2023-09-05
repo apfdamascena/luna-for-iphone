@@ -9,6 +9,7 @@
 "constants.content.label.menstruation_duration"="How many days does your\nmenstruation last?";
 "constants.content.label.cycle_duration"="How many days does your\nmenstrual cycle last?";
 "constants.content.label.app_name"="Luna";
+"constants.content.label.calendar_activities"="Luna Activities";
 "constants.content.label.landing_page_description"="Your cycle in your favor";
 
 "constants.content.button.continue"="Continue";

@@ -18,8 +18,8 @@ class LunaCalendarManager {
     
     init(calendar: EKCalendar? = nil, lunaEventService: CalendarEventService? = nil, cycleInformationsCalculator: CycleInformationsCalculator? = nil) {
         let calendar = CalendarProvider(eventStore).getCalendar()
-        self.calendar = calendar
-        self.lunaEventService = CalendarEventService(with: eventStore, in: calendar)
+        self.calendar = calendar.generalCalendar
+        self.lunaEventService = CalendarEventService(with: eventStore, in: calendar.generalCalendar)
         self.cycleInformationsCalculator = CycleInformationsCalculator()
     }
 
@@ -33,8 +33,8 @@ class LunaCalendarManager {
             }
             
             let calendar = CalendarProvider(calendarStore).getCalendar()
-            self?.calendar = calendar
-            self?.lunaEventService = CalendarEventService(with: calendarStore, in: calendar)
+            self?.calendar = calendar.generalCalendar
+            self?.lunaEventService = CalendarEventService(with: calendarStore, in: calendar.generalCalendar)
             self?.cycleInformationsCalculator = CycleInformationsCalculator()
             completion(.success(.authorized))
         }

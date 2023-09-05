@@ -39,7 +39,8 @@ protocol ViewToPresenterHomeProtocol {
     func checkCalendarPermission()
     func loadUserCalendar()
     func loadCalendarToCollection()
-    func insertMenstruation(selectedDate: Date) -> Bool 
+    func insertMenstruation(selectedDate: Date) -> Bool
+    func insertActivity(title: String, initialDate: Date, finalDate: Date)
         
     func userSelect(_ cell: CalendarCollectionViewCell?,
                     center: CalendarCollectionViewCell?,
@@ -64,6 +65,7 @@ protocol PresenterToInteractorHomeProtocol {
     func loadPhasesToUserCalendar()
     func loadCalendarToCollection() -> [CyclePhaseViewModel]
     func insertedMenstruationToCollection(selectedDate: Date) -> Bool
+    func insertActivityToCalendar(title: String, initialDate: Date, finalDate: Date)
     
     func openDeviceSettings()
     
