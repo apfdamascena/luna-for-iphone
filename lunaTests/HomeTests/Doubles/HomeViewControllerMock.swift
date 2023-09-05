@@ -21,6 +21,7 @@ class HomeViewControllerMock: HomeViewController, HomeViewControllerSpy {
         presentedView = viewControllerToPresent
     }
 }
+
 extension HomeViewControllerMock {
     
     override func changeCurrentIndexCardPhase(at newIndex: Int) {

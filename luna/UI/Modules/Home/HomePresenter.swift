@@ -36,7 +36,6 @@ class HomePresenter: ViewToPresenterHomeProtocol {
     
     func showCyclePhaseReferencesSheet() {
         guard let homePresenterView = view else { return }
-
         self.router?.pushReferencesSheet(on: homePresenterView)
     }
     

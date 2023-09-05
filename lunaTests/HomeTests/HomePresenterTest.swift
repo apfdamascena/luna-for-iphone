@@ -48,5 +48,17 @@ final class HomePresenterTest: XCTestCase {
         XCTAssertTrue(interactor.nextIndexForCardPhaseCalled)
         XCTAssertEqual(view.cardPhaseFake, expectedCardPhase)
     }
+    
+    
+    func testShouldShowCyclePhaseReferencesWhenUserTap(){
+        let router = HomeRouterMock()
+        let presenter = HomePresenter(router: router)
+        
+        presenter.showCyclePhaseReferencesSheet()
+        
+        XCTAssertTrue(router.isPushReferencesSheetCalled)
+    }
+    
+    
 }
 
