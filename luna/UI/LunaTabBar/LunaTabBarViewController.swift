@@ -11,8 +11,8 @@ class LunaTabBarViewController: UITabBarController {
     
     private let controllers = [
         HomeRouter.createModule(),
-        LandingPageRouter.createModule(),
-        LandingPageRouter.createModule(),
+        UIViewController(),
+        ReferencesViewController(), 
     ]
     
     private let icons = [
@@ -50,6 +50,5 @@ class LunaTabBarViewController: UITabBarController {
         tabBar.unselectedItemTintColor = Asset.gray400.color
         tabBar.tintColor = Asset.red500.color
     }
-    
 
 }
