@@ -12,7 +12,6 @@ import UIKit
 class HomePresenterMock: HomePresenter, HomePresenterSpy {
     
     var userTappedCardPhaseCalled: Bool = false
-    
-    
+
 }
 

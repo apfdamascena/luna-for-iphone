@@ -7,21 +7,6 @@
 @testable import luna
 import XCTest
 
-class LunaCalendarManagerMock: LunaCalendarManager {
-    
-    private var requestAccessToCalendarCompletion: Result<CalendarAccess, CalendarAccessError>
-    
-    init(with completion: Result<CalendarAccess, CalendarAccessError> = .failure(.permissionDenied)) {
-        self.requestAccessToCalendarCompletion = completion
-    }
-    
-    override func requestAccessToCalendar(completion: @escaping PermissionResponse) {
-        completion(requestAccessToCalendarCompletion)
-    }
-}
-
-
-
 final class HomeInteractorTest: XCTestCase {
 
     func testCheckIfUserGavePermission() throws {

@@ -10,4 +10,6 @@ protocol HomeViewControllerSpy {
     
     var shouldChangeCardPhase: Bool { get }
     var cardPhaseFake: Int { get }
+    
 }
+
