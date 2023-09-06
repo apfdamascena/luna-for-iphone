@@ -66,6 +66,13 @@ class HomePresenter: ViewToPresenterHomeProtocol {
     func insertActivity(title: String, initialDate: Date, finalDate: Date) {
         interactor?.insertActivityToCalendar(title: title, initialDate: initialDate, finalDate: finalDate)
     }
+    
+    func findBestPhase(activity: ActivityMetrics) {
+        let idealPhase = interactor?.findBestPhaseFor(activity: activity)
+        print("Caralhu", idealPhase?.title)
+        print("Caralhu", idealPhase?.startDate)
+        print("Caralhu", idealPhase?.endDate)
+    }
 
     
     func moveTo(_ centerCell: CalendarCollectionViewCell?) {

@@ -149,6 +149,7 @@
 		CA21442E2AA64F04008AE239 /* CalendarTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21442D2AA64F04008AE239 /* CalendarTitle.swift */; };
 		CA2144302AA6557D008AE239 /* ActivitiesCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21442F2AA6557D008AE239 /* ActivitiesCalendarManager.swift */; };
 		CA2144322AA65C3F008AE239 /* ActivityEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2144312AA65C3F008AE239 /* ActivityEvent.swift */; };
+		CA2144362AA8F815008AE239 /* ActivityMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2144352AA8F815008AE239 /* ActivityMetrics.swift */; };
 		CA557BCC2A6B1742001DF2BB /* LandingPageContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA557BC82A6B1742001DF2BB /* LandingPageContract.swift */; };
 		CA557BCD2A6B1743001DF2BB /* LandingPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA557BC92A6B1742001DF2BB /* LandingPagePresenter.swift */; };
 		CA557BCE2A6B1743001DF2BB /* LandingPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA557BCA2A6B1742001DF2BB /* LandingPageRouter.swift */; };
@@ -331,6 +332,7 @@
 		CA21442D2AA64F04008AE239 /* CalendarTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTitle.swift; sourceTree = "<group>"; };
 		CA21442F2AA6557D008AE239 /* ActivitiesCalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCalendarManager.swift; sourceTree = "<group>"; };
 		CA2144312AA65C3F008AE239 /* ActivityEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityEvent.swift; sourceTree = "<group>"; };
+		CA2144352AA8F815008AE239 /* ActivityMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMetrics.swift; sourceTree = "<group>"; };
 		CA557BC82A6B1742001DF2BB /* LandingPageContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageContract.swift; sourceTree = "<group>"; };
 		CA557BC92A6B1742001DF2BB /* LandingPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPagePresenter.swift; sourceTree = "<group>"; };
 		CA557BCA2A6B1742001DF2BB /* LandingPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageRouter.swift; sourceTree = "<group>"; };
@@ -973,6 +975,7 @@
 				BFD1A0262A84114300F420B5 /* LunaEvent.swift */,
 				BFD1A0282A8411B600F420B5 /* CycleInformations.swift */,
 				CA2144312AA65C3F008AE239 /* ActivityEvent.swift */,
+				CA2144352AA8F815008AE239 /* ActivityMetrics.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1496,6 +1499,7 @@
 				A46C05132A6EFE150071ABCE /* CalendarRouter.swift in Sources */,
 				A48B7EE02A7AF48E00CCC4C0 /* BallComponent.swift in Sources */,
 				BFD533B82A7156970063351E /* CalendarProvider.swift in Sources */,
+				CA2144362AA8F815008AE239 /* ActivityMetrics.swift in Sources */,
 				0D6336AB2A7756B200EE9699 /* Double+Su.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
