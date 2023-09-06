@@ -65,9 +65,8 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
         if response == ChangeCycleResponse.isMenstruation {
             isRemove = true
         }
-        
-        lunaCalendarManager?.adjustEventsInCalendar(isRemove: isRemove)
-        
+
+        lunaCalendarManager?.adjustEventsInCalendar(selectedDate: selectedDate, isRemove: isRemove)
         if response == ChangeCycleResponse.hasMenstruationNearDate {
             return true
         }

@@ -16,6 +16,15 @@
 		0D0B29242AA264540048722A /* HomePresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B29232AA264540048722A /* HomePresenterMock.swift */; };
 		0D0B29262AA264A70048722A /* HomePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B29252AA264A70048722A /* HomePresenterSpy.swift */; };
 		0D0B29282AA265F50048722A /* HomeInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B29272AA265F50048722A /* HomeInteractorMock.swift */; };
+		0D0B28C92A9FB15D0048722A /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28C82A9FB15D0048722A /* Notification.swift */; };
+		0D0B28CB2A9FD8A10048722A /* NotificationFilterCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28CA2A9FD8A10048722A /* NotificationFilterCommand.swift */; };
+		0D0B28CD2A9FD90C0048722A /* NotificationFirstPhaseDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28CC2A9FD90C0048722A /* NotificationFirstPhaseDay.swift */; };
+		0D0B28D12A9FDBB60048722A /* NotificationFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28D02A9FDBB60048722A /* NotificationFilter.swift */; };
+		0D0B28D32A9FF8400048722A /* NotificationStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28D22A9FF8400048722A /* NotificationStation.swift */; };
+		0D0B28D52AA004500048722A /* NotificationFirstPhaseDayMessageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28D42AA004500048722A /* NotificationFirstPhaseDayMessageFactory.swift */; };
+		0D0B28D72AA0050B0048722A /* NotificationBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28D62AA0050B0048722A /* NotificationBody.swift */; };
+		0D0B292A2AA3AFBC0048722A /* NotificationCurrentPhaseInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B29292AA3AFBC0048722A /* NotificationCurrentPhaseInformation.swift */; };
+		0D0B292C2AA3B4200048722A /* NotificationCurrentPhaseInformationMessageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B292B2AA3B4200048722A /* NotificationCurrentPhaseInformationMessageFactory.swift */; };
 		0D15FE942A7DB12100FD64E4 /* WarningNoMenstrualData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15FE932A7DB12100FD64E4 /* WarningNoMenstrualData.swift */; };
 		0D2FC76A2A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */; };
 		0D2FC76C2A6EF4810025D8B6 /* DataSourceEventObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */; };
@@ -200,6 +209,15 @@
 		0D0B29232AA264540048722A /* HomePresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterMock.swift; sourceTree = "<group>"; };
 		0D0B29252AA264A70048722A /* HomePresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterSpy.swift; sourceTree = "<group>"; };
 		0D0B29272AA265F50048722A /* HomeInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorMock.swift; sourceTree = "<group>"; };
+		0D0B28C82A9FB15D0048722A /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		0D0B28CA2A9FD8A10048722A /* NotificationFilterCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFilterCommand.swift; sourceTree = "<group>"; };
+		0D0B28CC2A9FD90C0048722A /* NotificationFirstPhaseDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFirstPhaseDay.swift; sourceTree = "<group>"; };
+		0D0B28D02A9FDBB60048722A /* NotificationFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFilter.swift; sourceTree = "<group>"; };
+		0D0B28D22A9FF8400048722A /* NotificationStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationStation.swift; sourceTree = "<group>"; };
+		0D0B28D42AA004500048722A /* NotificationFirstPhaseDayMessageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFirstPhaseDayMessageFactory.swift; sourceTree = "<group>"; };
+		0D0B28D62AA0050B0048722A /* NotificationBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBody.swift; sourceTree = "<group>"; };
+		0D0B29292AA3AFBC0048722A /* NotificationCurrentPhaseInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCurrentPhaseInformation.swift; sourceTree = "<group>"; };
+		0D0B292B2AA3B4200048722A /* NotificationCurrentPhaseInformationMessageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCurrentPhaseInformationMessageFactory.swift; sourceTree = "<group>"; };
 		0D15FE932A7DB12100FD64E4 /* WarningNoMenstrualData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningNoMenstrualData.swift; sourceTree = "<group>"; };
 		0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSource.swift; sourceTree = "<group>"; };
 		0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceEventObservable.swift; sourceTree = "<group>"; };
@@ -404,6 +422,7 @@
 			path = HomeTests;
 			sourceTree = "<group>";
 		};
+		
 		0D0B29182AA151380048722A /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,6 +437,23 @@
 				0D9D8A102AA8EEEE00B64E2D /* LunaCalendarManagerMock.swift */,
 			);
 			path = Doubles;
+			sourceTree = "<group>";
+		};
+		
+		0D0B28C72A9FB1490048722A /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				0D0B28C82A9FB15D0048722A /* Notification.swift */,
+				0D0B28CA2A9FD8A10048722A /* NotificationFilterCommand.swift */,
+				0D0B28CC2A9FD90C0048722A /* NotificationFirstPhaseDay.swift */,
+				0D0B28D02A9FDBB60048722A /* NotificationFilter.swift */,
+				0D0B28D22A9FF8400048722A /* NotificationStation.swift */,
+				0D0B28D42AA004500048722A /* NotificationFirstPhaseDayMessageFactory.swift */,
+				0D0B28D62AA0050B0048722A /* NotificationBody.swift */,
+				0D0B29292AA3AFBC0048722A /* NotificationCurrentPhaseInformation.swift */,
+				0D0B292B2AA3B4200048722A /* NotificationCurrentPhaseInformationMessageFactory.swift */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		0D15FE922A7DB0B600FD64E4 /* WarningNoMenstrualData */ = {
@@ -618,6 +654,7 @@
 		0DBADD972A65FDF100A10FC3 /* luna */ = {
 			isa = PBXGroup;
 			children = (
+				0D0B28C72A9FB1490048722A /* Notification */,
 				CAE579A02A7AD80F004EE21C /* Utilities */,
 				BF4DC2D02A72DC450005BF7E /* Enums */,
 				BFD533BD2A716B980063351E /* Extensions */,
@@ -1403,16 +1440,20 @@
 				0D2FC76E2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift in Sources */,
 				A48F4A322A9684B600BB5058 /* CycleCardView.swift in Sources */,
 				BFD1A01B2A82E18600F420B5 /* CalendarAccess.swift in Sources */,
+				0D0B28D72AA0050B0048722A /* NotificationBody.swift in Sources */,
 				0D2FC7722A6EF59B0025D8B6 /* OnboardingViewFlow.swift in Sources */,
 				0DBADDE92A66045700A10FC3 /* UIViewController+Preview.swift in Sources */,
+				0D0B28CB2A9FD8A10048722A /* NotificationFilterCommand.swift in Sources */,
 				CA17ED982A71EDCE0051BF9D /* CyclePhaseViewModel.swift in Sources */,
 				BF4144312A93DC2F00517910 /* LunaCalendarManager+Check.swift in Sources */,
 				BFD533BC2A7166360063351E /* CalendarEventService.swift in Sources */,
+				0D0B292C2AA3B4200048722A /* NotificationCurrentPhaseInformationMessageFactory.swift in Sources */,
 				0D6336AD2A7756D000EE9699 /* CGFloat+DynamicFontSize.swift in Sources */,
 				BFBD77132A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift in Sources */,
 				0D67942F2A74725200382142 /* TeachRecordMenstruationContract.swift in Sources */,
 				BF6520DF2A6F0D4B00E60054 /* CycleDurationPresenter.swift in Sources */,
 				0DBADDE12A6603F800A10FC3 /* LastDayMenstruationRouter.swift in Sources */,
+				0D0B28D12A9FDBB60048722A /* NotificationFilter.swift in Sources */,
 				0DBADDA32A65FDF100A10FC3 /* luna.xcdatamodeld in Sources */,
 				BF6520E02A6F0D4B00E60054 /* CycleDurationRouter.swift in Sources */,
 				BFD1A0292A8411B600F420B5 /* CycleInformations.swift in Sources */,
@@ -1420,6 +1461,7 @@
 				A46C05162A6EFE150071ABCE /* CalendarView.swift in Sources */,
 				A46C05572A7464970071ABCE /* LunaButton.swift in Sources */,
 				A46C05142A6EFE150071ABCE /* CalendarPresenter.swift in Sources */,
+				0D0B28D52AA004500048722A /* NotificationFirstPhaseDayMessageFactory.swift in Sources */,
 				A48F4A372A9690C000BB5058 /* DynamicCardPhaseFactory.swift in Sources */,
 				0D2FC76A2A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift in Sources */,
 				0DF410632A840E8C00A10405 /* CalendarCollectionView+Rx.swift in Sources */,
@@ -1446,11 +1488,13 @@
 				0DDA612A2A69CEC600CA15C6 /* MenstruationDurationViewController.swift in Sources */,
 				CA17ED962A71ED750051BF9D /* CyclePhaseFocus.swift in Sources */,
 				0DA56C552A6B33AC00E056C1 /* OnboardingButtonView.swift in Sources */,
+				0D0B28D32A9FF8400048722A /* NotificationStation.swift in Sources */,
 				0D4049D92A7048000058669B /* OnboardingPageControlDelegateImpl.swift in Sources */,
 				0D6794212A735C1B00382142 /* HomePresenter.swift in Sources */,
 				BFD533B62A71567A0063351E /* CalendarCreator.swift in Sources */,
 				A48F4A242A82DC8800BB5058 /* LunaButtonReferences.swift in Sources */,
 				CAE579A22A7AD8A1004EE21C /* CalendarCollectionConverter.swift in Sources */,
+				0D0B28CD2A9FD90C0048722A /* NotificationFirstPhaseDay.swift in Sources */,
 				A48F4A3E2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift in Sources */,
 				0D6336A12A774D7A00EE9699 /* OtherCyclePhasesViewController.swift in Sources */,
 				0DF4106B2A85712E00A10405 /* LearnCycleTitle.swift in Sources */,
@@ -1474,6 +1518,7 @@
 				0D6336F42A799BAC00EE9699 /* CalendarCollectionViewDataSourceImpl.swift in Sources */,
 				A46C05552A74642C0071ABCE /* HomeView.swift in Sources */,
 				A48B7ECD2A77118400CCC4C0 /* FeedbackCard.swift in Sources */,
+				0D0B292A2AA3AFBC0048722A /* NotificationCurrentPhaseInformation.swift in Sources */,
 				0DF410692A856A6300A10405 /* PhaseCycleTitle.swift in Sources */,
 				0D6794202A735C1B00382142 /* HomeContract.swift in Sources */,
 				0D7C73AE2A67580D00677D1E /* XCAssets+Generated.swift in Sources */,
@@ -1505,6 +1550,7 @@
 				A46C05502A74641E0071ABCE /* LunaButtonFactory.swift in Sources */,
 				0D7C73AD2A67580D00677D1E /* Strings+Generated.swift in Sources */,
 				0DBADDD32A66005500A10FC3 /* LunaTextViewModel.swift in Sources */,
+				0D0B28C92A9FB15D0048722A /* Notification.swift in Sources */,
 				BFD1A0272A84114300F420B5 /* LunaEvent.swift in Sources */,
 				0D6336972A774C7D00EE9699 /* OnboardingInformation.swift in Sources */,
 				0DBADDE02A6603F800A10FC3 /* LastDayMenstruationPresenter.swift in Sources */,
@@ -1730,7 +1776,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CMWHQAT5B4;
+				DEVELOPMENT_TEAM = M3SKJK6V42;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = luna/Info.plist;
@@ -1745,7 +1791,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ufpe.luna;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1765,7 +1811,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CMWHQAT5B4;
+				DEVELOPMENT_TEAM = M3SKJK6V42;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = luna/Info.plist;
@@ -1780,7 +1826,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ufpe.luna;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1800,7 +1846,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4UVYB4V5UN;
+				DEVELOPMENT_TEAM = M3SKJK6V42;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
@@ -1843,7 +1889,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4UVYB4V5UN;
+				DEVELOPMENT_TEAM = M3SKJK6V42;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;

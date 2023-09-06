@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+
 class HomeViewController: UIViewController {
     
     var presenter: ViewToPresenterHomeProtocol?
@@ -19,6 +20,8 @@ class HomeViewController: UIViewController {
     
     private var datasource: CalendarCollectionViewDataSource
     private var cardPhaseDataSource: CardPhaseControlDataSource
+
+    private let notificationStation = NotificationStation()
     
     init(
         datasource: CalendarCollectionViewDataSource = CalendarCollectionViewDataSourceImpl(),
@@ -50,12 +53,15 @@ class HomeViewController: UIViewController {
         cardCyclePhaseHandler()
         seeMoreButtonTouchTrigger()
         addTapCardCycleEventObservable()
+        addNotificationEventObservable()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
         self.navigationController?.isNavigationBarHidden = true
+        Notification.shared.requestAccess()
+        
         DispatchQueue.main.async {
             self.presenter?.loadCalendarToCollection()
         }
@@ -80,6 +86,17 @@ class HomeViewController: UIViewController {
                       cellType: CalendarCollectionViewCell.self)){ _, day, cell in
             cell.draw(day)
         }.disposed(by: disposeBag)
+    }
+    
+    private func addNotificationEventObservable(){
+        
+        datasource.data
+            .asObservable()
+            .subscribe(onNext: { cycleDays in
+                let cycleDaysFromToday = cycleDays.filter{ $0.day > Date() }
+                self.notificationStation.addScheduleNotification(for: cycleDaysFromToday)
+            })
+            .disposed(by: disposeBag)
     }
     
     func addCalendarEventObservable() {
