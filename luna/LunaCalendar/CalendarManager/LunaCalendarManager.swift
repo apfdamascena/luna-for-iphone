@@ -88,15 +88,6 @@ class LunaCalendarManager {
                 endDate: phase.endDate)
             createEvent(event)
 
-//            if event.startDate.formatToInt() > Date().formatToInt() || isFirst {
-//                createEvent(event)
-//            } else if event.endDate.formatToInt() > Date().formatToInt() {
-//                let event = LunaEvent(
-//                    title: phase.title,
-//                    startDate: Date().daysAfter(1),
-//                    endDate: phase.endDate)
-//                createEvent(event)
-//            }
         }
     }
     

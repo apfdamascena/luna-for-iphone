@@ -8,8 +8,6 @@
 import Foundation
 
 public protocol AnalyticsEventType {
-
   var eventName: String { get }
-  
-//  var userInfo: [AnyHashable: Any?] { get }
+  var userInfo: [AnyHashable: Any?] { get }
 }

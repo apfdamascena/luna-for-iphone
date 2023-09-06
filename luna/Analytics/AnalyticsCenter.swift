@@ -6,9 +6,9 @@
 //
 import Foundation
 
-public class Eventss {
+public class AnalyticsCenter {
     
-    public static let shared = Eventss()
+    public static let shared = AnalyticsCenter()
     
     private init() {}
     

@@ -8,7 +8,7 @@
 import EventKit
 class CycleInformationsCalculator {
     func saveFirstMenstruationDayFromLastPeriod(events: [EKEvent]) {
-        var menstruationEvents = events.filter { event in
+        let menstruationEvents = events.filter { event in
             return event.title == CyclePhase.menstruation.value
         }
         

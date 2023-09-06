@@ -105,16 +105,6 @@ class HomeViewController: UIViewController {
         guard let initialOffset = homeView.calendarCollectionView.getInitialOffset() else { return }
         homeView.calendarCollectionView.contentOffset.x = initialOffset
     }
-    func a() {
-        print("CARALHO")
-        Analytics.logEvent("click_phase_card", parameters: ["phase":"pms"])
-//        Eventss.shared.post(.homeV) {
-//                   Analytics.logEvent(
-//                       $0.eventName,
-//                       parameters: ["teste":"teste"]
-//                   )
-//               }
-    }
     
     func addCyclePhaseEventObservable() {
         datasource.cyclePhase
@@ -138,7 +128,6 @@ class HomeViewController: UIViewController {
         homeView.referencesButton
             .rx
             .tap.bind {
-                self.a()
                 self.presenter?.showCyclePhaseReferencesSheet()
             }.disposed(by: disposeBag)
     }
@@ -149,6 +138,8 @@ class HomeViewController: UIViewController {
         tapGesture.rx.event.bind(onNext: { _ in
             guard let currentIndex = try? self.cardPhaseDataSource.index.value() else { return }
             self.presenter?.userTappedCardPhase(at: currentIndex)
+            guard let teste = try? self.datasource.cyclePhase.value() else  { return }
+            AnalyticsCenter.shared.post(AnalyticsEvents.clickPhaseCard(teste))
         })
         .disposed(by: disposeBag)
     }

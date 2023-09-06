@@ -8,17 +8,28 @@
 import UIKit
 import CoreData
 import FirebaseCore
+import FirebaseAnalytics
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         resetStateIfUITesting()
-        let filePath = Bundle.main.path(forResource: "GoogleService-Info-dev", ofType: "plist")
-        guard let fileopts = FirebaseOptions(contentsOfFile: filePath!)
-          else { assert(false, "Couldn't load config file") }
-        FirebaseApp.configure(options: fileopts)
+        
+//        let filePath = Bundle.main.path(forResource: "GoogleService-Info-dev", ofType: "plist")
+//        guard let fileopts = FirebaseOptions(contentsOfFile: filePath!)
+//          else { assert(false, "Couldn't load config file") }
+//        FirebaseApp.configure(options: fileopts)
+        FirebaseApp.configure()
+        AnalyticsCenter.shared.track { event in
+            guard let userInfo = event.userInfo as NSDictionary? as? [String: Any] else { return }
 
+           Analytics.logEvent(
+               event.eventName,
+               parameters: userInfo.compactMapValues { $0 }
+           )
+       }
+        
         Thread.sleep(forTimeInterval: 0.5)
         // Override point for customization after application launch.
         return true
