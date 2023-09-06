@@ -19,8 +19,13 @@ class LunaTabBarViewController: UITabBarController {
          ["house","house.fill"],
          ["heart", "heart.fill"],
          ["clock.arrow.circlepath", "clock.arrow.circlepath"],
-         ["person", "person.fill"]
      ]
+    
+    private let titles = [
+        "Home",
+        "Home",
+        "Home"
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +35,7 @@ class LunaTabBarViewController: UITabBarController {
     
     private func setupViewControllers(){
         let navigationControllers = controllers.enumerated().map{ (index, viewController) in
+            viewController.title = titles[index]
             let navigationController = UINavigationController(rootViewController: viewController)
             navigationController.tabBarItem = UITabBarItem(title: viewController.title,
                                                             image: UIImage(systemName: icons[index][0]),
