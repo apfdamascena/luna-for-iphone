@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0B28C92A9FB15D0048722A /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28C82A9FB15D0048722A /* Notification.swift */; };
+		0D0B28CB2A9FD8A10048722A /* NotificationFilterCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28CA2A9FD8A10048722A /* NotificationFilterCommand.swift */; };
+		0D0B28CD2A9FD90C0048722A /* NotificationFirstPhaseDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28CC2A9FD90C0048722A /* NotificationFirstPhaseDay.swift */; };
+		0D0B28D12A9FDBB60048722A /* NotificationFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28D02A9FDBB60048722A /* NotificationFilter.swift */; };
+		0D0B28D32A9FF8400048722A /* NotificationStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28D22A9FF8400048722A /* NotificationStation.swift */; };
+		0D0B28D52AA004500048722A /* NotificationFirstPhaseDayMessageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28D42AA004500048722A /* NotificationFirstPhaseDayMessageFactory.swift */; };
+		0D0B28D72AA0050B0048722A /* NotificationBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28D62AA0050B0048722A /* NotificationBody.swift */; };
 		0D0B29172AA11EC70048722A /* HomeRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B29162AA11EC70048722A /* HomeRouterTest.swift */; };
 		0D0B291A2AA151490048722A /* HomeRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B29192AA151490048722A /* HomeRouterMock.swift */; };
 		0D0B291C2AA151C10048722A /* HomeRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B291B2AA151C10048722A /* HomeRouterSpy.swift */; };
@@ -16,13 +23,6 @@
 		0D0B29242AA264540048722A /* HomePresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B29232AA264540048722A /* HomePresenterMock.swift */; };
 		0D0B29262AA264A70048722A /* HomePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B29252AA264A70048722A /* HomePresenterSpy.swift */; };
 		0D0B29282AA265F50048722A /* HomeInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B29272AA265F50048722A /* HomeInteractorMock.swift */; };
-		0D0B28C92A9FB15D0048722A /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28C82A9FB15D0048722A /* Notification.swift */; };
-		0D0B28CB2A9FD8A10048722A /* NotificationFilterCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28CA2A9FD8A10048722A /* NotificationFilterCommand.swift */; };
-		0D0B28CD2A9FD90C0048722A /* NotificationFirstPhaseDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28CC2A9FD90C0048722A /* NotificationFirstPhaseDay.swift */; };
-		0D0B28D12A9FDBB60048722A /* NotificationFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28D02A9FDBB60048722A /* NotificationFilter.swift */; };
-		0D0B28D32A9FF8400048722A /* NotificationStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28D22A9FF8400048722A /* NotificationStation.swift */; };
-		0D0B28D52AA004500048722A /* NotificationFirstPhaseDayMessageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28D42AA004500048722A /* NotificationFirstPhaseDayMessageFactory.swift */; };
-		0D0B28D72AA0050B0048722A /* NotificationBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B28D62AA0050B0048722A /* NotificationBody.swift */; };
 		0D0B292A2AA3AFBC0048722A /* NotificationCurrentPhaseInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B29292AA3AFBC0048722A /* NotificationCurrentPhaseInformation.swift */; };
 		0D0B292C2AA3B4200048722A /* NotificationCurrentPhaseInformationMessageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B292B2AA3B4200048722A /* NotificationCurrentPhaseInformationMessageFactory.swift */; };
 		0D15FE942A7DB12100FD64E4 /* WarningNoMenstrualData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15FE932A7DB12100FD64E4 /* WarningNoMenstrualData.swift */; };
@@ -69,6 +69,7 @@
 		0D9D8A0D2AA699A400B64E2D /* HomeInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D8A0C2AA699A400B64E2D /* HomeInteractorTest.swift */; };
 		0D9D8A0F2AA6FC5900B64E2D /* HomeInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D8A0E2AA6FC5900B64E2D /* HomeInteractorSpy.swift */; };
 		0D9D8A112AA8EEEE00B64E2D /* LunaCalendarManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D8A102AA8EEEE00B64E2D /* LunaCalendarManagerMock.swift */; };
+		0D9D8A142AA90C5A00B64E2D /* LunaTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D8A132AA90C5A00B64E2D /* LunaTabBarViewController.swift */; };
 		0DA56C552A6B33AC00E056C1 /* OnboardingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA56C542A6B33AC00E056C1 /* OnboardingButtonView.swift */; };
 		0DA74C762A9549CB0021EC40 /* CoconRegularFont.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0DA74C752A9549CB0021EC40 /* CoconRegularFont.otf */; };
 		0DA74C772A9549CB0021EC40 /* CoconRegularFont.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0DA74C752A9549CB0021EC40 /* CoconRegularFont.otf */; };
@@ -200,6 +201,13 @@
 
 /* Begin PBXFileReference section */
 		08D186E62F83C3701D60F993 /* Pods-luna.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna.release.xcconfig"; path = "Target Support Files/Pods-luna/Pods-luna.release.xcconfig"; sourceTree = "<group>"; };
+		0D0B28C82A9FB15D0048722A /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		0D0B28CA2A9FD8A10048722A /* NotificationFilterCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFilterCommand.swift; sourceTree = "<group>"; };
+		0D0B28CC2A9FD90C0048722A /* NotificationFirstPhaseDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFirstPhaseDay.swift; sourceTree = "<group>"; };
+		0D0B28D02A9FDBB60048722A /* NotificationFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFilter.swift; sourceTree = "<group>"; };
+		0D0B28D22A9FF8400048722A /* NotificationStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationStation.swift; sourceTree = "<group>"; };
+		0D0B28D42AA004500048722A /* NotificationFirstPhaseDayMessageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFirstPhaseDayMessageFactory.swift; sourceTree = "<group>"; };
+		0D0B28D62AA0050B0048722A /* NotificationBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBody.swift; sourceTree = "<group>"; };
 		0D0B29162AA11EC70048722A /* HomeRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterTest.swift; sourceTree = "<group>"; };
 		0D0B29192AA151490048722A /* HomeRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterMock.swift; sourceTree = "<group>"; };
 		0D0B291B2AA151C10048722A /* HomeRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterSpy.swift; sourceTree = "<group>"; };
@@ -209,13 +217,6 @@
 		0D0B29232AA264540048722A /* HomePresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterMock.swift; sourceTree = "<group>"; };
 		0D0B29252AA264A70048722A /* HomePresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterSpy.swift; sourceTree = "<group>"; };
 		0D0B29272AA265F50048722A /* HomeInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorMock.swift; sourceTree = "<group>"; };
-		0D0B28C82A9FB15D0048722A /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
-		0D0B28CA2A9FD8A10048722A /* NotificationFilterCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFilterCommand.swift; sourceTree = "<group>"; };
-		0D0B28CC2A9FD90C0048722A /* NotificationFirstPhaseDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFirstPhaseDay.swift; sourceTree = "<group>"; };
-		0D0B28D02A9FDBB60048722A /* NotificationFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFilter.swift; sourceTree = "<group>"; };
-		0D0B28D22A9FF8400048722A /* NotificationStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationStation.swift; sourceTree = "<group>"; };
-		0D0B28D42AA004500048722A /* NotificationFirstPhaseDayMessageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFirstPhaseDayMessageFactory.swift; sourceTree = "<group>"; };
-		0D0B28D62AA0050B0048722A /* NotificationBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBody.swift; sourceTree = "<group>"; };
 		0D0B29292AA3AFBC0048722A /* NotificationCurrentPhaseInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCurrentPhaseInformation.swift; sourceTree = "<group>"; };
 		0D0B292B2AA3B4200048722A /* NotificationCurrentPhaseInformationMessageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCurrentPhaseInformationMessageFactory.swift; sourceTree = "<group>"; };
 		0D15FE932A7DB12100FD64E4 /* WarningNoMenstrualData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningNoMenstrualData.swift; sourceTree = "<group>"; };
@@ -263,6 +264,7 @@
 		0D9D8A0C2AA699A400B64E2D /* HomeInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTest.swift; sourceTree = "<group>"; };
 		0D9D8A0E2AA6FC5900B64E2D /* HomeInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorSpy.swift; sourceTree = "<group>"; };
 		0D9D8A102AA8EEEE00B64E2D /* LunaCalendarManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaCalendarManagerMock.swift; sourceTree = "<group>"; };
+		0D9D8A132AA90C5A00B64E2D /* LunaTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaTabBarViewController.swift; sourceTree = "<group>"; };
 		0DA56C542A6B33AC00E056C1 /* OnboardingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButtonView.swift; sourceTree = "<group>"; };
 		0DA74C752A9549CB0021EC40 /* CoconRegularFont.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoconRegularFont.otf; sourceTree = "<group>"; };
 		0DBADD952A65FDF100A10FC3 /* luna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = luna.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -411,35 +413,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D0B29152AA11EA80048722A /* HomeTests */ = {
-			isa = PBXGroup;
-			children = (
-				0D0B29182AA151380048722A /* Doubles */,
-				0D0B29162AA11EC70048722A /* HomeRouterTest.swift */,
-				0D0B291D2AA23C920048722A /* HomePresenterTest.swift */,
-				0D9D8A0C2AA699A400B64E2D /* HomeInteractorTest.swift */,
-			);
-			path = HomeTests;
-			sourceTree = "<group>";
-		};
-		
-		0D0B29182AA151380048722A /* Doubles */ = {
-			isa = PBXGroup;
-			children = (
-				0D0B29192AA151490048722A /* HomeRouterMock.swift */,
-				0D0B291B2AA151C10048722A /* HomeRouterSpy.swift */,
-				0D0B291F2AA263C80048722A /* HomeViewControllerMock.swift */,
-				0D0B29212AA264220048722A /* HomeViewControllerSpy.swift */,
-				0D0B29232AA264540048722A /* HomePresenterMock.swift */,
-				0D0B29252AA264A70048722A /* HomePresenterSpy.swift */,
-				0D0B29272AA265F50048722A /* HomeInteractorMock.swift */,
-				0D9D8A0E2AA6FC5900B64E2D /* HomeInteractorSpy.swift */,
-				0D9D8A102AA8EEEE00B64E2D /* LunaCalendarManagerMock.swift */,
-			);
-			path = Doubles;
-			sourceTree = "<group>";
-		};
-		
 		0D0B28C72A9FB1490048722A /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +427,33 @@
 				0D0B292B2AA3B4200048722A /* NotificationCurrentPhaseInformationMessageFactory.swift */,
 			);
 			path = Notification;
+			sourceTree = "<group>";
+		};
+		0D0B29152AA11EA80048722A /* HomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				0D0B29182AA151380048722A /* Doubles */,
+				0D0B29162AA11EC70048722A /* HomeRouterTest.swift */,
+				0D0B291D2AA23C920048722A /* HomePresenterTest.swift */,
+				0D9D8A0C2AA699A400B64E2D /* HomeInteractorTest.swift */,
+			);
+			path = HomeTests;
+			sourceTree = "<group>";
+		};
+		0D0B29182AA151380048722A /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				0D0B29192AA151490048722A /* HomeRouterMock.swift */,
+				0D0B291B2AA151C10048722A /* HomeRouterSpy.swift */,
+				0D0B291F2AA263C80048722A /* HomeViewControllerMock.swift */,
+				0D0B29212AA264220048722A /* HomeViewControllerSpy.swift */,
+				0D0B29232AA264540048722A /* HomePresenterMock.swift */,
+				0D0B29252AA264A70048722A /* HomePresenterSpy.swift */,
+				0D0B29272AA265F50048722A /* HomeInteractorMock.swift */,
+				0D9D8A0E2AA6FC5900B64E2D /* HomeInteractorSpy.swift */,
+				0D9D8A102AA8EEEE00B64E2D /* LunaCalendarManagerMock.swift */,
+			);
+			path = Doubles;
 			sourceTree = "<group>";
 		};
 		0D15FE922A7DB0B600FD64E4 /* WarningNoMenstrualData */ = {
@@ -612,6 +612,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		0D9D8A122AA90BF300B64E2D /* LunaTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				0D9D8A132AA90C5A00B64E2D /* LunaTabBarViewController.swift */,
+			);
+			path = LunaTabBar;
+			sourceTree = "<group>";
+		};
 		0DA56C532A6B338D00E056C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -722,6 +730,7 @@
 		0DDA612E2A69D04100CA15C6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				0D9D8A122AA90BF300B64E2D /* LunaTabBar */,
 				BFF09AF82A6B597600749328 /* Adapters */,
 				0DDA61352A69D11200CA15C6 /* Components */,
 				0DDA61322A69D0D200CA15C6 /* Extensions */,
@@ -1502,6 +1511,7 @@
 				BF6520E12A6F0D4B00E60054 /* CycleDurationViewController.swift in Sources */,
 				0DBADDD82A66017600A10FC3 /* DrawableView.swift in Sources */,
 				CA0D93AD2A70478A0064C1C3 /* CalendarCollectionViewCell.swift in Sources */,
+				0D9D8A142AA90C5A00B64E2D /* LunaTabBarViewController.swift in Sources */,
 				0DBADD992A65FDF100A10FC3 /* AppDelegate.swift in Sources */,
 				0D6336A92A77525800EE9699 /* OtherCyclePhasesView.swift in Sources */,
 				BFD1A01D2A82E1AC00F420B5 /* CalendarAccessError.swift in Sources */,
