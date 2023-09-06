@@ -39,7 +39,10 @@ class LunaCalendarManager: CalendarManager  {
     var lunaEventService: CalendarEventService?
     var cycleInformationsCalculator: CycleInformationsCalculator?
     
-    init(calendar: EKCalendar? = nil, lunaEventService: CalendarEventService? = nil, cycleInformationsCalculator: CycleInformationsCalculator? = nil) {
+    init(calendar: EKCalendar? = nil,
+         lunaEventService: CalendarEventService? = nil,
+         cycleInformationsCalculator: CycleInformationsCalculator? = nil) {
+        
         let calendar = CalendarProvider(eventStore).getCalendar()
         self.calendar = calendar
         self.lunaEventService = CalendarEventService(with: eventStore, in: calendar)

@@ -52,7 +52,10 @@ final class HomePresenterTest: XCTestCase {
     
     func testShouldShowCyclePhaseReferencesWhenUserTap(){
         let router = HomeRouterMock()
-        let presenter = HomePresenter(router: router)
+        let view = HomeViewControllerMock()
+        
+        let presenter = HomePresenter(view: view,
+                                      router: router)
         
         presenter.showCyclePhaseReferencesSheet()
         
