@@ -20,11 +20,13 @@ class HomeViewController: UIViewController {
     
     private var datasource: CalendarCollectionViewDataSource
     private var cardPhaseDataSource: CardPhaseControlDataSource
-    
+
     private let notificationStation = NotificationStation()
     
-    init(datasource: CalendarCollectionViewDataSource,
-         cardPhaseDataSource: CardPhaseControlDataSource){
+    init(
+        datasource: CalendarCollectionViewDataSource = CalendarCollectionViewDataSourceImpl(),
+        cardPhaseDataSource: CardPhaseControlDataSource = CardPhaseControlDataSourceImpl()
+    ){
         self.datasource = datasource
         self.cardPhaseDataSource = cardPhaseDataSource
         super.init(nibName: nil, bundle: nil)
@@ -112,7 +114,8 @@ class HomeViewController: UIViewController {
         homeView.calendarCollectionView
             .rx.selectItemAtCalendar
             .subscribe(onNext: { selectedCell, centerCell, centerXtoCollection in
-                self.presenter?.userSelect(selectedCell, center: centerCell,
+                self.presenter?.userSelect(selectedCell,
+                                           center: centerCell,
                                            andMoveCenter: centerXtoCollection)
             }).disposed(by: disposeBag)
         
@@ -272,7 +275,7 @@ extension HomeViewController: PresenterToViewHomeProtocol {
         generator.impactOccurred()
     }
     
-    func changeCurrentIndexCardPhase(at newIndex: Int) {
+    @objc func changeCurrentIndexCardPhase(at newIndex: Int) {
         self.cardPhaseDataSource.index.onNext(newIndex)
         
     }
