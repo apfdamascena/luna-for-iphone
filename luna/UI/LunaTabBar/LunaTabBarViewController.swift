@@ -16,15 +16,15 @@ class LunaTabBarViewController: UITabBarController {
     ]
     
     private let icons = [
-         ["house","house.fill"],
-         ["heart", "heart.fill"],
-         ["clock.arrow.circlepath", "clock.arrow.circlepath"],
+         ["calendar","calendar.fill"],
+         ["plus", "plus.fill"],
+         ["info.circle", "info.circle.fill"],
      ]
     
     private let titles = [
-        "Home",
-        "Home",
-        "Home"
+        "Ciclo",
+        "Atividades",
+        "Fontes"
     ]
 
     override func viewDidLoad() {
@@ -47,8 +47,8 @@ class LunaTabBarViewController: UITabBarController {
     }
     
     private func addAdditionalConfiguration(){
-        tabBar.unselectedItemTintColor = .orange
-        tabBar.tintColor = .blue
+        tabBar.unselectedItemTintColor = Asset.gray400.color
+        tabBar.tintColor = Asset.red500.color
     }
     
 
