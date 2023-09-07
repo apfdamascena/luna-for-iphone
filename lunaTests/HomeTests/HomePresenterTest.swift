@@ -84,7 +84,7 @@ final class HomePresenterTest: XCTestCase {
         let interactorMock = HomeInteractorMock()
         let view = HomeViewControllerMock()
         
-        let presenter = HomePresenterMock(
+        let presenter = HomePresenter(
             view: view,
             interactor: interactorMock
         )
@@ -92,6 +92,17 @@ final class HomePresenterTest: XCTestCase {
         presenter.loadCalendarToCollection()
         
         XCTAssertTrue(interactorMock.loadCalendarToCollectionHasBeenCalled)
+        
+    }
+    
+    func testShouldMoveToWhenUserDrag() {
+        let view = HomeViewControllerMock()
+        let presenter = HomePresenter(view: view)
+        
+        let dummyCell = CalendarCollectionViewCell()
+        
+        presenter.moveTo(dummyCell)
+        XCTAssertTrue(view.shouldMoveTo)
         
     }
     
