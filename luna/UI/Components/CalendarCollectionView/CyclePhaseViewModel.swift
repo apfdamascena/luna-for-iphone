@@ -11,3 +11,4 @@ struct CyclePhaseViewModel {
     let phase: CyclePhase
     let day: Date
 }
+

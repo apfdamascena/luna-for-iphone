@@ -223,6 +223,9 @@
 
 
 
+//
+//"constants.content.label.home.no_data"="Nesta dia, ainda não tínhamos os seus dados";
+//"constants.content.label.home.no_data_descripition" = "Explore os dias futuros!";
 
-"constants.content.label.home.no_data"="Nesta dia, ainda não tínhamos os seus dados";
-"constants.content.label.home.no_data_descripition" = "Explore os dias futuros!";
+"constants.content.label.home.no_data"="Pra quê olhar pro passado? Ele já passou!";
+"constants.content.label.home.no_data_descripition" = "A previsão só é feita a partir da sua última menstruação, assim não temos o que te falar sobre esse dia.";

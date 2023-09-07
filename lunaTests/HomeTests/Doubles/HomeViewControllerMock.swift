@@ -20,6 +20,7 @@ class HomeViewControllerMock: HomeViewController, HomeViewControllerSpy {
         hasBeenPresented = true
         presentedView = viewControllerToPresent
     }
+    
 }
 
 extension HomeViewControllerMock {
@@ -28,4 +29,5 @@ extension HomeViewControllerMock {
         shouldChangeCardPhase = true
         cardPhaseFake = newIndex
     }
+
 }
