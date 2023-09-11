@@ -216,13 +216,8 @@
 "constants.content.notification.dataset.fertile.title2" = "Carro da água passando…💧";
 "constants.content.notification.dataset.fertile.body2" = "Hoje tá sendo uma mistura de sentimentos, né? Entenda mais sobre essa fase 👉";
 
-
-
-
-
-
-
-
-
 "constants.content.label.home.no_data"="Nesta dia, ainda não tínhamos os seus dados";
 "constants.content.label.home.no_data_descripition" = "Explore os dias futuros!";
+
+"constants.content.label.first_time_new_activity.title" = "Vamos marcar uma nova atividade?";
+"constants.content.label.first_time_new_activity.subtitle" = "Registre uma atividade que precise fazer e receba uma sugestão personalizada sobre quando realizá-la no seu ciclo.";

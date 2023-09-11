@@ -252,3 +252,6 @@
 
 "constants.content.label.home.no_data"="On this day, we didn't have your data yet.";
 "constants.content.label.home.no_data_descripition" = "Explore the upcoming days!";
+
+"constants.content.label.first_time_new_activity.title" = "Shall we schedule a new activity?";
+"constants.content.label.first_time_new_activity.subtitle" = "Register an activity you need to do and receive a personalized suggestion on when to do it in your cycle.";

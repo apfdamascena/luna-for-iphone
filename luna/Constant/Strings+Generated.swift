@@ -82,6 +82,12 @@ internal enum L10n {
         internal static let onboardingRegisterMenstruationDescription = L10n.tr("Constants", "constants.content.label.onboarding_register_menstruation_description", fallback: "O círculo vermelho representa o dia em que ocorreu a menstruação. Basta clicar no botão para registrar!")
         /// 😡 TPM
         internal static let pms = L10n.tr("Constants", "constants.content.label.pms", fallback: "😡 TPM")
+        internal enum FirstTimeNewActivity {
+          /// Registre uma atividade que precise fazer e receba uma sugestão personalizada sobre quando realizá-la no seu ciclo.
+          internal static let subtitle = L10n.tr("Constants", "constants.content.label.first_time_new_activity.subtitle", fallback: "Registre uma atividade que precise fazer e receba uma sugestão personalizada sobre quando realizá-la no seu ciclo.")
+          /// Vamos marcar uma nova atividade?
+          internal static let title = L10n.tr("Constants", "constants.content.label.first_time_new_activity.title", fallback: "Vamos marcar uma nova atividade?")
+        }
         internal enum Home {
           /// Tudo sobre
           internal static let about = L10n.tr("Constants", "constants.content.label.home.about", fallback: "Tudo sobre")
