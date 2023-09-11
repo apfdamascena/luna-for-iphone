@@ -12,8 +12,15 @@ class ActivityTableViewCell: UITableViewCell, AnyView {
     
     static let IDENTIFIER = "ActivityTableViewCell"
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override init(style: UITableViewCell.CellStyle,
+                  reuseIdentifier: String?) {
+        super.init(style: style,
+                   reuseIdentifier: reuseIdentifier)
+        setupView()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func addSubviews() {
@@ -82,8 +89,14 @@ class HomeView: UIView, AnyView  {
         return view
     }()
     
-    
-    private(set) var table = UITableView()
+    private(set) var table: UITableView = {
+        let view = UITableView()
+        view.register(ActivityTableViewCell.self,
+                      forCellReuseIdentifier: ActivityTableViewCell.IDENTIFIER)
+        view.rowHeight = 10.su
+        view.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 12, right: 0)
+        return view
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -113,6 +126,8 @@ class HomeView: UIView, AnyView  {
         descriptionStackView.addArrangedSubview(cardCycle)
         
         descriptionStackView.addArrangedSubview(warningNoMenstrualData)
+
+        descriptionStackView.addArrangedSubview(table)
     }
     
     func addConstraints() {
@@ -162,6 +177,10 @@ class HomeView: UIView, AnyView  {
         
         warningNoMenstrualData.snp.makeConstraints{
             $0.height.equalTo(20.su)
+        }
+        
+        table.snp.makeConstraints{
+            $0.height.equalTo(30.su)
         }
         
     }

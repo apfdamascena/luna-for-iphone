@@ -175,12 +175,11 @@ class HomeViewController: UIViewController {
     }
     
     func addTableViewDataSource(){
+        
         Observable.of(["alex", "testando"]).bind(to: homeView.table
             .rx.items(cellIdentifier: ActivityTableViewCell.IDENTIFIER,
                       cellType: ActivityTableViewCell.self)){ _, name, cell in
-        
-            print(name)
-            
+    
         }.disposed(by: disposeBag)
     }
 }
