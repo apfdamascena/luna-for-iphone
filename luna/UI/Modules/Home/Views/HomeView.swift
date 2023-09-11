@@ -8,6 +8,27 @@
 import UIKit
 import SnapKit
 
+class ActivityTableViewCell: UITableViewCell, AnyView {
+    
+    static let ActivityTableCellIdentifier = "ActivityTableViewCell"
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    func addSubviews() {
+        
+    }
+    
+    func addConstraints() {
+        
+    }
+    
+    func addAdditionalConfiguration() {
+        backgroundColor = .blue
+    }
+}
+
 class HomeView: UIView, AnyView  {
     
     private var hasAcessToCalendar: CalendarAccess = .unauthorized
@@ -60,6 +81,9 @@ class HomeView: UIView, AnyView  {
         view.isHidden = true
         return view
     }()
+    
+    
+    private let table = UITableView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)

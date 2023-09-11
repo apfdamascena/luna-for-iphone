@@ -279,7 +279,6 @@ extension HomeViewController: PresenterToViewHomeProtocol {
         self.cardPhaseDataSource.index.onNext(newIndex)
         
     }
-    
 }
 
 
