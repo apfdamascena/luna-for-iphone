@@ -5,9 +5,10 @@
 //  Created by gabrielfelipo on 26/07/23.
 //
 
-import Foundation
+import UIKit
 
 struct CyclePhaseViewModel {
     let phase: CyclePhase
     let day: Date
 }
+

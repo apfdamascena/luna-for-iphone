@@ -19,6 +19,8 @@ internal enum L10n {
       internal enum Button {
         /// Continuar
         internal static let `continue` = L10n.tr("Constants", "constants.content.button.continue", fallback: "Continuar")
+        /// Novo Evento
+        internal static let newEvent = L10n.tr("Constants", "constants.content.button.newEvent", fallback: "Novo Evento")
         /// Voltar
         internal static let previous = L10n.tr("Constants", "constants.content.button.previous", fallback: "Voltar")
         /// Leia as referências
@@ -83,6 +85,8 @@ internal enum L10n {
         /// 😡 TPM
         internal static let pms = L10n.tr("Constants", "constants.content.label.pms", fallback: "😡 TPM")
         internal enum FirstTimeNewActivity {
+          /// Vamos!
+          internal static let button = L10n.tr("Constants", "constants.content.label.first_time_new_activity.button", fallback: "Vamos!")
           /// Registre uma atividade que precise fazer e receba uma sugestão personalizada sobre quando realizá-la no seu ciclo.
           internal static let subtitle = L10n.tr("Constants", "constants.content.label.first_time_new_activity.subtitle", fallback: "Registre uma atividade que precise fazer e receba uma sugestão personalizada sobre quando realizá-la no seu ciclo.")
           /// Vamos marcar uma nova atividade?
@@ -105,10 +109,10 @@ internal enum L10n {
           internal static let luteal = L10n.tr("Constants", "constants.content.label.home.luteal", fallback: "Fase Lútea")
           /// Menstruação
           internal static let menstruation = L10n.tr("Constants", "constants.content.label.home.menstruation", fallback: "Menstruação")
-          /// Nesta dia, ainda não tínhamos os seus dados
-          internal static let noData = L10n.tr("Constants", "constants.content.label.home.no_data", fallback: "Nesta dia, ainda não tínhamos os seus dados")
-          /// Explore os dias futuros!
-          internal static let noDataDescripition = L10n.tr("Constants", "constants.content.label.home.no_data_descripition", fallback: "Explore os dias futuros!")
+          /// Pra quê olhar pro passado? Ele já passou!
+          internal static let noData = L10n.tr("Constants", "constants.content.label.home.no_data", fallback: "Pra quê olhar pro passado? Ele já passou!")
+          /// A previsão só é feita a partir da sua última menstruação, assim não temos o que te falar sobre esse dia.
+          internal static let noDataDescripition = L10n.tr("Constants", "constants.content.label.home.no_data_descripition", fallback: "A previsão só é feita a partir da sua última menstruação, assim não temos o que te falar sobre esse dia.")
           /// Ovulação
           internal static let ovulation = L10n.tr("Constants", "constants.content.label.home.ovulation", fallback: "Ovulação")
           /// Menstruação registrada

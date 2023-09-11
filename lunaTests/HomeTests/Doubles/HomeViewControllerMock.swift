@@ -15,11 +15,14 @@ class HomeViewControllerMock: HomeViewController, HomeViewControllerSpy {
     var presentedView: UIViewController?
     var cardPhaseFake: Int = 0
     var shouldChangeCardPhase: Bool = false
+    var shouldMoveTo: Bool = false
     
     override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
         hasBeenPresented = true
         presentedView = viewControllerToPresent
     }
+    
+    
 }
 
 extension HomeViewControllerMock {
@@ -28,4 +31,10 @@ extension HomeViewControllerMock {
         shouldChangeCardPhase = true
         cardPhaseFake = newIndex
     }
+    
+    override func updateView(_ center: CalendarCollectionViewCell) {
+        shouldMoveTo = true
+        super.updateView(center)
+    }
+
 }

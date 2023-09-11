@@ -17,6 +17,7 @@
 "constants.content.button.previous"="Voltar";
 "constants.content.button.settings"="Ajustes";
 "constants.content.button.references" = "Leia as referências";
+"constants.content.button.newEvent"="Novo Evento";
 
 "constants.content.label.home.youAreIn" = "Você está na";
 "constants.content.label.home.menstruation" = "Menstruação";
@@ -221,3 +222,8 @@
 
 "constants.content.label.first_time_new_activity.title" = "Vamos marcar uma nova atividade?";
 "constants.content.label.first_time_new_activity.subtitle" = "Registre uma atividade que precise fazer e receba uma sugestão personalizada sobre quando realizá-la no seu ciclo.";
+
+"constants.content.label.home.no_data"="Pra quê olhar pro passado? Ele já passou!";
+"constants.content.label.home.no_data_descripition" = "A previsão só é feita a partir da sua última menstruação, assim não temos o que te falar sobre esse dia.";
+
+"constants.content.label.first_time_new_activity.button" = "Vamos!";

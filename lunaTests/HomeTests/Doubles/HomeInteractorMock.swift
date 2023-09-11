@@ -13,6 +13,8 @@ class HomeInteractorMock: HomeInteractor, HomeInteractorSpy  {
     
     var openSettingsHasBeenCalled: Bool = false
     var nextIndexForCardPhaseCalled: Bool = false
+    var loadUserCalendarHasBeenCalled: Bool = false
+    var loadCalendarToCollectionHasBeenCalled: Bool = false
     
     override func nextIndexForCardPhase(at index: Int) -> Int {
         nextIndexForCardPhaseCalled = true
@@ -23,4 +25,15 @@ class HomeInteractorMock: HomeInteractor, HomeInteractorSpy  {
         openSettingsHasBeenCalled = true
         super.openDeviceSettings()
     }
+    
+    override func loadPhasesToUserCalendar() {
+        loadUserCalendarHasBeenCalled = true
+        super.loadPhasesToUserCalendar()
+    }
+    
+    override func loadCalendarToCollection() -> [CyclePhaseViewModel] {
+        loadCalendarToCollectionHasBeenCalled = true
+        return super.loadCalendarToCollection()
+    }
+    
 }

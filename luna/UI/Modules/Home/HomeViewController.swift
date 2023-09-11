@@ -257,7 +257,7 @@ extension HomeViewController: PresenterToViewHomeProtocol {
          }
     }
     
-    func updateView(_ center: CalendarCollectionViewCell) {
+    @objc func updateView(_ center: CalendarCollectionViewCell) {
         if center != self.datasource.lastCell {
             vibrateDevice()
         }

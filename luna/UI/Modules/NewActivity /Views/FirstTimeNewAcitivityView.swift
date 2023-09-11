@@ -37,21 +37,27 @@ class FirstTimeNewActivityView: UIView, AnyView {
         
             label.draw(model)
             label.numberOfLines = 0
-//            label.addLineHeight(of: 31)
+            label.addLineHeight(of: 31)
             return label
         }()
         
-        private let subtitle: LunaText = {
-            let label = LunaText()
-            let model = LunaTextViewModel(size: 17,
-                                          color: .white,
-                                          weight: .regular)
-            label.draw(model)
-            label.numberOfLines = 0
-            label.text = L10n.Constants.Content.Label.FirstTimeNewActivity.subtitle
-//            label.addLineHeight(of: 24)
-            return label
-        }()
+    private let subtitle: LunaText = {
+        let label = LunaText()
+        let model = LunaTextViewModel(size: 17,
+                                      color: .white,
+                                      weight: .regular)
+        label.draw(model)
+        label.numberOfLines = 0
+        label.text = L10n.Constants.Content.Label.FirstTimeNewActivity.subtitle
+        label.addLineHeight(of: 24)
+        return label
+    }()
+    
+    private(set) var button: LunaButton = {
+        let button = LunaButton()
+        button.draw(style: .letsGo)
+        return button
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -66,6 +72,7 @@ class FirstTimeNewActivityView: UIView, AnyView {
         addSubview(backgroundImage)
         addSubview(image)
         addSubview(informationTextStack)
+        addSubview(button)
         
         informationTextStack.addArrangedSubview(title)
         informationTextStack.addArrangedSubview(subtitle)
@@ -84,6 +91,11 @@ class FirstTimeNewActivityView: UIView, AnyView {
         informationTextStack.snp.makeConstraints {
             $0.trailing.leading.equalToSuperview().inset(3.su)
             $0.top.equalTo(image.snp.bottom).offset(7.su)
+        }
+        
+        button.snp.makeConstraints {
+            $0.trailing.leading.equalToSuperview().inset(3.su)
+            $0.top.equalTo(informationTextStack.snp.bottom).offset(15.su)
         }
         
     }
