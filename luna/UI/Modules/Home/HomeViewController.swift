@@ -54,6 +54,7 @@ class HomeViewController: UIViewController {
         seeMoreButtonTouchTrigger()
         addTapCardCycleEventObservable()
         addNotificationEventObservable()
+        addTableViewDataSource()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -173,6 +174,15 @@ class HomeViewController: UIViewController {
             .disposed(by: disposeBag)
     }
     
+    func addTableViewDataSource(){
+        Observable.of(["alex", "testando"]).bind(to: homeView.table
+            .rx.items(cellIdentifier: ActivityTableViewCell.IDENTIFIER,
+                      cellType: ActivityTableViewCell.self)){ _, name, cell in
+        
+            print(name)
+            
+        }.disposed(by: disposeBag)
+    }
 }
 
 

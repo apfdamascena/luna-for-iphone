@@ -10,7 +10,7 @@ import SnapKit
 
 class ActivityTableViewCell: UITableViewCell, AnyView {
     
-    static let ActivityTableCellIdentifier = "ActivityTableViewCell"
+    static let IDENTIFIER = "ActivityTableViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -83,7 +83,7 @@ class HomeView: UIView, AnyView  {
     }()
     
     
-    private let table = UITableView()
+    private(set) var table = UITableView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
