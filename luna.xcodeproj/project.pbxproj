@@ -111,6 +111,7 @@
 		0DF4106E2A85820D00A10405 /* SeeMoreCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4106D2A85820D00A10405 /* SeeMoreCard.swift */; };
 		2814909EB8D2BDC1D5AA5874 /* Pods_lunaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33837198E1A2D686B82FD9A5 /* Pods_lunaTests.framework */; };
 		6994CDD4C9481D9C0BE8F427 /* Pods_luna_lunaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72D64B781A7543B9B9BB027 /* Pods_luna_lunaUITests.framework */; };
+		A427FC362AAF8EEA006B4F2B /* LunaButtonNewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC352AAF8EEA006B4F2B /* LunaButtonNewEvent.swift */; };
 		A46C05132A6EFE150071ABCE /* CalendarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050D2A6EFE150071ABCE /* CalendarRouter.swift */; };
 		A46C05142A6EFE150071ABCE /* CalendarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050E2A6EFE150071ABCE /* CalendarPresenter.swift */; };
 		A46C05152A6EFE150071ABCE /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050F2A6EFE150071ABCE /* CalendarViewController.swift */; };
@@ -310,6 +311,7 @@
 		40083797C335396142E4E31B /* Pods-luna-lunaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna-lunaUITests.debug.xcconfig"; path = "Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		46B376156DE621DEBE58A794 /* Pods-luna-lunaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna-lunaUITests.release.xcconfig"; path = "Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5295EDDCBCE10935681952A4 /* Pods-luna.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna.debug.xcconfig"; path = "Target Support Files/Pods-luna/Pods-luna.debug.xcconfig"; sourceTree = "<group>"; };
+		A427FC352AAF8EEA006B4F2B /* LunaButtonNewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaButtonNewEvent.swift; sourceTree = "<group>"; };
 		A46C050D2A6EFE150071ABCE /* CalendarRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarRouter.swift; sourceTree = "<group>"; };
 		A46C050E2A6EFE150071ABCE /* CalendarPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarPresenter.swift; sourceTree = "<group>"; };
 		A46C050F2A6EFE150071ABCE /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -902,6 +904,7 @@
 				A46C054A2A74641E0071ABCE /* LunaButtonProceed.swift */,
 				A46C054B2A74641E0071ABCE /* LunaButtonStyle.swift */,
 				A48F4A232A82DC8800BB5058 /* LunaButtonReferences.swift */,
+				A427FC352AAF8EEA006B4F2B /* LunaButtonNewEvent.swift */,
 			);
 			path = LunaButton;
 			sourceTree = "<group>";
@@ -1460,6 +1463,7 @@
 				A46C05572A7464970071ABCE /* LunaButton.swift in Sources */,
 				A46C05142A6EFE150071ABCE /* CalendarPresenter.swift in Sources */,
 				0D0B28D52AA004500048722A /* NotificationFirstPhaseDayMessageFactory.swift in Sources */,
+				A427FC362AAF8EEA006B4F2B /* LunaButtonNewEvent.swift in Sources */,
 				A48F4A372A9690C000BB5058 /* DynamicCardPhaseFactory.swift in Sources */,
 				0D2FC76A2A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift in Sources */,
 				0DF410632A840E8C00A10405 /* CalendarCollectionView+Rx.swift in Sources */,

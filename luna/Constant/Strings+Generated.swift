@@ -19,6 +19,8 @@ internal enum L10n {
       internal enum Button {
         /// Continuar
         internal static let `continue` = L10n.tr("Constants", "constants.content.button.continue", fallback: "Continuar")
+        /// + Novo Evento
+        internal static let newEvent = L10n.tr("Constants", "constants.content.button.newEvent", fallback: "+ Novo Evento")
         /// Voltar
         internal static let previous = L10n.tr("Constants", "constants.content.button.previous", fallback: "Voltar")
         /// Leia as referências
