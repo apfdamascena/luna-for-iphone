@@ -99,10 +99,10 @@ internal enum L10n {
           internal static let luteal = L10n.tr("Constants", "constants.content.label.home.luteal", fallback: "Fase Lútea")
           /// Menstruação
           internal static let menstruation = L10n.tr("Constants", "constants.content.label.home.menstruation", fallback: "Menstruação")
-          /// Nesta dia, ainda não tínhamos os seus dados
-          internal static let noData = L10n.tr("Constants", "constants.content.label.home.no_data", fallback: "Nesta dia, ainda não tínhamos os seus dados")
-          /// Explore os dias futuros!
-          internal static let noDataDescripition = L10n.tr("Constants", "constants.content.label.home.no_data_descripition", fallback: "Explore os dias futuros!")
+          /// Pra quê olhar pro passado? Ele já passou!
+          internal static let noData = L10n.tr("Constants", "constants.content.label.home.no_data", fallback: "Pra quê olhar pro passado? Ele já passou!")
+          /// A previsão só é feita a partir da sua última menstruação, assim não temos o que te falar sobre esse dia.
+          internal static let noDataDescripition = L10n.tr("Constants", "constants.content.label.home.no_data_descripition", fallback: "A previsão só é feita a partir da sua última menstruação, assim não temos o que te falar sobre esse dia.")
           /// Ovulação
           internal static let ovulation = L10n.tr("Constants", "constants.content.label.home.ovulation", fallback: "Ovulação")
           /// Menstruação registrada

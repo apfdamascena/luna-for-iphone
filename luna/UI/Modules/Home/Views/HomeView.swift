@@ -137,7 +137,7 @@ class HomeView: UIView, AnyView  {
         }
         
         warningNoMenstrualData.snp.makeConstraints{
-            $0.height.equalTo(20.su)
+            $0.height.equalTo(46.su)
         }
         
     }

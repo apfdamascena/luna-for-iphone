@@ -10,4 +10,6 @@ protocol HomeInteractorSpy {
     
     var nextIndexForCardPhaseCalled: Bool { get }
     var openSettingsHasBeenCalled: Bool { get }
+    var loadUserCalendarHasBeenCalled: Bool { get }
+    var loadCalendarToCollectionHasBeenCalled: Bool { get }
 }
