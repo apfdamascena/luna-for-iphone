@@ -93,6 +93,7 @@ internal enum Asset {
   internal static let otherCyclePhases = ImageAsset(name: "other_cycle_phases")
   internal static let ovulationSelected = ImageAsset(name: "ovulationSelected")
   internal static let ovulationCell = ImageAsset(name: "ovulation_cell")
+  internal static let phaseActivityCell = ImageAsset(name: "phase-activity-cell")
   internal static let pmsCell = ImageAsset(name: "pms_cell")
   internal static let previsionSelected = ImageAsset(name: "previsionSelected")
   internal static let primaryGray900 = ColorAsset(name: "primary_gray_900")

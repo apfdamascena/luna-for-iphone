@@ -8,14 +8,24 @@
 import UIKit
 import SnapKit
 
-class ActivityTableViewCell: UITableViewCell, AnyView {
+class ActivityTableViewCell: UICollectionViewCell, AnyView {
     
     static let IDENTIFIER = "ActivityTableViewCell"
     
-    override init(style: UITableViewCell.CellStyle,
-                  reuseIdentifier: String?) {
-        super.init(style: style,
-                   reuseIdentifier: reuseIdentifier)
+    private let descriptionStack: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.spacing = 4
+        stack.distribution = .equalSpacing
+        return stack
+    }()
+    
+    private let cyclePhaseImage: UIImageView = {
+        return UIImageView(image: Asset.phaseActivityCell.image)
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setupView()
     }
     
@@ -24,15 +34,22 @@ class ActivityTableViewCell: UITableViewCell, AnyView {
     }
     
     func addSubviews() {
+        addSubview(cyclePhaseImage)
         
     }
     
     func addConstraints() {
         
+        cyclePhaseImage.snp.makeConstraints{
+            $0.top.bottom.equalToSuperview().inset(1.su)
+            $0.leading.equalToSuperview().offset(1.5.su)
+        }
     }
     
     func addAdditionalConfiguration() {
-        backgroundColor = .blue
+        backgroundColor = Asset.gray50.color
+        layer.masksToBounds = true
+        layer.cornerRadius = 8
     }
 }
 
@@ -89,13 +106,19 @@ class HomeView: UIView, AnyView  {
         return view
     }()
     
-    private(set) var table: UITableView = {
-        let view = UITableView()
-        view.register(ActivityTableViewCell.self,
-                      forCellReuseIdentifier: ActivityTableViewCell.IDENTIFIER)
-        view.rowHeight = 10.su
-        view.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 12, right: 0)
-        return view
+    private(set) lazy var table: UICollectionView = {
+        
+        let screenSize = UIScreen.main.bounds.width
+
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.itemSize = CGSize(width: screenSize - 2*24, height: 10.su)
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collection.register(ActivityTableViewCell.self,
+                            forCellWithReuseIdentifier: ActivityTableViewCell.IDENTIFIER)
+        collection.showsVerticalScrollIndicator = false
+        
+        return collection
     }()
     
     override init(frame: CGRect) {
