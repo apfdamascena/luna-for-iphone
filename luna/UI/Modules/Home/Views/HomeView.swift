@@ -28,11 +28,13 @@ class ActivityView: UIView, AnyView {
     
     private let title: LunaText = {
         let label = LunaText()
-        label.text = "testando pra ver se funcionadasdadada"
+        label.text = "Praia"
         let model = LunaTextViewModel(size: 17, color: .black, weight: .regular)
         label.draw(model)
         return label
     }()
+    
+    private let dateDescriptionView = UIView()
     
     private let cyclePhaseImage: UIImageView = {
         return UIImageView(image: Asset.phaseActivityCell.image)
@@ -52,6 +54,9 @@ class ActivityView: UIView, AnyView {
         addSubview(informationStack)
         
         informationStack.addArrangedSubview(title)
+        informationStack.addArrangedSubview(dateDescriptionView)
+        
+        dateDescriptionView.backgroundColor = .green
     }
     
     func addConstraints() {
