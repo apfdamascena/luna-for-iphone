@@ -26,6 +26,7 @@
 		0D0B292A2AA3AFBC0048722A /* NotificationCurrentPhaseInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B29292AA3AFBC0048722A /* NotificationCurrentPhaseInformation.swift */; };
 		0D0B292C2AA3B4200048722A /* NotificationCurrentPhaseInformationMessageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B292B2AA3B4200048722A /* NotificationCurrentPhaseInformationMessageFactory.swift */; };
 		0D15FE942A7DB12100FD64E4 /* WarningNoMenstrualData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15FE932A7DB12100FD64E4 /* WarningNoMenstrualData.swift */; };
+		0D2939772AB113630017891A /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2939762AB113630017891A /* ActivityCell.swift */; };
 		0D2FC76A2A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */; };
 		0D2FC76C2A6EF4810025D8B6 /* DataSourceEventObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */; };
 		0D2FC76E2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76D2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift */; };
@@ -220,6 +221,7 @@
 		0D0B29292AA3AFBC0048722A /* NotificationCurrentPhaseInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCurrentPhaseInformation.swift; sourceTree = "<group>"; };
 		0D0B292B2AA3B4200048722A /* NotificationCurrentPhaseInformationMessageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCurrentPhaseInformationMessageFactory.swift; sourceTree = "<group>"; };
 		0D15FE932A7DB12100FD64E4 /* WarningNoMenstrualData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningNoMenstrualData.swift; sourceTree = "<group>"; };
+		0D2939762AB113630017891A /* ActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
 		0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSource.swift; sourceTree = "<group>"; };
 		0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceEventObservable.swift; sourceTree = "<group>"; };
 		0D2FC76D2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSourceImpl.swift; sourceTree = "<group>"; };
@@ -462,6 +464,14 @@
 				0D15FE932A7DB12100FD64E4 /* WarningNoMenstrualData.swift */,
 			);
 			path = WarningNoMenstrualData;
+			sourceTree = "<group>";
+		};
+		0D2939752AB1134B0017891A /* ActivityCell */ = {
+			isa = PBXGroup;
+			children = (
+				0D2939762AB113630017891A /* ActivityCell.swift */,
+			);
+			path = ActivityCell;
 			sourceTree = "<group>";
 		};
 		0D2FC7682A6EF41C0025D8B6 /* Protocols */ = {
@@ -802,6 +812,7 @@
 		0DDA61352A69D11200CA15C6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0D2939752AB1134B0017891A /* ActivityCell */,
 				A48F4A332A96904800BB5058 /* DynamicCardPhase */,
 				0DF4106C2A8581FC00A10405 /* SeeMoreCard */,
 				BFD1A0212A833A8700F420B5 /* Link */,
@@ -1586,6 +1597,7 @@
 				0D6336A62A77510400EE9699 /* OnboardingCyclePhaseContent.swift in Sources */,
 				A46C054D2A74641E0071ABCE /* LunaButtonBack.swift in Sources */,
 				A48B7EDA2A7ACBCD00CCC4C0 /* CycleDetailsCard.swift in Sources */,
+				0D2939772AB113630017891A /* ActivityCell.swift in Sources */,
 				CA557BCE2A6B1743001DF2BB /* LandingPageRouter.swift in Sources */,
 				0D6794192A731B5C00382142 /* UserCycleInformation.swift in Sources */,
 				A46C054F2A74641E0071ABCE /* LunaButtonStyle.swift in Sources */,
