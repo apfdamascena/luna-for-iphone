@@ -159,7 +159,6 @@
 		BFCDE1992AA6678700CFCA95 /* AnalyticsEventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDE1982AA6678700CFCA95 /* AnalyticsEventType.swift */; };
 		BFCDE19B2AA6693800CFCA95 /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDE19A2AA6693800CFCA95 /* AnalyticsEvents.swift */; };
 		BFCDE19D2AA6699600CFCA95 /* AnalyticsCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDE19C2AA6699600CFCA95 /* AnalyticsCenter.swift */; };
-		BFCDE1A42AB0E12500CFCA95 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFCDE1A32AB0E12500CFCA95 /* GoogleService-Info.plist */; };
 		BFD1A01B2A82E18600F420B5 /* CalendarAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A01A2A82E18600F420B5 /* CalendarAccess.swift */; };
 		BFD1A01D2A82E1AC00F420B5 /* CalendarAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A01C2A82E1AC00F420B5 /* CalendarAccessError.swift */; };
 		BFD1A0202A8329E700F420B5 /* ReferenceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A01F2A8329E700F420B5 /* ReferenceCard.swift */; };
@@ -363,7 +362,6 @@
 		BFCDE1982AA6678700CFCA95 /* AnalyticsEventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEventType.swift; sourceTree = "<group>"; };
 		BFCDE19A2AA6693800CFCA95 /* AnalyticsEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvents.swift; sourceTree = "<group>"; };
 		BFCDE19C2AA6699600CFCA95 /* AnalyticsCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsCenter.swift; sourceTree = "<group>"; };
-		BFCDE1A32AB0E12500CFCA95 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFCDE1A52AB0E12A00CFCA95 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFD1A01A2A82E18600F420B5 /* CalendarAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAccess.swift; sourceTree = "<group>"; };
 		BFD1A01C2A82E1AC00F420B5 /* CalendarAccessError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAccessError.swift; sourceTree = "<group>"; };
@@ -671,7 +669,6 @@
 		0DBADD972A65FDF100A10FC3 /* luna */ = {
 			isa = PBXGroup;
 			children = (
-				BFCDE1A32AB0E12500CFCA95 /* GoogleService-Info.plist */,
 				BFCDE1972AA6676E00CFCA95 /* Analytics */,
 				0D0B28C72A9FB1490048722A /* Notification */,
 				CAE579A02A7AD80F004EE21C /* Utilities */,
@@ -1306,7 +1303,6 @@
 			files = (
 				0DBADDA82A65FDF300A10FC3 /* LaunchScreen.storyboard in Resources */,
 				CACB96F62A85670300EB66DD /* Constants.strings in Resources */,
-				BFCDE1A42AB0E12500CFCA95 /* GoogleService-Info.plist in Resources */,
 				0DA74C762A9549CB0021EC40 /* CoconRegularFont.otf in Resources */,
 				0DBADDA52A65FDF300A10FC3 /* Assets.xcassets in Resources */,
 			);
