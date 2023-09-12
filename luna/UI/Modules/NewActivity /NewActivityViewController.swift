@@ -28,17 +28,12 @@ class NewActivityViewController: UIViewController {
         super.loadView()
         view = newActivityView
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
         self.title = L10n.Constants.Content.Label.NewActivity.Nav.title
 //        self.navigationController?.addCustomBottomLine(color: Asset.gray100.color, height: 1)
-        self.navigationController?.navigationBar.barTintColor = .blue
-        self.navigationController?.navigationBar.barStyle = .black
-//        self.navigationController?.navigationBar.tintColor = .red
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .bottom, barMetrics: UIBarMetrics.default)
     }
     
 }

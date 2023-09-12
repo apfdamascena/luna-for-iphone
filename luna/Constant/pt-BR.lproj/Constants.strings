@@ -232,3 +232,5 @@
 "constants.content.label.new_activity.nav.title" = "Nova atividade";
 
 "constants.content.label.new_activity.add_new_activity.activity_title" = "Atividade";
+"constants.content.label.new_activity.add_new_activity.metrics_title" = "Métricas";
+"constants.content.label.new_activity.add_new_activity.deadline_title" = "Prazo";

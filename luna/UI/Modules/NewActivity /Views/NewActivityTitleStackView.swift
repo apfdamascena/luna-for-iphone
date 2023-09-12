@@ -7,12 +7,14 @@
 
 import UIKit
 
-class ActivityTitleStack: UIStackView, AnyView {
+class NewActivityTitleStackView: UIStackView, AnyView {
+    
+    private var titleText: String
+    private var iconAsset: ImageAsset
     
     private let title: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 25, color: .black, weight: .regular)
-        label.text = L10n.Constants.Content.Label.NewActivity.AddNewActivity.activityTitle
         label.setContentHuggingPriority(.defaultLow, for: .horizontal)
         label.numberOfLines = 0
         label.textAlignment = .left
@@ -27,7 +29,13 @@ class ActivityTitleStack: UIStackView, AnyView {
         return view
     }()
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, titleText: String, iconAsset: ImageAsset) {
+        self.titleText = titleText
+        self.iconAsset = iconAsset
+        
+        title.text = titleText
+        icon.image = iconAsset.image
+        
         super.init(frame: frame)
         setupView()
     }

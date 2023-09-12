@@ -234,6 +234,10 @@ internal enum L10n {
           internal enum AddNewActivity {
             /// Atividade
             internal static let activityTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.activity_title", fallback: "Atividade")
+            /// Prazo
+            internal static let deadlineTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.deadline_title", fallback: "Prazo")
+            /// Métricas
+            internal static let metricsTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.metrics_title", fallback: "Métricas")
           }
           internal enum Nav {
             /// Nova atividade

@@ -10,7 +10,23 @@ import SnapKit
 
 class NewActivityView: UIView, AnyView {
     
-    private let activityTitle = ActivityTitleStack()
+    private let activityTitle = NewActivityTitleStackView(
+        frame: CGRect(),
+        titleText: L10n.Constants.Content.Label.NewActivity.AddNewActivity.activityTitle,
+        iconAsset: Asset.pencilIcon
+    )
+    
+    private let metricsTitle = NewActivityTitleStackView(
+        frame: CGRect(),
+        titleText: L10n.Constants.Content.Label.NewActivity.AddNewActivity.metricsTitle,
+        iconAsset: Asset.chartPieIcon
+    )
+    
+    private let deadlineTitle = NewActivityTitleStackView(
+        frame: CGRect(),
+        titleText: L10n.Constants.Content.Label.NewActivity.AddNewActivity.deadlineTitle,
+        iconAsset: Asset.deadlineIcon
+    )
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -41,6 +57,8 @@ class NewActivityView: UIView, AnyView {
         scrollView.addSubview(allContentStackView)
         
         allContentStackView.addArrangedSubview(activityTitle)
+        allContentStackView.addArrangedSubview(metricsTitle)
+        allContentStackView.addArrangedSubview(deadlineTitle)
     }
     
     func addConstraints() {

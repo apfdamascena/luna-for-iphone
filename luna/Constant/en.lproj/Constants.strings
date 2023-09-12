@@ -266,3 +266,5 @@
 "constants.content.label.new_activity.nav.title" = "New Activity";
 
 "constants.content.label.new_activity.add_new_activity.activity_title" = "Activity";
+"constants.content.label.new_activity.add_new_activity.metrics_title" = "Metrics";
+"constants.content.label.new_activity.add_new_activity.calendar_title" = "Deadline";

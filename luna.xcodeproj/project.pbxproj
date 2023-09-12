@@ -126,7 +126,7 @@
 		A427FC5D2AB0DBFC006B4F2B /* FirstTimeNewActivityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC592AB0DBFC006B4F2B /* FirstTimeNewActivityPresenter.swift */; };
 		A427FC5E2AB0DBFC006B4F2B /* FirstTimeNewActivityRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC5A2AB0DBFC006B4F2B /* FirstTimeNewActivityRouter.swift */; };
 		A427FC5F2AB0DBFC006B4F2B /* FirstTimeNewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC5B2AB0DBFC006B4F2B /* FirstTimeNewActivityViewController.swift */; };
-		A427FC622AB0F68A006B4F2B /* ActivityTitleStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC612AB0F68A006B4F2B /* ActivityTitleStack.swift */; };
+		A427FC622AB0F68A006B4F2B /* NewActivityTitleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC612AB0F68A006B4F2B /* NewActivityTitleStackView.swift */; };
 		A46C05132A6EFE150071ABCE /* CalendarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050D2A6EFE150071ABCE /* CalendarRouter.swift */; };
 		A46C05142A6EFE150071ABCE /* CalendarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050E2A6EFE150071ABCE /* CalendarPresenter.swift */; };
 		A46C05152A6EFE150071ABCE /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050F2A6EFE150071ABCE /* CalendarViewController.swift */; };
@@ -341,7 +341,7 @@
 		A427FC592AB0DBFC006B4F2B /* FirstTimeNewActivityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewActivityPresenter.swift; sourceTree = "<group>"; };
 		A427FC5A2AB0DBFC006B4F2B /* FirstTimeNewActivityRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewActivityRouter.swift; sourceTree = "<group>"; };
 		A427FC5B2AB0DBFC006B4F2B /* FirstTimeNewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewActivityViewController.swift; sourceTree = "<group>"; };
-		A427FC612AB0F68A006B4F2B /* ActivityTitleStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTitleStack.swift; sourceTree = "<group>"; };
+		A427FC612AB0F68A006B4F2B /* NewActivityTitleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityTitleStackView.swift; sourceTree = "<group>"; };
 		A46C050D2A6EFE150071ABCE /* CalendarRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarRouter.swift; sourceTree = "<group>"; };
 		A46C050E2A6EFE150071ABCE /* CalendarPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarPresenter.swift; sourceTree = "<group>"; };
 		A46C050F2A6EFE150071ABCE /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -934,7 +934,7 @@
 			isa = PBXGroup;
 			children = (
 				A427FC4F2AAFA539006B4F2B /* NewActivityView.swift */,
-				A427FC612AB0F68A006B4F2B /* ActivityTitleStack.swift */,
+				A427FC612AB0F68A006B4F2B /* NewActivityTitleStackView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1633,7 +1633,7 @@
 				A48B7ED02A7993E800CCC4C0 /* CyclePhaseTextFactory.swift in Sources */,
 				0DDA61282A69CEC600CA15C6 /* MenstruationDurationPresenter.swift in Sources */,
 				CA557BCD2A6B1743001DF2BB /* LandingPagePresenter.swift in Sources */,
-				A427FC622AB0F68A006B4F2B /* ActivityTitleStack.swift in Sources */,
+				A427FC622AB0F68A006B4F2B /* NewActivityTitleStackView.swift in Sources */,
 				0D6794322A74725200382142 /* TeachRecordMenstruationViewController.swift in Sources */,
 				CA0D93AB2A70472A0064C1C3 /* CalendarCollectionView.swift in Sources */,
 				0DBADE0C2A6608F300A10FC3 /* LastDayMenstruationView.swift in Sources */,
