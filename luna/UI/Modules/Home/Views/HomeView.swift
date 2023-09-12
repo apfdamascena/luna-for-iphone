@@ -12,10 +12,26 @@ class ActivityView: UIView, AnyView {
     
     private let descriptionStack: UIStackView = {
         let stack = UIStackView()
-        stack.axis = .vertical
+        stack.axis = .horizontal
         stack.spacing = 4
         stack.distribution = .equalSpacing
         return stack
+    }()
+    
+    private let informationStack: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.spacing = 0.5.su
+        stack.alignment = .fill
+        return stack
+    }()
+    
+    private let title: LunaText = {
+        let label = LunaText()
+        label.text = "testando pra ver se funcionadasdadada"
+        let model = LunaTextViewModel(size: 17, color: .black, weight: .regular)
+        label.draw(model)
+        return label
     }()
     
     private let cyclePhaseImage: UIImageView = {
@@ -33,15 +49,25 @@ class ActivityView: UIView, AnyView {
     
     func addSubviews() {
         addSubview(cyclePhaseImage)
+        addSubview(informationStack)
         
+        informationStack.addArrangedSubview(title)
     }
     
     func addConstraints() {
         
-        cyclePhaseImage.snp.makeConstraints{
+        cyclePhaseImage.snp.makeConstraints {
             $0.top.bottom.equalToSuperview().inset(1.su)
             $0.leading.equalToSuperview().offset(1.5.su)
+            $0.width.equalTo(40)
         }
+        
+        informationStack.snp.makeConstraints {
+            $0.leading.equalTo(cyclePhaseImage.snp.trailing).offset(1.5.su)
+            $0.top.bottom.trailing.equalToSuperview().inset(19)
+        }
+        
+        informationStack.backgroundColor = .yellow
     }
     
     func addAdditionalConfiguration() {
@@ -83,8 +109,6 @@ class HomeView: UIView, AnyView  {
         view.spacing = 4.su
         return view
     }()
-    
-    
     private let activities = UIView()
     
     private let activitiesStack: UIStackView = {
@@ -146,10 +170,10 @@ class HomeView: UIView, AnyView  {
         descriptionStackView.addArrangedSubview(warningNoMenstrualData)
         descriptionStackView.addArrangedSubview(activities)
         activities.addSubview(activitiesStack)
+        
     }
     
     func addConstraints() {
-        
         
         recordedMenstruationFeedback.snp.makeConstraints {
             $0.bottom.equalTo(safeAreaLayoutGuide).offset(-3.su)
@@ -200,8 +224,6 @@ class HomeView: UIView, AnyView  {
         activitiesStack.snp.makeConstraints{
             $0.edges.equalToSuperview()
         }
-            
-        activities.backgroundColor = .red
         
     }
     
@@ -297,7 +319,8 @@ class HomeView: UIView, AnyView  {
         activities.snp.makeConstraints{
             $0.height.equalTo(size)
         }
-        data.forEach{ element in
+        
+        data.forEach { element in
             let view = ActivityView()
             activitiesStack.addArrangedSubview(view)
         }

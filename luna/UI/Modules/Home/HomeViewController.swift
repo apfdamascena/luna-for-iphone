@@ -182,6 +182,7 @@ class HomeViewController: UIViewController {
             .subscribe(onNext: { data in
                 self.homeView.drawActivities(data)
             })
+            .disposed(by: disposeBag)
     }
 }
 
