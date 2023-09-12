@@ -53,7 +53,7 @@ class FirstTimeNewActivityView: UIView, AnyView {
         return label
     }()
     
-    private(set) var button: LunaButton = {
+    var button: LunaButton = {
         let button = LunaButton()
         button.draw(style: .letsGo)
         return button
@@ -85,17 +85,17 @@ class FirstTimeNewActivityView: UIView, AnyView {
         
         image.snp.makeConstraints {
             $0.trailing.leading.equalToSuperview().inset(3.su)
-            $0.top.equalToSuperview().offset(19.su)
+            $0.top.equalToSuperview().offset(18.su)
         }
         
         informationTextStack.snp.makeConstraints {
             $0.trailing.leading.equalToSuperview().inset(3.su)
-            $0.top.equalTo(image.snp.bottom).offset(7.su)
+            $0.top.equalTo(image.snp.bottom).offset(6.su)
         }
         
         button.snp.makeConstraints {
             $0.trailing.leading.equalToSuperview().inset(3.su)
-            $0.top.equalTo(informationTextStack.snp.bottom).offset(15.su)
+            $0.top.equalTo(informationTextStack.snp.bottom).offset(12.su)
         }
         
     }

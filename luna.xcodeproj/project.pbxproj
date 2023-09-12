@@ -121,7 +121,7 @@
 		A427FC502AAFA539006B4F2B /* NewActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC4F2AAFA539006B4F2B /* NewActivityView.swift */; };
 		A427FC522AAFA7D9006B4F2B /* FirstTimeNewAcitivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC512AAFA7D9006B4F2B /* FirstTimeNewAcitivityView.swift */; };
 		A427FC542AAFB34C006B4F2B /* LunaButtonLetsGo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC532AAFB34C006B4F2B /* LunaButtonLetsGo.swift */; };
-		A427FC562AB06CA9006B4F2B /* ActivitysManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC552AB06CA9006B4F2B /* ActivitysManager.swift */; };
+		A427FC562AB06CA9006B4F2B /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC552AB06CA9006B4F2B /* ActivityManager.swift */; };
 		A46C05132A6EFE150071ABCE /* CalendarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050D2A6EFE150071ABCE /* CalendarRouter.swift */; };
 		A46C05142A6EFE150071ABCE /* CalendarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050E2A6EFE150071ABCE /* CalendarPresenter.swift */; };
 		A46C05152A6EFE150071ABCE /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050F2A6EFE150071ABCE /* CalendarViewController.swift */; };
@@ -331,7 +331,7 @@
 		A427FC4F2AAFA539006B4F2B /* NewActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityView.swift; sourceTree = "<group>"; };
 		A427FC512AAFA7D9006B4F2B /* FirstTimeNewAcitivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewAcitivityView.swift; sourceTree = "<group>"; };
 		A427FC532AAFB34C006B4F2B /* LunaButtonLetsGo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaButtonLetsGo.swift; sourceTree = "<group>"; };
-		A427FC552AB06CA9006B4F2B /* ActivitysManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitysManager.swift; sourceTree = "<group>"; };
+		A427FC552AB06CA9006B4F2B /* ActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
 		A46C050D2A6EFE150071ABCE /* CalendarRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarRouter.swift; sourceTree = "<group>"; };
 		A46C050E2A6EFE150071ABCE /* CalendarPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarPresenter.swift; sourceTree = "<group>"; };
 		A46C050F2A6EFE150071ABCE /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -874,7 +874,7 @@
 			children = (
 				0DDC5B552A71D23600D4CCAE /* OnboardingManager.swift */,
 				0D6794182A731B5C00382142 /* UserCycleInformation.swift */,
-				A427FC552AB06CA9006B4F2B /* ActivitysManager.swift */,
+				A427FC552AB06CA9006B4F2B /* ActivityManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1545,7 +1545,7 @@
 				A46C05542A74642C0071ABCE /* WarningCalendarAccess.swift in Sources */,
 				0DBADE0F2A660AAE00A10FC3 /* Int+Su.swift in Sources */,
 				0DDA612A2A69CEC600CA15C6 /* MenstruationDurationViewController.swift in Sources */,
-				A427FC562AB06CA9006B4F2B /* ActivitysManager.swift in Sources */,
+				A427FC562AB06CA9006B4F2B /* ActivityManager.swift in Sources */,
 				CA17ED962A71ED750051BF9D /* CyclePhaseFocus.swift in Sources */,
 				0DA56C552A6B33AC00E056C1 /* OnboardingButtonView.swift in Sources */,
 				0D0B28D32A9FF8400048722A /* NotificationStation.swift in Sources */,

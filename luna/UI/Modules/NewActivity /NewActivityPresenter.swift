@@ -6,7 +6,7 @@
 //  
 //
 
-import Foundation
+import UIKit
 
 class NewActivityPresenter: ViewToPresenterNewActivityProtocol {
 
@@ -15,8 +15,14 @@ class NewActivityPresenter: ViewToPresenterNewActivityProtocol {
     var router: PresenterToRouterNewActivityProtocol?
     
     func userTappedLetsGoButton() {
-        guard let pageViewController = view else { return }
+//        guard let pageViewController = view else { return }
+        let page = NewActivityView()
         ActivityManager.shared.userSawActivities()
+        
+        DispatchQueue.main.async {
+//            self.router?.pushNewActivity(on: pageViewController)
+        }
+        
     }
     
 }
