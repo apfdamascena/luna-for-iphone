@@ -1,6 +1,7 @@
 ### others
 
 .env
+*/GoogleService-Info.plist
 
 Fastlane/code_coverage/
 ./Fastlane/test_output
@@ -139,3 +140,4 @@ iOSInjectionProject/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,macos,xcode
+
