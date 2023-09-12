@@ -31,6 +31,39 @@ class HomeView: UIView, AnyView  {
         return segmented
     }()
     
+    private let activities = UIView()
+    private let activitiesTitleContainer = UIView()
+    
+    private let activitiesTitleStack: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        return stack
+    }()
+    
+    private let activitiesTitle: LunaText = {
+        let label = LunaText()
+        let model = LunaTextViewModel(size: 25,
+                                      color: .black,
+                                      weight: .semibold)
+        label.draw(model)
+        label.text="Atividades"
+        return label
+    }()
+    
+    private let newActivityButton: LunaButton = {
+        let button = LunaButton()
+        button.draw(style: .newEvent)
+        return button
+    }()
+    
+    private let activitiesStack: UIStackView = {
+        let stack = UIStackView()
+        stack.spacing = 1.5.su
+        stack.axis = .vertical
+        stack.alignment = .fill
+        return stack
+    }()
+    
     private let allContentStackView: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
@@ -45,16 +78,6 @@ class HomeView: UIView, AnyView  {
         view.alignment = .fill
         view.spacing = 4.su
         return view
-    }()
-    
-    private let activities = UIView()
-    
-    private let activitiesStack: UIStackView = {
-        let stack = UIStackView()
-        stack.spacing = 1.5.su
-        stack.axis = .vertical
-        stack.alignment = .fill
-        return stack
     }()
     
     private let recordedMenstruationFeedback: FeedbackCard = {
@@ -106,6 +129,12 @@ class HomeView: UIView, AnyView  {
         descriptionStackView.addArrangedSubview(cardCycle)
         
         descriptionStackView.addArrangedSubview(warningNoMenstrualData)
+        
+        descriptionStackView.addArrangedSubview(activitiesTitleContainer)
+        
+        activitiesTitleContainer.addSubview(activitiesTitleStack)
+        activitiesTitleStack.addArrangedSubview(activitiesTitle)
+        activitiesTitleStack.addArrangedSubview(newActivityButton)
         
         descriptionStackView.addArrangedSubview(segmentedControl)
         
@@ -170,6 +199,13 @@ class HomeView: UIView, AnyView  {
             $0.height.equalTo(32)
         }
         
+        activitiesTitleContainer.snp.makeConstraints{
+            $0.height.equalTo(32)
+        }
+        
+        activitiesTitleStack.snp.makeConstraints{
+            $0.edges.equalToSuperview()
+        }
     }
     
     func addAdditionalConfiguration() {
