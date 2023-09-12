@@ -109,7 +109,6 @@ class HomeView: UIView, AnyView  {
     private(set) lazy var table: UICollectionView = {
         
         let screenSize = UIScreen.main.bounds.width
-
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.itemSize = CGSize(width: screenSize - 2*24, height: 10.su)
