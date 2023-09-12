@@ -40,6 +40,17 @@ class ActivityView: UIView, AnyView {
         return UIImageView(image: Asset.phaseActivityCell.image)
     }()
     
+    private let calendarIcon: UIImageView = {
+        let image = UIImage(systemName: "calendar")
+        let view = UIImageView(image: image)
+        view.tintColor = .red
+        return view
+    }()
+
+//    private let date: LunaText = {
+//        let label 
+//    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -56,7 +67,9 @@ class ActivityView: UIView, AnyView {
         informationStack.addArrangedSubview(title)
         informationStack.addArrangedSubview(dateDescriptionView)
         
-        dateDescriptionView.backgroundColor = .green
+        dateDescriptionView.addSubview(descriptionStack)
+        
+        descriptionStack.addArrangedSubview(calendarIcon)
     }
     
     func addConstraints() {
@@ -72,7 +85,11 @@ class ActivityView: UIView, AnyView {
             $0.top.bottom.trailing.equalToSuperview().inset(19)
         }
         
-        informationStack.backgroundColor = .yellow
+        descriptionStack.snp.makeConstraints{
+            $0.edges.equalToSuperview()
+        }
+        
+        descriptionStack.backgroundColor = .green
     }
     
     func addAdditionalConfiguration() {
