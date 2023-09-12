@@ -17,6 +17,7 @@
 "constants.content.button.previous"="Voltar";
 "constants.content.button.settings"="Ajustes";
 "constants.content.button.references" = "Leia as referências";
+"constants.content.button.newEvent"="Novo Evento";
 
 "constants.content.label.home.youAreIn" = "Você está na";
 "constants.content.label.home.menstruation" = "Menstruação";
@@ -90,6 +91,7 @@
 "constants.content.label.text.behind_sheets.fertile"= "O pico de LH (hormônio luteinizante) desencadeia na liberação do óvulo maduro, que tem uma vida útil de cerca de 12 a 24 horas. ";
 
 "constants.user.key.for_onboarding_was_seen"="onboarding";
+"constants.user.key.for_activities_was_seen"="activities";
 
 "constants.content.label.onboarding_register_menstruation"="Registrar Menstruação";
 "constants.content.label.onboarding_register_menstruation_description"="O círculo vermelho representa o dia em que ocorreu a menstruação. Basta clicar no botão para registrar!";
@@ -125,20 +127,20 @@
 "constants.content.label.home.card.menstruation.one" = "Você está literalmente sangrando!";
 "constants.content.label.home.card.menstruation.two" = "Se liga, você pode ficar mais sensível e irritável";
 "constants.content.label.home.card.menstruation.three" = "Ter cólicas e mudanças de paladar também faz parte. Forças!";
-"constants.content.label.home.card.menstruation.four" = "Atividades sociais intensas podem ficar para depois, hein";
-"constants.content.label.home.card.menstruation.five" = "Exercício leves podem ajudar com as cólicas e no humor. então se joga!";
+"constants.content.label.home.card.menstruation.four" = "Atividades sociais intensas podem ficar para depois, hein!";
+"constants.content.label.home.card.menstruation.five" = "Exercício leves podem ajudar com as cólicas e no humor. Então se joga!";
 
-"constants.content.label.home.card.ovulation.one" = "Eita, seu óvulo pode ser liberado em qualquer um desses dias";
+"constants.content.label.home.card.ovulation.one" = "Eita, seu óvulo pode ser liberado em qualquer um desses dias.";
 "constants.content.label.home.card.ovulation.two" = "A libido pode aumentar e você pode se achar mais atraente também!";
-"constants.content.label.home.card.ovulation.three" = "É o momento de adiar as atividades estressantes";
+"constants.content.label.home.card.ovulation.three" = "É o momento de adiar as atividades estressantes.";
 "constants.content.label.home.card.ovulation.four" = "É normal estar desejando mais doces, vai com moderação e seja feliz!";
 "constants.content.label.home.card.ovulation.five" = "Energia também tá em alta, abuse dos exercícios de força.";
 
 "constants.content.label.home.card.luteal.one" = "O óvulo agora é um corpo lúteo. Hormônios em alta!";
-"constants.content.label.home.card.luteal.two" = "Só good vibes! Pode ser um dia só de paz e tranquilidade";
+"constants.content.label.home.card.luteal.two" = "Só good vibes! Pode ser um dia só de paz e tranquilidade...";
 "constants.content.label.home.card.luteal.three" = "Seu humor pode variar e tudo bem, okay?";
-"constants.content.label.home.card.luteal.four" = "É bom evitar decisões importantes ou grandes mudanças";
-"constants.content.label.home.card.luteal.five" = "Aproveita esse momento para fazer atividades tranquilas";
+"constants.content.label.home.card.luteal.four" = "É bom evitar decisões importantes ou grandes mudanças!";
+"constants.content.label.home.card.luteal.five" = "Aproveita esse momento para fazer atividades tranquilas.";
 
 "constants.content.label.home.card.pms.one" = "Chegou ela... a TPM! Uma verdadeira combinação de sentimentos";
 "constants.content.label.home.card.pms.two" = "Ixe, você pode ir de 8 à 80 com facilidade";
@@ -146,11 +148,11 @@
 "constants.content.label.home.card.pms.four" = "Seu corpo pode estar retendo mais líquido, pode ser bom evitar alimentos ricos em sal";
 "constants.content.label.home.card.pms.five" = "A ansiedade vai estar em alta, tenha um pouquinho de paciência";
 
-"constants.content.label.home.card.folicular.one" = "Energia e bem-estar em alta! A fase folicular chegou";
-"constants.content.label.home.card.folicular.two" = "Energia e bem-estar em alta! Aproveita para resolver as broncas da vida";
+"constants.content.label.home.card.folicular.one" = "Energia e bem-estar em alta! A fase folicular chegou!";
+"constants.content.label.home.card.folicular.two" = "Energia e bem-estar em alta! Aproveita para resolver as broncas da vida.";
 "constants.content.label.home.card.folicular.three" = "A sua libido pode aumentar, hein?";
 "constants.content.label.home.card.folicular.four" = "Nada de passar sede nessa fase. Hidrate-se em abundância!";
-"constants.content.label.home.card.folicular.five" = "Mantenha bons hábitos alimentares e de exercício";
+"constants.content.label.home.card.folicular.five" = "Mantenha bons hábitos alimentares e de exercício.";
 
 "constants.content.label.onboarding_landing_page"="Desperte seu próprio ritmo";
 
@@ -216,13 +218,15 @@
 "constants.content.notification.dataset.fertile.title2" = "Carro da água passando…💧";
 "constants.content.notification.dataset.fertile.body2" = "Hoje tá sendo uma mistura de sentimentos, né? Entenda mais sobre essa fase 👉";
 
-
-
-
-
-
-
-
-
 "constants.content.label.home.no_data"="Nesta dia, ainda não tínhamos os seus dados";
 "constants.content.label.home.no_data_descripition" = "Explore os dias futuros!";
+
+"constants.content.label.first_time_new_activity.title" = "Vamos marcar uma nova atividade?";
+"constants.content.label.first_time_new_activity.subtitle" = "Registre uma atividade que precise fazer e receba uma sugestão personalizada sobre quando realizá-la no seu ciclo.";
+
+"constants.content.label.home.no_data"="Pra quê olhar pro passado? Ele já passou!";
+"constants.content.label.home.no_data_descripition" = "A previsão só é feita a partir da sua última menstruação, assim não temos o que te falar sobre esse dia.";
+
+"constants.content.label.first_time_new_activity.button" = "Vamos!";
+
+"constants.content.label.new_activity.nav.title" = "Nova atividade";

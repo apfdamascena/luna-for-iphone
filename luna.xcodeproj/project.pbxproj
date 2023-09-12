@@ -113,6 +113,21 @@
 		0DF4106E2A85820D00A10405 /* SeeMoreCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4106D2A85820D00A10405 /* SeeMoreCard.swift */; };
 		2814909EB8D2BDC1D5AA5874 /* Pods_lunaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33837198E1A2D686B82FD9A5 /* Pods_lunaTests.framework */; };
 		6994CDD4C9481D9C0BE8F427 /* Pods_luna_lunaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72D64B781A7543B9B9BB027 /* Pods_luna_lunaUITests.framework */; };
+		A427FC362AAF8EEA006B4F2B /* LunaButtonNewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC352AAF8EEA006B4F2B /* LunaButtonNewEvent.swift */; };
+		A427FC492AAFA219006B4F2B /* NewActivityContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC442AAFA219006B4F2B /* NewActivityContract.swift */; };
+		A427FC4A2AAFA219006B4F2B /* NewActivityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC452AAFA219006B4F2B /* NewActivityPresenter.swift */; };
+		A427FC4B2AAFA219006B4F2B /* NewActivityRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC462AAFA219006B4F2B /* NewActivityRouter.swift */; };
+		A427FC4C2AAFA219006B4F2B /* NewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC472AAFA219006B4F2B /* NewActivityViewController.swift */; };
+		A427FC4D2AAFA219006B4F2B /* NewActivityInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC482AAFA219006B4F2B /* NewActivityInteractor.swift */; };
+		A427FC502AAFA539006B4F2B /* NewActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC4F2AAFA539006B4F2B /* NewActivityView.swift */; };
+		A427FC522AAFA7D9006B4F2B /* FirstTimeNewAcitivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC512AAFA7D9006B4F2B /* FirstTimeNewAcitivityView.swift */; };
+		A427FC542AAFB34C006B4F2B /* LunaButtonLetsGo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC532AAFB34C006B4F2B /* LunaButtonLetsGo.swift */; };
+		A427FC562AB06CA9006B4F2B /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC552AB06CA9006B4F2B /* ActivityManager.swift */; };
+		A427FC5C2AB0DBFC006B4F2B /* FirstTimeNewActivityContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC582AB0DBFC006B4F2B /* FirstTimeNewActivityContract.swift */; };
+		A427FC5D2AB0DBFC006B4F2B /* FirstTimeNewActivityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC592AB0DBFC006B4F2B /* FirstTimeNewActivityPresenter.swift */; };
+		A427FC5E2AB0DBFC006B4F2B /* FirstTimeNewActivityRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC5A2AB0DBFC006B4F2B /* FirstTimeNewActivityRouter.swift */; };
+		A427FC5F2AB0DBFC006B4F2B /* FirstTimeNewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC5B2AB0DBFC006B4F2B /* FirstTimeNewActivityViewController.swift */; };
+		A427FC622AB0F68A006B4F2B /* ActivityTitleStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC612AB0F68A006B4F2B /* ActivityTitleStack.swift */; };
 		A46C05132A6EFE150071ABCE /* CalendarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050D2A6EFE150071ABCE /* CalendarRouter.swift */; };
 		A46C05142A6EFE150071ABCE /* CalendarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050E2A6EFE150071ABCE /* CalendarPresenter.swift */; };
 		A46C05152A6EFE150071ABCE /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050F2A6EFE150071ABCE /* CalendarViewController.swift */; };
@@ -314,6 +329,21 @@
 		40083797C335396142E4E31B /* Pods-luna-lunaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna-lunaUITests.debug.xcconfig"; path = "Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		46B376156DE621DEBE58A794 /* Pods-luna-lunaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna-lunaUITests.release.xcconfig"; path = "Target Support Files/Pods-luna-lunaUITests/Pods-luna-lunaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5295EDDCBCE10935681952A4 /* Pods-luna.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luna.debug.xcconfig"; path = "Target Support Files/Pods-luna/Pods-luna.debug.xcconfig"; sourceTree = "<group>"; };
+		A427FC352AAF8EEA006B4F2B /* LunaButtonNewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaButtonNewEvent.swift; sourceTree = "<group>"; };
+		A427FC442AAFA219006B4F2B /* NewActivityContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityContract.swift; sourceTree = "<group>"; };
+		A427FC452AAFA219006B4F2B /* NewActivityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityPresenter.swift; sourceTree = "<group>"; };
+		A427FC462AAFA219006B4F2B /* NewActivityRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityRouter.swift; sourceTree = "<group>"; };
+		A427FC472AAFA219006B4F2B /* NewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityViewController.swift; sourceTree = "<group>"; };
+		A427FC482AAFA219006B4F2B /* NewActivityInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityInteractor.swift; sourceTree = "<group>"; };
+		A427FC4F2AAFA539006B4F2B /* NewActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityView.swift; sourceTree = "<group>"; };
+		A427FC512AAFA7D9006B4F2B /* FirstTimeNewAcitivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewAcitivityView.swift; sourceTree = "<group>"; };
+		A427FC532AAFB34C006B4F2B /* LunaButtonLetsGo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaButtonLetsGo.swift; sourceTree = "<group>"; };
+		A427FC552AB06CA9006B4F2B /* ActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
+		A427FC582AB0DBFC006B4F2B /* FirstTimeNewActivityContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewActivityContract.swift; sourceTree = "<group>"; };
+		A427FC592AB0DBFC006B4F2B /* FirstTimeNewActivityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewActivityPresenter.swift; sourceTree = "<group>"; };
+		A427FC5A2AB0DBFC006B4F2B /* FirstTimeNewActivityRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewActivityRouter.swift; sourceTree = "<group>"; };
+		A427FC5B2AB0DBFC006B4F2B /* FirstTimeNewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewActivityViewController.swift; sourceTree = "<group>"; };
+		A427FC612AB0F68A006B4F2B /* ActivityTitleStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTitleStack.swift; sourceTree = "<group>"; };
 		A46C050D2A6EFE150071ABCE /* CalendarRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarRouter.swift; sourceTree = "<group>"; };
 		A46C050E2A6EFE150071ABCE /* CalendarPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarPresenter.swift; sourceTree = "<group>"; };
 		A46C050F2A6EFE150071ABCE /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -753,6 +783,8 @@
 		0DDA612F2A69D07900CA15C6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A427FC572AB0DBD8006B4F2B /* FirstTimeNewActivity */,
+				A427FC432AAFA1FE006B4F2B /* NewActivity  */,
 				A48F4A3C2A993C6E00BB5058 /* CardPhaseControl */,
 				CAAB60F02A82C98C0003F770 /* ReferencesSheet */,
 				0D6336982A774D5700EE9699 /* OtherCyclePhases */,
@@ -864,6 +896,7 @@
 			children = (
 				0DDC5B552A71D23600D4CCAE /* OnboardingManager.swift */,
 				0D6794182A731B5C00382142 /* UserCycleInformation.swift */,
+				A427FC552AB06CA9006B4F2B /* ActivityManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -895,6 +928,48 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A427FC432AAFA1FE006B4F2B /* NewActivity  */ = {
+			isa = PBXGroup;
+			children = (
+				A427FC4E2AAFA52C006B4F2B /* Views */,
+				A427FC442AAFA219006B4F2B /* NewActivityContract.swift */,
+				A427FC452AAFA219006B4F2B /* NewActivityPresenter.swift */,
+				A427FC462AAFA219006B4F2B /* NewActivityRouter.swift */,
+				A427FC472AAFA219006B4F2B /* NewActivityViewController.swift */,
+				A427FC482AAFA219006B4F2B /* NewActivityInteractor.swift */,
+			);
+			path = "NewActivity ";
+			sourceTree = "<group>";
+		};
+		A427FC4E2AAFA52C006B4F2B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A427FC4F2AAFA539006B4F2B /* NewActivityView.swift */,
+				A427FC612AB0F68A006B4F2B /* ActivityTitleStack.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A427FC572AB0DBD8006B4F2B /* FirstTimeNewActivity */ = {
+			isa = PBXGroup;
+			children = (
+				A427FC602AB0DC09006B4F2B /* Views */,
+				A427FC582AB0DBFC006B4F2B /* FirstTimeNewActivityContract.swift */,
+				A427FC592AB0DBFC006B4F2B /* FirstTimeNewActivityPresenter.swift */,
+				A427FC5A2AB0DBFC006B4F2B /* FirstTimeNewActivityRouter.swift */,
+				A427FC5B2AB0DBFC006B4F2B /* FirstTimeNewActivityViewController.swift */,
+			);
+			path = FirstTimeNewActivity;
+			sourceTree = "<group>";
+		};
+		A427FC602AB0DC09006B4F2B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A427FC512AAFA7D9006B4F2B /* FirstTimeNewAcitivityView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A46C050C2A6EFE150071ABCE /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -924,6 +999,8 @@
 				A46C054A2A74641E0071ABCE /* LunaButtonProceed.swift */,
 				A46C054B2A74641E0071ABCE /* LunaButtonStyle.swift */,
 				A48F4A232A82DC8800BB5058 /* LunaButtonReferences.swift */,
+				A427FC352AAF8EEA006B4F2B /* LunaButtonNewEvent.swift */,
+				A427FC532AAFB34C006B4F2B /* LunaButtonLetsGo.swift */,
 			);
 			path = LunaButton;
 			sourceTree = "<group>";
@@ -1455,6 +1532,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A427FC522AAFA7D9006B4F2B /* FirstTimeNewAcitivityView.swift in Sources */,
 				A48B7EDE2A7ADD6500CCC4C0 /* MenstrualPhaseBehaviorsView.swift in Sources */,
 				0D6336A42A7750EF00EE9699 /* OnboardingCyclePhaseContentViewModel.swift in Sources */,
 				0D2FC76E2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift in Sources */,
@@ -1481,14 +1559,18 @@
 				A46C05162A6EFE150071ABCE /* CalendarView.swift in Sources */,
 				A46C05572A7464970071ABCE /* LunaButton.swift in Sources */,
 				A46C05142A6EFE150071ABCE /* CalendarPresenter.swift in Sources */,
+				A427FC4B2AAFA219006B4F2B /* NewActivityRouter.swift in Sources */,
 				0D0B28D52AA004500048722A /* NotificationFirstPhaseDayMessageFactory.swift in Sources */,
+				A427FC362AAF8EEA006B4F2B /* LunaButtonNewEvent.swift in Sources */,
 				A48F4A372A9690C000BB5058 /* DynamicCardPhaseFactory.swift in Sources */,
+				A427FC4C2AAFA219006B4F2B /* NewActivityViewController.swift in Sources */,
 				0D2FC76A2A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift in Sources */,
 				0DF410632A840E8C00A10405 /* CalendarCollectionView+Rx.swift in Sources */,
 				A46C05202A72B63B0071ABCE /* DrawableButton.swift in Sources */,
 				0DBADDD02A66002800A10FC3 /* LunaText.swift in Sources */,
 				0D63371B2A7C749000EE9699 /* SegmentedLine.swift in Sources */,
 				BF6520DE2A6F0D4B00E60054 /* CycleDurationContract.swift in Sources */,
+				A427FC5D2AB0DBFC006B4F2B /* FirstTimeNewActivityPresenter.swift in Sources */,
 				CA557BCF2A6B1743001DF2BB /* LandingPageViewController.swift in Sources */,
 				BF4DC2EB2A744A3D0005BF7E /* CycleInformationsCalculator.swift in Sources */,
 				0DF410672A85656300A10405 /* MonthTag.swift in Sources */,
@@ -1496,6 +1578,7 @@
 				0DBADDE22A6603F800A10FC3 /* LastDayMenstruationViewController.swift in Sources */,
 				0DF4106E2A85820D00A10405 /* SeeMoreCard.swift in Sources */,
 				0D7C73B02A67834100677D1E /* TouchableUserEvent.swift in Sources */,
+				A427FC5C2AB0DBFC006B4F2B /* FirstTimeNewActivityContract.swift in Sources */,
 				0D6336F22A799B8B00EE9699 /* CalendarCollectionViewDataSource.swift in Sources */,
 				0D6336A02A774D7A00EE9699 /* OtherCyclePhasesRouter.swift in Sources */,
 				CAAB60F22A82CB080003F770 /* ReferencesSheetView.swift in Sources */,
@@ -1506,6 +1589,7 @@
 				A46C05542A74642C0071ABCE /* WarningCalendarAccess.swift in Sources */,
 				0DBADE0F2A660AAE00A10FC3 /* Int+Su.swift in Sources */,
 				0DDA612A2A69CEC600CA15C6 /* MenstruationDurationViewController.swift in Sources */,
+				A427FC562AB06CA9006B4F2B /* ActivityManager.swift in Sources */,
 				CA17ED962A71ED750051BF9D /* CyclePhaseFocus.swift in Sources */,
 				0DA56C552A6B33AC00E056C1 /* OnboardingButtonView.swift in Sources */,
 				0D0B28D32A9FF8400048722A /* NotificationStation.swift in Sources */,
@@ -1549,6 +1633,7 @@
 				0DBADDDF2A6603F800A10FC3 /* LastDayMenstruationContract.swift in Sources */,
 				A48B7ECB2A75A02700CCC4C0 /* LearnAboutMenstrualCyclePhasesView.swift in Sources */,
 				0DCCB9262A6D82AF00451D63 /* OnboardingPageControlView.swift in Sources */,
+				A427FC4A2AAFA219006B4F2B /* NewActivityPresenter.swift in Sources */,
 				0D6794312A74725200382142 /* TeachRecordMenstruationRouter.swift in Sources */,
 				0D6336EC2A789A5700EE9699 /* OnboardingCyclePhaseCardType.swift in Sources */,
 				0D6794132A71D53C00382142 /* RootScreenViewFactory.swift in Sources */,
@@ -1559,6 +1644,7 @@
 				A48B7ED02A7993E800CCC4C0 /* CyclePhaseTextFactory.swift in Sources */,
 				0DDA61282A69CEC600CA15C6 /* MenstruationDurationPresenter.swift in Sources */,
 				CA557BCD2A6B1743001DF2BB /* LandingPagePresenter.swift in Sources */,
+				A427FC622AB0F68A006B4F2B /* ActivityTitleStack.swift in Sources */,
 				0D6794322A74725200382142 /* TeachRecordMenstruationViewController.swift in Sources */,
 				CA0D93AB2A70472A0064C1C3 /* CalendarCollectionView.swift in Sources */,
 				0DBADE0C2A6608F300A10FC3 /* LastDayMenstruationView.swift in Sources */,
@@ -1572,12 +1658,15 @@
 				0D7C73AD2A67580D00677D1E /* Strings+Generated.swift in Sources */,
 				0DBADDD32A66005500A10FC3 /* LunaTextViewModel.swift in Sources */,
 				0D0B28C92A9FB15D0048722A /* Notification.swift in Sources */,
+				A427FC5F2AB0DBFC006B4F2B /* FirstTimeNewActivityViewController.swift in Sources */,
 				BFD1A0272A84114300F420B5 /* LunaEvent.swift in Sources */,
 				0D6336972A774C7D00EE9699 /* OnboardingInformation.swift in Sources */,
 				0DBADDE02A6603F800A10FC3 /* LastDayMenstruationPresenter.swift in Sources */,
 				0D63369F2A774D7A00EE9699 /* OtherCyclePhasesPresenter.swift in Sources */,
 				BFD533BA2A7158C00063351E /* LunaCalendarManager.swift in Sources */,
+				A427FC542AAFB34C006B4F2B /* LunaButtonLetsGo.swift in Sources */,
 				0DDC5B532A70B9CE00D4CCAE /* OnboardingPageFlowInteractor.swift in Sources */,
+				A427FC4D2AAFA219006B4F2B /* NewActivityInteractor.swift in Sources */,
 				0DDC5B522A70B9CE00D4CCAE /* OnboardingPageFlowViewController.swift in Sources */,
 				0D6336FE2A7A88D900EE9699 /* AnualCycleCalculator.swift in Sources */,
 				BFD1A0202A8329E700F420B5 /* ReferenceCard.swift in Sources */,
@@ -1588,8 +1677,10 @@
 				A46C05152A6EFE150071ABCE /* CalendarViewController.swift in Sources */,
 				A48F4A352A96906E00BB5058 /* DynamicCardPhaseViewModel.swift in Sources */,
 				0DDA61272A69CEC600CA15C6 /* MenstruationDurationContract.swift in Sources */,
+				A427FC492AAFA219006B4F2B /* NewActivityContract.swift in Sources */,
 				0D6794362A74729100382142 /* TeachRecordMenstruationView.swift in Sources */,
 				CA557BD22A6B17C7001DF2BB /* LandingPageView.swift in Sources */,
+				A427FC5E2AB0DBFC006B4F2B /* FirstTimeNewActivityRouter.swift in Sources */,
 				CABCFF722A733E79004B171C /* CalendarCollectionViewFlowLayout.swift in Sources */,
 				BFD1A0242A833A9900F420B5 /* Link.swift in Sources */,
 				0DDC5B502A70B9CE00D4CCAE /* OnboardingPageFlowPresenter.swift in Sources */,
@@ -1599,6 +1690,7 @@
 				A48B7EDA2A7ACBCD00CCC4C0 /* CycleDetailsCard.swift in Sources */,
 				0D2939772AB113630017891A /* ActivityCell.swift in Sources */,
 				CA557BCE2A6B1743001DF2BB /* LandingPageRouter.swift in Sources */,
+				A427FC502AAFA539006B4F2B /* NewActivityView.swift in Sources */,
 				0D6794192A731B5C00382142 /* UserCycleInformation.swift in Sources */,
 				A46C054F2A74641E0071ABCE /* LunaButtonStyle.swift in Sources */,
 				A46C05132A6EFE150071ABCE /* CalendarRouter.swift in Sources */,

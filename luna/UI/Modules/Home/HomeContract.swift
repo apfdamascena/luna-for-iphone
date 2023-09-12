@@ -40,7 +40,7 @@ protocol ViewToPresenterHomeProtocol {
     func loadUserCalendar()
     func loadCalendarToCollection()
     func insertMenstruation(selectedDate: Date) -> Bool 
-        
+    
     func userSelect(_ cell: CalendarCollectionViewCell?,
                     center: CalendarCollectionViewCell?,
                     andMoveCenter: CGFloat?)
