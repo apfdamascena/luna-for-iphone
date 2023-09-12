@@ -96,6 +96,7 @@ internal enum Asset {
   internal static let noneSelected = ImageAsset(name: "noneSelected")
   internal static let otherCyclePhases = ImageAsset(name: "other_cycle_phases")
   internal static let ovulationCell = ImageAsset(name: "ovulation_cell")
+  internal static let pencilIcon = ImageAsset(name: "pencil_icon")
   internal static let plusIcon = ImageAsset(name: "plus_icon")
   internal static let pmsCell = ImageAsset(name: "pms_cell")
   internal static let previsionSelected = ImageAsset(name: "previsionSelected")

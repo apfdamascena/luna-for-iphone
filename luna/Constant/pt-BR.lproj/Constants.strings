@@ -230,3 +230,5 @@
 "constants.content.label.first_time_new_activity.button" = "Vamos!";
 
 "constants.content.label.new_activity.nav.title" = "Nova atividade";
+
+"constants.content.label.new_activity.add_new_activity.activity_title" = "Atividade";
