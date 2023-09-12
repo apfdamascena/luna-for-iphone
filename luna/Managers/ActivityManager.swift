@@ -19,18 +19,8 @@ final class ActivityManager {
         return UserDefaults.standard.object(forKey: L10n.Constants.User.Key.forActivitiesWasSeen) == nil
     }
     
-    func userSawActivities() -> UIView {
-        UserDefaults.standard.set(true, forKey: L10n.Constants.User.Key.forActivitiesWasSeen) 
-        return NewActivityView()
-    }
-    
-    func teste() -> UIView {
-        if wasNotSeen {
-            return FirstTimeNewActivityView()
-            UserDefaults.standard.set(true, forKey: L10n.Constants.User.Key.forActivitiesWasSeen)
-        } else {
-            return NewActivityView()
-        }
+    func userSawActivities() {
+        UserDefaults.standard.set(true, forKey: L10n.Constants.User.Key.forActivitiesWasSeen)
     }
     
 }

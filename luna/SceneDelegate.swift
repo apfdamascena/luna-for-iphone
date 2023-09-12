@@ -25,7 +25,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let root = RootScreenViewFactory.createModule()
        
 //        let root = LunaTabBarViewController()
-        let root = NewActivityViewController()
+//        let root = FirstTimeNewActivityViewController()
+        let root = FirstTimeNewActivityRouter.createModule()
         window.rootViewController =  UINavigationController(rootViewController: root)
         window.makeKeyAndVisible()
     

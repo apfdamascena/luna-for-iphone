@@ -22,7 +22,6 @@ protocol ViewToPresenterNewActivityProtocol {
     var interactor: PresenterToInteractorNewActivityProtocol? { get set }
     var router: PresenterToRouterNewActivityProtocol? { get set }
     
-    func userTappedLetsGoButton()
 }
 
 
@@ -41,5 +40,5 @@ protocol InteractorToPresenterNewActivityProtocol {
 
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterNewActivityProtocol {
-    func pushNewActivity(on view: PresenterToViewNewActivityProtocol)
+    
 }

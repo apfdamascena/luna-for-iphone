@@ -26,12 +26,4 @@ class NewActivityRouter: PresenterToRouterNewActivityProtocol {
         return viewController
     }
     
-    func pushNewActivity(on view: PresenterToViewNewActivityProtocol) {
-        let newActivity = NewActivityRouter.createModule()
-        
-        guard let newActivityController = view as? NewActivityViewController else { return }
-        newActivityController.navigationController?.pushViewController(newActivity, animated: true)
-        
-    }
-    
 }
