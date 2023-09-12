@@ -157,6 +157,12 @@
 		A48F4A402A9E8AED00BB5058 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A3F2A9E8AED00BB5058 /* String.swift */; };
 		BF4144312A93DC2F00517910 /* LunaCalendarManager+Check.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4144302A93DC2F00517910 /* LunaCalendarManager+Check.swift */; };
 		BF42D2162A8AC67A00E09472 /* CalendarVerifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42D2152A8AC67A00E09472 /* CalendarVerifications.swift */; };
+		BF4951002AB0FB8A0064F5D6 /* BestActivityContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4950FB2AB0FB8A0064F5D6 /* BestActivityContract.swift */; };
+		BF4951012AB0FB8A0064F5D6 /* BestActivityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4950FC2AB0FB8A0064F5D6 /* BestActivityPresenter.swift */; };
+		BF4951022AB0FB8A0064F5D6 /* BestActivityRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4950FD2AB0FB8A0064F5D6 /* BestActivityRouter.swift */; };
+		BF4951032AB0FB8A0064F5D6 /* BestActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4950FE2AB0FB8A0064F5D6 /* BestActivityViewController.swift */; };
+		BF4951042AB0FB8A0064F5D6 /* BestActivityInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4950FF2AB0FB8A0064F5D6 /* BestActivityInteractor.swift */; };
+		BF4951112AB0FBC40064F5D6 /* BestActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4951102AB0FBC40064F5D6 /* BestActivityView.swift */; };
 		BF4DC2D22A72DC510005BF7E /* CyclePhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DC2D12A72DC510005BF7E /* CyclePhase.swift */; };
 		BF4DC2D62A7341B20005BF7E /* LunaCalendarRequestAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DC2D52A7341B20005BF7E /* LunaCalendarRequestAccess.swift */; };
 		BF4DC2EB2A744A3D0005BF7E /* CycleInformationsCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DC2EA2A744A3D0005BF7E /* CycleInformationsCalculator.swift */; };
@@ -372,6 +378,12 @@
 		A48F4A3F2A9E8AED00BB5058 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		BF4144302A93DC2F00517910 /* LunaCalendarManager+Check.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LunaCalendarManager+Check.swift"; sourceTree = "<group>"; };
 		BF42D2152A8AC67A00E09472 /* CalendarVerifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVerifications.swift; sourceTree = "<group>"; };
+		BF4950FB2AB0FB8A0064F5D6 /* BestActivityContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestActivityContract.swift; sourceTree = "<group>"; };
+		BF4950FC2AB0FB8A0064F5D6 /* BestActivityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestActivityPresenter.swift; sourceTree = "<group>"; };
+		BF4950FD2AB0FB8A0064F5D6 /* BestActivityRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestActivityRouter.swift; sourceTree = "<group>"; };
+		BF4950FE2AB0FB8A0064F5D6 /* BestActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestActivityViewController.swift; sourceTree = "<group>"; };
+		BF4950FF2AB0FB8A0064F5D6 /* BestActivityInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestActivityInteractor.swift; sourceTree = "<group>"; };
+		BF4951102AB0FBC40064F5D6 /* BestActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestActivityView.swift; sourceTree = "<group>"; };
 		BF4DC2D12A72DC510005BF7E /* CyclePhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclePhase.swift; sourceTree = "<group>"; };
 		BF4DC2D52A7341B20005BF7E /* LunaCalendarRequestAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaCalendarRequestAccess.swift; sourceTree = "<group>"; };
 		BF4DC2EA2A744A3D0005BF7E /* CycleInformationsCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleInformationsCalculator.swift; sourceTree = "<group>"; };
@@ -773,6 +785,7 @@
 		0DDA612F2A69D07900CA15C6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BF4950FA2AB0FB3D0064F5D6 /* BestActivity */,
 				A427FC572AB0DBD8006B4F2B /* FirstTimeNewActivity */,
 				A427FC432AAFA1FE006B4F2B /* NewActivity  */,
 				A48F4A3C2A993C6E00BB5058 /* CardPhaseControl */,
@@ -1040,6 +1053,27 @@
 				A48F4A3D2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift */,
 			);
 			path = CardPhaseControl;
+			sourceTree = "<group>";
+		};
+		BF4950FA2AB0FB3D0064F5D6 /* BestActivity */ = {
+			isa = PBXGroup;
+			children = (
+				BF4951052AB0FB980064F5D6 /* Views */,
+				BF4950FB2AB0FB8A0064F5D6 /* BestActivityContract.swift */,
+				BF4950FC2AB0FB8A0064F5D6 /* BestActivityPresenter.swift */,
+				BF4950FD2AB0FB8A0064F5D6 /* BestActivityRouter.swift */,
+				BF4950FE2AB0FB8A0064F5D6 /* BestActivityViewController.swift */,
+				BF4950FF2AB0FB8A0064F5D6 /* BestActivityInteractor.swift */,
+			);
+			path = BestActivity;
+			sourceTree = "<group>";
+		};
+		BF4951052AB0FB980064F5D6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF4951102AB0FBC40064F5D6 /* BestActivityView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		BF4DC2D02A72DC450005BF7E /* Enums */ = {
@@ -1532,6 +1566,7 @@
 				0DBADDE92A66045700A10FC3 /* UIViewController+Preview.swift in Sources */,
 				0D0B28CB2A9FD8A10048722A /* NotificationFilterCommand.swift in Sources */,
 				CA17ED982A71EDCE0051BF9D /* CyclePhaseViewModel.swift in Sources */,
+				BF4951012AB0FB8A0064F5D6 /* BestActivityPresenter.swift in Sources */,
 				BF4144312A93DC2F00517910 /* LunaCalendarManager+Check.swift in Sources */,
 				BFD533BC2A7166360063351E /* CalendarEventService.swift in Sources */,
 				0D0B292C2AA3B4200048722A /* NotificationCurrentPhaseInformationMessageFactory.swift in Sources */,
@@ -1569,7 +1604,9 @@
 				0D7C73B02A67834100677D1E /* TouchableUserEvent.swift in Sources */,
 				A427FC5C2AB0DBFC006B4F2B /* FirstTimeNewActivityContract.swift in Sources */,
 				0D6336F22A799B8B00EE9699 /* CalendarCollectionViewDataSource.swift in Sources */,
+				BF4951112AB0FBC40064F5D6 /* BestActivityView.swift in Sources */,
 				0D6336A02A774D7A00EE9699 /* OtherCyclePhasesRouter.swift in Sources */,
+				BF4951032AB0FB8A0064F5D6 /* BestActivityViewController.swift in Sources */,
 				CAAB60F22A82CB080003F770 /* ReferencesSheetView.swift in Sources */,
 				0DDA61292A69CEC600CA15C6 /* MenstruationDurationRouter.swift in Sources */,
 				A48B7ED22A7993FB00CCC4C0 /* CyclePhaseTextViewModel.swift in Sources */,
@@ -1583,6 +1620,7 @@
 				0DA56C552A6B33AC00E056C1 /* OnboardingButtonView.swift in Sources */,
 				0D0B28D32A9FF8400048722A /* NotificationStation.swift in Sources */,
 				0D4049D92A7048000058669B /* OnboardingPageControlDelegateImpl.swift in Sources */,
+				BF4951002AB0FB8A0064F5D6 /* BestActivityContract.swift in Sources */,
 				0D6794212A735C1B00382142 /* HomePresenter.swift in Sources */,
 				BFD533B62A71567A0063351E /* CalendarCreator.swift in Sources */,
 				A48F4A242A82DC8800BB5058 /* LunaButtonReferences.swift in Sources */,
@@ -1603,12 +1641,14 @@
 				BF4DC2D22A72DC510005BF7E /* CyclePhase.swift in Sources */,
 				BFCAAD3B2A6B19AE00A91CC0 /* MenstruationDurationView.swift in Sources */,
 				A48F4A3A2A993BEC00BB5058 /* CardPhaseControlDataSource.swift in Sources */,
+				BF4951022AB0FB8A0064F5D6 /* BestActivityRouter.swift in Sources */,
 				0DBADD9B2A65FDF100A10FC3 /* SceneDelegate.swift in Sources */,
 				A46C054E2A74641E0071ABCE /* LunaButtonProceed.swift in Sources */,
 				BFF09AFA2A6B599B00749328 /* PickerViewAdapter.swift in Sources */,
 				BFD533BF2A716BA50063351E /* Date.swift in Sources */,
 				0D6337002A7A893F00EE9699 /* OnboardingViewFlowDelegate.swift in Sources */,
 				0DDC5B512A70B9CE00D4CCAE /* OnboardingPageFlowRouter.swift in Sources */,
+				BF4951042AB0FB8A0064F5D6 /* BestActivityInteractor.swift in Sources */,
 				0D6336F42A799BAC00EE9699 /* CalendarCollectionViewDataSourceImpl.swift in Sources */,
 				A46C05552A74642C0071ABCE /* HomeView.swift in Sources */,
 				A48B7ECD2A77118400CCC4C0 /* FeedbackCard.swift in Sources */,
