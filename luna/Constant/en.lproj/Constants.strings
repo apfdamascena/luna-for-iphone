@@ -126,7 +126,7 @@
 "constants.content.label.home.card.menstruation.one" = "You're literally bleeding!";
 "constants.content.label.home.card.menstruation.two" = "Heads up, you might become more sensitive and irritable.";
 "constants.content.label.home.card.menstruation.three" = "Having cramps and changes in taste are part of menstruation. Stay strong!";
-"constants.content.label.home.card.menstruation.four" = "Intense social activities might have to wait, huh.";
+"constants.content.label.home.card.menstruation.four" = "Intense social activities might have to wait, huh!";
 "constants.content.label.home.card.menstruation.five" = "Gentle exercises can help with cramps and mood. So go for it!";
 
 "constants.content.label.home.card.ovulation.one" = "Whoa, your egg could be released on any of these days.";
@@ -147,7 +147,7 @@
 "constants.content.label.home.card.pms.four" = "Your body might retain more fluid, so it's good to avoid salty foods.";
 "constants.content.label.home.card.pms.five" = "Anxiety will be high, have a little patience.";
 
-"constants.content.label.home.card.folicular.one" = "High energy and well-being! The follicular phase has arrived.";
+"constants.content.label.home.card.folicular.one" = "High energy and well-being! The follicular phase has arrived!";
 "constants.content.label.home.card.folicular.two" = "High energy and well-being! Use this time to tackle life's challenges.";
 "constants.content.label.home.card.folicular.three" = "Your libido might increase, huh?";
 "constants.content.label.home.card.folicular.four" = "Don't let yourself get thirsty during this phase. Hydrate abundantly!";
@@ -262,3 +262,5 @@
 "constants.content.label.home.no_data_descripition" = "The prediction is only made from your last menstrual period, so we don't have anything to tell you about that day.";
 
 "constants.content.label.first_time_new_activity.button" = "Lets do it!";
+
+"constants.content.label.new_activity.nav.title" = "New Activity";

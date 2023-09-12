@@ -33,6 +33,7 @@ class NewActivityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
+        self.title = L10n.Constants.Content.Label.NewActivity.Nav.title
     }
     
 }

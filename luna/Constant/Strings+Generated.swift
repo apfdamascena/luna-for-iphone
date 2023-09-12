@@ -135,34 +135,34 @@ internal enum L10n {
           }
           internal enum Card {
             internal enum Folicular {
-              /// Mantenha bons hábitos alimentares e de exercício
-              internal static let five = L10n.tr("Constants", "constants.content.label.home.card.folicular.five", fallback: "Mantenha bons hábitos alimentares e de exercício")
+              /// Mantenha bons hábitos alimentares e de exercício.
+              internal static let five = L10n.tr("Constants", "constants.content.label.home.card.folicular.five", fallback: "Mantenha bons hábitos alimentares e de exercício.")
               /// Nada de passar sede nessa fase. Hidrate-se em abundância!
               internal static let four = L10n.tr("Constants", "constants.content.label.home.card.folicular.four", fallback: "Nada de passar sede nessa fase. Hidrate-se em abundância!")
-              /// Energia e bem-estar em alta! A fase folicular chegou
-              internal static let one = L10n.tr("Constants", "constants.content.label.home.card.folicular.one", fallback: "Energia e bem-estar em alta! A fase folicular chegou")
+              /// Energia e bem-estar em alta! A fase folicular chegou!
+              internal static let one = L10n.tr("Constants", "constants.content.label.home.card.folicular.one", fallback: "Energia e bem-estar em alta! A fase folicular chegou!")
               /// A sua libido pode aumentar, hein?
               internal static let three = L10n.tr("Constants", "constants.content.label.home.card.folicular.three", fallback: "A sua libido pode aumentar, hein?")
-              /// Energia e bem-estar em alta! Aproveita para resolver as broncas da vida
-              internal static let two = L10n.tr("Constants", "constants.content.label.home.card.folicular.two", fallback: "Energia e bem-estar em alta! Aproveita para resolver as broncas da vida")
+              /// Energia e bem-estar em alta! Aproveita para resolver as broncas da vida.
+              internal static let two = L10n.tr("Constants", "constants.content.label.home.card.folicular.two", fallback: "Energia e bem-estar em alta! Aproveita para resolver as broncas da vida.")
             }
             internal enum Luteal {
-              /// Aproveita esse momento para fazer atividades tranquilas
-              internal static let five = L10n.tr("Constants", "constants.content.label.home.card.luteal.five", fallback: "Aproveita esse momento para fazer atividades tranquilas")
-              /// É bom evitar decisões importantes ou grandes mudanças
-              internal static let four = L10n.tr("Constants", "constants.content.label.home.card.luteal.four", fallback: "É bom evitar decisões importantes ou grandes mudanças")
+              /// Aproveita esse momento para fazer atividades tranquilas.
+              internal static let five = L10n.tr("Constants", "constants.content.label.home.card.luteal.five", fallback: "Aproveita esse momento para fazer atividades tranquilas.")
+              /// É bom evitar decisões importantes ou grandes mudanças!
+              internal static let four = L10n.tr("Constants", "constants.content.label.home.card.luteal.four", fallback: "É bom evitar decisões importantes ou grandes mudanças!")
               /// O óvulo agora é um corpo lúteo. Hormônios em alta!
               internal static let one = L10n.tr("Constants", "constants.content.label.home.card.luteal.one", fallback: "O óvulo agora é um corpo lúteo. Hormônios em alta!")
               /// Seu humor pode variar e tudo bem, okay?
               internal static let three = L10n.tr("Constants", "constants.content.label.home.card.luteal.three", fallback: "Seu humor pode variar e tudo bem, okay?")
-              /// Só good vibes! Pode ser um dia só de paz e tranquilidade
-              internal static let two = L10n.tr("Constants", "constants.content.label.home.card.luteal.two", fallback: "Só good vibes! Pode ser um dia só de paz e tranquilidade")
+              /// Só good vibes! Pode ser um dia só de paz e tranquilidade...
+              internal static let two = L10n.tr("Constants", "constants.content.label.home.card.luteal.two", fallback: "Só good vibes! Pode ser um dia só de paz e tranquilidade...")
             }
             internal enum Menstruation {
-              /// Exercício leves podem ajudar com as cólicas e no humor. então se joga!
-              internal static let five = L10n.tr("Constants", "constants.content.label.home.card.menstruation.five", fallback: "Exercício leves podem ajudar com as cólicas e no humor. então se joga!")
-              /// Atividades sociais intensas podem ficar para depois, hein
-              internal static let four = L10n.tr("Constants", "constants.content.label.home.card.menstruation.four", fallback: "Atividades sociais intensas podem ficar para depois, hein")
+              /// Exercício leves podem ajudar com as cólicas e no humor. Então se joga!
+              internal static let five = L10n.tr("Constants", "constants.content.label.home.card.menstruation.five", fallback: "Exercício leves podem ajudar com as cólicas e no humor. Então se joga!")
+              /// Atividades sociais intensas podem ficar para depois, hein!
+              internal static let four = L10n.tr("Constants", "constants.content.label.home.card.menstruation.four", fallback: "Atividades sociais intensas podem ficar para depois, hein!")
               /// Você está literalmente sangrando!
               internal static let one = L10n.tr("Constants", "constants.content.label.home.card.menstruation.one", fallback: "Você está literalmente sangrando!")
               /// Ter cólicas e mudanças de paladar também faz parte. Forças!
@@ -175,10 +175,10 @@ internal enum L10n {
               internal static let five = L10n.tr("Constants", "constants.content.label.home.card.ovulation.five", fallback: "Energia também tá em alta, abuse dos exercícios de força.")
               /// É normal estar desejando mais doces, vai com moderação e seja feliz!
               internal static let four = L10n.tr("Constants", "constants.content.label.home.card.ovulation.four", fallback: "É normal estar desejando mais doces, vai com moderação e seja feliz!")
-              /// Eita, seu óvulo pode ser liberado em qualquer um desses dias
-              internal static let one = L10n.tr("Constants", "constants.content.label.home.card.ovulation.one", fallback: "Eita, seu óvulo pode ser liberado em qualquer um desses dias")
-              /// É o momento de adiar as atividades estressantes
-              internal static let three = L10n.tr("Constants", "constants.content.label.home.card.ovulation.three", fallback: "É o momento de adiar as atividades estressantes")
+              /// Eita, seu óvulo pode ser liberado em qualquer um desses dias.
+              internal static let one = L10n.tr("Constants", "constants.content.label.home.card.ovulation.one", fallback: "Eita, seu óvulo pode ser liberado em qualquer um desses dias.")
+              /// É o momento de adiar as atividades estressantes.
+              internal static let three = L10n.tr("Constants", "constants.content.label.home.card.ovulation.three", fallback: "É o momento de adiar as atividades estressantes.")
               /// A libido pode aumentar e você pode se achar mais atraente também!
               internal static let two = L10n.tr("Constants", "constants.content.label.home.card.ovulation.two", fallback: "A libido pode aumentar e você pode se achar mais atraente também!")
             }
@@ -228,6 +228,12 @@ internal enum L10n {
               /// Lima MP, Moreira MA, Maynard DC, Cruz MFA (2021) Alterações fisiológicas e comportamentais da mulher no ciclo menstrual e o impacto da suplementação nutricional / Physiological and behavioral changes in women during the menstrual cycle and the impact of nutritional supplementation. Published: 16/12/2021]. Revista de Saúde e Nutrição 28(1): e021001.
               internal static let third = L10n.tr("Constants", "constants.content.label.home.text.references.third", fallback: "Lima MP, Moreira MA, Maynard DC, Cruz MFA (2021) Alterações fisiológicas e comportamentais da mulher no ciclo menstrual e o impacto da suplementação nutricional / Physiological and behavioral changes in women during the menstrual cycle and the impact of nutritional supplementation. Published: 16/12/2021]. Revista de Saúde e Nutrição 28(1): e021001.")
             }
+          }
+        }
+        internal enum NewActivity {
+          internal enum Nav {
+            /// Nova atividade
+            internal static let title = L10n.tr("Constants", "constants.content.label.new_activity.nav.title", fallback: "Nova atividade")
           }
         }
         internal enum Phase {
