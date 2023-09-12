@@ -13,7 +13,11 @@ class LunaCalendarRequestAccess {
     
     func askForPermission() {
         eventStore.requestAccess(to: .event) { success, error in
-            guard error == nil, success else { return }
+            guard error == nil, success else {
+                AnalyticsCenter.shared.post(AnalyticsEvents.giveCalendarPermission(false))
+                return
+            }
+            AnalyticsCenter.shared.post(AnalyticsEvents.giveCalendarPermission(true))
         }
     }
 }

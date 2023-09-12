@@ -7,6 +7,8 @@
 
 import UIKit
 import CoreData
+import FirebaseCore
+import FirebaseAnalytics
 import UserNotifications
 
 @main
@@ -23,6 +25,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UNUserNotificationCenter.current().delegate = self
         resetStateIfUITesting()
+    
+        FirebaseApp.configure()
+        AnalyticsCenter.shared.track { event in
+            guard let userInfo = event.userInfo as NSDictionary? as? [String: Any] else { return }
+
+           Analytics.logEvent(
+               event.eventName,
+               parameters: userInfo.compactMapValues { $0 }
+           )
+       }
+        
         Thread.sleep(forTimeInterval: 0.5)
         // Override point for customization after application launch
         

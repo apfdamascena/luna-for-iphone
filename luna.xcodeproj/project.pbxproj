@@ -152,6 +152,13 @@
 		BF6520E42A6F0D5D00E60054 /* CycleDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520E32A6F0D5D00E60054 /* CycleDurationView.swift */; };
 		BFBD77132A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD77122A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift */; };
 		BFCAAD3B2A6B19AE00A91CC0 /* MenstruationDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */; };
+		BFCDE18E2AA6553700CFCA95 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BFCDE18D2AA6553700CFCA95 /* FirebaseAnalytics */; };
+		BFCDE1902AA6553700CFCA95 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = BFCDE18F2AA6553700CFCA95 /* FirebaseAnalyticsOnDeviceConversion */; };
+		BFCDE1922AA6553700CFCA95 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BFCDE1912AA6553700CFCA95 /* FirebaseAnalyticsSwift */; };
+		BFCDE1942AA6553700CFCA95 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = BFCDE1932AA6553700CFCA95 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		BFCDE1992AA6678700CFCA95 /* AnalyticsEventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDE1982AA6678700CFCA95 /* AnalyticsEventType.swift */; };
+		BFCDE19B2AA6693800CFCA95 /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDE19A2AA6693800CFCA95 /* AnalyticsEvents.swift */; };
+		BFCDE19D2AA6699600CFCA95 /* AnalyticsCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDE19C2AA6699600CFCA95 /* AnalyticsCenter.swift */; };
 		BFD1A01B2A82E18600F420B5 /* CalendarAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A01A2A82E18600F420B5 /* CalendarAccess.swift */; };
 		BFD1A01D2A82E1AC00F420B5 /* CalendarAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A01C2A82E1AC00F420B5 /* CalendarAccessError.swift */; };
 		BFD1A0202A8329E700F420B5 /* ReferenceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A01F2A8329E700F420B5 /* ReferenceCard.swift */; };
@@ -352,6 +359,10 @@
 		BF6520E32A6F0D5D00E60054 /* CycleDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationView.swift; sourceTree = "<group>"; };
 		BFBD77122A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LunaCalendarManager+Verifications.swift"; sourceTree = "<group>"; };
 		BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationView.swift; sourceTree = "<group>"; };
+		BFCDE1982AA6678700CFCA95 /* AnalyticsEventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEventType.swift; sourceTree = "<group>"; };
+		BFCDE19A2AA6693800CFCA95 /* AnalyticsEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvents.swift; sourceTree = "<group>"; };
+		BFCDE19C2AA6699600CFCA95 /* AnalyticsCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsCenter.swift; sourceTree = "<group>"; };
+		BFCDE1A52AB0E12A00CFCA95 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFD1A01A2A82E18600F420B5 /* CalendarAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAccess.swift; sourceTree = "<group>"; };
 		BFD1A01C2A82E1AC00F420B5 /* CalendarAccessError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAccessError.swift; sourceTree = "<group>"; };
 		BFD1A01F2A8329E700F420B5 /* ReferenceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceCard.swift; sourceTree = "<group>"; };
@@ -390,6 +401,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFCDE1922AA6553700CFCA95 /* FirebaseAnalyticsSwift in Frameworks */,
+				BFCDE1942AA6553700CFCA95 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				BFCDE18E2AA6553700CFCA95 /* FirebaseAnalytics in Frameworks */,
+				BFCDE1902AA6553700CFCA95 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				EA84604FAF8A4EF699191266 /* Pods_luna.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -654,6 +669,7 @@
 		0DBADD972A65FDF100A10FC3 /* luna */ = {
 			isa = PBXGroup;
 			children = (
+				BFCDE1972AA6676E00CFCA95 /* Analytics */,
 				0D0B28C72A9FB1490048722A /* Notification */,
 				CAE579A02A7AD80F004EE21C /* Utilities */,
 				BF4DC2D02A72DC450005BF7E /* Enums */,
@@ -688,6 +704,7 @@
 		0DBADDCB2A65FF2A00A10FC3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BFCDE1A52AB0E12A00CFCA95 /* GoogleService-Info.plist */,
 				0DA74C742A9549AA0021EC40 /* fonts */,
 				0DBADDA42A65FDF300A10FC3 /* Assets.xcassets */,
 				0DBADDA62A65FDF300A10FC3 /* LaunchScreen.storyboard */,
@@ -1007,6 +1024,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		BFCDE1972AA6676E00CFCA95 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				BFCDE1982AA6678700CFCA95 /* AnalyticsEventType.swift */,
+				BFCDE19A2AA6693800CFCA95 /* AnalyticsEvents.swift */,
+				BFCDE19C2AA6699600CFCA95 /* AnalyticsCenter.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
 		BFD1A0172A82DFDC00F420B5 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -1173,6 +1200,12 @@
 			dependencies = (
 			);
 			name = luna;
+			packageProductDependencies = (
+				BFCDE18D2AA6553700CFCA95 /* FirebaseAnalytics */,
+				BFCDE18F2AA6553700CFCA95 /* FirebaseAnalyticsOnDeviceConversion */,
+				BFCDE1912AA6553700CFCA95 /* FirebaseAnalyticsSwift */,
+				BFCDE1932AA6553700CFCA95 /* FirebaseAnalyticsWithoutAdIdSupport */,
+			);
 			productName = luna;
 			productReference = 0DBADD952A65FDF100A10FC3 /* luna.app */;
 			productType = "com.apple.product-type.application";
@@ -1249,6 +1282,9 @@
 				en,
 			);
 			mainGroup = 0DBADD8C2A65FDF100A10FC3;
+			packageReferences = (
+				BFCDE18C2AA6553700CFCA95 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 0DBADD962A65FDF100A10FC3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1572,6 +1608,7 @@
 				0D6794362A74729100382142 /* TeachRecordMenstruationView.swift in Sources */,
 				CA557BD22A6B17C7001DF2BB /* LandingPageView.swift in Sources */,
 				CABCFF722A733E79004B171C /* CalendarCollectionViewFlowLayout.swift in Sources */,
+				BFCDE1992AA6678700CFCA95 /* AnalyticsEventType.swift in Sources */,
 				BFD1A0242A833A9900F420B5 /* Link.swift in Sources */,
 				0DDC5B502A70B9CE00D4CCAE /* OnboardingPageFlowPresenter.swift in Sources */,
 				0D4049D72A7047420058669B /* OnboardingPageControlDelegate.swift in Sources */,
@@ -1581,7 +1618,9 @@
 				CA557BCE2A6B1743001DF2BB /* LandingPageRouter.swift in Sources */,
 				0D6794192A731B5C00382142 /* UserCycleInformation.swift in Sources */,
 				A46C054F2A74641E0071ABCE /* LunaButtonStyle.swift in Sources */,
+				BFCDE19D2AA6699600CFCA95 /* AnalyticsCenter.swift in Sources */,
 				A46C05132A6EFE150071ABCE /* CalendarRouter.swift in Sources */,
+				BFCDE19B2AA6693800CFCA95 /* AnalyticsEvents.swift in Sources */,
 				A48B7EE02A7AF48E00CCC4C0 /* BallComponent.swift in Sources */,
 				BFD533B82A7156970063351E /* CalendarProvider.swift in Sources */,
 				0D6336AB2A7756B200EE9699 /* Double+Su.swift in Sources */,
@@ -1972,6 +2011,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BFCDE18C2AA6553700CFCA95 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BFCDE18D2AA6553700CFCA95 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFCDE18C2AA6553700CFCA95 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		BFCDE18F2AA6553700CFCA95 /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFCDE18C2AA6553700CFCA95 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		BFCDE1912AA6553700CFCA95 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFCDE18C2AA6553700CFCA95 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		BFCDE1932AA6553700CFCA95 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFCDE18C2AA6553700CFCA95 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		0DBADDA12A65FDF100A10FC3 /* luna.xcdatamodeld */ = {

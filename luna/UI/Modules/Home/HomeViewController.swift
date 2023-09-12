@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import FirebaseAnalytics
 
 
 class HomeViewController: UIViewController {
@@ -45,7 +46,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.checkCalendarPermission()
-        
         addCollectionViewDataSource()
         addCalendarEventObservable()
         addCyclePhaseEventObservable()
@@ -65,6 +65,7 @@ class HomeViewController: UIViewController {
         DispatchQueue.main.async {
             self.presenter?.loadCalendarToCollection()
         }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -74,6 +75,8 @@ class HomeViewController: UIViewController {
         DispatchQueue.main.async {
             self.presenter?.loadCalendarToCollection()
         }
+        guard let teste = try? self.datasource.cyclePhase.value() else  { return }
+        AnalyticsCenter.shared.post(AnalyticsEvents.openApp(teste))
         
     }
     override func viewWillLayoutSubviews() {
@@ -158,6 +161,8 @@ class HomeViewController: UIViewController {
         tapGesture.rx.event.bind(onNext: { _ in
             guard let currentIndex = try? self.cardPhaseDataSource.index.value() else { return }
             self.presenter?.userTappedCardPhase(at: currentIndex)
+            guard let teste = try? self.datasource.cyclePhase.value() else  { return }
+            AnalyticsCenter.shared.post(AnalyticsEvents.clickPhaseCard(teste))
         })
         .disposed(by: disposeBag)
     }
