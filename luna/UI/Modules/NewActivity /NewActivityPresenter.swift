@@ -13,6 +13,12 @@ class NewActivityPresenter: ViewToPresenterNewActivityProtocol {
     var view: PresenterToViewNewActivityProtocol?
     var interactor: PresenterToInteractorNewActivityProtocol?
     var router: PresenterToRouterNewActivityProtocol?
+    
+    func userTappedLetsGoButton() {
+        guard let pageViewController = view else { return }
+        ActivityManager.shared.userSawActivities()
+    }
+    
 }
 
 extension NewActivityPresenter: InteractorToPresenterNewActivityProtocol {

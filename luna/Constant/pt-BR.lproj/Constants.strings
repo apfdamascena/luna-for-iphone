@@ -91,6 +91,7 @@
 "constants.content.label.text.behind_sheets.fertile"= "O pico de LH (hormônio luteinizante) desencadeia na liberação do óvulo maduro, que tem uma vida útil de cerca de 12 a 24 horas. ";
 
 "constants.user.key.for_onboarding_was_seen"="onboarding";
+"constants.user.key.for_activities_was_seen"="activities";
 
 "constants.content.label.onboarding_register_menstruation"="Registrar Menstruação";
 "constants.content.label.onboarding_register_menstruation_description"="O círculo vermelho representa o dia em que ocorreu a menstruação. Basta clicar no botão para registrar!";

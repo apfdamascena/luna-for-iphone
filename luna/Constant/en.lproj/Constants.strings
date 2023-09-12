@@ -89,6 +89,7 @@
 "constants.content.label.text.behind_sheets.fertile"= "The LH (luteinizing hormone) surge triggers the release of the mature egg, which has a lifespan of about 12 to 24 hours.";
 
 "constants.user.key.for_onboarding_was_seen"="onboarding";
+"constants.user.key.for_activities_was_seen"="activities";
 
 "constants.content.label.onboarding_register_menstruation"="Register Menstruation";
 "constants.content.label.onboarding_register_menstruation_description"="The red circle represents the day when menstruation occurred. Just click the button to record!";

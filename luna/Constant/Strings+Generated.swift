@@ -412,6 +412,8 @@ internal enum L10n {
     }
     internal enum User {
       internal enum Key {
+        /// activities
+        internal static let forActivitiesWasSeen = L10n.tr("Constants", "constants.user.key.for_activities_was_seen", fallback: "activities")
         /// onboarding
         internal static let forOnboardingWasSeen = L10n.tr("Constants", "constants.user.key.for_onboarding_was_seen", fallback: "onboarding")
       }
