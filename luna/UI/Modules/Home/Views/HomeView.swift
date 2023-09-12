@@ -46,6 +46,7 @@ class HomeView: UIView, AnyView  {
         view.spacing = 4.su
         return view
     }()
+    
     private let activities = UIView()
     
     private let activitiesStack: UIStackView = {
