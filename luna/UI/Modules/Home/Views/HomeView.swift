@@ -14,17 +14,11 @@ class ActivityView: UIView, AnyView {
         let stack = UIStackView()
         stack.axis = .horizontal
         stack.spacing = 4
-        stack.distribution = .equalSpacing
-        return stack
-    }()
-    
-    private let informationStack: UIStackView = {
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.spacing = 0.5.su
         stack.alignment = .fill
         return stack
     }()
+    
+    private let information = UIView()
     
     private let title: LunaText = {
         let label = LunaText()
@@ -43,13 +37,38 @@ class ActivityView: UIView, AnyView {
     private let calendarIcon: UIImageView = {
         let image = UIImage(systemName: "calendar")
         let view = UIImageView(image: image)
-        view.tintColor = .red
+        view.contentMode = .scaleAspectFit
+        view.tintColor = .black
         return view
     }()
 
-//    private let date: LunaText = {
-//        let label 
-//    }()
+    private let date: LunaText = {
+        let label = LunaText()
+        let model = LunaTextViewModel(size: 12,
+                                      color: .black,
+                                      weight: .regular)
+        label.draw(model)
+        label.text = "23 de setembro •"
+        return label
+    }()
+    
+    private let hour: UIImageView = {
+        let image = UIImage(systemName: "clock")
+        let view = UIImageView(image: image)
+        view.tintColor = .black
+        view.contentMode = .scaleAspectFit
+        return view
+    }()
+    
+    private let hourDescription: LunaText = {
+        let label = LunaText()
+        let model = LunaTextViewModel(size: 12,
+                                      color: .black,
+                                      weight: .regular)
+        label.draw(model)
+        label.text = "8:00 - 11:00"
+        return label
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -62,14 +81,13 @@ class ActivityView: UIView, AnyView {
     
     func addSubviews() {
         addSubview(cyclePhaseImage)
-        addSubview(informationStack)
+        addSubview(information)
         
-        informationStack.addArrangedSubview(title)
-        informationStack.addArrangedSubview(dateDescriptionView)
-        
-        dateDescriptionView.addSubview(descriptionStack)
-        
-        descriptionStack.addArrangedSubview(calendarIcon)
+        information.addSubview(title)
+        information.addSubview(calendarIcon)
+        information.addSubview(date)
+        information.addSubview(hour)
+        information.addSubview(hourDescription)
     }
     
     func addConstraints() {
@@ -80,16 +98,43 @@ class ActivityView: UIView, AnyView {
             $0.width.equalTo(40)
         }
         
-        informationStack.snp.makeConstraints {
+        information.snp.makeConstraints {
             $0.leading.equalTo(cyclePhaseImage.snp.trailing).offset(1.5.su)
             $0.top.bottom.trailing.equalToSuperview().inset(19)
         }
         
-        descriptionStack.snp.makeConstraints{
-            $0.edges.equalToSuperview()
+        title.snp.makeConstraints{
+            $0.top.trailing.equalToSuperview()
+            $0.leading.equalToSuperview().offset(0.2.su)
         }
         
-        descriptionStack.backgroundColor = .green
+        calendarIcon.snp.makeConstraints{
+            $0.top.equalTo(title.snp.bottom).offset(0.5.su)
+            $0.leading.equalTo(cyclePhaseImage.snp.trailing).offset(1.5.su)
+            $0.height.equalTo(14)
+            $0.width.equalTo(15)
+        }
+        
+        date.snp.makeConstraints{
+            $0.leading.equalTo(calendarIcon.snp.trailing).offset(0.5.su)
+            $0.width.greaterThanOrEqualTo(80)
+            $0.top.equalTo(calendarIcon)
+
+        }
+        
+        hour.snp.makeConstraints{
+            $0.leading.equalTo(date.snp.trailing).offset(0.5.su)
+            $0.height.equalTo(14)
+            $0.width.equalTo(15)
+            $0.top.equalTo(calendarIcon)
+        }
+        
+        hourDescription.snp.makeConstraints{
+            $0.leading.equalTo(hour.snp.trailing).offset(0.5.su)
+            $0.top.equalTo(calendarIcon)
+        }
+    
+    
     }
     
     func addAdditionalConfiguration() {
@@ -335,17 +380,23 @@ class HomeView: UIView, AnyView  {
     
     func drawActivities(_ data: [String]){
         let size: CGFloat = CGFloat(data.count * 80 + 12 * (data.count-1))
-        
+    
         activities.snp.removeConstraints()
-        
         activities.snp.makeConstraints{
             $0.height.equalTo(size)
         }
         
-        data.forEach { element in
-            let view = ActivityView()
-            activitiesStack.addArrangedSubview(view)
+        
+        DispatchQueue.main.async {
+            
+            data.forEach { element in
+                let view = ActivityView()
+                self.activitiesStack.addArrangedSubview(view)
+            }
+            
         }
+        
+
     }
     
 }
