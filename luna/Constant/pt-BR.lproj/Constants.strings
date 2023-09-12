@@ -17,6 +17,7 @@
 "constants.content.button.previous"="Voltar";
 "constants.content.button.settings"="Ajustes";
 "constants.content.button.references" = "Leia as referências";
+"constants.content.button.newEvent"="Novo Evento";
 
 "constants.content.label.home.youAreIn" = "Você está na";
 "constants.content.label.home.menstruation" = "Menstruação";
@@ -154,5 +155,68 @@
 
 "constants.content.label.onboarding_landing_page"="Desperte seu próprio ritmo";
 
-"constants.content.label.home.no_data"="Nesta dia, ainda não tínhamos os seus dados";
-"constants.content.label.home.no_data_descripition" = "Explore os dias futuros!";
+
+"constants.content.notification.firstPhaseDay.expected_menstruation.title"="Ding Dong, cheguei 🩸";
+"constants.content.notification.firstPhaseDay.expected_menstruation.body"="Você entrará na fase menstrual nos próximos dias. Registre em Luna!";
+
+"constants.content.notification.firstPhaseDay.fertile.title"="Cheguei, mores  💅";
+"constants.content.notification.firstPhaseDay.fertile.body"="Fase ovulatória à vista! Saiba o que pode acontecer nessa fase 👉";
+
+"constants.content.notification.firstPhaseDay.folicular.title"="Chegou a famosa ⚡️";
+"constants.content.notification.firstPhaseDay.folicular.body"="Ela mesmo, a Fase Folicular! Energia pode estar em alta hoje, veja como aproveitar!";
+
+"constants.content.notification.firstPhaseDay.luteal.title"="Piscou e eu cheguei";
+"constants.content.notification.firstPhaseDay.luteal.body"="Fase Lútea on! Hormônios em alta. Saiba o que pode acontecer nessa fase 👉";
+
+"constants.content.notification.firstPhaseDay.pms.title"="Sem gracinha hoje";
+"constants.content.notification.firstPhaseDay.pms.body"="Sintomas da TPM podem aparecer nos próximos dias. Saiba mais sobre essa fase 👉";
+
+
+"constants.content.notification.dataset.expected_menstruation.title" = "Aqueles dias 🩸";
+"constants.content.notification.dataset.expected_menstruation.body" = "Organize suas tarefas para quando sua energia voltar ao máximo. Luna te ajuda com isso! 👉";
+
+
+"constants.content.notification.dataset.expected_menstruation.title1" = "Como você está? ❤️";
+"constants.content.notification.dataset.expected_menstruation.body1" = "Segundo as previsões de Luna, você está na fase menstrual. Lembre-se de registrar!";
+"constants.content.notification.dataset.expected_menstruation.title2" = "Previsão: hora de se cuidar! ⏰";
+"constants.content.notification.dataset.expected_menstruation.body2" = "Tire um tempo para relaxar e pratique coisas que ajude a aliviar o estresse. Saiba mais";
+
+
+"constants.content.notification.dataset.folicular.title" = "Se arruma e vamos! 🏃‍♀️";
+"constants.content.notification.dataset.folicular.body" = "Você pode sentir mais energia hoje, abuse dos treinos de força. Saiba mais";
+"constants.content.notification.dataset.folicular.title1" = "GRAVE: chegou a hora 🚨";
+"constants.content.notification.dataset.folicular.body1" = "Hora de beber água, meu bem. Vamos lá, hidrate-se e seu corpo agradece!";
+"constants.content.notification.dataset.folicular.title2" = "Energia em alta!";
+"constants.content.notification.dataset.folicular.body2" = "Você pode ter mais disposição hoje! Que tal realizar as pendências da semana?";
+
+
+"constants.content.notification.dataset.luteal.title" = "Hormônios em alta!";
+"constants.content.notification.dataset.luteal.body" = "Os níveis de estrogênio e progesterona atingem o pico nessa fase. Saiba como isso pode interferir na sua rotina 👉";
+
+"constants.content.notification.dataset.luteal.title1" = "Mó paz ✌️";
+"constants.content.notification.dataset.luteal.body1" = "É um bom momento para fazer atividades tranquilas. Saiba mais sobre essa fase!";
+"constants.content.notification.dataset.luteal.title2" = "8 ou 80?";
+"constants.content.notification.dataset.luteal.body2" = "Seu humor pode variar hoje, é bom evitar grandes mudanças, hein? Saiba mais 👉";
+
+"constants.content.notification.dataset.pms.title" = "Dica do dia ✨";
+"constants.content.notification.dataset.pms.body" = "Seu corpo pode estar retendo mais líquido. Evitar excesso de alimentos ricos em sal pode ajudar.";
+
+"constants.content.notification.dataset.pms.title1" = "Forças!";
+"constants.content.notification.dataset.pms.body1" = "Você pode sentir cólica e outras dores no corpo nessa fase. Veja o que mais pode acontecer 👉";
+
+"constants.content.notification.dataset.pms.title2" = "É literalmente uma fase!";
+"constants.content.notification.dataset.pms.body2" = "Hoje tá sendo uma mistura de sentimentos, né? Entenda mais sobre essa fase 👉";
+
+
+"constants.content.notification.dataset.fertile.title"="Dose extra! 🔋";
+"constants.content.notification.dataset.fertile.body"="Aproveite o pico de determinação dessa fase para trabalhar nas suas metas!";
+
+"constants.content.notification.dataset.fertile.title1" = "Eu ouvi intensidade? 💪";
+"constants.content.notification.dataset.fertile.body1" = "Aproveite a energia em alta para treinos mais intensos! Veja mais sobre a fase atual!";
+
+"constants.content.notification.dataset.fertile.title2" = "Carro da água passando…💧";
+"constants.content.notification.dataset.fertile.body2" = "Hoje tá sendo uma mistura de sentimentos, né? Entenda mais sobre essa fase 👉";
+
+
+"constants.content.label.home.no_data"="Pra quê olhar pro passado? Ele já passou!";
+"constants.content.label.home.no_data_descripition" = "A previsão só é feita a partir da sua última menstruação, assim não temos o que te falar sobre esse dia.";

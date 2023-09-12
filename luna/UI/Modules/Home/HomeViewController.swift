@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import FirebaseAnalytics
 
+
 class HomeViewController: UIViewController {
     
     var presenter: ViewToPresenterHomeProtocol?
@@ -20,8 +21,13 @@ class HomeViewController: UIViewController {
     
     private var datasource: CalendarCollectionViewDataSource
     private var cardPhaseDataSource: CardPhaseControlDataSource
+
+    private let notificationStation = NotificationStation()
     
-    init(datasource: CalendarCollectionViewDataSource, cardPhaseDataSource: CardPhaseControlDataSource){
+    init(
+        datasource: CalendarCollectionViewDataSource = CalendarCollectionViewDataSourceImpl(),
+        cardPhaseDataSource: CardPhaseControlDataSource = CardPhaseControlDataSourceImpl()
+    ){
         self.datasource = datasource
         self.cardPhaseDataSource = cardPhaseDataSource
         super.init(nibName: nil, bundle: nil)
@@ -47,13 +53,15 @@ class HomeViewController: UIViewController {
         cardCyclePhaseHandler()
         seeMoreButtonTouchTrigger()
         addTapCardCycleEventObservable()
-      
+        addNotificationEventObservable()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
         self.navigationController?.isNavigationBarHidden = true
+        Notification.shared.requestAccess()
+        
         DispatchQueue.main.async {
             self.presenter?.loadCalendarToCollection()
         }
@@ -83,6 +91,17 @@ class HomeViewController: UIViewController {
         }.disposed(by: disposeBag)
     }
     
+    private func addNotificationEventObservable(){
+        
+        datasource.data
+            .asObservable()
+            .subscribe(onNext: { cycleDays in
+                let cycleDaysFromToday = cycleDays.filter{ $0.day > Date() }
+                self.notificationStation.addScheduleNotification(for: cycleDaysFromToday)
+            })
+            .disposed(by: disposeBag)
+    }
+    
     func addCalendarEventObservable() {
         
         homeView.calendarCollectionView
@@ -98,7 +117,8 @@ class HomeViewController: UIViewController {
         homeView.calendarCollectionView
             .rx.selectItemAtCalendar
             .subscribe(onNext: { selectedCell, centerCell, centerXtoCollection in
-                self.presenter?.userSelect(selectedCell, center: centerCell,
+                self.presenter?.userSelect(selectedCell,
+                                           center: centerCell,
                                            andMoveCenter: centerXtoCollection)
             }).disposed(by: disposeBag)
         
@@ -242,7 +262,7 @@ extension HomeViewController: PresenterToViewHomeProtocol {
          }
     }
     
-    func updateView(_ center: CalendarCollectionViewCell) {
+    @objc func updateView(_ center: CalendarCollectionViewCell) {
         if center != self.datasource.lastCell {
             vibrateDevice()
         }
@@ -260,7 +280,7 @@ extension HomeViewController: PresenterToViewHomeProtocol {
         generator.impactOccurred()
     }
     
-    func changeCurrentIndexCardPhase(at newIndex: Int) {
+    @objc func changeCurrentIndexCardPhase(at newIndex: Int) {
         self.cardPhaseDataSource.index.onNext(newIndex)
         
     }

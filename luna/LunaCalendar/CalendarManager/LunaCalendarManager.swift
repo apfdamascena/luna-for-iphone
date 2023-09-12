@@ -7,23 +7,49 @@
 
 import EventKit
 
-typealias PermissionResponse = ((Result<CalendarAccess, Error>) -> Void)
+typealias PermissionResponse = ((Result<CalendarAccess, CalendarAccessError>) -> Void)
 
-class LunaCalendarManager {
+protocol CalendarManager {
     
+    func requestAccessToCalendar(completion: @escaping PermissionResponse)
+    
+    func firstLoadElementsToCalendar(firstDayMenstruation: Date,
+                                     averageMenstruationDuration: Int,
+                                     averageCycleDuration: Int)
+    
+    func addCyclePhasesToCalendar(firstDayMenstruation: Date,
+                                  averageMenstruationDuration: Int,
+                                  averageCycleDuration: Int,
+                                  isFirst: Bool,
+                                  firstMenstruationTime: Int?)
+    
+    func transformExpectedToMenstruation()
+    
+    func getEventsByDate(firstDate: Date, finalDate: Date) -> [EKEvent]
+    
+    func changeDayPhaseBy(selectedDate: Date) -> ChangeCycleResponse
+    
+    func adjustEventsInCalendar(selectedDate: Date, isRemove: Bool)
+}
+
+class LunaCalendarManager: CalendarManager  {
+
     private let eventStore = EKEventStore()
     private var calendar: EKCalendar?
     var lunaEventService: CalendarEventService?
     var cycleInformationsCalculator: CycleInformationsCalculator?
     
-    init(calendar: EKCalendar? = nil, lunaEventService: CalendarEventService? = nil, cycleInformationsCalculator: CycleInformationsCalculator? = nil) {
+    init(calendar: EKCalendar? = nil,
+         lunaEventService: CalendarEventService? = nil,
+         cycleInformationsCalculator: CycleInformationsCalculator? = nil) {
+        
         let calendar = CalendarProvider(eventStore).getCalendar()
         self.calendar = calendar
         self.lunaEventService = CalendarEventService(with: eventStore, in: calendar)
         self.cycleInformationsCalculator = CycleInformationsCalculator()
     }
 
-    func requestAccessToCalendar(completion: @escaping PermissionResponse ){
+    func requestAccessToCalendar(completion: @escaping PermissionResponse){
         eventStore.requestAccess(to: .event) {[weak self] success, error in
             guard error == nil,
                   success,
