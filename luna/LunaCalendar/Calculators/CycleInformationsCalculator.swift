@@ -31,7 +31,6 @@ class CycleInformationsCalculator {
             var cycleDuration = tomorrowEvent?.startDate.daysBetween(lastMenstruation.startDate) ?? 28
             cycleDuration = max(cycleDuration, 20)
             cycleDuration = min(cycleDuration, 32)
-            print(menstruationEvents.count)
             if menstruationEvents.count <= 1 {
                 cycleDuration = UserCycleInformation.shared.cycleDurationFirstInput
             }

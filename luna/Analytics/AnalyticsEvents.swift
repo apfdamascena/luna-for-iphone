@@ -10,6 +10,7 @@ import Foundation
 enum AnalyticsEvents: AnalyticsEventType {
     case clickPhaseCard(CyclePhase)
     case giveCalendarPermission(Bool)
+    case openApp(CyclePhase)
 }
 
 extension AnalyticsEvents {
@@ -20,6 +21,8 @@ extension AnalyticsEvents {
       return "click_phase_card"
     case .giveCalendarPermission:
         return "give_calendar_permission"
+    case .openApp:
+        return "open_app"
     }
   }
   
@@ -28,7 +31,9 @@ extension AnalyticsEvents {
         case .clickPhaseCard(let phase):
             return ["phase": phase.value]
         case .giveCalendarPermission(let accepted):
-            return ["calendar_accepted": accepted]
+            return ["calendar_accepted": String(accepted)]
+        case .openApp(let phase):
+            return ["opened_phase": phase.value]
         }
     }
 }

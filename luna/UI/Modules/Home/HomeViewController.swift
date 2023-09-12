@@ -40,7 +40,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.checkCalendarPermission()
-        
         addCollectionViewDataSource()
         addCalendarEventObservable()
         addCyclePhaseEventObservable()
@@ -48,6 +47,7 @@ class HomeViewController: UIViewController {
         cardCyclePhaseHandler()
         seeMoreButtonTouchTrigger()
         addTapCardCycleEventObservable()
+      
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,6 +57,7 @@ class HomeViewController: UIViewController {
         DispatchQueue.main.async {
             self.presenter?.loadCalendarToCollection()
         }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -66,6 +67,8 @@ class HomeViewController: UIViewController {
         DispatchQueue.main.async {
             self.presenter?.loadCalendarToCollection()
         }
+        guard let teste = try? self.datasource.cyclePhase.value() else  { return }
+        AnalyticsCenter.shared.post(AnalyticsEvents.openApp(teste))
         
     }
     override func viewWillLayoutSubviews() {
