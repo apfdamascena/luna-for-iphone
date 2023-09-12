@@ -25,6 +25,12 @@ class HomeView: UIView, AnyView  {
     
     private(set) var cardCycle = CycleCardView()
     
+    private(set) var segmentedControl: UISegmentedControl = {
+        let segmented = UISegmentedControl(items: ["Semana", "Mês"])
+        segmented.selectedSegmentIndex = 0
+        return segmented
+    }()
+    
     private let allContentStackView: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
@@ -99,6 +105,9 @@ class HomeView: UIView, AnyView  {
         descriptionStackView.addArrangedSubview(cardCycle)
         
         descriptionStackView.addArrangedSubview(warningNoMenstrualData)
+        
+        descriptionStackView.addArrangedSubview(segmentedControl)
+        
         descriptionStackView.addArrangedSubview(activities)
         activities.addSubview(activitiesStack)
         
@@ -154,6 +163,10 @@ class HomeView: UIView, AnyView  {
                 
         activitiesStack.snp.makeConstraints{
             $0.edges.equalToSuperview()
+        }
+        
+        segmentedControl.snp.makeConstraints{
+            $0.height.equalTo(32)
         }
         
     }
