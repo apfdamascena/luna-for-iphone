@@ -8,9 +8,7 @@
 import UIKit
 import SnapKit
 
-class ActivityTableViewCell: UICollectionViewCell, AnyView {
-    
-    static let IDENTIFIER = "ActivityTableViewCell"
+class ActivityView: UIView, AnyView {
     
     private let descriptionStack: UIStackView = {
         let stack = UIStackView()
@@ -86,6 +84,17 @@ class HomeView: UIView, AnyView  {
         return view
     }()
     
+    
+    private let activities = UIView()
+    
+    private let activitiesStack: UIStackView = {
+        let stack = UIStackView()
+        stack.spacing = 1.5.su
+        stack.axis = .vertical
+        stack.alignment = .fill
+        return stack
+    }()
+    
     private let recordedMenstruationFeedback: FeedbackCard = {
         let card = FeedbackCard()
         card.message(for: .recordedMenstruation)
@@ -105,21 +114,8 @@ class HomeView: UIView, AnyView  {
         view.isHidden = true
         return view
     }()
-    
-    private(set) lazy var table: UICollectionView = {
+
         
-        let screenSize = UIScreen.main.bounds.width
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.itemSize = CGSize(width: screenSize - 2*24, height: 10.su)
-        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collection.register(ActivityTableViewCell.self,
-                            forCellWithReuseIdentifier: ActivityTableViewCell.IDENTIFIER)
-        collection.showsVerticalScrollIndicator = false
-        
-        return collection
-    }()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -148,8 +144,8 @@ class HomeView: UIView, AnyView  {
         descriptionStackView.addArrangedSubview(cardCycle)
         
         descriptionStackView.addArrangedSubview(warningNoMenstrualData)
-
-        descriptionStackView.addArrangedSubview(table)
+        descriptionStackView.addArrangedSubview(activities)
+        activities.addSubview(activitiesStack)
     }
     
     func addConstraints() {
@@ -200,10 +196,12 @@ class HomeView: UIView, AnyView  {
         warningNoMenstrualData.snp.makeConstraints{
             $0.height.equalTo(20.su)
         }
-        
-        table.snp.makeConstraints{
-            $0.height.equalTo(30.su)
+                
+        activitiesStack.snp.makeConstraints{
+            $0.edges.equalToSuperview()
         }
+            
+        activities.backgroundColor = .red
         
     }
     
@@ -288,6 +286,20 @@ class HomeView: UIView, AnyView  {
     func flowIndexChanged(to index: Int) {
         DispatchQueue.main.async {
             self.cardCycle.updateFlowIndex(index: index)
+        }
+    }
+    
+    func drawActivities(_ data: [String]){
+        let size: CGFloat = CGFloat(data.count * 80 + 12 * (data.count-1))
+        
+        activities.snp.removeConstraints()
+        
+        activities.snp.makeConstraints{
+            $0.height.equalTo(size)
+        }
+        data.forEach{ element in
+            let view = ActivityView()
+            activitiesStack.addArrangedSubview(view)
         }
     }
     

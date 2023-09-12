@@ -23,6 +23,8 @@ class HomeViewController: UIViewController {
 
     private let notificationStation = NotificationStation()
     
+    private let table: BehaviorSubject<[String]> = BehaviorSubject(value: ["testando", "eqedas", "dadasvc", " Alex Paulo"])
+    
     init(
         datasource: CalendarCollectionViewDataSource = CalendarCollectionViewDataSourceImpl(),
         cardPhaseDataSource: CardPhaseControlDataSource = CardPhaseControlDataSourceImpl()
@@ -176,11 +178,10 @@ class HomeViewController: UIViewController {
     
     func addTableViewDataSource(){
         
-        Observable.of(["alex", "testando",  "testando",  "testando"]).bind(to: homeView.table
-            .rx.items(cellIdentifier: ActivityTableViewCell.IDENTIFIER,
-                      cellType: ActivityTableViewCell.self)){ _, name, cell in
-    
-        }.disposed(by: disposeBag)
+        table.asObservable()
+            .subscribe(onNext: { data in
+                self.homeView.drawActivities(data)
+            })
     }
 }
 
