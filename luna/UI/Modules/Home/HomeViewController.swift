@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
 
     private let notificationStation = NotificationStation()
     
-    private let table: BehaviorSubject<[String]> = BehaviorSubject(value: ["eqedas", "dadasvc", " Alex Paulo"])
+    private let table: BehaviorSubject<[String]> = BehaviorSubject(value: ["eqedas", "dadasvc", " Alex Paulo", "testando"])
     
     init(
         datasource: CalendarCollectionViewDataSource = CalendarCollectionViewDataSourceImpl(),

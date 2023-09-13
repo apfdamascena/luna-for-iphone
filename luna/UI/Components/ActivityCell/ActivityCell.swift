@@ -23,7 +23,9 @@ class ActivityCell: UIView, AnyView {
     private let title: LunaText = {
         let label = LunaText()
         label.text = "Praia"
-        let model = LunaTextViewModel(size: 17, color: Asset.gray950.color, weight: .regular)
+        let model = LunaTextViewModel(size: 17,
+                                      color: Asset.gray950.color,
+                                      weight: .regular)
         label.draw(model)
         return label
     }()
