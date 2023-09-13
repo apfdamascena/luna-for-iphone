@@ -10,6 +10,36 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+protocol ActivityFilter {
+    
+    func filter(_ data: [String] ) -> [String]
+}
+
+class ActivityFilterWeek: ActivityFilter {
+    
+    func filter(_ data: [String]) -> [String] {
+        
+        return ["lekinho", "lekinho"]
+    }
+}
+
+class ActivityFilterMonth: ActivityFilter {
+    
+    func filter(_ data: [String]) -> [String] {
+        return ["lekinho", "lekinho", "lekinho"]
+    }
+}
+
+class ActivityFilterFactory {
+    
+    static func create(_ period: ActivityPeriod) -> ActivityFilter {
+        if period == .month {
+            return ActivityFilterMonth()
+        }
+        return  ActivityFilterWeek()
+    }
+}
+
 class HomeViewController: UIViewController {
     
     var presenter: ViewToPresenterHomeProtocol?
@@ -19,17 +49,18 @@ class HomeViewController: UIViewController {
     
     private var datasource: CalendarCollectionViewDataSource
     private var cardPhaseDataSource: CardPhaseControlDataSource
+    private var activitiesDataSource: ActivityDataSource
 
     private let notificationStation = NotificationStation()
     
-    private let table: BehaviorSubject<[String]> = BehaviorSubject(value: ["eqedas", "dadasvc", " Alex Paulo", "testando"])
-    
     init(
         datasource: CalendarCollectionViewDataSource = CalendarCollectionViewDataSourceImpl(),
-        cardPhaseDataSource: CardPhaseControlDataSource = CardPhaseControlDataSourceImpl()
+        cardPhaseDataSource: CardPhaseControlDataSource = CardPhaseControlDataSourceImpl(),
+        activitiesDataSource: ActivityDataSource = ActivityDataSourceImpl()
     ){
         self.datasource = datasource
         self.cardPhaseDataSource = cardPhaseDataSource
+        self.activitiesDataSource = activitiesDataSource
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -185,14 +216,17 @@ class HomeViewController: UIViewController {
             .map{ index in
                 return ActivityPeriod(index)
             }.subscribe(onNext: { activity in
-                print(activity)
+                guard let activities = try? self.activitiesDataSource.activities.value() else { return }
+                let activitiesFilter = ActivityFilterFactory.create(activity)
+                let activitiesFiltered = activitiesFilter.filter(activities)
+                self.activitiesDataSource.activitiesForSegmentedControl.onNext(activitiesFiltered)
             })
             .disposed(by: disposeBag)
     }
     
     func addTableViewDataSourceEventObservable(){
         
-        table.asObservable()
+        activitiesDataSource.activitiesForSegmentedControl.asObservable()
             .subscribe(onNext: { data in
                 self.homeView.drawActivities(data)
             })
