@@ -96,8 +96,7 @@ class ActivitiesView: UIView, AnyView {
             }
             
             activities.forEach { element in
-                let view = ActivityCell()
-                self.activitiesStack.addArrangedSubview(view)
+                self.activitiesStack.addArrangedSubview(element)
             }
         
         }

@@ -26,13 +26,14 @@ class ActivityFilterWeek: ActivityFilter {
 class ActivityFilterMonth: ActivityFilter {
     
     func filter(_ data: [String]) -> [String] {
-        return ["lekinho", "lekinho", "lekinho"]
+        return ["lekinho", "lekinho", "lekinho", "lekinho"]
     }
 }
 
 class ActivityFilterFactory {
     
     static func create(_ period: ActivityPeriod) -> ActivityFilter {
+        
         if period == .month {
             return ActivityFilterMonth()
         }
