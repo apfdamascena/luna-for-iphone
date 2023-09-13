@@ -132,7 +132,7 @@
 "constants.content.label.home.card.ovulation.one" = "Whoa, your egg could be released on any of these days.";
 "constants.content.label.home.card.ovulation.two" = "Libido might increase, and you might feel more attractive too!";
 "constants.content.label.home.card.ovulation.three" = "It's time to postpone stressful activities.";
-"constants.content.label.home.card.ovulation.four" = "Craving sweets is normal, enjoy in moderation and be happy!";
+"constants.content.label.home.card.ovulation.four" = "It is normal to experience variations in appetite, go in moderation and be happy!";
 "constants.content.label.home.card.ovulation.five" = "Energy is also high, take advantage with strength exercises.";
 
 "constants.content.label.home.card.luteal.one" = "The egg is now a corpus luteum. Hormones are high!";
@@ -267,4 +267,9 @@
 
 "constants.content.label.new_activity.add_new_activity.activity_title" = "Activity";
 "constants.content.label.new_activity.add_new_activity.metrics_title" = "Metrics";
-"constants.content.label.new_activity.add_new_activity.calendar_title" = "Deadline";
+"constants.content.label.new_activity.add_new_activity.deadline_title" = "Deadline";
+
+"constants.content.label.new_activity.add_new_activity.placeholder_activity_title" = "Title";
+"constants.content.label.new_activity.add_new_activity.subtitle_metrics" = "Record from 1 to 5, where 1 = a little and 5 = a lot";
+"constants.content.label.new_activity.add_new_activity.subtitle_deadline" = "Record the deadline to carry out the activity";
+"constants.content.label.new_activity.add_new_activity.date_title" = "Date";

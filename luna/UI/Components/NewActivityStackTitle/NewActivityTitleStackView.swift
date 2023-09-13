@@ -15,6 +15,7 @@ class NewActivityTitleStackView: UIStackView, AnyView {
     private let title: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 25, color: .black, weight: .regular)
+        label.addLineHeight(of: 31)
         label.setContentHuggingPriority(.defaultLow, for: .horizontal)
         label.numberOfLines = 0
         label.textAlignment = .left

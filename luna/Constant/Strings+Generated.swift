@@ -173,8 +173,9 @@ internal enum L10n {
             internal enum Ovulation {
               /// Energia também tá em alta, abuse dos exercícios de força.
               internal static let five = L10n.tr("Constants", "constants.content.label.home.card.ovulation.five", fallback: "Energia também tá em alta, abuse dos exercícios de força.")
-              /// É normal estar desejando mais doces, vai com moderação e seja feliz!
-              internal static let four = L10n.tr("Constants", "constants.content.label.home.card.ovulation.four", fallback: "É normal estar desejando mais doces, vai com moderação e seja feliz!")
+              /// É normal sentir variações no apetite, vai com moderação
+              /// e seja feliz!
+              internal static let four = L10n.tr("Constants", "constants.content.label.home.card.ovulation.four", fallback: "É normal sentir variações no apetite, vai com moderação\ne seja feliz!")
               /// Eita, seu óvulo pode ser liberado em qualquer um desses dias.
               internal static let one = L10n.tr("Constants", "constants.content.label.home.card.ovulation.one", fallback: "Eita, seu óvulo pode ser liberado em qualquer um desses dias.")
               /// É o momento de adiar as atividades estressantes.
@@ -234,10 +235,18 @@ internal enum L10n {
           internal enum AddNewActivity {
             /// Atividade
             internal static let activityTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.activity_title", fallback: "Atividade")
+            /// Data
+            internal static let dateTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.date_title", fallback: "Data")
             /// Prazo
             internal static let deadlineTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.deadline_title", fallback: "Prazo")
             /// Métricas
             internal static let metricsTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.metrics_title", fallback: "Métricas")
+            /// Título
+            internal static let placeholderActivityTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.placeholder_activity_title", fallback: "Título")
+            /// Registre a data limite para realizar a atividade
+            internal static let subtitleDeadline = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.subtitle_deadline", fallback: "Registre a data limite para realizar a atividade")
+            /// Registre de 1 a 5, sendo 1 = pouco e 5 = muito
+            internal static let subtitleMetrics = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.subtitle_metrics", fallback: "Registre de 1 a 5, sendo 1 = pouco e 5 = muito")
           }
           internal enum Nav {
             /// Nova atividade

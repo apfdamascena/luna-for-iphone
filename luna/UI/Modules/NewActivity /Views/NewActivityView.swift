@@ -10,23 +10,10 @@ import SnapKit
 
 class NewActivityView: UIView, AnyView {
     
-    private let activityTitle = NewActivityTitleStackView(
-        frame: CGRect(),
-        titleText: L10n.Constants.Content.Label.NewActivity.AddNewActivity.activityTitle,
-        iconAsset: Asset.pencilIcon
-    )
-    
-    private let metricsTitle = NewActivityTitleStackView(
-        frame: CGRect(),
-        titleText: L10n.Constants.Content.Label.NewActivity.AddNewActivity.metricsTitle,
-        iconAsset: Asset.chartPieIcon
-    )
-    
-    private let deadlineTitle = NewActivityTitleStackView(
-        frame: CGRect(),
-        titleText: L10n.Constants.Content.Label.NewActivity.AddNewActivity.deadlineTitle,
-        iconAsset: Asset.deadlineIcon
-    )
+    private let activityStack = ActivityStack()
+    private let metricsStack = MetricsStack()
+    private let deadlineStack = DeadlineStack()
+    private let datePickerStack = DatePickerStack()
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -43,6 +30,12 @@ class NewActivityView: UIView, AnyView {
         return view
     }()
     
+    var button: LunaButton = {
+        let button = LunaButton()
+        button.draw(style: .next)
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -56,9 +49,13 @@ class NewActivityView: UIView, AnyView {
         addSubview(scrollView)
         scrollView.addSubview(allContentStackView)
         
-        allContentStackView.addArrangedSubview(activityTitle)
-        allContentStackView.addArrangedSubview(metricsTitle)
-        allContentStackView.addArrangedSubview(deadlineTitle)
+        allContentStackView.addArrangedSubview(activityStack)
+        allContentStackView.addArrangedSubview(metricsStack)
+        allContentStackView.addArrangedSubview(deadlineStack)
+        
+        allContentStackView.addArrangedSubview(datePickerStack)
+        
+        allContentStackView.addArrangedSubview(button)
     }
     
     func addConstraints() {
@@ -73,11 +70,31 @@ class NewActivityView: UIView, AnyView {
             $0.top.bottom.equalTo(scrollView)
             $0.leading.width.equalTo(scrollView).inset(3.su)
         }
+        
+        activityStack.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.height.equalTo(12.su)
+        }
+        
+        metricsStack.snp.makeConstraints {
+            $0.height.equalTo(7.su)
+        }
+        
+        deadlineStack.snp.makeConstraints {
+            $0.height.equalTo(7.su)
+        }
+        
+        datePickerStack.snp.makeConstraints {
+            $0.top.equalTo(deadlineStack.snp.bottom).offset(3.su)
+            $0.height.equalTo(6.su)
+        }
+        
     }
     
     func addAdditionalConfiguration() {
         self.backgroundColor = .white
-//        scrollView.backgroundColor = .blue
     }
     
 }
+
+
