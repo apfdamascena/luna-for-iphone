@@ -38,7 +38,13 @@ class ActivitiesView: UIView, AnyView {
         return segmented
     }()
     
-    private let
+    private let activitiesStack: UIStackView = {
+        let stack = UIStackView()
+        stack.spacing = 1.5.su
+        stack.axis = .vertical
+        stack.alignment = .fill
+        return stack
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -56,6 +62,8 @@ class ActivitiesView: UIView, AnyView {
         activitiesTitleStack.addArrangedSubview(newActivity)
         
         addSubview(segmentedControl)
+        addSubview(activitiesStack)
+    
     }
     
     func addConstraints() {
@@ -69,6 +77,29 @@ class ActivitiesView: UIView, AnyView {
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(4.su)
             $0.top.equalTo(activitiesTitleStack.snp.bottom).offset(2.su)
+        }
+        
+        activitiesStack.snp.makeConstraints{
+            
+            $0.top.equalTo(segmentedControl.snp.bottom).offset(2.su)
+            $0.leading.trailing.equalToSuperview()
+        }
+    }
+    
+    func createTableWithActivities(_ activities: [ActivityCell]){
+        
+        
+        DispatchQueue.main.async {
+            
+            self.activitiesStack.arrangedSubviews.forEach{ view in
+                view.removeFromSuperview()
+            }
+            
+            activities.forEach { element in
+                let view = ActivityCell()
+                self.activitiesStack.addArrangedSubview(view)
+            }
+        
         }
     }
 }
@@ -117,7 +148,6 @@ class HomeView: UIView, AnyView  {
         return label
     }()
     
-
     private let newActivityButton: LunaButton = {
         let button = LunaButton()
         button.draw(style: .newEvent)
@@ -365,20 +395,27 @@ class HomeView: UIView, AnyView  {
     }
     
     func drawActivities(_ data: [String]){
-        let size: CGFloat = CGFloat(data.count * 80 + 12 * (data.count-1))
-    
-        activities.snp.removeConstraints()
-        activities.snp.makeConstraints{
-            $0.height.equalTo(size)
+        
+        let activities = data.map{ _ in
+            return ActivityCell()
         }
         
-        DispatchQueue.main.async {
-            
-            data.forEach { element in
-                let view = ActivityCell()
-                self.activitiesStack.addArrangedSubview(view)
-            }
-        }
+        activitiesView.createTableWithActivities(activities)
+        
+//        let size: CGFloat = CGFloat(data.count * 80 + 12 * (data.count-1))
+//
+//        activities.snp.removeConstraints()
+//        activities.snp.makeConstraints{
+//            $0.height.equalTo(size)
+//        }
+//
+//        DispatchQueue.main.async {
+//
+//            data.forEach { element in
+//                let view = ActivityCell()
+//                self.activitiesStack.addArrangedSubview(view)
+//            }
+//        }
     }
     
 }
