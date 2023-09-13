@@ -128,7 +128,7 @@
 		A427FC5F2AB0DBFC006B4F2B /* FirstTimeNewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC5B2AB0DBFC006B4F2B /* FirstTimeNewActivityViewController.swift */; };
 		A427FC622AB0F68A006B4F2B /* NewActivityTitleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC612AB0F68A006B4F2B /* NewActivityTitleStackView.swift */; };
 		A427FC6A2AB218B4006B4F2B /* FirstTimeNewActivityRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC692AB218B4006B4F2B /* FirstTimeNewActivityRouterTest.swift */; };
-		A427FC6C2AB2192D006B4F2B /* FirstTimeNewActivityHomeControllerDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC6B2AB2192D006B4F2B /* FirstTimeNewActivityHomeControllerDummy.swift */; };
+		A427FC6C2AB2192D006B4F2B /* FirstTimeNewActivityViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC6B2AB2192D006B4F2B /* FirstTimeNewActivityViewControllerMock.swift */; };
 		A427FC702AB229C6006B4F2B /* FirstTimeNewActivityNavigationControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC6F2AB229C6006B4F2B /* FirstTimeNewActivityNavigationControllerMock.swift */; };
 		A427FC782AB23233006B4F2B /* InlineSnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = A427FC772AB23233006B4F2B /* InlineSnapshotTesting */; };
 		A427FC7A2AB23233006B4F2B /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = A427FC792AB23233006B4F2B /* SnapshotTesting */; };
@@ -138,6 +138,8 @@
 		A427FC832AB23A19006B4F2B /* DeadlineStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC822AB23A19006B4F2B /* DeadlineStack.swift */; };
 		A427FC852AB23B18006B4F2B /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC842AB23B18006B4F2B /* UITextField.swift */; };
 		A427FC872AB248A3006B4F2B /* DatePickerStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC862AB248A3006B4F2B /* DatePickerStack.swift */; };
+		A427FC892AB26B7B006B4F2B /* FirstTimeNewActivityPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC882AB26B7B006B4F2B /* FirstTimeNewActivityPresenterTest.swift */; };
+		A427FC8D2AB2732F006B4F2B /* FirstTimeNewActivityRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC8C2AB2732F006B4F2B /* FirstTimeNewActivityRouterSpy.swift */; };
 		A46C05132A6EFE150071ABCE /* CalendarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050D2A6EFE150071ABCE /* CalendarRouter.swift */; };
 		A46C05142A6EFE150071ABCE /* CalendarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050E2A6EFE150071ABCE /* CalendarPresenter.swift */; };
 		A46C05152A6EFE150071ABCE /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050F2A6EFE150071ABCE /* CalendarViewController.swift */; };
@@ -354,7 +356,7 @@
 		A427FC5B2AB0DBFC006B4F2B /* FirstTimeNewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewActivityViewController.swift; sourceTree = "<group>"; };
 		A427FC612AB0F68A006B4F2B /* NewActivityTitleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityTitleStackView.swift; sourceTree = "<group>"; };
 		A427FC692AB218B4006B4F2B /* FirstTimeNewActivityRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewActivityRouterTest.swift; sourceTree = "<group>"; };
-		A427FC6B2AB2192D006B4F2B /* FirstTimeNewActivityHomeControllerDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewActivityHomeControllerDummy.swift; sourceTree = "<group>"; };
+		A427FC6B2AB2192D006B4F2B /* FirstTimeNewActivityViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewActivityViewControllerMock.swift; sourceTree = "<group>"; };
 		A427FC6F2AB229C6006B4F2B /* FirstTimeNewActivityNavigationControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewActivityNavigationControllerMock.swift; sourceTree = "<group>"; };
 		A427FC7B2AB23267006B4F2B /* FirstTimeNewActivitySnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewActivitySnapshotTest.swift; sourceTree = "<group>"; };
 		A427FC7D2AB23850006B4F2B /* ActivityStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStack.swift; sourceTree = "<group>"; };
@@ -362,6 +364,8 @@
 		A427FC822AB23A19006B4F2B /* DeadlineStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineStack.swift; sourceTree = "<group>"; };
 		A427FC842AB23B18006B4F2B /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		A427FC862AB248A3006B4F2B /* DatePickerStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerStack.swift; sourceTree = "<group>"; };
+		A427FC882AB26B7B006B4F2B /* FirstTimeNewActivityPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewActivityPresenterTest.swift; sourceTree = "<group>"; };
+		A427FC8C2AB2732F006B4F2B /* FirstTimeNewActivityRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewActivityRouterSpy.swift; sourceTree = "<group>"; };
 		A46C050D2A6EFE150071ABCE /* CalendarRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarRouter.swift; sourceTree = "<group>"; };
 		A46C050E2A6EFE150071ABCE /* CalendarPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarPresenter.swift; sourceTree = "<group>"; };
 		A46C050F2A6EFE150071ABCE /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -992,6 +996,7 @@
 				A427FC642AB216C8006B4F2B /* Doubles */,
 				A427FC692AB218B4006B4F2B /* FirstTimeNewActivityRouterTest.swift */,
 				A427FC7B2AB23267006B4F2B /* FirstTimeNewActivitySnapshotTest.swift */,
+				A427FC882AB26B7B006B4F2B /* FirstTimeNewActivityPresenterTest.swift */,
 			);
 			path = FirstTimeNewActivityTests;
 			sourceTree = "<group>";
@@ -999,8 +1004,9 @@
 		A427FC642AB216C8006B4F2B /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
-				A427FC6B2AB2192D006B4F2B /* FirstTimeNewActivityHomeControllerDummy.swift */,
+				A427FC6B2AB2192D006B4F2B /* FirstTimeNewActivityViewControllerMock.swift */,
 				A427FC6F2AB229C6006B4F2B /* FirstTimeNewActivityNavigationControllerMock.swift */,
+				A427FC8C2AB2732F006B4F2B /* FirstTimeNewActivityRouterSpy.swift */,
 			);
 			path = Doubles;
 			sourceTree = "<group>";
@@ -1764,13 +1770,15 @@
 				0D0B29172AA11EC70048722A /* HomeRouterTest.swift in Sources */,
 				0D0B291A2AA151490048722A /* HomeRouterMock.swift in Sources */,
 				0D0B29282AA265F50048722A /* HomeInteractorMock.swift in Sources */,
-				A427FC6C2AB2192D006B4F2B /* FirstTimeNewActivityHomeControllerDummy.swift in Sources */,
+				A427FC6C2AB2192D006B4F2B /* FirstTimeNewActivityViewControllerMock.swift in Sources */,
 				0D0B291E2AA23C920048722A /* HomePresenterTest.swift in Sources */,
 				0D0B29222AA264220048722A /* HomeViewControllerSpy.swift in Sources */,
+				A427FC8D2AB2732F006B4F2B /* FirstTimeNewActivityRouterSpy.swift in Sources */,
 				0D0B29262AA264A70048722A /* HomePresenterSpy.swift in Sources */,
 				A427FC702AB229C6006B4F2B /* FirstTimeNewActivityNavigationControllerMock.swift in Sources */,
 				0D0B29242AA264540048722A /* HomePresenterMock.swift in Sources */,
 				0DBADDB32A65FDF300A10FC3 /* lunaTests.swift in Sources */,
+				A427FC892AB26B7B006B4F2B /* FirstTimeNewActivityPresenterTest.swift in Sources */,
 				0D9D8A0F2AA6FC5900B64E2D /* HomeInteractorSpy.swift in Sources */,
 				0D0B29202AA263C80048722A /* HomeViewControllerMock.swift in Sources */,
 				A427FC6A2AB218B4006B4F2B /* FirstTimeNewActivityRouterTest.swift in Sources */,

@@ -11,7 +11,7 @@ import XCTest
 final class FirstTimeNewActivityRouterTest: XCTestCase {
 
     func testPushNewActivityViewWhenUserTap() {
-        let firstTimeNewActivityVCDummy = FirstTimeNewActivityViewControllerDummy()
+        let firstTimeNewActivityVCDummy = FirstTimeNewActivityViewControllerMock()
         let firstTimeNewActivityNavigationMock = FirstTimeNewActivityNavigationControllerMock(rootViewController: firstTimeNewActivityVCDummy)
         
         let sut = FirstTimeNewActivityRouter()

@@ -8,7 +8,7 @@
 @testable import luna
 import UIKit
 
-class FirstTimeNewActivityViewControllerDummy: FirstTimeNewActivityViewController {
+class FirstTimeNewActivityViewControllerMock: FirstTimeNewActivityViewController {
     
 }
 
