@@ -80,15 +80,13 @@ class ActivitiesView: UIView, AnyView {
         }
         
         activitiesStack.snp.makeConstraints{
-            
             $0.top.equalTo(segmentedControl.snp.bottom).offset(2.su)
             $0.leading.trailing.equalToSuperview()
         }
     }
     
     func createTableWithActivities(_ activities: [ActivityCell]){
-        
-        
+    
         DispatchQueue.main.async {
             
             self.activitiesStack.arrangedSubviews.forEach{ view in
@@ -98,7 +96,6 @@ class ActivitiesView: UIView, AnyView {
             activities.forEach { element in
                 self.activitiesStack.addArrangedSubview(element)
             }
-        
         }
     }
 }
