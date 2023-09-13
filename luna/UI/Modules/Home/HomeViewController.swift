@@ -16,7 +16,7 @@ enum ActivityPeriod {
     case week
     case month
     
-    init?(_ value: Int){
+    init(_ value: Int){
         switch value {
         case 0:
             self = .week
