@@ -23,7 +23,7 @@ class ActivityCell: UIView, AnyView {
     private let title: LunaText = {
         let label = LunaText()
         label.text = "Praia"
-        let model = LunaTextViewModel(size: 17, color: .black, weight: .regular)
+        let model = LunaTextViewModel(size: 17, color: Asset.gray950.color, weight: .regular)
         label.draw(model)
         return label
     }()
@@ -38,14 +38,14 @@ class ActivityCell: UIView, AnyView {
         let image = UIImage(systemName: "calendar")
         let view = UIImageView(image: image)
         view.contentMode = .scaleAspectFit
-        view.tintColor = .black
+        view.tintColor = Asset.gray500.color
         return view
     }()
 
     private let date: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 12,
-                                      color: .black,
+                                      color: Asset.gray500.color,
                                       weight: .regular)
         label.draw(model)
         label.text = "23 de setembro •"
@@ -55,7 +55,7 @@ class ActivityCell: UIView, AnyView {
     private let hour: UIImageView = {
         let image = UIImage(systemName: "clock")
         let view = UIImageView(image: image)
-        view.tintColor = .black
+        view.tintColor = Asset.gray500.color
         view.contentMode = .scaleAspectFit
         return view
     }()
@@ -63,7 +63,7 @@ class ActivityCell: UIView, AnyView {
     private let hourDescription: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 12,
-                                      color: .black,
+                                      color: Asset.gray500.color,
                                       weight: .regular)
         label.draw(model)
         label.text = "8:00 - 11:00"

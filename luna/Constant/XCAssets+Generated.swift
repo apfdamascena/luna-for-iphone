@@ -85,6 +85,7 @@ internal enum Asset {
   internal static let gray200 = ColorAsset(name: "gray_200")
   internal static let gray400 = ColorAsset(name: "gray_400")
   internal static let gray50 = ColorAsset(name: "gray_50")
+  internal static let gray500 = ColorAsset(name: "gray_500")
   internal static let gray950 = ColorAsset(name: "gray_950")
   internal static let imageNoData = ImageAsset(name: "image_no_data")
   internal static let landingPageBackgroundImage = ImageAsset(name: "landingPageBackgroundImage")
