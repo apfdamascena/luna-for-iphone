@@ -178,11 +178,11 @@ class HomeViewController: UIViewController {
     
     func addTableViewDataSource(){
         
-        table.asObservable()
-            .subscribe(onNext: { data in
-                self.homeView.drawActivities(data)
-            })
-            .disposed(by: disposeBag)
+//        table.asObservable()
+//            .subscribe(onNext: { data in
+//                self.homeView.drawActivities(data)
+//            })
+//            .disposed(by: disposeBag)
     }
 }
 

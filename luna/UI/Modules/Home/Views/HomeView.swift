@@ -8,31 +8,7 @@
 import UIKit
 import SnapKit
 
-class HomeView: UIView, AnyView  {
-    
-    private var hasAcessToCalendar: CalendarAccess = .unauthorized
-    
-    private(set) var calendarCollectionView = CalendarScrollCollectionView()
-    private(set) var warningCalendarAccess = WarningCalendarAccess()
-    
-    private let monthTag = MonthTag()
-    
-    private let phaseCycleTitle = PhaseCycleTitle()
-    
-    var referencesButton: LunaButton {
-        return phaseCycleTitle.readReferencesButton
-    }
-    
-    private(set) var cardCycle = CycleCardView()
-    
-    private(set) var segmentedControl: UISegmentedControl = {
-        let segmented = UISegmentedControl(items: ["Semana", "Mês"])
-        segmented.selectedSegmentIndex = 0
-        return segmented
-    }()
-    
-    private let activities = UIView()
-    private let activitiesTitleContainer = UIView()
+class ActivitiesView: UIView, AnyView {
     
     private let activitiesTitleStack: UIStackView = {
         let stack = UIStackView()
@@ -50,6 +26,98 @@ class HomeView: UIView, AnyView  {
         return label
     }()
     
+    private(set) var newActivity: LunaButton = {
+        let button = LunaButton()
+        button.draw(style: .newEvent)
+        return button
+    }()
+    
+    private(set) var segmentedControl: UISegmentedControl = {
+        let segmented = UISegmentedControl(items: ["Semana", "Mês"])
+        segmented.selectedSegmentIndex = 0
+        return segmented
+    }()
+    
+    private let
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func addSubviews() {
+        
+        addSubview(activitiesTitleStack)
+        activitiesTitleStack.addArrangedSubview(activitiesTitle)
+        activitiesTitleStack.addArrangedSubview(newActivity)
+        
+        addSubview(segmentedControl)
+    }
+    
+    func addConstraints() {
+        
+        activitiesTitleStack.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(4.su)
+        }
+        
+        segmentedControl.snp.makeConstraints{
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(4.su)
+            $0.top.equalTo(activitiesTitleStack.snp.bottom).offset(2.su)
+        }
+    }
+}
+
+class HomeView: UIView, AnyView  {
+    
+    private var hasAcessToCalendar: CalendarAccess = .unauthorized
+    
+    private(set) var calendarCollectionView = CalendarScrollCollectionView()
+    private(set) var warningCalendarAccess = WarningCalendarAccess()
+    private let monthTag = MonthTag()
+    
+    private(set) var activitiesView = ActivitiesView()
+    
+    private let phaseCycleTitle = PhaseCycleTitle()
+    
+    var referencesButton: LunaButton {
+        return phaseCycleTitle.readReferencesButton
+    }
+    
+    private(set) var cardCycle = CycleCardView()
+    
+    private(set) var segmentedControl: UISegmentedControl = {
+        let segmented = UISegmentedControl(items: ["Semana", "Mês"])
+        segmented.selectedSegmentIndex = 0
+        return segmented
+    }()
+    
+    private let activities = UIView()
+    
+    private let activitiesTitleContainer = UIView()
+    
+    private let activitiesTitleStack: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        return stack
+    }()
+    
+    private let activitiesTitle: LunaText = {
+        let label = LunaText()
+        let model = LunaTextViewModel(size: 25,
+                                      color: Asset.gray950.color,
+                                      weight: .medium)
+        label.draw(model)
+        label.text="Atividades"
+        return label
+    }()
+    
+
     private let newActivityButton: LunaButton = {
         let button = LunaButton()
         button.draw(style: .newEvent)
@@ -119,27 +187,24 @@ class HomeView: UIView, AnyView  {
         
         allContentStackView.addArrangedSubview(monthTag)
         allContentStackView.addArrangedSubview(calendarCollectionView)
+        
         allContentStackView.addArrangedSubview(descriptionStackView)
-        
         descriptionStackView.addArrangedSubview(warningCalendarAccess)
-        
-        
         descriptionStackView.addArrangedSubview(phaseCycleTitle)
-        
         descriptionStackView.addArrangedSubview(cardCycle)
-        
         descriptionStackView.addArrangedSubview(warningNoMenstrualData)
         
-        descriptionStackView.addArrangedSubview(activitiesTitleContainer)
+        allContentStackView.addArrangedSubview(activitiesView)
+
+//        descriptionStackView.addArrangedSubview(activitiesTitleContainer)
         
-        activitiesTitleContainer.addSubview(activitiesTitleStack)
-        activitiesTitleStack.addArrangedSubview(activitiesTitle)
-        activitiesTitleStack.addArrangedSubview(newActivityButton)
+//        activitiesTitleContainer.addSubview(activitiesTitleStack)
+//        activitiesTitleStack.addArrangedSubview(activitiesTitle)
+//        activitiesTitleStack.addArrangedSubview(newActivityButton)
         
-        descriptionStackView.addArrangedSubview(segmentedControl)
-        
-        descriptionStackView.addArrangedSubview(activities)
-        activities.addSubview(activitiesStack)
+//        descriptionStackView.addArrangedSubview(segmentedControl)
+//        descriptionStackView.addArrangedSubview(activities)
+//        activities.addSubview(activitiesStack)
         
     }
     
@@ -190,22 +255,29 @@ class HomeView: UIView, AnyView  {
         warningNoMenstrualData.snp.makeConstraints{
             $0.height.equalTo(46.su)
         }
+        
+        activitiesView.snp.makeConstraints{
+            $0.height.equalTo(50.su)
+            $0.leading.trailing.equalTo(self).inset(3.su)
+        }
+//
+//        activitiesView.backgroundColor = .red
                 
-        activitiesStack.snp.makeConstraints{
-            $0.edges.equalToSuperview()
-        }
-        
-        segmentedControl.snp.makeConstraints{
-            $0.height.equalTo(32)
-        }
-        
-        activitiesTitleContainer.snp.makeConstraints{
-            $0.height.equalTo(32)
-        }
-        
-        activitiesTitleStack.snp.makeConstraints{
-            $0.edges.equalToSuperview()
-        }
+//        activitiesStack.snp.makeConstraints{
+//            $0.edges.equalToSuperview()
+//        }
+//
+//        segmentedControl.snp.makeConstraints{
+//            $0.height.equalTo(32)
+//        }
+//
+//        activitiesTitleContainer.snp.makeConstraints{
+//            $0.height.equalTo(32)
+//        }
+//
+//        activitiesTitleStack.snp.makeConstraints{
+//            $0.edges.equalToSuperview()
+//        }
     }
     
     func addAdditionalConfiguration() {
