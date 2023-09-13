@@ -127,6 +127,9 @@
 		A427FC5E2AB0DBFC006B4F2B /* FirstTimeNewActivityRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC5A2AB0DBFC006B4F2B /* FirstTimeNewActivityRouter.swift */; };
 		A427FC5F2AB0DBFC006B4F2B /* FirstTimeNewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC5B2AB0DBFC006B4F2B /* FirstTimeNewActivityViewController.swift */; };
 		A427FC622AB0F68A006B4F2B /* NewActivityTitleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC612AB0F68A006B4F2B /* NewActivityTitleStackView.swift */; };
+		A427FC6A2AB218B4006B4F2B /* FirstTimeNewActivityRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC692AB218B4006B4F2B /* FirstTimeNewActivityRouterTest.swift */; };
+		A427FC6C2AB2192D006B4F2B /* FirstTimeNewActivityHomeControllerDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC6B2AB2192D006B4F2B /* FirstTimeNewActivityHomeControllerDummy.swift */; };
+		A427FC702AB229C6006B4F2B /* FirstTimeNewActivityNavigationControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427FC6F2AB229C6006B4F2B /* FirstTimeNewActivityNavigationControllerMock.swift */; };
 		A46C05132A6EFE150071ABCE /* CalendarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050D2A6EFE150071ABCE /* CalendarRouter.swift */; };
 		A46C05142A6EFE150071ABCE /* CalendarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050E2A6EFE150071ABCE /* CalendarPresenter.swift */; };
 		A46C05152A6EFE150071ABCE /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C050F2A6EFE150071ABCE /* CalendarViewController.swift */; };
@@ -342,6 +345,9 @@
 		A427FC5A2AB0DBFC006B4F2B /* FirstTimeNewActivityRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewActivityRouter.swift; sourceTree = "<group>"; };
 		A427FC5B2AB0DBFC006B4F2B /* FirstTimeNewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewActivityViewController.swift; sourceTree = "<group>"; };
 		A427FC612AB0F68A006B4F2B /* NewActivityTitleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityTitleStackView.swift; sourceTree = "<group>"; };
+		A427FC692AB218B4006B4F2B /* FirstTimeNewActivityRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewActivityRouterTest.swift; sourceTree = "<group>"; };
+		A427FC6B2AB2192D006B4F2B /* FirstTimeNewActivityHomeControllerDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewActivityHomeControllerDummy.swift; sourceTree = "<group>"; };
+		A427FC6F2AB229C6006B4F2B /* FirstTimeNewActivityNavigationControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeNewActivityNavigationControllerMock.swift; sourceTree = "<group>"; };
 		A46C050D2A6EFE150071ABCE /* CalendarRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarRouter.swift; sourceTree = "<group>"; };
 		A46C050E2A6EFE150071ABCE /* CalendarPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarPresenter.swift; sourceTree = "<group>"; };
 		A46C050F2A6EFE150071ABCE /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -708,6 +714,7 @@
 		0DBADDB12A65FDF300A10FC3 /* lunaTests */ = {
 			isa = PBXGroup;
 			children = (
+				A427FC632AB216B3006B4F2B /* FirstTimeNewActivityTests */,
 				0D0B29152AA11EA80048722A /* HomeTests */,
 				0DBADDB22A65FDF300A10FC3 /* lunaTests.swift */,
 			);
@@ -957,6 +964,24 @@
 				A427FC512AAFA7D9006B4F2B /* FirstTimeNewAcitivityView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A427FC632AB216B3006B4F2B /* FirstTimeNewActivityTests */ = {
+			isa = PBXGroup;
+			children = (
+				A427FC642AB216C8006B4F2B /* Doubles */,
+				A427FC692AB218B4006B4F2B /* FirstTimeNewActivityRouterTest.swift */,
+			);
+			path = FirstTimeNewActivityTests;
+			sourceTree = "<group>";
+		};
+		A427FC642AB216C8006B4F2B /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				A427FC6B2AB2192D006B4F2B /* FirstTimeNewActivityHomeControllerDummy.swift */,
+				A427FC6F2AB229C6006B4F2B /* FirstTimeNewActivityNavigationControllerMock.swift */,
+			);
+			path = Doubles;
 			sourceTree = "<group>";
 		};
 		A46C050C2A6EFE150071ABCE /* Calendar */ = {
@@ -1697,13 +1722,16 @@
 				0D0B29172AA11EC70048722A /* HomeRouterTest.swift in Sources */,
 				0D0B291A2AA151490048722A /* HomeRouterMock.swift in Sources */,
 				0D0B29282AA265F50048722A /* HomeInteractorMock.swift in Sources */,
+				A427FC6C2AB2192D006B4F2B /* FirstTimeNewActivityHomeControllerDummy.swift in Sources */,
 				0D0B291E2AA23C920048722A /* HomePresenterTest.swift in Sources */,
 				0D0B29222AA264220048722A /* HomeViewControllerSpy.swift in Sources */,
 				0D0B29262AA264A70048722A /* HomePresenterSpy.swift in Sources */,
+				A427FC702AB229C6006B4F2B /* FirstTimeNewActivityNavigationControllerMock.swift in Sources */,
 				0D0B29242AA264540048722A /* HomePresenterMock.swift in Sources */,
 				0DBADDB32A65FDF300A10FC3 /* lunaTests.swift in Sources */,
 				0D9D8A0F2AA6FC5900B64E2D /* HomeInteractorSpy.swift in Sources */,
 				0D0B29202AA263C80048722A /* HomeViewControllerMock.swift in Sources */,
+				A427FC6A2AB218B4006B4F2B /* FirstTimeNewActivityRouterTest.swift in Sources */,
 				0D9D8A112AA8EEEE00B64E2D /* LunaCalendarManagerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
