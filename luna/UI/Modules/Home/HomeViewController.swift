@@ -11,6 +11,22 @@ import RxSwift
 import RxCocoa
 
 
+enum ActivityPeriod {
+    
+    case week
+    case month
+    
+    init?(_ value: Int){
+        switch value {
+        case 0:
+            self = .week
+        default:
+            self = .month
+        }
+    }
+}
+
+
 class HomeViewController: UIViewController {
     
     var presenter: ViewToPresenterHomeProtocol?
@@ -56,7 +72,8 @@ class HomeViewController: UIViewController {
         seeMoreButtonTouchTrigger()
         addTapCardCycleEventObservable()
         addNotificationEventObservable()
-        addTableViewDataSource()
+        addTableViewDataSourceEventObservable()
+        addSegmentedControlPeriodEventObservable()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -121,7 +138,6 @@ class HomeViewController: UIViewController {
                                            center: centerCell,
                                            andMoveCenter: centerXtoCollection)
             }).disposed(by: disposeBag)
-        
     }
     
     func moveInitialCollection() {
@@ -156,6 +172,7 @@ class HomeViewController: UIViewController {
     }
     
     func addTapCardCycleEventObservable() {
+        
         let tapGesture = UITapGestureRecognizer()
         homeView.cardCycle.addGestureRecognizer(tapGesture)
         tapGesture.rx.event.bind(onNext: { _ in
@@ -176,7 +193,20 @@ class HomeViewController: UIViewController {
             .disposed(by: disposeBag)
     }
     
-    func addTableViewDataSource(){
+    func addSegmentedControlPeriodEventObservable(){
+        
+        homeView.activitiesView
+            .segmentedControl.rx
+            .selectedSegmentIndex.asObservable()
+            .map{ index in
+                return ActivityPeriod(index)
+            }.subscribe(onNext: { activity in
+                print(activity)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func addTableViewDataSourceEventObservable(){
         
         table.asObservable()
             .subscribe(onNext: { data in

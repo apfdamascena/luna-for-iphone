@@ -785,7 +785,6 @@
 			children = (
 				A427FC572AB0DBD8006B4F2B /* FirstTimeNewActivity */,
 				A427FC432AAFA1FE006B4F2B /* NewActivity  */,
-				A48F4A3C2A993C6E00BB5058 /* CardPhaseControl */,
 				CAAB60F02A82C98C0003F770 /* ReferencesSheet */,
 				0D6336982A774D5700EE9699 /* OtherCyclePhases */,
 				0D6794292A74723600382142 /* TeachRecordMenstruation */,
@@ -904,6 +903,8 @@
 		0DF410642A85603300A10405 /* datasource */ = {
 			isa = PBXGroup;
 			children = (
+				A48F4A392A993BEC00BB5058 /* CardPhaseControlDataSource.swift */,
+				A48F4A3D2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift */,
 				0D6336F12A799B8B00EE9699 /* CalendarCollectionViewDataSource.swift */,
 				0D6336F32A799BAC00EE9699 /* CalendarCollectionViewDataSourceImpl.swift */,
 			);
@@ -1040,15 +1041,6 @@
 		A48F4A3B2A993C4700BB5058 /* CardPhaseControl */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = CardPhaseControl;
-			sourceTree = "<group>";
-		};
-		A48F4A3C2A993C6E00BB5058 /* CardPhaseControl */ = {
-			isa = PBXGroup;
-			children = (
-				A48F4A392A993BEC00BB5058 /* CardPhaseControlDataSource.swift */,
-				A48F4A3D2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift */,
 			);
 			path = CardPhaseControl;
 			sourceTree = "<group>";
