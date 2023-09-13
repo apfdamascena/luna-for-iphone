@@ -52,6 +52,7 @@
 		0D63371B2A7C749000EE9699 /* SegmentedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63371A2A7C749000EE9699 /* SegmentedLine.swift */; };
 		0D63371F2A7C7D1300EE9699 /* FeedbackAfterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63371E2A7C7D1300EE9699 /* FeedbackAfterAction.swift */; };
 		0D65E37F2AB24A0F008148FD /* ActivityDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65E37E2AB24A0F008148FD /* ActivityDataSource.swift */; };
+		0D65E3812AB24A9C008148FD /* ActivityDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65E3802AB24A9C008148FD /* ActivityDataSourceImpl.swift */; };
 		0D6794132A71D53C00382142 /* RootScreenViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6794122A71D53C00382142 /* RootScreenViewFactory.swift */; };
 		0D6794192A731B5C00382142 /* UserCycleInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6794182A731B5C00382142 /* UserCycleInformation.swift */; };
 		0D6794202A735C1B00382142 /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D67941B2A735C1A00382142 /* HomeContract.swift */; };
@@ -263,6 +264,7 @@
 		0D63371A2A7C749000EE9699 /* SegmentedLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedLine.swift; sourceTree = "<group>"; };
 		0D63371E2A7C7D1300EE9699 /* FeedbackAfterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackAfterAction.swift; sourceTree = "<group>"; };
 		0D65E37E2AB24A0F008148FD /* ActivityDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDataSource.swift; sourceTree = "<group>"; };
+		0D65E3802AB24A9C008148FD /* ActivityDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDataSourceImpl.swift; sourceTree = "<group>"; };
 		0D672F0C2A8AF90700B45732 /* luna.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = luna.xctestplan; sourceTree = "<group>"; };
 		0D6794122A71D53C00382142 /* RootScreenViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreenViewFactory.swift; sourceTree = "<group>"; };
 		0D6794182A731B5C00382142 /* UserCycleInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCycleInformation.swift; sourceTree = "<group>"; };
@@ -910,6 +912,7 @@
 				0D6336F12A799B8B00EE9699 /* CalendarCollectionViewDataSource.swift */,
 				0D6336F32A799BAC00EE9699 /* CalendarCollectionViewDataSourceImpl.swift */,
 				0D65E37E2AB24A0F008148FD /* ActivityDataSource.swift */,
+				0D65E3802AB24A9C008148FD /* ActivityDataSourceImpl.swift */,
 			);
 			path = datasource;
 			sourceTree = "<group>";
@@ -1655,6 +1658,7 @@
 				0DBADDD32A66005500A10FC3 /* LunaTextViewModel.swift in Sources */,
 				0D0B28C92A9FB15D0048722A /* Notification.swift in Sources */,
 				A427FC5F2AB0DBFC006B4F2B /* FirstTimeNewActivityViewController.swift in Sources */,
+				0D65E3812AB24A9C008148FD /* ActivityDataSourceImpl.swift in Sources */,
 				BFD1A0272A84114300F420B5 /* LunaEvent.swift in Sources */,
 				0D6336972A774C7D00EE9699 /* OnboardingInformation.swift in Sources */,
 				0DBADDE02A6603F800A10FC3 /* LastDayMenstruationPresenter.swift in Sources */,
