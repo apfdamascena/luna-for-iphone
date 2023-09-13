@@ -10,23 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-
-enum ActivityPeriod {
-    
-    case week
-    case month
-    
-    init(_ value: Int){
-        switch value {
-        case 0:
-            self = .week
-        default:
-            self = .month
-        }
-    }
-}
-
-
 class HomeViewController: UIViewController {
     
     var presenter: ViewToPresenterHomeProtocol?
@@ -187,7 +170,8 @@ class HomeViewController: UIViewController {
             .asObservable()
             .subscribe(onNext: { cycle, index in
                 let model = DynamicCardPhaseFactory.create(phase: cycle)
-                self.homeView.cardCycle.updateCardPhase(image: model.backgroundImage[index], text: model.titleText[index])
+                self.homeView.cardCycle.updateCardPhase(image: model.backgroundImage[index],
+                                                        text: model.titleText[index])
                 self.homeView.flowIndexChanged(to: index)
             })
             .disposed(by: disposeBag)

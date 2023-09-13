@@ -53,6 +53,7 @@
 		0D63371F2A7C7D1300EE9699 /* FeedbackAfterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63371E2A7C7D1300EE9699 /* FeedbackAfterAction.swift */; };
 		0D65E37F2AB24A0F008148FD /* ActivityDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65E37E2AB24A0F008148FD /* ActivityDataSource.swift */; };
 		0D65E3812AB24A9C008148FD /* ActivityDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65E3802AB24A9C008148FD /* ActivityDataSourceImpl.swift */; };
+		0D65E3842AB24B62008148FD /* ActivityPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65E3832AB24B62008148FD /* ActivityPeriod.swift */; };
 		0D6794132A71D53C00382142 /* RootScreenViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6794122A71D53C00382142 /* RootScreenViewFactory.swift */; };
 		0D6794192A731B5C00382142 /* UserCycleInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6794182A731B5C00382142 /* UserCycleInformation.swift */; };
 		0D6794202A735C1B00382142 /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D67941B2A735C1A00382142 /* HomeContract.swift */; };
@@ -265,6 +266,7 @@
 		0D63371E2A7C7D1300EE9699 /* FeedbackAfterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackAfterAction.swift; sourceTree = "<group>"; };
 		0D65E37E2AB24A0F008148FD /* ActivityDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDataSource.swift; sourceTree = "<group>"; };
 		0D65E3802AB24A9C008148FD /* ActivityDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDataSourceImpl.swift; sourceTree = "<group>"; };
+		0D65E3832AB24B62008148FD /* ActivityPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPeriod.swift; sourceTree = "<group>"; };
 		0D672F0C2A8AF90700B45732 /* luna.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = luna.xctestplan; sourceTree = "<group>"; };
 		0D6794122A71D53C00382142 /* RootScreenViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreenViewFactory.swift; sourceTree = "<group>"; };
 		0D6794182A731B5C00382142 /* UserCycleInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCycleInformation.swift; sourceTree = "<group>"; };
@@ -570,6 +572,14 @@
 			path = CycleDetailsCard;
 			sourceTree = "<group>";
 		};
+		0D65E3822AB24B53008148FD /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				0D65E3832AB24B62008148FD /* ActivityPeriod.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		0D6794112A71D51800382142 /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -582,6 +592,7 @@
 		0D67941A2A735C0800382142 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0D65E3822AB24B53008148FD /* Enums */,
 				0DF410642A85603300A10405 /* datasource */,
 				A46C05512A7464230071ABCE /* Views */,
 				0D67941B2A735C1A00382142 /* HomeContract.swift */,
@@ -1689,6 +1700,7 @@
 				A46C054D2A74641E0071ABCE /* LunaButtonBack.swift in Sources */,
 				A48B7EDA2A7ACBCD00CCC4C0 /* CycleDetailsCard.swift in Sources */,
 				0D2939772AB113630017891A /* ActivityCell.swift in Sources */,
+				0D65E3842AB24B62008148FD /* ActivityPeriod.swift in Sources */,
 				CA557BCE2A6B1743001DF2BB /* LandingPageRouter.swift in Sources */,
 				A427FC502AAFA539006B4F2B /* NewActivityView.swift in Sources */,
 				0D6794192A731B5C00382142 /* UserCycleInformation.swift in Sources */,
