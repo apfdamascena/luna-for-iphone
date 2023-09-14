@@ -228,7 +228,12 @@ class HomeViewController: UIViewController {
     }
     
     func addNewActivityTrriggerEventObservable(){
-        
+        homeView
+            .newActivityButton
+            .rx.tap.bind {
+                print("Nova atividade: clicada")
+            }
+            .disposed(by: disposeBag)
     }
 }
 

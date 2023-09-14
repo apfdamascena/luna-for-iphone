@@ -34,8 +34,11 @@ class HomeView: UIView, AnyView  {
         view.isHidden = true
         return view
     }()
-
     
+    var newActivityButton: LunaButton {
+        return activitiesView.newActivity
+    }
+
     private let allContentStackView: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
@@ -51,7 +54,6 @@ class HomeView: UIView, AnyView  {
         view.spacing = 4.su
         return view
     }()
-    
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
