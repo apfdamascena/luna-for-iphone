@@ -15,19 +15,25 @@ class CalendarProvider {
         self.calendarCreator = CalendarCreator(eventStore: eventStore)
     }
     
-    func getCalendar() -> EKCalendar? {
+    func getCalendar() -> (generalCalendar: EKCalendar?, activitiesCalendar: EKCalendar?) {
         
         let calendars = eventStore.calendars(for: .event)
-        let cicleCalendar = calendars.filter { calendar in
-            return calendar.title == L10n.Constants.Content.Label.appName
+        var cicleCalendar = calendars.filter { calendar in
+            return calendar.title == CalendarTitle.appName.title || calendar.title == CalendarTitle.appActivities.title
         }
         
         //[MUDAR]: ver formas de pegar o calendario certo
-        guard let calendar = cicleCalendar.first else {
-            let calendarCreated = calendarCreator.create()
-            return calendarCreated
+        guard let lunaCalendar = cicleCalendar.popLast() else {
+            let activitiesCalendarCreated = calendarCreator.create(calendarTitle: .appActivities)
+            let generalCalendarCreated = calendarCreator.create(calendarTitle: .appName)
+            return (generalCalendarCreated, activitiesCalendarCreated)
         }
-        return calendar
+        
+        guard let lunaActivitiesCalendar = cicleCalendar.first else {
+            return (lunaCalendar, nil)
+        }
+        
+        return (lunaCalendar, lunaActivitiesCalendar)
         
     }
 }

@@ -12,6 +12,14 @@ class FirstTimeNewActivityPresenter: ViewToPresenterFirstTimeNewActivityProtocol
     var view: PresenterToViewFirstTimeNewActivityProtocol?
     var router: PresenterToRouterFirstTimeNewActivityProtocol?
     
+    init(
+        view: PresenterToViewFirstTimeNewActivityProtocol? = nil,
+        router: PresenterToRouterFirstTimeNewActivityProtocol? = nil
+    ) {
+        self.view = view
+        self.router = router
+    }
+    
     func userTappedLetsGoButton() {
         guard let pageViewController = view else { return }
         ActivityManager.shared.userSawActivities()

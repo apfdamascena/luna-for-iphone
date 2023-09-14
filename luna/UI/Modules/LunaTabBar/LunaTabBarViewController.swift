@@ -11,7 +11,7 @@ class LunaTabBarViewController: UITabBarController {
     
     private let controllers = [
         HomeRouter.createModule(),
-        UIViewController(),
+        FirstTimeNewActivityRouter.createModule(),
         ReferencesViewController(), 
     ]
     

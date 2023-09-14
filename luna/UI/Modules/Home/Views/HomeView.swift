@@ -93,7 +93,6 @@ class HomeView: UIView, AnyView  {
     
     func addConstraints() {
         
-        
         recordedMenstruationFeedback.snp.makeConstraints {
             $0.bottom.equalTo(safeAreaLayoutGuide).offset(-3.su)
             $0.leading.trailing.equalToSuperview().inset(3.su)
@@ -137,7 +136,7 @@ class HomeView: UIView, AnyView  {
         }
         
         warningNoMenstrualData.snp.makeConstraints{
-            $0.height.equalTo(46.su)
+            $0.height.equalTo(46.2.su)
         }
         
     }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import EventKit
 
 
 // MARK: View Output (Presenter -> View)
@@ -39,8 +40,10 @@ protocol ViewToPresenterHomeProtocol {
     func checkCalendarPermission()
     func loadUserCalendar()
     func loadCalendarToCollection()
-    func insertMenstruation(selectedDate: Date) -> Bool 
-    
+    func insertMenstruation(selectedDate: Date) -> Bool
+    func insertActivity(title: String, initialDate: Date, finalDate: Date)
+    func findBestPhase(activity: ActivityMetrics)
+        
     func userSelect(_ cell: CalendarCollectionViewCell?,
                     center: CalendarCollectionViewCell?,
                     andMoveCenter: CGFloat?)
@@ -66,6 +69,8 @@ protocol PresenterToInteractorHomeProtocol {
     func loadPhasesToUserCalendar()
     func loadCalendarToCollection() -> [CyclePhaseViewModel]
     func insertedMenstruationToCollection(selectedDate: Date) -> Bool
+    func insertActivityToCalendar(title: String, initialDate: Date, finalDate: Date)
+    func findBestPhaseFor(activity: ActivityMetrics) -> EKEvent?
     
     func openDeviceSettings()
     

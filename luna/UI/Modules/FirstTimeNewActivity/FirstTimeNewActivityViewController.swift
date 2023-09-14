@@ -14,12 +14,13 @@ class FirstTimeNewActivityViewController: UIViewController {
     
     var presenter: ViewToPresenterFirstTimeNewActivityProtocol?
     
-    private let firstTimeNewActivityView = FirstTimeNewActivityView()
+    private let firstTimeNewActivityView = NewActivityView()
     
     private var disposeBag = DisposeBag()
     
     init() {
         super.init(nibName: nil, bundle: nil)
+        self.title = nil
     }
     
     required init?(coder: NSCoder) {
