@@ -37,7 +37,6 @@ class ActivityCell: UIView,
     
     private let title: LunaText = {
         let label = LunaText()
-        label.text = "Praia"
         let model = LunaTextViewModel(size: 17,
                                       color: Asset.gray950.color,
                                       weight: .regular)
@@ -63,7 +62,6 @@ class ActivityCell: UIView,
                                       color: Asset.gray500.color,
                                       weight: .regular)
         label.draw(model)
-        label.text = "23 de dezembro •"
         return label
     }()
     
@@ -81,7 +79,6 @@ class ActivityCell: UIView,
                                       color: Asset.gray500.color,
                                       weight: .regular)
         label.draw(model)
-        label.text = "8:00 - 11:00"
         return label
     }()
     
