@@ -84,11 +84,11 @@ class HomeViewController: UIViewController {
         addCyclePhaseEventObservable()
         addSettingsHandlerEvent()
         cardCyclePhaseHandler()
-        seeMoreButtonTouchTrigger()
         addTapCardCycleEventObservable()
         addNotificationEventObservable()
         addTableViewDataSourceEventObservable()
         addSegmentedControlPeriodEventObservable()
+        addNewActivityTrriggerEventObservable()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -178,14 +178,6 @@ class HomeViewController: UIViewController {
             }.disposed(by: disposeBag)
     }
     
-    func seeMoreButtonTouchTrigger() {
-//        homeView.referencesButton
-//            .rx
-//            .tap.bind {
-//                self.presenter?.showCyclePhaseReferencesSheet()
-//            }.disposed(by: disposeBag)
-    }
-    
     func addTapCardCycleEventObservable() {
         
         let tapGesture = UITapGestureRecognizer()
@@ -233,6 +225,10 @@ class HomeViewController: UIViewController {
                 self.homeView.drawActivities(data)
             })
             .disposed(by: disposeBag)
+    }
+    
+    func addNewActivityTrriggerEventObservable(){
+        
     }
 }
 

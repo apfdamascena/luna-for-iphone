@@ -34,11 +34,7 @@ class HomeView: UIView, AnyView  {
         view.isHidden = true
         return view
     }()
-//
-//    var referencesButton: LunaButton {
-//        return phaseCycleTitle.readReferencesButton
-//    }
-    
+
     
     private let allContentStackView: UIStackView = {
         let view = UIStackView()

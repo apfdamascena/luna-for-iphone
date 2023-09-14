@@ -16,7 +16,7 @@
 "constants.content.button.previous"="Back";
 "constants.content.button.settings"="Settings";
 "constants.content.button.references"="Read the references";
-"constants.content.button.newEvent"="New Event";
+"constants.content.button.newEvent"="New Activity";
 
 "constants.content.label.home.youAreIn" = "You are in";
 "constants.content.label.home.menstruation" = "Menstruation";
