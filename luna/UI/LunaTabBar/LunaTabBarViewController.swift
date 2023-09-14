@@ -33,6 +33,12 @@ class LunaTabBarViewController: UITabBarController {
         addAdditionalConfiguration()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.hidesBackButton = true
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     private func setupViewControllers(){
         let navigationControllers = controllers.enumerated().map{ (index, viewController) in
             viewController.title = titles[index]

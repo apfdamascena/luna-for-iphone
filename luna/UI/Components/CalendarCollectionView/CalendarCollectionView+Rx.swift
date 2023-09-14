@@ -9,8 +9,6 @@ import RxSwift
 
 extension Reactive where Base: CalendarScrollCollectionView {
     
-    
-    
     var selectItemAtCalendar: Observable<(CalendarCollectionViewCell?, CalendarCollectionViewCell?, CGFloat?)> {
         self.base.rx.itemSelected
             .map{ indexPath in

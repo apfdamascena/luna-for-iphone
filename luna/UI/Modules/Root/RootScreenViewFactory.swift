@@ -13,7 +13,7 @@ class RootScreenViewFactory {
         var rootController = LandingPageRouter.createModule()
         
         if OnboardingManager.shared.wasSeen {
-            rootController = HomeRouter.createModule()
+            rootController = LunaTabBarViewController()
         }
         
         return UINavigationController(rootViewController: rootController)

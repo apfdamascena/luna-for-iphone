@@ -12,15 +12,18 @@ import EventKit
 
 class HomeInteractor: PresenterToInteractorHomeProtocol {
 
-    private let activitiesCalendarManager = ActivitiesCalendarManager()
-    
-    var lunaCalendarManager: CalendarManager?
     var presenter: InteractorToPresenterHomeProtocol?
+    
+    private let activitiesCalendarManager: ActivitiesCalendarManager
+    var lunaCalendarManager: CalendarManager?
     
     var calendarPermission: CalendarAccess = .unauthorized
     
-    init(lunaCalendarManager: CalendarManager = LunaCalendarManager()){
+    init(lunaCalendarManager: CalendarManager = LunaCalendarManager(),
+         activitiesCalendarManager: ActivitiesCalendarManager = ActivitiesCalendarManager()
+    ){
         self.lunaCalendarManager = lunaCalendarManager
+        self.activitiesCalendarManager = activitiesCalendarManager
     }
     
     func checkIfUserGivePermission(completion: @escaping PermissionResponse) {
@@ -82,7 +85,7 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
     }
     
     func findBestPhaseFor(activity: ActivityMetrics) -> EKEvent? {
-        var phaseEvents = lunaCalendarManager!.getEventsByDate(firstDate: Date(), finalDate: activity.finalDate)
+        guard var phaseEvents = lunaCalendarManager?.getEventsByDate(firstDate: Date(), finalDate: activity.finalDate) else { return nil }
 
         
         if phaseEvents.count > 5 {
