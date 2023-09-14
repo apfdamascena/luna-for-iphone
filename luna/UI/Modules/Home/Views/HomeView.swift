@@ -17,9 +17,7 @@ class HomeView: UIView, AnyView  {
     private let monthTag = MonthTag()
     
     private(set) var activitiesView = ActivitiesView()
-    
     private let phaseCycleTitle = PhaseCycleTitle()
-    
     private(set) var cardCycle = CycleCardView()
     
     private let recordedMenstruationFeedback: FeedbackCard = {
@@ -86,7 +84,6 @@ class HomeView: UIView, AnyView  {
         descriptionStackView.addArrangedSubview(phaseCycleTitle)
         descriptionStackView.addArrangedSubview(cardCycle)
         descriptionStackView.addArrangedSubview(warningNoMenstrualData)
-        
         allContentStackView.addArrangedSubview(activitiesView)
     }
     
@@ -237,6 +234,7 @@ class HomeView: UIView, AnyView  {
         activitiesView.createTableWithActivities(activities)
         
         activitiesView.snp.removeConstraints()
+        
         let size =  (data.count+1) * 80 + 12 * (data.count-1) + 60
         
         activitiesView.snp.makeConstraints{
