@@ -14,6 +14,7 @@ class NewActivityView: UIView, AnyView {
     private let metricsStack = MetricsStack()
     private let deadlineStack = DeadlineStack()
     private let datePickerStack = DatePickerStack()
+    private let metricsComponent = MetricsComponent()
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -51,8 +52,9 @@ class NewActivityView: UIView, AnyView {
         
         allContentStackView.addArrangedSubview(activityStack)
         allContentStackView.addArrangedSubview(metricsStack)
-        allContentStackView.addArrangedSubview(deadlineStack)
+        allContentStackView.addArrangedSubview(metricsComponent)
         
+        allContentStackView.addArrangedSubview(deadlineStack)
         allContentStackView.addArrangedSubview(datePickerStack)
         
         allContentStackView.addArrangedSubview(button)
@@ -78,6 +80,10 @@ class NewActivityView: UIView, AnyView {
         
         metricsStack.snp.makeConstraints {
             $0.height.equalTo(7.su)
+        }
+        
+        metricsComponent.snp.makeConstraints {
+            $0.height.equalTo(43.5.su)
         }
         
         deadlineStack.snp.makeConstraints {

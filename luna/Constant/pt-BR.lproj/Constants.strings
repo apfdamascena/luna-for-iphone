@@ -242,3 +242,7 @@ e seja feliz!";
 "constants.content.label.new_activity.add_new_activity.subtitle_deadline" = "Registre a data limite para realizar a atividade";
 "constants.content.label.new_activity.add_new_activity.date_title" = "Data";
 
+"constants.content.label.new_activity.add_new_activity.metrics_component.stress_title"= "⚡️ Estresse";
+"constants.content.label.new_activity.add_new_activity.metrics_component.social_title"= "💬 Sociabilidade";
+"constants.content.label.new_activity.add_new_activity.metrics_component.fisics_title"= "🏃🏽 Esforço Físico";
+
