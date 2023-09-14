@@ -104,6 +104,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         homeView.calendarCollectionView.setMargin(with: self.view.frame.width)
         
         DispatchQueue.main.async {
@@ -116,6 +117,7 @@ class HomeViewController: UIViewController {
     }
     
     private func addCollectionViewDataSource(){
+        
         datasource.data.bind(to: homeView.calendarCollectionView
             .rx.items(cellIdentifier: CalendarCollectionViewCell.IDENTIFIER,
                       cellType: CalendarCollectionViewCell.self)){ _, day, cell in
@@ -156,11 +158,13 @@ class HomeViewController: UIViewController {
     }
     
     func moveInitialCollection() {
+        
         guard let initialOffset = homeView.calendarCollectionView.getInitialOffset() else { return }
         homeView.calendarCollectionView.contentOffset.x = initialOffset
     }
     
     func addCyclePhaseEventObservable() {
+        
         datasource.cyclePhase
             .asObservable()
             .subscribe(onNext: { cycle in
@@ -171,6 +175,7 @@ class HomeViewController: UIViewController {
     }
     
     func addSettingsHandlerEvent(){
+        
         homeView
             .warningCalendarAccess
             .settingsButton.rx.tap.bind {
@@ -190,6 +195,7 @@ class HomeViewController: UIViewController {
     }
     
     func cardCyclePhaseHandler() {
+        
         Observable.combineLatest(datasource.cyclePhase, cardPhaseDataSource.index)
             .asObservable()
             .subscribe(onNext: { cycle, index in
