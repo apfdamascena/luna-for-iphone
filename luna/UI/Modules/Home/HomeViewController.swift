@@ -26,7 +26,7 @@ class ActivityFilterWeek: ActivityFilter {
 class ActivityFilterMonth: ActivityFilter {
     
     func filter(_ data: [String]) -> [String] {
-        return ["lekinho", "lekinho", "lekinho", "lekinho"]
+        return ["lekinho", "lekinho", "lekinho", "lekinho", "lekinho", "lekinho", "lekinho"]
     }
 }
 
