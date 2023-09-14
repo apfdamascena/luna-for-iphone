@@ -10,7 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-
 class HomeViewController: UIViewController {
     
     var presenter: ViewToPresenterHomeProtocol?
@@ -20,15 +19,18 @@ class HomeViewController: UIViewController {
     
     private var datasource: CalendarCollectionViewDataSource
     private var cardPhaseDataSource: CardPhaseControlDataSource
+    private var activitiesDataSource: ActivityDataSource
 
     private let notificationStation = NotificationStation()
     
     init(
         datasource: CalendarCollectionViewDataSource = CalendarCollectionViewDataSourceImpl(),
-        cardPhaseDataSource: CardPhaseControlDataSource = CardPhaseControlDataSourceImpl()
+        cardPhaseDataSource: CardPhaseControlDataSource = CardPhaseControlDataSourceImpl(),
+        activitiesDataSource: ActivityDataSource = ActivityDataSourceImpl()
     ){
         self.datasource = datasource
         self.cardPhaseDataSource = cardPhaseDataSource
+        self.activitiesDataSource = activitiesDataSource
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -51,9 +53,11 @@ class HomeViewController: UIViewController {
         addCyclePhaseEventObservable()
         addSettingsHandlerEvent()
         cardCyclePhaseHandler()
-        seeMoreButtonTouchTrigger()
         addTapCardCycleEventObservable()
         addNotificationEventObservable()
+        addTableViewDataSourceEventObservable()
+        addSegmentedControlPeriodEventObservable()
+        addNewActivityTrriggerEventObservable()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,6 +73,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         homeView.calendarCollectionView.setMargin(with: self.view.frame.width)
         
         DispatchQueue.main.async {
@@ -81,6 +86,7 @@ class HomeViewController: UIViewController {
     }
     
     private func addCollectionViewDataSource(){
+        
         datasource.data.bind(to: homeView.calendarCollectionView
             .rx.items(cellIdentifier: CalendarCollectionViewCell.IDENTIFIER,
                       cellType: CalendarCollectionViewCell.self)){ _, day, cell in
@@ -118,15 +124,16 @@ class HomeViewController: UIViewController {
                                            center: centerCell,
                                            andMoveCenter: centerXtoCollection)
             }).disposed(by: disposeBag)
-        
     }
     
     func moveInitialCollection() {
+        
         guard let initialOffset = homeView.calendarCollectionView.getInitialOffset() else { return }
         homeView.calendarCollectionView.contentOffset.x = initialOffset
     }
     
     func addCyclePhaseEventObservable() {
+        
         datasource.cyclePhase
             .asObservable()
             .subscribe(onNext: { cycle in
@@ -137,20 +144,11 @@ class HomeViewController: UIViewController {
     }
     
     func addSettingsHandlerEvent(){
+        
         homeView
             .warningCalendarAccess
             .settingsButton.rx.tap.bind {
                 self.presenter?.userOpenDeviceSettings()
-            }.disposed(by: disposeBag)
-    }
-    
-    func seeMoreButtonTouchTrigger() {
-        homeView.referencesButton
-            .rx
-            .tap.bind {
-                self.presenter?.showCyclePhaseReferencesSheet()
-//                self.addActivity()
-                self.idealPhase()
             }.disposed(by: disposeBag)
     }
     
@@ -163,6 +161,7 @@ class HomeViewController: UIViewController {
     }
     
     func addTapCardCycleEventObservable() {
+        
         let tapGesture = UITapGestureRecognizer()
         homeView.cardCycle.addGestureRecognizer(tapGesture)
         tapGesture.rx.event.bind(onNext: { _ in
@@ -173,16 +172,52 @@ class HomeViewController: UIViewController {
     }
     
     func cardCyclePhaseHandler() {
+        
         Observable.combineLatest(datasource.cyclePhase, cardPhaseDataSource.index)
             .asObservable()
             .subscribe(onNext: { cycle, index in
                 let model = DynamicCardPhaseFactory.create(phase: cycle)
-                self.homeView.cardCycle.updateCardPhase(image: model.backgroundImage[index], text: model.titleText[index])
+                self.homeView.cardCycle.updateCardPhase(image: model.backgroundImage[index],
+                                                        text: model.titleText[index])
                 self.homeView.flowIndexChanged(to: index)
             })
             .disposed(by: disposeBag)
     }
     
+    func addSegmentedControlPeriodEventObservable(){
+        
+        homeView.activitiesView
+            .segmentedControl.rx
+            .selectedSegmentIndex.asObservable()
+            .map{ index in
+                return ActivityPeriod(index)
+            }.subscribe(onNext: { activity in
+                guard let activities = try? self.activitiesDataSource.activities.value() else { return }
+                let activitiesFilter = ActivityFilterFactory.create(activity)
+                let activitiesFiltered = activitiesFilter.filter(activities)
+                self.activitiesDataSource.activitiesForSegmentedControl.onNext(activitiesFiltered)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func addTableViewDataSourceEventObservable(){
+        
+        activitiesDataSource.activitiesForSegmentedControl
+            .asObservable()
+            .subscribe(onNext: { data in
+                self.homeView.drawActivities(data)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func addNewActivityTrriggerEventObservable(){
+        homeView
+            .newActivityButton
+            .rx.tap.bind {
+                self.addActivity()
+            }
+            .disposed(by: disposeBag)
+    }
 }
 
 
@@ -219,6 +254,12 @@ extension HomeViewController: PresenterToViewHomeProtocol {
             
             if insertedMenstruation {
                 presenter?.loadCalendarToCollection()
+                
+                let phase = selectedCell.getPhase()
+                
+                if phase != .menstruation {
+                    showFeedbackRegisterMenstruation()
+                }
             }
             else {
                 // MUDAR ALERTA, MUDAR TEXTO
@@ -262,7 +303,7 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     }
     
     func cardFeedbackDisappear() {
-         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0){
+         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0){
              self.homeView.cardFeedbackDisappear()
          }
     }
@@ -287,9 +328,7 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     
     @objc func changeCurrentIndexCardPhase(at newIndex: Int) {
         self.cardPhaseDataSource.index.onNext(newIndex)
-        
     }
-    
 }
 
 

@@ -14,17 +14,29 @@ class HomeView: UIView, AnyView  {
     
     private(set) var calendarCollectionView = CalendarScrollCollectionView()
     private(set) var warningCalendarAccess = WarningCalendarAccess()
-    
     private let monthTag = MonthTag()
     
+    private(set) var activitiesView = ActivitiesView()
     private let phaseCycleTitle = PhaseCycleTitle()
-    
-    var referencesButton: LunaButton {
-        return phaseCycleTitle.readReferencesButton
-    }
-    
     private(set) var cardCycle = CycleCardView()
     
+    private let recordedMenstruationFeedback: FeedbackCard = {
+        let card = FeedbackCard()
+        card.message(for: .recordedMenstruation)
+        card.isHidden = true
+        return card
+    }()
+    
+    private let warningNoMenstrualData: WarningNoMenstrualData = {
+        let view = WarningNoMenstrualData()
+        view.isHidden = true
+        return view
+    }()
+    
+    var newActivityButton: LunaButton {
+        return activitiesView.newActivity
+    }
+
     private let allContentStackView: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
@@ -41,24 +53,11 @@ class HomeView: UIView, AnyView  {
         return view
     }()
     
-    private let recordedMenstruationFeedback: FeedbackCard = {
-        let card = FeedbackCard()
-        card.message(for: .recordedMenstruation)
-        card.isHidden = true
-        return card
-    }()
-    
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.isScrollEnabled = true
         scrollView.showsVerticalScrollIndicator = false
         return scrollView
-    }()
-    
-    private let warningNoMenstrualData: WarningNoMenstrualData = {
-        let view = WarningNoMenstrualData()
-        view.isHidden = true
-        return view
     }()
     
     override init(frame: CGRect) {
@@ -79,16 +78,13 @@ class HomeView: UIView, AnyView  {
         
         allContentStackView.addArrangedSubview(monthTag)
         allContentStackView.addArrangedSubview(calendarCollectionView)
+        
         allContentStackView.addArrangedSubview(descriptionStackView)
-        
         descriptionStackView.addArrangedSubview(warningCalendarAccess)
-        
-        
         descriptionStackView.addArrangedSubview(phaseCycleTitle)
-        
         descriptionStackView.addArrangedSubview(cardCycle)
-        
         descriptionStackView.addArrangedSubview(warningNoMenstrualData)
+        allContentStackView.addArrangedSubview(activitiesView)
     }
     
     func addConstraints() {
@@ -128,7 +124,7 @@ class HomeView: UIView, AnyView  {
         }
         
         phaseCycleTitle.snp.makeConstraints {
-            $0.height.equalTo(96)
+            $0.height.equalTo(72)
         }
         
         cardCycle.snp.makeConstraints {
@@ -139,6 +135,10 @@ class HomeView: UIView, AnyView  {
             $0.height.equalTo(46.2.su)
         }
         
+        activitiesView.snp.makeConstraints{
+            $0.height.equalTo(50.su)
+            $0.leading.trailing.equalTo(self).inset(3.su)
+        }
     }
     
     func addAdditionalConfiguration() {
@@ -175,7 +175,6 @@ class HomeView: UIView, AnyView  {
             cardCycle.isHidden = true
             return
         }
-        
         
         phaseCycleTitle.isHidden = false
         warningNoMenstrualData.isHidden = true
@@ -222,6 +221,31 @@ class HomeView: UIView, AnyView  {
     func flowIndexChanged(to index: Int) {
         DispatchQueue.main.async {
             self.cardCycle.updateFlowIndex(index: index)
+        }
+    }
+    
+    func drawActivities(_ data: [String]){
+        
+        // vai mudar aqui
+        
+        let activities = data.map { _ in
+            let cell = ActivityCell()
+            let model = ActivityCellViewModel(title: "Aniversário de Alana",
+                                              hourStart: "10:00",
+                                              hourEnd: "12:00",
+                                              day: Date(),
+                                              phase: .fertile)
+            cell.draw(model)
+            return cell
+        }
+        
+        activitiesView.createTableWithActivities(activities)
+        activitiesView.snp.removeConstraints()
+        let size =  (data.count+1) * 80 + 12 * (data.count-1) + 60
+        
+        activitiesView.snp.makeConstraints{
+            $0.height.equalTo(size)
+            $0.leading.trailing.equalTo(self).inset(3.su)
         }
     }
     

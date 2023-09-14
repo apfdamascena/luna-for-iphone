@@ -22,9 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.overrideUserInterfaceStyle = .light
         }
         
-//        let root = RootScreenViewFactory.createModule()
-       
-        let root = LunaTabBarViewController()
+        let root = RootScreenViewFactory.createModule()
+    
         window.rootViewController = root
         window.makeKeyAndVisible()
     

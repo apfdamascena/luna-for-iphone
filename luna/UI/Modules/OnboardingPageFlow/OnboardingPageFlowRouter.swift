@@ -28,7 +28,7 @@ class OnboardingPageFlowRouter: PresenterToRouterOnboardingPageFlowProtocol {
     }
     
     func pushHome(on view: PresenterToViewOnboardingPageFlowProtocol) {
-        let home = HomeRouter.createModule()
+        let home = LunaTabBarViewController()
         
         guard let onboardingController = view as? OnboardingPageFlowViewController else { return }
         onboardingController.navigationController?.pushViewController(home, animated: true)

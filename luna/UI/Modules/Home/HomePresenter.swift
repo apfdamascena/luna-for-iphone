@@ -11,7 +11,6 @@ import UIKit
 
 class HomePresenter: ViewToPresenterHomeProtocol {
     
-
     var view: PresenterToViewHomeProtocol?
     var interactor: PresenterToInteractorHomeProtocol?
     var router: PresenterToRouterHomeProtocol?
@@ -76,9 +75,7 @@ class HomePresenter: ViewToPresenterHomeProtocol {
     
     func findBestPhase(activity: ActivityMetrics) {
         let idealPhase = interactor?.findBestPhaseFor(activity: activity)
-        print("Caralhu", idealPhase?.title)
-        print("Caralhu", idealPhase?.startDate)
-        print("Caralhu", idealPhase?.endDate)
+
     }
 
     
@@ -115,5 +112,4 @@ extension HomePresenter: InteractorToPresenterHomeProtocol {
     func showFeedbackRegisterMenstruation() {
         view?.showFeedbackRegisterMenstruation()
     }
-    
 }
