@@ -227,7 +227,8 @@ class HomeViewController: UIViewController {
     
     func addTableViewDataSourceEventObservable(){
         
-        activitiesDataSource.activitiesForSegmentedControl.asObservable()
+        activitiesDataSource.activitiesForSegmentedControl
+            .asObservable()
             .subscribe(onNext: { data in
                 self.homeView.drawActivities(data)
             })

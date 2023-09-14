@@ -112,51 +112,24 @@ class HomeView: UIView, AnyView  {
     
     private let phaseCycleTitle = PhaseCycleTitle()
     
+    private(set) var cardCycle = CycleCardView()
+    
+    private let recordedMenstruationFeedback: FeedbackCard = {
+        let card = FeedbackCard()
+        card.message(for: .recordedMenstruation)
+        card.isHidden = true
+        return card
+    }()
+    
+    private let warningNoMenstrualData: WarningNoMenstrualData = {
+        let view = WarningNoMenstrualData()
+        view.isHidden = true
+        return view
+    }()
+    
     var referencesButton: LunaButton {
         return phaseCycleTitle.readReferencesButton
     }
-    
-    private(set) var cardCycle = CycleCardView()
-    
-    private(set) var segmentedControl: UISegmentedControl = {
-        let segmented = UISegmentedControl(items: ["Semana", "Mês"])
-        segmented.selectedSegmentIndex = 0
-        return segmented
-    }()
-    
-    private let activities = UIView()
-    
-    private let activitiesTitleContainer = UIView()
-    
-    private let activitiesTitleStack: UIStackView = {
-        let stack = UIStackView()
-        stack.axis = .horizontal
-        return stack
-    }()
-    
-    private let activitiesTitle: LunaText = {
-        let label = LunaText()
-        let model = LunaTextViewModel(size: 25,
-                                      color: Asset.gray950.color,
-                                      weight: .medium)
-        label.draw(model)
-        label.text="Atividades"
-        return label
-    }()
-    
-    private let newActivityButton: LunaButton = {
-        let button = LunaButton()
-        button.draw(style: .newEvent)
-        return button
-    }()
-    
-    private let activitiesStack: UIStackView = {
-        let stack = UIStackView()
-        stack.spacing = 1.5.su
-        stack.axis = .vertical
-        stack.alignment = .fill
-        return stack
-    }()
     
     private let allContentStackView: UIStackView = {
         let view = UIStackView()
@@ -174,12 +147,6 @@ class HomeView: UIView, AnyView  {
         return view
     }()
     
-    private let recordedMenstruationFeedback: FeedbackCard = {
-        let card = FeedbackCard()
-        card.message(for: .recordedMenstruation)
-        card.isHidden = true
-        return card
-    }()
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -188,13 +155,6 @@ class HomeView: UIView, AnyView  {
         return scrollView
     }()
     
-    private let warningNoMenstrualData: WarningNoMenstrualData = {
-        let view = WarningNoMenstrualData()
-        view.isHidden = true
-        return view
-    }()
-
-        
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -221,17 +181,6 @@ class HomeView: UIView, AnyView  {
         descriptionStackView.addArrangedSubview(warningNoMenstrualData)
         
         allContentStackView.addArrangedSubview(activitiesView)
-
-//        descriptionStackView.addArrangedSubview(activitiesTitleContainer)
-        
-//        activitiesTitleContainer.addSubview(activitiesTitleStack)
-//        activitiesTitleStack.addArrangedSubview(activitiesTitle)
-//        activitiesTitleStack.addArrangedSubview(newActivityButton)
-        
-//        descriptionStackView.addArrangedSubview(segmentedControl)
-//        descriptionStackView.addArrangedSubview(activities)
-//        activities.addSubview(activitiesStack)
-        
     }
     
     func addConstraints() {
@@ -286,24 +235,6 @@ class HomeView: UIView, AnyView  {
             $0.height.equalTo(50.su)
             $0.leading.trailing.equalTo(self).inset(3.su)
         }
-//
-//        activitiesView.backgroundColor = .red
-                
-//        activitiesStack.snp.makeConstraints{
-//            $0.edges.equalToSuperview()
-//        }
-//
-//        segmentedControl.snp.makeConstraints{
-//            $0.height.equalTo(32)
-//        }
-//
-//        activitiesTitleContainer.snp.makeConstraints{
-//            $0.height.equalTo(32)
-//        }
-//
-//        activitiesTitleStack.snp.makeConstraints{
-//            $0.edges.equalToSuperview()
-//        }
     }
     
     func addAdditionalConfiguration() {
@@ -397,21 +328,6 @@ class HomeView: UIView, AnyView  {
         }
         
         activitiesView.createTableWithActivities(activities)
-        
-//        let size: CGFloat = CGFloat(data.count * 80 + 12 * (data.count-1))
-//
-//        activities.snp.removeConstraints()
-//        activities.snp.makeConstraints{
-//            $0.height.equalTo(size)
-//        }
-//
-//        DispatchQueue.main.async {
-//
-//            data.forEach { element in
-//                let view = ActivityCell()
-//                self.activitiesStack.addArrangedSubview(view)
-//            }
-//        }
     }
     
 }
