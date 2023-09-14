@@ -9,6 +9,8 @@ import UIKit
 
 struct ActivityCellViewModel {
     
+    let title: String
+    
     let hourStart: String
     let hourEnd: String
     let day: Date
@@ -45,9 +47,7 @@ class ActivityCell: UIView,
     
     private let dateDescriptionView = UIView()
     
-    private let cyclePhaseImage: UIImageView = {
-        return UIImageView(image: Asset.phaseActivityCell.image)
-    }()
+    private let cyclePhaseImage = UIImageView()
     
     private let calendarIcon: UIImageView = {
         let image = UIImage(systemName: "calendar")
@@ -148,8 +148,6 @@ class ActivityCell: UIView,
             $0.leading.equalTo(hour.snp.trailing).offset(0.5.su)
             $0.top.equalTo(calendarIcon)
         }
-    
-    
     }
     
     func addAdditionalConfiguration() {
@@ -159,6 +157,14 @@ class ActivityCell: UIView,
     }
     
     func draw(_ model: ActivityCellViewModel) {
+        let day = model.day.formatDayToString()
+        let month = model.day.formatMonthToString()
+        let dayLabel = "".checkInternationalization(day, month)
+        date.text = "\(dayLabel) •"
         
+        hourDescription.text = "\(model.hourStart) - \(model.hourEnd)"
+        title.text = model.title
+        
+        cyclePhaseImage.image = model.phase.activityCell
     }
 }

@@ -229,10 +229,11 @@ class HomeView: UIView, AnyView  {
         
         let activities = data.map{ _ in
             let cell = ActivityCell()
-            let model = ActivityCellViewModel(hourStart: "9:00",
+            let model = ActivityCellViewModel(title: "Aniversário de Alana",
+                                              hourStart: "10:00",
                                               hourEnd: "12:00",
                                               day: Date(),
-                                              phase: .folicular)
+                                              phase: .expectedMenstruation)
             cell.draw(model)
             return cell
         }
