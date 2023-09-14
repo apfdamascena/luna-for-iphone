@@ -7,8 +7,21 @@
 
 import UIKit
 
+struct ActivityCellViewModel {
+    
+    let hourStart: String
+    let hourEnd: String
+    let day: Date
+    
+    let phase: CyclePhase
+}
 
-class ActivityCell: UIView, AnyView {
+
+class ActivityCell: UIView,
+                    AnyView,
+                    DrawableView {
+
+    typealias ViewModel = ActivityCellViewModel
     
     private let descriptionStack: UIStackView = {
         let stack = UIStackView()
@@ -50,7 +63,7 @@ class ActivityCell: UIView, AnyView {
                                       color: Asset.gray500.color,
                                       weight: .regular)
         label.draw(model)
-        label.text = "23 de setembro •"
+        label.text = "23 de dezembro •"
         return label
     }()
     
@@ -119,7 +132,7 @@ class ActivityCell: UIView, AnyView {
         
         date.snp.makeConstraints{
             $0.leading.equalTo(calendarIcon.snp.trailing).offset(0.5.su)
-            $0.width.greaterThanOrEqualTo(80)
+            $0.width.greaterThanOrEqualTo(60)
             $0.top.equalTo(calendarIcon)
 
         }
@@ -143,5 +156,9 @@ class ActivityCell: UIView, AnyView {
         backgroundColor = Asset.gray50.color
         layer.masksToBounds = true
         layer.cornerRadius = 8
+    }
+    
+    func draw(_ model: ActivityCellViewModel) {
+        
     }
 }

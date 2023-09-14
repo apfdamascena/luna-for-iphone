@@ -11,7 +11,6 @@ import UIKit
 
 class HomePresenter: ViewToPresenterHomeProtocol {
     
-
     var view: PresenterToViewHomeProtocol?
     var interactor: PresenterToInteractorHomeProtocol?
     var router: PresenterToRouterHomeProtocol?
@@ -104,5 +103,4 @@ extension HomePresenter: InteractorToPresenterHomeProtocol {
     func showFeedbackRegisterMenstruation() {
         view?.showFeedbackRegisterMenstruation()
     }
-    
 }

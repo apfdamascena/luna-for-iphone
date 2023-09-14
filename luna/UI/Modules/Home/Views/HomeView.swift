@@ -228,13 +228,17 @@ class HomeView: UIView, AnyView  {
     func drawActivities(_ data: [String]){
         
         let activities = data.map{ _ in
-            return ActivityCell()
+            let cell = ActivityCell()
+            let model = ActivityCellViewModel(hourStart: "9:00",
+                                              hourEnd: "12:00",
+                                              day: Date(),
+                                              phase: .folicular)
+            cell.draw(model)
+            return cell
         }
         
         activitiesView.createTableWithActivities(activities)
-        
         activitiesView.snp.removeConstraints()
-        
         let size =  (data.count+1) * 80 + 12 * (data.count-1) + 60
         
         activitiesView.snp.makeConstraints{
