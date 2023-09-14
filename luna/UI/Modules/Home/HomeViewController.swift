@@ -179,11 +179,11 @@ class HomeViewController: UIViewController {
     }
     
     func seeMoreButtonTouchTrigger() {
-        homeView.referencesButton
-            .rx
-            .tap.bind {
-                self.presenter?.showCyclePhaseReferencesSheet()
-            }.disposed(by: disposeBag)
+//        homeView.referencesButton
+//            .rx
+//            .tap.bind {
+//                self.presenter?.showCyclePhaseReferencesSheet()
+//            }.disposed(by: disposeBag)
     }
     
     func addTapCardCycleEventObservable() {

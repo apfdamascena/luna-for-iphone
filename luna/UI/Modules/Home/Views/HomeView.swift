@@ -34,10 +34,11 @@ class HomeView: UIView, AnyView  {
         view.isHidden = true
         return view
     }()
+//
+//    var referencesButton: LunaButton {
+//        return phaseCycleTitle.readReferencesButton
+//    }
     
-    var referencesButton: LunaButton {
-        return phaseCycleTitle.readReferencesButton
-    }
     
     private let allContentStackView: UIStackView = {
         let view = UIStackView()
@@ -128,7 +129,7 @@ class HomeView: UIView, AnyView  {
         }
         
         phaseCycleTitle.snp.makeConstraints {
-            $0.height.equalTo(96)
+            $0.height.equalTo(72)
         }
         
         cardCycle.snp.makeConstraints {
@@ -149,7 +150,6 @@ class HomeView: UIView, AnyView  {
         backgroundColor = .white
         scrollView.showsVerticalScrollIndicator = false
         cardCycle.contentMode = .scaleAspectFit
-        activitiesView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 3.su, right: 0)
     }
     
     func userDeniedAccessCalendar() {
