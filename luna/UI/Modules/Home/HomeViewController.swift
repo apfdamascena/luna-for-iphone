@@ -10,33 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-
-class ActivityFilterWeek: ActivityFilter {
-    
-    func filter(_ data: [String]) -> [String] {
-        
-        return ["lekinho", "lekinho"]
-    }
-}
-
-class ActivityFilterMonth: ActivityFilter {
-    
-    func filter(_ data: [String]) -> [String] {
-        return ["lekinho", "lekinho", "lekinho", "lekinho", "lekinho", "lekinho", "lekinho"]
-    }
-}
-
-class ActivityFilterFactory {
-    
-    static func create(_ period: ActivityPeriod) -> ActivityFilter {
-        
-        if period == .month {
-            return ActivityFilterMonth()
-        }
-        return  ActivityFilterWeek()
-    }
-}
-
 class HomeViewController: UIViewController {
     
     var presenter: ViewToPresenterHomeProtocol?
