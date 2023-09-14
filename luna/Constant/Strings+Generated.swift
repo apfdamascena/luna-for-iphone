@@ -33,6 +33,8 @@ internal enum L10n {
       internal enum Label {
         /// Luna
         internal static let appName = L10n.tr("Constants", "constants.content.label.app_name", fallback: "Luna")
+        /// Luna Activities
+        internal static let calendarActivities = L10n.tr("Constants", "constants.content.label.calendar_activities", fallback: "Luna Activities")
         /// Permita que o Luna acesse seu Calendar para planejar seus dias com sabedoria e melhorar o seu bem-estar
         internal static let calendarSubtitle = L10n.tr("Constants", "constants.content.label.calendar_subtitle", fallback: "Permita que o Luna acesse seu Calendar para planejar seus dias com sabedoria e melhorar o seu bem-estar")
         /// Sintonize com seu dia a dia

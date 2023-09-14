@@ -26,6 +26,16 @@ class CalendarEventService {
         try? self.eventStore.save(newEvent, span: .thisEvent)
     }
     
+    func createActivitie(_ event: ActivityEvent) {
+        let newEvent = EKEvent(eventStore: self.eventStore)
+        newEvent.title = event.title
+        newEvent.startDate = event.startDate
+        newEvent.endDate = event.endDate
+        newEvent.calendar = self.calendar
+        newEvent.isAllDay = false
+        try? self.eventStore.save(newEvent, span: .thisEvent)
+    }
+    
     func getEventsByDate(firstDate: Date, finalDate: Date) -> [EKEvent] {
         guard let calendar = calendar else { return [] }
         

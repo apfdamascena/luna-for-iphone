@@ -68,6 +68,15 @@ class HomePresenter: ViewToPresenterHomeProtocol {
         guard let insertedMenstruation = interactor?.insertedMenstruationToCollection(selectedDate: selectedDate) else { return false }
         return insertedMenstruation
     }
+    
+    func insertActivity(title: String, initialDate: Date, finalDate: Date) {
+        interactor?.insertActivityToCalendar(title: title, initialDate: initialDate, finalDate: finalDate)
+    }
+    
+    func findBestPhase(activity: ActivityMetrics) {
+        let idealPhase = interactor?.findBestPhaseFor(activity: activity)
+
+    }
 
     
     func moveTo(_ centerCell: CalendarCollectionViewCell?) {

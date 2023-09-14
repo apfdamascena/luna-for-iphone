@@ -183,6 +183,14 @@ class HomeViewController: UIViewController {
             }.disposed(by: disposeBag)
     }
     
+    func addActivity() {
+        presenter?.insertActivity(title: "teste", initialDate: Date(), finalDate: Date().daysAfter(1))
+    }
+    
+    func idealPhase() {
+        presenter?.findBestPhase(activity: ActivityMetrics(stress: 6, sociability: 1, fisicalEffort: 1, finalDate: Date().daysAfter(10)))
+    }
+    
     func addTapCardCycleEventObservable() {
         
         let tapGesture = UITapGestureRecognizer()
@@ -237,7 +245,7 @@ class HomeViewController: UIViewController {
         homeView
             .newActivityButton
             .rx.tap.bind {
-                print("Nova atividade: clicada")
+                self.addActivity()
             }
             .disposed(by: disposeBag)
     }
