@@ -16,6 +16,8 @@ class LunaButtonFactory {
             return LunaButtonBack(button)
         case .next:
             return LunaButtonProceed(button, style: lunaStyle)
+        case .scheduleActivity:
+            return LunaButtonProceed(button, style: lunaStyle)
         case .settings:
             return LunaButtonProceed(button, style: lunaStyle)
         case .references:

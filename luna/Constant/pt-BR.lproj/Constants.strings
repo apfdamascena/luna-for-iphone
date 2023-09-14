@@ -18,6 +18,7 @@
 "constants.content.button.settings"="Ajustes";
 "constants.content.button.references" = "Leia as referências";
 "constants.content.button.newEvent"="Novo Evento";
+"constants.content.button.schedule_activity"="Marcar Atividade";
 
 "constants.content.label.home.youAreIn" = "Você está na";
 "constants.content.label.home.menstruation" = "Menstruação";
@@ -230,3 +231,13 @@
 "constants.content.label.first_time_new_activity.button" = "Vamos!";
 
 "constants.content.label.new_activity.nav.title" = "Nova atividade";
+
+"constants.content.label.best_activity.text" = "Sintonizamos a atividade com seu ciclo e recomendamos que você a realize entre os dias";
+
+"constants.preposition.and" = "e";
+
+"constants.preposition.of" = "de";
+
+"constants.content.label.best_activity.subtitle" = "O melhor momento é na";
+
+

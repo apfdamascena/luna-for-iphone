@@ -15,6 +15,7 @@ enum LunaButtonStyle {
     case references
     case newEvent
     case letsGo
+    case scheduleActivity
     
     var value: String {
         switch self {
@@ -24,6 +25,8 @@ enum LunaButtonStyle {
             return L10n.Constants.Content.Button.previous
         case .next:
             return L10n.Constants.Content.Button.continue
+        case .scheduleActivity:
+            return L10n.Constants.Content.Button.scheduleActivity
         case.settings:
             return L10n.Constants.Content.Button.settings
         case .references:

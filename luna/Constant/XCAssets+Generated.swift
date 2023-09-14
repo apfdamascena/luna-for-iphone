@@ -59,6 +59,7 @@ internal enum Asset {
   internal static let ball = ImageAsset(name: "ball")
   internal static let bestFolicular = ImageAsset(name: "best_folicular")
   internal static let bestLuteal = ImageAsset(name: "best_luteal")
+  internal static let bestLutealB = ImageAsset(name: "best_luteal_b")
   internal static let bestMenstruation = ImageAsset(name: "best_menstruation")
   internal static let bestOvulation = ImageAsset(name: "best_ovulation")
   internal static let bestPms = ImageAsset(name: "best_pms")

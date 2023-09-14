@@ -163,6 +163,9 @@
 		BF4951032AB0FB8A0064F5D6 /* BestActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4950FE2AB0FB8A0064F5D6 /* BestActivityViewController.swift */; };
 		BF4951042AB0FB8A0064F5D6 /* BestActivityInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4950FF2AB0FB8A0064F5D6 /* BestActivityInteractor.swift */; };
 		BF4951112AB0FBC40064F5D6 /* BestActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4951102AB0FBC40064F5D6 /* BestActivityView.swift */; };
+		BF4951152AB240620064F5D6 /* BestActivityFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4951142AB240620064F5D6 /* BestActivityFactory.swift */; };
+		BF4951172AB2410C0064F5D6 /* BestActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4951162AB2410C0064F5D6 /* BestActivityViewModel.swift */; };
+		BF4951192AB395280064F5D6 /* NewActivityInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4951182AB395280064F5D6 /* NewActivityInformations.swift */; };
 		BF4DC2D22A72DC510005BF7E /* CyclePhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DC2D12A72DC510005BF7E /* CyclePhase.swift */; };
 		BF4DC2D62A7341B20005BF7E /* LunaCalendarRequestAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DC2D52A7341B20005BF7E /* LunaCalendarRequestAccess.swift */; };
 		BF4DC2EB2A744A3D0005BF7E /* CycleInformationsCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DC2EA2A744A3D0005BF7E /* CycleInformationsCalculator.swift */; };
@@ -384,6 +387,9 @@
 		BF4950FE2AB0FB8A0064F5D6 /* BestActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestActivityViewController.swift; sourceTree = "<group>"; };
 		BF4950FF2AB0FB8A0064F5D6 /* BestActivityInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestActivityInteractor.swift; sourceTree = "<group>"; };
 		BF4951102AB0FBC40064F5D6 /* BestActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestActivityView.swift; sourceTree = "<group>"; };
+		BF4951142AB240620064F5D6 /* BestActivityFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestActivityFactory.swift; sourceTree = "<group>"; };
+		BF4951162AB2410C0064F5D6 /* BestActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestActivityViewModel.swift; sourceTree = "<group>"; };
+		BF4951182AB395280064F5D6 /* NewActivityInformations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityInformations.swift; sourceTree = "<group>"; };
 		BF4DC2D12A72DC510005BF7E /* CyclePhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclePhase.swift; sourceTree = "<group>"; };
 		BF4DC2D52A7341B20005BF7E /* LunaCalendarRequestAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaCalendarRequestAccess.swift; sourceTree = "<group>"; };
 		BF4DC2EA2A744A3D0005BF7E /* CycleInformationsCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleInformationsCalculator.swift; sourceTree = "<group>"; };
@@ -899,6 +905,7 @@
 				0DDC5B552A71D23600D4CCAE /* OnboardingManager.swift */,
 				0D6794182A731B5C00382142 /* UserCycleInformation.swift */,
 				A427FC552AB06CA9006B4F2B /* ActivityManager.swift */,
+				BF4951182AB395280064F5D6 /* NewActivityInformations.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1071,7 +1078,9 @@
 		BF4951052AB0FB980064F5D6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF4951142AB240620064F5D6 /* BestActivityFactory.swift */,
 				BF4951102AB0FBC40064F5D6 /* BestActivityView.swift */,
+				BF4951162AB2410C0064F5D6 /* BestActivityViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1580,6 +1589,7 @@
 				BF6520E02A6F0D4B00E60054 /* CycleDurationRouter.swift in Sources */,
 				BFD1A0292A8411B600F420B5 /* CycleInformations.swift in Sources */,
 				0D63369E2A774D7A00EE9699 /* OtherCyclePhasesContract.swift in Sources */,
+				BF4951152AB240620064F5D6 /* BestActivityFactory.swift in Sources */,
 				A46C05162A6EFE150071ABCE /* CalendarView.swift in Sources */,
 				A46C05572A7464970071ABCE /* LunaButton.swift in Sources */,
 				A46C05142A6EFE150071ABCE /* CalendarPresenter.swift in Sources */,
@@ -1598,11 +1608,13 @@
 				CA557BCF2A6B1743001DF2BB /* LandingPageViewController.swift in Sources */,
 				BF4DC2EB2A744A3D0005BF7E /* CycleInformationsCalculator.swift in Sources */,
 				0DF410672A85656300A10405 /* MonthTag.swift in Sources */,
+				BF4951192AB395280064F5D6 /* NewActivityInformations.swift in Sources */,
 				CA557BCC2A6B1742001DF2BB /* LandingPageContract.swift in Sources */,
 				0DBADDE22A6603F800A10FC3 /* LastDayMenstruationViewController.swift in Sources */,
 				0DF4106E2A85820D00A10405 /* SeeMoreCard.swift in Sources */,
 				0D7C73B02A67834100677D1E /* TouchableUserEvent.swift in Sources */,
 				A427FC5C2AB0DBFC006B4F2B /* FirstTimeNewActivityContract.swift in Sources */,
+				BF4951172AB2410C0064F5D6 /* BestActivityViewModel.swift in Sources */,
 				0D6336F22A799B8B00EE9699 /* CalendarCollectionViewDataSource.swift in Sources */,
 				BF4951112AB0FBC40064F5D6 /* BestActivityView.swift in Sources */,
 				0D6336A02A774D7A00EE9699 /* OtherCyclePhasesRouter.swift in Sources */,

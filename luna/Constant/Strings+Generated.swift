@@ -25,6 +25,8 @@ internal enum L10n {
         internal static let previous = L10n.tr("Constants", "constants.content.button.previous", fallback: "Voltar")
         /// Leia as referências
         internal static let references = L10n.tr("Constants", "constants.content.button.references", fallback: "Leia as referências")
+        /// Marcar Atividade
+        internal static let scheduleActivity = L10n.tr("Constants", "constants.content.button.schedule_activity", fallback: "Marcar Atividade")
         /// Ajustes
         internal static let settings = L10n.tr("Constants", "constants.content.button.settings", fallback: "Ajustes")
         /// Iniciar
@@ -84,6 +86,12 @@ internal enum L10n {
         internal static let onboardingRegisterMenstruationDescription = L10n.tr("Constants", "constants.content.label.onboarding_register_menstruation_description", fallback: "O círculo vermelho representa o dia em que ocorreu a menstruação. Basta clicar no botão para registrar!")
         /// 😡 TPM
         internal static let pms = L10n.tr("Constants", "constants.content.label.pms", fallback: "😡 TPM")
+        internal enum BestActivity {
+          /// O melhor momento é na
+          internal static let subtitle = L10n.tr("Constants", "constants.content.label.best_activity.subtitle", fallback: "O melhor momento é na")
+          /// Sintonizamos a atividade com seu ciclo e recomendamos que você a realize entre os dias
+          internal static let text = L10n.tr("Constants", "constants.content.label.best_activity.text", fallback: "Sintonizamos a atividade com seu ciclo e recomendamos que você a realize entre os dias")
+        }
         internal enum FirstTimeNewActivity {
           /// Vamos!
           internal static let button = L10n.tr("Constants", "constants.content.label.first_time_new_activity.button", fallback: "Vamos!")
@@ -415,6 +423,12 @@ internal enum L10n {
           }
         }
       }
+    }
+    internal enum Preposition {
+      /// e
+      internal static let and = L10n.tr("Constants", "constants.preposition.and", fallback: "e")
+      /// de
+      internal static let of = L10n.tr("Constants", "constants.preposition.of", fallback: "de")
     }
     internal enum User {
       internal enum Key {

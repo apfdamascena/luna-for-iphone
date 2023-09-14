@@ -17,6 +17,7 @@
 "constants.content.button.settings"="Settings";
 "constants.content.button.references"="Read the references";
 "constants.content.button.newEvent"="New Event";
+"constants.content.button.schedule_activity"="Schedule Activity";
 
 "constants.content.label.home.youAreIn" = "You are in";
 "constants.content.label.home.menstruation" = "Menstruation";
@@ -264,3 +265,11 @@
 "constants.content.label.first_time_new_activity.button" = "Lets do it!";
 
 "constants.content.label.new_activity.nav.title" = "New Activity";
+
+"constants.content.label.best_activity.text" = "We tune the activity to your cycle and recommend that you perform it between the days:";
+
+"constants.preposition.and" = "and";
+
+"constants.preposition.of" = "of";
+
+"constants.content.label.best_activity.subtitle" = "The best time is in";

@@ -25,10 +25,9 @@ class FirstTimeNewActivityRouter: PresenterToRouterFirstTimeNewActivityProtocol 
     }
     
     func pushNewActivity(on view: PresenterToViewFirstTimeNewActivityProtocol) {
-        let newActivity = NewActivityRouter.createModule()
+        let newActivity = BestActivityRouter.createModule()
         
         guard let newActivityController = view as? FirstTimeNewActivityViewController else { return }
         newActivityController.navigationController?.pushViewController(newActivity, animated: true)
     }
-    
 }
