@@ -277,6 +277,12 @@ extension HomeViewController: PresenterToViewHomeProtocol {
             
             if insertedMenstruation {
                 presenter?.loadCalendarToCollection()
+                
+                let phase = selectedCell.getPhase()
+                
+                if phase != .menstruation {
+                    showFeedbackRegisterMenstruation()
+                }
             }
             else {
                 // MUDAR ALERTA, MUDAR TEXTO
@@ -320,7 +326,7 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     }
     
     func cardFeedbackDisappear() {
-         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0){
+         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0){
              self.homeView.cardFeedbackDisappear()
          }
     }
