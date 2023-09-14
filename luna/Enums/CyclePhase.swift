@@ -81,12 +81,22 @@ enum CyclePhase: String, CaseIterable {
         switch self {
         case .pms:
             return Asset.pmsPhaseActivityCell.image
+            
         case .folicular:
             return Asset.foliculePhaseActivityCell.image
             
+        case .expectedMenstruation:
+            return Asset.expectedPhaseActitivyCell.image
+            
+        case .menstruation:
+            return Asset.menstruationPhaseActivityCell.image
+            
         case .luteal:
+            return Asset.lutealPhaseActivityCell.image
+            
+        case .fertile:
             return Asset.ovulationPhaseActivityCell.image
-    
+            
         default:
             return Asset.pmsPhaseActivityCell.image
         }

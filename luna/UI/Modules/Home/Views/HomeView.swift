@@ -234,7 +234,7 @@ class HomeView: UIView, AnyView  {
                                               hourStart: "10:00",
                                               hourEnd: "12:00",
                                               day: Date(),
-                                              phase: .expectedMenstruation)
+                                              phase: .fertile)
             cell.draw(model)
             return cell
         }

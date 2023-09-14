@@ -16,6 +16,7 @@ struct ActivityCellViewModel {
     let day: Date
     
     let phase: CyclePhase
+    
 }
 
 

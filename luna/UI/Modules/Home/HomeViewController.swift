@@ -328,7 +328,6 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     
     @objc func changeCurrentIndexCardPhase(at newIndex: Int) {
         self.cardPhaseDataSource.index.onNext(newIndex)
-        
     }
 }
 
