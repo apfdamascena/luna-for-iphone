@@ -10,6 +10,9 @@ import SnapKit
 
 class FirstTimeNewActivityView: UIView, AnyView {
     
+    private let screenHeight = UIScreen.main.bounds.height
+    private let screenWidth = UIScreen.main.bounds.width
+    
     private let backgroundImage: UIImageView = {
         let view = UIImageView()
         return view
@@ -84,18 +87,20 @@ class FirstTimeNewActivityView: UIView, AnyView {
         }
         
         image.snp.makeConstraints {
-            $0.trailing.leading.equalToSuperview().inset(3.su)
-            $0.top.equalToSuperview().offset(18.su)
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(screenWidth * 0.646)
+            $0.height.equalTo(screenHeight * 0.3)
+            $0.top.equalTo(screenHeight * 0.17)
         }
         
         informationTextStack.snp.makeConstraints {
             $0.trailing.leading.equalToSuperview().inset(3.su)
-            $0.top.equalTo(image.snp.bottom).offset(6.su)
+            $0.top.equalTo(screenHeight * 0.526)
         }
         
         button.snp.makeConstraints {
             $0.trailing.leading.equalToSuperview().inset(3.su)
-            $0.top.equalTo(informationTextStack.snp.bottom).offset(12.su)
+            $0.top.equalTo(screenHeight * 0.84)
         }
         
     }

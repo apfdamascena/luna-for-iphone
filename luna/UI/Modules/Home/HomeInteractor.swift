@@ -14,7 +14,6 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
 
     var presenter: InteractorToPresenterHomeProtocol?
     
-    
     private let activitiesCalendarManager: ActivitiesCalendarManager
     var lunaCalendarManager: CalendarManager?
     
