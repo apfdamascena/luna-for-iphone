@@ -282,3 +282,7 @@
 "constants.content.label.new_activity.add_new_activity.subtitle_metrics" = "Record from 1 to 5, where 1 = a little and 5 = a lot";
 "constants.content.label.new_activity.add_new_activity.subtitle_deadline" = "Record the deadline to carry out the activity";
 "constants.content.label.new_activity.add_new_activity.date_title" = "Date";
+
+"constants.content.label.new_activity.add_new_activity.metrics_component.stress_title"= "⚡️ Stress";
+"constants.content.label.new_activity.add_new_activity.metrics_component.social_title"= "💬 Sociability";
+"constants.content.label.new_activity.add_new_activity.metrics_component.fisics_title"= "🏃🏽 Physical Exercise";

@@ -16,6 +16,8 @@ class NewActivityViewController: UIViewController {
     
     var presenter: ViewToPresenterNewActivityProtocol?
     
+    private var disposeBag = DisposeBag()
+
     init() {
         super.init(nibName: nil, bundle: nil)
     }
@@ -31,9 +33,18 @@ class NewActivityViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        firstTimeContinueButtonTouchTrigger()
         self.navigationItem.setHidesBackButton(true, animated: true)
         self.title = L10n.Constants.Content.Label.NewActivity.Nav.title
 //        self.navigationController?.addCustomBottomLine(color: Asset.gray100.color, height: 1)
+    }
+    
+    func firstTimeContinueButtonTouchTrigger() {
+        newActivityView.button
+            .rx
+            .tap.bind {
+                self.presenter?.userTappedContinueButton()
+            }.disposed(by: disposeBag)
     }
     
 }

@@ -14,7 +14,7 @@ class FirstTimeNewActivityViewController: UIViewController {
     
     var presenter: ViewToPresenterFirstTimeNewActivityProtocol?
     
-    private let firstTimeNewActivityView = NewActivityView()
+    private let firstTimeNewActivityView = FirstTimeNewActivityView()
     
     private var disposeBag = DisposeBag()
     

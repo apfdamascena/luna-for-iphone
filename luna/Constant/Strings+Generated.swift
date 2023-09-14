@@ -257,6 +257,14 @@ internal enum L10n {
             internal static let subtitleDeadline = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.subtitle_deadline", fallback: "Registre a data limite para realizar a atividade")
             /// Registre de 1 a 5, sendo 1 = pouco e 5 = muito
             internal static let subtitleMetrics = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.subtitle_metrics", fallback: "Registre de 1 a 5, sendo 1 = pouco e 5 = muito")
+            internal enum MetricsComponent {
+              /// 🏃🏽 Esforço Físico
+              internal static let fisicsTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.metrics_component.fisics_title", fallback: "🏃🏽 Esforço Físico")
+              /// 💬 Sociabilidade
+              internal static let socialTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.metrics_component.social_title", fallback: "💬 Sociabilidade")
+              /// ⚡️ Estresse
+              internal static let stressTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.metrics_component.stress_title", fallback: "⚡️ Estresse")
+            }
           }
           internal enum Nav {
             /// Nova atividade

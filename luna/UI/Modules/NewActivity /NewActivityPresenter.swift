@@ -14,6 +14,14 @@ class NewActivityPresenter: ViewToPresenterNewActivityProtocol {
     var interactor: PresenterToInteractorNewActivityProtocol?
     var router: PresenterToRouterNewActivityProtocol?
     
+    func userTappedContinueButton() {
+
+        guard let pageViewController = view else { return }        
+        DispatchQueue.main.async {
+            self.router?.pushNewActivity(on: pageViewController)
+        }
+        
+    }
 }
 
 extension NewActivityPresenter: InteractorToPresenterNewActivityProtocol {
