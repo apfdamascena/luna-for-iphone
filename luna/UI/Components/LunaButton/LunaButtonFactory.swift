@@ -20,6 +20,10 @@ class LunaButtonFactory {
             return LunaButtonProceed(button, style: lunaStyle)
         case .references:
             return LunaButtonReferences(button)
+        case .newEvent:
+            return LunaButtonNewEvent(button)
+        case .letsGo:
+            return LunaButtonLetsGo(button)
         }
     }
 }

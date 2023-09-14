@@ -19,6 +19,8 @@ internal enum L10n {
       internal enum Button {
         /// Continuar
         internal static let `continue` = L10n.tr("Constants", "constants.content.button.continue", fallback: "Continuar")
+        /// Novo Evento
+        internal static let newEvent = L10n.tr("Constants", "constants.content.button.newEvent", fallback: "Novo Evento")
         /// Voltar
         internal static let previous = L10n.tr("Constants", "constants.content.button.previous", fallback: "Voltar")
         /// Leia as referências
@@ -84,6 +86,14 @@ internal enum L10n {
         internal static let onboardingRegisterMenstruationDescription = L10n.tr("Constants", "constants.content.label.onboarding_register_menstruation_description", fallback: "O círculo vermelho representa o dia em que ocorreu a menstruação. Basta clicar no botão para registrar!")
         /// 😡 TPM
         internal static let pms = L10n.tr("Constants", "constants.content.label.pms", fallback: "😡 TPM")
+        internal enum FirstTimeNewActivity {
+          /// Vamos!
+          internal static let button = L10n.tr("Constants", "constants.content.label.first_time_new_activity.button", fallback: "Vamos!")
+          /// Registre uma atividade que precise fazer e receba uma sugestão personalizada sobre quando realizá-la no seu ciclo.
+          internal static let subtitle = L10n.tr("Constants", "constants.content.label.first_time_new_activity.subtitle", fallback: "Registre uma atividade que precise fazer e receba uma sugestão personalizada sobre quando realizá-la no seu ciclo.")
+          /// Vamos marcar uma nova atividade?
+          internal static let title = L10n.tr("Constants", "constants.content.label.first_time_new_activity.title", fallback: "Vamos marcar uma nova atividade?")
+        }
         internal enum Home {
           /// Tudo sobre
           internal static let about = L10n.tr("Constants", "constants.content.label.home.about", fallback: "Tudo sobre")
@@ -101,10 +111,10 @@ internal enum L10n {
           internal static let luteal = L10n.tr("Constants", "constants.content.label.home.luteal", fallback: "Fase Lútea")
           /// Menstruação
           internal static let menstruation = L10n.tr("Constants", "constants.content.label.home.menstruation", fallback: "Menstruação")
-          /// Nesta dia, ainda não tínhamos os seus dados
-          internal static let noData = L10n.tr("Constants", "constants.content.label.home.no_data", fallback: "Nesta dia, ainda não tínhamos os seus dados")
-          /// Explore os dias futuros!
-          internal static let noDataDescripition = L10n.tr("Constants", "constants.content.label.home.no_data_descripition", fallback: "Explore os dias futuros!")
+          /// Pra quê olhar pro passado? Ele já passou!
+          internal static let noData = L10n.tr("Constants", "constants.content.label.home.no_data", fallback: "Pra quê olhar pro passado? Ele já passou!")
+          /// A previsão só é feita a partir da sua última menstruação, assim não temos o que te falar sobre esse dia.
+          internal static let noDataDescripition = L10n.tr("Constants", "constants.content.label.home.no_data_descripition", fallback: "A previsão só é feita a partir da sua última menstruação, assim não temos o que te falar sobre esse dia.")
           /// Ovulação
           internal static let ovulation = L10n.tr("Constants", "constants.content.label.home.ovulation", fallback: "Ovulação")
           /// Menstruação registrada
@@ -127,34 +137,34 @@ internal enum L10n {
           }
           internal enum Card {
             internal enum Folicular {
-              /// Mantenha bons hábitos alimentares e de exercício
-              internal static let five = L10n.tr("Constants", "constants.content.label.home.card.folicular.five", fallback: "Mantenha bons hábitos alimentares e de exercício")
+              /// Mantenha bons hábitos alimentares e de exercício.
+              internal static let five = L10n.tr("Constants", "constants.content.label.home.card.folicular.five", fallback: "Mantenha bons hábitos alimentares e de exercício.")
               /// Nada de passar sede nessa fase. Hidrate-se em abundância!
               internal static let four = L10n.tr("Constants", "constants.content.label.home.card.folicular.four", fallback: "Nada de passar sede nessa fase. Hidrate-se em abundância!")
-              /// Energia e bem-estar em alta! A fase folicular chegou
-              internal static let one = L10n.tr("Constants", "constants.content.label.home.card.folicular.one", fallback: "Energia e bem-estar em alta! A fase folicular chegou")
+              /// Energia e bem-estar em alta! A fase folicular chegou!
+              internal static let one = L10n.tr("Constants", "constants.content.label.home.card.folicular.one", fallback: "Energia e bem-estar em alta! A fase folicular chegou!")
               /// A sua libido pode aumentar, hein?
               internal static let three = L10n.tr("Constants", "constants.content.label.home.card.folicular.three", fallback: "A sua libido pode aumentar, hein?")
-              /// Energia e bem-estar em alta! Aproveita para resolver as broncas da vida
-              internal static let two = L10n.tr("Constants", "constants.content.label.home.card.folicular.two", fallback: "Energia e bem-estar em alta! Aproveita para resolver as broncas da vida")
+              /// Energia e bem-estar em alta! Aproveita para resolver as broncas da vida.
+              internal static let two = L10n.tr("Constants", "constants.content.label.home.card.folicular.two", fallback: "Energia e bem-estar em alta! Aproveita para resolver as broncas da vida.")
             }
             internal enum Luteal {
-              /// Aproveita esse momento para fazer atividades tranquilas
-              internal static let five = L10n.tr("Constants", "constants.content.label.home.card.luteal.five", fallback: "Aproveita esse momento para fazer atividades tranquilas")
-              /// É bom evitar decisões importantes ou grandes mudanças
-              internal static let four = L10n.tr("Constants", "constants.content.label.home.card.luteal.four", fallback: "É bom evitar decisões importantes ou grandes mudanças")
+              /// Aproveita esse momento para fazer atividades tranquilas.
+              internal static let five = L10n.tr("Constants", "constants.content.label.home.card.luteal.five", fallback: "Aproveita esse momento para fazer atividades tranquilas.")
+              /// É bom evitar decisões importantes ou grandes mudanças!
+              internal static let four = L10n.tr("Constants", "constants.content.label.home.card.luteal.four", fallback: "É bom evitar decisões importantes ou grandes mudanças!")
               /// O óvulo agora é um corpo lúteo. Hormônios em alta!
               internal static let one = L10n.tr("Constants", "constants.content.label.home.card.luteal.one", fallback: "O óvulo agora é um corpo lúteo. Hormônios em alta!")
               /// Seu humor pode variar e tudo bem, okay?
               internal static let three = L10n.tr("Constants", "constants.content.label.home.card.luteal.three", fallback: "Seu humor pode variar e tudo bem, okay?")
-              /// Só good vibes! Pode ser um dia só de paz e tranquilidade
-              internal static let two = L10n.tr("Constants", "constants.content.label.home.card.luteal.two", fallback: "Só good vibes! Pode ser um dia só de paz e tranquilidade")
+              /// Só good vibes! Pode ser um dia só de paz e tranquilidade...
+              internal static let two = L10n.tr("Constants", "constants.content.label.home.card.luteal.two", fallback: "Só good vibes! Pode ser um dia só de paz e tranquilidade...")
             }
             internal enum Menstruation {
-              /// Exercício leves podem ajudar com as cólicas e no humor. então se joga!
-              internal static let five = L10n.tr("Constants", "constants.content.label.home.card.menstruation.five", fallback: "Exercício leves podem ajudar com as cólicas e no humor. então se joga!")
-              /// Atividades sociais intensas podem ficar para depois, hein
-              internal static let four = L10n.tr("Constants", "constants.content.label.home.card.menstruation.four", fallback: "Atividades sociais intensas podem ficar para depois, hein")
+              /// Exercício leves podem ajudar com as cólicas e no humor. Então se joga!
+              internal static let five = L10n.tr("Constants", "constants.content.label.home.card.menstruation.five", fallback: "Exercício leves podem ajudar com as cólicas e no humor. Então se joga!")
+              /// Atividades sociais intensas podem ficar para depois, hein!
+              internal static let four = L10n.tr("Constants", "constants.content.label.home.card.menstruation.four", fallback: "Atividades sociais intensas podem ficar para depois, hein!")
               /// Você está literalmente sangrando!
               internal static let one = L10n.tr("Constants", "constants.content.label.home.card.menstruation.one", fallback: "Você está literalmente sangrando!")
               /// Ter cólicas e mudanças de paladar também faz parte. Forças!
@@ -165,12 +175,13 @@ internal enum L10n {
             internal enum Ovulation {
               /// Energia também tá em alta, abuse dos exercícios de força.
               internal static let five = L10n.tr("Constants", "constants.content.label.home.card.ovulation.five", fallback: "Energia também tá em alta, abuse dos exercícios de força.")
-              /// É normal estar desejando mais doces, vai com moderação e seja feliz!
-              internal static let four = L10n.tr("Constants", "constants.content.label.home.card.ovulation.four", fallback: "É normal estar desejando mais doces, vai com moderação e seja feliz!")
-              /// Eita, seu óvulo pode ser liberado em qualquer um desses dias
-              internal static let one = L10n.tr("Constants", "constants.content.label.home.card.ovulation.one", fallback: "Eita, seu óvulo pode ser liberado em qualquer um desses dias")
-              /// É o momento de adiar as atividades estressantes
-              internal static let three = L10n.tr("Constants", "constants.content.label.home.card.ovulation.three", fallback: "É o momento de adiar as atividades estressantes")
+              /// É normal sentir variações no apetite, vai com moderação
+              /// e seja feliz!
+              internal static let four = L10n.tr("Constants", "constants.content.label.home.card.ovulation.four", fallback: "É normal sentir variações no apetite, vai com moderação\ne seja feliz!")
+              /// Eita, seu óvulo pode ser liberado em qualquer um desses dias.
+              internal static let one = L10n.tr("Constants", "constants.content.label.home.card.ovulation.one", fallback: "Eita, seu óvulo pode ser liberado em qualquer um desses dias.")
+              /// É o momento de adiar as atividades estressantes.
+              internal static let three = L10n.tr("Constants", "constants.content.label.home.card.ovulation.three", fallback: "É o momento de adiar as atividades estressantes.")
               /// A libido pode aumentar e você pode se achar mais atraente também!
               internal static let two = L10n.tr("Constants", "constants.content.label.home.card.ovulation.two", fallback: "A libido pode aumentar e você pode se achar mais atraente também!")
             }
@@ -220,6 +231,28 @@ internal enum L10n {
               /// Lima MP, Moreira MA, Maynard DC, Cruz MFA (2021) Alterações fisiológicas e comportamentais da mulher no ciclo menstrual e o impacto da suplementação nutricional / Physiological and behavioral changes in women during the menstrual cycle and the impact of nutritional supplementation. Published: 16/12/2021]. Revista de Saúde e Nutrição 28(1): e021001.
               internal static let third = L10n.tr("Constants", "constants.content.label.home.text.references.third", fallback: "Lima MP, Moreira MA, Maynard DC, Cruz MFA (2021) Alterações fisiológicas e comportamentais da mulher no ciclo menstrual e o impacto da suplementação nutricional / Physiological and behavioral changes in women during the menstrual cycle and the impact of nutritional supplementation. Published: 16/12/2021]. Revista de Saúde e Nutrição 28(1): e021001.")
             }
+          }
+        }
+        internal enum NewActivity {
+          internal enum AddNewActivity {
+            /// Atividade
+            internal static let activityTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.activity_title", fallback: "Atividade")
+            /// Data
+            internal static let dateTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.date_title", fallback: "Data")
+            /// Prazo
+            internal static let deadlineTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.deadline_title", fallback: "Prazo")
+            /// Métricas
+            internal static let metricsTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.metrics_title", fallback: "Métricas")
+            /// Título
+            internal static let placeholderActivityTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.placeholder_activity_title", fallback: "Título")
+            /// Registre a data limite para realizar a atividade
+            internal static let subtitleDeadline = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.subtitle_deadline", fallback: "Registre a data limite para realizar a atividade")
+            /// Registre de 1 a 5, sendo 1 = pouco e 5 = muito
+            internal static let subtitleMetrics = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.subtitle_metrics", fallback: "Registre de 1 a 5, sendo 1 = pouco e 5 = muito")
+          }
+          internal enum Nav {
+            /// Nova atividade
+            internal static let title = L10n.tr("Constants", "constants.content.label.new_activity.nav.title", fallback: "Nova atividade")
           }
         }
         internal enum Phase {
@@ -295,9 +328,117 @@ internal enum L10n {
           }
         }
       }
+      internal enum Notification {
+        internal enum Dataset {
+          internal enum ExpectedMenstruation {
+            /// Organize suas tarefas para quando sua energia voltar ao máximo. Luna te ajuda com isso! 👉
+            internal static let body = L10n.tr("Constants", "constants.content.notification.dataset.expected_menstruation.body", fallback: "Organize suas tarefas para quando sua energia voltar ao máximo. Luna te ajuda com isso! 👉")
+            /// Segundo as previsões de Luna, você está na fase menstrual. Lembre-se de registrar!
+            internal static let body1 = L10n.tr("Constants", "constants.content.notification.dataset.expected_menstruation.body1", fallback: "Segundo as previsões de Luna, você está na fase menstrual. Lembre-se de registrar!")
+            /// Tire um tempo para relaxar e pratique coisas que ajude a aliviar o estresse. Saiba mais
+            internal static let body2 = L10n.tr("Constants", "constants.content.notification.dataset.expected_menstruation.body2", fallback: "Tire um tempo para relaxar e pratique coisas que ajude a aliviar o estresse. Saiba mais")
+            /// Aqueles dias 🩸
+            internal static let title = L10n.tr("Constants", "constants.content.notification.dataset.expected_menstruation.title", fallback: "Aqueles dias 🩸")
+            /// Como você está? ❤️
+            internal static let title1 = L10n.tr("Constants", "constants.content.notification.dataset.expected_menstruation.title1", fallback: "Como você está? ❤️")
+            /// Previsão: hora de se cuidar! ⏰
+            internal static let title2 = L10n.tr("Constants", "constants.content.notification.dataset.expected_menstruation.title2", fallback: "Previsão: hora de se cuidar! ⏰")
+          }
+          internal enum Fertile {
+            /// Aproveite o pico de determinação dessa fase para trabalhar nas suas metas!
+            internal static let body = L10n.tr("Constants", "constants.content.notification.dataset.fertile.body", fallback: "Aproveite o pico de determinação dessa fase para trabalhar nas suas metas!")
+            /// Aproveite a energia em alta para treinos mais intensos! Veja mais sobre a fase atual!
+            internal static let body1 = L10n.tr("Constants", "constants.content.notification.dataset.fertile.body1", fallback: "Aproveite a energia em alta para treinos mais intensos! Veja mais sobre a fase atual!")
+            /// Hoje tá sendo uma mistura de sentimentos, né? Entenda mais sobre essa fase 👉
+            internal static let body2 = L10n.tr("Constants", "constants.content.notification.dataset.fertile.body2", fallback: "Hoje tá sendo uma mistura de sentimentos, né? Entenda mais sobre essa fase 👉")
+            /// Dose extra! 🔋
+            internal static let title = L10n.tr("Constants", "constants.content.notification.dataset.fertile.title", fallback: "Dose extra! 🔋")
+            /// Eu ouvi intensidade? 💪
+            internal static let title1 = L10n.tr("Constants", "constants.content.notification.dataset.fertile.title1", fallback: "Eu ouvi intensidade? 💪")
+            /// Carro da água passando…💧
+            internal static let title2 = L10n.tr("Constants", "constants.content.notification.dataset.fertile.title2", fallback: "Carro da água passando…💧")
+          }
+          internal enum Folicular {
+            /// Você pode sentir mais energia hoje, abuse dos treinos de força. Saiba mais
+            internal static let body = L10n.tr("Constants", "constants.content.notification.dataset.folicular.body", fallback: "Você pode sentir mais energia hoje, abuse dos treinos de força. Saiba mais")
+            /// Hora de beber água, meu bem. Vamos lá, hidrate-se e seu corpo agradece!
+            internal static let body1 = L10n.tr("Constants", "constants.content.notification.dataset.folicular.body1", fallback: "Hora de beber água, meu bem. Vamos lá, hidrate-se e seu corpo agradece!")
+            /// Você pode ter mais disposição hoje! Que tal realizar as pendências da semana?
+            internal static let body2 = L10n.tr("Constants", "constants.content.notification.dataset.folicular.body2", fallback: "Você pode ter mais disposição hoje! Que tal realizar as pendências da semana?")
+            /// Se arruma e vamos! 🏃‍♀️
+            internal static let title = L10n.tr("Constants", "constants.content.notification.dataset.folicular.title", fallback: "Se arruma e vamos! 🏃‍♀️")
+            /// GRAVE: chegou a hora 🚨
+            internal static let title1 = L10n.tr("Constants", "constants.content.notification.dataset.folicular.title1", fallback: "GRAVE: chegou a hora 🚨")
+            /// Energia em alta!
+            internal static let title2 = L10n.tr("Constants", "constants.content.notification.dataset.folicular.title2", fallback: "Energia em alta!")
+          }
+          internal enum Luteal {
+            /// Os níveis de estrogênio e progesterona atingem o pico nessa fase. Saiba como isso pode interferir na sua rotina 👉
+            internal static let body = L10n.tr("Constants", "constants.content.notification.dataset.luteal.body", fallback: "Os níveis de estrogênio e progesterona atingem o pico nessa fase. Saiba como isso pode interferir na sua rotina 👉")
+            /// É um bom momento para fazer atividades tranquilas. Saiba mais sobre essa fase!
+            internal static let body1 = L10n.tr("Constants", "constants.content.notification.dataset.luteal.body1", fallback: "É um bom momento para fazer atividades tranquilas. Saiba mais sobre essa fase!")
+            /// Seu humor pode variar hoje, é bom evitar grandes mudanças, hein? Saiba mais 👉
+            internal static let body2 = L10n.tr("Constants", "constants.content.notification.dataset.luteal.body2", fallback: "Seu humor pode variar hoje, é bom evitar grandes mudanças, hein? Saiba mais 👉")
+            /// Hormônios em alta!
+            internal static let title = L10n.tr("Constants", "constants.content.notification.dataset.luteal.title", fallback: "Hormônios em alta!")
+            /// Mó paz ✌️
+            internal static let title1 = L10n.tr("Constants", "constants.content.notification.dataset.luteal.title1", fallback: "Mó paz ✌️")
+            /// 8 ou 80?
+            internal static let title2 = L10n.tr("Constants", "constants.content.notification.dataset.luteal.title2", fallback: "8 ou 80?")
+          }
+          internal enum Pms {
+            /// Seu corpo pode estar retendo mais líquido. Evitar excesso de alimentos ricos em sal pode ajudar.
+            internal static let body = L10n.tr("Constants", "constants.content.notification.dataset.pms.body", fallback: "Seu corpo pode estar retendo mais líquido. Evitar excesso de alimentos ricos em sal pode ajudar.")
+            /// Você pode sentir cólica e outras dores no corpo nessa fase. Veja o que mais pode acontecer 👉
+            internal static let body1 = L10n.tr("Constants", "constants.content.notification.dataset.pms.body1", fallback: "Você pode sentir cólica e outras dores no corpo nessa fase. Veja o que mais pode acontecer 👉")
+            /// Hoje tá sendo uma mistura de sentimentos, né? Entenda mais sobre essa fase 👉
+            internal static let body2 = L10n.tr("Constants", "constants.content.notification.dataset.pms.body2", fallback: "Hoje tá sendo uma mistura de sentimentos, né? Entenda mais sobre essa fase 👉")
+            /// Dica do dia ✨
+            internal static let title = L10n.tr("Constants", "constants.content.notification.dataset.pms.title", fallback: "Dica do dia ✨")
+            /// Forças!
+            internal static let title1 = L10n.tr("Constants", "constants.content.notification.dataset.pms.title1", fallback: "Forças!")
+            /// É literalmente uma fase!
+            internal static let title2 = L10n.tr("Constants", "constants.content.notification.dataset.pms.title2", fallback: "É literalmente uma fase!")
+          }
+        }
+        internal enum FirstPhaseDay {
+          internal enum ExpectedMenstruation {
+            /// Você entrará na fase menstrual nos próximos dias. Registre em Luna!
+            internal static let body = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.expected_menstruation.body", fallback: "Você entrará na fase menstrual nos próximos dias. Registre em Luna!")
+            /// Ding Dong, cheguei 🩸
+            internal static let title = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.expected_menstruation.title", fallback: "Ding Dong, cheguei 🩸")
+          }
+          internal enum Fertile {
+            /// Fase ovulatória à vista! Saiba o que pode acontecer nessa fase 👉
+            internal static let body = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.fertile.body", fallback: "Fase ovulatória à vista! Saiba o que pode acontecer nessa fase 👉")
+            /// Cheguei, mores  💅
+            internal static let title = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.fertile.title", fallback: "Cheguei, mores  💅")
+          }
+          internal enum Folicular {
+            /// Ela mesmo, a Fase Folicular! Energia pode estar em alta hoje, veja como aproveitar!
+            internal static let body = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.folicular.body", fallback: "Ela mesmo, a Fase Folicular! Energia pode estar em alta hoje, veja como aproveitar!")
+            /// Chegou a famosa ⚡️
+            internal static let title = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.folicular.title", fallback: "Chegou a famosa ⚡️")
+          }
+          internal enum Luteal {
+            /// Fase Lútea on! Hormônios em alta. Saiba o que pode acontecer nessa fase 👉
+            internal static let body = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.luteal.body", fallback: "Fase Lútea on! Hormônios em alta. Saiba o que pode acontecer nessa fase 👉")
+            /// Piscou e eu cheguei
+            internal static let title = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.luteal.title", fallback: "Piscou e eu cheguei")
+          }
+          internal enum Pms {
+            /// Sintomas da TPM podem aparecer nos próximos dias. Saiba mais sobre essa fase 👉
+            internal static let body = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.pms.body", fallback: "Sintomas da TPM podem aparecer nos próximos dias. Saiba mais sobre essa fase 👉")
+            /// Sem gracinha hoje
+            internal static let title = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.pms.title", fallback: "Sem gracinha hoje")
+          }
+        }
+      }
     }
     internal enum User {
       internal enum Key {
+        /// activities
+        internal static let forActivitiesWasSeen = L10n.tr("Constants", "constants.user.key.for_activities_was_seen", fallback: "activities")
         /// onboarding
         internal static let forOnboardingWasSeen = L10n.tr("Constants", "constants.user.key.for_onboarding_was_seen", fallback: "onboarding")
       }

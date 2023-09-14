@@ -16,6 +16,14 @@ class HomePresenter: ViewToPresenterHomeProtocol {
     var interactor: PresenterToInteractorHomeProtocol?
     var router: PresenterToRouterHomeProtocol?
     
+    init(view: PresenterToViewHomeProtocol? = nil,
+         interactor: PresenterToInteractorHomeProtocol? = nil,
+         router: PresenterToRouterHomeProtocol? = nil) {
+        self.view = view
+        self.interactor = interactor
+        self.router = router
+    }
+    
     func checkCalendarPermission() {
         interactor?.checkIfUserGivePermission { permission in
             
@@ -30,7 +38,6 @@ class HomePresenter: ViewToPresenterHomeProtocol {
     
     func showCyclePhaseReferencesSheet() {
         guard let homePresenterView = view else { return }
-        
         self.router?.pushReferencesSheet(on: homePresenterView)
     }
     

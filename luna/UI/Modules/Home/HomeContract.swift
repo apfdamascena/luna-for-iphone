@@ -61,6 +61,8 @@ protocol ViewToPresenterHomeProtocol {
 // MARK: Interactor Input (Presenter -> Interactor)
 protocol PresenterToInteractorHomeProtocol {
     
+    var lunaCalendarManager: CalendarManager? { get }
+    
     var presenter: InteractorToPresenterHomeProtocol? { get set }
     
     func checkIfUserGivePermission(completion: @escaping PermissionResponse)
@@ -73,6 +75,8 @@ protocol PresenterToInteractorHomeProtocol {
     func openDeviceSettings()
     
     func nextIndexForCardPhase(at index: Int) -> Int
+    
+    var calendarPermission: CalendarAccess { get }
     
 }
 

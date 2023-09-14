@@ -28,6 +28,18 @@ class LunaText: UILabel, AnyView, DrawableView {
         font = UIFont.systemFont(ofSize: model.size,
                                       weight: model.weight)
     }
+    
+    func addLineHeight(of heigth: Int) {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = CGFloat(heigth/10)
+        let attributes: [NSAttributedString.Key: Any] = [
+            .paragraphStyle: paragraphStyle
+        ]
+        guard let text = self.text else { return }
+        let attibrutedText = NSAttributedString(string: text, attributes: attributes)
+        
+        self.attributedText = attibrutedText
+    }
+    
 }
 
-// phase.descriptions.howAreYouDescription
