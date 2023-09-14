@@ -259,7 +259,7 @@
 "constants.content.label.first_time_new_activity.subtitle" = "Register an activity you need to do and receive a personalized suggestion on when to do it in your cycle.";
 
 "constants.content.label.home.no_data"="Why look to the past? He's already passed!";
-"constants.content.label.home.no_data_descripition" = "The prediction is only made from your last menstrual period, so we don't have anything to tell you about that day.";
+"constants.content.label.home.no_data_descripition" = "The prediction is only made from your last menstrual period, we don't have anything to tell you about that day.";
 
 "constants.content.label.first_time_new_activity.button" = "Lets do it!";
 
