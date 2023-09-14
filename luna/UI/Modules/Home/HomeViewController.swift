@@ -10,10 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol ActivityFilter {
-    
-    func filter(_ data: [String] ) -> [String]
-}
 
 class ActivityFilterWeek: ActivityFilter {
     

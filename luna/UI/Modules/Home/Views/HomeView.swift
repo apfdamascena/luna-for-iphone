@@ -176,7 +176,6 @@ class HomeView: UIView, AnyView  {
             return
         }
         
-        
         phaseCycleTitle.isHidden = false
         warningNoMenstrualData.isHidden = true
         cardCycle.isHidden = false
@@ -227,7 +226,9 @@ class HomeView: UIView, AnyView  {
     
     func drawActivities(_ data: [String]){
         
-        let activities = data.map{ _ in
+        // vai mudar aqui
+        
+        let activities = data.map { _ in
             let cell = ActivityCell()
             let model = ActivityCellViewModel(title: "Aniversário de Alana",
                                               hourStart: "10:00",
