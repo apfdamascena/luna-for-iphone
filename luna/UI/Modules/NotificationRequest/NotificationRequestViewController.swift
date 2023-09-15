@@ -15,8 +15,8 @@ class NotificationRequestViewController: UIViewController {
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .white
     }
-
 }
 
 extension NotificationRequestViewController: PresenterToViewNotificationRequestProtocol{
