@@ -18,9 +18,9 @@ class FirstTimeNewActivityViewController: UIViewController {
     
     private var disposeBag = DisposeBag()
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
-        self.title = nil
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil , bundle: nibBundleOrNil)
+        hidesBottomBarWhenPushed = true
     }
     
     required init?(coder: NSCoder) {
@@ -36,7 +36,7 @@ class FirstTimeNewActivityViewController: UIViewController {
         super.viewDidLoad()
         firstTimeLetsGoButtonTouchTrigger()
     }
-    
+        
     func firstTimeLetsGoButtonTouchTrigger() {
         firstTimeNewActivityView.button
             .rx
