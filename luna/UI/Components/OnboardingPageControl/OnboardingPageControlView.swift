@@ -8,6 +8,7 @@
 import UIKit
 
 extension UIWindow {
+    
     static var current: UIWindow? {
         for scene in UIApplication.shared.connectedScenes {
             guard let windowScene = scene as? UIWindowScene else { continue }

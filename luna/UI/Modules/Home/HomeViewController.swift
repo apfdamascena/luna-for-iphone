@@ -64,7 +64,7 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
         self.navigationController?.isNavigationBarHidden = true
-        Notification.shared.requestAccess()
+
         
         DispatchQueue.main.async {
             self.presenter?.loadCalendarToCollection()

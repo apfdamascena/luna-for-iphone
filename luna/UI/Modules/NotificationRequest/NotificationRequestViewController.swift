@@ -17,6 +17,11 @@ class NotificationRequestViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        Notification.shared.requestAccess()
+    }
 }
 
 extension NotificationRequestViewController: PresenterToViewNotificationRequestProtocol{
