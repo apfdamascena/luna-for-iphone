@@ -34,6 +34,7 @@ class OnboardingPageControlView: UIView, AnyView {
         UIImageView(),
         UIImageView(),
         UIImageView(),
+        UIImageView(),
         UIImageView()
     ]
     
@@ -111,6 +112,8 @@ class OnboardingPageControlView: UIView, AnyView {
             return Asset.dot3.image
         case 3:
             return Asset.dot4.image
+        case 4:
+            return Asset.dot5.image
         default:
             return Asset.dotNone.image
             

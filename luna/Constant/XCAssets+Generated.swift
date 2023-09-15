@@ -79,6 +79,7 @@ internal enum Asset {
   internal static let dot2 = ImageAsset(name: "dot2")
   internal static let dot3 = ImageAsset(name: "dot3")
   internal static let dot4 = ImageAsset(name: "dot4")
+  internal static let dot5 = ImageAsset(name: "dot5")
   internal static let dotNone = ImageAsset(name: "dotNone")
   internal static let expectedMenstruationSelected = ImageAsset(name: "expectedMenstruationSelected")
   internal static let expectedPhaseActitivyCell = ImageAsset(name: "expected_phase_actitivy_cell")
