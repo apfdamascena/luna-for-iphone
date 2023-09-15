@@ -100,7 +100,7 @@ class FirstTimeNewActivityView: UIView, AnyView {
         
         button.snp.makeConstraints {
             $0.trailing.leading.equalToSuperview().inset(3.su)
-            $0.top.equalTo(screenHeight * 0.84)
+            $0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-2.su)
         }
         
     }

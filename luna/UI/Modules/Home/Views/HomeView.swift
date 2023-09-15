@@ -173,12 +173,15 @@ class HomeView: UIView, AnyView  {
             phaseCycleTitle.isHidden = true
             warningNoMenstrualData.isHidden = true
             cardCycle.isHidden = true
+            activitiesView.isHidden = true
             return
         }
         
         phaseCycleTitle.isHidden = false
         warningNoMenstrualData.isHidden = true
         cardCycle.isHidden = false
+        activitiesView.isHidden = false
+        
         
     
         if cycle == .none {
@@ -186,6 +189,7 @@ class HomeView: UIView, AnyView  {
             phaseCycleTitle.isHidden = true
             cardCycle.isHidden = true
             warningNoMenstrualData.isHidden = false
+            activitiesView.isHidden = true
         }
     }
     
