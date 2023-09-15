@@ -28,6 +28,7 @@ class ReferenceCard: UIView, AnyView {
         let view = UIStackView()
         view.axis = .vertical
         view.alignment = .top
+        view.spacing = 2.su
         return view
     }()
 
@@ -41,10 +42,7 @@ class ReferenceCard: UIView, AnyView {
         return label
     }()
     
-    private let linkComponent: Link = {
-        let link = Link()
-        return link
-    }()
+    private let linkComponent = Link()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -57,18 +55,18 @@ class ReferenceCard: UIView, AnyView {
     
     func addSubviews() {
         addSubview(horizontalStack)
-//        horizontalStack.addArrangedSubview(number)
+        
+        verticalStack.addArrangedSubview(linkComponent)
         horizontalStack.addArrangedSubview(verticalStack)
         verticalStack.addArrangedSubview(reference)
-        verticalStack.addArrangedSubview(linkComponent)
+  
     }
     
     func addConstraints() {
+        
         horizontalStack.snp.makeConstraints {
             $0.trailing.leading.equalToSuperview()
         }
-        
-        horizontalStack.backgroundColor = .red
         
         self.snp.makeConstraints {
             $0.height.equalTo(horizontalStack.snp.height)
