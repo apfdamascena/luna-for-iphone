@@ -20,45 +20,45 @@ class ReferencesSheetView: UIView, AnyView {
         return card
     }()
     
-    private let secondReference: ReferenceCard = {
-        let card = ReferenceCard()
-        let viewModel = ReferenceTextViewModel(
-            number: "2.",
-            reference: L10n.Constants.Content.Label.Home.Text.References.second,
-            link: L10n.Constants.Content.Label.Home.Link.References.second)
-        card.draw(viewModel)
-        return card
-    }()
+//    private let secondReference: ReferenceCard = {
+//        let card = ReferenceCard()
+//        let viewModel = ReferenceTextViewModel(
+//            number: "2.",
+//            reference: L10n.Constants.Content.Label.Home.Text.References.second,
+//            link: L10n.Constants.Content.Label.Home.Link.References.second)
+//        card.draw(viewModel)
+//        return card
+//    }()
     
-    private let thirdReference: ReferenceCard = {
-        let card = ReferenceCard()
-        let viewModel = ReferenceTextViewModel(
-            number: "3.",
-            reference: L10n.Constants.Content.Label.Home.Text.References.third,
-            link: L10n.Constants.Content.Label.Home.Link.References.third)
-        card.draw(viewModel)
-        return card
-    }()
+//    private let thirdReference: ReferenceCard = {
+//        let card = ReferenceCard()
+//        let viewModel = ReferenceTextViewModel(
+//            number: "3.",
+//            reference: L10n.Constants.Content.Label.Home.Text.References.third,
+//            link: L10n.Constants.Content.Label.Home.Link.References.third)
+//        card.draw(viewModel)
+//        return card
+//    }()
     
-    private let fourthReference: ReferenceCard = {
-        let card = ReferenceCard()
-        let viewModel = ReferenceTextViewModel(
-            number: "4.",
-            reference: L10n.Constants.Content.Label.Home.Text.References.fourth,
-            link: L10n.Constants.Content.Label.Home.Link.References.fourth)
-        card.draw(viewModel)
-        return card
-    }()
+//    private let fourthReference: ReferenceCard = {
+//        let card = ReferenceCard()
+//        let viewModel = ReferenceTextViewModel(
+//            number: "4.",
+//            reference: L10n.Constants.Content.Label.Home.Text.References.fourth,
+//            link: L10n.Constants.Content.Label.Home.Link.References.fourth)
+//        card.draw(viewModel)
+//        return card
+//    }()
     
-    private let fifthReference: ReferenceCard = {
-        let card = ReferenceCard()
-        let viewModel = ReferenceTextViewModel(
-            number: "5.",
-            reference: L10n.Constants.Content.Label.Home.Text.References.fifth,
-            link: L10n.Constants.Content.Label.Home.Link.References.fifth)
-        card.draw(viewModel)
-        return card
-    }()
+//    private let fifthReference: ReferenceCard = {
+//        let card = ReferenceCard()
+//        let viewModel = ReferenceTextViewModel(
+//            number: "5.",
+//            reference: L10n.Constants.Content.Label.Home.Text.References.fifth,
+//            link: L10n.Constants.Content.Label.Home.Link.References.fifth)
+//        card.draw(viewModel)
+//        return card
+//    }()
     
     private let stack: UIStackView = {
         let view = UIStackView()
@@ -92,10 +92,10 @@ class ReferencesSheetView: UIView, AnyView {
         scrollView.addSubview(stack)
         
         stack.addArrangedSubview(firstReference)
-        stack.addArrangedSubview(secondReference)
-        stack.addArrangedSubview(thirdReference)
-        stack.addArrangedSubview(fourthReference)
-        stack.addArrangedSubview(fifthReference)
+//        stack.addArrangedSubview(secondReference)
+//        stack.addArrangedSubview(thirdReference)
+//        stack.addArrangedSubview(fourthReference)
+//        stack.addArrangedSubview(fifthReference)
     }
     
     func addConstraints() {

@@ -35,7 +35,7 @@ class ReferenceCard: UIView, AnyView {
     var reference: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 17, color: .black, weight: .regular)
-        label.text = L10n.Constants.Content.Label.Home.Text.References.first
+        label.text = "Mesen TB, Young SL. Progesterone and the luteal phase: a requisite to reproduction. Obstet Gynecol Clin North Am. 2015 Mar;42(1):135-51. PMID: 25681845; PMCID: PMC4436586."
         label.numberOfLines = 0
         label.textAlignment = .left
         label.draw(model)
@@ -54,26 +54,16 @@ class ReferenceCard: UIView, AnyView {
     }
     
     func addSubviews() {
-        addSubview(horizontalStack)
+        addSubview(verticalStack)
         
         verticalStack.addArrangedSubview(linkComponent)
-        horizontalStack.addArrangedSubview(verticalStack)
         verticalStack.addArrangedSubview(reference)
   
     }
     
     func addConstraints() {
         
-        horizontalStack.snp.makeConstraints {
-            $0.trailing.leading.equalToSuperview()
-        }
-        
-        self.snp.makeConstraints {
-            $0.height.equalTo(horizontalStack.snp.height)
-        }
-        
-        linkComponent.snp.makeConstraints {
-            $0.height.equalTo(3.5.su)
+        verticalStack.snp.makeConstraints{
             $0.trailing.leading.equalToSuperview()
         }
     }
