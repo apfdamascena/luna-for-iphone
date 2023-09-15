@@ -7,12 +7,15 @@
 
 import UIKit
 
-let referencesView = ReferencesSheetView()
-
 class ReferencesViewController: UIViewController {
+    
+    private let referencesView = ReferencesSheetView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = referencesView
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Referências"
+        
     }
 }

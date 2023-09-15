@@ -10,18 +10,18 @@ import SnapKit
 
 class ReferencesSheetView: UIView, AnyView {
 
-    private let referencesTitle: LunaText = {
-        let label = LunaText()
-        let model = LunaTextViewModel(size: 20,
-                                      color: .black,
-                                      weight: .medium)
-        
-        label.text = L10n.Constants.Content.Label.Sheet.title
-        label.numberOfLines = 0
-        label.textAlignment = .left
-        label.draw(model)
-        return label
-    }()
+//    private let referencesTitle: LunaText = {
+//        let label = LunaText()
+//        let model = LunaTextViewModel(size: 20,
+//                                      color: .black,
+//                                      weight: .medium)
+//        
+//        label.text = L10n.Constants.Content.Label.Sheet.title
+//        label.numberOfLines = 0
+//        label.textAlignment = .left
+//        label.draw(model)
+//        return label
+//    }()
     
     private let firstReference: ReferenceCard = {
         let card = ReferenceCard()
@@ -104,7 +104,7 @@ class ReferencesSheetView: UIView, AnyView {
         
         scrollView.addSubview(stack)
         
-        stack.addArrangedSubview(referencesTitle)
+//        stack.addArrangedSubview(referencesTitle)
         stack.addArrangedSubview(firstReference)
         stack.addArrangedSubview(secondReference)
         stack.addArrangedSubview(thirdReference)
