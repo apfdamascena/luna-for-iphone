@@ -35,6 +35,7 @@ class FirstTimeNewActivityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         firstTimeLetsGoButtonTouchTrigger()
+        navigationItem.title = nil
     }
         
     func firstTimeLetsGoButtonTouchTrigger() {
