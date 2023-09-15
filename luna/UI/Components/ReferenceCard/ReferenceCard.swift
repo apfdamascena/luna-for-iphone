@@ -14,8 +14,8 @@ struct ReferenceTextViewModel {
     let link: String
 }
 
-
 class ReferenceCard: UIView, AnyView {
+    
     private let horizontalStack: UIStackView = {
         let view = UIStackView()
         view.axis = .horizontal
@@ -29,16 +29,6 @@ class ReferenceCard: UIView, AnyView {
         view.axis = .vertical
         view.alignment = .top
         return view
-    }()
-    
-    var number: LunaText = {
-        let label = LunaText()
-        let model = LunaTextViewModel(size: 17, color: .black, weight: .regular)
-        label.text = "1."
-        label.textAlignment = .left
-        label.sizeToFit()
-        label.draw(model)
-        return label
     }()
 
     var reference: LunaText = {
@@ -67,7 +57,7 @@ class ReferenceCard: UIView, AnyView {
     
     func addSubviews() {
         addSubview(horizontalStack)
-        horizontalStack.addArrangedSubview(number)
+//        horizontalStack.addArrangedSubview(number)
         horizontalStack.addArrangedSubview(verticalStack)
         verticalStack.addArrangedSubview(reference)
         verticalStack.addArrangedSubview(linkComponent)
@@ -78,12 +68,10 @@ class ReferenceCard: UIView, AnyView {
             $0.trailing.leading.equalToSuperview()
         }
         
+        horizontalStack.backgroundColor = .red
+        
         self.snp.makeConstraints {
             $0.height.equalTo(horizontalStack.snp.height)
-        }
-        
-        number.snp.makeConstraints {
-            $0.width.equalTo(1.5.su)
         }
         
         linkComponent.snp.makeConstraints {
@@ -93,7 +81,7 @@ class ReferenceCard: UIView, AnyView {
     }
 
     func draw(_ model: ReferenceTextViewModel){
-        number.text = model.number
+
         reference.text = model.reference
         linkComponent.draw(model.link)
     }
