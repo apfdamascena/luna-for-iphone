@@ -20,8 +20,6 @@ class NewActivityViewController: UIViewController {
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil , bundle: nibBundleOrNil)
-//        hidesBottomBarWhenPushed = true
-//        self.tabBarController?.hidesBottomBarWhenPushed = false
     }
     
     required init?(coder: NSCoder) {

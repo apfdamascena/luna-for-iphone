@@ -31,6 +31,7 @@
 		0D2DB2D52AB4D971003D71D8 /* NotificationRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB2D02AB4D971003D71D8 /* NotificationRequestPresenter.swift */; };
 		0D2DB2D62AB4D971003D71D8 /* NotificationRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB2D12AB4D971003D71D8 /* NotificationRequestRouter.swift */; };
 		0D2DB2D72AB4D971003D71D8 /* NotificationRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB2D22AB4D971003D71D8 /* NotificationRequestViewController.swift */; };
+		0D2DB2DB2AB4E4CD003D71D8 /* NotificationRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB2DA2AB4E4CD003D71D8 /* NotificationRequestView.swift */; };
 		0D2FC76A2A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */; };
 		0D2FC76C2A6EF4810025D8B6 /* DataSourceEventObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */; };
 		0D2FC76E2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76D2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift */; };
@@ -281,6 +282,7 @@
 		0D2DB2D02AB4D971003D71D8 /* NotificationRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRequestPresenter.swift; sourceTree = "<group>"; };
 		0D2DB2D12AB4D971003D71D8 /* NotificationRequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRequestRouter.swift; sourceTree = "<group>"; };
 		0D2DB2D22AB4D971003D71D8 /* NotificationRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRequestViewController.swift; sourceTree = "<group>"; };
+		0D2DB2DA2AB4E4CD003D71D8 /* NotificationRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRequestView.swift; sourceTree = "<group>"; };
 		0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSource.swift; sourceTree = "<group>"; };
 		0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceEventObservable.swift; sourceTree = "<group>"; };
 		0D2FC76D2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSourceImpl.swift; sourceTree = "<group>"; };
@@ -587,12 +589,21 @@
 		0D2DB2CE2AB4D94F003D71D8 /* NotificationRequest */ = {
 			isa = PBXGroup;
 			children = (
+				0D2DB2D92AB4E4B6003D71D8 /* Views */,
 				0D2DB2CF2AB4D971003D71D8 /* NotificationRequestContract.swift */,
 				0D2DB2D02AB4D971003D71D8 /* NotificationRequestPresenter.swift */,
 				0D2DB2D12AB4D971003D71D8 /* NotificationRequestRouter.swift */,
 				0D2DB2D22AB4D971003D71D8 /* NotificationRequestViewController.swift */,
 			);
 			path = NotificationRequest;
+			sourceTree = "<group>";
+		};
+		0D2DB2D92AB4E4B6003D71D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0D2DB2DA2AB4E4CD003D71D8 /* NotificationRequestView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		0D2FC7682A6EF41C0025D8B6 /* Protocols */ = {
@@ -1878,6 +1889,7 @@
 				BFD1A0202A8329E700F420B5 /* ReferenceCard.swift in Sources */,
 				0DBADDD62A6600CD00A10FC3 /* AnyView.swift in Sources */,
 				0DBADDE72A66044600A10FC3 /* UIView+Preview.swift in Sources */,
+				0D2DB2DB2AB4E4CD003D71D8 /* NotificationRequestView.swift in Sources */,
 				0D2FC76C2A6EF4810025D8B6 /* DataSourceEventObservable.swift in Sources */,
 				0D8095932AB399F600106998 /* ActivityFilterFactory.swift in Sources */,
 				BF4DC2D62A7341B20005BF7E /* LunaCalendarRequestAccess.swift in Sources */,
