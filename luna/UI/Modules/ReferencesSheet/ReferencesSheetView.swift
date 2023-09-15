@@ -15,7 +15,7 @@ class ReferencesSheetView: UIView, AnyView {
 //        let model = LunaTextViewModel(size: 20,
 //                                      color: .black,
 //                                      weight: .medium)
-//        
+//
 //        label.text = L10n.Constants.Content.Label.Sheet.title
 //        label.numberOfLines = 0
 //        label.textAlignment = .left
@@ -121,7 +121,7 @@ class ReferencesSheetView: UIView, AnyView {
         }
         
         scrollView.snp.makeConstraints {
-            $0.top.equalTo(resizeIndicator.snp.bottom).offset(1.su)
+            $0.top.equalTo(safeAreaLayoutGuide).offset(1.su)
             $0.leading.trailing.equalToSuperview()
             $0.bottom.equalTo(safeAreaLayoutGuide)
         }
