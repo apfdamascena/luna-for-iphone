@@ -48,6 +48,9 @@
 "constants.content.label.calendar_title"="Sintonize com seu dia a dia";
 "constants.content.label.calendar_subtitle"="Permita que o Luna acesse seu Calendar para planejar seus dias com sabedoria e melhorar o seu bem-estar";
 
+"constants.content.label.notification_title"="Em tempo real com seu ciclo";
+"constants.content.label.notification_subtitle"="Autorize as notificações de Luna para acompanhar de perto seu ciclo menstrual";
+
 "constants.content.api.icloud"= "iCloud";
 
 "constants.content.label.sheet.title" = "Referências";
