@@ -27,6 +27,10 @@
 		0D0B292C2AA3B4200048722A /* NotificationCurrentPhaseInformationMessageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B292B2AA3B4200048722A /* NotificationCurrentPhaseInformationMessageFactory.swift */; };
 		0D15FE942A7DB12100FD64E4 /* WarningNoMenstrualData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15FE932A7DB12100FD64E4 /* WarningNoMenstrualData.swift */; };
 		0D2939772AB113630017891A /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2939762AB113630017891A /* ActivityCell.swift */; };
+		0D2DB2D42AB4D971003D71D8 /* NotificationRequestContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB2CF2AB4D971003D71D8 /* NotificationRequestContract.swift */; };
+		0D2DB2D52AB4D971003D71D8 /* NotificationRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB2D02AB4D971003D71D8 /* NotificationRequestPresenter.swift */; };
+		0D2DB2D62AB4D971003D71D8 /* NotificationRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB2D12AB4D971003D71D8 /* NotificationRequestRouter.swift */; };
+		0D2DB2D72AB4D971003D71D8 /* NotificationRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB2D22AB4D971003D71D8 /* NotificationRequestViewController.swift */; };
 		0D2FC76A2A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */; };
 		0D2FC76C2A6EF4810025D8B6 /* DataSourceEventObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */; };
 		0D2FC76E2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76D2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift */; };
@@ -273,6 +277,10 @@
 		0D0B292B2AA3B4200048722A /* NotificationCurrentPhaseInformationMessageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCurrentPhaseInformationMessageFactory.swift; sourceTree = "<group>"; };
 		0D15FE932A7DB12100FD64E4 /* WarningNoMenstrualData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningNoMenstrualData.swift; sourceTree = "<group>"; };
 		0D2939762AB113630017891A /* ActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
+		0D2DB2CF2AB4D971003D71D8 /* NotificationRequestContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRequestContract.swift; sourceTree = "<group>"; };
+		0D2DB2D02AB4D971003D71D8 /* NotificationRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRequestPresenter.swift; sourceTree = "<group>"; };
+		0D2DB2D12AB4D971003D71D8 /* NotificationRequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRequestRouter.swift; sourceTree = "<group>"; };
+		0D2DB2D22AB4D971003D71D8 /* NotificationRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRequestViewController.swift; sourceTree = "<group>"; };
 		0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSource.swift; sourceTree = "<group>"; };
 		0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceEventObservable.swift; sourceTree = "<group>"; };
 		0D2FC76D2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSourceImpl.swift; sourceTree = "<group>"; };
@@ -576,6 +584,17 @@
 			path = ActivityCell;
 			sourceTree = "<group>";
 		};
+		0D2DB2CE2AB4D94F003D71D8 /* NotificationRequest */ = {
+			isa = PBXGroup;
+			children = (
+				0D2DB2CF2AB4D971003D71D8 /* NotificationRequestContract.swift */,
+				0D2DB2D02AB4D971003D71D8 /* NotificationRequestPresenter.swift */,
+				0D2DB2D12AB4D971003D71D8 /* NotificationRequestRouter.swift */,
+				0D2DB2D22AB4D971003D71D8 /* NotificationRequestViewController.swift */,
+			);
+			path = NotificationRequest;
+			sourceTree = "<group>";
+		};
 		0D2FC7682A6EF41C0025D8B6 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -876,6 +895,7 @@
 		0DDA612F2A69D07900CA15C6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0D2DB2CE2AB4D94F003D71D8 /* NotificationRequest */,
 				0D9D8A122AA90BF300B64E2D /* LunaTabBar */,
 				BF4950FA2AB0FB3D0064F5D6 /* BestActivity */,
 				A427FC572AB0DBD8006B4F2B /* FirstTimeNewActivity */,
@@ -1175,15 +1195,6 @@
 		A48F4A3B2A993C4700BB5058 /* CardPhaseControl */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = CardPhaseControl;
-			sourceTree = "<group>";
-		};
-		A48F4A3C2A993C6E00BB5058 /* CardPhaseControl */ = {
-			isa = PBXGroup;
-			children = (
-				A48F4A392A993BEC00BB5058 /* CardPhaseControlDataSource.swift */,
-				A48F4A3D2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift */,
 			);
 			path = CardPhaseControl;
 			sourceTree = "<group>";
@@ -1708,6 +1719,7 @@
 				0D2FC76E2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift in Sources */,
 				A48F4A322A9684B600BB5058 /* CycleCardView.swift in Sources */,
 				BFD1A01B2A82E18600F420B5 /* CalendarAccess.swift in Sources */,
+				0D2DB2D52AB4D971003D71D8 /* NotificationRequestPresenter.swift in Sources */,
 				0D0B28D72AA0050B0048722A /* NotificationBody.swift in Sources */,
 				0D2FC7722A6EF59B0025D8B6 /* OnboardingViewFlow.swift in Sources */,
 				0DBADDE92A66045700A10FC3 /* UIViewController+Preview.swift in Sources */,
@@ -1854,6 +1866,7 @@
 				BFD1A0272A84114300F420B5 /* LunaEvent.swift in Sources */,
 				0D6336972A774C7D00EE9699 /* OnboardingInformation.swift in Sources */,
 				0DBADDE02A6603F800A10FC3 /* LastDayMenstruationPresenter.swift in Sources */,
+				0D2DB2D42AB4D971003D71D8 /* NotificationRequestContract.swift in Sources */,
 				0D80958A2AB3419E00106998 /* ActivityView.swift in Sources */,
 				0D63369F2A774D7A00EE9699 /* OtherCyclePhasesPresenter.swift in Sources */,
 				BFD533BA2A7158C00063351E /* LunaCalendarManager.swift in Sources */,
@@ -1871,6 +1884,7 @@
 				A46C05152A6EFE150071ABCE /* CalendarViewController.swift in Sources */,
 				A48F4A352A96906E00BB5058 /* DynamicCardPhaseViewModel.swift in Sources */,
 				A427FC872AB248A3006B4F2B /* DatePickerStack.swift in Sources */,
+				0D2DB2D62AB4D971003D71D8 /* NotificationRequestRouter.swift in Sources */,
 				0DDA61272A69CEC600CA15C6 /* MenstruationDurationContract.swift in Sources */,
 				A427FC492AAFA219006B4F2B /* NewActivityContract.swift in Sources */,
 				0D6794362A74729100382142 /* TeachRecordMenstruationView.swift in Sources */,
@@ -1888,6 +1902,7 @@
 				0D65E3842AB24B62008148FD /* ActivityPeriod.swift in Sources */,
 				CA557BCE2A6B1743001DF2BB /* LandingPageRouter.swift in Sources */,
 				A427FC502AAFA539006B4F2B /* NewActivityView.swift in Sources */,
+				0D2DB2D72AB4D971003D71D8 /* NotificationRequestViewController.swift in Sources */,
 				0D6794192A731B5C00382142 /* UserCycleInformation.swift in Sources */,
 				A46C054F2A74641E0071ABCE /* LunaButtonStyle.swift in Sources */,
 				A46C05132A6EFE150071ABCE /* CalendarRouter.swift in Sources */,
