@@ -108,6 +108,7 @@ internal enum Asset {
   internal static let menstruationCell = ImageAsset(name: "menstruation_cell")
   internal static let menstruationPhaseActivityCell = ImageAsset(name: "menstruation_phase_activity_cell")
   internal static let noneSelected = ImageAsset(name: "noneSelected")
+  internal static let notificationRequestImage = ImageAsset(name: "notification-request-image")
   internal static let otherCyclePhases = ImageAsset(name: "other_cycle_phases")
   internal static let ovulationSelected = ImageAsset(name: "ovulationSelected")
   internal static let ovulationCell = ImageAsset(name: "ovulation_cell")

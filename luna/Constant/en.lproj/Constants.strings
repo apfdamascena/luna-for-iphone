@@ -52,6 +52,9 @@
 "constants.content.label.sheet.title" = "References";
 "constants.content.label.sheet.link" = "Available here!";
 
+"constants.content.label.notification_title" = "Real-time with your cycle";
+"constants.content.label.notification_subtitle" = "Authorize Luna's notifications to closely track your menstrual cycle.";
+
 "constants.content.label.folicular"= "⚡️ Follicular Phase";
 "constants.content.label.menstruation"= "🩸 Menstruation";
 "constants.content.label.luteal"= "⬛️ Luteal Phase";

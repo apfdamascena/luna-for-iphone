@@ -64,6 +64,10 @@ internal enum L10n {
         /// Quantos dias dura a
         /// sua menstruação?
         internal static let menstruationDuration = L10n.tr("Constants", "constants.content.label.menstruation_duration", fallback: "Quantos dias dura a\nsua menstruação?")
+        /// Autorize as notificações de Luna para acompanhar de perto seu ciclo menstrual
+        internal static let notificationSubtitle = L10n.tr("Constants", "constants.content.label.notification_subtitle", fallback: "Autorize as notificações de Luna para acompanhar de perto seu ciclo menstrual")
+        /// Em tempo real com seu ciclo
+        internal static let notificationTitle = L10n.tr("Constants", "constants.content.label.notification_title", fallback: "Em tempo real com seu ciclo")
         /// Fase Folicular
         internal static let onboardingFolicule = L10n.tr("Constants", "constants.content.label.onboarding_folicule", fallback: "Fase Folicular")
         /// As estrelas vermelhas representam os dias da sua fase folicular.

@@ -12,6 +12,14 @@ class NotificationRequestViewController: UIViewController {
     
     var presenter: ViewToPresenterNotificationRequestProtocol?
     
+    private let notificationRequestView = NotificationRequestView()
+    
+    
+    override func loadView() {
+        super.loadView()
+        view = notificationRequestView
+    }
+    
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()

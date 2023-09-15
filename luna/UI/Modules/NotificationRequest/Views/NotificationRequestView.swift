@@ -19,7 +19,7 @@ class NotificationRequestView: UIView, AnyView  {
     }()
     
     private let image: UIImageView = {
-        let view = UIImageView(image: Asset.calendarImage.image)
+        let view = UIImageView(image: Asset.notificationRequestImage.image)
         view.contentMode = .scaleAspectFill
         return view
     }()
@@ -30,7 +30,7 @@ class NotificationRequestView: UIView, AnyView  {
                                       color: .black,
                                       weight: .medium)
         
-        label.text = L10n.Constants.Content.Label.calendarTitle
+        label.text = L10n.Constants.Content.Label.notificationTitle
         label.numberOfLines = 0
         label.textAlignment = .left
         label.draw(model)
@@ -49,7 +49,7 @@ class NotificationRequestView: UIView, AnyView  {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = (0.7).su
         let attributes: [NSAttributedString.Key: Any] = [.font: label.font, .paragraphStyle: paragraphStyle]
-        label.attributedText = NSAttributedString(string: L10n.Constants.Content.Label.calendarSubtitle, attributes: attributes)
+        label.attributedText = NSAttributedString(string: L10n.Constants.Content.Label.notificationSubtitle, attributes: attributes)
         
         label.draw(model)
         return label
@@ -76,14 +76,13 @@ class NotificationRequestView: UIView, AnyView  {
         image.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.centerY.equalToSuperview().offset(-17.su)
-            $0.width.equalTo(27.su)
+            $0.width.equalToSuperview().multipliedBy(0.9)
         }
     
         stack.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(image.snp.bottom).offset(7.5.su)
-            $0.width.equalTo(42.su)
-            $0.height.equalTo(20.su)
+            $0.leading.trailing.equalToSuperview().inset(3.su)
         }
     }
     
