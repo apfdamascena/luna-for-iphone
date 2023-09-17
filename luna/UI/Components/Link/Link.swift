@@ -23,8 +23,7 @@ class Link: UIView, AnyView {
         stack.alignment = .top
         stack.spacing = 1.su
         stack.isLayoutMarginsRelativeArrangement = true
-        stack.layoutMargins = UIEdgeInsets(top: 16, left: 12, bottom: 16, right: 12)
-
+        stack.layoutMargins = UIEdgeInsets(top: 12, left: 8, bottom: 12, right: 8)
         return stack
     }()
     

@@ -27,14 +27,16 @@ class ReferenceCard: UIView, AnyView {
     private let verticalStack: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
-        view.alignment = .top
+        view.alignment = .fill
         view.spacing = 2.su
         return view
     }()
 
     var reference: LunaText = {
         let label = LunaText()
-        let model = LunaTextViewModel(size: 17, color: .black, weight: .regular)
+        let model = LunaTextViewModel(size: 17,
+                                      color: Asset.gray400.color,
+                                      weight: .regular)
         label.text = "Mesen TB, Young SL. Progesterone and the luteal phase: a requisite to reproduction. Obstet Gynecol Clin North Am. 2015 Mar;42(1):135-51. PMID: 25681845; PMCID: PMC4436586."
         label.numberOfLines = 0
         label.textAlignment = .left
@@ -64,7 +66,8 @@ class ReferenceCard: UIView, AnyView {
     func addConstraints() {
         
         verticalStack.snp.makeConstraints{
-            $0.trailing.leading.equalToSuperview()
+            $0.trailing.leading.equalToSuperview().inset(3.su)
+            $0.top.bottom.equalToSuperview()
         }
     }
 
