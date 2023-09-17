@@ -13,7 +13,6 @@ class ReferencesSheetView: UIView, AnyView {
     private let firstReference: ReferenceCard = {
         let card = ReferenceCard()
         let viewModel = ReferenceTextViewModel(
-            number: "1.",
             reference: L10n.Constants.Content.Label.Home.Text.References.first,
             link: L10n.Constants.Content.Label.Home.Link.References.first)
         card.draw(viewModel)
@@ -23,7 +22,6 @@ class ReferencesSheetView: UIView, AnyView {
     private let secondReference: ReferenceCard = {
         let card = ReferenceCard()
         let viewModel = ReferenceTextViewModel(
-            number: "2.",
             reference: L10n.Constants.Content.Label.Home.Text.References.second,
             link: L10n.Constants.Content.Label.Home.Link.References.second)
         card.draw(viewModel)
@@ -33,7 +31,6 @@ class ReferencesSheetView: UIView, AnyView {
     private let thirdReference: ReferenceCard = {
         let card = ReferenceCard()
         let viewModel = ReferenceTextViewModel(
-            number: "3.",
             reference: L10n.Constants.Content.Label.Home.Text.References.third,
             link: L10n.Constants.Content.Label.Home.Link.References.third)
         card.draw(viewModel)
@@ -43,7 +40,6 @@ class ReferencesSheetView: UIView, AnyView {
     private let fourthReference: ReferenceCard = {
         let card = ReferenceCard()
         let viewModel = ReferenceTextViewModel(
-            number: "4.",
             reference: L10n.Constants.Content.Label.Home.Text.References.fourth,
             link: L10n.Constants.Content.Label.Home.Link.References.fourth)
         card.draw(viewModel)
@@ -53,7 +49,6 @@ class ReferencesSheetView: UIView, AnyView {
     private let fifthReference: ReferenceCard = {
         let card = ReferenceCard()
         let viewModel = ReferenceTextViewModel(
-            number: "5.",
             reference: L10n.Constants.Content.Label.Home.Text.References.fifth,
             link: L10n.Constants.Content.Label.Home.Link.References.fifth)
         card.draw(viewModel)
@@ -65,6 +60,8 @@ class ReferencesSheetView: UIView, AnyView {
         view.axis = .vertical
         view.alignment = .fill
         view.spacing = 4.su
+        view.isLayoutMarginsRelativeArrangement = true
+        view.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 3.su, right: 0)
         return view
     }()
     
@@ -104,7 +101,7 @@ class ReferencesSheetView: UIView, AnyView {
         }
         
         stack.snp.makeConstraints {
-            $0.top.equalTo(scrollView).offset(3.su)
+            $0.top.equalTo(scrollView).offset(2.su)
             $0.bottom.equalToSuperview()
             $0.leading.width.equalTo(scrollView)
         }
@@ -115,6 +112,7 @@ class ReferencesSheetView: UIView, AnyView {
         layer.shadowOffset = CGSize(width: 0, height: -4)
         layer.shadowOpacity = 1
         layer.shadowColor = Asset.gray200.color.cgColor
+
         
     }
 

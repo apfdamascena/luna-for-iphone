@@ -9,7 +9,6 @@ import UIKit
 import SnapKit
 
 struct ReferenceTextViewModel {
-    let number: String
     let reference: String
     let link: String
 }
