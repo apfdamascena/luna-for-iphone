@@ -10,7 +10,7 @@ import SnapKit
 
 class ReferencesSheetView: UIView, AnyView {
     
-    private let firstReference: ReferenceCard = {
+    private(set) var firstReference: ReferenceCard = {
         let card = ReferenceCard()
         let viewModel = ReferenceTextViewModel(
             reference: L10n.Constants.Content.Label.Home.Text.References.first,
@@ -19,7 +19,7 @@ class ReferencesSheetView: UIView, AnyView {
         return card
     }()
     
-    private let secondReference: ReferenceCard = {
+    private(set) var secondReference: ReferenceCard = {
         let card = ReferenceCard()
         let viewModel = ReferenceTextViewModel(
             reference: L10n.Constants.Content.Label.Home.Text.References.second,
@@ -28,7 +28,7 @@ class ReferencesSheetView: UIView, AnyView {
         return card
     }()
     
-    private let thirdReference: ReferenceCard = {
+    private(set) var thirdReference: ReferenceCard = {
         let card = ReferenceCard()
         let viewModel = ReferenceTextViewModel(
             reference: L10n.Constants.Content.Label.Home.Text.References.third,
@@ -37,7 +37,7 @@ class ReferencesSheetView: UIView, AnyView {
         return card
     }()
     
-    private let fourthReference: ReferenceCard = {
+    private(set) var fourthReference: ReferenceCard = {
         let card = ReferenceCard()
         let viewModel = ReferenceTextViewModel(
             reference: L10n.Constants.Content.Label.Home.Text.References.fourth,
@@ -46,7 +46,7 @@ class ReferencesSheetView: UIView, AnyView {
         return card
     }()
     
-    private let fifthReference: ReferenceCard = {
+    private(set) var fifthReference: ReferenceCard = {
         let card = ReferenceCard()
         let viewModel = ReferenceTextViewModel(
             reference: L10n.Constants.Content.Label.Home.Text.References.fifth,
@@ -112,8 +112,13 @@ class ReferencesSheetView: UIView, AnyView {
         layer.shadowOffset = CGSize(width: 0, height: -4)
         layer.shadowOpacity = 1
         layer.shadowColor = Asset.gray200.color.cgColor
-
         
+//        let tapGesture = UITapGestureRecognizer()
+//        firstReference.addGestureRecognizer(tapGesture)
+//        secondReference.addGestureRecognizer(tapGesture)
+//        thirdReference.addGestureRecognizer(tapGesture)
+//        fourthReference.addGestureRecognizer(tapGesture)
+//        fifthReference.addGestureRecognizer(tapGesture)
     }
 
 }
