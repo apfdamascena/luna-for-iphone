@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import WebKit
 
 enum ReferenceElementCard {
     case first, second, third, fourth, fifth
@@ -42,11 +43,20 @@ enum ReferenceElementCard {
     }
 }
 
-class ReferencesViewController: UIViewController {
+class ReferencesViewController: UIViewController,
+                                AnyView,
+                                WKNavigationDelegate {
     
     private let referencesView = ReferencesSheetView()
     
     private var disposeBag = DisposeBag()
+    
+    private lazy var webView: WKWebView = {
+        let web = WKWebView()
+        web.allowsBackForwardNavigationGestures = true
+        web.navigationDelegate = self
+        return web
+    }()
     
     override func loadView() {
         super.loadView()
@@ -80,7 +90,9 @@ class ReferencesViewController: UIViewController {
         )
         .map{ $0.link }
         .subscribe(onNext: { link in
-            print("index: \(link)")
+            guard let url = URL(string: link) else { return }
+            let test = WebRouter.createModule(for: url)
+            self.present(test, animated: true)
         })
         .disposed(by: disposeBag)
     }
