@@ -10,7 +10,13 @@ import Foundation
 
 class ActivityFilterMonth: ActivityFilter {
     
-    func filter(_ data: [String]) -> [String] {
-        return ["lekinho", "lekinho", "lekinho", "lekinho", "lekinho", "lekinho", "lekinho"]
+    func filter(_ data: [ActivityCellViewModel]) -> [ActivityCellViewModel] {
+        return [
+            ActivityCellViewModel(title: "Aniversário de Alana",
+                                              hourStart: "10:00",
+                                              hourEnd: "12:00",
+                                              day: Date(),
+                                              phase: .fertile)
+        ]
     }
 }

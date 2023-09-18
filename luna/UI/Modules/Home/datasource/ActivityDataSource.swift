@@ -9,7 +9,7 @@ import RxSwift
 
 protocol ActivityDataSource {
     
-    var activities: BehaviorSubject<[String]> { get }
-    var activitiesForSegmentedControl: BehaviorSubject<[String]> { get }
+    var activities: BehaviorSubject<[ActivityCellViewModel]> { get }
+    var activitiesForSegmentedControl: BehaviorSubject<[ActivityCellViewModel]> { get }
 
 }
