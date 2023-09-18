@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class HomeRouter: PresenterToRouterHomeProtocol {
-
     
     func pushReferencesSheet(on view: PresenterToViewHomeProtocol) {
         guard let homeVC = view as? HomeViewController else { return }

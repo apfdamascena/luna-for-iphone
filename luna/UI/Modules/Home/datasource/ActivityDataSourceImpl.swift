@@ -10,6 +10,6 @@ import RxSwift
 
 class ActivityDataSourceImpl: ActivityDataSource {
     
-    var activities: BehaviorSubject<[String]> = BehaviorSubject(value: ["testando", "testando", "testando", "testando", "testando"])
-    var activitiesForSegmentedControl: BehaviorSubject<[String]> = BehaviorSubject(value: [])
+    var activities: BehaviorSubject<[ActivityEvent]> = BehaviorSubject(value: [])
+    var activitiesForSegmentedControl: BehaviorSubject<[ActivityEvent]> = BehaviorSubject(value: [])
 }

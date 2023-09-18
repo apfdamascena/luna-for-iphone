@@ -21,4 +21,15 @@ class ActivitiesCalendarManager {
     func createEvent(_ activitieEvent: ActivityEvent){
         lunaEventService?.createActivitie(activitieEvent)
     }
+    
+    func getMonthEventsStartingToday() -> [ActivityEvent] {
+        guard let eventService = self.lunaEventService else { return [] }
+        let endOfMonth = Date().endOfMonth()
+        let events = eventService.getEventsByDate(firstDate: Date(), finalDate: endOfMonth)
+        let eventsToReturn = events.map { event in
+            return ActivityEvent(title: event.title, startDate: event.startDate, endDate: event.endDate)
+        }
+        return eventsToReturn
+    }
+    
 }

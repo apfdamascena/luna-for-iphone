@@ -75,10 +75,8 @@ class HomePresenter: ViewToPresenterHomeProtocol {
     
     func findBestPhase(activity: ActivityMetrics) {
         let idealPhase = interactor?.findBestPhaseFor(activity: activity)
-
     }
 
-    
     func moveTo(_ centerCell: CalendarCollectionViewCell?) {
         guard let centerCell = centerCell else { return }
         view?.updateView(centerCell)
@@ -95,6 +93,11 @@ class HomePresenter: ViewToPresenterHomeProtocol {
     func userTappedCardPhase(at index: Int) {
         guard let newCardPhaseIndex = interactor?.nextIndexForCardPhase(at: index) else { return }
         view?.changeCurrentIndexCardPhase(at: newCardPhaseIndex)
+    }
+    
+    func loadActivitiesDataSource() {
+        let activityDataSource = interactor?.findActivityEventsOfCurrentMonth()
+        view?.loadActivity(dataSource: activityDataSource ?? [])
     }
     
 }

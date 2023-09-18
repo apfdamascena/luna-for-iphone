@@ -10,7 +10,7 @@ import Foundation
 
 class ActivityFilterMonth: ActivityFilter {
     
-    func filter(_ data: [String]) -> [String] {
-        return ["lekinho", "lekinho", "lekinho", "lekinho", "lekinho", "lekinho", "lekinho"]
+    func filter(_ data: [ActivityEvent]) -> [ActivityEvent] {
+        return data
     }
 }

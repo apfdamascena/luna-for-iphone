@@ -228,16 +228,16 @@ class HomeView: UIView, AnyView  {
         }
     }
     
-    func drawActivities(_ data: [String]){
+    func drawActivities(_ data: [ActivityEvent]){
         
         // vai mudar aqui
         
-        let activities = data.map { _ in
+        let activities = data.map { event in
             let cell = ActivityCell()
-            let model = ActivityCellViewModel(title: "Aniversário de Alana",
-                                              hourStart: "10:00",
-                                              hourEnd: "12:00",
-                                              day: Date(),
+            let model = ActivityCellViewModel(title: event.title,
+                                              hourStart: event.startDate.formatToString(),
+                                              hourEnd: event.endDate.formatToString(),
+                                              day: event.startDate,
                                               phase: .fertile)
             cell.draw(model)
             return cell

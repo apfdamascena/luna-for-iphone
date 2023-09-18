@@ -10,8 +10,8 @@ import Foundation
 
 class ActivityFilterWeek: ActivityFilter {
     
-    func filter(_ data: [String]) -> [String] {
-        
-        return ["lekinho", "lekinho"]
+    func filter(_ data: [ActivityEvent]) -> [ActivityEvent] {
+        // [CHANGE] MUDAR ESSE FILTRO
+        return data
     }
 }

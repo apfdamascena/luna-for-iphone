@@ -28,7 +28,7 @@ class BestActivityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // pode botar aq?
-        var nav = self.navigationController?.navigationBar
+        let nav = self.navigationController?.navigationBar
         nav?.tintColor = Asset.red600.color
     }
 

@@ -68,6 +68,7 @@ class HomeViewController: UIViewController {
         
         DispatchQueue.main.async {
             self.presenter?.loadCalendarToCollection()
+            self.presenter?.loadActivitiesDataSource()
         }
     }
     
@@ -185,7 +186,6 @@ class HomeViewController: UIViewController {
     }
     
     func addSegmentedControlPeriodEventObservable(){
-        
         homeView.activitiesView
             .segmentedControl.rx
             .selectedSegmentIndex.asObservable()
@@ -200,8 +200,7 @@ class HomeViewController: UIViewController {
             .disposed(by: disposeBag)
     }
     
-    func addTableViewDataSourceEventObservable(){
-        
+    func addTableViewDataSourceEventObservable() {
         activitiesDataSource.activitiesForSegmentedControl
             .asObservable()
             .subscribe(onNext: { data in
@@ -230,6 +229,10 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     func load(collectionDataSource: [CyclePhaseViewModel]) {
         datasource.data.onNext(collectionDataSource)
         self.datasource.cyclePhase.onNext(collectionDataSource[HomeCollection.COLLECTION_RANGE/2].phase)
+    }
+    
+    func loadActivity(dataSource: [ActivityEvent]) {
+        activitiesDataSource.activities.onNext(dataSource)
     }
     
     func moveCalendarCollection(toXAxis: CGFloat) {
