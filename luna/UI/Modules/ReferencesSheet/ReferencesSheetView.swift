@@ -14,7 +14,7 @@ class ReferencesSheetView: UIView, AnyView {
         let card = ReferenceCard()
         let viewModel = ReferenceTextViewModel(
             reference: L10n.Constants.Content.Label.Home.Text.References.first,
-            title: "Progesterone and the luteal phase: a requisite to reproduction.")
+            title: L10n.Constants.Content.Label.Home.Text.References.First.title)
         
         
         card.draw(viewModel)
@@ -25,7 +25,7 @@ class ReferencesSheetView: UIView, AnyView {
         let card = ReferenceCard()
         let viewModel = ReferenceTextViewModel(
             reference: L10n.Constants.Content.Label.Home.Text.References.second,
-            title: "Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular.")
+            title: L10n.Constants.Content.Label.Home.Text.References.Second.title)
         card.draw(viewModel)
         return card
     }()
@@ -34,7 +34,7 @@ class ReferencesSheetView: UIView, AnyView {
         let card = ReferenceCard()
         let viewModel = ReferenceTextViewModel(
             reference: L10n.Constants.Content.Label.Home.Text.References.third,
-            title: "Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular.")
+            title: L10n.Constants.Content.Label.Home.Text.References.Third.title)
         card.draw(viewModel)
         return card
     }()
@@ -43,7 +43,7 @@ class ReferencesSheetView: UIView, AnyView {
         let card = ReferenceCard()
         let viewModel = ReferenceTextViewModel(
             reference: L10n.Constants.Content.Label.Home.Text.References.fourth,
-            title: "Neuropsychological performance and menstrual cycle: a literature review.")
+            title: L10n.Constants.Content.Label.Home.Text.References.Fourth.title)
         card.draw(viewModel)
         return card
     }()
@@ -52,7 +52,7 @@ class ReferencesSheetView: UIView, AnyView {
         let card = ReferenceCard()
         let viewModel = ReferenceTextViewModel(
             reference: L10n.Constants.Content.Label.Home.Text.References.fifth,
-            title: "Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app.")
+            title: L10n.Constants.Content.Label.Home.Text.References.Fifth.title)
         card.draw(viewModel)
         return card
     }()

@@ -242,6 +242,26 @@ internal enum L10n {
               internal static let second = L10n.tr("Constants", "constants.content.label.home.text.references.second", fallback: "Jukic AM, Weinberg CR, Baird DD, Wilcox AJ. Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular. J Womens Health (Larchmt). 2007 Nov;16(9):1340-7. PMID: 18001191; PMCID: PMC2834565.")
               /// Jukic AM, Weinberg CR, Baird DD, Wilcox AJ. Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular. J Womens Health (Larchmt). 2007 Nov;16(9):1340-7. PMID: 18001191; PMCID: PMC2834565.
               internal static let third = L10n.tr("Constants", "constants.content.label.home.text.references.third", fallback: "Jukic AM, Weinberg CR, Baird DD, Wilcox AJ. Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular. J Womens Health (Larchmt). 2007 Nov;16(9):1340-7. PMID: 18001191; PMCID: PMC2834565.")
+              internal enum Fifth {
+                /// Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app.
+                internal static let title = L10n.tr("Constants", "constants.content.label.home.text.references.fifth.title", fallback: "Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app.")
+              }
+              internal enum First {
+                /// Progesterone and the luteal phase: a requisite to reproduction.
+                internal static let title = L10n.tr("Constants", "constants.content.label.home.text.references.first.title", fallback: "Progesterone and the luteal phase: a requisite to reproduction.")
+              }
+              internal enum Fourth {
+                /// Neuropsychological performance and menstrual cycle: a literature review.
+                internal static let title = L10n.tr("Constants", "constants.content.label.home.text.references.fourth.title", fallback: "Neuropsychological performance and menstrual cycle: a literature review.")
+              }
+              internal enum Second {
+                /// Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular.
+                internal static let title = L10n.tr("Constants", "constants.content.label.home.text.references.second.title", fallback: "Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular.")
+              }
+              internal enum Third {
+                /// Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular.
+                internal static let title = L10n.tr("Constants", "constants.content.label.home.text.references.third.title", fallback: "Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular.")
+              }
             }
           }
         }

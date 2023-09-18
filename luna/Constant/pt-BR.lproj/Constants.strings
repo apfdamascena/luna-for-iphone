@@ -111,13 +111,24 @@
 
 "constants.content.label.home.text.references.first" = "Mesen TB, Young SL. Progesterone and the luteal phase: a requisite to reproduction. Obstet Gynecol Clin North Am. 2015 Mar;42(1):135-51. PMID: 25681845; PMCID: PMC4436586.";
 
+"constants.content.label.home.text.references.first.title" = "Progesterone and the luteal phase: a requisite to reproduction.";
+
 "constants.content.label.home.text.references.second" = "Jukic AM, Weinberg CR, Baird DD, Wilcox AJ. Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular. J Womens Health (Larchmt). 2007 Nov;16(9):1340-7. PMID: 18001191; PMCID: PMC2834565.";
+
+"constants.content.label.home.text.references.second.title" = "Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular.";
 
 "constants.content.label.home.text.references.third" = "Jukic AM, Weinberg CR, Baird DD, Wilcox AJ. Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular. J Womens Health (Larchmt). 2007 Nov;16(9):1340-7. PMID: 18001191; PMCID: PMC2834565.";
 
+"constants.content.label.home.text.references.third.title" = "Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular.";
+
 "constants.content.label.home.text.references.fourth" = "Souza EG, Ramos MG, Hara C, Stumpf BP, Rocha FL. Neuropsychological performance and menstrual cycle: a literature review. Trends Psychiatry Psychother. 2012;34(1):5-12.";
 
+
+"constants.content.label.home.text.references.fourth.title" = "Neuropsychological performance and menstrual cycle: a literature review.";
+
 "constants.content.label.home.text.references.fifth" = "Ponzo S, Wickham A, Bamford R, Radovic T, Zhaunova L, Peven K, Klepchukova A, Payne JL. Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app. Digit Health. 2022 Dec 15;8:20552076221145852. PMID: 36544535; PMCID: PMC9761221.";
+
+"constants.content.label.home.text.references.fifth.title" = "Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app.";
 
 "constants.content.label.home.link.references.first" = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4436586/";
 
