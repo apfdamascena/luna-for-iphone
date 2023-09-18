@@ -18,8 +18,8 @@ class NewActivityViewController: UIViewController {
     
     private var disposeBag = DisposeBag()
 
-    init() {
-        super.init(nibName: nil, bundle: nil)
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil , bundle: nibBundleOrNil)
     }
     
     required init?(coder: NSCoder) {

@@ -1,14 +1,14 @@
 //
-//  CalendarView.swift
+//  NotificationRequestView.swift
 //  luna
 //
-//  Created by Cynara Costa on 21/07/23.
+//  Created by alexdamascena on 15/09/23.
 //
 
 import UIKit
 import SnapKit
 
-class CalendarView: UIView, AnyView  {
+class NotificationRequestView: UIView, AnyView  {
     
     private let stack: UIStackView = {
         let view = UIStackView()
@@ -19,7 +19,7 @@ class CalendarView: UIView, AnyView  {
     }()
     
     private let image: UIImageView = {
-        let view = UIImageView(image: Asset.calendarImage.image)
+        let view = UIImageView(image: Asset.notificationRequestImage.image)
         view.contentMode = .scaleAspectFill
         return view
     }()
@@ -30,7 +30,7 @@ class CalendarView: UIView, AnyView  {
                                       color: .black,
                                       weight: .medium)
         
-        label.text = L10n.Constants.Content.Label.calendarTitle
+        label.text = L10n.Constants.Content.Label.notificationTitle
         label.numberOfLines = 0
         label.textAlignment = .left
         label.draw(model)
@@ -49,7 +49,7 @@ class CalendarView: UIView, AnyView  {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = (0.7).su
         let attributes: [NSAttributedString.Key: Any] = [.font: label.font, .paragraphStyle: paragraphStyle]
-        label.attributedText = NSAttributedString(string: L10n.Constants.Content.Label.calendarSubtitle, attributes: attributes)
+        label.attributedText = NSAttributedString(string: L10n.Constants.Content.Label.notificationSubtitle, attributes: attributes)
         
         label.draw(model)
         return label
@@ -96,9 +96,9 @@ class CalendarView: UIView, AnyView  {
 import SwiftUI
 
 @available(iOS 13, *)
-struct CalendarView_Preview: PreviewProvider {
+struct NotificationRequestView_Preview: PreviewProvider {
     static var previews: some View {
-        CalendarView().showPreview()
+        NotificationRequestView().showPreview()
     }
 }
 

@@ -64,6 +64,10 @@ internal enum L10n {
         /// Quantos dias dura a
         /// sua menstruação?
         internal static let menstruationDuration = L10n.tr("Constants", "constants.content.label.menstruation_duration", fallback: "Quantos dias dura a\nsua menstruação?")
+        /// Autorize as notificações de Luna para acompanhar de perto seu ciclo menstrual
+        internal static let notificationSubtitle = L10n.tr("Constants", "constants.content.label.notification_subtitle", fallback: "Autorize as notificações de Luna para acompanhar de perto seu ciclo menstrual")
+        /// Em tempo real com seu ciclo
+        internal static let notificationTitle = L10n.tr("Constants", "constants.content.label.notification_title", fallback: "Em tempo real com seu ciclo")
         /// Fase Folicular
         internal static let onboardingFolicule = L10n.tr("Constants", "constants.content.label.onboarding_folicule", fallback: "Fase Folicular")
         /// As estrelas vermelhas representam os dias da sua fase folicular.
@@ -228,16 +232,36 @@ internal enum L10n {
           }
           internal enum Text {
             internal enum References {
-              /// Souza EG, Ramos MG, Hara C, Stumpf BP, Rocha FL. Neuropsychological performance and menstrual cycle: a literature review. Trends Psychiatry Psychother. 2012;34(1):5-12.
-              internal static let fifth = L10n.tr("Constants", "constants.content.label.home.text.references.fifth", fallback: "Souza EG, Ramos MG, Hara C, Stumpf BP, Rocha FL. Neuropsychological performance and menstrual cycle: a literature review. Trends Psychiatry Psychother. 2012;34(1):5-12.")
+              /// Ponzo S, Wickham A, Bamford R, Radovic T, Zhaunova L, Peven K, Klepchukova A, Payne JL. Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app. Digit Health. 2022 Dec 15;8:20552076221145852. PMID: 36544535; PMCID: PMC9761221.
+              internal static let fifth = L10n.tr("Constants", "constants.content.label.home.text.references.fifth", fallback: "Ponzo S, Wickham A, Bamford R, Radovic T, Zhaunova L, Peven K, Klepchukova A, Payne JL. Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app. Digit Health. 2022 Dec 15;8:20552076221145852. PMID: 36544535; PMCID: PMC9761221.")
               /// Mesen TB, Young SL. Progesterone and the luteal phase: a requisite to reproduction. Obstet Gynecol Clin North Am. 2015 Mar;42(1):135-51. PMID: 25681845; PMCID: PMC4436586.
               internal static let first = L10n.tr("Constants", "constants.content.label.home.text.references.first", fallback: "Mesen TB, Young SL. Progesterone and the luteal phase: a requisite to reproduction. Obstet Gynecol Clin North Am. 2015 Mar;42(1):135-51. PMID: 25681845; PMCID: PMC4436586.")
-              /// Ponzo S, Wickham A, Bamford R, Radovic T, Zhaunova L, Peven K, Klepchukova A, Payne JL. Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app. Digit Health. 2022 Dec 15;8:20552076221145852. PMID: 36544535; PMCID: PMC9761221.
-              internal static let fourth = L10n.tr("Constants", "constants.content.label.home.text.references.fourth", fallback: "Ponzo S, Wickham A, Bamford R, Radovic T, Zhaunova L, Peven K, Klepchukova A, Payne JL. Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app. Digit Health. 2022 Dec 15;8:20552076221145852. PMID: 36544535; PMCID: PMC9761221.")
+              /// Souza EG, Ramos MG, Hara C, Stumpf BP, Rocha FL. Neuropsychological performance and menstrual cycle: a literature review. Trends Psychiatry Psychother. 2012;34(1):5-12.
+              internal static let fourth = L10n.tr("Constants", "constants.content.label.home.text.references.fourth", fallback: "Souza EG, Ramos MG, Hara C, Stumpf BP, Rocha FL. Neuropsychological performance and menstrual cycle: a literature review. Trends Psychiatry Psychother. 2012;34(1):5-12.")
               /// Jukic AM, Weinberg CR, Baird DD, Wilcox AJ. Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular. J Womens Health (Larchmt). 2007 Nov;16(9):1340-7. PMID: 18001191; PMCID: PMC2834565.
               internal static let second = L10n.tr("Constants", "constants.content.label.home.text.references.second", fallback: "Jukic AM, Weinberg CR, Baird DD, Wilcox AJ. Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular. J Womens Health (Larchmt). 2007 Nov;16(9):1340-7. PMID: 18001191; PMCID: PMC2834565.")
-              /// Lima MP, Moreira MA, Maynard DC, Cruz MFA (2021) Alterações fisiológicas e comportamentais da mulher no ciclo menstrual e o impacto da suplementação nutricional / Physiological and behavioral changes in women during the menstrual cycle and the impact of nutritional supplementation. Published: 16/12/2021]. Revista de Saúde e Nutrição 28(1): e021001.
-              internal static let third = L10n.tr("Constants", "constants.content.label.home.text.references.third", fallback: "Lima MP, Moreira MA, Maynard DC, Cruz MFA (2021) Alterações fisiológicas e comportamentais da mulher no ciclo menstrual e o impacto da suplementação nutricional / Physiological and behavioral changes in women during the menstrual cycle and the impact of nutritional supplementation. Published: 16/12/2021]. Revista de Saúde e Nutrição 28(1): e021001.")
+              /// Jukic AM, Weinberg CR, Baird DD, Wilcox AJ. Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular. J Womens Health (Larchmt). 2007 Nov;16(9):1340-7. PMID: 18001191; PMCID: PMC2834565.
+              internal static let third = L10n.tr("Constants", "constants.content.label.home.text.references.third", fallback: "Jukic AM, Weinberg CR, Baird DD, Wilcox AJ. Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular. J Womens Health (Larchmt). 2007 Nov;16(9):1340-7. PMID: 18001191; PMCID: PMC2834565.")
+              internal enum Fifth {
+                /// Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app.
+                internal static let title = L10n.tr("Constants", "constants.content.label.home.text.references.fifth.title", fallback: "Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app.")
+              }
+              internal enum First {
+                /// Progesterone and the luteal phase: a requisite to reproduction.
+                internal static let title = L10n.tr("Constants", "constants.content.label.home.text.references.first.title", fallback: "Progesterone and the luteal phase: a requisite to reproduction.")
+              }
+              internal enum Fourth {
+                /// Neuropsychological performance and menstrual cycle: a literature review.
+                internal static let title = L10n.tr("Constants", "constants.content.label.home.text.references.fourth.title", fallback: "Neuropsychological performance and menstrual cycle: a literature review.")
+              }
+              internal enum Second {
+                /// Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular.
+                internal static let title = L10n.tr("Constants", "constants.content.label.home.text.references.second.title", fallback: "Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular.")
+              }
+              internal enum Third {
+                /// Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular.
+                internal static let title = L10n.tr("Constants", "constants.content.label.home.text.references.third.title", fallback: "Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular.")
+              }
             }
           }
         }

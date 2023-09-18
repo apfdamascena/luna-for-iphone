@@ -78,7 +78,7 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
         }
         return true
     }
-    
+
     func insertActivityToCalendar(title: String, initialDate: Date, finalDate: Date) {
         let activityEvent = ActivityEvent(title: title, startDate: initialDate, endDate: finalDate)
         activitiesCalendarManager.createEvent(activityEvent)

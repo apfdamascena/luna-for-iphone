@@ -18,9 +18,8 @@ class FirstTimeNewActivityViewController: UIViewController {
     
     private var disposeBag = DisposeBag()
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
-        self.title = nil
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil , bundle: nibBundleOrNil)
     }
     
     required init?(coder: NSCoder) {
@@ -35,8 +34,9 @@ class FirstTimeNewActivityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         firstTimeLetsGoButtonTouchTrigger()
+        navigationItem.title = nil
     }
-    
+        
     func firstTimeLetsGoButtonTouchTrigger() {
         firstTimeNewActivityView.button
             .rx

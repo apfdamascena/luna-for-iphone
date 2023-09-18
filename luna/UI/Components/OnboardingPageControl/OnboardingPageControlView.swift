@@ -8,6 +8,7 @@
 import UIKit
 
 extension UIWindow {
+    
     static var current: UIWindow? {
         for scene in UIApplication.shared.connectedScenes {
             guard let windowScene = scene as? UIWindowScene else { continue }
@@ -31,6 +32,7 @@ class OnboardingPageControlView: UIView, AnyView {
     var currentPage: Int = 0
     
     var dots: [UIImageView] = [
+        UIImageView(),
         UIImageView(),
         UIImageView(),
         UIImageView(),
@@ -111,6 +113,8 @@ class OnboardingPageControlView: UIView, AnyView {
             return Asset.dot3.image
         case 3:
             return Asset.dot4.image
+        case 4:
+            return Asset.dot5.image
         default:
             return Asset.dotNone.image
             

@@ -21,7 +21,7 @@ class LunaTabBarViewController: UITabBarController {
          ["info.circle", "info.circle.fill"],
      ]
     
-    private let titles = [
+    private let titles: [String?]  = [
         "Ciclo",
         "Atividades",
         "Fontes"

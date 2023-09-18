@@ -52,6 +52,9 @@
 "constants.content.label.sheet.title" = "References";
 "constants.content.label.sheet.link" = "Available here!";
 
+"constants.content.label.notification_title" = "Real-time with your cycle";
+"constants.content.label.notification_subtitle" = "Authorize Luna's notifications to closely track your menstrual cycle.";
+
 "constants.content.label.folicular"= "⚡️ Follicular Phase";
 "constants.content.label.menstruation"= "🩸 Menstruation";
 "constants.content.label.luteal"= "⬛️ Luteal Phase";
@@ -113,6 +116,16 @@
 "constants.content.label.home.text.references.fourth" = "Ponzo S, Wickham A, Bamford R, Radovic T, Zhaunova L, Peven K, Klepchukova A, Payne JL. Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app. Digit Health. 2022 Dec 15;8:20552076221145852. PMID: 36544535; PMCID: PMC9761221.";
 
 "constants.content.label.home.text.references.fifth" = "Souza EG, Ramos MG, Hara C, Stumpf BP, Rocha FL. Neuropsychological performance and menstrual cycle: a literature review. Trends Psychiatry Psychother. 2012;34(1):5-12.";
+
+"constants.content.label.home.text.references.first.title" = "Progesterone and the luteal phase: a requisite to reproduction.";
+
+"constants.content.label.home.text.references.second.title" = "Lifestyle and reproductive factors associated with the length of the follicular phase.";
+
+"constants.content.label.home.text.references.third.title" = "Lifestyle and reproductive factors associated with the length of the follicular phase.";
+
+"constants.content.label.home.text.references.fourth.title" = "Neuropsychological performance and menstrual cycle: a literature review.";
+
+"constants.content.label.home.text.references.fifth.title" = "Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app.";
 
 
 "constants.content.label.home.link.references.first" = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4436586/";

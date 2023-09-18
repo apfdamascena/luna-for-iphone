@@ -9,66 +9,50 @@ import UIKit
 import SnapKit
 
 class ReferencesSheetView: UIView, AnyView {
-
-    private let referencesTitle: LunaText = {
-        let label = LunaText()
-        let model = LunaTextViewModel(size: 20,
-                                      color: .black,
-                                      weight: .medium)
-        
-        label.text = L10n.Constants.Content.Label.Sheet.title
-        label.numberOfLines = 0
-        label.textAlignment = .left
-        label.draw(model)
-        return label
-    }()
     
-    private let firstReference: ReferenceCard = {
+    private(set) var firstReference: ReferenceCard = {
         let card = ReferenceCard()
         let viewModel = ReferenceTextViewModel(
-            number: "1.",
             reference: L10n.Constants.Content.Label.Home.Text.References.first,
-            link: L10n.Constants.Content.Label.Home.Link.References.first)
+            title: L10n.Constants.Content.Label.Home.Text.References.First.title)
+        
+        
         card.draw(viewModel)
         return card
     }()
     
-    private let secondReference: ReferenceCard = {
+    private(set) var secondReference: ReferenceCard = {
         let card = ReferenceCard()
         let viewModel = ReferenceTextViewModel(
-            number: "2.",
             reference: L10n.Constants.Content.Label.Home.Text.References.second,
-            link: L10n.Constants.Content.Label.Home.Link.References.second)
+            title: L10n.Constants.Content.Label.Home.Text.References.Second.title)
         card.draw(viewModel)
         return card
     }()
     
-    private let thirdReference: ReferenceCard = {
+    private(set) var thirdReference: ReferenceCard = {
         let card = ReferenceCard()
         let viewModel = ReferenceTextViewModel(
-            number: "3.",
             reference: L10n.Constants.Content.Label.Home.Text.References.third,
-            link: L10n.Constants.Content.Label.Home.Link.References.third)
+            title: L10n.Constants.Content.Label.Home.Text.References.Third.title)
         card.draw(viewModel)
         return card
     }()
     
-    private let fourthReference: ReferenceCard = {
+    private(set) var fourthReference: ReferenceCard = {
         let card = ReferenceCard()
         let viewModel = ReferenceTextViewModel(
-            number: "4.",
             reference: L10n.Constants.Content.Label.Home.Text.References.fourth,
-            link: L10n.Constants.Content.Label.Home.Link.References.fourth)
+            title: L10n.Constants.Content.Label.Home.Text.References.Fourth.title)
         card.draw(viewModel)
         return card
     }()
     
-    private let fifthReference: ReferenceCard = {
+    private(set) var fifthReference: ReferenceCard = {
         let card = ReferenceCard()
         let viewModel = ReferenceTextViewModel(
-            number: "5.",
             reference: L10n.Constants.Content.Label.Home.Text.References.fifth,
-            link: L10n.Constants.Content.Label.Home.Link.References.fifth)
+            title: L10n.Constants.Content.Label.Home.Text.References.Fifth.title)
         card.draw(viewModel)
         return card
     }()
@@ -76,7 +60,10 @@ class ReferencesSheetView: UIView, AnyView {
     private let stack: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
-        view.spacing = 3.su
+        view.alignment = .fill
+        view.spacing = 4.su
+        view.isLayoutMarginsRelativeArrangement = true
+        view.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 3.su, right: 0)
         return view
     }()
     
@@ -87,7 +74,6 @@ class ReferencesSheetView: UIView, AnyView {
         return scrollView
     }()
     
-    private let resizeIndicator = UIView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -99,12 +85,9 @@ class ReferencesSheetView: UIView, AnyView {
     }
     
     func addSubviews() {
-        addSubview(resizeIndicator)
         addSubview(scrollView)
-        
         scrollView.addSubview(stack)
         
-        stack.addArrangedSubview(referencesTitle)
         stack.addArrangedSubview(firstReference)
         stack.addArrangedSubview(secondReference)
         stack.addArrangedSubview(thirdReference)
@@ -113,33 +96,24 @@ class ReferencesSheetView: UIView, AnyView {
     }
     
     func addConstraints() {
-        resizeIndicator.snp.makeConstraints {
-            $0.height.equalTo(5)
-            $0.width.equalTo(36)
-            $0.centerX.equalToSuperview()
-            $0.top.equalToSuperview().offset(6)
-        }
         
         scrollView.snp.makeConstraints {
-            $0.top.equalTo(resizeIndicator.snp.bottom).offset(1.su)
             $0.leading.trailing.equalToSuperview()
-            $0.bottom.equalTo(safeAreaLayoutGuide)
+            $0.bottom.top.equalTo(safeAreaLayoutGuide)
         }
-
+        
         stack.snp.makeConstraints {
-            $0.top.bottom.equalTo(scrollView)
-            $0.leading.width.equalTo(scrollView).inset(2.su)
+            $0.top.equalTo(scrollView).offset(2.su)
+            $0.bottom.equalToSuperview()
+            $0.leading.width.equalTo(scrollView)
         }
     }
     
     func addAdditionalConfiguration() {
         backgroundColor = .white
-        resizeIndicator.backgroundColor = Asset.gray200.color
-        resizeIndicator.layer.cornerRadius = 2
         layer.shadowOffset = CGSize(width: 0, height: -4)
         layer.shadowOpacity = 1
         layer.shadowColor = Asset.gray200.color.cgColor
-        
     }
 
 }
