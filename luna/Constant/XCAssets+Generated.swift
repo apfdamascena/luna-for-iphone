@@ -101,6 +101,7 @@ internal enum Asset {
   internal static let gray950 = ColorAsset(name: "gray_950")
   internal static let imageNoData = ImageAsset(name: "image_no_data")
   internal static let landingPageBackgroundImage = ImageAsset(name: "landingPageBackgroundImage")
+  internal static let linkIcon = ImageAsset(name: "link_icon")
   internal static let logo = ImageAsset(name: "logo")
   internal static let lutealSelected = ImageAsset(name: "lutealSelected")
   internal static let lutealCell = ImageAsset(name: "luteal_cell")

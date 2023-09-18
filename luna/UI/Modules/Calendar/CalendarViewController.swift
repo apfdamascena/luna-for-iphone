@@ -26,7 +26,7 @@ class CalendarViewController: UIViewController {
 }
 
 extension CalendarViewController: PresenterToViewCalendarProtocol{
-    // TODO: Implement View Output Methods
+
 }
 
 
