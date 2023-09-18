@@ -6,15 +6,11 @@
 //
 
 import Foundation
-import UserNotifications
-
-
-
 
 class NotificationFilter: NotificationFilterCommand {
     
     private let commands: [NotificationFilterCommand] = [ NotificationFirstPhaseDay(), NotificationCurrentPhaseInformation()]
-                                                          
+    
     func execute(for cycleDays: [CyclePhaseViewModel]) -> NotificationFiltered {
         
         var schedules: NotificationFiltered  = []
@@ -26,6 +22,8 @@ class NotificationFilter: NotificationFilterCommand {
         
         return schedules
     }
-    
-    
 }
+
+
+
+
