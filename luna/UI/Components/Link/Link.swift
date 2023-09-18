@@ -54,10 +54,10 @@ class Link: UIView, AnyView {
         }
     }
 
-    func draw(_ link: String){
+    func draw(_ title: String){
         let font = UIFont.systemFont(ofSize: 17)
         linkTextView.font = font
-        linkTextView.text = "Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular."
+        linkTextView.text = title
         linkTextView.textColor = Asset.gray950.color
     }
     

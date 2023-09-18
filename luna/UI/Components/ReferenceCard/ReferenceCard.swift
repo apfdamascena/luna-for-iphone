@@ -10,7 +10,7 @@ import SnapKit
 
 struct ReferenceTextViewModel {
     let reference: String
-    let link: String
+    let title: String
 }
 
 class ReferenceCard: UIView, AnyView {
@@ -73,6 +73,6 @@ class ReferenceCard: UIView, AnyView {
     func draw(_ model: ReferenceTextViewModel){
 
         reference.text = model.reference
-        linkComponent.draw(model.link)
+        linkComponent.draw(model.title)
     }
 }
