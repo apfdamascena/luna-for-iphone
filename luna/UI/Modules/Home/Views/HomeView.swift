@@ -233,9 +233,9 @@ class HomeView: UIView, AnyView  {
     
     func drawActivities(_ data: [ActivityCellViewModel]){
         activitiesView.snp.removeConstraints()
-        
+
         let size =  (data.count+1) * 80 + 12 * (data.count-1) + 60
-        
+
         activitiesView.snp.makeConstraints {
             $0.height.equalTo(size)
             $0.leading.trailing.equalTo(self).inset(3.su)

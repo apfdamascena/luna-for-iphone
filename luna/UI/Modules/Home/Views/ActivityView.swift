@@ -53,7 +53,6 @@ class ActivitiesView: UIView, AnyView {
         
         let collection = UICollectionView(frame: .zero,
                                           collectionViewLayout: layout)
-        collection.backgroundColor = .blue
         
         collection.register(ActivityCell.self, forCellWithReuseIdentifier: ActivityCell.IDENTIFIER)
         

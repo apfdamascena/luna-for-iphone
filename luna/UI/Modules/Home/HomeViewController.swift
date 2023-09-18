@@ -205,11 +205,9 @@ class HomeViewController: UIViewController {
         
         activitiesDataSource.activitiesForSegmentedControl.bind(to: homeView.activities
             .rx.items(cellIdentifier: ActivityCell.IDENTIFIER,
-                      cellType: ActivityCell.self)){ _, day, cell in
-            cell.backgroundColor = .brown
-            
+                      cellType: ActivityCell.self)){ _, activity, cell in
+            cell.draw(activity)
         }.disposed(by: disposeBag)
-        
 
     }
     
