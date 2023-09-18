@@ -196,18 +196,21 @@ class HomeViewController: UIViewController {
                 let activitiesFilter = ActivityFilterFactory.create(activity)
                 let activitiesFiltered = activitiesFilter.filter(activities)
                 self.activitiesDataSource.activitiesForSegmentedControl.onNext(activitiesFiltered)
+                self.homeView.drawActivities(activities)
             })
             .disposed(by: disposeBag)
     }
     
     func addTableViewDataSourceEventObservable(){
         
-        activitiesDataSource.activitiesForSegmentedControl
-            .asObservable()
-            .subscribe(onNext: { data in
-                self.homeView.drawActivities(data)
-            })
-            .disposed(by: disposeBag)
+        activitiesDataSource.activitiesForSegmentedControl.bind(to: homeView.activities
+            .rx.items(cellIdentifier: ActivityCell.IDENTIFIER,
+                      cellType: ActivityCell.self)){ _, day, cell in
+            cell.backgroundColor = .brown
+            
+        }.disposed(by: disposeBag)
+        
+
     }
     
     func addNewActivityTrriggerEventObservable(){

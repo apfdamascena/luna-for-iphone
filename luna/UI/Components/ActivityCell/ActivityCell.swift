@@ -16,15 +16,16 @@ struct ActivityCellViewModel {
     let day: Date
     
     let phase: CyclePhase
-    
 }
 
 
-class ActivityCell: UIView,
+class ActivityCell: UICollectionViewCell,
                     AnyView,
                     DrawableView {
 
     typealias ViewModel = ActivityCellViewModel
+    
+    static let IDENTIFIER = "ActivityCell"
     
     private let descriptionStack: UIStackView = {
         let stack = UIStackView()
