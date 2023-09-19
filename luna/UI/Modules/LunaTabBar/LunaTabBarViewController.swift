@@ -12,7 +12,7 @@ class LunaTabBarViewController: UITabBarController {
     private let controllers = [
         HomeRouter.createModule(),
         FirstTimeNewActivityRouter.createModule(),
-        ActivityOnCalendarRouter.createModule(), 
+        ReferencesViewController(), 
     ]
     
     private let icons = [
