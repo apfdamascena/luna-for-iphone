@@ -26,6 +26,8 @@ class LunaButtonFactory {
             return LunaButtonNewEvent(button)
         case .letsGo:
             return LunaButtonLetsGo(button)
+        case .newActivity:
+            return LunaButtonProceed(button, style: lunaStyle)
         }
     }
 }

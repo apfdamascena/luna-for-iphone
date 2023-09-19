@@ -72,9 +72,11 @@ class ReferencesViewController: UIViewController,
     
     func addReferenceCardTriggerToWeb(){
         
-        let observables = [referencesView.firstReference, referencesView.secondReference,
-         referencesView.thirdReference, referencesView.fourthReference,
-         referencesView.fifthReference
+        let observables = [referencesView.firstReference,
+                           referencesView.secondReference,
+                           referencesView.thirdReference,
+                           referencesView.fourthReference,
+                           referencesView.fifthReference
         ].map{ view in
             let tapGesture = UITapGestureRecognizer()
             view.addGestureRecognizer(tapGesture)
@@ -91,8 +93,8 @@ class ReferencesViewController: UIViewController,
         .map{ $0.link }
         .subscribe(onNext: { link in
             guard let url = URL(string: link) else { return }
-            let test = WebRouter.createModule(for: url)
-            self.present(test, animated: true)
+            let web = WebRouter.createModule(for: url)
+            self.present(web, animated: true)
         })
         .disposed(by: disposeBag)
     }
