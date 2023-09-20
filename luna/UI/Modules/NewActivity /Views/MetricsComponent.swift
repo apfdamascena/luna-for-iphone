@@ -21,7 +21,7 @@ class MetricsComponent: UIStackView, AnyView {
         return label
     }()
     
-//    private(set) var stressCollectionView = NewActivityCollectionView()
+    private(set) var stressCollectionView = NewActivityCollectionView(with: "testando")
     
     private let divStress = Div()
     
@@ -60,7 +60,7 @@ class MetricsComponent: UIStackView, AnyView {
     
     func addSubviews() {
         addSubview(stressTitle)
-//        addSubview(stressCollectionView)
+        addSubview(stressCollectionView)
         addSubview(divStress)
         addSubview(sociabilityTitle)
         addSubview(divSociability)
@@ -74,10 +74,14 @@ class MetricsComponent: UIStackView, AnyView {
             $0.top.equalToSuperview().offset(12)
         }
         
-        
+        stressCollectionView.snp.makeConstraints {
+            $0.top.equalTo(stressTitle.snp.bottom).offset(12)
+            $0.leading.trailing.equalToSuperview().inset(2.su)
+            $0.height.equalTo(6.su)
+        }
         
         divStress.snp.makeConstraints {
-            $0.top.equalTo(stressTitle.snp.bottom).offset(80)
+            $0.top.equalTo(stressCollectionView.snp.bottom).offset(20)
             $0.leading.trailing.equalToSuperview().inset(2.su)
             $0.height.equalTo(1)
         }
