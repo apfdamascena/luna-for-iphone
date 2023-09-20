@@ -14,7 +14,7 @@ class NewActivityView: UIView, AnyView {
     private let metricsStack = MetricsStack()
     private let deadlineStack = DeadlineStack()
     private let datePickerStack = DatePickerStack()
-    private let metricsComponent = MetricsComponent()
+    private(set) var metricsComponent = MetricsComponent()
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()

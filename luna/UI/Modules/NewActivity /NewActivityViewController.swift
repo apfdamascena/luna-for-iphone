@@ -34,6 +34,9 @@ class NewActivityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         firstTimeContinueButtonTouchTrigger()
+        selectedStressCollectionNumber()
+        selectedSociabilityCollectionNumber()
+        selectedFisicsCollectionNumber()
         self.navigationItem.setHidesBackButton(true, animated: true)
         self.title = L10n.Constants.Content.Label.NewActivity.Nav.title
 //        self.navigationController?.addCustomBottomLine(color: Asset.gray100.color, height: 1)
@@ -45,6 +48,31 @@ class NewActivityViewController: UIViewController {
             .tap.bind {
                 self.presenter?.userTappedContinueButton()
             }.disposed(by: disposeBag)
+    }
+    
+    func selectedStressCollectionNumber() {
+        newActivityView.metricsComponent.stressCollectionView
+            .rx.selectItemAtCollection
+            .subscribe(onNext: { numberSelected in
+                print("Stress: \(numberSelected)")
+            }).disposed(by: disposeBag)
+            
+    }
+    
+    func selectedSociabilityCollectionNumber() {
+        newActivityView.metricsComponent.sociabilityCollectionView
+            .rx.selectItemAtCollection
+            .subscribe(onNext: { numberSelected in
+                print("Sociability: \(numberSelected)")
+            }).disposed(by: disposeBag)
+    }
+    
+    func selectedFisicsCollectionNumber() {
+        newActivityView.metricsComponent.fisicsCollectionView
+            .rx.selectItemAtCollection
+            .subscribe(onNext: { numberSelected in
+                print("Fisics: \(numberSelected)")
+            }).disposed(by: disposeBag)
     }
     
 }
