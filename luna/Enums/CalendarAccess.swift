@@ -6,6 +6,7 @@
 //
 
 enum CalendarAccess {
+    case loading
     case authorized
     case unauthorized
 }

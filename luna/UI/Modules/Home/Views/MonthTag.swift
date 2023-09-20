@@ -30,6 +30,8 @@ class MonthTag: UIStackView, AnyView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
+        isSkeletonable = true
+//        showAnimatedSkeleton()
     }
     
     required init(coder: NSCoder) {

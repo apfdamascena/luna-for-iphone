@@ -13,6 +13,7 @@ import Foundation
 protocol PresenterToViewHomeProtocol {
     
     func userAllowedAccessCalendar()
+    func allowAccessCalendar()
     func userDeniedAccessCalendar()
     
     func changeSelectedCell(selectedCell: CalendarCollectionViewCell) 
@@ -20,9 +21,12 @@ protocol PresenterToViewHomeProtocol {
     func updateView(_ center: CalendarCollectionViewCell)
     
     func load(collectionDataSource: [CyclePhaseViewModel])
+    func moveInitialCollection() 
     
     func moveTo(_ month: Date)
     func showFeedbackRegisterMenstruation()
+    
+    func didUpdateState(_ state: HomeViewState)
     
     func changeCurrentIndexCardPhase(at newIndex: Int)
 
@@ -38,7 +42,7 @@ protocol ViewToPresenterHomeProtocol {
     
     func checkCalendarPermission()
     func loadUserCalendar()
-    func loadCalendarToCollection()
+    func loadCalendarToCollection(isloading: Bool)
     func insertMenstruation(selectedDate: Date) -> Bool 
         
     func userSelect(_ cell: CalendarCollectionViewCell?,
@@ -64,7 +68,7 @@ protocol PresenterToInteractorHomeProtocol {
     
     func checkIfUserGivePermission(completion: @escaping PermissionResponse)
     func loadPhasesToUserCalendar()
-    func loadCalendarToCollection() -> [CyclePhaseViewModel]
+    func loadCalendarToCollection() -> (calendar: [CyclePhaseViewModel], haveAccess: Bool)
     func insertedMenstruationToCollection(selectedDate: Date) -> Bool
     
     func openDeviceSettings()

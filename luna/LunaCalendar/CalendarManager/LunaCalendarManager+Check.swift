@@ -71,7 +71,7 @@ extension LunaCalendarManager {
         eventService.createEvent(newMenstruationEvent)
         
         
-        let eventsBeforeMenstruation = getEventsByDate(firstDate: selectedDate, finalDate: menstruationEvent.startDate)
+        let eventsBeforeMenstruation = getEventsByDate(firstDate: selectedDate, finalDate: menstruationEvent.startDate).calendar
         let notMenstruationEvents = eventsBeforeMenstruation.filter { event in
             return event.title != CyclePhase.menstruation.value
         }
@@ -99,7 +99,7 @@ extension LunaCalendarManager {
         
         eventService.createEvent(newMenstruationEvent)
         
-        let eventsAfterMenstruation = getEventsByDate(firstDate: menstruationEvent.endDate, finalDate: selectedDate)
+        let eventsAfterMenstruation = getEventsByDate(firstDate: menstruationEvent.endDate, finalDate: selectedDate).calendar
         let notMenstruationEvents = eventsAfterMenstruation.filter { event in
             return event.title != CyclePhase.menstruation.value
         }
@@ -121,7 +121,7 @@ extension LunaCalendarManager {
     
     func addMenstruation(selectedDate: Date, eventService: CalendarEventService) -> ChangeCycleResponse {
         
-        let selectedEvent = eventService.getEventsByDate(firstDate: selectedDate, finalDate: selectedDate).first
+        let selectedEvent = (eventService.getEventsByDate(firstDate: selectedDate, finalDate: selectedDate).calendar).first
 
         let newMenstruationEvent = LunaEvent(title: CyclePhase.menstruation, startDate: selectedDate, endDate: selectedDate)
 
@@ -136,7 +136,7 @@ extension LunaCalendarManager {
     
     func removeMenstruation(selectedDate: Date, eventService: CalendarEventService) -> ChangeCycleResponse {
         
-        guard let selectedEvent = eventService.getEventsByDate(firstDate: selectedDate, finalDate: selectedDate).first else {
+        guard let selectedEvent = (eventService.getEventsByDate(firstDate: selectedDate, finalDate: selectedDate).calendar).first else {
             return ChangeCycleResponse.err
         }
         

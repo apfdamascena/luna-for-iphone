@@ -49,6 +49,7 @@ class WarningNoMenstrualData: UIView, AnyView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
+        isSkeletonable = true
     }
     
     required init?(coder: NSCoder) {

@@ -11,6 +11,7 @@ class LunaButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        isSkeletonable = true
     }
     
     required init?(coder: NSCoder) {

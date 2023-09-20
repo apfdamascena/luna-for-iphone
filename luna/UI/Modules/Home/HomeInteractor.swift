@@ -46,16 +46,16 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
                                                         averageCycleDuration: cycleDuration)
     }
     
-    func loadCalendarToCollection() -> [CyclePhaseViewModel] {
+    func loadCalendarToCollection() -> (calendar: [CyclePhaseViewModel], haveAccess: Bool){
         
         let firstDate = Date().daysBefore(HomeCollection.COLLECTION_RANGE/2)
         let finalDate = Date().daysAfter(HomeCollection.COLLECTION_RANGE/2)
         lunaCalendarManager?.transformExpectedToMenstruation()
         
-        guard let events = lunaCalendarManager?.getEventsByDate(firstDate: firstDate, finalDate: finalDate) else { return [] }
+        guard let events = lunaCalendarManager?.getEventsByDate(firstDate: firstDate, finalDate: finalDate) else { return ([], false) }
 
-        let collectionViewDataSource = CalendarCollectionConverter().turnDaysIntoCyclePhase(events: events)
-        return collectionViewDataSource
+        let collectionViewDataSource = CalendarCollectionConverter().turnDaysIntoCyclePhase(events: events.calendar)
+        return (collectionViewDataSource, events.hasAccess)
     }
     
     func insertedMenstruationToCollection(selectedDate: Date) -> Bool {

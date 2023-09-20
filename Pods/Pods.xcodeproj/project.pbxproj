@@ -934,7 +934,7 @@
 		D895521E78015D6F9D1441F514EB9663 /* UITabBar+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITabBar+Rx.swift"; path = "RxCocoa/iOS/UITabBar+Rx.swift"; sourceTree = "<group>"; };
 		D8A49F94DE98EFFCDAA44FD1CD7E45B3 /* Queue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = Platform/DataStructures/Queue.swift; sourceTree = "<group>"; };
 		DA6EB987F29BC68706C10C4386E3E997 /* RxCollectionViewReactiveArrayDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxCollectionViewReactiveArrayDataSource.swift; path = RxCocoa/iOS/DataSources/RxCollectionViewReactiveArrayDataSource.swift; sourceTree = "<group>"; };
-		DAFA0BDB76DF305C4589106B5B8C0D42 /* Pods-luna */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-luna"; path = Pods_luna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAFA0BDB76DF305C4589106B5B8C0D42 /* Pods_luna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC3B40D7CA2C0550A56B0111F65E657 /* Zip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Zip.swift; path = RxSwift/Observables/Zip.swift; sourceTree = "<group>"; };
 		DBE004164A9602BABFF6BD47EA037952 /* _RX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _RX.h; path = RxCocoa/Runtime/include/_RX.h; sourceTree = "<group>"; };
 		DD43E59CB7B9E5733600C51C92CEE867 /* HistoricalScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HistoricalScheduler.swift; path = RxSwift/Schedulers/HistoricalScheduler.swift; sourceTree = "<group>"; };
@@ -1127,7 +1127,7 @@
 			isa = PBXGroup;
 			children = (
 				D51C3D0C53D23B97B032E3BDD4F82C82 /* Differentiator.framework */,
-				DAFA0BDB76DF305C4589106B5B8C0D42 /* Pods-luna */,
+				DAFA0BDB76DF305C4589106B5B8C0D42 /* Pods_luna.framework */,
 				CB4C395B4FCC5B803BD222E4CCA8A7DB /* Pods_luna_lunaUITests.framework */,
 				811C76DDF35CC14208C29BEA9A123A50 /* Pods_lunaTests.framework */,
 				BC432FD48A5932251F1CAFBC4BF74894 /* RxCocoa.framework */,
@@ -1945,7 +1945,7 @@
 			);
 			name = "Pods-luna";
 			productName = Pods_luna;
-			productReference = DAFA0BDB76DF305C4589106B5B8C0D42 /* Pods-luna */;
+			productReference = DAFA0BDB76DF305C4589106B5B8C0D42 /* Pods_luna.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EA9EA43B3B503823EE36C60D9C8A865F /* RxSwift */ = {
