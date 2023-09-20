@@ -9,8 +9,7 @@ import UIKit
 import SnapKit
 
 class HomeView: UIView, AnyView  {
-    
-    private var hasAcessToCalendar: CalendarAccess = .unauthorized
+    public var hasAcessToCalendar: CalendarAccess
     
     private(set) var calendarCollectionView = CalendarScrollCollectionView()
     private(set) var warningCalendarAccess = WarningCalendarAccess()
@@ -30,6 +29,33 @@ class HomeView: UIView, AnyView  {
         view.axis = .vertical
         view.alignment = .fill
         view.spacing = 4.su
+        
+        return view
+    }()
+    
+    private let phaseCycleSkeleton: PhaseCycleTitle = {
+        let view = PhaseCycleTitle()
+        view.phaseTitle.textColor = .white
+        view.youAreInLabel.textColor = .white
+        view.showAnimatedSkeleton()
+        return view
+    }()
+    
+    private let collectionViewSkeleton: UIView = {
+        let view = UIView()
+        view.isSkeletonable = true
+        return view
+    }()
+    
+    private let cardSkeleton: UIView = {
+        let view = UIView()
+        view.isSkeletonable = true
+        return view
+    }()
+    
+    private let skeletonBackground: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
         return view
     }()
     
@@ -41,7 +67,7 @@ class HomeView: UIView, AnyView  {
         return view
     }()
     
-    private let recordedMenstruationFeedback: FeedbackCard = {
+    private var recordedMenstruationFeedback: FeedbackCard = {
         let card = FeedbackCard()
         card.message(for: .recordedMenstruation)
         card.isHidden = true
@@ -62,9 +88,12 @@ class HomeView: UIView, AnyView  {
     }()
     
     override init(frame: CGRect) {
+        self.hasAcessToCalendar = .unauthorized
         super.init(frame: frame)
+        isSkeletonable = true
         setupView()
     }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -89,10 +118,19 @@ class HomeView: UIView, AnyView  {
         descriptionStackView.addArrangedSubview(cardCycle)
         
         descriptionStackView.addArrangedSubview(warningNoMenstrualData)
+        
+        addSubview(skeletonBackground)
+        addSubview(phaseCycleSkeleton)
+        addSubview(collectionViewSkeleton)
+        addSubview(cardSkeleton)
+        
     }
     
     func addConstraints() {
         
+        skeletonBackground.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
         
         recordedMenstruationFeedback.snp.makeConstraints {
             $0.bottom.equalTo(safeAreaLayoutGuide).offset(-3.su)
@@ -103,6 +141,19 @@ class HomeView: UIView, AnyView  {
         calendarCollectionView.snp.makeConstraints{
             $0.height.equalTo(123)
             $0.leading.trailing.equalToSuperview()
+        }
+        
+        collectionViewSkeleton.snp.makeConstraints {
+            $0.edges.equalTo(calendarCollectionView)
+        }
+        
+        cardSkeleton.snp.makeConstraints {
+            $0.height.width.centerX.equalTo(cardCycle)
+            $0.bottom.equalTo(cardCycle).offset(3.su)
+        }
+        
+        phaseCycleSkeleton.snp.makeConstraints {
+            $0.edges.equalTo(phaseCycleTitle)
         }
         
         scrollView.snp.makeConstraints {
@@ -159,6 +210,52 @@ class HomeView: UIView, AnyView  {
         
     }
     
+    func updateState(_ state: HomeViewState) {
+        switch state {
+        case .loading:
+            userAllowedAccessCalendar()
+            appearSkeleton()
+            
+        case .autorized:
+            userAllowedAccessCalendar()
+            disapearSkeleton()
+            
+        case .unautorized:
+            userDeniedAccessCalendar()
+            disapearSkeleton()
+        }
+    }
+    
+    func appearSkeleton() {
+        
+        DispatchQueue.main.async {
+            [
+                self.collectionViewSkeleton,
+                self.cardSkeleton,
+                self.phaseCycleSkeleton
+            ].forEach {
+                $0.showAnimatedSkeleton()
+            }
+            
+        }
+        
+    }
+    
+    func disapearSkeleton() {
+        [
+            self.collectionViewSkeleton,
+            self.cardSkeleton,
+            self.phaseCycleSkeleton
+        ].forEach {
+            $0.hideSkeleton()
+        }
+        
+        collectionViewSkeleton.isHidden = true
+        cardSkeleton.isHidden = true
+        skeletonBackground.isHidden = true
+        phaseCycleSkeleton.isHidden = true
+    }
+    
     func cardFeedbackDisappear() {
         recordedMenstruationFeedback.isHidden = true
     }
@@ -169,22 +266,19 @@ class HomeView: UIView, AnyView  {
     
     func showWarningNoMenstrualData(if cycle: CyclePhase){
         
+        
         if hasAcessToCalendar == .unauthorized {
-            
             phaseCycleTitle.isHidden = true
             warningNoMenstrualData.isHidden = true
             cardCycle.isHidden = true
             return
         }
         
-        
         phaseCycleTitle.isHidden = false
         warningNoMenstrualData.isHidden = true
         cardCycle.isHidden = false
         
-    
         if cycle == .none {
-
             phaseCycleTitle.isHidden = true
             cardCycle.isHidden = true
             warningNoMenstrualData.isHidden = false
@@ -206,24 +300,20 @@ class HomeView: UIView, AnyView  {
     }
     
     func phaseChanged(to cycle: CyclePhase) {
-        DispatchQueue.main.async {
             let model = CyclePhaseTextFactory.create(phase: cycle)
             let modelCard = DynamicCardPhaseFactory.create(phase: cycle)
             self.phaseCycleTitle.phaseTitle.text = model.name
             self.cardCycle.draw(modelCard)
-        }
     }
     
     func monthChanged(to date: Date) {
-        DispatchQueue.main.async {
             self.monthTag.formattText(day: date.formatDayToString(), month: date.formatMonthToString())
-        }
+        
     }
     
     func flowIndexChanged(to index: Int) {
-        DispatchQueue.main.async {
             self.cardCycle.updateFlowIndex(index: index)
-        }
+        
     }
     
 }

@@ -29,7 +29,7 @@ class Notification {
             } else {
                 NSLog("notification permission not allowed")
             }
-        }
+                                              } 
     }
     
     func addNotification(at date: Date, with notification: UNMutableNotificationContent){

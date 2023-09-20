@@ -10,6 +10,7 @@ PODS:
   - RxRelay (6.5.0):
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
+  - SkeletonView (1.30.4)
   - SnapKit (5.6.0)
   - SwiftGen (6.6.2)
   - SwiftLint (0.50.3)
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - RxCocoa
   - RxDataSources (~> 5.0)
   - RxSwift
+  - SkeletonView
   - SnapKit (~> 5.6.0)
   - SwiftGen (~> 6.0)
   - SwiftLint
@@ -29,6 +31,7 @@ SPEC REPOS:
     - RxDataSources
     - RxRelay
     - RxSwift
+    - SkeletonView
     - SnapKit
     - SwiftGen
     - SwiftLint
@@ -39,10 +42,11 @@ SPEC CHECKSUMS:
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  SkeletonView: 5a050f6411e697abd4cda0a8d767013399dccd69
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwiftGen: 1366a7f71aeef49954ca5a63ba4bef6b0f24138c
   SwiftLint: 77f7cb2b9bb81ab4a12fcc86448ba3f11afa50c6
 
-PODFILE CHECKSUM: 94d6dfd99840f2f4796a9b250f1503c8920e671c
+PODFILE CHECKSUM: d353a474cbb0c022d2c9f59b7d8b4074f81497a1
 
-COCOAPODS: 1.12.0
+COCOAPODS: 1.12.1

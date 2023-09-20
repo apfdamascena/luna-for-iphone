@@ -38,7 +38,12 @@ class AnualCycleCalculator {
                 monthsFromMenstruation+=1
             }
         } else {
-            cyclePhases.append(contentsOf: [calculateFirstFolicularDate(), calculateFertileDate(), calculateLutealDate(), calculatePMSDate()])
+            if (firstMenstruationTime != nil) {
+                cyclePhases.append(contentsOf: [calculateFirstFolicularDate(), calculateFertileDate(), calculateLutealDate(), calculatePMSDate()])
+            } else {
+                return []
+            }
+            
             monthsFromMenstruation += 1
             months.forEach { index in
                 cyclePhases.append(contentsOf: [calculateExpectedMenstruationDay(),calculateFolicularDate(), calculateFertileDate(), calculateLutealDate(), calculatePMSDate()])

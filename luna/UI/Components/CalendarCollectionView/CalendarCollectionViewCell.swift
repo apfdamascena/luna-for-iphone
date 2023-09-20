@@ -52,7 +52,7 @@ class CalendarCollectionViewCell: UICollectionViewCell,
     }()
     
     
-    private let monthDay: LunaText = {
+    public var monthDay: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 13,
                                       color: Asset.gray400.color,
@@ -62,12 +62,13 @@ class CalendarCollectionViewCell: UICollectionViewCell,
         label.textAlignment = .center
         
         label.draw(model)
+        label.isSkeletonable = true
         return label
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        isSkeletonable = true
         setupView()
     }
     
@@ -85,7 +86,6 @@ class CalendarCollectionViewCell: UICollectionViewCell,
     
     func addConstraints() {
         menstruationStatusToggle.snp.makeConstraints{
-            $0.width.equalToSuperview()
             $0.height.equalTo(66)
             $0.width.equalTo(42)
         }

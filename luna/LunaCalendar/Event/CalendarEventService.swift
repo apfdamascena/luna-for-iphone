@@ -26,12 +26,12 @@ class CalendarEventService {
         try? self.eventStore.save(newEvent, span: .thisEvent)
     }
     
-    func getEventsByDate(firstDate: Date, finalDate: Date) -> [EKEvent] {
-        guard let calendar = calendar else { return [] }
+    func getEventsByDate(firstDate: Date, finalDate: Date) -> (calendar: [EKEvent],hasAccess: Bool) {
+        guard let calendar = calendar else { return ([], false)}
         
         let predicate =  eventStore.predicateForEvents(withStart: firstDate, end: finalDate, calendars: [calendar])
         let events = eventStore.events(matching: predicate)
-        return events
+        return (events, true)
     }
     
     func lunaEventsExist() -> Bool {
@@ -48,12 +48,12 @@ class CalendarEventService {
     
     func eventsBefore(daysBefore: Int, finalDate: Date) -> [EKEvent] {
         let daysBeforeDate = finalDate.daysBefore(daysBefore)
-        return getEventsByDate(firstDate: daysBeforeDate, finalDate: finalDate)
+        return getEventsByDate(firstDate: daysBeforeDate, finalDate: finalDate).calendar
     }
     
     func eventsAfter(daysAfter: Int, startDate: Date) -> [EKEvent] {
         let daysAfterDate = startDate.daysAfter(daysAfter)
-        return getEventsByDate(firstDate: startDate, finalDate: daysAfterDate)
+        return getEventsByDate(firstDate: startDate, finalDate: daysAfterDate).calendar
     }
 
     func removeEvent(eventId: String) {
@@ -68,7 +68,7 @@ class CalendarEventService {
     }
     
     func isDateEqualTo(cyclePhase: CyclePhase, selectedDate: Date) -> Bool {
-        let teste = getEventsByDate(firstDate: selectedDate, finalDate: selectedDate)
+        let teste = getEventsByDate(firstDate: selectedDate, finalDate: selectedDate).calendar
         if teste.first?.title == cyclePhase.value {
             return true
         }
