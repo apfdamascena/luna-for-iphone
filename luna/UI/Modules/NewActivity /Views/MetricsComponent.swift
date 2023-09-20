@@ -21,6 +21,8 @@ class MetricsComponent: UIStackView, AnyView {
         return label
     }()
     
+//    private(set) var stressCollectionView = NewActivityCollectionView()
+    
     private let divStress = Div()
     
     private let sociabilityTitle: LunaText = {
@@ -47,8 +49,6 @@ class MetricsComponent: UIStackView, AnyView {
         return label
     }()
     
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -60,6 +60,7 @@ class MetricsComponent: UIStackView, AnyView {
     
     func addSubviews() {
         addSubview(stressTitle)
+//        addSubview(stressCollectionView)
         addSubview(divStress)
         addSubview(sociabilityTitle)
         addSubview(divSociability)
@@ -72,6 +73,8 @@ class MetricsComponent: UIStackView, AnyView {
             $0.leading.equalToSuperview().inset(2.su)
             $0.top.equalToSuperview().offset(12)
         }
+        
+        
         
         divStress.snp.makeConstraints {
             $0.top.equalTo(stressTitle.snp.bottom).offset(80)

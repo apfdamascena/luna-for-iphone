@@ -174,6 +174,9 @@
 		A46C05542A74642C0071ABCE /* WarningCalendarAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C05522A74642C0071ABCE /* WarningCalendarAccess.swift */; };
 		A46C05552A74642C0071ABCE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C05532A74642C0071ABCE /* HomeView.swift */; };
 		A46C05572A7464970071ABCE /* LunaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C05562A7464970071ABCE /* LunaButton.swift */; };
+		A47FBFF82ABB8AA800F807BE /* NewActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47FBFF52ABB8AA800F807BE /* NewActivityCollectionViewCell.swift */; };
+		A47FBFF92ABB8AA800F807BE /* NewActivityCollectionView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47FBFF62ABB8AA800F807BE /* NewActivityCollectionView+Rx.swift */; };
+		A47FBFFA2ABB8AA800F807BE /* NewActivityCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47FBFF72ABB8AA800F807BE /* NewActivityCollectionView.swift */; };
 		A48B7ECB2A75A02700CCC4C0 /* LearnAboutMenstrualCyclePhasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7ECA2A75A02700CCC4C0 /* LearnAboutMenstrualCyclePhasesView.swift */; };
 		A48B7ECD2A77118400CCC4C0 /* FeedbackCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7ECC2A77118400CCC4C0 /* FeedbackCard.swift */; };
 		A48B7ED02A7993E800CCC4C0 /* CyclePhaseTextFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B7ECF2A7993E800CCC4C0 /* CyclePhaseTextFactory.swift */; };
@@ -434,6 +437,9 @@
 		A46C05522A74642C0071ABCE /* WarningCalendarAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarningCalendarAccess.swift; sourceTree = "<group>"; };
 		A46C05532A74642C0071ABCE /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A46C05562A7464970071ABCE /* LunaButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunaButton.swift; sourceTree = "<group>"; };
+		A47FBFF52ABB8AA800F807BE /* NewActivityCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewActivityCollectionViewCell.swift; sourceTree = "<group>"; };
+		A47FBFF62ABB8AA800F807BE /* NewActivityCollectionView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NewActivityCollectionView+Rx.swift"; sourceTree = "<group>"; };
+		A47FBFF72ABB8AA800F807BE /* NewActivityCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewActivityCollectionView.swift; sourceTree = "<group>"; };
 		A48B7ECA2A75A02700CCC4C0 /* LearnAboutMenstrualCyclePhasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnAboutMenstrualCyclePhasesView.swift; sourceTree = "<group>"; };
 		A48B7ECC2A77118400CCC4C0 /* FeedbackCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackCard.swift; sourceTree = "<group>"; };
 		A48B7ECF2A7993E800CCC4C0 /* CyclePhaseTextFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclePhaseTextFactory.swift; sourceTree = "<group>"; };
@@ -992,6 +998,7 @@
 		0DDA61352A69D11200CA15C6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A47FBFF42ABB8AA800F807BE /* NewActivityCollection */,
 				0D2939752AB1134B0017891A /* ActivityCell */,
 				A427FC7F2AB2385D006B4F2B /* NewActivityStackTitle */,
 				A48F4A332A96904800BB5058 /* DynamicCardPhase */,
@@ -1206,6 +1213,17 @@
 				0D8095892AB3419E00106998 /* ActivityView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A47FBFF42ABB8AA800F807BE /* NewActivityCollection */ = {
+			isa = PBXGroup;
+			children = (
+				A47FBFF52ABB8AA800F807BE /* NewActivityCollectionViewCell.swift */,
+				A47FBFF62ABB8AA800F807BE /* NewActivityCollectionView+Rx.swift */,
+				A47FBFF72ABB8AA800F807BE /* NewActivityCollectionView.swift */,
+			);
+			name = NewActivityCollection;
+			path = "../../../../../../../Desktop/luna-PORRA/UI/Components/NewActivityCollection";
 			sourceTree = "<group>";
 		};
 		A48B7ECE2A7993CE00CCC4C0 /* CyclePhaseText */ = {
@@ -1803,6 +1821,7 @@
 				0DBADDE22A6603F800A10FC3 /* LastDayMenstruationViewController.swift in Sources */,
 				0DF4106E2A85820D00A10405 /* SeeMoreCard.swift in Sources */,
 				0D7C73B02A67834100677D1E /* TouchableUserEvent.swift in Sources */,
+				A47FBFF82ABB8AA800F807BE /* NewActivityCollectionViewCell.swift in Sources */,
 				A427FC5C2AB0DBFC006B4F2B /* FirstTimeNewActivityContract.swift in Sources */,
 				BF4951172AB2410C0064F5D6 /* BestActivityViewModel.swift in Sources */,
 				A427FC7E2AB23850006B4F2B /* ActivityStack.swift in Sources */,
@@ -1836,6 +1855,7 @@
 				0D0B28CD2A9FD90C0048722A /* NotificationFirstPhaseDay.swift in Sources */,
 				A48F4A3E2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift in Sources */,
 				0D6336A12A774D7A00EE9699 /* OtherCyclePhasesViewController.swift in Sources */,
+				A47FBFFA2ABB8AA800F807BE /* NewActivityCollectionView.swift in Sources */,
 				0DF4106B2A85712E00A10405 /* LearnCycleTitle.swift in Sources */,
 				CAE579A42A7ADE2D004EE21C /* HomeCollection.swift in Sources */,
 				0D8095912AB399E200106998 /* ActivityFilterMonth.swift in Sources */,
@@ -1936,6 +1956,7 @@
 				0D4049D72A7047420058669B /* OnboardingPageControlDelegate.swift in Sources */,
 				A427FC8F2AB385DC006B4F2B /* MetricsComponent.swift in Sources */,
 				0D6336A62A77510400EE9699 /* OnboardingCyclePhaseContent.swift in Sources */,
+				A47FBFF92ABB8AA800F807BE /* NewActivityCollectionView+Rx.swift in Sources */,
 				A46C054D2A74641E0071ABCE /* LunaButtonBack.swift in Sources */,
 				A48B7EDA2A7ACBCD00CCC4C0 /* CycleDetailsCard.swift in Sources */,
 				0D2939772AB113630017891A /* ActivityCell.swift in Sources */,
