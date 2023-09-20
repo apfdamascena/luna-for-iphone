@@ -98,6 +98,24 @@ class DynamicCardPhaseFactory {
                     L10n.Constants.Content.Label.Home.Card.Pms.four,
                     L10n.Constants.Content.Label.Home.Card.Pms.five,
                 ])
+            
+        case .expectedMenstruation:
+            return DynamicCardPhaseViewModel(
+                backgroundImage: [
+                    Asset.backgroundMenstruation1.image,
+                    Asset.backgroundMenstruation2.image,
+                    Asset.backgroundMenstruation3.image,
+                    Asset.backgroundMenstruation4.image,
+                    Asset.backgroundMenstruation5.image,
+            ],
+                titleText: [
+                    L10n.Constants.Content.Label.Home.Card.Menstruation.one,
+                    L10n.Constants.Content.Label.Home.Card.Menstruation.two,
+                    L10n.Constants.Content.Label.Home.Card.Menstruation.three,
+                    L10n.Constants.Content.Label.Home.Card.Menstruation.four,
+                    L10n.Constants.Content.Label.Home.Card.Menstruation.five,
+                ])
+            
         default:
             return DynamicCardPhaseViewModel(
                 backgroundImage: [

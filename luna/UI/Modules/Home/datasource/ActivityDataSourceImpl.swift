@@ -8,8 +8,9 @@
 import Foundation
 import RxSwift
 
+
 class ActivityDataSourceImpl: ActivityDataSource {
     
-    var activities: BehaviorSubject<[ActivityEvent]> = BehaviorSubject(value: [])
-    var activitiesForSegmentedControl: BehaviorSubject<[ActivityEvent]> = BehaviorSubject(value: [])
+    var activities: BehaviorSubject<[ActivityCellViewModel]> = BehaviorSubject(value: [])
+    var activitiesForSegmentedControl: BehaviorSubject<ActivityFilter> = BehaviorSubject(value: ActivityFilter(week: [], month: []))
 }

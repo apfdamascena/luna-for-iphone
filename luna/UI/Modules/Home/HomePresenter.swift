@@ -97,7 +97,7 @@ class HomePresenter: ViewToPresenterHomeProtocol {
     
     func loadActivitiesDataSource() {
         let activityDataSource = interactor?.findActivityEventsOfCurrentMonth()
-        view?.loadActivity(dataSource: activityDataSource ?? [])
+        view?.loadActivity(dataSource: activityDataSource ?? ActivityEventMonthWeek(week: [], month: []))
     }
     
 }

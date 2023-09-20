@@ -9,13 +9,12 @@ import UIKit
 import SnapKit
 
 struct ReferenceTextViewModel {
-    let number: String
     let reference: String
-    let link: String
+    let title: String
 }
 
-
 class ReferenceCard: UIView, AnyView {
+    
     private let horizontalStack: UIStackView = {
         let view = UIStackView()
         view.axis = .horizontal
@@ -27,34 +26,24 @@ class ReferenceCard: UIView, AnyView {
     private let verticalStack: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
-        view.alignment = .top
+        view.alignment = .fill
+        view.spacing = 2.su
         return view
-    }()
-    
-    var number: LunaText = {
-        let label = LunaText()
-        let model = LunaTextViewModel(size: 17, color: .black, weight: .regular)
-        label.text = "1."
-        label.textAlignment = .left
-        label.sizeToFit()
-        label.draw(model)
-        return label
     }()
 
     var reference: LunaText = {
         let label = LunaText()
-        let model = LunaTextViewModel(size: 17, color: .black, weight: .regular)
-        label.text = L10n.Constants.Content.Label.Home.Text.References.first
+        let model = LunaTextViewModel(size: 17,
+                                      color: Asset.gray400.color,
+                                      weight: .regular)
+        label.text = "Mesen TB, Young SL. Progesterone and the luteal phase: a requisite to reproduction. Obstet Gynecol Clin North Am. 2015 Mar;42(1):135-51. PMID: 25681845; PMCID: PMC4436586."
         label.numberOfLines = 0
         label.textAlignment = .left
         label.draw(model)
         return label
     }()
     
-    private let linkComponent: Link = {
-        let link = Link()
-        return link
-    }()
+    private let linkComponent = Link()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -66,35 +55,24 @@ class ReferenceCard: UIView, AnyView {
     }
     
     func addSubviews() {
-        addSubview(horizontalStack)
-        horizontalStack.addArrangedSubview(number)
-        horizontalStack.addArrangedSubview(verticalStack)
-        verticalStack.addArrangedSubview(reference)
+        addSubview(verticalStack)
+        
         verticalStack.addArrangedSubview(linkComponent)
+        verticalStack.addArrangedSubview(reference)
+  
     }
     
     func addConstraints() {
-        horizontalStack.snp.makeConstraints {
-            $0.trailing.leading.equalToSuperview()
-        }
         
-        self.snp.makeConstraints {
-            $0.height.equalTo(horizontalStack.snp.height)
-        }
-        
-        number.snp.makeConstraints {
-            $0.width.equalTo(1.5.su)
-        }
-        
-        linkComponent.snp.makeConstraints {
-            $0.height.equalTo(3.5.su)
-            $0.trailing.leading.equalToSuperview()
+        verticalStack.snp.makeConstraints{
+            $0.trailing.leading.equalToSuperview().inset(3.su)
+            $0.top.bottom.equalToSuperview()
         }
     }
 
     func draw(_ model: ReferenceTextViewModel){
-        number.text = model.number
+
         reference.text = model.reference
-        linkComponent.draw(model.link)
+        linkComponent.draw(model.title)
     }
 }

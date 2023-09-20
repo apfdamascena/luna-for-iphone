@@ -163,9 +163,12 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
         return (index + 1) % 5
     }
     
-    func findActivityEventsOfCurrentMonth() -> [ActivityEvent] {
-        let activities = activitiesCalendarManager.getMonthEventsStartingToday()
-        return activities
+    func findActivityEventsOfCurrentMonth() -> ActivityEventMonthWeek {
+        let activitiesMonth = activitiesCalendarManager.getMonthEventsStartingToday()
+        let activitiesWeek = activitiesCalendarManager.getWeekEventsStartingToday()
+
+        return ActivityEventMonthWeek(week: activitiesWeek, month: activitiesMonth)
     }
     
 }
+

@@ -55,8 +55,9 @@ class HomeViewController: UIViewController {
         cardCyclePhaseHandler()
         addTapCardCycleEventObservable()
         addNotificationEventObservable()
-        addTableViewDataSourceEventObservable()
+        addSegmentedControlDataSourceEventObservable()
         addSegmentedControlPeriodEventObservable()
+        addTableViewDataSourceEventObservable()
         addNewActivityTrriggerEventObservable()
     }
     
@@ -64,7 +65,7 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
         self.navigationController?.isNavigationBarHidden = true
-        Notification.shared.requestAccess()
+
         
         DispatchQueue.main.async {
             self.presenter?.loadCalendarToCollection()
@@ -192,21 +193,30 @@ class HomeViewController: UIViewController {
             .map{ index in
                 return ActivityPeriod(index)
             }.subscribe(onNext: { activity in
-                guard let activities = try? self.activitiesDataSource.activities.value() else { return }
-                let activitiesFilter = ActivityFilterFactory.create(activity)
-                let activitiesFiltered = activitiesFilter.filter(activities)
-                self.activitiesDataSource.activitiesForSegmentedControl.onNext(activitiesFiltered)
+                guard let activitiesValue = try? self.activitiesDataSource.activitiesForSegmentedControl.value() else { return }
+                var activities = activitiesValue.month
+                if activity == .week {
+                    activities = activitiesValue.week
+                }
+                self.activitiesDataSource.activities.onNext(activities)
             })
             .disposed(by: disposeBag)
     }
     
-    func addTableViewDataSourceEventObservable() {
-        activitiesDataSource.activitiesForSegmentedControl
+    func addSegmentedControlDataSourceEventObservable(){
+        activitiesDataSource.activities.bind(to: homeView.activities
+            .rx.items(cellIdentifier: ActivityCell.IDENTIFIER,
+                      cellType: ActivityCell.self)){ _, activity, cell in
+            cell.draw(activity)
+        }.disposed(by: disposeBag)
+    }
+    
+    func addTableViewDataSourceEventObservable(){
+        activitiesDataSource.activities
             .asObservable()
             .subscribe(onNext: { data in
                 self.homeView.drawActivities(data)
-            })
-            .disposed(by: disposeBag)
+        }).disposed(by: disposeBag)
     }
     
     func addNewActivityTrriggerEventObservable(){
@@ -231,8 +241,17 @@ extension HomeViewController: PresenterToViewHomeProtocol {
         self.datasource.cyclePhase.onNext(collectionDataSource[HomeCollection.COLLECTION_RANGE/2].phase)
     }
     
-    func loadActivity(dataSource: [ActivityEvent]) {
-        activitiesDataSource.activities.onNext(dataSource)
+    func loadActivity(dataSource: ActivityEventMonthWeek) {
+        let newDataSouceMonth = dataSource.month.map { event in
+            return ActivityCellViewModel(title: event.title, hourStart: event.startDate.formattHour(), hourEnd: event.endDate.formattHour(), day: event.startDate, phase: event.phase)
+        }
+        let newDataSouceWeek = dataSource.week.map { event in
+            return ActivityCellViewModel(title: event.title, hourStart: event.startDate.formattHour(), hourEnd: event.endDate.formattHour(), day: event.startDate, phase: event.phase)
+        }
+        let newDataSource = ActivityFilter(week: newDataSouceWeek, month: newDataSouceMonth)
+        
+        activitiesDataSource.activitiesForSegmentedControl.onNext(newDataSource)
+        activitiesDataSource.activities.onNext(newDataSource.week)
     }
     
     func moveCalendarCollection(toXAxis: CGFloat) {

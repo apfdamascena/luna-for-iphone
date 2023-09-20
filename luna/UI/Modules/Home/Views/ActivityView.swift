@@ -46,6 +46,21 @@ class ActivitiesView: UIView, AnyView {
         return stack
     }()
     
+    private(set) var activities: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width - 24*2, height: 80)
+        layout.minimumLineSpacing = 12
+        
+        let collection = UICollectionView(frame: .zero,
+                                          collectionViewLayout: layout)
+        
+        collection.register(ActivityCell.self, forCellWithReuseIdentifier: ActivityCell.IDENTIFIER)
+        
+        collection.isScrollEnabled = false
+        
+        return collection
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -62,7 +77,7 @@ class ActivitiesView: UIView, AnyView {
         activitiesTitleStack.addArrangedSubview(newActivity)
         
         addSubview(segmentedControl)
-        addSubview(activitiesStack)
+        addSubview(activities)
     
     }
     
@@ -79,23 +94,15 @@ class ActivitiesView: UIView, AnyView {
             $0.top.equalTo(activitiesTitleStack.snp.bottom).offset(2.su)
         }
         
-        activitiesStack.snp.makeConstraints{
+        activities.snp.makeConstraints{
             $0.top.equalTo(segmentedControl.snp.bottom).offset(2.su)
             $0.leading.trailing.equalToSuperview()
+            
+            $0.height.equalTo(60.su)
         }
     }
     
     func createTableWithActivities(_ activities: [ActivityCell]){
-    
-        DispatchQueue.main.async {
-            
-            self.activitiesStack.arrangedSubviews.forEach{ view in
-                view.removeFromSuperview()
-            }
-            
-            activities.forEach { element in
-                self.activitiesStack.addArrangedSubview(element)
-            }
-        }
+        
     }
 }

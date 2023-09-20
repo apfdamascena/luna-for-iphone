@@ -76,14 +76,13 @@ class CalendarView: UIView, AnyView  {
         image.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.centerY.equalToSuperview().offset(-17.su)
-            $0.width.equalTo(27.su)
+            $0.width.equalToSuperview().multipliedBy(0.9)
         }
     
         stack.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(image.snp.bottom).offset(7.5.su)
-            $0.width.equalTo(42.su)
-            $0.height.equalTo(20.su)
+            $0.leading.trailing.equalToSuperview().inset(3.su)
         }
     }
     

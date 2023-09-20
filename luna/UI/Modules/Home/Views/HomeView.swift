@@ -36,6 +36,10 @@ class HomeView: UIView, AnyView  {
     var newActivityButton: LunaButton {
         return activitiesView.newActivity
     }
+    
+    var activities: UICollectionView {
+        return activitiesView.activities
+    }
 
     private let allContentStackView: UIStackView = {
         let view = UIStackView()
@@ -136,7 +140,6 @@ class HomeView: UIView, AnyView  {
         }
         
         activitiesView.snp.makeConstraints{
-            $0.height.equalTo(50.su)
             $0.leading.trailing.equalTo(self).inset(3.su)
         }
     }
@@ -228,26 +231,12 @@ class HomeView: UIView, AnyView  {
         }
     }
     
-    func drawActivities(_ data: [ActivityEvent]){
-        
-        // vai mudar aqui
-        
-        let activities = data.map { event in
-            let cell = ActivityCell()
-            let model = ActivityCellViewModel(title: event.title,
-                                              hourStart: event.startDate.formatToString(),
-                                              hourEnd: event.endDate.formatToString(),
-                                              day: event.startDate,
-                                              phase: .fertile)
-            cell.draw(model)
-            return cell
-        }
-        
-        activitiesView.createTableWithActivities(activities)
+    func drawActivities(_ data: [ActivityCellViewModel]){
         activitiesView.snp.removeConstraints()
+
         let size =  (data.count+1) * 80 + 12 * (data.count-1) + 60
-        
-        activitiesView.snp.makeConstraints{
+
+        activitiesView.snp.makeConstraints {
             $0.height.equalTo(size)
             $0.leading.trailing.equalTo(self).inset(3.su)
         }

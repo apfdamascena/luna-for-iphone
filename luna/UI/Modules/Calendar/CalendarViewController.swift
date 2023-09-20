@@ -23,11 +23,10 @@ class CalendarViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
     }
-
 }
 
 extension CalendarViewController: PresenterToViewCalendarProtocol{
-    // TODO: Implement View Output Methods
+
 }
 
 
