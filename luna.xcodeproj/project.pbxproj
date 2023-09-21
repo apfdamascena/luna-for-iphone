@@ -1248,8 +1248,8 @@
 				BF4951052AB0FB980064F5D6 /* Views */,
 				BF4950FB2AB0FB8A0064F5D6 /* BestActivityContract.swift */,
 				BF4950FC2AB0FB8A0064F5D6 /* BestActivityPresenter.swift */,
-				BF4950FD2AB0FB8A0064F5D6 /* BestActivityRouter.swift */,
 				BF4950FE2AB0FB8A0064F5D6 /* BestActivityViewController.swift */,
+				BF4950FD2AB0FB8A0064F5D6 /* BestActivityRouter.swift */,
 				BF4950FF2AB0FB8A0064F5D6 /* BestActivityInteractor.swift */,
 			);
 			path = BestActivity;
