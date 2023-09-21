@@ -205,6 +205,12 @@
 		BF6520E02A6F0D4B00E60054 /* CycleDurationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520DC2A6F0D4B00E60054 /* CycleDurationRouter.swift */; };
 		BF6520E12A6F0D4B00E60054 /* CycleDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520DD2A6F0D4B00E60054 /* CycleDurationViewController.swift */; };
 		BF6520E42A6F0D5D00E60054 /* CycleDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520E32A6F0D5D00E60054 /* CycleDurationView.swift */; };
+		BF9A367B2ABB7F2000D231CB /* CreateEventContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A36762ABB7F2000D231CB /* CreateEventContract.swift */; };
+		BF9A367C2ABB7F2000D231CB /* CreateEventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A36772ABB7F2000D231CB /* CreateEventPresenter.swift */; };
+		BF9A367D2ABB7F2000D231CB /* CreateEventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A36782ABB7F2000D231CB /* CreateEventRouter.swift */; };
+		BF9A367E2ABB7F2000D231CB /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A36792ABB7F2000D231CB /* CreateEventViewController.swift */; };
+		BF9A367F2ABB7F2000D231CB /* CreateEventInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A367A2ABB7F2000D231CB /* CreateEventInteractor.swift */; };
+		BF9A36812ABB7F3E00D231CB /* CreateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A36802ABB7F3E00D231CB /* CreateEventView.swift */; };
 		BFBD77132A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD77122A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift */; };
 		BFCAAD3B2A6B19AE00A91CC0 /* MenstruationDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */; };
 		BFD1A01B2A82E18600F420B5 /* CalendarAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A01A2A82E18600F420B5 /* CalendarAccess.swift */; };
@@ -462,6 +468,12 @@
 		BF6520DC2A6F0D4B00E60054 /* CycleDurationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationRouter.swift; sourceTree = "<group>"; };
 		BF6520DD2A6F0D4B00E60054 /* CycleDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationViewController.swift; sourceTree = "<group>"; };
 		BF6520E32A6F0D5D00E60054 /* CycleDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationView.swift; sourceTree = "<group>"; };
+		BF9A36762ABB7F2000D231CB /* CreateEventContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventContract.swift; sourceTree = "<group>"; };
+		BF9A36772ABB7F2000D231CB /* CreateEventPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventPresenter.swift; sourceTree = "<group>"; };
+		BF9A36782ABB7F2000D231CB /* CreateEventRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventRouter.swift; sourceTree = "<group>"; };
+		BF9A36792ABB7F2000D231CB /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		BF9A367A2ABB7F2000D231CB /* CreateEventInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventInteractor.swift; sourceTree = "<group>"; };
+		BF9A36802ABB7F3E00D231CB /* CreateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventView.swift; sourceTree = "<group>"; };
 		BFBD77122A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LunaCalendarManager+Verifications.swift"; sourceTree = "<group>"; };
 		BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationView.swift; sourceTree = "<group>"; };
 		BFD1A01A2A82E18600F420B5 /* CalendarAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAccess.swift; sourceTree = "<group>"; };
@@ -919,6 +931,7 @@
 		0DDA612F2A69D07900CA15C6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BF9A36752ABB7F0400D231CB /* CreateEvent */,
 				0D2DB2DE2AB6A390003D71D8 /* Web */,
 				0D2DB2CE2AB4D94F003D71D8 /* NotificationRequest */,
 				0D9D8A122AA90BF300B64E2D /* LunaTabBar */,
@@ -1276,6 +1289,27 @@
 			isa = PBXGroup;
 			children = (
 				BF6520E32A6F0D5D00E60054 /* CycleDurationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF9A36752ABB7F0400D231CB /* CreateEvent */ = {
+			isa = PBXGroup;
+			children = (
+				BF9A36822ABB7F4200D231CB /* Views */,
+				BF9A36762ABB7F2000D231CB /* CreateEventContract.swift */,
+				BF9A36772ABB7F2000D231CB /* CreateEventPresenter.swift */,
+				BF9A36782ABB7F2000D231CB /* CreateEventRouter.swift */,
+				BF9A36792ABB7F2000D231CB /* CreateEventViewController.swift */,
+				BF9A367A2ABB7F2000D231CB /* CreateEventInteractor.swift */,
+			);
+			path = CreateEvent;
+			sourceTree = "<group>";
+		};
+		BF9A36822ABB7F4200D231CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF9A36802ABB7F3E00D231CB /* CreateEventView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1763,6 +1797,7 @@
 				0DBADDE12A6603F800A10FC3 /* LastDayMenstruationRouter.swift in Sources */,
 				0D0B28D12A9FDBB60048722A /* NotificationFilter.swift in Sources */,
 				0DBADDA32A65FDF100A10FC3 /* luna.xcdatamodeld in Sources */,
+				BF9A367C2ABB7F2000D231CB /* CreateEventPresenter.swift in Sources */,
 				0D65E37F2AB24A0F008148FD /* ActivityDataSource.swift in Sources */,
 				BF6520E02A6F0D4B00E60054 /* CycleDurationRouter.swift in Sources */,
 				CA2144322AA65C3F008AE239 /* ActivityEvent.swift in Sources */,
@@ -1812,8 +1847,10 @@
 				A46C05542A74642C0071ABCE /* WarningCalendarAccess.swift in Sources */,
 				CA2144302AA6557D008AE239 /* ActivitiesCalendarManager.swift in Sources */,
 				0DBADE0F2A660AAE00A10FC3 /* Int+Su.swift in Sources */,
+				BF9A367B2ABB7F2000D231CB /* CreateEventContract.swift in Sources */,
 				0DDA612A2A69CEC600CA15C6 /* MenstruationDurationViewController.swift in Sources */,
 				A427FC562AB06CA9006B4F2B /* ActivityManager.swift in Sources */,
+				BF9A367D2ABB7F2000D231CB /* CreateEventRouter.swift in Sources */,
 				CA17ED962A71ED750051BF9D /* CyclePhaseFocus.swift in Sources */,
 				0DA56C552A6B33AC00E056C1 /* OnboardingButtonView.swift in Sources */,
 				0D0B28D32A9FF8400048722A /* NotificationStation.swift in Sources */,
@@ -1840,9 +1877,11 @@
 				BFCAAD3B2A6B19AE00A91CC0 /* MenstruationDurationView.swift in Sources */,
 				A48F4A3A2A993BEC00BB5058 /* CardPhaseControlDataSource.swift in Sources */,
 				BF4951022AB0FB8A0064F5D6 /* BestActivityRouter.swift in Sources */,
+				BF9A36812ABB7F3E00D231CB /* CreateEventView.swift in Sources */,
 				0DBADD9B2A65FDF100A10FC3 /* SceneDelegate.swift in Sources */,
 				A46C054E2A74641E0071ABCE /* LunaButtonProceed.swift in Sources */,
 				BFF09AFA2A6B599B00749328 /* PickerViewAdapter.swift in Sources */,
+				BF9A367F2ABB7F2000D231CB /* CreateEventInteractor.swift in Sources */,
 				BFD533BF2A716BA50063351E /* Date.swift in Sources */,
 				0D6337002A7A893F00EE9699 /* OnboardingViewFlowDelegate.swift in Sources */,
 				0DDC5B512A70B9CE00D4CCAE /* OnboardingPageFlowRouter.swift in Sources */,
@@ -1866,6 +1905,7 @@
 				A427FC852AB23B18006B4F2B /* UITextField.swift in Sources */,
 				0D6794132A71D53C00382142 /* RootScreenViewFactory.swift in Sources */,
 				BF42D2162A8AC67A00E09472 /* CalendarVerifications.swift in Sources */,
+				BF9A367E2ABB7F2000D231CB /* CreateEventViewController.swift in Sources */,
 				0D15FE942A7DB12100FD64E4 /* WarningNoMenstrualData.swift in Sources */,
 				0DDC5B4F2A70B9CE00D4CCAE /* OnboardingPageFlowContract.swift in Sources */,
 				0D6794222A735C1B00382142 /* HomeRouter.swift in Sources */,

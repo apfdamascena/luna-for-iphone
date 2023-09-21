@@ -27,7 +27,7 @@ class NewActivityRouter: PresenterToRouterNewActivityProtocol {
     }
     
     func pushNewActivity(on view: PresenterToViewNewActivityProtocol) {
-        let bestActivity = BestActivityRouter.createModule()
+        let bestActivity = CreateEventRouter.createModule()
         
         guard let newActivityController = view as? NewActivityViewController else { return }
         newActivityController.navigationController?.pushViewController(bestActivity, animated: true)
