@@ -25,7 +25,7 @@ class FirstActivityManager {
 
 class LunaTabBarViewController: UITabBarController {
     
-    private let controllers = [
+    private var controllers = [
         HomeRouter.createModule(),
         FirstTimeNewActivityRouter.createModule(),
         ReferencesViewController(), 
@@ -42,7 +42,7 @@ class LunaTabBarViewController: UITabBarController {
         "Atividades",
         "Fontes"
     ]
-
+            
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewControllers()
@@ -59,6 +59,12 @@ class LunaTabBarViewController: UITabBarController {
     }
     
     private func setupViewControllers(){
+        
+        if FirstActivityManager.shared.wasSeen {
+            controllers[1] = NewActivityRouter.createModule()
+        }
+        
+        
         let navigationControllers = controllers.enumerated().map{ (index, viewController) in
             viewController.title = titles[index]
             let navigationController = UINavigationController(rootViewController: viewController)
