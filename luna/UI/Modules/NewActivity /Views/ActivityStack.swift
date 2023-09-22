@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ActivityStack: UIStackView, AnyView {
+class ActivityStack: UIStackView, AnyView, UITextFieldDelegate {
     
     private let activityTitle = NewActivityTitleStackView(
         frame: CGRect(),
@@ -16,7 +16,7 @@ class ActivityStack: UIStackView, AnyView {
         iconAsset: Asset.pencilIcon
     )
     
-    private let activityTextField: UITextField = {
+    private(set) var activityTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.attributedPlaceholder = NSAttributedString(
@@ -35,6 +35,7 @@ class ActivityStack: UIStackView, AnyView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        activityTextField.delegate = self
         setupView()
     }
     
@@ -58,6 +59,11 @@ class ActivityStack: UIStackView, AnyView {
         axis = .vertical
         alignment = .leading
         spacing = 2.su
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        activityTextField.resignFirstResponder()
+        return true
     }
     
 }

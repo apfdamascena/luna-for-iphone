@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import EventKit
 
 
 // MARK: View Output (Presenter -> View)
@@ -21,7 +22,8 @@ protocol ViewToPresenterNewActivityProtocol {
     var view: PresenterToViewNewActivityProtocol? { get set }
     var interactor: PresenterToInteractorNewActivityProtocol? { get set }
     var router: PresenterToRouterNewActivityProtocol? { get set }
-    func userTappedContinueButton() 
+    func userTappedContinueButton()
+    func findBestPhase(activity: ActivityMetrics) -> EKEvent
 
 }
 
@@ -30,6 +32,8 @@ protocol ViewToPresenterNewActivityProtocol {
 protocol PresenterToInteractorNewActivityProtocol {
     
     var presenter: InteractorToPresenterNewActivityProtocol? { get set }
+    
+    func findBestPhaseFor(activity: ActivityMetrics) -> EKEvent?
 }
 
 

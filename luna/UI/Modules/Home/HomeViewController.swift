@@ -158,13 +158,22 @@ class HomeViewController: UIViewController {
         presenter?.insertActivity(title: "teste", initialDate: Date(), finalDate: Date().daysAfter(1))
     }
     
-    func idealPhase(stress: String?, sociability: String?, fisicalEffort: String?) {
-//        let stressInt: Int? = Int(stress)
-//        let idealEvent = presenter?.findBestPhase(activity: ActivityMetrics(stress: Int(stress), sociability: 1, fisicalEffort: 1, finalDate: Date().daysAfter(10)))
-//        let idealEventTitle = idealEvent?.title ?? "Default"
-//        let cyclePhase = CyclePhase(rawValue: idealEventTitle) ?? .none
-//        NewActivityInformations.shared.setBestPhase(cyclePhase)
-//        NewActivityInformations.shared.setDateInterval(DateInterval(start: (idealEvent?.startDate)!, end: (idealEvent?.endDate)!))
+    func idealPhase(stress: String, sociability: String, fisicalEffort: String, finalDate: Date) {
+        let stressInt = stress.toInt()
+        let sociabilityInt = sociability.toInt()
+        let fisicalEffortInt = fisicalEffort.toInt()
+        let idealEvent = presenter?.findBestPhase(
+            activity: ActivityMetrics(
+                stress: stressInt,
+                sociability: sociabilityInt,
+                fisicalEffort: fisicalEffortInt,
+                finalDate: finalDate
+            )
+        )
+        let idealEventTitle = idealEvent?.title ?? "Default"
+        let cyclePhase = CyclePhase(rawValue: idealEventTitle) ?? .none
+        NewActivityInformations.shared.setBestPhase(cyclePhase)
+        NewActivityInformations.shared.setDateInterval(DateInterval(start: (idealEvent?.startDate)!, end: (idealEvent?.endDate)!))
     }
     
     func addTapCardCycleEventObservable() {

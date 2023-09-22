@@ -16,6 +16,12 @@ class NewActivityViewController: UIViewController {
     
     var presenter: ViewToPresenterNewActivityProtocol?
     
+    var stressValue: String = ""
+    var sociabilityValue: String = ""
+    var fisicsEffortValue: String = ""
+    var dateActivity: Date = Date().daysAfter(10)
+    var titleActivity: String = ""
+    
     private var disposeBag = DisposeBag()
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -34,6 +40,8 @@ class NewActivityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         firstTimeContinueButtonTouchTrigger()
+        dateDeadlineObservable()
+        textActivityObservable()
         selectedStressCollectionNumber()
         selectedSociabilityCollectionNumber()
         selectedFisicsCollectionNumber()
@@ -42,10 +50,32 @@ class NewActivityViewController: UIViewController {
 //        self.navigationController?.addCustomBottomLine(color: Asset.gray100.color, height: 1)
     }
     
+    func textActivityObservable() {
+        newActivityView.activityStack.activityTextField
+            .rx.value.changed.asObservable()
+            .subscribe(onNext: { title in
+                self.titleActivity = title ?? ""
+            }).disposed(by: disposeBag)
+    }
+    
+    func dateDeadlineObservable() {
+        newActivityView.datePickerStack.datePicker
+            .rx.value.changed.asObservable()
+            .subscribe(onNext: { date in
+                self.dateActivity = date
+            }).disposed(by: disposeBag)
+    }
+    
     func firstTimeContinueButtonTouchTrigger() {
         newActivityView.button
             .rx
             .tap.bind {
+                self.idealPhase(
+                    stress: self.stressValue,
+                    sociability: self.sociabilityValue,
+                    fisicalEffort: self.fisicsEffortValue,
+                    finalDate: self.dateActivity
+                )
                 self.presenter?.userTappedContinueButton()
             }.disposed(by: disposeBag)
     }
@@ -54,7 +84,7 @@ class NewActivityViewController: UIViewController {
         newActivityView.metricsComponent.stressCollectionView
             .rx.selectItemAtCollection
             .subscribe(onNext: { numberSelected in
-                print("Stress: \(numberSelected)")
+                self.stressValue = numberSelected ?? "0"
             }).disposed(by: disposeBag)
             
     }
@@ -63,7 +93,7 @@ class NewActivityViewController: UIViewController {
         newActivityView.metricsComponent.sociabilityCollectionView
             .rx.selectItemAtCollection
             .subscribe(onNext: { numberSelected in
-                print("Sociability: \(numberSelected)")
+                self.sociabilityValue = numberSelected ?? "0"
             }).disposed(by: disposeBag)
     }
     
@@ -71,8 +101,29 @@ class NewActivityViewController: UIViewController {
         newActivityView.metricsComponent.fisicsCollectionView
             .rx.selectItemAtCollection
             .subscribe(onNext: { numberSelected in
-                print("Fisics: \(numberSelected)")
+                self.fisicsEffortValue = numberSelected ?? "0"
             }).disposed(by: disposeBag)
+    }
+    
+    func idealPhase(stress: String, sociability: String, fisicalEffort: String, finalDate: Date) {
+        let stressInt = stress.toInt()
+        let sociabilityInt = sociability.toInt()
+        let fisicalEffortInt = fisicalEffort.toInt()
+        let idealEvent = presenter?.findBestPhase(
+            activity: ActivityMetrics(
+                stress: stressInt,
+                sociability: sociabilityInt,
+                fisicalEffort: fisicalEffortInt,
+                finalDate: finalDate
+            )
+        )
+        let idealEventTitle = idealEvent?.title ?? "Default"
+        let cyclePhase = CyclePhase(rawValue: idealEventTitle) ?? .none
+        NewActivityInformations.shared.setBestPhase(cyclePhase)
+        if idealEvent?.startDate ?? Date() < Date() {
+            idealEvent?.startDate = Date()
+        }
+        NewActivityInformations.shared.setDateInterval(DateInterval(start: (idealEvent?.startDate)!, end: (idealEvent?.endDate)!))
     }
     
 }
