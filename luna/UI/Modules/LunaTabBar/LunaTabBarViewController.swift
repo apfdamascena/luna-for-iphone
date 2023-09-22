@@ -46,7 +46,7 @@ class LunaTabBarViewController: UITabBarController {
     
     private func setupViewControllers(){
         
-        if FirstActivityManager.shared.wasSeen {
+        if ActivityManager.shared.wasSeen {
             controllers[1] = NewActivityRouter.createModule()
         }
         

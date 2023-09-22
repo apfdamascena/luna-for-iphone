@@ -36,7 +36,7 @@ class FirstTimeNewActivityViewController: UIViewController {
         firstTimeLetsGoButtonTouchTrigger()
         self.tabBarController?.tabBar.isHidden = true
         navigationItem.title = nil
-        FirstActivityManager.shared.userSawFirstActivity()
+        ActivityManager.shared.userSawActivities()
     }
         
     func firstTimeLetsGoButtonTouchTrigger() {

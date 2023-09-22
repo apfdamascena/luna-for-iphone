@@ -42,7 +42,6 @@
 		0D2DB2F12ABA16CB003D71D8 /* ActivityOnCalendarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB2EC2ABA16CB003D71D8 /* ActivityOnCalendarRouter.swift */; };
 		0D2DB2F22ABA16CB003D71D8 /* ActivityOnCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB2ED2ABA16CB003D71D8 /* ActivityOnCalendarViewController.swift */; };
 		0D2DB2F62ABA17B4003D71D8 /* ActivityOnCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB2F52ABA17B4003D71D8 /* ActivityOnCalendarView.swift */; };
-		0D2DB2F82ABE2B08003D71D8 /* FirstActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB2F72ABE2B08003D71D8 /* FirstActivityManager.swift */; };
 		0D2FC76A2A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */; };
 		0D2FC76C2A6EF4810025D8B6 /* DataSourceEventObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */; };
 		0D2FC76E2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76D2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift */; };
@@ -304,7 +303,6 @@
 		0D2DB2EC2ABA16CB003D71D8 /* ActivityOnCalendarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityOnCalendarRouter.swift; sourceTree = "<group>"; };
 		0D2DB2ED2ABA16CB003D71D8 /* ActivityOnCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityOnCalendarViewController.swift; sourceTree = "<group>"; };
 		0D2DB2F52ABA17B4003D71D8 /* ActivityOnCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityOnCalendarView.swift; sourceTree = "<group>"; };
-		0D2DB2F72ABE2B08003D71D8 /* FirstActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstActivityManager.swift; sourceTree = "<group>"; };
 		0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSource.swift; sourceTree = "<group>"; };
 		0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceEventObservable.swift; sourceTree = "<group>"; };
 		0D2FC76D2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSourceImpl.swift; sourceTree = "<group>"; };
@@ -1078,7 +1076,6 @@
 				0D6794182A731B5C00382142 /* UserCycleInformation.swift */,
 				A427FC552AB06CA9006B4F2B /* ActivityManager.swift */,
 				BF4951182AB395280064F5D6 /* NewActivityInformations.swift */,
-				0D2DB2F72ABE2B08003D71D8 /* FirstActivityManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1920,7 +1917,6 @@
 				A48B7ECB2A75A02700CCC4C0 /* LearnAboutMenstrualCyclePhasesView.swift in Sources */,
 				0DCCB9262A6D82AF00451D63 /* OnboardingPageControlView.swift in Sources */,
 				A427FC4A2AAFA219006B4F2B /* NewActivityPresenter.swift in Sources */,
-				0D2DB2F82ABE2B08003D71D8 /* FirstActivityManager.swift in Sources */,
 				0D6794312A74725200382142 /* TeachRecordMenstruationRouter.swift in Sources */,
 				0D6336EC2A789A5700EE9699 /* OnboardingCyclePhaseCardType.swift in Sources */,
 				A427FC852AB23B18006B4F2B /* UITextField.swift in Sources */,

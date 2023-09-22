@@ -8,6 +8,7 @@
 import UIKit
 
 final class ActivityManager {
+    
     static let shared = ActivityManager()
     init (){}
     
