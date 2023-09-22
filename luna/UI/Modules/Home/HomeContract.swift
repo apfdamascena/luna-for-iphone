@@ -26,6 +26,7 @@ protocol PresenterToViewHomeProtocol {
     func showFeedbackRegisterMenstruation()
     
     func changeCurrentIndexCardPhase(at newIndex: Int)
+    func loadActivity(dataSource: ActivityEventMonthWeek)
 
 }
 
@@ -55,6 +56,7 @@ protocol ViewToPresenterHomeProtocol {
     func showCyclePhaseReferencesSheet()
     
     func userTappedCardPhase(at index: Int)
+    func loadActivitiesDataSource() 
 }
 
 
@@ -78,6 +80,7 @@ protocol PresenterToInteractorHomeProtocol {
     
     var calendarPermission: CalendarAccess { get }
     
+    func findActivityEventsOfCurrentMonth() -> ActivityEventMonthWeek 
 }
 
 

@@ -11,22 +11,6 @@ import RxSwift
 
 class ActivityDataSourceImpl: ActivityDataSource {
     
-    var activities: BehaviorSubject<[ActivityCellViewModel]> = BehaviorSubject(value: [
-        ActivityCellViewModel(title: "Aniversário de Alana",
-                                          hourStart: "10:00",
-                                          hourEnd: "12:00",
-                                          day: Date(),
-                                          phase: .fertile),
-        ActivityCellViewModel(title: "Aniversário de Alana",
-                                          hourStart: "10:00",
-                                          hourEnd: "12:00",
-                                          day: Date(),
-                                          phase: .fertile),
-        ActivityCellViewModel(title: "Aniversário de Alana",
-                                          hourStart: "10:00",
-                                          hourEnd: "12:00",
-                                          day: Date(),
-                                          phase: .fertile)
-    ])
-    var activitiesForSegmentedControl: BehaviorSubject<[ActivityCellViewModel]> = BehaviorSubject(value: [])
+    var activities: BehaviorSubject<[ActivityCellViewModel]> = BehaviorSubject(value: [])
+    var activitiesForSegmentedControl: BehaviorSubject<ActivityFilter> = BehaviorSubject(value: ActivityFilter(week: [], month: []))
 }

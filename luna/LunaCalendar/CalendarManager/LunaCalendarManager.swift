@@ -43,9 +43,9 @@ class LunaCalendarManager: CalendarManager  {
          lunaEventService: CalendarEventService? = nil,
          cycleInformationsCalculator: CycleInformationsCalculator? = nil) {
         
-        let calendar = CalendarProvider(eventStore).getCalendar()
-        self.calendar = calendar.generalCalendar
-        self.lunaEventService = CalendarEventService(with: eventStore, in: calendar.generalCalendar)
+        let calendar = CalendarProvider(eventStore).getCalendar(calendarTitle: .appName)
+        self.calendar = calendar
+        self.lunaEventService = CalendarEventService(with: eventStore, in: calendar)
         self.cycleInformationsCalculator = CycleInformationsCalculator()
     }
 
@@ -58,9 +58,9 @@ class LunaCalendarManager: CalendarManager  {
                 return
             }
             
-            let calendar = CalendarProvider(calendarStore).getCalendar()
-            self?.calendar = calendar.generalCalendar
-            self?.lunaEventService = CalendarEventService(with: calendarStore, in: calendar.generalCalendar)
+            let calendar = CalendarProvider(calendarStore).getCalendar(calendarTitle: .appName)
+            self?.calendar = calendar
+            self?.lunaEventService = CalendarEventService(with: calendarStore, in: calendar)
             self?.cycleInformationsCalculator = CycleInformationsCalculator()
             completion(.success(.authorized))
         }

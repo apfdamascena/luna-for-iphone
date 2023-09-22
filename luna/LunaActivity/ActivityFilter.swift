@@ -7,8 +7,12 @@
 
 import Foundation
 
+struct ActivityEventMonthWeek {
+    let week: [ActivityEvent]
+    let month: [ActivityEvent]
+}
 
-protocol ActivityFilter {
-    
-    func filter(_ data: [ActivityCellViewModel] ) -> [ActivityCellViewModel]
+struct ActivityFilter {
+    let week: [ActivityCellViewModel]
+    let month: [ActivityCellViewModel]
 }

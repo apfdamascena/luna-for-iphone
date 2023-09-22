@@ -11,4 +11,5 @@ struct ActivityEvent {
     let title: String
     let startDate: Date
     let endDate: Date
+    var phase: CyclePhase = .none
 }

@@ -58,4 +58,23 @@ extension Date {
         return String(day.prefix(1))
     }
     
+    func startOfMonth() -> Date {
+      return Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: Calendar.current.startOfDay(for: self)))!
+    }
+  
+    func endOfMonth() -> Date {
+      return Calendar.current.date(byAdding: DateComponents(month: 1, day: 0), to: self.startOfMonth())!
+    }
+    
+    func formattHour() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter.string(from: self)
+    }
+
+    func endOfWeek() -> Date {
+       let gregorian = Calendar(identifier: .gregorian)
+       let sunday = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self))
+        return gregorian.date(byAdding: .day, value: 7, to: sunday ?? Date()) ?? Date()
+   }
 }

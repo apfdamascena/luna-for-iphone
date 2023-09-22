@@ -16,7 +16,7 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
     
     private let activitiesCalendarManager: ActivitiesCalendarManager
     var lunaCalendarManager: CalendarManager?
-    
+
     var calendarPermission: CalendarAccess = .unauthorized
     
     init(lunaCalendarManager: CalendarManager = LunaCalendarManager(),
@@ -163,4 +163,12 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
         return (index + 1) % 5
     }
     
+    func findActivityEventsOfCurrentMonth() -> ActivityEventMonthWeek {
+        let activitiesMonth = activitiesCalendarManager.getMonthEventsStartingToday()
+        let activitiesWeek = activitiesCalendarManager.getWeekEventsStartingToday()
+
+        return ActivityEventMonthWeek(week: activitiesWeek, month: activitiesMonth)
+    }
+    
 }
+
