@@ -7,21 +7,7 @@
 
 import UIKit
 
-class FirstActivityManager {
-    
-    static let shared = FirstActivityManager()
-    
-    private init(){}
-    
-    var wasSeen: Bool {
-        return UserDefaults.standard.object(forKey: "first_new_activity") != nil
-    }
-    
-    func userSawFirstActivity(){
-        UserDefaults.standard.set(true, forKey: "first_new_activity")
-    }
-    
-}
+
 
 class LunaTabBarViewController: UITabBarController {
     
