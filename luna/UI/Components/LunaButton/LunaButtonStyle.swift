@@ -8,6 +8,7 @@
 import UIKit
 
 enum LunaButtonStyle {
+    
     case next
     case previous
     case initial
@@ -16,6 +17,7 @@ enum LunaButtonStyle {
     case newEvent
     case letsGo
     case scheduleActivity
+    case newActivity
     
     var value: String {
         switch self {
@@ -35,6 +37,8 @@ enum LunaButtonStyle {
             return L10n.Constants.Content.Button.newEvent
         case .letsGo:
             return L10n.Constants.Content.Label.FirstTimeNewActivity.button
+        case .newActivity:
+            return "Nova atividade"
         }
     }
     

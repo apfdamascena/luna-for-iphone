@@ -104,6 +104,7 @@ internal enum Asset {
   internal static let landingPageBackgroundImage = ImageAsset(name: "landingPageBackgroundImage")
   internal static let linkIcon = ImageAsset(name: "link_icon")
   internal static let logo = ImageAsset(name: "logo")
+  internal static let lunaMemoji = ImageAsset(name: "luna_memoji")
   internal static let lutealSelected = ImageAsset(name: "lutealSelected")
   internal static let lutealCell = ImageAsset(name: "luteal_cell")
   internal static let lutealPhaseActivityCell = ImageAsset(name: "luteal_phase_activity_cell")
