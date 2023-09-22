@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import EventKit
 
 class NewActivityPresenter: ViewToPresenterNewActivityProtocol {    
 
@@ -15,13 +16,22 @@ class NewActivityPresenter: ViewToPresenterNewActivityProtocol {
     var router: PresenterToRouterNewActivityProtocol?
     
     func userTappedContinueButton() {
-
+        
         guard let pageViewController = view else { return }        
         DispatchQueue.main.async {
             self.router?.pushNewActivity(on: pageViewController)
         }
         
     }
+    
+    func findBestPhase(activity: ActivityMetrics) -> EKEvent {
+        guard let idealPhase = interactor?.findBestPhaseFor(activity: activity) else {
+            return EKEvent()
+        }
+        
+        return idealPhase
+    }
+    
 }
 
 extension NewActivityPresenter: InteractorToPresenterNewActivityProtocol {

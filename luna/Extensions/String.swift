@@ -15,4 +15,13 @@ extension String {
             return ("\(day) de \(month)")
         }
     }
+    
+    func toInt() -> Int {
+        if let intValue = Int(self) {
+            return intValue
+        } else {
+            return 0
+        }
+    }
+    
 }
