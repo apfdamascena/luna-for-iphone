@@ -23,14 +23,6 @@ class NewActivityViewController: UIViewController {
     var titleActivity: String = ""
     
     private var disposeBag = DisposeBag()
-
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil , bundle: nibBundleOrNil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     override func loadView() {
         super.loadView()
@@ -46,8 +38,8 @@ class NewActivityViewController: UIViewController {
         selectedSociabilityCollectionNumber()
         selectedFisicsCollectionNumber()
         self.navigationItem.setHidesBackButton(true, animated: true)
+        self.tabBarController?.tabBar.isHidden = false
         self.title = L10n.Constants.Content.Label.NewActivity.Nav.title
-//        self.navigationController?.addCustomBottomLine(color: Asset.gray100.color, height: 1)
     }
     
     func textActivityObservable() {

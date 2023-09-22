@@ -12,7 +12,7 @@ class BestActivityViewController: UIViewController {
     
     var presenter: ViewToPresenterBestActivityProtocol?
     private let bestActivityView = BestActivityView()
-    
+        
     override func loadView() {
         super.loadView()
         view = bestActivityView
@@ -30,6 +30,10 @@ class BestActivityViewController: UIViewController {
         // pode botar aq?
         let nav = self.navigationController?.navigationBar
         nav?.tintColor = Asset.red600.color
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
 
 }
