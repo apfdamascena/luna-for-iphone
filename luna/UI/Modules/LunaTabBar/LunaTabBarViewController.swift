@@ -31,6 +31,9 @@ class LunaTabBarViewController: UITabBarController {
         super.viewDidLoad()
         setupViewControllers()
         addAdditionalConfiguration()
+        
+        
+        self.tabBar.barTintColor = .white
     }
     
     override func viewWillAppear(_ animated: Bool) {

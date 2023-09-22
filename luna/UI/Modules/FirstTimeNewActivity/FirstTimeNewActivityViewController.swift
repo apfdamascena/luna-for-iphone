@@ -34,6 +34,7 @@ class FirstTimeNewActivityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         firstTimeLetsGoButtonTouchTrigger()
+        self.tabBarController?.tabBar.isHidden = true
         navigationItem.title = nil
     }
         
