@@ -11,7 +11,6 @@ class FirstActivityManager {
     
     static let shared = FirstActivityManager()
     
-    
     private init(){}
     
     var wasSeen: Bool {

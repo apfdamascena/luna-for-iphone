@@ -45,6 +45,11 @@ class FirstTimeNewActivityViewController: UIViewController {
                 self.presenter?.userTappedLetsGoButton()
             }.disposed(by: disposeBag)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        FirstActivityManager.shared.userSawFirstActivity()
+    }
 
 }
 
