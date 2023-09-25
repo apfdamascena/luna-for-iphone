@@ -34,7 +34,9 @@ class FirstTimeNewActivityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         firstTimeLetsGoButtonTouchTrigger()
+        self.tabBarController?.tabBar.isHidden = true
         navigationItem.title = nil
+        ActivityManager.shared.userSawActivities()
     }
         
     func firstTimeLetsGoButtonTouchTrigger() {
@@ -44,7 +46,6 @@ class FirstTimeNewActivityViewController: UIViewController {
                 self.presenter?.userTappedLetsGoButton()
             }.disposed(by: disposeBag)
     }
-
 }
 
 extension FirstTimeNewActivityViewController: PresenterToViewFirstTimeNewActivityProtocol{

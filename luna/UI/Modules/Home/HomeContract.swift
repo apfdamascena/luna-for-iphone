@@ -43,8 +43,8 @@ protocol ViewToPresenterHomeProtocol {
     func loadCalendarToCollection()
     func insertMenstruation(selectedDate: Date) -> Bool
     func insertActivity(title: String, initialDate: Date, finalDate: Date)
-    func findBestPhase(activity: ActivityMetrics)
-        
+    func findBestPhase(activity: ActivityMetrics) -> EKEvent
+
     func userSelect(_ cell: CalendarCollectionViewCell?,
                     center: CalendarCollectionViewCell?,
                     andMoveCenter: CGFloat?)

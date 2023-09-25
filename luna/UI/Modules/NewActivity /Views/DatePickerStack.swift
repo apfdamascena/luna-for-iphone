@@ -21,7 +21,7 @@ class DatePickerStack: UIStackView, AnyView {
         return label
     }()
     
-    private let datePicker: UIDatePicker = {
+    private(set) lazy var datePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .date
         datePicker.preferredDatePickerStyle = .compact

@@ -21,6 +21,8 @@ class MetricsComponent: UIStackView, AnyView {
         return label
     }()
     
+    private(set) var stressCollectionView = NewActivityCollectionView(with: "stress")
+    
     private let divStress = Div()
     
     private let sociabilityTitle: LunaText = {
@@ -33,6 +35,8 @@ class MetricsComponent: UIStackView, AnyView {
         label.draw(model)
         return label
     }()
+    
+    private(set) var sociabilityCollectionView = NewActivityCollectionView(with: "sociability")
     
     private let divSociability = Div()
     
@@ -47,7 +51,7 @@ class MetricsComponent: UIStackView, AnyView {
         return label
     }()
     
-    
+    private(set) var fisicsCollectionView = NewActivityCollectionView(with: "fisics")
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -60,10 +64,13 @@ class MetricsComponent: UIStackView, AnyView {
     
     func addSubviews() {
         addSubview(stressTitle)
+        addSubview(stressCollectionView)
         addSubview(divStress)
         addSubview(sociabilityTitle)
+        addSubview(sociabilityCollectionView)
         addSubview(divSociability)
         addSubview(fisicsTitle)
+        addSubview(fisicsCollectionView)
     }
     
     func addConstraints() {
@@ -73,8 +80,14 @@ class MetricsComponent: UIStackView, AnyView {
             $0.top.equalToSuperview().offset(12)
         }
         
+        stressCollectionView.snp.makeConstraints {
+            $0.top.equalTo(stressTitle.snp.bottom).offset(12)
+            $0.leading.trailing.equalToSuperview().inset(2.su)
+            $0.height.equalTo(6.su)
+        }
+        
         divStress.snp.makeConstraints {
-            $0.top.equalTo(stressTitle.snp.bottom).offset(80)
+            $0.top.equalTo(stressCollectionView.snp.bottom).offset(20)
             $0.leading.trailing.equalToSuperview().inset(2.su)
             $0.height.equalTo(1)
         }
@@ -82,6 +95,12 @@ class MetricsComponent: UIStackView, AnyView {
         sociabilityTitle.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(2.su)
             $0.top.equalTo(divStress.snp.bottom).offset(24)
+        }
+        
+        sociabilityCollectionView.snp.makeConstraints {
+            $0.top.equalTo(sociabilityTitle.snp.bottom).offset(12)
+            $0.leading.trailing.equalToSuperview().inset(2.su)
+            $0.height.equalTo(6.su)
         }
         
         divSociability.snp.makeConstraints {
@@ -93,6 +112,12 @@ class MetricsComponent: UIStackView, AnyView {
         fisicsTitle.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(2.su)
             $0.top.equalTo(divSociability.snp.bottom).offset(24)
+        }
+        
+        fisicsCollectionView.snp.makeConstraints {
+            $0.top.equalTo(fisicsTitle.snp.bottom).offset(12)
+            $0.leading.trailing.equalToSuperview().inset(2.su)
+            $0.height.equalTo(6.su)
         }
         
     }

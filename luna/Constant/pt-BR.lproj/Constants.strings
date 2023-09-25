@@ -98,6 +98,8 @@
 "constants.user.key.for_onboarding_was_seen"="onboarding";
 "constants.user.key.for_activities_was_seen"="activities";
 
+"constants.user.key.for_onboarding_activity_was_seen"="first_new_activity";
+
 "constants.content.label.onboarding_register_menstruation"="Registrar Menstruação";
 "constants.content.label.onboarding_register_menstruation_description"="O círculo vermelho representa o dia em que ocorreu a menstruação. Basta clicar no botão para registrar!";
 "constants.content.label.onboarding_forecast"="Previsão";

@@ -10,11 +10,11 @@ import SnapKit
 
 class NewActivityView: UIView, AnyView {
     
-    private let activityStack = ActivityStack()
+    private(set) var activityStack = ActivityStack()
     private let metricsStack = MetricsStack()
     private let deadlineStack = DeadlineStack()
-    private let datePickerStack = DatePickerStack()
-    private let metricsComponent = MetricsComponent()
+    private(set) var datePickerStack = DatePickerStack()
+    private(set) var metricsComponent = MetricsComponent()
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
