@@ -24,17 +24,18 @@ class LandingPageViewController: UIViewController, UICollectionViewDelegate {
         self.view = landingPageView
         
         addUserTouchTrigger()
+        removeLunaCalendarIfNeeded()
+    }
+    
+    private func removeLunaCalendarIfNeeded(){
+        print("removed 1")
+        presenter?.removeLunaCalendar()
     }
     
     func addUserTouchTrigger() {
         landingPageView.startButton.rx.tap.bind{
             self.presenter?.userTappedContinue()
         }.disposed(by: disposeBag)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        presenter?.removeLunaCalendar()
     }
 }
 

@@ -159,10 +159,15 @@ class LunaCalendarManager: CalendarManager  {
     }
     
     func removeLunaCalendarOnOnboarding() {
+        
+        print("removed 4")
         do {
-            guard let calendar = CalendarProvider(eventStore).getCalendar(calendarTitle: .appName) else { return }
+            guard let calendar = calendar else { return }
+            print("removed 5")
             try eventStore.removeCalendar(calendar, commit: true)
+            print("removed 6")
         } catch {
+            print("removed deu erro")
             NSLog(error.localizedDescription)
         }
     }

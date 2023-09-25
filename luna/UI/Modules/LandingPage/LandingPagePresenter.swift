@@ -23,6 +23,7 @@ class LandingPagePresenter: ViewToPresenterLandingPageProtocol {
     }
     
     func removeLunaCalendar() {
+        print("removed 2")
         interactor?.removeAllPhasesFromCalendar()
     }
 }
