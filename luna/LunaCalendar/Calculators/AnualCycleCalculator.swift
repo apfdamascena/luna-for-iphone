@@ -41,7 +41,7 @@ class AnualCycleCalculator {
             if (firstMenstruationTime != nil) {
                 cyclePhases.append(contentsOf: [calculateFirstFolicularDate(), calculateFertileDate(), calculateLutealDate(), calculatePMSDate()])
             } else {
-                return []
+                cyclePhases.append(contentsOf: [calculateFolicularDate(), calculateFertileDate(), calculateLutealDate(), calculatePMSDate()])
             }
             
             monthsFromMenstruation += 1
@@ -63,7 +63,7 @@ class AnualCycleCalculator {
     }
     
     private func calculateFirstFolicularDate() -> LunaEvent {
-        return calculatePhaseDate(CyclePhase.folicular, (firstMenstruationTime! + 1) ?? cycleInformations.averageMenstruationDuration, 10)
+        return calculatePhaseDate(CyclePhase.folicular, ((firstMenstruationTime ?? 0) + 1) , 10)
     }
     
     private func calculateFolicularDate() -> LunaEvent {
@@ -96,4 +96,6 @@ class AnualCycleCalculator {
         let lastDay = cycleInformations.firstDayMenstruation.daysAfter(lastDayValue)
         return LunaEvent(title: phase, startDate: firstDay, endDate: lastDay)
     }
+    
+    
 }

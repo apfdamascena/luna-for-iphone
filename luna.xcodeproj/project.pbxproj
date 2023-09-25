@@ -150,6 +150,8 @@
 		BF6520E02A6F0D4B00E60054 /* CycleDurationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520DC2A6F0D4B00E60054 /* CycleDurationRouter.swift */; };
 		BF6520E12A6F0D4B00E60054 /* CycleDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520DD2A6F0D4B00E60054 /* CycleDurationViewController.swift */; };
 		BF6520E42A6F0D5D00E60054 /* CycleDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520E32A6F0D5D00E60054 /* CycleDurationView.swift */; };
+		BF8701462ABCCA5500F6D83D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF8701452ABCCA5500F6D83D /* GoogleService-Info.plist */; };
+		BF8701482ABE2F7900F6D83D /* LunaCalendarManager+Bugfix.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8701472ABE2F7900F6D83D /* LunaCalendarManager+Bugfix.swift */; };
 		BFBD77132A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD77122A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift */; };
 		BFCAAD3B2A6B19AE00A91CC0 /* MenstruationDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */; };
 		BFCDE18E2AA6553700CFCA95 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BFCDE18D2AA6553700CFCA95 /* FirebaseAnalytics */; };
@@ -174,7 +176,6 @@
 		CA0D93AB2A70472A0064C1C3 /* CalendarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0D93AA2A70472A0064C1C3 /* CalendarCollectionView.swift */; };
 		CA0D93AD2A70478A0064C1C3 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0D93AC2A70478A0064C1C3 /* CalendarCollectionViewCell.swift */; };
 		CA12EADE2AB4F34100CB17D9 /* HomeViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA12EADD2AB4F34100CB17D9 /* HomeViewState.swift */; };
-		CA12EAE22ABB7AA900CB17D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA12EAE12ABB7AA900CB17D9 /* GoogleService-Info.plist */; };
 		CA17ED962A71ED750051BF9D /* CyclePhaseFocus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17ED952A71ED750051BF9D /* CyclePhaseFocus.swift */; };
 		CA17ED982A71EDCE0051BF9D /* CyclePhaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17ED972A71EDCE0051BF9D /* CyclePhaseViewModel.swift */; };
 		CA557BCC2A6B1742001DF2BB /* LandingPageContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA557BC82A6B1742001DF2BB /* LandingPageContract.swift */; };
@@ -359,6 +360,8 @@
 		BF6520DC2A6F0D4B00E60054 /* CycleDurationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationRouter.swift; sourceTree = "<group>"; };
 		BF6520DD2A6F0D4B00E60054 /* CycleDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationViewController.swift; sourceTree = "<group>"; };
 		BF6520E32A6F0D5D00E60054 /* CycleDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationView.swift; sourceTree = "<group>"; };
+		BF8701452ABCCA5500F6D83D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/info-plist-dev/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BF8701472ABE2F7900F6D83D /* LunaCalendarManager+Bugfix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LunaCalendarManager+Bugfix.swift"; sourceTree = "<group>"; };
 		BFBD77122A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LunaCalendarManager+Verifications.swift"; sourceTree = "<group>"; };
 		BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationView.swift; sourceTree = "<group>"; };
 		BFCDE1982AA6678700CFCA95 /* AnalyticsEventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEventType.swift; sourceTree = "<group>"; };
@@ -380,7 +383,6 @@
 		CA0D93AA2A70472A0064C1C3 /* CalendarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionView.swift; sourceTree = "<group>"; };
 		CA0D93AC2A70478A0064C1C3 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA12EADD2AB4F34100CB17D9 /* HomeViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewState.swift; sourceTree = "<group>"; };
-		CA12EAE12ABB7AA900CB17D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA17ED952A71ED750051BF9D /* CyclePhaseFocus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclePhaseFocus.swift; sourceTree = "<group>"; };
 		CA17ED972A71EDCE0051BF9D /* CyclePhaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclePhaseViewModel.swift; sourceTree = "<group>"; };
 		CA557BC82A6B1742001DF2BB /* LandingPageContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageContract.swift; sourceTree = "<group>"; };
@@ -706,7 +708,7 @@
 		0DBADDCB2A65FF2A00A10FC3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CA12EAE12ABB7AA900CB17D9 /* GoogleService-Info.plist */,
+				BF8701452ABCCA5500F6D83D /* GoogleService-Info.plist */,
 				0DA74C742A9549AA0021EC40 /* fonts */,
 				0DBADDA42A65FDF300A10FC3 /* Assets.xcassets */,
 				0DBADDA62A65FDF300A10FC3 /* LaunchScreen.storyboard */,
@@ -1014,6 +1016,7 @@
 			children = (
 				BF4144302A93DC2F00517910 /* LunaCalendarManager+Check.swift */,
 				BFBD77122A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift */,
+				BF8701472ABE2F7900F6D83D /* LunaCalendarManager+Bugfix.swift */,
 				BFD533B92A7158C00063351E /* LunaCalendarManager.swift */,
 				BFD533BD2A716B980063351E /* Extensions */,
 			);
@@ -1307,7 +1310,7 @@
 			files = (
 				0DBADDA82A65FDF300A10FC3 /* LaunchScreen.storyboard in Resources */,
 				CACB96F62A85670300EB66DD /* Constants.strings in Resources */,
-				CA12EAE22ABB7AA900CB17D9 /* GoogleService-Info.plist in Resources */,
+				BF8701462ABCCA5500F6D83D /* GoogleService-Info.plist in Resources */,
 				0DA74C762A9549CB0021EC40 /* CoconRegularFont.otf in Resources */,
 				0DBADDA52A65FDF300A10FC3 /* Assets.xcassets in Resources */,
 			);
@@ -1523,6 +1526,7 @@
 				0D6336A02A774D7A00EE9699 /* OtherCyclePhasesRouter.swift in Sources */,
 				CAAB60F22A82CB080003F770 /* ReferencesSheetView.swift in Sources */,
 				0DDA61292A69CEC600CA15C6 /* MenstruationDurationRouter.swift in Sources */,
+				BF8701482ABE2F7900F6D83D /* LunaCalendarManager+Bugfix.swift in Sources */,
 				A48B7ED22A7993FB00CCC4C0 /* CyclePhaseTextViewModel.swift in Sources */,
 				0D6794272A74691000382142 /* OnboardingCyclePhaseCard.swift in Sources */,
 				0D63371F2A7C7D1300EE9699 /* FeedbackAfterAction.swift in Sources */,
@@ -1823,7 +1827,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CMWHQAT5B4;
+				DEVELOPMENT_TEAM = M3SKJK6V42;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = luna/Info.plist;
@@ -1858,7 +1862,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CMWHQAT5B4;
+				DEVELOPMENT_TEAM = M3SKJK6V42;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = luna/Info.plist;

@@ -56,16 +56,11 @@ extension LunaCalendarManager {
 
         }
         
-        //chamar funcao de add novo ciclo
         return addMenstruation(selectedDate: selectedDate, eventService: eventService)
     }
     
     func adjustMenstruationAfter(selectedDate: Date, menstruationEvent: EKEvent, eventService: CalendarEventService) -> ChangeCycleResponse {
         eventService.removeEvent(eventId: menstruationEvent.eventIdentifier)
-        
-//        if selectedDate.daysBetween(menstruationEvent.endDate) > 10 {
-//            return ChangeCycleResponse.menstruationWillHaveMoreThanMaxDays
-//        }
 
         let newMenstruationEvent = LunaEvent(title: CyclePhase.menstruation, startDate: selectedDate, endDate: menstruationEvent.endDate)
         eventService.createEvent(newMenstruationEvent)

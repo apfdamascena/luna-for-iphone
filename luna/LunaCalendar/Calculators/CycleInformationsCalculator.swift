@@ -59,8 +59,12 @@ class CycleInformationsCalculator {
        
         guard let lastMenstruation = menstruationEvents.popLast() else { return }
         
-        if lastMenstruation.endDate.formatToInt() == Date().formatToInt() && !isRemove {
-            guard let penultimateMenstruation = menstruationEvents.last else { return }
+        if lastMenstruation.endDate.formatToInt() == Date().formatToInt() {
+            guard let penultimateMenstruation = menstruationEvents.last else {
+
+                return
+                
+            }
             var penultimateDuration = penultimateMenstruation.startDate.daysBetween(penultimateMenstruation.endDate) + 1
 
             penultimateDuration = min(penultimateDuration, 10)
@@ -71,7 +75,7 @@ class CycleInformationsCalculator {
         }
         
         var menstruationDuration = lastMenstruation.startDate.daysBetween(lastMenstruation.endDate) + 1
-        
+
         menstruationDuration = min(menstruationDuration, 10)
         menstruationDuration = max(menstruationDuration, 4)
 

@@ -137,7 +137,6 @@ class HomeViewController: UIViewController {
                                            center: centerCell,
                                            andMoveCenter: centerXtoCollection)
             }).disposed(by: disposeBag)
-        
     }
     
     
@@ -236,19 +235,6 @@ extension HomeViewController: PresenterToViewHomeProtocol {
             
             if insertedMenstruation {
                 presenter?.loadCalendarToCollection(isloading: false)
-            }
-            else {
-                // MUDAR ALERTA, MUDAR TEXTO
-                let alert = UIAlertController(title: "Aviso",
-                                              message: "Você não pode marcar um dia próximo a outra menstruação",
-                                              preferredStyle: .alert)
-                
-                alert.addAction(UIAlertAction(title: "OK",
-                                              style: .default,
-                                              handler: { _ in
-                }))
-                
-                present(alert, animated: true, completion: nil)
             }
         }
         else {
