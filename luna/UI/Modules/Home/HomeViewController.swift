@@ -213,6 +213,7 @@ class HomeViewController: UIViewController {
                     activities = activitiesValue.week
                 }
                 self.activitiesDataSource.activities.onNext(activities)
+                self.homeView.drawActivities(activities)
             })
             .disposed(by: disposeBag)
     }

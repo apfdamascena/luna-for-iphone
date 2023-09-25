@@ -98,11 +98,22 @@ class ActivitiesView: UIView, AnyView {
             $0.top.equalTo(segmentedControl.snp.bottom).offset(2.su)
             $0.leading.trailing.equalToSuperview()
             
-            $0.height.equalTo(60.su)
+            $0.height.equalTo(80.su)
         }
+        
+
     }
     
-    func createTableWithActivities(_ activities: [ActivityCell]){
+    func createTableWithActivities(with size: Int){
+        activities.snp.removeConstraints()
+        
+        activities.snp.makeConstraints{
+            $0.top.equalTo(segmentedControl.snp.bottom).offset(2.su)
+            $0.leading.trailing.equalToSuperview()
+            
+            $0.height.equalTo(size)
+        }
+        
         
     }
 }

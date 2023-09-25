@@ -24,7 +24,6 @@ class CalendarProvider {
           return calendar.title == calendarTitle.title
         }
 
-
         //[MUDAR]: ver formas de pegar o calendario certo
         guard let calendar = cicleCalendar.first else {
           let calendarCreated = calendarCreator.create(calendarTitle: calendarTitle)
