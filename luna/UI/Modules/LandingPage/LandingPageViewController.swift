@@ -28,7 +28,6 @@ class LandingPageViewController: UIViewController, UICollectionViewDelegate {
     }
     
     private func removeLunaCalendarIfNeeded(){
-        print("removed 1")
         presenter?.removeLunaCalendar()
     }
     

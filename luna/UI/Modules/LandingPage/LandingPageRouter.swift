@@ -20,6 +20,7 @@ class LandingPageRouter: PresenterToRouterLandingPageProtocol {
         viewController.presenter = presenter
         viewController.presenter?.router = LandingPageRouter()
         viewController.presenter?.interactor = LandingPageInteractor()
+//        viewController.presenter?.interactor?.presenter = presenter
         viewController.presenter?.view = viewController
         
         return viewController

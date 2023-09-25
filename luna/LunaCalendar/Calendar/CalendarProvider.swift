@@ -21,12 +21,13 @@ class CalendarProvider {
           let cicleCalendar = calendars.filter { calendar in
               return calendar.title == calendarTitle.title
           }
-          
+        
           //[MUDAR]: ver formas de pegar o calendario certo
           guard let calendar = cicleCalendar.first else {
               let calendarCreated = calendarCreator.create(calendarTitle: calendarTitle)
               return calendarCreated
           }
+        
           return calendar
           
       }
