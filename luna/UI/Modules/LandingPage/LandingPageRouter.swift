@@ -3,7 +3,7 @@
 //  luna
 //
 //  Created by gabrielfelipo on 21/07/23.
-//  
+//
 //
 
 import Foundation
@@ -32,3 +32,4 @@ class LandingPageRouter: PresenterToRouterLandingPageProtocol {
     }
     
 }
+

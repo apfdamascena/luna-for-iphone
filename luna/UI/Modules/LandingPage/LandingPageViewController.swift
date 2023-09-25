@@ -3,7 +3,7 @@
 //  luna
 //
 //  Created by gabrielfelipo on 21/07/23.
-//  
+//
 //
 
 import UIKit
@@ -31,6 +31,11 @@ class LandingPageViewController: UIViewController, UICollectionViewDelegate {
             self.presenter?.userTappedContinue()
         }.disposed(by: disposeBag)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.removeLunaCalendar()
+    }
 }
 
 
@@ -50,6 +55,7 @@ struct LandingPageViewController_Preview: PreviewProvider {
 }
 
 #endif
+
 
 
 
