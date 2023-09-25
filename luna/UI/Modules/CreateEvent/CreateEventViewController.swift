@@ -24,7 +24,6 @@ class CreateEventViewController: UIViewController {
         nav?.tintColor = Asset.red600.color
     }
     
-    
     override func loadView() {
         super.loadView()
         view = createEventView
