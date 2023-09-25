@@ -14,7 +14,6 @@ class NotificationRequestViewController: UIViewController {
     
     private let notificationRequestView = NotificationRequestView()
     
-    
     override func loadView() {
         super.loadView()
         view = notificationRequestView
@@ -24,6 +23,7 @@ class NotificationRequestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        presenter?.removeCalendar()
     }
     
     override func viewWillAppear(_ animated: Bool) {

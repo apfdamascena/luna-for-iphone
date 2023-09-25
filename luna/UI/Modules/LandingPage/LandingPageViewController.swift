@@ -3,7 +3,7 @@
 //  luna
 //
 //  Created by gabrielfelipo on 21/07/23.
-//  
+//
 //
 
 import UIKit
@@ -50,6 +50,7 @@ struct LandingPageViewController_Preview: PreviewProvider {
 }
 
 #endif
+
 
 
 

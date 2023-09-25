@@ -18,6 +18,14 @@ protocol ViewToPresenterNotificationRequestProtocol {
     
     var view: PresenterToViewNotificationRequestProtocol? { get set }
     var router: PresenterToRouterNotificationRequestProtocol? { get set }
+    var interactor: PresenterToInteractorNotificationRequestProtocol? { get set }
+    
+    func removeCalendar()
+}
+
+protocol PresenterToInteractorNotificationRequestProtocol {
+    
+    func removeAllPhaseFromCalendar()
 }
 
 // MARK: Router Input (Presenter -> Router)

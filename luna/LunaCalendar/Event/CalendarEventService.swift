@@ -8,6 +8,7 @@
 import EventKit
 
 class CalendarEventService {
+    
     private let eventStore: EKEventStore
     private let calendar: EKCalendar?
     
@@ -83,6 +84,15 @@ class CalendarEventService {
             return true
         }
         return false
+    }
+    
+    func removeCalendar(){
+        guard let calendar = calendar else { return }
+        do {
+            try eventStore.removeCalendar(calendar, commit: true)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
 }

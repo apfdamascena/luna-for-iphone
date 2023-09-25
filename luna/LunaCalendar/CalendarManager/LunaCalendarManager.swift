@@ -30,16 +30,18 @@ protocol CalendarManager {
     func changeDayPhaseBy(selectedDate: Date) -> ChangeCycleResponse
     
     func adjustEventsInCalendar(selectedDate: Date, isRemove: Bool)
+    
+    func removeLunaCalendarOnOnboarding()
 }
 
 class LunaCalendarManager: CalendarManager  {
-
+    
     private let eventStore = EKEventStore()
     private var calendar: EKCalendar?
     var lunaEventService: CalendarEventService?
     var cycleInformationsCalculator: CycleInformationsCalculator?
     
-    init(calendar: EKCalendar? = nil,
+    init(
          lunaEventService: CalendarEventService? = nil,
          cycleInformationsCalculator: CycleInformationsCalculator? = nil) {
         
@@ -113,16 +115,6 @@ class LunaCalendarManager: CalendarManager  {
                 startDate: phase.startDate,
                 endDate: phase.endDate)
             createEvent(event)
-
-//            if event.startDate.formatToInt() > Date().formatToInt() || isFirst {
-//                createEvent(event)
-//            } else if event.endDate.formatToInt() > Date().formatToInt() {
-//                let event = LunaEvent(
-//                    title: phase.title,
-//                    startDate: Date().daysAfter(1),
-//                    endDate: phase.endDate)
-//                createEvent(event)
-//            }
         }
     }
     
@@ -165,6 +157,8 @@ class LunaCalendarManager: CalendarManager  {
             eventService.removeEvent(eventId: event.calendarItemIdentifier)
         }
     }
-
-
+    
+    func removeLunaCalendarOnOnboarding() {
+        lunaEventService?.removeCalendar()
+    }
 }

@@ -7,6 +7,7 @@
 import EventKit
 
 class CalendarProvider {
+    
     private let eventStore: EKEventStore
     private let calendarCreator: CalendarCreator
 
@@ -17,17 +18,20 @@ class CalendarProvider {
     
     func getCalendar(calendarTitle: CalendarTitle) -> EKCalendar? {
           
-          let calendars = eventStore.calendars(for: .event)
-          let cicleCalendar = calendars.filter { calendar in
-              return calendar.title == calendarTitle.title
-          }
-          
-          //[MUDAR]: ver formas de pegar o calendario certo
-          guard let calendar = cicleCalendar.first else {
-              let calendarCreated = calendarCreator.create(calendarTitle: calendarTitle)
-              return calendarCreated
-          }
-          return calendar
+        let calendars = eventStore.calendars(for: .event)
+        
+        let cicleCalendar = calendars.filter { calendar in
+          return calendar.title == calendarTitle.title
+        }
+
+
+        //[MUDAR]: ver formas de pegar o calendario certo
+        guard let calendar = cicleCalendar.first else {
+          let calendarCreated = calendarCreator.create(calendarTitle: calendarTitle)
+          return calendarCreated
+        }
+
+        return calendar
           
       }
 }
