@@ -12,7 +12,7 @@ class OnboardingPageFlowInteractor: PresenterToInteractorOnboardingPageFlowProto
 
     var presenter: InteractorToPresenterOnboardingPageFlowProtocol?
     private let flowCalculator = OnboardingViewFlow(numberOfPages: OnboardingInformation.NUMBER_PAGES)
-    private let lunaCalendarRequestAccess = LunaCalendarRequestAccess()
+//    private let lunaCalendarRequestAccess = LunaCalendarRequestAccess()
     
     
     func calculateOnboarding(forNextPage: Int){
@@ -20,7 +20,7 @@ class OnboardingPageFlowInteractor: PresenterToInteractorOnboardingPageFlowProto
         
         if page == OnboardingInformation.NUMBER_PAGES_0_BASE {
             presenter?.showEndOnboardingView(page)
-            lunaCalendarRequestAccess.askForPermission()
+//            lunaCalendarRequestAccess.askForPermission()
         } else {
             presenter?.goToNextPage(page)
         }

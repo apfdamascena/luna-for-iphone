@@ -660,13 +660,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		0D2DB2F92AC1FE39003D71D8 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		0D2DB2FA2AC1FECD003D71D8 /* LandingPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -987,7 +980,6 @@
 			isa = PBXGroup;
 			children = (
 				0D2DB2FA2AC1FECD003D71D8 /* LandingPage */,
-				0D2DB2F92AC1FE39003D71D8 /* New Group */,
 				0D2DB2E92ABA16AD003D71D8 /* ActivityOnCalendar */,
 				0D2DB2DE2AB6A390003D71D8 /* Web */,
 				0D2DB2CE2AB4D94F003D71D8 /* NotificationRequest */,
