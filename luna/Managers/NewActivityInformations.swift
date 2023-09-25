@@ -12,6 +12,7 @@ class NewActivityInformations {
     static let shared = NewActivityInformations()
     
     var phase: CyclePhase = .menstruation
+    var title: String = ""
     var dateInterval: DateInterval = DateInterval(start: Date(), end: Date())
     
     private init(){}

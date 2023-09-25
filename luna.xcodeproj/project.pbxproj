@@ -241,6 +241,7 @@
 		CA2144302AA6557D008AE239 /* ActivitiesCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21442F2AA6557D008AE239 /* ActivitiesCalendarManager.swift */; };
 		CA2144322AA65C3F008AE239 /* ActivityEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2144312AA65C3F008AE239 /* ActivityEvent.swift */; };
 		CA2144362AA8F815008AE239 /* ActivityMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2144352AA8F815008AE239 /* ActivityMetrics.swift */; };
+		CA46D3082AC214B1008C19E7 /* CreateEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46D3072AC214B1008C19E7 /* CreateEventViewModel.swift */; };
 		CA557BCC2A6B1742001DF2BB /* LandingPageContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA557BC82A6B1742001DF2BB /* LandingPageContract.swift */; };
 		CA557BCD2A6B1743001DF2BB /* LandingPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA557BC92A6B1742001DF2BB /* LandingPagePresenter.swift */; };
 		CA557BCE2A6B1743001DF2BB /* LandingPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA557BCA2A6B1742001DF2BB /* LandingPageRouter.swift */; };
@@ -514,6 +515,7 @@
 		CA21442F2AA6557D008AE239 /* ActivitiesCalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCalendarManager.swift; sourceTree = "<group>"; };
 		CA2144312AA65C3F008AE239 /* ActivityEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityEvent.swift; sourceTree = "<group>"; };
 		CA2144352AA8F815008AE239 /* ActivityMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMetrics.swift; sourceTree = "<group>"; };
+		CA46D3072AC214B1008C19E7 /* CreateEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewModel.swift; sourceTree = "<group>"; };
 		CA557BC82A6B1742001DF2BB /* LandingPageContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageContract.swift; sourceTree = "<group>"; };
 		CA557BC92A6B1742001DF2BB /* LandingPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPagePresenter.swift; sourceTree = "<group>"; };
 		CA557BCA2A6B1742001DF2BB /* LandingPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageRouter.swift; sourceTree = "<group>"; };
@@ -1362,6 +1364,7 @@
 			children = (
 				BF9A36802ABB7F3E00D231CB /* CreateEventView.swift */,
 				CA6F76AB2ABE26BA00BC91A8 /* DatePickersStack.swift */,
+				CA46D3072AC214B1008C19E7 /* CreateEventViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1847,6 +1850,7 @@
 				BFBD77132A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift in Sources */,
 				0D67942F2A74725200382142 /* TeachRecordMenstruationContract.swift in Sources */,
 				BF6520DF2A6F0D4B00E60054 /* CycleDurationPresenter.swift in Sources */,
+				CA46D3082AC214B1008C19E7 /* CreateEventViewModel.swift in Sources */,
 				0D2DB2EF2ABA16CB003D71D8 /* ActivityOnCalendarContract.swift in Sources */,
 				0DBADDE12A6603F800A10FC3 /* LastDayMenstruationRouter.swift in Sources */,
 				0D0B28D12A9FDBB60048722A /* NotificationFilter.swift in Sources */,

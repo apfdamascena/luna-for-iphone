@@ -26,4 +26,11 @@ class CreateEventRouter: PresenterToRouterCreateEventProtocol {
         return viewController
     }
     
+    func pushNewActivity(on view: PresenterToViewCreateEventProtocol) {
+        let activityOnCalendar = ActivityOnCalendarRouter.createModule()
+        
+        guard let createEventController = view as? CreateEventViewController else { return }
+        createEventController.navigationController?.pushViewController(activityOnCalendar, animated: true)
+    }
+    
 }

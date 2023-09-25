@@ -70,9 +70,6 @@ class HomePresenter: ViewToPresenterHomeProtocol {
         return insertedMenstruation
     }
     
-    func insertActivity(title: String, initialDate: Date, finalDate: Date) {
-        interactor?.insertActivityToCalendar(title: title, initialDate: initialDate, finalDate: finalDate)
-    }
     
     func findBestPhase(activity: ActivityMetrics) -> EKEvent {
         guard let idealPhase = interactor?.findBestPhaseFor(activity: activity) else {

@@ -154,9 +154,7 @@ class HomeViewController: UIViewController {
             }.disposed(by: disposeBag)
     }
     
-    func addActivity() {
-        presenter?.insertActivity(title: "teste", initialDate: Date(), finalDate: Date().daysAfter(1))
-    }
+    
     
     func idealPhase(stress: String, sociability: String, fisicalEffort: String, finalDate: Date) {
         let stressInt = stress.toInt()
@@ -237,7 +235,7 @@ class HomeViewController: UIViewController {
         homeView
             .newActivityButton
             .rx.tap.bind {
-                self.addActivity()
+                self.tabBarController?.selectedIndex = 1
             }
             .disposed(by: disposeBag)
     }

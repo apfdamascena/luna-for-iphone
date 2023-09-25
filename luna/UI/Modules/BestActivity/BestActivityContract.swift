@@ -21,6 +21,7 @@ protocol ViewToPresenterBestActivityProtocol {
     var view: PresenterToViewBestActivityProtocol? { get set }
     var interactor: PresenterToInteractorBestActivityProtocol? { get set }
     var router: PresenterToRouterBestActivityProtocol? { get set }
+    func userTappedContinueButton()
 }
 
 
@@ -39,5 +40,6 @@ protocol InteractorToPresenterBestActivityProtocol {
 
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterBestActivityProtocol {
+    func pushNewActivity(on view: PresenterToViewBestActivityProtocol)
     
 }

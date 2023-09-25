@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import RxSwift
 
 class ActivityOnCalendarViewController: UIViewController {
     
     var presenter: ViewToPresenterActivityOnCalendarProtocol?
     
     private let activityOnCalendarView = ActivityOnCalendarView()
+    
+    private var disposeBag = DisposeBag()
     
     override func loadView() {
         super.loadView()
@@ -22,8 +25,22 @@ class ActivityOnCalendarViewController: UIViewController {
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        observerNewActivityButton()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.hidesBackButton = true
+    }
+    
+    func observerNewActivityButton() {
+        activityOnCalendarView.newActivity
+            .rx
+            .tap.bind {
+                
+                self.navigationController?.popToRootViewController(animated: true)
+            }.disposed(by: disposeBag)
+    }
 }
 
 extension ActivityOnCalendarViewController: PresenterToViewActivityOnCalendarProtocol{

@@ -8,11 +8,11 @@
 import UIKit
 import SnapKit
 
-class CreateEventView: UIView, AnyView {
+class CreateEventView: UIView, AnyView, UITextFieldDelegate {
     
-    private let datePickers = DatePickersStack()
+    let datePickers = DatePickersStack()
     
-    private let activityTextField: UITextField = {
+    public let activityTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.attributedPlaceholder = NSAttributedString(
@@ -102,6 +102,7 @@ class CreateEventView: UIView, AnyView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        activityTextField.delegate = self
         setupView()
     }
     
@@ -169,7 +170,21 @@ class CreateEventView: UIView, AnyView {
     
     func addAdditionalConfiguration() {
         self.backgroundColor = .white
-
+    }
+    
+    func draw(_ viewModel: CreateEventViewModel) {
+        activityTextField.attributedPlaceholder = NSAttributedString(
+            string: viewModel.eventName,
+            attributes: [NSAttributedString.Key.foregroundColor: Asset.gray400.color])
+        
+        datePickers.initialDatePicker.date = viewModel.dateInterval.start
+        datePickers.finalDatePicker.date = viewModel.dateInterval.end
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        activityTextField.resignFirstResponder()
+        return true
     }
     
 }

@@ -112,10 +112,17 @@ class NewActivityViewController: UIViewController {
         let idealEventTitle = idealEvent?.title ?? "Default"
         let cyclePhase = CyclePhase(rawValue: idealEventTitle) ?? .none
         NewActivityInformations.shared.setBestPhase(cyclePhase)
+        
         if idealEvent?.startDate ?? Date() < Date() {
             idealEvent?.startDate = Date()
         }
+        if idealEvent?.endDate ?? Date() > finalDate {
+            idealEvent?.endDate = finalDate
+        }
+        
         NewActivityInformations.shared.setDateInterval(DateInterval(start: (idealEvent?.startDate)!, end: (idealEvent?.endDate)!))
+        
+        NewActivityInformations.shared.title = self.titleActivity
     }
     
 }
