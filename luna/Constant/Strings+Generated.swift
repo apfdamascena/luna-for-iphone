@@ -25,8 +25,8 @@ internal enum L10n {
         internal static let previous = L10n.tr("Constants", "constants.content.button.previous", fallback: "Voltar")
         /// Leia as referências
         internal static let references = L10n.tr("Constants", "constants.content.button.references", fallback: "Leia as referências")
-        /// Marcar Atividade
-        internal static let scheduleActivity = L10n.tr("Constants", "constants.content.button.schedule_activity", fallback: "Marcar Atividade")
+        /// Marcar Evento
+        internal static let scheduleActivity = L10n.tr("Constants", "constants.content.button.schedule_activity", fallback: "Marcar Evento")
         /// Ajustes
         internal static let settings = L10n.tr("Constants", "constants.content.button.settings", fallback: "Ajustes")
         /// Iniciar
@@ -289,6 +289,14 @@ internal enum L10n {
               /// ⚡️ Estresse
               internal static let stressTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.metrics_component.stress_title", fallback: "⚡️ Estresse")
             }
+          }
+          internal enum CreateEvent {
+            /// Termina
+            internal static let finalDateTitle = L10n.tr("Constants", "constants.content.label.new_activity.create_event.final_date_title", fallback: "Termina")
+            /// Começa
+            internal static let initialDateTitle = L10n.tr("Constants", "constants.content.label.new_activity.create_event.initial_date_title", fallback: "Começa")
+            /// Nome da Atividade
+            internal static let placeholderEventTitle = L10n.tr("Constants", "constants.content.label.new_activity.create_event.placeholder_event_title", fallback: "Nome da Atividade")
           }
           internal enum Nav {
             /// Nova atividade
