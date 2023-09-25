@@ -17,14 +17,18 @@ class CreateEventViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.setHidesBackButton(true, animated: true)
-
+        self.navigationItem.setHidesBackButton(false, animated: true)
+        
+        self.navigationItem.title = "Criar evento"
+        let nav = self.navigationController?.navigationBar
+        nav?.tintColor = Asset.red600.color
     }
     
     
     override func loadView() {
         super.loadView()
         view = createEventView
+        
     }
 
 }

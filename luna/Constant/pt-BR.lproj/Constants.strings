@@ -18,7 +18,7 @@
 "constants.content.button.previous"="Voltar";
 "constants.content.button.settings"="Ajustes";
 "constants.content.button.references" = "Leia as referências";
-"constants.content.button.schedule_activity"="Marcar Atividade";
+"constants.content.button.schedule_activity"="Marcar Evento";
 "constants.content.button.newEvent"="Nova Atividade";
 
 "constants.content.label.home.youAreIn" = "Você está na";
@@ -268,4 +268,8 @@ e seja feliz!";
 "constants.content.label.new_activity.add_new_activity.metrics_component.stress_title"= "⚡️ Estresse";
 "constants.content.label.new_activity.add_new_activity.metrics_component.social_title"= "💬 Sociabilidade";
 "constants.content.label.new_activity.add_new_activity.metrics_component.fisics_title"= "🏃🏽 Esforço Físico";
+
+"constants.content.label.new_activity.create_event.placeholder_event_title" = "Nome da Atividade";
+"constants.content.label.new_activity.create_event.initial_date_title" = "Começa";
+"constants.content.label.new_activity.create_event.final_date_title" = "Termina";
 
