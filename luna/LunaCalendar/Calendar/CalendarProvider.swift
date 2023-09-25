@@ -19,7 +19,7 @@ class CalendarProvider {
     func getCalendar(calendarTitle: CalendarTitle) -> EKCalendar? {
           
         let calendars = eventStore.calendars(for: .event)
-        print("removed \(calendars)")
+        
         let cicleCalendar = calendars.filter { calendar in
           return calendar.title == calendarTitle.title
         }

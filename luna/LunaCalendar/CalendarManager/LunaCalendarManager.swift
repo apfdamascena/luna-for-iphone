@@ -159,9 +159,6 @@ class LunaCalendarManager: CalendarManager  {
     }
     
     func removeLunaCalendarOnOnboarding() {
-        print("removed 2")
-        let calendar = CalendarProvider(eventStore).getCalendar(calendarTitle: .appName)
-        print("removed \(calendar)")
         lunaEventService?.removeCalendar()
     }
 }

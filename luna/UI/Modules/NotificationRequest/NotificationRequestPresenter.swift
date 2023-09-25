@@ -16,7 +16,6 @@ class NotificationRequestPresenter: ViewToPresenterNotificationRequestProtocol {
     var interactor: PresenterToInteractorNotificationRequestProtocol?
     
     func removeCalendar() {
-        print("removed 0")
         interactor?.removeAllPhaseFromCalendar()
     }
 }
