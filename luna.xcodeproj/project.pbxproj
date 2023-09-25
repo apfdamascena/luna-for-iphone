@@ -49,6 +49,7 @@
 		0D2DB3042AC1FEEE003D71D8 /* LandingPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB2FF2AC1FEEE003D71D8 /* LandingPageInteractor.swift */; };
 		0D2DB3072AC1FFE9003D71D8 /* CalendarCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB3062AC1FFE9003D71D8 /* CalendarCollectionViewFlowLayout.swift */; };
 		0D2DB3092AC1FFF8003D71D8 /* LandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB3082AC1FFF8003D71D8 /* LandingPageView.swift */; };
+		0D2DB30B2AC214C5003D71D8 /* NotificationRequestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB30A2AC214C5003D71D8 /* NotificationRequestInteractor.swift */; };
 		0D2FC76A2A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */; };
 		0D2FC76C2A6EF4810025D8B6 /* DataSourceEventObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */; };
 		0D2FC76E2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76D2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift */; };
@@ -311,6 +312,7 @@
 		0D2DB2FF2AC1FEEE003D71D8 /* LandingPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageInteractor.swift; sourceTree = "<group>"; };
 		0D2DB3062AC1FFE9003D71D8 /* CalendarCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		0D2DB3082AC1FFF8003D71D8 /* LandingPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageView.swift; sourceTree = "<group>"; };
+		0D2DB30A2AC214C5003D71D8 /* NotificationRequestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRequestInteractor.swift; sourceTree = "<group>"; };
 		0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSource.swift; sourceTree = "<group>"; };
 		0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceEventObservable.swift; sourceTree = "<group>"; };
 		0D2FC76D2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSourceImpl.swift; sourceTree = "<group>"; };
@@ -616,6 +618,7 @@
 				0D2DB2D02AB4D971003D71D8 /* NotificationRequestPresenter.swift */,
 				0D2DB2D12AB4D971003D71D8 /* NotificationRequestRouter.swift */,
 				0D2DB2D22AB4D971003D71D8 /* NotificationRequestViewController.swift */,
+				0D2DB30A2AC214C5003D71D8 /* NotificationRequestInteractor.swift */,
 			);
 			path = NotificationRequest;
 			sourceTree = "<group>";
@@ -1937,6 +1940,7 @@
 				CA0D93AB2A70472A0064C1C3 /* CalendarCollectionView.swift in Sources */,
 				0DBADE0C2A6608F300A10FC3 /* LastDayMenstruationView.swift in Sources */,
 				A48B7ED42A79994200CCC4C0 /* CyclePhaseText.swift in Sources */,
+				0D2DB30B2AC214C5003D71D8 /* NotificationRequestInteractor.swift in Sources */,
 				0DDC5B562A71D23600D4CCAE /* OnboardingManager.swift in Sources */,
 				0D2DB2E62AB6A3BE003D71D8 /* WebRouter.swift in Sources */,
 				A46C05172A6EFE150071ABCE /* CalendarContract.swift in Sources */,

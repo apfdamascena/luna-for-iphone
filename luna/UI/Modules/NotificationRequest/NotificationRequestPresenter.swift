@@ -10,6 +10,12 @@ import Foundation
 
 class NotificationRequestPresenter: ViewToPresenterNotificationRequestProtocol {
 
+
     var view: PresenterToViewNotificationRequestProtocol?
     var router: PresenterToRouterNotificationRequestProtocol?
+    var interactor: PresenterToInteractorNotificationRequestProtocol?
+    
+    func removeCalendar() {
+        interactor?.removeAllPhaseFromCalendar()
+    }
 }
