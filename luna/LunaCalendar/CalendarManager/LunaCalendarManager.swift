@@ -60,7 +60,6 @@ class LunaCalendarManager: CalendarManager  {
             }
             
             
-            
             let calendar = CalendarProvider(calendarStore).getCalendar()
             self?.calendar = calendar
             self?.lunaEventService = CalendarEventService(with: calendarStore, in: calendar)
@@ -139,14 +138,17 @@ class LunaCalendarManager: CalendarManager  {
         let lastDayMenstruation = UserCycleInformation.shared.lastMenstruation
         let menstruationDuration = UserCycleInformation.shared.menstruationDuration
         let cycleDuration = UserCycleInformation.shared.cycleDuration
-        let dayAfterMenstruation = lastDayMenstruation.daysAfter(menstruationDuration)
-        removeFutureEvents(menstruationDate: dayAfterMenstruation)
+        let dayAfterMenstruation = lastDayMenstruation.daysAfter(menstruationDuration+1)
         
         let lastMenstruationEvent = eventService.getEventsByDate(firstDate: lastDayMenstruation, finalDate: lastDayMenstruation.daysAfter(1)).calendar
         
         let lastMenstruationDuration = lastMenstruationEvent.first?.startDate.daysBetween(lastMenstruationEvent.first?.endDate ?? Date())
-        
+        let removeFromDate = lastMenstruationEvent.first?.endDate.daysAfter(1) ?? Date()
+
+        removeFutureEvents(menstruationDate: removeFromDate)
+
         addCyclePhasesToCalendar(firstDayMenstruation: lastDayMenstruation, averageMenstruationDuration: menstruationDuration, averageCycleDuration: cycleDuration, isFirst: false, firstMenstruationTime: lastMenstruationDuration)
+        changeLastMenstruationIfItIsToday()
     }
     
     func removeFutureEvents(menstruationDate: Date)  {

@@ -26,7 +26,6 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 internal enum Asset {
   internal static let accentColor = ColorAsset(name: "AccentColor")
   internal static let menstruationSelected = ImageAsset(name: "MenstruationSelected")
-  internal static let pmsSelected = ImageAsset(name: "PmsSelected")
   internal static let arrowLeftIcon = ImageAsset(name: "arrow_left_icon")
   internal static let arrowRightIcon = ImageAsset(name: "arrow_right_icon")
   internal static let background = ImageAsset(name: "background")
@@ -95,6 +94,7 @@ internal enum Asset {
   internal static let ovulationSelected = ImageAsset(name: "ovulationSelected")
   internal static let ovulationCell = ImageAsset(name: "ovulation_cell")
   internal static let plusIcon = ImageAsset(name: "plus_icon")
+  internal static let pmsSelected = ImageAsset(name: "pmsSelected")
   internal static let pmsCell = ImageAsset(name: "pms_cell")
   internal static let previsionSelected = ImageAsset(name: "previsionSelected")
   internal static let primaryGray900 = ColorAsset(name: "primary_gray_900")
