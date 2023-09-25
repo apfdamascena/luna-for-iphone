@@ -8,6 +8,7 @@
 import EventKit
 
 class ActivitiesCalendarManager {
+    
     private let eventStore = EKEventStore()
     private var calendar: EKCalendar?
     private var generalCalendarEventService: CalendarEventService?

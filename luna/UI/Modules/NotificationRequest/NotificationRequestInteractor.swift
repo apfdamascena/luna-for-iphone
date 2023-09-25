@@ -10,9 +10,9 @@ import Foundation
 
 class NotificationRequestInterator: PresenterToInteractorNotificationRequestProtocol {
     
+    private lazy var lunaCalendarManager = LunaCalendarManager()
+    
     func removeAllPhaseFromCalendar() {
-    
+        lunaCalendarManager.removeLunaCalendarOnOnboarding()
     }
-    
-    
 }

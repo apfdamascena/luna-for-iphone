@@ -20,6 +20,7 @@ class NotificationRequestRouter: PresenterToRouterNotificationRequestProtocol {
         viewController.presenter = presenter
         viewController.presenter?.router = NotificationRequestRouter()
         viewController.presenter?.view = viewController
+        viewController.presenter?.interactor = NotificationRequestInterator()
         
         return viewController
     }

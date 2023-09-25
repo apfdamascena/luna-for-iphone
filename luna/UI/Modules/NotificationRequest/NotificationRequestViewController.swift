@@ -14,7 +14,6 @@ class NotificationRequestViewController: UIViewController {
     
     private let notificationRequestView = NotificationRequestView()
     
-    
     override func loadView() {
         super.loadView()
         view = notificationRequestView

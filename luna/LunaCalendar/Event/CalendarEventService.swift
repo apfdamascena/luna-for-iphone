@@ -87,6 +87,7 @@ class CalendarEventService {
     }
     
     func removeCalendar(){
+        print("removed \(calendar)")
         guard let calendar = calendar else { return }
         do {
             try eventStore.removeCalendar(calendar, commit: true)
