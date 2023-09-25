@@ -98,6 +98,12 @@ internal enum L10n {
           /// Sintonizamos a atividade com seu ciclo e recomendamos que você a realize entre os dias
           internal static let text = L10n.tr("Constants", "constants.content.label.best_activity.text", fallback: "Sintonizamos a atividade com seu ciclo e recomendamos que você a realize entre os dias")
         }
+        internal enum CreateEvent {
+          internal enum Nav {
+            /// Criar evento
+            internal static let title = L10n.tr("Constants", "constants.content.label.create_event.nav.title", fallback: "Criar evento")
+          }
+        }
         internal enum FirstTimeNewActivity {
           /// Vamos!
           internal static let button = L10n.tr("Constants", "constants.content.label.first_time_new_activity.button", fallback: "Vamos!")

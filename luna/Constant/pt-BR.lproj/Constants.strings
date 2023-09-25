@@ -250,6 +250,8 @@ e seja feliz!";
 
 "constants.content.label.new_activity.nav.title" = "Nova atividade";
 
+"constants.content.label.create_event.nav.title" = "Criar evento";
+
 "constants.content.label.best_activity.text" = "Sintonizamos a atividade com seu ciclo e recomendamos que você a realize entre os dias";
 
 "constants.preposition.and" = "e";

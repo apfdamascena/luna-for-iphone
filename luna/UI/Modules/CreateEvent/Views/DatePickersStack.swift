@@ -41,7 +41,7 @@ class DatePickersStack: UIStackView, AnyView {
         return stack
     }()
     
-    private let finalDatePicker: UIDatePicker = {
+    public let finalDatePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .dateAndTime
         datePicker.preferredDatePickerStyle = .compact
@@ -68,7 +68,7 @@ class DatePickersStack: UIStackView, AnyView {
         return datePicker
     }()
     
-    private let initialDatePicker: UIDatePicker = {
+    public let initialDatePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .dateAndTime
         datePicker.preferredDatePickerStyle = .compact

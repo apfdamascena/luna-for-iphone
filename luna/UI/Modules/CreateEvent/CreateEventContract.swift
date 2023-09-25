@@ -21,6 +21,9 @@ protocol ViewToPresenterCreateEventProtocol {
     var view: PresenterToViewCreateEventProtocol? { get set }
     var interactor: PresenterToInteractorCreateEventProtocol? { get set }
     var router: PresenterToRouterCreateEventProtocol? { get set }
+    
+    func insertActivity(title: String, initialDate: Date, finalDate: Date)
+    func userTappedCreateEventButton()
 }
 
 
@@ -28,6 +31,7 @@ protocol ViewToPresenterCreateEventProtocol {
 protocol PresenterToInteractorCreateEventProtocol {
     
     var presenter: InteractorToPresenterCreateEventProtocol? { get set }
+    func insertActivityToCalendar(title: String, initialDate: Date, finalDate: Date)
 }
 
 
@@ -39,5 +43,5 @@ protocol InteractorToPresenterCreateEventProtocol {
 
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterCreateEventProtocol {
-    
+    func pushNewActivity(on view: PresenterToViewCreateEventProtocol)
 }

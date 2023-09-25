@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import RxSwift
 
 class BestActivityViewController: UIViewController {
     
     var presenter: ViewToPresenterBestActivityProtocol?
     private let bestActivityView = BestActivityView()
+    private var disposeBag = DisposeBag()
         
     override func loadView() {
         super.loadView()
@@ -27,6 +29,7 @@ class BestActivityViewController: UIViewController {
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        continueButtonTouchTrigger()
         // pode botar aq?
         let nav = self.navigationController?.navigationBar
         nav?.tintColor = Asset.red600.color
@@ -34,6 +37,14 @@ class BestActivityViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    func continueButtonTouchTrigger() {
+        bestActivityView.button
+            .rx
+            .tap.bind {
+                self.presenter?.userTappedContinueButton()
+            }.disposed(by: disposeBag)
     }
 
 }
