@@ -8,6 +8,7 @@
 import EventKit
 
 enum ChangeCycleResponse {
+    
     case isMenstruation
     case hasMenstruationNearDate
     case noMenstruationNearSelectedDate
