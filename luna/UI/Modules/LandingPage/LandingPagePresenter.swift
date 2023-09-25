@@ -21,9 +21,5 @@ class LandingPagePresenter: ViewToPresenterLandingPageProtocol {
             self.router?.pushLastDayMenstruation(on: landingPageView)
         }
     }
-    
-    func removeLunaCalendar() {
-        interactor?.removeAllPhasesFromCalendar()
-    }
 }
 

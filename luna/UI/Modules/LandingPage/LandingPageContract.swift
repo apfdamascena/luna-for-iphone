@@ -23,8 +23,6 @@ protocol ViewToPresenterLandingPageProtocol {
     var router: PresenterToRouterLandingPageProtocol? { get set }
     
     func userTappedContinue()
-    
-    func removeLunaCalendar()
 }
 
 
@@ -32,9 +30,7 @@ protocol ViewToPresenterLandingPageProtocol {
 protocol PresenterToInteractorLandingPageProtocol {
     
     var presenter: InteractorToPresenterLandingPageProtocol? { get set }
-    
-    func removeAllPhasesFromCalendar()
-    
+
 }
 
 
