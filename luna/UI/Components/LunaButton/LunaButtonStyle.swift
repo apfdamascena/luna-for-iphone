@@ -19,6 +19,7 @@ enum LunaButtonStyle {
     case scheduleActivity
     case newActivity
     
+    
     var value: String {
         switch self {
         case .initial:
