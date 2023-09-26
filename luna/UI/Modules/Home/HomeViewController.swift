@@ -225,7 +225,7 @@ class HomeViewController: UIViewController {
                 if activity == .week {
                     activities = activitiesValue.week
                 }
-                print("rola rola rola rola \(activities)")
+                
                 self.activitiesDataSource.activities.onNext(activities)
                 self.homeView.drawActivities(activities)
             })
