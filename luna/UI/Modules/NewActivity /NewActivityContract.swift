@@ -12,6 +12,8 @@ import EventKit
 
 // MARK: View Output (Presenter -> View)
 protocol PresenterToViewNewActivityProtocol {
+    
+    func showFeedbackForUser()
    
 }
 
@@ -24,6 +26,8 @@ protocol ViewToPresenterNewActivityProtocol {
     var router: PresenterToRouterNewActivityProtocol? { get set }
     func userTappedContinueButton()
     func findBestPhase(activity: ActivityMetrics) -> EKEvent
+    
+    func isNotPossibleCreateActivityWithoutName()
 
 }
 

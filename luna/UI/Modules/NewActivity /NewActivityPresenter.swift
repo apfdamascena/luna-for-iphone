@@ -9,7 +9,7 @@
 import Foundation
 import EventKit
 
-class NewActivityPresenter: ViewToPresenterNewActivityProtocol {    
+class NewActivityPresenter: ViewToPresenterNewActivityProtocol {
 
     var view: PresenterToViewNewActivityProtocol?
     var interactor: PresenterToInteractorNewActivityProtocol?
@@ -30,6 +30,10 @@ class NewActivityPresenter: ViewToPresenterNewActivityProtocol {
         }
         
         return idealPhase
+    }
+    
+    func isNotPossibleCreateActivityWithoutName() {
+        view?.showFeedbackForUser()
     }
     
 }

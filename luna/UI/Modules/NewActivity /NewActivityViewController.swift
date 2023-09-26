@@ -62,6 +62,10 @@ class NewActivityViewController: UIViewController {
         newActivityView.button
             .rx
             .tap.bind {
+                guard self.titleActivity != "" else {
+                    self.presenter?.isNotPossibleCreateActivityWithoutName()
+                    return
+                }
                 self.idealPhase(
                     stress: self.stressValue,
                     sociability: self.sociabilityValue,
@@ -128,6 +132,11 @@ class NewActivityViewController: UIViewController {
 }
 
 extension NewActivityViewController: PresenterToViewNewActivityProtocol{
+    
+    func showFeedbackForUser() {
+        
+    }
+    
     // TODO: Implement View Output Methods
 }
 
