@@ -12,6 +12,14 @@ import Foundation
 internal enum L10n {
   internal enum Constants {
     internal enum Content {
+      internal enum Alert {
+        internal enum Warning {
+          /// Você não pode marcar atividadade sem nome
+          internal static let noTitleActivity = L10n.tr("Constants", "constants.content.alert.warning.no_title_activity", fallback: "Você não pode marcar atividadade sem nome")
+          /// Aviso
+          internal static let title = L10n.tr("Constants", "constants.content.alert.warning.title", fallback: "Aviso")
+        }
+      }
       internal enum Api {
         /// iCloud
         internal static let icloud = L10n.tr("Constants", "constants.content.api.icloud", fallback: "iCloud")
@@ -19,20 +27,26 @@ internal enum L10n {
       internal enum Button {
         /// Continuar
         internal static let `continue` = L10n.tr("Constants", "constants.content.button.continue", fallback: "Continuar")
-        /// Novo Evento
-        internal static let newEvent = L10n.tr("Constants", "constants.content.button.newEvent", fallback: "Novo Evento")
+        /// Nova Atividade
+        internal static let newEvent = L10n.tr("Constants", "constants.content.button.newEvent", fallback: "Nova Atividade")
         /// Voltar
         internal static let previous = L10n.tr("Constants", "constants.content.button.previous", fallback: "Voltar")
         /// Leia as referências
         internal static let references = L10n.tr("Constants", "constants.content.button.references", fallback: "Leia as referências")
+        /// Marcar Evento
+        internal static let scheduleActivity = L10n.tr("Constants", "constants.content.button.schedule_activity", fallback: "Marcar Evento")
         /// Ajustes
         internal static let settings = L10n.tr("Constants", "constants.content.button.settings", fallback: "Ajustes")
         /// Iniciar
         internal static let start = L10n.tr("Constants", "constants.content.button.start", fallback: "Iniciar")
       }
       internal enum Label {
+        /// Sua atividade está no calendário!
+        internal static let activityOnCalendar = L10n.tr("Constants", "constants.content.label.activity_on_calendar", fallback: "Sua atividade está no calendário!")
         /// Luna
         internal static let appName = L10n.tr("Constants", "constants.content.label.app_name", fallback: "Luna")
+        /// Luna Activities
+        internal static let calendarActivities = L10n.tr("Constants", "constants.content.label.calendar_activities", fallback: "Luna Activities")
         /// Permita que o Luna acesse seu Calendar para planejar seus dias com sabedoria e melhorar o seu bem-estar
         internal static let calendarSubtitle = L10n.tr("Constants", "constants.content.label.calendar_subtitle", fallback: "Permita que o Luna acesse seu Calendar para planejar seus dias com sabedoria e melhorar o seu bem-estar")
         /// Sintonize com seu dia a dia
@@ -48,10 +62,8 @@ internal enum L10n {
         internal static let folicular = L10n.tr("Constants", "constants.content.label.folicular", fallback: "⚡️ Fase folicular")
         /// Seu ciclo ao seu favor
         internal static let landingPageDescription = L10n.tr("Constants", "constants.content.label.landing_page_description", fallback: "Seu ciclo ao seu favor")
-        /// Constants.strings
-        ///   luna
-        /// 
-        ///   Created by alexdamascena on 18/07/23.
+        /// Quando foi o início da
+        /// sua última menstruação?
         internal static let lastDayMenstruation = L10n.tr("Constants", "constants.content.label.last_day_menstruation", fallback: "Quando foi o início da\nsua última menstruação?")
         /// ⬛️ Fase lútea
         internal static let luteal = L10n.tr("Constants", "constants.content.label.luteal", fallback: "⬛️ Fase lútea")
@@ -60,6 +72,10 @@ internal enum L10n {
         /// Quantos dias dura a
         /// sua menstruação?
         internal static let menstruationDuration = L10n.tr("Constants", "constants.content.label.menstruation_duration", fallback: "Quantos dias dura a\nsua menstruação?")
+        /// Autorize as notificações de Luna para acompanhar de perto seu ciclo menstrual
+        internal static let notificationSubtitle = L10n.tr("Constants", "constants.content.label.notification_subtitle", fallback: "Autorize as notificações de Luna para acompanhar de perto seu ciclo menstrual")
+        /// Em tempo real com seu ciclo
+        internal static let notificationTitle = L10n.tr("Constants", "constants.content.label.notification_title", fallback: "Em tempo real com seu ciclo")
         /// Fase Folicular
         internal static let onboardingFolicule = L10n.tr("Constants", "constants.content.label.onboarding_folicule", fallback: "Fase Folicular")
         /// As estrelas vermelhas representam os dias da sua fase folicular.
@@ -84,6 +100,32 @@ internal enum L10n {
         internal static let onboardingRegisterMenstruationDescription = L10n.tr("Constants", "constants.content.label.onboarding_register_menstruation_description", fallback: "O círculo vermelho representa o dia em que ocorreu a menstruação. Basta clicar no botão para registrar!")
         /// 😡 TPM
         internal static let pms = L10n.tr("Constants", "constants.content.label.pms", fallback: "😡 TPM")
+        internal enum Activity {
+          internal enum Calendar {
+            /// Nova atividade
+            internal static let newActivity = L10n.tr("Constants", "constants.content.label.activity.calendar.new_activity", fallback: "Nova atividade")
+          }
+        }
+        internal enum BestActivity {
+          /// Sugerimos realizar a atividade durante a 
+          internal static let subtitle = L10n.tr("Constants", "constants.content.label.best_activity.subtitle", fallback: "Sugerimos realizar a atividade durante a ")
+          /// Sintonizamos a atividade com seu ciclo e recomendamos que você a realize entre os dias
+          internal static let text = L10n.tr("Constants", "constants.content.label.best_activity.text", fallback: "Sintonizamos a atividade com seu ciclo e recomendamos que você a realize entre os dias")
+        }
+        internal enum CreateEvent {
+          internal enum Nav {
+            /// Criar evento
+            internal static let title = L10n.tr("Constants", "constants.content.label.create_event.nav.title", fallback: "Criar evento")
+          }
+        }
+        internal enum FirstTimeNewActivity {
+          /// Vamos!
+          internal static let button = L10n.tr("Constants", "constants.content.label.first_time_new_activity.button", fallback: "Vamos!")
+          /// Registre uma atividade que precise fazer e receba uma sugestão personalizada sobre quando realizá-la no seu ciclo.
+          internal static let subtitle = L10n.tr("Constants", "constants.content.label.first_time_new_activity.subtitle", fallback: "Registre uma atividade que precise fazer e receba uma sugestão personalizada sobre quando realizá-la no seu ciclo.")
+          /// Vamos marcar uma nova atividade?
+          internal static let title = L10n.tr("Constants", "constants.content.label.first_time_new_activity.title", fallback: "Vamos marcar uma nova atividade?")
+        }
         internal enum Home {
           /// Tudo sobre
           internal static let about = L10n.tr("Constants", "constants.content.label.home.about", fallback: "Tudo sobre")
@@ -127,34 +169,34 @@ internal enum L10n {
           }
           internal enum Card {
             internal enum Folicular {
-              /// Mantenha bons hábitos alimentares e de exercício
-              internal static let five = L10n.tr("Constants", "constants.content.label.home.card.folicular.five", fallback: "Mantenha bons hábitos alimentares e de exercício")
+              /// Mantenha bons hábitos alimentares e de exercício.
+              internal static let five = L10n.tr("Constants", "constants.content.label.home.card.folicular.five", fallback: "Mantenha bons hábitos alimentares e de exercício.")
               /// Nada de passar sede nessa fase. Hidrate-se em abundância!
               internal static let four = L10n.tr("Constants", "constants.content.label.home.card.folicular.four", fallback: "Nada de passar sede nessa fase. Hidrate-se em abundância!")
-              /// Energia e bem-estar em alta! A fase folicular chegou
-              internal static let one = L10n.tr("Constants", "constants.content.label.home.card.folicular.one", fallback: "Energia e bem-estar em alta! A fase folicular chegou")
+              /// Energia e bem-estar em alta! A fase folicular chegou!
+              internal static let one = L10n.tr("Constants", "constants.content.label.home.card.folicular.one", fallback: "Energia e bem-estar em alta! A fase folicular chegou!")
               /// A sua libido pode aumentar, hein?
               internal static let three = L10n.tr("Constants", "constants.content.label.home.card.folicular.three", fallback: "A sua libido pode aumentar, hein?")
-              /// Energia e bem-estar em alta! Aproveita para resolver as broncas da vida
-              internal static let two = L10n.tr("Constants", "constants.content.label.home.card.folicular.two", fallback: "Energia e bem-estar em alta! Aproveita para resolver as broncas da vida")
+              /// Energia e bem-estar em alta! Aproveita para resolver as broncas da vida.
+              internal static let two = L10n.tr("Constants", "constants.content.label.home.card.folicular.two", fallback: "Energia e bem-estar em alta! Aproveita para resolver as broncas da vida.")
             }
             internal enum Luteal {
-              /// Aproveita esse momento para fazer atividades tranquilas
-              internal static let five = L10n.tr("Constants", "constants.content.label.home.card.luteal.five", fallback: "Aproveita esse momento para fazer atividades tranquilas")
-              /// É bom evitar decisões importantes ou grandes mudanças
-              internal static let four = L10n.tr("Constants", "constants.content.label.home.card.luteal.four", fallback: "É bom evitar decisões importantes ou grandes mudanças")
+              /// Aproveita esse momento para fazer atividades tranquilas.
+              internal static let five = L10n.tr("Constants", "constants.content.label.home.card.luteal.five", fallback: "Aproveita esse momento para fazer atividades tranquilas.")
+              /// É bom evitar decisões importantes ou grandes mudanças!
+              internal static let four = L10n.tr("Constants", "constants.content.label.home.card.luteal.four", fallback: "É bom evitar decisões importantes ou grandes mudanças!")
               /// O óvulo agora é um corpo lúteo. Hormônios em alta!
               internal static let one = L10n.tr("Constants", "constants.content.label.home.card.luteal.one", fallback: "O óvulo agora é um corpo lúteo. Hormônios em alta!")
               /// Seu humor pode variar e tudo bem, okay?
               internal static let three = L10n.tr("Constants", "constants.content.label.home.card.luteal.three", fallback: "Seu humor pode variar e tudo bem, okay?")
-              /// Só good vibes! Pode ser um dia só de paz e tranquilidade
-              internal static let two = L10n.tr("Constants", "constants.content.label.home.card.luteal.two", fallback: "Só good vibes! Pode ser um dia só de paz e tranquilidade")
+              /// Só good vibes! Pode ser um dia só de paz e tranquilidade...
+              internal static let two = L10n.tr("Constants", "constants.content.label.home.card.luteal.two", fallback: "Só good vibes! Pode ser um dia só de paz e tranquilidade...")
             }
             internal enum Menstruation {
-              /// Exercício leves podem ajudar com as cólicas e no humor. então se joga!
-              internal static let five = L10n.tr("Constants", "constants.content.label.home.card.menstruation.five", fallback: "Exercício leves podem ajudar com as cólicas e no humor. então se joga!")
-              /// Atividades sociais intensas podem ficar para depois, hein
-              internal static let four = L10n.tr("Constants", "constants.content.label.home.card.menstruation.four", fallback: "Atividades sociais intensas podem ficar para depois, hein")
+              /// Exercício leves podem ajudar com as cólicas e no humor. Então se joga!
+              internal static let five = L10n.tr("Constants", "constants.content.label.home.card.menstruation.five", fallback: "Exercício leves podem ajudar com as cólicas e no humor. Então se joga!")
+              /// Atividades sociais intensas podem ficar para depois, hein!
+              internal static let four = L10n.tr("Constants", "constants.content.label.home.card.menstruation.four", fallback: "Atividades sociais intensas podem ficar para depois, hein!")
               /// Você está literalmente sangrando!
               internal static let one = L10n.tr("Constants", "constants.content.label.home.card.menstruation.one", fallback: "Você está literalmente sangrando!")
               /// Ter cólicas e mudanças de paladar também faz parte. Forças!
@@ -165,12 +207,13 @@ internal enum L10n {
             internal enum Ovulation {
               /// Energia também tá em alta, abuse dos exercícios de força.
               internal static let five = L10n.tr("Constants", "constants.content.label.home.card.ovulation.five", fallback: "Energia também tá em alta, abuse dos exercícios de força.")
-              /// É normal estar desejando mais doces, vai com moderação e seja feliz!
-              internal static let four = L10n.tr("Constants", "constants.content.label.home.card.ovulation.four", fallback: "É normal estar desejando mais doces, vai com moderação e seja feliz!")
-              /// Eita, seu óvulo pode ser liberado em qualquer um desses dias
-              internal static let one = L10n.tr("Constants", "constants.content.label.home.card.ovulation.one", fallback: "Eita, seu óvulo pode ser liberado em qualquer um desses dias")
-              /// É o momento de adiar as atividades estressantes
-              internal static let three = L10n.tr("Constants", "constants.content.label.home.card.ovulation.three", fallback: "É o momento de adiar as atividades estressantes")
+              /// É normal sentir variações no apetite, vai com moderação
+              /// e seja feliz!
+              internal static let four = L10n.tr("Constants", "constants.content.label.home.card.ovulation.four", fallback: "É normal sentir variações no apetite, vai com moderação\ne seja feliz!")
+              /// Eita, seu óvulo pode ser liberado em qualquer um desses dias.
+              internal static let one = L10n.tr("Constants", "constants.content.label.home.card.ovulation.one", fallback: "Eita, seu óvulo pode ser liberado em qualquer um desses dias.")
+              /// É o momento de adiar as atividades estressantes.
+              internal static let three = L10n.tr("Constants", "constants.content.label.home.card.ovulation.three", fallback: "É o momento de adiar as atividades estressantes.")
               /// A libido pode aumentar e você pode se achar mais atraente também!
               internal static let two = L10n.tr("Constants", "constants.content.label.home.card.ovulation.two", fallback: "A libido pode aumentar e você pode se achar mais atraente também!")
             }
@@ -209,17 +252,85 @@ internal enum L10n {
           }
           internal enum Text {
             internal enum References {
-              /// Souza EG, Ramos MG, Hara C, Stumpf BP, Rocha FL. Neuropsychological performance and menstrual cycle: a literature review. Trends Psychiatry Psychother. 2012;34(1):5-12.
-              internal static let fifth = L10n.tr("Constants", "constants.content.label.home.text.references.fifth", fallback: "Souza EG, Ramos MG, Hara C, Stumpf BP, Rocha FL. Neuropsychological performance and menstrual cycle: a literature review. Trends Psychiatry Psychother. 2012;34(1):5-12.")
+              /// Ponzo S, Wickham A, Bamford R, Radovic T, Zhaunova L, Peven K, Klepchukova A, Payne JL. Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app. Digit Health. 2022 Dec 15;8:20552076221145852. PMID: 36544535; PMCID: PMC9761221.
+              internal static let fifth = L10n.tr("Constants", "constants.content.label.home.text.references.fifth", fallback: "Ponzo S, Wickham A, Bamford R, Radovic T, Zhaunova L, Peven K, Klepchukova A, Payne JL. Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app. Digit Health. 2022 Dec 15;8:20552076221145852. PMID: 36544535; PMCID: PMC9761221.")
               /// Mesen TB, Young SL. Progesterone and the luteal phase: a requisite to reproduction. Obstet Gynecol Clin North Am. 2015 Mar;42(1):135-51. PMID: 25681845; PMCID: PMC4436586.
               internal static let first = L10n.tr("Constants", "constants.content.label.home.text.references.first", fallback: "Mesen TB, Young SL. Progesterone and the luteal phase: a requisite to reproduction. Obstet Gynecol Clin North Am. 2015 Mar;42(1):135-51. PMID: 25681845; PMCID: PMC4436586.")
-              /// Ponzo S, Wickham A, Bamford R, Radovic T, Zhaunova L, Peven K, Klepchukova A, Payne JL. Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app. Digit Health. 2022 Dec 15;8:20552076221145852. PMID: 36544535; PMCID: PMC9761221.
-              internal static let fourth = L10n.tr("Constants", "constants.content.label.home.text.references.fourth", fallback: "Ponzo S, Wickham A, Bamford R, Radovic T, Zhaunova L, Peven K, Klepchukova A, Payne JL. Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app. Digit Health. 2022 Dec 15;8:20552076221145852. PMID: 36544535; PMCID: PMC9761221.")
+              /// Souza EG, Ramos MG, Hara C, Stumpf BP, Rocha FL. Neuropsychological performance and menstrual cycle: a literature review. Trends Psychiatry Psychother. 2012;34(1):5-12.
+              internal static let fourth = L10n.tr("Constants", "constants.content.label.home.text.references.fourth", fallback: "Souza EG, Ramos MG, Hara C, Stumpf BP, Rocha FL. Neuropsychological performance and menstrual cycle: a literature review. Trends Psychiatry Psychother. 2012;34(1):5-12.")
               /// Jukic AM, Weinberg CR, Baird DD, Wilcox AJ. Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular. J Womens Health (Larchmt). 2007 Nov;16(9):1340-7. PMID: 18001191; PMCID: PMC2834565.
               internal static let second = L10n.tr("Constants", "constants.content.label.home.text.references.second", fallback: "Jukic AM, Weinberg CR, Baird DD, Wilcox AJ. Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular. J Womens Health (Larchmt). 2007 Nov;16(9):1340-7. PMID: 18001191; PMCID: PMC2834565.")
-              /// Lima MP, Moreira MA, Maynard DC, Cruz MFA (2021) Alterações fisiológicas e comportamentais da mulher no ciclo menstrual e o impacto da suplementação nutricional / Physiological and behavioral changes in women during the menstrual cycle and the impact of nutritional supplementation. Published: 16/12/2021]. Revista de Saúde e Nutrição 28(1): e021001.
-              internal static let third = L10n.tr("Constants", "constants.content.label.home.text.references.third", fallback: "Lima MP, Moreira MA, Maynard DC, Cruz MFA (2021) Alterações fisiológicas e comportamentais da mulher no ciclo menstrual e o impacto da suplementação nutricional / Physiological and behavioral changes in women during the menstrual cycle and the impact of nutritional supplementation. Published: 16/12/2021]. Revista de Saúde e Nutrição 28(1): e021001.")
+              /// Jukic AM, Weinberg CR, Baird DD, Wilcox AJ. Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular. J Womens Health (Larchmt). 2007 Nov;16(9):1340-7. PMID: 18001191; PMCID: PMC2834565.
+              internal static let third = L10n.tr("Constants", "constants.content.label.home.text.references.third", fallback: "Jukic AM, Weinberg CR, Baird DD, Wilcox AJ. Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular. J Womens Health (Larchmt). 2007 Nov;16(9):1340-7. PMID: 18001191; PMCID: PMC2834565.")
+              internal enum Fifth {
+                /// Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app.
+                internal static let title = L10n.tr("Constants", "constants.content.label.home.text.references.fifth.title", fallback: "Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app.")
+              }
+              internal enum First {
+                /// Progesterone and the luteal phase: a requisite to reproduction.
+                internal static let title = L10n.tr("Constants", "constants.content.label.home.text.references.first.title", fallback: "Progesterone and the luteal phase: a requisite to reproduction.")
+              }
+              internal enum Fourth {
+                /// Neuropsychological performance and menstrual cycle: a literature review.
+                internal static let title = L10n.tr("Constants", "constants.content.label.home.text.references.fourth.title", fallback: "Neuropsychological performance and menstrual cycle: a literature review.")
+              }
+              internal enum Second {
+                /// Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular.
+                internal static let title = L10n.tr("Constants", "constants.content.label.home.text.references.second.title", fallback: "Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular.")
+              }
+              internal enum Third {
+                /// Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular.
+                internal static let title = L10n.tr("Constants", "constants.content.label.home.text.references.third.title", fallback: "Estilo de vida e fatores reprodutivos associados ao comprimento da fase folicular.")
+              }
             }
+          }
+        }
+        internal enum NewActivity {
+          /// Mês
+          internal static let month = L10n.tr("Constants", "constants.content.label.new_activity.month", fallback: "Mês")
+          /// Atividades
+          internal static let title = L10n.tr("Constants", "constants.content.label.new_activity.title", fallback: "Atividades")
+          /// Semana
+          internal static let week = L10n.tr("Constants", "constants.content.label.new_activity.week", fallback: "Semana")
+          internal enum AddNewActivity {
+            /// Atividade
+            internal static let activityTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.activity_title", fallback: "Atividade")
+            /// Data
+            internal static let dateTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.date_title", fallback: "Data")
+            /// Prazo
+            internal static let deadlineTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.deadline_title", fallback: "Prazo")
+            /// Métricas
+            internal static let metricsTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.metrics_title", fallback: "Métricas")
+            /// Título
+            internal static let placeholderActivityTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.placeholder_activity_title", fallback: "Título")
+            /// Registre a data limite para realizar a atividade
+            internal static let subtitleDeadline = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.subtitle_deadline", fallback: "Registre a data limite para realizar a atividade")
+            /// Registre de 1 a 5, sendo 1 = pouco e 5 = muito
+            internal static let subtitleMetrics = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.subtitle_metrics", fallback: "Registre de 1 a 5, sendo 1 = pouco e 5 = muito")
+            internal enum MetricsComponent {
+              /// 🏃🏽 Esforço Físico
+              internal static let fisicsTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.metrics_component.fisics_title", fallback: "🏃🏽 Esforço Físico")
+              /// 💬 Sociabilidade
+              internal static let socialTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.metrics_component.social_title", fallback: "💬 Sociabilidade")
+              /// ⚡️ Estresse
+              internal static let stressTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.metrics_component.stress_title", fallback: "⚡️ Estresse")
+            }
+          }
+          internal enum CreateEvent {
+            /// DATA
+            internal static let date = L10n.tr("Constants", "constants.content.label.new_activity.create_event.date", fallback: "DATA")
+            /// Termina
+            internal static let finalDateTitle = L10n.tr("Constants", "constants.content.label.new_activity.create_event.final_date_title", fallback: "Termina")
+            /// Começa
+            internal static let initialDateTitle = L10n.tr("Constants", "constants.content.label.new_activity.create_event.initial_date_title", fallback: "Começa")
+            /// NOME
+            internal static let name = L10n.tr("Constants", "constants.content.label.new_activity.create_event.name", fallback: "NOME")
+            /// Nome da Atividade
+            internal static let placeholderEventTitle = L10n.tr("Constants", "constants.content.label.new_activity.create_event.placeholder_event_title", fallback: "Nome da Atividade")
+          }
+          internal enum Nav {
+            /// Nova atividade
+            internal static let title = L10n.tr("Constants", "constants.content.label.new_activity.nav.title", fallback: "Nova atividade")
           }
         }
         internal enum Phase {
@@ -401,9 +512,32 @@ internal enum L10n {
           }
         }
       }
+      internal enum Tab {
+        internal enum Bar {
+          /// Atividades
+          internal static let activities = L10n.tr("Constants", "constants.content.tab.bar.activities", fallback: "Atividades")
+          /// Constants.strings
+          ///   luna
+          /// 
+          ///   Created by alexdamascena on 18/07/23.
+          internal static let cycle = L10n.tr("Constants", "constants.content.tab.bar.cycle", fallback: "Ciclo")
+          /// Fontes
+          internal static let fontes = L10n.tr("Constants", "constants.content.tab.bar.fontes", fallback: "Fontes")
+        }
+      }
+    }
+    internal enum Preposition {
+      /// e
+      internal static let and = L10n.tr("Constants", "constants.preposition.and", fallback: "e")
+      /// de
+      internal static let of = L10n.tr("Constants", "constants.preposition.of", fallback: "de")
     }
     internal enum User {
       internal enum Key {
+        /// activities
+        internal static let forActivitiesWasSeen = L10n.tr("Constants", "constants.user.key.for_activities_was_seen", fallback: "activities")
+        /// first_new_activity
+        internal static let forOnboardingActivityWasSeen = L10n.tr("Constants", "constants.user.key.for_onboarding_activity_was_seen", fallback: "first_new_activity")
         /// onboarding
         internal static let forOnboardingWasSeen = L10n.tr("Constants", "constants.user.key.for_onboarding_was_seen", fallback: "onboarding")
       }

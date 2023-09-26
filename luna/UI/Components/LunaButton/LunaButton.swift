@@ -22,7 +22,6 @@ class LunaButton: UIButton {
         let newButton = LunaButtonFactory.create(button: self, lunaStyle: style)
         newButton.draw()
     }
-    
 }
 
 

@@ -3,13 +3,14 @@
 //  luna
 //
 //  Created by gabrielfelipo on 21/07/23.
-//  
+//
 //
 
 import Foundation
 
 class LandingPagePresenter: ViewToPresenterLandingPageProtocol {
 
+    var interactor: PresenterToInteractorLandingPageProtocol?
     var view: PresenterToViewLandingPageProtocol?
     var router: PresenterToRouterLandingPageProtocol?
     
@@ -19,6 +20,6 @@ class LandingPagePresenter: ViewToPresenterLandingPageProtocol {
         DispatchQueue.main.async {
             self.router?.pushLastDayMenstruation(on: landingPageView)
         }
-        
     }
 }
+

@@ -5,10 +5,21 @@
   Created by alexdamascena on 18/07/23.
   
 */
+
+"constants.content.tab.bar.cycle"="Cycle";
+"constants.content.tab.bar.activities"="Activity";
+"constants.content.tab.bar.fontes"="Fontes";
+
+"constants.content.label.create_event.nav.title" = "New event";
+
+"constants.content.label.activity_on_calendar"="Your activity is on the calendar!";
+"constants.content.label.activity.calendar.new_activity"="New activity";
+
 "constants.content.label.last_day_menstruation"="When was the start of\nyour last menstruation?";
 "constants.content.label.menstruation_duration"="How many days does your\nmenstruation last?";
 "constants.content.label.cycle_duration"="How many days does your\nmenstrual cycle last?";
 "constants.content.label.app_name"="Luna";
+"constants.content.label.calendar_activities"="Luna Activities";
 "constants.content.label.landing_page_description"="Your cycle in your favor";
 
 "constants.content.button.continue"="Continue";
@@ -16,7 +27,8 @@
 "constants.content.button.previous"="Back";
 "constants.content.button.settings"="Settings";
 "constants.content.button.references"="Read the references";
-"constants.content.button.newEvent"="New Event";
+"constants.content.button.schedule_activity"="Schedule Activity";
+"constants.content.button.newEvent"="New Activity";
 
 "constants.content.label.home.youAreIn" = "You are in";
 "constants.content.label.home.menstruation" = "Menstruation";
@@ -49,6 +61,9 @@
 
 "constants.content.label.sheet.title" = "References";
 "constants.content.label.sheet.link" = "Available here!";
+
+"constants.content.label.notification_title" = "Real-time with your cycle";
+"constants.content.label.notification_subtitle" = "Authorize Luna's notifications to closely track your menstrual cycle.";
 
 "constants.content.label.folicular"= "⚡️ Follicular Phase";
 "constants.content.label.menstruation"= "🩸 Menstruation";
@@ -89,6 +104,7 @@
 "constants.content.label.text.behind_sheets.fertile"= "The LH (luteinizing hormone) surge triggers the release of the mature egg, which has a lifespan of about 12 to 24 hours.";
 
 "constants.user.key.for_onboarding_was_seen"="onboarding";
+"constants.user.key.for_activities_was_seen"="activities";
 
 "constants.content.label.onboarding_register_menstruation"="Register Menstruation";
 "constants.content.label.onboarding_register_menstruation_description"="The red circle represents the day when menstruation occurred. Just click the button to record!";
@@ -111,6 +127,16 @@
 
 "constants.content.label.home.text.references.fifth" = "Souza EG, Ramos MG, Hara C, Stumpf BP, Rocha FL. Neuropsychological performance and menstrual cycle: a literature review. Trends Psychiatry Psychother. 2012;34(1):5-12.";
 
+"constants.content.label.home.text.references.first.title" = "Progesterone and the luteal phase: a requisite to reproduction.";
+
+"constants.content.label.home.text.references.second.title" = "Lifestyle and reproductive factors associated with the length of the follicular phase.";
+
+"constants.content.label.home.text.references.third.title" = "Lifestyle and reproductive factors associated with the length of the follicular phase.";
+
+"constants.content.label.home.text.references.fourth.title" = "Neuropsychological performance and menstrual cycle: a literature review.";
+
+"constants.content.label.home.text.references.fifth.title" = "Menstrual cycle-associated symptoms and workplace productivity in US employees: A cross-sectional survey of users of the Flo mobile phone app.";
+
 
 "constants.content.label.home.link.references.first" = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4436586/";
 
@@ -125,13 +151,13 @@
 "constants.content.label.home.card.menstruation.one" = "You're literally bleeding!";
 "constants.content.label.home.card.menstruation.two" = "Heads up, you might become more sensitive and irritable.";
 "constants.content.label.home.card.menstruation.three" = "Having cramps and changes in taste are part of menstruation. Stay strong!";
-"constants.content.label.home.card.menstruation.four" = "Intense social activities might have to wait, huh.";
+"constants.content.label.home.card.menstruation.four" = "Intense social activities might have to wait, huh!";
 "constants.content.label.home.card.menstruation.five" = "Gentle exercises can help with cramps and mood. So go for it!";
 
 "constants.content.label.home.card.ovulation.one" = "Whoa, your egg could be released on any of these days.";
 "constants.content.label.home.card.ovulation.two" = "Libido might increase, and you might feel more attractive too!";
 "constants.content.label.home.card.ovulation.three" = "It's time to postpone stressful activities.";
-"constants.content.label.home.card.ovulation.four" = "Craving sweets is normal, enjoy in moderation and be happy!";
+"constants.content.label.home.card.ovulation.four" = "It is normal to experience variations in appetite, go in moderation and be happy!";
 "constants.content.label.home.card.ovulation.five" = "Energy is also high, take advantage with strength exercises.";
 
 "constants.content.label.home.card.luteal.one" = "The egg is now a corpus luteum. Hormones are high!";
@@ -146,7 +172,7 @@
 "constants.content.label.home.card.pms.four" = "Your body might retain more fluid, so it's good to avoid salty foods.";
 "constants.content.label.home.card.pms.five" = "Anxiety will be high, have a little patience.";
 
-"constants.content.label.home.card.folicular.one" = "High energy and well-being! The follicular phase has arrived.";
+"constants.content.label.home.card.folicular.one" = "High energy and well-being! The follicular phase has arrived!";
 "constants.content.label.home.card.folicular.two" = "High energy and well-being! Use this time to tackle life's challenges.";
 "constants.content.label.home.card.folicular.three" = "Your libido might increase, huh?";
 "constants.content.label.home.card.folicular.four" = "Don't let yourself get thirsty during this phase. Hydrate abundantly!";
@@ -251,5 +277,49 @@
 "constants.content.notification.dataset.fertile.body2" = "Today seems like a mix of emotions, right? Learn more about this phase 👉";
 "constants.content.label.onboarding_landing_page"="Find your own cycle";
 
+"constants.content.label.home.no_data"="On this day, we didn't have your data yet.";
+"constants.content.label.home.no_data_descripition" = "Explore the upcoming days!";
+
+"constants.content.label.first_time_new_activity.title" = "Shall we schedule a new activity?";
+"constants.content.label.first_time_new_activity.subtitle" = "Register an activity you need to do and receive a personalized suggestion on when to do it in your cycle.";
+
 "constants.content.label.home.no_data"="Why look to the past? He's already passed!";
-"constants.content.label.home.no_data_descripition" = "The prediction is only made from your last menstrual period, so we don't have anything to tell you about that day.";
+"constants.content.label.home.no_data_descripition" = "The prediction is only made from your last menstrual period, we don't have anything to tell you about that day.";
+
+"constants.content.label.first_time_new_activity.button" = "Lets do it!";
+
+"constants.content.label.new_activity.nav.title" = "New Activity";
+
+"constants.content.label.best_activity.text" = "We tune the activity to your cycle and recommend that you perform it between the days:";
+
+"constants.preposition.and" = "and";
+
+"constants.preposition.of" = "of";
+
+"constants.content.label.best_activity.subtitle" = "We suggest do activity on ";
+"constants.content.label.new_activity.add_new_activity.activity_title" = "Activity";
+"constants.content.label.new_activity.add_new_activity.metrics_title" = "Metrics";
+"constants.content.label.new_activity.add_new_activity.deadline_title" = "Deadline";
+
+"constants.content.label.new_activity.add_new_activity.placeholder_activity_title" = "Title";
+"constants.content.label.new_activity.add_new_activity.subtitle_metrics" = "Record from 1 to 5, where 1 = a little and 5 = a lot";
+"constants.content.label.new_activity.add_new_activity.subtitle_deadline" = "Record the deadline to carry out the activity";
+"constants.content.label.new_activity.add_new_activity.date_title" = "Date";
+
+"constants.content.label.new_activity.add_new_activity.metrics_component.stress_title"= "⚡️ Stress";
+"constants.content.label.new_activity.add_new_activity.metrics_component.social_title"= "💬 Sociability";
+"constants.content.label.new_activity.add_new_activity.metrics_component.fisics_title"= "🏃🏽 Physical Exercise";
+
+"constants.content.label.new_activity.create_event.placeholder_event_title" = "Activity Name";
+"constants.content.label.new_activity.create_event.initial_date_title" = "Start";
+"constants.content.label.new_activity.create_event.final_date_title" = "End";
+
+"constants.content.label.new_activity.create_event.name" = "NAME";
+"constants.content.label.new_activity.create_event.date" = "DATE";
+
+"constants.content.label.new_activity.title" = "Activities";
+"constants.content.label.new_activity.week" = "Week";
+"constants.content.label.new_activity.month" = "Month";
+
+"constants.content.alert.warning.no_title_activity"="You cannot create activity without a name";
+"constants.content.alert.warning.title"="Warning";

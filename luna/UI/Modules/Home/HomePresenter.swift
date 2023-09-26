@@ -8,10 +8,11 @@
 
 import Foundation
 import UIKit
+import EventKit
 
 class HomePresenter: ViewToPresenterHomeProtocol {
-    
-    
+
+
     var view: PresenterToViewHomeProtocol?
     var interactor: PresenterToInteractorHomeProtocol?
     var router: PresenterToRouterHomeProtocol?
@@ -81,7 +82,14 @@ class HomePresenter: ViewToPresenterHomeProtocol {
         return insertedMenstruation
     }
     
-    
+    func findBestPhase(activity: ActivityMetrics) -> EKEvent {
+        guard let idealPhase = interactor?.findBestPhaseFor(activity: activity) else {
+            return EKEvent()
+        }
+        
+        return idealPhase
+    }
+
     func moveTo(_ centerCell: CalendarCollectionViewCell?) {
         guard let centerCell = centerCell else { return }
         view?.updateView(centerCell)
@@ -100,6 +108,11 @@ class HomePresenter: ViewToPresenterHomeProtocol {
         view?.changeCurrentIndexCardPhase(at: newCardPhaseIndex)
     }
     
+    func loadActivitiesDataSource() {
+        let activityDataSource = interactor?.findActivityEventsOfCurrentMonth()
+        view?.loadActivity(dataSource: activityDataSource ?? ActivityEventMonthWeek(week: [], month: []))
+    }
+    
 }
 
 extension HomePresenter: InteractorToPresenterHomeProtocol {
@@ -115,5 +128,4 @@ extension HomePresenter: InteractorToPresenterHomeProtocol {
     func showFeedbackRegisterMenstruation() {
         view?.showFeedbackRegisterMenstruation()
     }
-    
 }

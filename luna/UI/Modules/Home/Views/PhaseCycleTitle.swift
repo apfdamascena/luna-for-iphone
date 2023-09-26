@@ -31,12 +31,6 @@ class PhaseCycleTitle: UIStackView, AnyView {
         return label
     }()
     
-    private(set) var readReferencesButton: LunaButton = {
-        let button = LunaButton()
-        button.draw(style: .references)
-        return button
-    }()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         isSkeletonable = true
@@ -51,8 +45,6 @@ class PhaseCycleTitle: UIStackView, AnyView {
         
         addArrangedSubview(youAreInLabel)
         addArrangedSubview(phaseTitle)
-        addArrangedSubview(readReferencesButton)
-        
     }
     
     func addAdditionalConfiguration() {

@@ -16,10 +16,17 @@ class CalendarCreator {
         self.eventStore = eventStore
     }
 
-    func create() -> EKCalendar? {
+    func create(calendarTitle: CalendarTitle) -> EKCalendar? {
         let calendar = EKCalendar(for: .event, eventStore: eventStore)
-        calendar.title = L10n.Constants.Content.Label.appName
-        calendar.cgColor = UIColor.purple.cgColor
+        calendar.title = calendarTitle.title
+        
+        switch calendarTitle {
+        case .appName:
+            calendar.cgColor = UIColor.purple.cgColor
+        case .appActivities:
+            calendar.cgColor = UIColor.systemPink.cgColor
+        }
+        
         guard let source = self.getSourceFromAccountOrDevice() else {
             return nil
         }

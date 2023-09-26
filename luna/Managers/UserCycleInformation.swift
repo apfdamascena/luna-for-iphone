@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class UserCycleInformation {
     
     private init(){}

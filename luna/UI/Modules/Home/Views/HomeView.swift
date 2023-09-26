@@ -9,21 +9,31 @@ import UIKit
 import SnapKit
 
 class HomeView: UIView, AnyView  {
+
     public var hasAcessToCalendar: CalendarAccess
     
     private(set) var calendarCollectionView = CalendarScrollCollectionView()
     private(set) var warningCalendarAccess = WarningCalendarAccess()
-    
     private let monthTag = MonthTag()
     
+    private(set) var activitiesView = ActivitiesView()
     private let phaseCycleTitle = PhaseCycleTitle()
+    private(set) var cardCycle = CycleCardView()
+        
+    private let warningNoMenstrualData: WarningNoMenstrualData = {
+        let view = WarningNoMenstrualData()
+        view.isHidden = true
+        return view
+    }()
     
-    var referencesButton: LunaButton {
-        return phaseCycleTitle.readReferencesButton
+    var newActivityButton: LunaButton {
+        return activitiesView.newActivity
     }
     
-    private(set) var cardCycle = CycleCardView()
-    
+    var activities: UICollectionView {
+        return activitiesView.activities
+    }
+
     private let allContentStackView: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
@@ -81,12 +91,6 @@ class HomeView: UIView, AnyView  {
         return scrollView
     }()
     
-    private let warningNoMenstrualData: WarningNoMenstrualData = {
-        let view = WarningNoMenstrualData()
-        view.isHidden = true
-        return view
-    }()
-    
     override init(frame: CGRect) {
         self.hasAcessToCalendar = .unauthorized
         super.init(frame: frame)
@@ -108,16 +112,13 @@ class HomeView: UIView, AnyView  {
         
         allContentStackView.addArrangedSubview(monthTag)
         allContentStackView.addArrangedSubview(calendarCollectionView)
+        
         allContentStackView.addArrangedSubview(descriptionStackView)
-        
         descriptionStackView.addArrangedSubview(warningCalendarAccess)
-        
-        
         descriptionStackView.addArrangedSubview(phaseCycleTitle)
-        
         descriptionStackView.addArrangedSubview(cardCycle)
-        
         descriptionStackView.addArrangedSubview(warningNoMenstrualData)
+        allContentStackView.addArrangedSubview(activitiesView)
         
         addSubview(skeletonBackground)
         addSubview(phaseCycleSkeleton)
@@ -180,7 +181,7 @@ class HomeView: UIView, AnyView  {
         }
         
         phaseCycleTitle.snp.makeConstraints {
-            $0.height.equalTo(96)
+            $0.height.equalTo(72)
         }
         
         cardCycle.snp.makeConstraints {
@@ -188,9 +189,12 @@ class HomeView: UIView, AnyView  {
         }
         
         warningNoMenstrualData.snp.makeConstraints{
-            $0.height.equalTo(46.su)
+            $0.height.equalTo(46.2.su)
         }
         
+        activitiesView.snp.makeConstraints{
+            $0.leading.trailing.equalTo(self).inset(3.su)
+        }
     }
     
     func addAdditionalConfiguration() {
@@ -271,17 +275,21 @@ class HomeView: UIView, AnyView  {
             phaseCycleTitle.isHidden = true
             warningNoMenstrualData.isHidden = true
             cardCycle.isHidden = true
+            activitiesView.isHidden = true
             return
         }
         
         phaseCycleTitle.isHidden = false
         warningNoMenstrualData.isHidden = true
         cardCycle.isHidden = false
+        activitiesView.isHidden = false
+        
         
         if cycle == .none {
             phaseCycleTitle.isHidden = true
             cardCycle.isHidden = true
             warningNoMenstrualData.isHidden = false
+            activitiesView.isHidden = true
         }
     }
     
@@ -290,20 +298,27 @@ class HomeView: UIView, AnyView  {
     }
     
     private func toggleCalendarViewIfUserAccess(to value: Bool){
-        [warningCalendarAccess]
-            .forEach{
-                $0.isHidden = value
+        
+        DispatchQueue.main.async {
+            [self.warningCalendarAccess]
+                .forEach{
+                    $0.isHidden = value
+                }
+            [self.phaseCycleTitle].forEach{
+                $0.isHidden = !value
             }
-        [phaseCycleTitle].forEach{
-            $0.isHidden = !value
+        
         }
+
     }
     
     func phaseChanged(to cycle: CyclePhase) {
+        DispatchQueue.main.async {
             let model = CyclePhaseTextFactory.create(phase: cycle)
             let modelCard = DynamicCardPhaseFactory.create(phase: cycle)
             self.phaseCycleTitle.phaseTitle.text = model.name
             self.cardCycle.draw(modelCard)
+        }
     }
     
     func monthChanged(to date: Date) {
@@ -314,6 +329,19 @@ class HomeView: UIView, AnyView  {
     func flowIndexChanged(to index: Int) {
             self.cardCycle.updateFlowIndex(index: index)
         
+    }
+    
+    func drawActivities(_ data: [ActivityCellViewModel]){
+        activitiesView.snp.removeConstraints()
+
+        let size =  (data.count+1) * 80 + 12 * (data.count) + 60
+
+        activitiesView.snp.makeConstraints {
+            $0.height.equalTo(size).multipliedBy(1.3)
+            $0.leading.trailing.equalTo(self).inset(3.su)
+        }
+        
+        activitiesView.createTableWithActivities(with: size)
     }
     
 }

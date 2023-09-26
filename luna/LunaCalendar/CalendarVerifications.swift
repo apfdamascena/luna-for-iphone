@@ -8,8 +8,8 @@
 import EventKit
 
 class CalendarVerifications {
+    
     func hasMenstruationDaysBefore(events: [EKEvent], dateSelected: Date) -> Bool {
-        
        return false
     }
 }

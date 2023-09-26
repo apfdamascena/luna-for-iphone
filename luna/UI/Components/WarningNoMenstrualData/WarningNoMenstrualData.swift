@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class WarningNoMenstrualData: UIView, AnyView {
     
@@ -69,7 +70,7 @@ class WarningNoMenstrualData: UIView, AnyView {
     func addConstraints() {
         
         image.snp.makeConstraints {
-            $0.trailing.leading.equalToSuperview().inset(12.su)
+            $0.centerX.equalToSuperview()
             $0.top.equalToSuperview().offset(3.su)
         }
         

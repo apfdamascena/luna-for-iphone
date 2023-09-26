@@ -13,21 +13,23 @@ class CalendarViewController: UIViewController {
     var presenter: ViewToPresenterCalendarProtocol?
     
     private let calendarView = CalendarView()
+    private let lunaCalendarRequestAccess = LunaCalendarRequestAccess()
+    
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view = calendarView
+        lunaCalendarRequestAccess.askForPermission()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
     }
-
 }
 
 extension CalendarViewController: PresenterToViewCalendarProtocol{
-    // TODO: Implement View Output Methods
+
 }
 
 

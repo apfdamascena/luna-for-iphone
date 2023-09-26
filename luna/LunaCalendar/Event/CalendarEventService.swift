@@ -8,6 +8,7 @@
 import EventKit
 
 class CalendarEventService {
+    
     private let eventStore: EKEventStore
     private let calendar: EKCalendar?
     
@@ -26,7 +27,17 @@ class CalendarEventService {
         try? self.eventStore.save(newEvent, span: .thisEvent)
     }
     
-    func getEventsByDate(firstDate: Date, finalDate: Date) -> (calendar: [EKEvent],hasAccess: Bool) {
+    func createActivitie(_ event: ActivityEvent) {
+        let newEvent = EKEvent(eventStore: self.eventStore)
+        newEvent.title = event.title
+        newEvent.startDate = event.startDate
+        newEvent.endDate = event.endDate
+        newEvent.calendar = self.calendar
+        newEvent.isAllDay = false
+        try? self.eventStore.save(newEvent, span: .thisEvent)
+    }
+    
+    func getEventsByDate(firstDate: Date, finalDate: Date) -> (calendar: [EKEvent], hasAccess: Bool) {
         guard let calendar = calendar else { return ([], false)}
         
         let predicate =  eventStore.predicateForEvents(withStart: firstDate, end: finalDate, calendars: [calendar])
@@ -61,9 +72,9 @@ class CalendarEventService {
             do {
                 try eventStore.remove(eventToDelete, span: .thisEvent)
             } catch let error as NSError {
-                print("failed to save event with error : \(error)")
+                NSLog("failed to save event with error : \(error)")
             }
-            print("removed Event")
+            NSLog("removed Event")
         }
     }
     
@@ -73,6 +84,15 @@ class CalendarEventService {
             return true
         }
         return false
+    }
+    
+    func removeCalendar(){
+        guard let calendar = calendar else { return }
+        do {
+            try eventStore.removeCalendar(calendar, commit: true)
+        } catch {
+            NSLog(error.localizedDescription)
+        }
     }
     
 }

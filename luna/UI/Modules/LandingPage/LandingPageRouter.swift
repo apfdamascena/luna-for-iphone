@@ -3,7 +3,7 @@
 //  luna
 //
 //  Created by gabrielfelipo on 21/07/23.
-//  
+//
 //
 
 import Foundation
@@ -19,6 +19,7 @@ class LandingPageRouter: PresenterToRouterLandingPageProtocol {
         
         viewController.presenter = presenter
         viewController.presenter?.router = LandingPageRouter()
+        viewController.presenter?.interactor = LandingPageInteractor()
         viewController.presenter?.view = viewController
         
         return viewController
@@ -32,3 +33,4 @@ class LandingPageRouter: PresenterToRouterLandingPageProtocol {
     }
     
 }
+

@@ -7,6 +7,7 @@
 import EventKit
 
 class CalendarProvider {
+    
     private let eventStore: EKEventStore
     private let calendarCreator: CalendarCreator
 
@@ -15,19 +16,21 @@ class CalendarProvider {
         self.calendarCreator = CalendarCreator(eventStore: eventStore)
     }
     
-    func getCalendar() -> EKCalendar? {
-        
+    func getCalendar(calendarTitle: CalendarTitle) -> EKCalendar? {
+          
         let calendars = eventStore.calendars(for: .event)
-        let cicleCalendar = calendars.filter { calendar in
-            return calendar.title == L10n.Constants.Content.Label.appName
-        }
         
+        let cicleCalendar = calendars.filter { calendar in
+          return calendar.title == calendarTitle.title
+        }
+
         //[MUDAR]: ver formas de pegar o calendario certo
         guard let calendar = cicleCalendar.first else {
-            let calendarCreated = calendarCreator.create()
-            return calendarCreated
+          let calendarCreated = calendarCreator.create(calendarTitle: calendarTitle)
+          return calendarCreated
         }
+
         return calendar
-        
-    }
+          
+      }
 }

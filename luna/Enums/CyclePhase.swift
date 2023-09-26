@@ -8,6 +8,7 @@
 import UIKit
 
 enum CyclePhase: String, CaseIterable {
+    
     case folicular
     case menstruation
     case luteal
@@ -73,6 +74,31 @@ enum CyclePhase: String, CaseIterable {
             return Asset.pmsSelected.image
         default:
             return Asset.noneSelected.image
+        }
+    }
+    
+    var activityCell: UIImage {
+        switch self {
+        case .pms:
+            return Asset.pmsPhaseActivityCell.image
+            
+        case .folicular:
+            return Asset.foliculePhaseActivityCell.image
+            
+        case .expectedMenstruation:
+            return Asset.expectedPhaseActitivyCell.image
+            
+        case .menstruation:
+            return Asset.menstruationPhaseActivityCell.image
+            
+        case .luteal:
+            return Asset.lutealPhaseActivityCell.image
+            
+        case .fertile:
+            return Asset.ovulationPhaseActivityCell.image
+            
+        default:
+            return Asset.logo.image
         }
     }
 }

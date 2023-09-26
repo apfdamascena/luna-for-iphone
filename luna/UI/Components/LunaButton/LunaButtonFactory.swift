@@ -16,12 +16,18 @@ class LunaButtonFactory {
             return LunaButtonBack(button)
         case .next:
             return LunaButtonProceed(button, style: lunaStyle)
+        case .scheduleActivity:
+            return LunaButtonProceed(button, style: lunaStyle)
         case .settings:
             return LunaButtonProceed(button, style: lunaStyle)
         case .references:
             return LunaButtonReferences(button)
         case .newEvent:
             return LunaButtonNewEvent(button)
+        case .letsGo:
+            return LunaButtonLetsGo(button)
+        case .newActivity:
+            return LunaButtonProceed(button, style: lunaStyle)
         }
     }
 }

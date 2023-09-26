@@ -139,5 +139,7 @@ iOSInjectionProject/
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
 
-# End of https://www.toptal.com/developers/gitignore/api/swift,macos,xcode
+luna.xcworkspace/xcshareddata/swiftpm/
 
+# End of https://www.toptal.com/developers/gitignore/api/swift,macos,xcode
+GoogleService-Info.plist

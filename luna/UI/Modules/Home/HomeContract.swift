@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import EventKit
 
 
 // MARK: View Output (Presenter -> View)
@@ -29,6 +30,7 @@ protocol PresenterToViewHomeProtocol {
     func didUpdateState(_ state: HomeViewState)
     
     func changeCurrentIndexCardPhase(at newIndex: Int)
+    func loadActivity(dataSource: ActivityEventMonthWeek)
 
 }
 
@@ -42,8 +44,10 @@ protocol ViewToPresenterHomeProtocol {
     
     func checkCalendarPermission()
     func loadUserCalendar()
+    func insertMenstruation(selectedDate: Date) -> Bool
+    func findBestPhase(activity: ActivityMetrics) -> EKEvent
+
     func loadCalendarToCollection(isloading: Bool)
-    func insertMenstruation(selectedDate: Date) -> Bool 
         
     func userSelect(_ cell: CalendarCollectionViewCell?,
                     center: CalendarCollectionViewCell?,
@@ -56,6 +60,7 @@ protocol ViewToPresenterHomeProtocol {
     func showCyclePhaseReferencesSheet()
     
     func userTappedCardPhase(at index: Int)
+    func loadActivitiesDataSource() 
 }
 
 
@@ -70,6 +75,8 @@ protocol PresenterToInteractorHomeProtocol {
     func loadPhasesToUserCalendar()
     func loadCalendarToCollection() -> (calendar: [CyclePhaseViewModel], haveAccess: Bool)
     func insertedMenstruationToCollection(selectedDate: Date) -> Bool
+    func insertActivityToCalendar(title: String, initialDate: Date, finalDate: Date)
+    func findBestPhaseFor(activity: ActivityMetrics) -> EKEvent?
     
     func openDeviceSettings()
     
@@ -77,6 +84,7 @@ protocol PresenterToInteractorHomeProtocol {
     
     var calendarPermission: CalendarAccess { get }
     
+    func findActivityEventsOfCurrentMonth() -> ActivityEventMonthWeek 
 }
 
 
