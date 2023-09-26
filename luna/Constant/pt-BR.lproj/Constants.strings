@@ -267,7 +267,7 @@ e seja feliz!";
 
 "constants.preposition.of" = "de";
 
-"constants.content.label.best_activity.subtitle" = "O melhor momento é na";
+"constants.content.label.best_activity.subtitle" = "Sugerimos realizar a atividade durante a ";
 
 "constants.content.label.new_activity.add_new_activity.activity_title" = "Atividade";
 "constants.content.label.new_activity.add_new_activity.metrics_title" = "Métricas";

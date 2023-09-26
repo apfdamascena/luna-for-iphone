@@ -99,8 +99,8 @@ internal enum L10n {
           }
         }
         internal enum BestActivity {
-          /// O melhor momento é na
-          internal static let subtitle = L10n.tr("Constants", "constants.content.label.best_activity.subtitle", fallback: "O melhor momento é na")
+          /// Sugerimos realizar a atividade durante a 
+          internal static let subtitle = L10n.tr("Constants", "constants.content.label.best_activity.subtitle", fallback: "Sugerimos realizar a atividade durante a ")
           /// Sintonizamos a atividade com seu ciclo e recomendamos que você a realize entre os dias
           internal static let text = L10n.tr("Constants", "constants.content.label.best_activity.text", fallback: "Sintonizamos a atividade com seu ciclo e recomendamos que você a realize entre os dias")
         }

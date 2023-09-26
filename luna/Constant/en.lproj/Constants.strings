@@ -296,7 +296,7 @@
 
 "constants.preposition.of" = "of";
 
-"constants.content.label.best_activity.subtitle" = "The best time is in";
+"constants.content.label.best_activity.subtitle" = "We suggest do activity on ";
 "constants.content.label.new_activity.add_new_activity.activity_title" = "Activity";
 "constants.content.label.new_activity.add_new_activity.metrics_title" = "Metrics";
 "constants.content.label.new_activity.add_new_activity.deadline_title" = "Deadline";
