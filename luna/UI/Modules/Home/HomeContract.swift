@@ -14,6 +14,7 @@ import EventKit
 protocol PresenterToViewHomeProtocol {
     
     func userAllowedAccessCalendar()
+    func allowAccessCalendar()
     func userDeniedAccessCalendar()
     
     func changeSelectedCell(selectedCell: CalendarCollectionViewCell) 
@@ -21,9 +22,12 @@ protocol PresenterToViewHomeProtocol {
     func updateView(_ center: CalendarCollectionViewCell)
     
     func load(collectionDataSource: [CyclePhaseViewModel])
+    func moveInitialCollection() 
     
     func moveTo(_ month: Date)
     func showFeedbackRegisterMenstruation()
+    
+    func didUpdateState(_ state: HomeViewState)
     
     func changeCurrentIndexCardPhase(at newIndex: Int)
     func loadActivity(dataSource: ActivityEventMonthWeek)
@@ -40,10 +44,11 @@ protocol ViewToPresenterHomeProtocol {
     
     func checkCalendarPermission()
     func loadUserCalendar()
-    func loadCalendarToCollection()
     func insertMenstruation(selectedDate: Date) -> Bool
     func findBestPhase(activity: ActivityMetrics) -> EKEvent
 
+    func loadCalendarToCollection(isloading: Bool)
+        
     func userSelect(_ cell: CalendarCollectionViewCell?,
                     center: CalendarCollectionViewCell?,
                     andMoveCenter: CGFloat?)
@@ -68,7 +73,7 @@ protocol PresenterToInteractorHomeProtocol {
     
     func checkIfUserGivePermission(completion: @escaping PermissionResponse)
     func loadPhasesToUserCalendar()
-    func loadCalendarToCollection() -> [CyclePhaseViewModel]
+    func loadCalendarToCollection() -> (calendar: [CyclePhaseViewModel], haveAccess: Bool)
     func insertedMenstruationToCollection(selectedDate: Date) -> Bool
     func insertActivityToCalendar(title: String, initialDate: Date, finalDate: Date)
     func findBestPhaseFor(activity: ActivityMetrics) -> EKEvent?

@@ -12,6 +12,7 @@ import EventKit
 
 class HomePresenter: ViewToPresenterHomeProtocol {
 
+
     var view: PresenterToViewHomeProtocol?
     var interactor: PresenterToInteractorHomeProtocol?
     var router: PresenterToRouterHomeProtocol?
@@ -45,9 +46,20 @@ class HomePresenter: ViewToPresenterHomeProtocol {
         interactor?.loadPhasesToUserCalendar()
     }
     
-    func loadCalendarToCollection() {
+    func loadCalendarToCollection(isloading: Bool)  {
         let collectionDataSource = interactor?.loadCalendarToCollection()
-        view?.load(collectionDataSource: collectionDataSource ?? [])
+        
+        view?.load(collectionDataSource: collectionDataSource?.calendar ?? [])
+        
+        if isloading {
+            self.view?.didUpdateState(.loading)
+        } else {
+            if collectionDataSource?.haveAccess == true {
+                self.view?.didUpdateState(.autorized)
+            } else {
+                self.view?.didUpdateState(.unautorized)
+            }
+        }
     }
     
     func userSelect(_ cell: CalendarCollectionViewCell?,
@@ -69,7 +81,6 @@ class HomePresenter: ViewToPresenterHomeProtocol {
         guard let insertedMenstruation = interactor?.insertedMenstruationToCollection(selectedDate: selectedDate) else { return false }
         return insertedMenstruation
     }
-    
     
     func findBestPhase(activity: ActivityMetrics) -> EKEvent {
         guard let idealPhase = interactor?.findBestPhaseFor(activity: activity) else {

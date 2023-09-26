@@ -8,7 +8,7 @@
 import EventKit
 class CycleInformationsCalculator {
     func saveFirstMenstruationDayFromLastPeriod(events: [EKEvent]) {
-        var menstruationEvents = events.filter { event in
+        let menstruationEvents = events.filter { event in
             return event.title == CyclePhase.menstruation.value
         }
         
@@ -31,7 +31,6 @@ class CycleInformationsCalculator {
             var cycleDuration = tomorrowEvent?.startDate.daysBetween(lastMenstruation.startDate) ?? 28
             cycleDuration = max(cycleDuration, 20)
             cycleDuration = min(cycleDuration, 32)
-            print(menstruationEvents.count)
             if menstruationEvents.count <= 1 {
                 cycleDuration = UserCycleInformation.shared.cycleDurationFirstInput
             }
@@ -60,8 +59,12 @@ class CycleInformationsCalculator {
        
         guard let lastMenstruation = menstruationEvents.popLast() else { return }
         
-        if lastMenstruation.endDate.formatToInt() == Date().formatToInt() && !isRemove {
-            guard let penultimateMenstruation = menstruationEvents.last else { return }
+        if lastMenstruation.endDate.formatToInt() == Date().formatToInt() {
+            guard let penultimateMenstruation = menstruationEvents.last else {
+
+                return
+                
+            }
             var penultimateDuration = penultimateMenstruation.startDate.daysBetween(penultimateMenstruation.endDate) + 1
 
             penultimateDuration = min(penultimateDuration, 10)
@@ -72,7 +75,7 @@ class CycleInformationsCalculator {
         }
         
         var menstruationDuration = lastMenstruation.startDate.daysBetween(lastMenstruation.endDate) + 1
-        
+
         menstruationDuration = min(menstruationDuration, 10)
         menstruationDuration = max(menstruationDuration, 4)
 

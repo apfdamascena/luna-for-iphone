@@ -9,13 +9,14 @@ import UIKit
 
 class PhaseCycleTitle: UIStackView, AnyView {
     
-    private let youAreInLabel: LunaText = {
+    var youAreInLabel: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 25, color: .black, weight: .regular)
         label.text = L10n.Constants.Content.Label.Home.youAreIn
         label.numberOfLines = 0
         label.textAlignment = .left
         label.draw(model)
+        label.isSkeletonable = true
         return label
     }()
     
@@ -26,11 +27,13 @@ class PhaseCycleTitle: UIStackView, AnyView {
         label.numberOfLines = 0
         label.textAlignment = .left
         label.draw(model)
+        label.isSkeletonable = true
         return label
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        isSkeletonable = true
         setupView()
     }
     

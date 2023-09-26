@@ -98,7 +98,7 @@ enum CyclePhase: String, CaseIterable {
             return Asset.ovulationPhaseActivityCell.image
             
         default:
-            return Asset.pmsPhaseActivityCell.image
+            return Asset.logo.image
         }
     }
 }

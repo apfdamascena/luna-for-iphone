@@ -29,6 +29,7 @@ class FirstTimeNewActivityViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = firstTimeNewActivityView
+        
     }
     
     override func viewDidLoad() {
@@ -36,7 +37,6 @@ class FirstTimeNewActivityViewController: UIViewController {
         firstTimeLetsGoButtonTouchTrigger()
         self.tabBarController?.tabBar.isHidden = true
         navigationItem.title = nil
-        ActivityManager.shared.userSawActivities()
     }
         
     func firstTimeLetsGoButtonTouchTrigger() {

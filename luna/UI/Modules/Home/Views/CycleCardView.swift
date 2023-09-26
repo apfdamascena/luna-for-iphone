@@ -51,6 +51,7 @@ class CycleCardView: UIView, AnyView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        isSkeletonable = true
         setupView()
     }
     
@@ -72,11 +73,11 @@ class CycleCardView: UIView, AnyView {
             $0.leading.trailing.equalToSuperview().inset(2.su)
             $0.top.equalToSuperview().offset(3.su)
         }
+        
         title.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(2.su)
             $0.trailing.equalToSuperview().offset(-129)
             $0.top.equalTo(stack.snp.bottom).offset(4.su)
-            
         }
         
         cardImage.snp.makeConstraints{

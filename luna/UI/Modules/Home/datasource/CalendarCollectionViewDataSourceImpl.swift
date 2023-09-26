@@ -17,7 +17,7 @@ class CalendarCollectionViewDataSourceImpl: CalendarCollectionViewDataSource {
 
     var lastCell: CalendarCollectionViewCell?
     
-    var cyclePhase: PublishSubject<CyclePhase> = PublishSubject()
+    var cyclePhase: BehaviorSubject<CyclePhase> = BehaviorSubject(value: CyclePhase.none)
     
     var month: PublishSubject<Date> = PublishSubject()
     

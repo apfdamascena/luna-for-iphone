@@ -18,8 +18,8 @@ class CreateEventViewController: UIViewController {
     private let createEventView = CreateEventView()
     
     var titleEvent: String = NewActivityInformations.shared.title
-    var initialDate: Date = Date()
-    var endDate: Date = Date().daysAfter(10)
+    var initialDate: Date = NewActivityInformations.shared.dateInterval.start
+    var endDate: Date = NewActivityInformations.shared.dateInterval.end
 
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {

@@ -164,6 +164,7 @@ class ActivityCell: UICollectionViewCell,
         hourDescription.text = "\(model.hourStart) - \(model.hourEnd)"
         title.text = model.title
         
+        cyclePhaseImage.contentMode = .scaleAspectFit
         cyclePhaseImage.image = model.phase.activityCell
     }
 }

@@ -1,6 +1,7 @@
 ### others
 
 .env
+*/GoogleService-Info.plist
 
 Fastlane/code_coverage/
 ./Fastlane/test_output

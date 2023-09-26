@@ -21,8 +21,10 @@ class FirstTimeNewActivityPresenter: ViewToPresenterFirstTimeNewActivityProtocol
     }
     
     func userTappedLetsGoButton() {
-        guard let pageViewController = view else { return }
+        
         ActivityManager.shared.userSawActivities()
+        
+        guard let pageViewController = view else { return }
         
         DispatchQueue.main.async {
             self.router?.pushNewActivity(on: pageViewController)

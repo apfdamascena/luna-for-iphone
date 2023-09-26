@@ -19,8 +19,7 @@ class NewActivityInteractor: PresenterToInteractorNewActivityProtocol {
     }
     
     func findBestPhaseFor(activity: ActivityMetrics) -> EKEvent? {
-        print("cralhu", activity.finalDate)
-        guard var phaseEvents = lunaCalendarManager?.getEventsByDate(firstDate: Date(), finalDate: activity.finalDate) else { return nil }
+        guard var phaseEvents = lunaCalendarManager?.getEventsByDate(firstDate: Date(), finalDate: activity.finalDate).calendar else { return nil }
 
         
         if phaseEvents.count > 5 {

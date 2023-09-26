@@ -31,10 +31,12 @@ class ActivitiesCalendarManager {
         
         let endOfMonth = Date().endOfMonth()
 
-        let events = eventService.getEventsByDate(firstDate: Date(), finalDate: endOfMonth)
+        let events = eventService.getEventsByDate(firstDate: Date(), finalDate: endOfMonth).calendar
+        print("rola rola \(events)")
         let eventsToReturn = events.map { event in
-            let cycleEvent = generalCalendarEventService?.getEventsByDate(firstDate: event.startDate, finalDate: event.startDate)
+            let cycleEvent = generalCalendarEventService?.getEventsByDate(firstDate: event.startDate, finalDate: event.startDate).calendar
             
+            print("rola rola \(cycleEvent?.first?.title)")
             let phase = CyclePhase(rawValue: cycleEvent?.first?.title ?? "none") ?? CyclePhase.none
             
             return ActivityEvent(title: event.title, startDate: event.startDate, endDate: event.endDate, phase: phase)
@@ -47,10 +49,10 @@ class ActivitiesCalendarManager {
         
         let endOfWeek = Date().endOfWeek()
 
-        let events = eventService.getEventsByDate(firstDate: Date(), finalDate: endOfWeek)
+        let events = eventService.getEventsByDate(firstDate: Date(), finalDate: endOfWeek).calendar
         
         let eventsToReturn = events.map { event in
-            let cycleEvent = generalCalendarEventService?.getEventsByDate(firstDate: event.startDate, finalDate: event.startDate)
+            let cycleEvent = generalCalendarEventService?.getEventsByDate(firstDate: event.startDate, finalDate: event.startDate).calendar
             
             let phase = CyclePhase(rawValue: cycleEvent?.first?.title ?? "none") ?? CyclePhase.none
             

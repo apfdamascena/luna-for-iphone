@@ -57,22 +57,17 @@ extension LunaCalendarManager {
 
         }
         
-        //chamar funcao de add novo ciclo
         return addMenstruation(selectedDate: selectedDate, eventService: eventService)
     }
     
     func adjustMenstruationAfter(selectedDate: Date, menstruationEvent: EKEvent, eventService: CalendarEventService) -> ChangeCycleResponse {
         eventService.removeEvent(eventId: menstruationEvent.eventIdentifier)
-        
-//        if selectedDate.daysBetween(menstruationEvent.endDate) > 10 {
-//            return ChangeCycleResponse.menstruationWillHaveMoreThanMaxDays
-//        }
 
         let newMenstruationEvent = LunaEvent(title: CyclePhase.menstruation, startDate: selectedDate, endDate: menstruationEvent.endDate)
         eventService.createEvent(newMenstruationEvent)
         
         
-        let eventsBeforeMenstruation = getEventsByDate(firstDate: selectedDate, finalDate: menstruationEvent.startDate)
+        let eventsBeforeMenstruation = getEventsByDate(firstDate: selectedDate, finalDate: menstruationEvent.startDate).calendar
         let notMenstruationEvents = eventsBeforeMenstruation.filter { event in
             return event.title != CyclePhase.menstruation.value
         }
@@ -100,7 +95,7 @@ extension LunaCalendarManager {
         
         eventService.createEvent(newMenstruationEvent)
         
-        let eventsAfterMenstruation = getEventsByDate(firstDate: menstruationEvent.endDate, finalDate: selectedDate)
+        let eventsAfterMenstruation = getEventsByDate(firstDate: menstruationEvent.endDate, finalDate: selectedDate).calendar
         let notMenstruationEvents = eventsAfterMenstruation.filter { event in
             return event.title != CyclePhase.menstruation.value
         }
@@ -122,7 +117,7 @@ extension LunaCalendarManager {
     
     func addMenstruation(selectedDate: Date, eventService: CalendarEventService) -> ChangeCycleResponse {
         
-        let selectedEvent = eventService.getEventsByDate(firstDate: selectedDate, finalDate: selectedDate).first
+        let selectedEvent = (eventService.getEventsByDate(firstDate: selectedDate, finalDate: selectedDate).calendar).first
 
         let newMenstruationEvent = LunaEvent(title: CyclePhase.menstruation, startDate: selectedDate, endDate: selectedDate)
 
@@ -137,7 +132,7 @@ extension LunaCalendarManager {
     
     func removeMenstruation(selectedDate: Date, eventService: CalendarEventService) -> ChangeCycleResponse {
         
-        guard let selectedEvent = eventService.getEventsByDate(firstDate: selectedDate, finalDate: selectedDate).first else {
+        guard let selectedEvent = (eventService.getEventsByDate(firstDate: selectedDate, finalDate: selectedDate).calendar).first else {
             return ChangeCycleResponse.err
         }
         

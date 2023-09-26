@@ -25,7 +25,7 @@ protocol CalendarManager {
     
     func transformExpectedToMenstruation()
     
-    func getEventsByDate(firstDate: Date, finalDate: Date) -> [EKEvent]
+    func getEventsByDate(firstDate: Date, finalDate: Date) -> (calendar: [EKEvent], hasAccess: Bool)
     
     func changeDayPhaseBy(selectedDate: Date) -> ChangeCycleResponse
     
@@ -52,6 +52,7 @@ class LunaCalendarManager: CalendarManager  {
     }
 
     func requestAccessToCalendar(completion: @escaping PermissionResponse){
+        
         eventStore.requestAccess(to: .event) {[weak self] success, error in
             guard error == nil,
                   success,
@@ -74,7 +75,7 @@ class LunaCalendarManager: CalendarManager  {
     
     func eventsBefore(daysBefore: Int, finalDate: Date) -> [EKEvent]? {
         let daysBeforeDate = finalDate.daysBefore(daysBefore)
-        return lunaEventService?.getEventsByDate(firstDate: daysBeforeDate, finalDate: finalDate)
+        return lunaEventService?.getEventsByDate(firstDate: daysBeforeDate, finalDate: finalDate).calendar
     }
     
     func lunaEventsExist() -> Bool {
@@ -83,12 +84,13 @@ class LunaCalendarManager: CalendarManager  {
     
     func eventsAfter(daysAfter: Int, startDate: Date) -> [EKEvent]? {
         let daysAfterDate = startDate.daysAfter(daysAfter)
-        return lunaEventService?.getEventsByDate(firstDate: startDate, finalDate: daysAfterDate)
+        return lunaEventService?.getEventsByDate(firstDate: startDate, finalDate: daysAfterDate).calendar
     }
     
-    func getEventsByDate(firstDate: Date, finalDate: Date) -> [EKEvent] {
-        guard let eventService = self.lunaEventService else { return [] }
-        return eventService.getEventsByDate(firstDate: firstDate, finalDate: finalDate)
+    func getEventsByDate(firstDate: Date, finalDate: Date) -> (calendar: [EKEvent], hasAccess: Bool) {
+        guard let eventService = self.lunaEventService else { return ([], false)}
+        let events = eventService.getEventsByDate(firstDate: firstDate, finalDate: finalDate)
+        return (events.calendar, events.hasAccess)
     }
     
 
@@ -115,6 +117,7 @@ class LunaCalendarManager: CalendarManager  {
                 startDate: phase.startDate,
                 endDate: phase.endDate)
             createEvent(event)
+
         }
     }
     
@@ -123,11 +126,11 @@ class LunaCalendarManager: CalendarManager  {
         guard let informationsCalculator = self.cycleInformationsCalculator else { return }
         let daysBefore = Date().daysBefore(HomeCollection.COLLECTION_RANGE/2)
         let tomorrowDate = Date().daysAfter(1)
-        let eventsTomorrow = eventService.getEventsByDate(firstDate: tomorrowDate, finalDate: tomorrowDate)
-        let eventsToday = eventService.getEventsByDate(firstDate: Date(), finalDate: Date())
+        let eventsTomorrow = eventService.getEventsByDate(firstDate: tomorrowDate, finalDate: tomorrowDate).calendar
+        let eventsToday = eventService.getEventsByDate(firstDate: Date(), finalDate: Date()).calendar
         
 
-        let events = eventService.getEventsByDate(firstDate: daysBefore, finalDate: Date())
+        let events = eventService.getEventsByDate(firstDate: daysBefore, finalDate: Date()).calendar
 
         informationsCalculator.saveLastMenstruationDuration(eventsBeforeToday: events, isRemove: isRemove)
         informationsCalculator.saveLastCycleDuration(events: events, tomorrowEvents: eventsTomorrow, todayEvents: eventsToday)
@@ -136,14 +139,17 @@ class LunaCalendarManager: CalendarManager  {
         let lastDayMenstruation = UserCycleInformation.shared.lastMenstruation
         let menstruationDuration = UserCycleInformation.shared.menstruationDuration
         let cycleDuration = UserCycleInformation.shared.cycleDuration
-        let dayAfterMenstruation = lastDayMenstruation.daysAfter(menstruationDuration)
-        removeFutureEvents(menstruationDate: dayAfterMenstruation)
+        let dayAfterMenstruation = lastDayMenstruation.daysAfter(menstruationDuration+1)
         
-        let lastMenstruationEvent = eventService.getEventsByDate(firstDate: lastDayMenstruation, finalDate: lastDayMenstruation.daysAfter(1))
+        let lastMenstruationEvent = eventService.getEventsByDate(firstDate: lastDayMenstruation, finalDate: lastDayMenstruation.daysAfter(1)).calendar
         
         let lastMenstruationDuration = lastMenstruationEvent.first?.startDate.daysBetween(lastMenstruationEvent.first?.endDate ?? Date())
-        
+        let removeFromDate = lastMenstruationEvent.first?.endDate.daysAfter(1) ?? Date()
+
+        removeFutureEvents(menstruationDate: removeFromDate)
+
         addCyclePhasesToCalendar(firstDayMenstruation: lastDayMenstruation, averageMenstruationDuration: menstruationDuration, averageCycleDuration: cycleDuration, isFirst: false, firstMenstruationTime: lastMenstruationDuration)
+        changeLastMenstruationIfItIsToday()
     }
     
     func removeFutureEvents(menstruationDate: Date)  {
