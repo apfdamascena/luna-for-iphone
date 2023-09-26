@@ -39,7 +39,7 @@ enum LunaButtonStyle {
         case .letsGo:
             return L10n.Constants.Content.Label.FirstTimeNewActivity.button
         case .newActivity:
-            return "Nova atividade"
+            return L10n.Constants.Content.Label.Activity.Calendar.newActivity
         }
     }
     

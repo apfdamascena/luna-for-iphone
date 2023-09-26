@@ -11,6 +11,9 @@
 "constants.content.tab.bar.activities"="Atividades";
 "constants.content.tab.bar.fontes"="Fontes";
 
+"constants.content.label.activity_on_calendar"="Sua atividade está no calendário!";
+"constants.content.label.activity.calendar.new_activity"="Nova atividade";
+
 "constants.content.label.last_day_menstruation"="Quando foi o início da\nsua última menstruação?";
 "constants.content.label.menstruation_duration"="Quantos dias dura a\nsua menstruação?";
 "constants.content.label.cycle_duration"="Quantos dias dura o\nseu ciclo menstrual?";
@@ -282,4 +285,9 @@ e seja feliz!";
 "constants.content.label.new_activity.create_event.placeholder_event_title" = "Nome da Atividade";
 "constants.content.label.new_activity.create_event.initial_date_title" = "Começa";
 "constants.content.label.new_activity.create_event.final_date_title" = "Termina";
+
+
+"constants.content.label.new_activity.create_event.name" = "NOME";
+"constants.content.label.new_activity.create_event.date" = "DATA";
+
 

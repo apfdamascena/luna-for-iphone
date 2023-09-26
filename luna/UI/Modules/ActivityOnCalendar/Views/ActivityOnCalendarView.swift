@@ -32,7 +32,7 @@ class ActivityOnCalendarView: UIView, AnyView {
         label.draw(model)
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.text = "Sua atividade está no calendário!"
+        label.text = L10n.Constants.Content.Label.activityOnCalendar
         return label
     }()
     

@@ -33,6 +33,8 @@ internal enum L10n {
         internal static let start = L10n.tr("Constants", "constants.content.button.start", fallback: "Iniciar")
       }
       internal enum Label {
+        /// Sua atividade está no calendário!
+        internal static let activityOnCalendar = L10n.tr("Constants", "constants.content.label.activity_on_calendar", fallback: "Sua atividade está no calendário!")
         /// Luna
         internal static let appName = L10n.tr("Constants", "constants.content.label.app_name", fallback: "Luna")
         /// Luna Activities
@@ -90,6 +92,12 @@ internal enum L10n {
         internal static let onboardingRegisterMenstruationDescription = L10n.tr("Constants", "constants.content.label.onboarding_register_menstruation_description", fallback: "O círculo vermelho representa o dia em que ocorreu a menstruação. Basta clicar no botão para registrar!")
         /// 😡 TPM
         internal static let pms = L10n.tr("Constants", "constants.content.label.pms", fallback: "😡 TPM")
+        internal enum Activity {
+          internal enum Calendar {
+            /// Nova atividade
+            internal static let newActivity = L10n.tr("Constants", "constants.content.label.activity.calendar.new_activity", fallback: "Nova atividade")
+          }
+        }
         internal enum BestActivity {
           /// O melhor momento é na
           internal static let subtitle = L10n.tr("Constants", "constants.content.label.best_activity.subtitle", fallback: "O melhor momento é na")
@@ -295,10 +303,14 @@ internal enum L10n {
             }
           }
           internal enum CreateEvent {
+            /// DATA
+            internal static let date = L10n.tr("Constants", "constants.content.label.new_activity.create_event.date", fallback: "DATA")
             /// Termina
             internal static let finalDateTitle = L10n.tr("Constants", "constants.content.label.new_activity.create_event.final_date_title", fallback: "Termina")
             /// Começa
             internal static let initialDateTitle = L10n.tr("Constants", "constants.content.label.new_activity.create_event.initial_date_title", fallback: "Começa")
+            /// NOME
+            internal static let name = L10n.tr("Constants", "constants.content.label.new_activity.create_event.name", fallback: "NOME")
             /// Nome da Atividade
             internal static let placeholderEventTitle = L10n.tr("Constants", "constants.content.label.new_activity.create_event.placeholder_event_title", fallback: "Nome da Atividade")
           }

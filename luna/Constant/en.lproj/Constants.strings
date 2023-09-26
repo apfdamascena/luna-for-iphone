@@ -10,6 +10,11 @@
 "constants.content.tab.bar.activities"="Activity";
 "constants.content.tab.bar.fontes"="Fontes";
 
+"constants.content.label.create_event.nav.title" = "New event";
+
+"constants.content.label.activity_on_calendar"="Your activity is on the calendar!";
+"constants.content.label.activity.calendar.new_activity"="New activity";
+
 "constants.content.label.last_day_menstruation"="When was the start of\nyour last menstruation?";
 "constants.content.label.menstruation_duration"="How many days does your\nmenstruation last?";
 "constants.content.label.cycle_duration"="How many days does your\nmenstrual cycle last?";
@@ -304,3 +309,10 @@
 "constants.content.label.new_activity.add_new_activity.metrics_component.stress_title"= "⚡️ Stress";
 "constants.content.label.new_activity.add_new_activity.metrics_component.social_title"= "💬 Sociability";
 "constants.content.label.new_activity.add_new_activity.metrics_component.fisics_title"= "🏃🏽 Physical Exercise";
+
+"constants.content.label.new_activity.create_event.placeholder_event_title" = "Activity Name";
+"constants.content.label.new_activity.create_event.initial_date_title" = "Start";
+"constants.content.label.new_activity.create_event.final_date_title" = "End";
+
+"constants.content.label.new_activity.create_event.name" = "NAME";
+"constants.content.label.new_activity.create_event.date" = "DATE";
