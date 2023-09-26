@@ -316,3 +316,7 @@
 
 "constants.content.label.new_activity.create_event.name" = "NAME";
 "constants.content.label.new_activity.create_event.date" = "DATE";
+
+"constants.content.label.new_activity.title" = "Activities";
+"constants.content.label.new_activity.week" = "Week";
+"constants.content.label.new_activity.month" = "Month";

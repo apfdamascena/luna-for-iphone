@@ -290,4 +290,8 @@ e seja feliz!";
 "constants.content.label.new_activity.create_event.name" = "NOME";
 "constants.content.label.new_activity.create_event.date" = "DATA";
 
+"constants.content.label.new_activity.title" = "Atividades";
+"constants.content.label.new_activity.week" = "Semana";
+"constants.content.label.new_activity.month" = "Mês";
+
 

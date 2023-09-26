@@ -278,6 +278,12 @@ internal enum L10n {
           }
         }
         internal enum NewActivity {
+          /// Mês
+          internal static let month = L10n.tr("Constants", "constants.content.label.new_activity.month", fallback: "Mês")
+          /// Atividades
+          internal static let title = L10n.tr("Constants", "constants.content.label.new_activity.title", fallback: "Atividades")
+          /// Semana
+          internal static let week = L10n.tr("Constants", "constants.content.label.new_activity.week", fallback: "Semana")
           internal enum AddNewActivity {
             /// Atividade
             internal static let activityTitle = L10n.tr("Constants", "constants.content.label.new_activity.add_new_activity.activity_title", fallback: "Atividade")

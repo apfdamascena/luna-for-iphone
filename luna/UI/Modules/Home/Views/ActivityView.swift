@@ -22,7 +22,7 @@ class ActivitiesView: UIView, AnyView {
                                       color: .black,
                                       weight: .semibold)
         label.draw(model)
-        label.text="Atividades"
+        label.text = L10n.Constants.Content.Label.NewActivity.title
         return label
     }()
     
@@ -33,7 +33,9 @@ class ActivitiesView: UIView, AnyView {
     }()
     
     private(set) var segmentedControl: UISegmentedControl = {
-        let segmented = UISegmentedControl(items: ["Semana", "Mês"])
+        let items = [L10n.Constants.Content.Label.NewActivity.week,
+                     L10n.Constants.Content.Label.NewActivity.month]
+        let segmented = UISegmentedControl(items: items)
         segmented.selectedSegmentIndex = 0
         return segmented
     }()
