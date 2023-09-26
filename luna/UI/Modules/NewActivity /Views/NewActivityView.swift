@@ -99,6 +99,11 @@ class NewActivityView: UIView, AnyView {
     
     func addAdditionalConfiguration() {
         self.backgroundColor = .white
+        allContentStackView.isLayoutMarginsRelativeArrangement = true
+        allContentStackView.layoutMargins = UIEdgeInsets(top: 0,
+                                                         left: 0,
+                                                         bottom: 5.su,
+                                                         right: 0)
     }
     
 }
