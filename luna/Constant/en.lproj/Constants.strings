@@ -320,3 +320,6 @@
 "constants.content.label.new_activity.title" = "Activities";
 "constants.content.label.new_activity.week" = "Week";
 "constants.content.label.new_activity.month" = "Month";
+
+"constants.content.alert.warning.no_title_activity"="You cannot mark activity without a name";
+"constants.content.alert.warning.title"="Warning";

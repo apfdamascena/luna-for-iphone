@@ -294,4 +294,7 @@ e seja feliz!";
 "constants.content.label.new_activity.week" = "Semana";
 "constants.content.label.new_activity.month" = "Mês";
 
+"constants.content.alert.warning.no_title_activity"="Você não pode marcar atividadade sem nome";
+"constants.content.alert.warning.title"="Aviso";
+
 

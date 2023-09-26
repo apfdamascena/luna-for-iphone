@@ -135,6 +135,19 @@ extension NewActivityViewController: PresenterToViewNewActivityProtocol{
     
     func showFeedbackForUser() {
         
+        let alert = UIAlertController(title: L10n.Constants.Content.Alert.Warning.title,
+                                      message: L10n.Constants.Content.Alert.Warning.noTitleActivity,
+                                      preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "OK",
+                                      style: .default,
+                                      handler: { _ in
+        }))
+
+        present(alert, animated: true, completion: nil)
+        
+        
+        
     }
     
     // TODO: Implement View Output Methods

@@ -106,6 +106,10 @@ class NewActivityView: UIView, AnyView {
                                                          right: 0)
     }
     
+    
+    func drawBorderAtTitleLabel(){
+        
+    }
 }
 
 
