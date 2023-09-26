@@ -153,6 +153,7 @@ class ActivityCell: UICollectionViewCell,
         backgroundColor = Asset.gray50.color
         layer.masksToBounds = true
         layer.cornerRadius = 8
+        cyclePhaseImage.contentMode = .scaleAspectFit
     }
     
     func draw(_ model: ActivityCellViewModel) {
@@ -164,7 +165,7 @@ class ActivityCell: UICollectionViewCell,
         hourDescription.text = "\(model.hourStart) - \(model.hourEnd)"
         title.text = model.title
         
-        cyclePhaseImage.contentMode = .scaleAspectFit
+
         cyclePhaseImage.image = model.phase.activityCell
     }
 }
