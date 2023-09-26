@@ -77,7 +77,7 @@ class CreateEventView: UIView, AnyView, UITextFieldDelegate {
         let model = LunaTextViewModel(size: 13,
                                       color: Asset.gray400.color,
                                       weight: .regular)
-        label.text = "NOME"
+        label.text = L10n.Constants.Content.Label.NewActivity.CreateEvent.name
         label.draw(model)
         label.addLineHeight(of: 16)
         return label
@@ -94,7 +94,7 @@ class CreateEventView: UIView, AnyView, UITextFieldDelegate {
         let model = LunaTextViewModel(size: 13,
                                       color: Asset.gray400.color,
                                       weight: .regular)
-        label.text = "DATA"
+        label.text = L10n.Constants.Content.Label.NewActivity.CreateEvent.date
         label.draw(model)
         label.addLineHeight(of: 16)
         return label
