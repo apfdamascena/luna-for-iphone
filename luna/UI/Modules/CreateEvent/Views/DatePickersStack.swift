@@ -89,11 +89,9 @@ class DatePickersStack: UIStackView, AnyView {
             view.leadingAnchor.constraint(equalTo: grayView.safeAreaLayoutGuide.leadingAnchor).isActive = true
             view.trailingAnchor.constraint(equalTo: grayView.safeAreaLayoutGuide.trailingAnchor).isActive = true
         }
-        
+    
         datePicker.minimumDate = Date()
-//        let dateTest = NSDAt
-        
-        datePicker.date = Date().daysAfter(4)
+
         
         return datePicker
     }()
