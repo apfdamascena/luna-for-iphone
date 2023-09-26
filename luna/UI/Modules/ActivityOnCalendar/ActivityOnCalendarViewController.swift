@@ -37,7 +37,8 @@ class ActivityOnCalendarViewController: UIViewController {
         activityOnCalendarView.newActivity
             .rx
             .tap.bind {
-                self.navigationController?.popToRootViewController(animated: true)
+                guard let tab = self.tabBarController as? LunaTabBarViewController else { return }
+                tab.setupViewControllers()
             }.disposed(by: disposeBag)
     }
 }

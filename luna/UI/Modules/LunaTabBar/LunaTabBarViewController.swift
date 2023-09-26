@@ -44,12 +44,11 @@ class LunaTabBarViewController: UITabBarController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
-    private func setupViewControllers(){
+    func setupViewControllers(){
         
         if ActivityManager.shared.wasSeen {
             controllers[1] = NewActivityRouter.createModule()
         }
-        
         
         let navigationControllers = controllers.enumerated().map{ (index, viewController) in
             viewController.title = titles[index]
@@ -66,6 +65,7 @@ class LunaTabBarViewController: UITabBarController {
     private func addAdditionalConfiguration(){
         tabBar.unselectedItemTintColor = Asset.gray400.color
         tabBar.tintColor = Asset.red500.color
+        tabBar.barTintColor = Asset.gray50.color
     }
 
 }
