@@ -5,6 +5,11 @@
   Created by alexdamascena on 18/07/23.
   
 */
+
+"constants.content.tab.bar.cycle"="Cycle";
+"constants.content.tab.bar.activities"="Activity";
+"constants.content.tab.bar.fontes"="Fontes";
+
 "constants.content.label.last_day_menstruation"="When was the start of\nyour last menstruation?";
 "constants.content.label.menstruation_duration"="How many days does your\nmenstruation last?";
 "constants.content.label.cycle_duration"="How many days does your\nmenstrual cycle last?";

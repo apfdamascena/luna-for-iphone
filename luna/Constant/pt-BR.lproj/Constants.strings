@@ -5,6 +5,12 @@
   Created by alexdamascena on 18/07/23.
   
 */
+
+
+"constants.content.tab.bar.cycle"="Ciclo";
+"constants.content.tab.bar.activities"="Atividades";
+"constants.content.tab.bar.fontes"="Fontes";
+
 "constants.content.label.last_day_menstruation"="Quando foi o início da\nsua última menstruação?";
 "constants.content.label.menstruation_duration"="Quantos dias dura a\nsua menstruação?";
 "constants.content.label.cycle_duration"="Quantos dias dura o\nseu ciclo menstrual?";

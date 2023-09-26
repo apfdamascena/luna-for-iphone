@@ -52,10 +52,8 @@ internal enum L10n {
         internal static let folicular = L10n.tr("Constants", "constants.content.label.folicular", fallback: "⚡️ Fase folicular")
         /// Seu ciclo ao seu favor
         internal static let landingPageDescription = L10n.tr("Constants", "constants.content.label.landing_page_description", fallback: "Seu ciclo ao seu favor")
-        /// Constants.strings
-        ///   luna
-        /// 
-        ///   Created by alexdamascena on 18/07/23.
+        /// Quando foi o início da
+        /// sua última menstruação?
         internal static let lastDayMenstruation = L10n.tr("Constants", "constants.content.label.last_day_menstruation", fallback: "Quando foi o início da\nsua última menstruação?")
         /// ⬛️ Fase lútea
         internal static let luteal = L10n.tr("Constants", "constants.content.label.luteal", fallback: "⬛️ Fase lútea")
@@ -486,6 +484,19 @@ internal enum L10n {
             /// Sem gracinha hoje
             internal static let title = L10n.tr("Constants", "constants.content.notification.firstPhaseDay.pms.title", fallback: "Sem gracinha hoje")
           }
+        }
+      }
+      internal enum Tab {
+        internal enum Bar {
+          /// Atividades
+          internal static let activities = L10n.tr("Constants", "constants.content.tab.bar.activities", fallback: "Atividades")
+          /// Constants.strings
+          ///   luna
+          /// 
+          ///   Created by alexdamascena on 18/07/23.
+          internal static let cycle = L10n.tr("Constants", "constants.content.tab.bar.cycle", fallback: "Ciclo")
+          /// Fontes
+          internal static let fontes = L10n.tr("Constants", "constants.content.tab.bar.fontes", fallback: "Fontes")
         }
       }
     }

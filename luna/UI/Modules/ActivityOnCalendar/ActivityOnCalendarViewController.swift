@@ -37,7 +37,6 @@ class ActivityOnCalendarViewController: UIViewController {
         activityOnCalendarView.newActivity
             .rx
             .tap.bind {
-                
                 self.navigationController?.popToRootViewController(animated: true)
             }.disposed(by: disposeBag)
     }

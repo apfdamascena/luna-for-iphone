@@ -24,9 +24,9 @@ class LunaTabBarViewController: UITabBarController {
      ]
     
     private let titles: [String?]  = [
-        "Ciclo",
-        "Atividades",
-        "Fontes"
+        L10n.Constants.Content.Tab.Bar.cycle,
+        L10n.Constants.Content.Tab.Bar.activities,
+        L10n.Constants.Content.Tab.Bar.fontes
     ]
             
     override func viewDidLoad() {

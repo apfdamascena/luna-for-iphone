@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 
 class NewActivityCollectionViewCell: UICollectionViewCell {
+    
     static let identifier = "NewActivityCollectionViewCell"
 
     private(set) var numberLabel: LunaText = {
