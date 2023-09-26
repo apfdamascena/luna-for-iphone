@@ -145,9 +145,6 @@ extension NewActivityViewController: PresenterToViewNewActivityProtocol{
         }))
 
         present(alert, animated: true, completion: nil)
-        
-        
-        
     }
     
     // TODO: Implement View Output Methods
