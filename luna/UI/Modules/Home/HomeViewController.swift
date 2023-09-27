@@ -322,9 +322,8 @@ extension HomeViewController: PresenterToViewHomeProtocol {
                 }
             }
             else {
-                // MUDAR ALERTA, MUDAR TEXTO
                 let alert = UIAlertController(title: "Aviso",
-                                              message: "Você não pode marcar um dia próximo a outra menstruação",
+                                              message: "Você atingiu a duração máxima de menstruação, tente retirar um dia do início ou final da menstruação.",
                                               preferredStyle: .alert)
 
                 alert.addAction(UIAlertAction(title: "OK",

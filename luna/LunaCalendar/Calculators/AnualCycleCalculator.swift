@@ -39,7 +39,7 @@ class AnualCycleCalculator {
             }
         } else {
             if (firstMenstruationTime != nil) {
-                cyclePhases.append(contentsOf: [calculateFirstFolicularDate(), calculateFertileDate(), calculateLutealDate(), calculatePMSDate()])
+                cyclePhases.append(contentsOf: [calculateFirstFolicularDate(), calculateFirstFertileDate(), calculateLutealDate(), calculatePMSDate()])
             } else {
                 cyclePhases.append(contentsOf: [calculateFolicularDate(), calculateFertileDate(), calculateLutealDate(), calculatePMSDate()])
             }
@@ -60,6 +60,12 @@ class AnualCycleCalculator {
     
     func calculateExpectedMenstruationDay() -> LunaEvent {
         return calculatePhaseDate(CyclePhase.expectedMenstruation, 0, cycleInformations.averageMenstruationDuration-1)
+    }
+    func calculateFirstFertileDate() -> LunaEvent {
+        if cycleInformations.averageCycleDuration - (firstMenstruationTime ?? 0) <= 17 {
+            return calculatePhaseDate(CyclePhase.fertile, cycleInformations.averageCycleDuration-(cycleInformations.averageCycleDuration - (firstMenstruationTime ?? 0) - 1), cycleInformations.averageCycleDuration-13)
+        }
+        return calculateFertileDate()
     }
     
     private func calculateFirstFolicularDate() -> LunaEvent {

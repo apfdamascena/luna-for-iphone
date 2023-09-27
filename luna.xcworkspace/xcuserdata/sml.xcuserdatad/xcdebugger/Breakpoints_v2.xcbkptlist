@@ -14,8 +14,8 @@
             filePath = "luna/LunaCalendar/CalendarManager/LunaCalendarManager+Check.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "adjustMenstruationBefore(selectedDate:menstruationEvent:eventService:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "luna/LunaCalendar/CalendarManager/LunaCalendarManager+Check.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "adjustMenstruationBefore(selectedDate:menstruationEvent:eventService:)"
             landmarkType = "7">
          </BreakpointContent>
