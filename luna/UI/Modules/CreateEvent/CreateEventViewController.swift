@@ -52,9 +52,22 @@ class CreateEventViewController: UIViewController {
         createEventView.createEventButton
             .rx
             .tap.bind {
-                self.addActivity(title: self.titleEvent, initialDate: self.initialDate, finalDate: self.endDate)
-                
-                self.presenter?.userTappedCreateEventButton()
+                if self.initialDate > self.endDate {
+                    let alert = UIAlertController(title: "Aviso",
+                                                  message: "Cuidado! A data initial está depois da data final",
+                                                  preferredStyle: .alert)
+
+                    alert.addAction(UIAlertAction(title: "OK",
+                                                  style: .default,
+                                                  handler: { _ in
+                    }))
+                    self.present(alert, animated: true, completion: nil)
+
+                } else {
+                    self.addActivity(title: self.titleEvent, initialDate: self.initialDate, finalDate: self.endDate)
+                    self.presenter?.userTappedCreateEventButton()
+                }
+                    
             }.disposed(by: disposeBag)
     }
     
