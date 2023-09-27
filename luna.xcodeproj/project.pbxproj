@@ -50,7 +50,6 @@
 		0D2DB3072AC1FFE9003D71D8 /* CalendarCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB3062AC1FFE9003D71D8 /* CalendarCollectionViewFlowLayout.swift */; };
 		0D2DB3092AC1FFF8003D71D8 /* LandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB3082AC1FFF8003D71D8 /* LandingPageView.swift */; };
 		0D2DB30B2AC214C5003D71D8 /* NotificationRequestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB30A2AC214C5003D71D8 /* NotificationRequestInteractor.swift */; };
-		0D2DB30F2AC31200003D71D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D2DB30E2AC31200003D71D8 /* GoogleService-Info.plist */; };
 		0D2FC76A2A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */; };
 		0D2FC76C2A6EF4810025D8B6 /* DataSourceEventObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */; };
 		0D2FC76E2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76D2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift */; };
@@ -203,6 +202,8 @@
 		A48F4A3A2A993BEC00BB5058 /* CardPhaseControlDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A392A993BEC00BB5058 /* CardPhaseControlDataSource.swift */; };
 		A48F4A3E2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A3D2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift */; };
 		A48F4A402A9E8AED00BB5058 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A3F2A9E8AED00BB5058 /* String.swift */; };
+		A490462C2AC4A896007759A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A490462B2AC4A896007759A1 /* GoogleService-Info.plist */; };
+		A490462F2AC4A8DD007759A1 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490462E2AC4A8DD007759A1 /* UIViewController.swift */; };
 		BF4144312A93DC2F00517910 /* LunaCalendarManager+Check.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4144302A93DC2F00517910 /* LunaCalendarManager+Check.swift */; };
 		BF42D2162A8AC67A00E09472 /* CalendarVerifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42D2152A8AC67A00E09472 /* CalendarVerifications.swift */; };
 		BF4951002AB0FB8A0064F5D6 /* BestActivityContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4950FB2AB0FB8A0064F5D6 /* BestActivityContract.swift */; };
@@ -331,7 +332,6 @@
 		0D2DB3062AC1FFE9003D71D8 /* CalendarCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		0D2DB3082AC1FFF8003D71D8 /* LandingPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageView.swift; sourceTree = "<group>"; };
 		0D2DB30A2AC214C5003D71D8 /* NotificationRequestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRequestInteractor.swift; sourceTree = "<group>"; };
-		0D2DB30E2AC31200003D71D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSource.swift; sourceTree = "<group>"; };
 		0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceEventObservable.swift; sourceTree = "<group>"; };
 		0D2FC76D2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSourceImpl.swift; sourceTree = "<group>"; };
@@ -488,6 +488,8 @@
 		A48F4A392A993BEC00BB5058 /* CardPhaseControlDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPhaseControlDataSource.swift; sourceTree = "<group>"; };
 		A48F4A3D2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPhaseControlDataSourceImpl.swift; sourceTree = "<group>"; };
 		A48F4A3F2A9E8AED00BB5058 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		A490462B2AC4A896007759A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A490462E2AC4A8DD007759A1 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = ../../../../../../../UIViewController.swift; sourceTree = "<group>"; };
 		BF4144302A93DC2F00517910 /* LunaCalendarManager+Check.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LunaCalendarManager+Check.swift"; sourceTree = "<group>"; };
 		BF42D2152A8AC67A00E09472 /* CalendarVerifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVerifications.swift; sourceTree = "<group>"; };
 		BF4950FB2AB0FB8A0064F5D6 /* BestActivityContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestActivityContract.swift; sourceTree = "<group>"; };
@@ -972,7 +974,7 @@
 		0DBADDCB2A65FF2A00A10FC3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0D2DB30E2AC31200003D71D8 /* GoogleService-Info.plist */,
+				A490462B2AC4A896007759A1 /* GoogleService-Info.plist */,
 				0DA74C742A9549AA0021EC40 /* fonts */,
 				0DBADDA42A65FDF300A10FC3 /* Assets.xcassets */,
 				0DBADDA62A65FDF300A10FC3 /* LaunchScreen.storyboard */,
@@ -1057,6 +1059,7 @@
 		0DDA61322A69D0D200CA15C6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A490462D2AC4A8D3007759A1 /* Controllers */,
 				0DDA61342A69D0ED00CA15C6 /* Preview */,
 				0DDA61332A69D0DD00CA15C6 /* Dimensions */,
 			);
@@ -1336,6 +1339,14 @@
 			children = (
 			);
 			path = CardPhaseControl;
+			sourceTree = "<group>";
+		};
+		A490462D2AC4A8D3007759A1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A490462E2AC4A8DD007759A1 /* UIViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		BF4950FA2AB0FB3D0064F5D6 /* BestActivity */ = {
@@ -1704,7 +1715,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DBADDA82A65FDF300A10FC3 /* LaunchScreen.storyboard in Resources */,
-				0D2DB30F2AC31200003D71D8 /* GoogleService-Info.plist in Resources */,
+				A490462C2AC4A896007759A1 /* GoogleService-Info.plist in Resources */,
 				CACB96F62A85670300EB66DD /* Constants.strings in Resources */,
 				0DA74C762A9549CB0021EC40 /* CoconRegularFont.otf in Resources */,
 				0DBADDA52A65FDF300A10FC3 /* Assets.xcassets in Resources */,
@@ -1889,6 +1900,7 @@
 				0DBADDE92A66045700A10FC3 /* UIViewController+Preview.swift in Sources */,
 				0D0B28CB2A9FD8A10048722A /* NotificationFilterCommand.swift in Sources */,
 				A427FC962AB39468006B4F2B /* DivView.swift in Sources */,
+				A490462F2AC4A8DD007759A1 /* UIViewController.swift in Sources */,
 				CA17ED982A71EDCE0051BF9D /* CyclePhaseViewModel.swift in Sources */,
 				BF4951012AB0FB8A0064F5D6 /* BestActivityPresenter.swift in Sources */,
 				BF4144312A93DC2F00517910 /* LunaCalendarManager+Check.swift in Sources */,
