@@ -149,34 +149,34 @@
 "constants.content.label.home.link.references.fifth" = "https://www.scielo.br/j/trends/a/sCgf4Rzvkvjmmv4bSMzV6vk/?format=pdf&lang=en";
 
 "constants.content.label.home.card.menstruation.one" = "You're literally bleeding!";
-"constants.content.label.home.card.menstruation.two" = "Heads up, you might become more sensitive and irritable.";
-"constants.content.label.home.card.menstruation.three" = "Having cramps and changes in taste are part of menstruation. Stay strong!";
-"constants.content.label.home.card.menstruation.four" = "Intense social activities might have to wait, huh!";
-"constants.content.label.home.card.menstruation.five" = "Gentle exercises can help with cramps and mood. So go for it!";
+"constants.content.label.home.card.menstruation.two" = "Pay attention, you may be more sensitive and irritable.";
+"constants.content.label.home.card.menstruation.three" = "Having cramps and changes in taste is also part of it. Hang in there!";
+"constants.content.label.home.card.menstruation.four" = "Intense social activities can wait for later, okay?";
+"constants.content.label.home.card.menstruation.five" = "Light exercise can help with cramps and mood. So, go for it!";
 
 "constants.content.label.home.card.ovulation.one" = "Whoa, your egg could be released on any of these days.";
-"constants.content.label.home.card.ovulation.two" = "Libido might increase, and you might feel more attractive too!";
-"constants.content.label.home.card.ovulation.three" = "It's time to postpone stressful activities.";
-"constants.content.label.home.card.ovulation.four" = "It is normal to experience variations in appetite, go in moderation and be happy!";
-"constants.content.label.home.card.ovulation.five" = "Energy is also high, take advantage with strength exercises.";
+"constants.content.label.home.card.ovulation.two" = "You may find yourself more attractive during this phase.";
+"constants.content.label.home.card.ovulation.three" = "Postponing stressful activities is a good idea!";
+"constants.content.label.home.card.ovulation.four" = "It's normal to experience changes in appetite, so go easy and be happy!";
+"constants.content.label.home.card.ovulation.five" = "You may also have high energy, so make the most of strength exercises.";
 
 "constants.content.label.home.card.luteal.one" = "The egg is now a corpus luteum. Hormones are high!";
-"constants.content.label.home.card.luteal.two" = "Only good vibes! It could be a day of peace and tranquility.";
-"constants.content.label.home.card.luteal.three" = "Your mood might fluctuate, and that's okay, alright?";
-"constants.content.label.home.card.luteal.four" = "It's good to avoid important decisions or big changes.";
-"constants.content.label.home.card.luteal.five" = "Make the most of this time for calm activities.";
+"constants.content.label.home.card.luteal.two" = "Just good vibes! The day can be peaceful and tranquil.";
+"constants.content.label.home.card.luteal.three" = "Mood swings are okay, too!";
+"constants.content.label.home.card.luteal.four" = "It's a good idea to carefully evaluate important decisions or major changes.";
+"constants.content.label.home.card.luteal.five" = "Take this time to engage in calm activities.";
 
 "constants.content.label.home.card.pms.one" = "Here she comes... PMS! A true mix of emotions.";
-"constants.content.label.home.card.pms.two" = "Oh boy, you could easily go from 0 to 60 in mood.";
+"constants.content.label.home.card.pms.two" = "Wow! You can easily go from 8 to 80.";
 "constants.content.label.home.card.pms.three" = "Cramps and body aches can be common.";
-"constants.content.label.home.card.pms.four" = "Your body might retain more fluid, so it's good to avoid salty foods.";
-"constants.content.label.home.card.pms.five" = "Anxiety will be high, have a little patience.";
+"constants.content.label.home.card.pms.four" = "Your body may be retaining more fluids, avoiding salty foods can help.";
+"constants.content.label.home.card.pms.five" = "Anxiety may be high, so have a little patience.";
 
 "constants.content.label.home.card.folicular.one" = "High energy and well-being! The follicular phase has arrived!";
-"constants.content.label.home.card.folicular.two" = "High energy and well-being! Use this time to tackle life's challenges.";
-"constants.content.label.home.card.folicular.three" = "Your libido might increase, huh?";
-"constants.content.label.home.card.folicular.four" = "Don't let yourself get thirsty during this phase. Hydrate abundantly!";
-"constants.content.label.home.card.folicular.five" = "Maintain good eating and exercise habits.";
+"constants.content.label.home.card.folicular.two" = "You may have high energy! Use it to tackle life's challenges!";
+"constants.content.label.home.card.folicular.three" = "You may feel an improvement in your well-being.";
+"constants.content.label.home.card.folicular.four" = "No need to go thirsty during this phase. Stay well-hydrated!";
+"constants.content.label.home.card.folicular.five" = "Maintain good dietary and exercise habits.";
 
 "constants.content.label.onboarding_landing_page"="Awake your own cycle";
 
