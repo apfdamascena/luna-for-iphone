@@ -29,7 +29,7 @@ class CycleInformationsCalculator {
             guard let lastMenstruation = menstruationEvents.popLast() else { return }
             
             var cycleDuration = tomorrowEvent?.startDate.daysBetween(lastMenstruation.startDate) ?? 28
-            cycleDuration = max(cycleDuration, 20)
+            cycleDuration = max(cycleDuration, 25)
             cycleDuration = min(cycleDuration, 32)
             if menstruationEvents.count <= 1 {
                 cycleDuration = UserCycleInformation.shared.cycleDurationFirstInput
@@ -42,7 +42,7 @@ class CycleInformationsCalculator {
             
             var cycleDuration = penultimateMenstruation.startDate.daysBetween(lastMenstruation.startDate)
             
-            cycleDuration = max(cycleDuration, 20)
+            cycleDuration = max(cycleDuration, 25)
             cycleDuration = min(cycleDuration, 32)
 
             UserCycleInformation.shared.setCycle(cycleDuration)
@@ -67,7 +67,7 @@ class CycleInformationsCalculator {
             }
             var penultimateDuration = penultimateMenstruation.startDate.daysBetween(penultimateMenstruation.endDate) + 1
 
-            penultimateDuration = min(penultimateDuration, 10)
+            penultimateDuration = min(penultimateDuration, 7)
             penultimateDuration = max(penultimateDuration, 4)
             UserCycleInformation.shared.setMenstruation(penultimateDuration)
 
@@ -76,7 +76,7 @@ class CycleInformationsCalculator {
         
         var menstruationDuration = lastMenstruation.startDate.daysBetween(lastMenstruation.endDate) + 1
 
-        menstruationDuration = min(menstruationDuration, 10)
+        menstruationDuration = min(menstruationDuration, 7)
         menstruationDuration = max(menstruationDuration, 4)
 
         

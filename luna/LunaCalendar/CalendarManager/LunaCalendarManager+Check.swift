@@ -14,6 +14,7 @@ enum ChangeCycleResponse {
     case noMenstruationNearSelectedDate
     case menstruationWillHaveMoreThanMaxDays
     case isInsideMenstruationEvent
+    case passedElevenDays
     case err
 }
 
@@ -39,6 +40,9 @@ extension LunaCalendarManager {
             guard let eventToAdjust = menstruationEventsAfter.last else {
                 return ChangeCycleResponse.err
             }
+            if selectedDate.daysBetween(eventToAdjust.endDate) > 10 {
+                return ChangeCycleResponse.passedElevenDays
+            }
             return adjustMenstruationAfter(selectedDate: selectedDate, menstruationEvent: eventToAdjust,  eventService: eventService)
         }
 
@@ -53,6 +57,10 @@ extension LunaCalendarManager {
             guard let eventToAdjust = menstruationEventsBefore.first else {
                 return ChangeCycleResponse.err
             }
+            if eventToAdjust.startDate.daysBetween(selectedDate) > 10 {
+                return ChangeCycleResponse.passedElevenDays
+            }
+
             return adjustMenstruationBefore(selectedDate: selectedDate, menstruationEvent: eventToAdjust,  eventService: eventService)
 
         }

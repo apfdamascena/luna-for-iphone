@@ -76,6 +76,9 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
         if response == ChangeCycleResponse.hasMenstruationNearDate {
             return true
         }
+        if response == ChangeCycleResponse.passedElevenDays {
+            return false
+        }
         return true
     }
 
