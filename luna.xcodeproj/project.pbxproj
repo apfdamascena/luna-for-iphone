@@ -50,7 +50,6 @@
 		0D2DB3072AC1FFE9003D71D8 /* CalendarCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB3062AC1FFE9003D71D8 /* CalendarCollectionViewFlowLayout.swift */; };
 		0D2DB3092AC1FFF8003D71D8 /* LandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB3082AC1FFF8003D71D8 /* LandingPageView.swift */; };
 		0D2DB30B2AC214C5003D71D8 /* NotificationRequestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB30A2AC214C5003D71D8 /* NotificationRequestInteractor.swift */; };
-		0D2DB30F2AC31200003D71D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D2DB30E2AC31200003D71D8 /* GoogleService-Info.plist */; };
 		0D2FC76A2A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */; };
 		0D2FC76C2A6EF4810025D8B6 /* DataSourceEventObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */; };
 		0D2FC76E2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76D2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift */; };
@@ -223,6 +222,7 @@
 		BF6520E12A6F0D4B00E60054 /* CycleDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520DD2A6F0D4B00E60054 /* CycleDurationViewController.swift */; };
 		BF6520E42A6F0D5D00E60054 /* CycleDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520E32A6F0D5D00E60054 /* CycleDurationView.swift */; };
 		BF8701482ABE2F7900F6D83D /* LunaCalendarManager+Bugfix.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8701472ABE2F7900F6D83D /* LunaCalendarManager+Bugfix.swift */; };
+		BF8FB76D2AC49DB100EDC354 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF8FB76C2AC49DB100EDC354 /* GoogleService-Info.plist */; };
 		BF9A367B2ABB7F2000D231CB /* CreateEventContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A36762ABB7F2000D231CB /* CreateEventContract.swift */; };
 		BF9A367C2ABB7F2000D231CB /* CreateEventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A36772ABB7F2000D231CB /* CreateEventPresenter.swift */; };
 		BF9A367D2ABB7F2000D231CB /* CreateEventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A36782ABB7F2000D231CB /* CreateEventRouter.swift */; };
@@ -331,7 +331,6 @@
 		0D2DB3062AC1FFE9003D71D8 /* CalendarCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		0D2DB3082AC1FFF8003D71D8 /* LandingPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageView.swift; sourceTree = "<group>"; };
 		0D2DB30A2AC214C5003D71D8 /* NotificationRequestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRequestInteractor.swift; sourceTree = "<group>"; };
-		0D2DB30E2AC31200003D71D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSource.swift; sourceTree = "<group>"; };
 		0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceEventObservable.swift; sourceTree = "<group>"; };
 		0D2FC76D2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSourceImpl.swift; sourceTree = "<group>"; };
@@ -508,6 +507,7 @@
 		BF6520DD2A6F0D4B00E60054 /* CycleDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationViewController.swift; sourceTree = "<group>"; };
 		BF6520E32A6F0D5D00E60054 /* CycleDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationView.swift; sourceTree = "<group>"; };
 		BF8701472ABE2F7900F6D83D /* LunaCalendarManager+Bugfix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LunaCalendarManager+Bugfix.swift"; sourceTree = "<group>"; };
+		BF8FB76C2AC49DB100EDC354 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/info-plist-dev/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF9A36762ABB7F2000D231CB /* CreateEventContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventContract.swift; sourceTree = "<group>"; };
 		BF9A36772ABB7F2000D231CB /* CreateEventPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventPresenter.swift; sourceTree = "<group>"; };
 		BF9A36782ABB7F2000D231CB /* CreateEventRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventRouter.swift; sourceTree = "<group>"; };
@@ -972,7 +972,7 @@
 		0DBADDCB2A65FF2A00A10FC3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0D2DB30E2AC31200003D71D8 /* GoogleService-Info.plist */,
+				BF8FB76C2AC49DB100EDC354 /* GoogleService-Info.plist */,
 				0DA74C742A9549AA0021EC40 /* fonts */,
 				0DBADDA42A65FDF300A10FC3 /* Assets.xcassets */,
 				0DBADDA62A65FDF300A10FC3 /* LaunchScreen.storyboard */,
@@ -1704,8 +1704,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DBADDA82A65FDF300A10FC3 /* LaunchScreen.storyboard in Resources */,
-				0D2DB30F2AC31200003D71D8 /* GoogleService-Info.plist in Resources */,
 				CACB96F62A85670300EB66DD /* Constants.strings in Resources */,
+				BF8FB76D2AC49DB100EDC354 /* GoogleService-Info.plist in Resources */,
 				0DA74C762A9549CB0021EC40 /* CoconRegularFont.otf in Resources */,
 				0DBADDA52A65FDF300A10FC3 /* Assets.xcassets in Resources */,
 			);

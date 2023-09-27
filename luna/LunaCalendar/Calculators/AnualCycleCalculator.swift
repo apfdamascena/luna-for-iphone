@@ -63,19 +63,19 @@ class AnualCycleCalculator {
     }
     
     private func calculateFirstFolicularDate() -> LunaEvent {
-        return calculatePhaseDate(CyclePhase.folicular, ((firstMenstruationTime ?? 0) + 1) , 10)
+        return calculatePhaseDate(CyclePhase.folicular, ((firstMenstruationTime ?? 0) + 1) , cycleInformations.averageCycleDuration-18)
     }
     
     private func calculateFolicularDate() -> LunaEvent {
-        return calculatePhaseDate(CyclePhase.folicular, cycleInformations.averageMenstruationDuration, cycleInformations.averageCycleDuration-20)
+        return calculatePhaseDate(CyclePhase.folicular, cycleInformations.averageMenstruationDuration, cycleInformations.averageCycleDuration-18)
     }
     
     private func calculateFertileDate() -> LunaEvent {
-        return calculatePhaseDate(CyclePhase.fertile, cycleInformations.averageCycleDuration-19, cycleInformations.averageCycleDuration-15)
+        return calculatePhaseDate(CyclePhase.fertile, cycleInformations.averageCycleDuration-17, cycleInformations.averageCycleDuration-13)
     }
     
     private func calculateLutealDate() -> LunaEvent {
-        return calculatePhaseDate(CyclePhase.luteal, cycleInformations.averageCycleDuration-14, cycleInformations.averageCycleDuration-7)
+        return calculatePhaseDate(CyclePhase.luteal, cycleInformations.averageCycleDuration-12, cycleInformations.averageCycleDuration-7)
     }
     
     private func calculatePMSDate() -> LunaEvent {
