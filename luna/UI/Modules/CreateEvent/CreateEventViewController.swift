@@ -64,6 +64,7 @@ class CreateEventViewController: UIViewController {
                     self.present(alert, animated: true, completion: nil)
 
                 } else {
+                    self.initialDate = self.initialDate + 1
                     self.addActivity(title: self.titleEvent, initialDate: self.initialDate, finalDate: self.endDate)
                     self.presenter?.userTappedCreateEventButton()
                 }
