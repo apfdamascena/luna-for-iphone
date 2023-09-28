@@ -18,7 +18,7 @@ enum LunaButtonStyle {
     case letsGo
     case scheduleActivity
     case newActivity
-    
+    case backToHome
     
     var value: String {
         switch self {
@@ -40,6 +40,8 @@ enum LunaButtonStyle {
             return L10n.Constants.Content.Label.FirstTimeNewActivity.button
         case .newActivity:
             return L10n.Constants.Content.Label.Activity.Calendar.newActivity
+        case .backToHome:
+            return "opa opa opa"
         }
     }
     

@@ -30,8 +30,8 @@ class BestActivityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         continueButtonTouchTrigger()
-        // pode botar aq?
         let nav = self.navigationController?.navigationBar
+        self.tabBarController?.tabBar.isHidden = true
         nav?.tintColor = Asset.red600.color
     }
     

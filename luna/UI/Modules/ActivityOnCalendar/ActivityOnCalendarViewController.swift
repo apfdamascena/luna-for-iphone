@@ -26,11 +26,26 @@ class ActivityOnCalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         observerNewActivityButton()
+        observerBackHomeButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.hidesBackButton = true
+    }
+    
+    func observerBackHomeButton(){
+        activityOnCalendarView.backToHome
+            .rx
+            .tap
+            .bind{
+                self.tabBarController?.tabBar.isHidden = false
+                self.tabBarController?.selectedIndex = 0
+                
+//                guard let tab = self.tabBarController as? LunaTabBarViewController else { return }
+//                tab.setupViewControllers()
+                
+            }.disposed(by: disposeBag)
     }
     
     func observerNewActivityButton() {
