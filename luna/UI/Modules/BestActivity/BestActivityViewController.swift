@@ -39,6 +39,13 @@ class BestActivityViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if isMovingFromParent {
+            self.tabBarController?.tabBar.isHidden = false
+        }
+    }
+    
     func continueButtonTouchTrigger() {
         bestActivityView.button
             .rx
@@ -46,6 +53,7 @@ class BestActivityViewController: UIViewController {
                 self.presenter?.userTappedContinueButton()
             }.disposed(by: disposeBag)
     }
+
 
 }
 
