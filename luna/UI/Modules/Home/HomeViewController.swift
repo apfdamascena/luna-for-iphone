@@ -50,6 +50,7 @@ class HomeViewController: UIViewController {
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.tabBar.isHidden = false
         presenter?.checkCalendarPermission()
         
         homeView.appearSkeleton()
