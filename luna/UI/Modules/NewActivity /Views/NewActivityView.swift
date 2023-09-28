@@ -63,7 +63,7 @@ class NewActivityView: UIView, AnyView {
     func addConstraints() {
         
         scrollView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(16.su)
+            $0.top.equalToSuperview()
             $0.leading.trailing.equalToSuperview()
             $0.bottom.equalTo(safeAreaLayoutGuide)
         }
