@@ -27,7 +27,7 @@ class DatePickerStack: UIStackView, AnyView {
         datePicker.preferredDatePickerStyle = .compact
         datePicker.tintColor = Asset.red500.color
         datePicker.subviews[0].subviews[0].subviews[0].alpha = 0
-        datePicker.minimumDate = Date()
+        datePicker.minimumDate = Date().daysAfter(1)
         return datePicker
     }()
     
