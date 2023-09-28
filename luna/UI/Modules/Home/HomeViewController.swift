@@ -45,6 +45,7 @@ class HomeViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = homeView
+        checkLunaCalendarToken()
     }
     
     // MARK: - Lifecycle Methods
@@ -53,6 +54,7 @@ class HomeViewController: UIViewController {
         presenter?.checkCalendarPermission()
         
         homeView.appearSkeleton()
+        
         addCollectionViewDataSource()
         addCalendarEventObservable()
         addCyclePhaseEventObservable()
@@ -76,7 +78,6 @@ class HomeViewController: UIViewController {
 
         
         DispatchQueue.main.async {
-            self.presenter?.loadCalendarToCollection(isloading: false)
             self.presenter?.loadActivitiesDataSource()
             self.startTimer()
         }
@@ -256,6 +257,19 @@ class HomeViewController: UIViewController {
             }
             .disposed(by: disposeBag)
     }
+    
+    func checkLunaCalendarToken() {
+        if RefreshToken.shared.isNotRefreshed {
+            guard let selectedDay = presenter?.getFirstDayLastMenstruation() else {
+                return
+            }
+            print("rola")
+            
+            presenter?.insertMenstruation(selectedDate: selectedDay)
+            presenter?.insertMenstruation(selectedDate: selectedDay)
+            RefreshToken.shared.calendarReloaded()
+        }
+    }
 }
 
 
@@ -352,7 +366,6 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     func userAllowedAccessCalendar() {
         self.homeView.userAllowedAccessCalendar()
         presenter?.loadUserCalendar()
-        
     }
     
     func allowAccessCalendar() {

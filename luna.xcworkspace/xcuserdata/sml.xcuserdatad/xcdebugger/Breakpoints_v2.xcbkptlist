@@ -36,5 +36,84 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "29A150F4-6BA4-4523-8BE7-4A7BD4FD8F4C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "luna/LunaCalendar/Calculators/AnualCycleCalculator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "calculatePhaseDate(_:_:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "29A150F4-6BA4-4523-8BE7-4A7BD4FD8F4C - 58132699e19bd664"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "luna.AnualCycleCalculator.calculatePhaseDate(luna.CyclePhase, Swift.Int, Swift.Int) -&gt; luna.LunaEvent"
+                  moduleName = "luna"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sml/Desktop/ADA/luna-for-iphone/luna/LunaCalendar/Calculators/AnualCycleCalculator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "636">
+               </Location>
+               <Location
+                  uuid = "29A150F4-6BA4-4523-8BE7-4A7BD4FD8F4C - 58132699e19bd645"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "luna.AnualCycleCalculator.calculatePhaseDate(luna.CyclePhase, Swift.Int, Swift.Int) -&gt; luna.LunaEvent"
+                  moduleName = "luna"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sml/Desktop/ADA/luna-for-iphone/luna/LunaCalendar/Calculators/AnualCycleCalculator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "632">
+               </Location>
+               <Location
+                  uuid = "29A150F4-6BA4-4523-8BE7-4A7BD4FD8F4C - 58132699e19bd664"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "luna.AnualCycleCalculator.calculatePhaseDate(luna.CyclePhase, Swift.Int, Swift.Int) -&gt; luna.LunaEvent"
+                  moduleName = "luna"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sml/Desktop/ADA/luna-for-iphone/luna/LunaCalendar/Calculators/AnualCycleCalculator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "676">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1DDB09EE-D6C9-4BBE-87EB-C8CBDDDB6E0D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "luna/LunaCalendar/Calculators/AnualCycleCalculator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "calculatePhaseDate(_:_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

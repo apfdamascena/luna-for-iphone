@@ -224,6 +224,7 @@
 		BF6520E12A6F0D4B00E60054 /* CycleDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520DD2A6F0D4B00E60054 /* CycleDurationViewController.swift */; };
 		BF6520E42A6F0D5D00E60054 /* CycleDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520E32A6F0D5D00E60054 /* CycleDurationView.swift */; };
 		BF8701482ABE2F7900F6D83D /* LunaCalendarManager+Bugfix.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8701472ABE2F7900F6D83D /* LunaCalendarManager+Bugfix.swift */; };
+		BF8FB7802AC5F7A500EDC354 /* RefreshToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8FB77F2AC5F7A500EDC354 /* RefreshToken.swift */; };
 		BF9A367B2ABB7F2000D231CB /* CreateEventContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A36762ABB7F2000D231CB /* CreateEventContract.swift */; };
 		BF9A367C2ABB7F2000D231CB /* CreateEventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A36772ABB7F2000D231CB /* CreateEventPresenter.swift */; };
 		BF9A367D2ABB7F2000D231CB /* CreateEventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A36782ABB7F2000D231CB /* CreateEventRouter.swift */; };
@@ -510,6 +511,7 @@
 		BF6520DD2A6F0D4B00E60054 /* CycleDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationViewController.swift; sourceTree = "<group>"; };
 		BF6520E32A6F0D5D00E60054 /* CycleDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationView.swift; sourceTree = "<group>"; };
 		BF8701472ABE2F7900F6D83D /* LunaCalendarManager+Bugfix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LunaCalendarManager+Bugfix.swift"; sourceTree = "<group>"; };
+		BF8FB77F2AC5F7A500EDC354 /* RefreshToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshToken.swift; sourceTree = "<group>"; };
 		BF9A36762ABB7F2000D231CB /* CreateEventContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventContract.swift; sourceTree = "<group>"; };
 		BF9A36772ABB7F2000D231CB /* CreateEventPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventPresenter.swift; sourceTree = "<group>"; };
 		BF9A36782ABB7F2000D231CB /* CreateEventRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventRouter.swift; sourceTree = "<group>"; };
@@ -1144,6 +1146,7 @@
 				0D6794182A731B5C00382142 /* UserCycleInformation.swift */,
 				A427FC552AB06CA9006B4F2B /* ActivityManager.swift */,
 				BF4951182AB395280064F5D6 /* NewActivityInformations.swift */,
+				BF8FB77F2AC5F7A500EDC354 /* RefreshToken.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -2047,6 +2050,7 @@
 				0DDC5B562A71D23600D4CCAE /* OnboardingManager.swift in Sources */,
 				CA6F76AC2ABE26BA00BC91A8 /* DatePickersStack.swift in Sources */,
 				0D2DB2E62AB6A3BE003D71D8 /* WebRouter.swift in Sources */,
+				BF8FB7802AC5F7A500EDC354 /* RefreshToken.swift in Sources */,
 				A46C05172A6EFE150071ABCE /* CalendarContract.swift in Sources */,
 				0D6794302A74725200382142 /* TeachRecordMenstruationPresenter.swift in Sources */,
 				CAAB60F42A82CE980003F770 /* ReferencesViewController.swift in Sources */,

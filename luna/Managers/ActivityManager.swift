@@ -10,7 +10,7 @@ import UIKit
 final class ActivityManager {
     
     static let shared = ActivityManager()
-    init (){}
+    private init (){}
     
     var wasSeen: Bool {
         return UserDefaults.standard.object(forKey: L10n.Constants.User.Key.forActivitiesWasSeen) != nil

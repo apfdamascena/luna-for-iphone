@@ -60,7 +60,8 @@ protocol ViewToPresenterHomeProtocol {
     func showCyclePhaseReferencesSheet()
     
     func userTappedCardPhase(at index: Int)
-    func loadActivitiesDataSource() 
+    func loadActivitiesDataSource()
+    func getFirstDayLastMenstruation() -> Date? 
 }
 
 
@@ -84,7 +85,9 @@ protocol PresenterToInteractorHomeProtocol {
     
     var calendarPermission: CalendarAccess { get }
     
-    func findActivityEventsOfCurrentMonth() -> ActivityEventMonthWeek 
+    func findActivityEventsOfCurrentMonth() -> ActivityEventMonthWeek
+    
+    func getFirstDayOfLastMenstruation() -> Date? 
 }
 
 
