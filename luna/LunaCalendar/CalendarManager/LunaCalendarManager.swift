@@ -32,6 +32,9 @@ protocol CalendarManager {
     func adjustEventsInCalendar(selectedDate: Date, isRemove: Bool)
     
     func removeLunaCalendarOnOnboarding()
+    
+    func refreshLoadElementsToCalendar(firstDayMenstruation: Date, averageMenstruationDuration: Int, averageCycleDuration: Int)
+
 }
 
 class LunaCalendarManager: CalendarManager  {
@@ -98,6 +101,12 @@ class LunaCalendarManager: CalendarManager  {
         if lunaEventsExist() { return }
         addCyclePhasesToCalendar(firstDayMenstruation: firstDayMenstruation, averageMenstruationDuration: averageMenstruationDuration, averageCycleDuration: averageCycleDuration, isFirst: true)
     }
+    
+    func refreshLoadElementsToCalendar(firstDayMenstruation: Date, averageMenstruationDuration: Int, averageCycleDuration: Int) {
+        if lunaEventsExist() { return }
+        addCyclePhasesToCalendar(firstDayMenstruation: firstDayMenstruation, averageMenstruationDuration: averageMenstruationDuration, averageCycleDuration: averageCycleDuration, isFirst: false)
+    }
+
 
     func addCyclePhasesToCalendar(firstDayMenstruation: Date, averageMenstruationDuration: Int, averageCycleDuration: Int, isFirst: Bool, firstMenstruationTime: Int? = nil) {
         let cycleInformations = CycleInformations(

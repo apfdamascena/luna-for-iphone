@@ -45,7 +45,6 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
         let lastDayMenstruation = UserCycleInformation.shared.lastMenstruation
         let menstruationDuration = UserCycleInformation.shared.menstruationDuration
         let cycleDuration = UserCycleInformation.shared.cycleDuration
-              
                   
         lunaCalendarManager?.firstLoadElementsToCalendar(firstDayMenstruation: lastDayMenstruation,
                                                         averageMenstruationDuration: menstruationDuration,
@@ -153,7 +152,6 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
         }
     }
     
-    
     func openDeviceSettings() {
         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
 
@@ -173,5 +171,20 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
         return ActivityEventMonthWeek(week: activitiesWeek, month: activitiesMonth)
     }
     
+    func getFirstDayOfLastMenstruation() -> Date? {
+        let eventsBeforeToday = lunaCalendarManager?.getEventsByDate(firstDate: Date().daysBefore(100), finalDate: Date()).calendar
+        
+        let menstruationEvents = eventsBeforeToday?.filter{event in
+            event.title == CyclePhase.menstruation.value
+        }
+        
+        guard let menstruationEvent = menstruationEvents?.last else {
+            return nil
+        }
+        
+        return menstruationEvent.startDate
+    }
+    
+        
 }
 

@@ -11,8 +11,6 @@ import UIKit
 import EventKit
 
 class HomePresenter: ViewToPresenterHomeProtocol {
-
-
     var view: PresenterToViewHomeProtocol?
     var interactor: PresenterToInteractorHomeProtocol?
     var router: PresenterToRouterHomeProtocol?
@@ -46,7 +44,7 @@ class HomePresenter: ViewToPresenterHomeProtocol {
         interactor?.loadPhasesToUserCalendar()
     }
     
-    func loadCalendarToCollection(isloading: Bool)  {
+    func loadCalendarToCollection(isloading: Bool) {
         let collectionDataSource = interactor?.loadCalendarToCollection()
         
         view?.load(collectionDataSource: collectionDataSource?.calendar ?? [])
@@ -111,6 +109,10 @@ class HomePresenter: ViewToPresenterHomeProtocol {
     func loadActivitiesDataSource() {
         let activityDataSource = interactor?.findActivityEventsOfCurrentMonth()
         view?.loadActivity(dataSource: activityDataSource ?? ActivityEventMonthWeek(week: [], month: []))
+    }
+    
+    func getFirstDayLastMenstruation() -> Date? {
+        return interactor?.getFirstDayOfLastMenstruation()
     }
     
 }
