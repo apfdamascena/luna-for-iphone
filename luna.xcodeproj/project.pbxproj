@@ -260,7 +260,6 @@
 		CA2144322AA65C3F008AE239 /* ActivityEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2144312AA65C3F008AE239 /* ActivityEvent.swift */; };
 		CA2144362AA8F815008AE239 /* ActivityMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2144352AA8F815008AE239 /* ActivityMetrics.swift */; };
 		CA46D3082AC214B1008C19E7 /* CreateEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46D3072AC214B1008C19E7 /* CreateEventViewModel.swift */; };
-		CA46D30E2AC5F920008C19E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA46D30D2AC5F920008C19E7 /* GoogleService-Info.plist */; };
 		CA6F76AC2ABE26BA00BC91A8 /* DatePickersStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F76AB2ABE26BA00BC91A8 /* DatePickersStack.swift */; };
 		CAAB60F22A82CB080003F770 /* ReferencesSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB60F12A82CB080003F770 /* ReferencesSheetView.swift */; };
 		CAAB60F42A82CE980003F770 /* ReferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB60F32A82CE980003F770 /* ReferencesViewController.swift */; };
@@ -543,7 +542,6 @@
 		CA2144312AA65C3F008AE239 /* ActivityEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityEvent.swift; sourceTree = "<group>"; };
 		CA2144352AA8F815008AE239 /* ActivityMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMetrics.swift; sourceTree = "<group>"; };
 		CA46D3072AC214B1008C19E7 /* CreateEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewModel.swift; sourceTree = "<group>"; };
-		CA46D30D2AC5F920008C19E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA6F76AB2ABE26BA00BC91A8 /* DatePickersStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickersStack.swift; sourceTree = "<group>"; };
 		CAAB60F12A82CB080003F770 /* ReferencesSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencesSheetView.swift; sourceTree = "<group>"; };
 		CAAB60F32A82CE980003F770 /* ReferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencesViewController.swift; sourceTree = "<group>"; };
@@ -974,7 +972,6 @@
 		0DBADDCB2A65FF2A00A10FC3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CA46D30D2AC5F920008C19E7 /* GoogleService-Info.plist */,
 				0DA74C742A9549AA0021EC40 /* fonts */,
 				0DBADDA42A65FDF300A10FC3 /* Assets.xcassets */,
 				0DBADDA62A65FDF300A10FC3 /* LaunchScreen.storyboard */,
@@ -1718,7 +1715,6 @@
 				CACB96F62A85670300EB66DD /* Constants.strings in Resources */,
 				0DA74C762A9549CB0021EC40 /* CoconRegularFont.otf in Resources */,
 				0DBADDA52A65FDF300A10FC3 /* Assets.xcassets in Resources */,
-				CA46D30E2AC5F920008C19E7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
