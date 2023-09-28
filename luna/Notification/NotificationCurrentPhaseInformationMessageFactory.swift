@@ -15,6 +15,7 @@ class NotificationCurrentPhaseInformationMessageFactory {
     private var folicular = 0
     private var luteal = 0
     private var pms = 0
+    private var expectedMenstruation = 0
     
     private let fertilePhase = [
         NotificationBody(title: L10n.Constants.Content.Notification.Dataset.ExpectedMenstruation.title,
@@ -86,8 +87,9 @@ class NotificationCurrentPhaseInformationMessageFactory {
             return message
 
         case .expectedMenstruation:
-            return NotificationBody(title: "Dor Dor, inchaço!!",
-                                    body: "Fase menstrual. Registre em Luna!")
+            let message = expectedMenstruationPhase[expectedMenstruation]
+            expectedMenstruation = (expectedMenstruation + 1) % expectedMenstruationPhase.count
+            return message
         default:
             return NotificationBody(title: "", body: "")
         }
