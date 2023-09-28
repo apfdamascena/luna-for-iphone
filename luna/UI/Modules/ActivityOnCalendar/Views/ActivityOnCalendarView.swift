@@ -42,6 +42,12 @@ class ActivityOnCalendarView: UIView, AnyView {
         return button
     }()
     
+    private(set) var backToHome: LunaButton = {
+        let button = LunaButton()
+        button.draw(style: .backToHome)
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -58,6 +64,7 @@ class ActivityOnCalendarView: UIView, AnyView {
         memojiTitleStack.addArrangedSubview(title)
         
         addSubview(newActivity)
+        addSubview(backToHome)
     }
     
     func addConstraints() {
@@ -68,9 +75,14 @@ class ActivityOnCalendarView: UIView, AnyView {
         }
         
         newActivity.snp.makeConstraints{
-            
             $0.leading.trailing.equalToSuperview().inset(3.su)
             $0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-8.4.su)
+        }
+        
+        backToHome.snp.makeConstraints{
+            
+            $0.leading.trailing.equalToSuperview().inset(3.su)
+            $0.top.equalTo(newActivity.snp.bottom).offset(1.5.su)
         }
     }
     

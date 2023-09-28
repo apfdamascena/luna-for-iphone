@@ -29,6 +29,7 @@
 "constants.content.button.references" = "Leia as referências";
 "constants.content.button.schedule_activity"="Marcar Evento";
 "constants.content.button.newEvent"="Nova Atividade";
+"constants.content.button.backToHome"="Voltar pro início";
 
 "constants.content.label.home.youAreIn" = "Você está na";
 "constants.content.label.home.menstruation" = "Menstruação";
@@ -295,5 +296,7 @@
 
 "constants.content.alert.warning.no_title_activity"="Você não pode marcar atividadade sem nome";
 "constants.content.alert.warning.title"="Aviso";
+
+
 
 

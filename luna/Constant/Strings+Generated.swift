@@ -25,6 +25,8 @@ internal enum L10n {
         internal static let icloud = L10n.tr("Constants", "constants.content.api.icloud", fallback: "iCloud")
       }
       internal enum Button {
+        /// Voltar pro início
+        internal static let backToHome = L10n.tr("Constants", "constants.content.button.backToHome", fallback: "Voltar pro início")
         /// Continuar
         internal static let `continue` = L10n.tr("Constants", "constants.content.button.continue", fallback: "Continuar")
         /// Nova Atividade
