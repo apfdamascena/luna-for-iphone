@@ -10,6 +10,17 @@ import Foundation
 
 class ActivityOnCalendarPresenter: ViewToPresenterActivityOnCalendarProtocol {
 
+    
+
     var view: PresenterToViewActivityOnCalendarProtocol?
     var router: PresenterToRouterActivityOnCalendarProtocol?
+    
+    func userTapGoHome() {
+        view?.navigateToHomeView()
+    }
+    
+    func userTapNewActivity() {
+        view?.navigateToNewActivityView()
+    }
+
 }

@@ -11,9 +11,10 @@ import RxSwift
 import RxCocoa
 import FirebaseAnalytics
 import SkeletonView
+import EventKit
 
 class HomeViewController: UIViewController {
-    
+
     var presenter: ViewToPresenterHomeProtocol?
     
     private let homeView = HomeView()
@@ -78,13 +79,10 @@ class HomeViewController: UIViewController {
         self.navigationItem.hidesBackButton = true
         self.navigationController?.isNavigationBarHidden = true
 
-        
         DispatchQueue.main.async {
             self.presenter?.loadActivitiesDataSource()
             self.startTimer()
         }
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -107,14 +105,12 @@ class HomeViewController: UIViewController {
         presenter?.loadCalendarToCollection(isloading: false)
     }
     
-    
     private func addCollectionViewDataSource(){
         
         datasource.data.bind(to: homeView.calendarCollectionView
             .rx.items(cellIdentifier: CalendarCollectionViewCell.IDENTIFIER,
                       cellType: CalendarCollectionViewCell.self)){ _, day, cell in
             cell.draw(day)
-            
         }.disposed(by: disposeBag)
         
     }
@@ -237,10 +233,7 @@ class HomeViewController: UIViewController {
                 return ActivityPeriod(index)
             }.subscribe(onNext: { activity in
                 guard let activitiesValue = try? self.activitiesDataSource.activitiesForSegmentedControl.value() else { return }
-                var activities = activitiesValue.month
-                if activity == .week {
-                    activities = activitiesValue.week
-                }
+                let activities = activity == .week ? activitiesValue.week : activitiesValue.month
                 
                 self.activitiesDataSource.activities.onNext(activities)
                 self.homeView.drawActivities(activities)
@@ -254,6 +247,13 @@ class HomeViewController: UIViewController {
                       cellType: ActivityCell.self)){ _, activity, cell in
             cell.draw(activity)
         }.disposed(by: disposeBag)
+        
+        homeView.activities
+                .rx
+                .modelSelected(ActivityCellViewModel.self)
+                .subscribe(onNext: { model in
+                    self.presenter?.openCalendarOnLuna(withEvent: model.activity)
+                }).disposed(by: disposeBag)
     }
     
     func addTableViewDataSourceEventObservable(){
@@ -278,9 +278,16 @@ class HomeViewController: UIViewController {
             guard let selectedDay = presenter?.getFirstDayLastMenstruation() else {
                 return
             }
-            presenter?.insertMenstruation(selectedDate: selectedDay)
-            presenter?.insertMenstruation(selectedDate: selectedDay)
+    
+            let _ = presenter?.insertMenstruation(selectedDate: selectedDay)
+            let _ = presenter?.insertMenstruation(selectedDate: selectedDay)
             RefreshToken.shared.calendarReloaded()
+        }
+    }
+    
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        super.dismiss(animated: flag){
+            print("caraiu")
         }
     }
 }
@@ -308,10 +315,10 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     
     func loadActivity(dataSource: ActivityEventMonthWeek) {
         let newDataSouceMonth = dataSource.month.map { event in
-            return ActivityCellViewModel(title: event.title, hourStart: event.startDate.formattHour(), hourEnd: event.endDate.formattHour(), day: event.startDate, phase: event.phase)
+            return ActivityCellViewModel(title: event.title, hourStart: event.startDate.formattHour(), hourEnd: event.endDate.formattHour(), day: event.startDate, phase: event.phase, activity: event.event)
         }
         let newDataSouceWeek = dataSource.week.map { event in
-            return ActivityCellViewModel(title: event.title, hourStart: event.startDate.formattHour(), hourEnd: event.endDate.formattHour(), day: event.startDate, phase: event.phase)
+            return ActivityCellViewModel(title: event.title, hourStart: event.startDate.formattHour(), hourEnd: event.endDate.formattHour(), day: event.startDate, phase: event.phase, activity: event.event)
         }
         let newDataSource = ActivityFilter(week: newDataSouceWeek, month: newDataSouceMonth)
         
@@ -418,8 +425,14 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     @objc func changeCurrentIndexCardPhase(at newIndex: Int) {
         self.cardPhaseDataSource.index.onNext(newIndex)
     }
+    
+    func openCalendar(with event: EKEvent) {
+        let calendar = LunaCalendarViewController(with: self)
+        calendar.event = event
+        calendar.allowsEditing = true
+        present(calendar, animated: true)
+    }
 }
-
 
 
 

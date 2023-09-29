@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import EventKit
 
 class CreateEventInteractor: PresenterToInteractorCreateEventProtocol {
 
@@ -20,7 +21,7 @@ class CreateEventInteractor: PresenterToInteractorCreateEventProtocol {
     }
     
     func insertActivityToCalendar(title: String, initialDate: Date, finalDate: Date) {
-        let activityEvent = ActivityEvent(title: title, startDate: initialDate, endDate: finalDate)
+        let activityEvent = ActivityEvent(title: title, startDate: initialDate, endDate: finalDate, event: EKEvent())
         activitiesCalendarManager.createEvent(activityEvent)
     }
 }
