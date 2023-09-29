@@ -11,6 +11,10 @@ import UIKit
 import EventKit
 
 class HomePresenter: ViewToPresenterHomeProtocol {
+    func openCalendarOnLuna(withEvent: EKEvent) {
+        <#code#>
+    }
+    
     var view: PresenterToViewHomeProtocol?
     var interactor: PresenterToInteractorHomeProtocol?
     var router: PresenterToRouterHomeProtocol?

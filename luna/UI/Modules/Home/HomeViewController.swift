@@ -11,8 +11,10 @@ import RxSwift
 import RxCocoa
 import FirebaseAnalytics
 import SkeletonView
+import EventKitUI
 
 class HomeViewController: UIViewController {
+
     
     var presenter: ViewToPresenterHomeProtocol?
     
@@ -77,13 +79,10 @@ class HomeViewController: UIViewController {
         self.navigationItem.hidesBackButton = true
         self.navigationController?.isNavigationBarHidden = true
 
-        
         DispatchQueue.main.async {
             self.presenter?.loadActivitiesDataSource()
             self.startTimer()
         }
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -235,6 +234,17 @@ class HomeViewController: UIViewController {
                       cellType: ActivityCell.self)){ _, activity, cell in
             cell.draw(activity)
         }.disposed(by: disposeBag)
+        
+        homeView.activities
+                .rx
+                .modelSelected(ActivityCellViewModel.self)
+                .subscribe(onNext: { model in
+                    self.presenter?.openCalendarOnLuna(withEvent: model.activity)
+//                    let cal = EKEventViewController()
+//                    cal.event = model.activity
+//                    cal.allowsEditing = true
+//                    self.present(cal, animated: true)
+                }).disposed(by: disposeBag)
     }
     
     func addTableViewDataSourceEventObservable(){
@@ -260,8 +270,8 @@ class HomeViewController: UIViewController {
                 return
             }
     
-            presenter?.insertMenstruation(selectedDate: selectedDay)
-            presenter?.insertMenstruation(selectedDate: selectedDay)
+            let _ = presenter?.insertMenstruation(selectedDate: selectedDay)
+            let _ = presenter?.insertMenstruation(selectedDate: selectedDay)
             RefreshToken.shared.calendarReloaded()
         }
     }
@@ -290,10 +300,10 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     
     func loadActivity(dataSource: ActivityEventMonthWeek) {
         let newDataSouceMonth = dataSource.month.map { event in
-            return ActivityCellViewModel(title: event.title, hourStart: event.startDate.formattHour(), hourEnd: event.endDate.formattHour(), day: event.startDate, phase: event.phase)
+            return ActivityCellViewModel(title: event.title, hourStart: event.startDate.formattHour(), hourEnd: event.endDate.formattHour(), day: event.startDate, phase: event.phase, activity: event.event)
         }
         let newDataSouceWeek = dataSource.week.map { event in
-            return ActivityCellViewModel(title: event.title, hourStart: event.startDate.formattHour(), hourEnd: event.endDate.formattHour(), day: event.startDate, phase: event.phase)
+            return ActivityCellViewModel(title: event.title, hourStart: event.startDate.formattHour(), hourEnd: event.endDate.formattHour(), day: event.startDate, phase: event.phase, activity: event.event)
         }
         let newDataSource = ActivityFilter(week: newDataSouceWeek, month: newDataSouceMonth)
         

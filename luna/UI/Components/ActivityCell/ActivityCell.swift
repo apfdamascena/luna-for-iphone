@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import EventKit
 
 struct ActivityCellViewModel {
     
@@ -16,6 +17,8 @@ struct ActivityCellViewModel {
     let day: Date
     
     let phase: CyclePhase
+    
+    let activity: EKEvent
 }
 
 

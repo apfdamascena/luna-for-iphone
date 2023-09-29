@@ -37,7 +37,11 @@ class ActivitiesCalendarManager {
             
             let phase = CyclePhase(rawValue: cycleEvent?.first?.title ?? "none") ?? CyclePhase.none
             
-            return ActivityEvent(title: event.title, startDate: event.startDate, endDate: event.endDate, phase: phase)
+            return ActivityEvent(title: event.title,
+                                 startDate: event.startDate,
+                                 endDate: event.endDate,
+                                 phase: phase,
+                                 event: event )
         }
         return eventsToReturn
     }
@@ -54,7 +58,7 @@ class ActivitiesCalendarManager {
             
             let phase = CyclePhase(rawValue: cycleEvent?.first?.title ?? "none") ?? CyclePhase.none
             
-            return ActivityEvent(title: event.title, startDate: event.startDate, endDate: event.endDate, phase: phase)
+            return ActivityEvent(title: event.title, startDate: event.startDate, endDate: event.endDate, phase: phase, event: event)
         }
         return eventsToReturn
     }

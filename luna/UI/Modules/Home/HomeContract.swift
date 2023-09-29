@@ -61,7 +61,10 @@ protocol ViewToPresenterHomeProtocol {
     
     func userTappedCardPhase(at index: Int)
     func loadActivitiesDataSource()
-    func getFirstDayLastMenstruation() -> Date? 
+    func getFirstDayLastMenstruation() -> Date?
+    
+    
+    func openCalendarOnLuna(withEvent: EKEvent)
 }
 
 
