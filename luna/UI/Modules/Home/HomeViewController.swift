@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import FirebaseAnalytics
 import SkeletonView
-import EventKitUI
+import EventKit
 
 class HomeViewController: UIViewController {
 
@@ -240,10 +240,6 @@ class HomeViewController: UIViewController {
                 .modelSelected(ActivityCellViewModel.self)
                 .subscribe(onNext: { model in
                     self.presenter?.openCalendarOnLuna(withEvent: model.activity)
-//                    let cal = EKEventViewController()
-//                    cal.event = model.activity
-//                    cal.allowsEditing = true
-//                    self.present(cal, animated: true)
                 }).disposed(by: disposeBag)
     }
     
@@ -273,6 +269,12 @@ class HomeViewController: UIViewController {
             let _ = presenter?.insertMenstruation(selectedDate: selectedDay)
             let _ = presenter?.insertMenstruation(selectedDate: selectedDay)
             RefreshToken.shared.calendarReloaded()
+        }
+    }
+    
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        super.dismiss(animated: flag){
+            print("caraiu")
         }
     }
 }
@@ -412,13 +414,12 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     }
     
     func openCalendar(with event: EKEvent) {
-        let calendar = EKEventViewController()
+        let calendar = LunaCalendarViewController(with: self)
         calendar.event = event
         calendar.allowsEditing = true
         self.present(calendar, animated: true)
     }
 }
-
 
 
 
