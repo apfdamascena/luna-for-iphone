@@ -417,7 +417,7 @@ extension HomeViewController: PresenterToViewHomeProtocol {
         let calendar = LunaCalendarViewController(with: self)
         calendar.event = event
         calendar.allowsEditing = true
-        self.present(calendar, animated: true)
+        present(calendar, animated: true)
     }
 }
 
