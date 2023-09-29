@@ -106,14 +106,12 @@ class HomeViewController: UIViewController {
         presenter?.loadCalendarToCollection(isloading: false)
     }
     
-    
     private func addCollectionViewDataSource(){
         
         datasource.data.bind(to: homeView.calendarCollectionView
             .rx.items(cellIdentifier: CalendarCollectionViewCell.IDENTIFIER,
                       cellType: CalendarCollectionViewCell.self)){ _, day, cell in
             cell.draw(day)
-            
         }.disposed(by: disposeBag)
         
     }
@@ -223,10 +221,7 @@ class HomeViewController: UIViewController {
                 return ActivityPeriod(index)
             }.subscribe(onNext: { activity in
                 guard let activitiesValue = try? self.activitiesDataSource.activitiesForSegmentedControl.value() else { return }
-                var activities = activitiesValue.month
-                if activity == .week {
-                    activities = activitiesValue.week
-                }
+                let activities = activity == .week ? activitiesValue.week : activitiesValue.month
                 
                 self.activitiesDataSource.activities.onNext(activities)
                 self.homeView.drawActivities(activities)
@@ -264,8 +259,7 @@ class HomeViewController: UIViewController {
             guard let selectedDay = presenter?.getFirstDayLastMenstruation() else {
                 return
             }
-            print("rola")
-            
+    
             presenter?.insertMenstruation(selectedDate: selectedDay)
             presenter?.insertMenstruation(selectedDate: selectedDay)
             RefreshToken.shared.calendarReloaded()
