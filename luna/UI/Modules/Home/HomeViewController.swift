@@ -15,7 +15,6 @@ import EventKit
 
 class HomeViewController: UIViewController {
 
-    
     var presenter: ViewToPresenterHomeProtocol?
     
     private let homeView = HomeView()
