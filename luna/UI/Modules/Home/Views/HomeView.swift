@@ -328,7 +328,6 @@ class HomeView: UIView, AnyView  {
     
     func flowIndexChanged(to index: Int) {
             self.cardCycle.updateFlowIndex(index: index)
-        
     }
     
     func drawActivities(_ data: [ActivityCellViewModel]){
