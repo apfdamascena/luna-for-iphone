@@ -10,6 +10,9 @@ import Foundation
 
 // MARK: View Output (Presenter -> View)
 protocol PresenterToViewActivityOnCalendarProtocol {
+    
+    func navigateToHomeView()
+    func navigateToNewActivityView()
    
 }
 
@@ -18,6 +21,9 @@ protocol ViewToPresenterActivityOnCalendarProtocol {
     
     var view: PresenterToViewActivityOnCalendarProtocol? { get set }
     var router: PresenterToRouterActivityOnCalendarProtocol? { get set }
+    
+    func userTapGoHome()
+    func userTapNewActivity()
 }
 
 // MARK: Router Input (Presenter -> Router)
