@@ -96,7 +96,6 @@ class HomeView: UIView, AnyView  {
         super.init(frame: frame)
         isSkeletonable = true
         setupView()
-        print("CYNARA VALERIA DE OLIVEIRA COSTA DO AMARAL CAVALCANTI")
     }
     
     
@@ -329,7 +328,6 @@ class HomeView: UIView, AnyView  {
     
     func flowIndexChanged(to index: Int) {
             self.cardCycle.updateFlowIndex(index: index)
-        
     }
     
     func drawActivities(_ data: [ActivityCellViewModel]){

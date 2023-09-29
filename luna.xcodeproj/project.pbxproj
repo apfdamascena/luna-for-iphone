@@ -205,6 +205,7 @@
 		A48F4A402A9E8AED00BB5058 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A3F2A9E8AED00BB5058 /* String.swift */; };
 		A49046322AC4BFBD007759A1 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49046312AC4BFBD007759A1 /* UIViewController+Keyboard.swift */; };
 		A49046342AC4CA49007759A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A49046332AC4CA49007759A1 /* GoogleService-Info.plist */; };
+		A49046362AC755F1007759A1 /* NegativeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49046352AC755F1007759A1 /* NegativeModule.swift */; };
 		BF4144312A93DC2F00517910 /* LunaCalendarManager+Check.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4144302A93DC2F00517910 /* LunaCalendarManager+Check.swift */; };
 		BF42D2162A8AC67A00E09472 /* CalendarVerifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42D2152A8AC67A00E09472 /* CalendarVerifications.swift */; };
 		BF4951002AB0FB8A0064F5D6 /* BestActivityContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4950FB2AB0FB8A0064F5D6 /* BestActivityContract.swift */; };
@@ -493,6 +494,7 @@
 		A48F4A3F2A9E8AED00BB5058 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		A49046312AC4BFBD007759A1 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
 		A49046332AC4CA49007759A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A49046352AC755F1007759A1 /* NegativeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativeModule.swift; sourceTree = "<group>"; };
 		BF4144302A93DC2F00517910 /* LunaCalendarManager+Check.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LunaCalendarManager+Check.swift"; sourceTree = "<group>"; };
 		BF42D2152A8AC67A00E09472 /* CalendarVerifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVerifications.swift; sourceTree = "<group>"; };
 		BF4950FB2AB0FB8A0064F5D6 /* BestActivityContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestActivityContract.swift; sourceTree = "<group>"; };
@@ -813,6 +815,7 @@
 				0DF410642A85603300A10405 /* datasource */,
 				A46C05512A7464230071ABCE /* Views */,
 				0D67941B2A735C1A00382142 /* HomeContract.swift */,
+				A48F4A312A9684B600BB5058 /* CycleCardView.swift */,
 				0D67941C2A735C1A00382142 /* HomePresenter.swift */,
 				0D67941D2A735C1A00382142 /* HomeRouter.swift */,
 				0D67941E2A735C1A00382142 /* HomeViewController.swift */,
@@ -1305,7 +1308,6 @@
 				0DF410662A85656300A10405 /* MonthTag.swift */,
 				0DF410682A856A6300A10405 /* PhaseCycleTitle.swift */,
 				0DF4106A2A85712E00A10405 /* LearnCycleTitle.swift */,
-				A48F4A312A9684B600BB5058 /* CycleCardView.swift */,
 				0D8095892AB3419E00106998 /* ActivityView.swift */,
 			);
 			path = Views;
@@ -1577,6 +1579,7 @@
 			isa = PBXGroup;
 			children = (
 				CAE579A12A7AD8A1004EE21C /* CalendarCollectionConverter.swift */,
+				A49046352AC755F1007759A1 /* NegativeModule.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -2104,6 +2107,7 @@
 				0D6336A62A77510400EE9699 /* OnboardingCyclePhaseContent.swift in Sources */,
 				0D2DB3042AC1FEEE003D71D8 /* LandingPageInteractor.swift in Sources */,
 				A46C054D2A74641E0071ABCE /* LunaButtonBack.swift in Sources */,
+				A49046362AC755F1007759A1 /* NegativeModule.swift in Sources */,
 				A48B7EDA2A7ACBCD00CCC4C0 /* CycleDetailsCard.swift in Sources */,
 				0D2939772AB113630017891A /* ActivityCell.swift in Sources */,
 				0D65E3842AB24B62008148FD /* ActivityPeriod.swift in Sources */,

@@ -61,7 +61,8 @@ class HomeViewController: UIViewController {
         addCyclePhaseEventObservable()
         addSettingsHandlerEvent()
         cardCyclePhaseHandler()
-        addTapCardCycleEventObservable()
+        addTapRightSideCardCycleEventObservable()
+        addTapLeftSideCardCycleEventObservable()
         addNotificationEventObservable()
         addSegmentedControlDataSourceEventObservable()
         addSegmentedControlPeriodEventObservable()
@@ -189,13 +190,26 @@ class HomeViewController: UIViewController {
         NewActivityInformations.shared.setDateInterval(DateInterval(start: (idealEvent?.startDate)!, end: (idealEvent?.endDate)!))
     }
     
-    func addTapCardCycleEventObservable() {
+    func addTapRightSideCardCycleEventObservable() {
         
         let tapGesture = UITapGestureRecognizer()
-        homeView.cardCycle.addGestureRecognizer(tapGesture)
+        homeView.cardCycle.rightView.addGestureRecognizer(tapGesture)
         tapGesture.rx.event.bind(onNext: { _ in
             guard let currentIndex = try? self.cardPhaseDataSource.index.value() else { return }
-            self.presenter?.userTappedCardPhase(at: currentIndex)
+            self.presenter?.userTappedRightSideCardPhase(at: currentIndex)
+            guard let teste = try? self.datasource.cyclePhase.value() else  { return }
+            AnalyticsCenter.shared.post(AnalyticsEvents.clickPhaseCard(teste))
+        })
+        .disposed(by: disposeBag)
+    }
+    
+    func addTapLeftSideCardCycleEventObservable() {
+        
+        let tapGesture = UITapGestureRecognizer()
+        homeView.cardCycle.leftView.addGestureRecognizer(tapGesture)
+        tapGesture.rx.event.bind(onNext: { _ in
+            guard let currentIndex = try? self.cardPhaseDataSource.index.value() else { return }
+            self.presenter?.userTappedLeftSideCardPhase(at: currentIndex)
             guard let teste = try? self.datasource.cyclePhase.value() else  { return }
             AnalyticsCenter.shared.post(AnalyticsEvents.clickPhaseCard(teste))
         })
@@ -264,8 +278,6 @@ class HomeViewController: UIViewController {
             guard let selectedDay = presenter?.getFirstDayLastMenstruation() else {
                 return
             }
-            print("rola")
-            
             presenter?.insertMenstruation(selectedDate: selectedDay)
             presenter?.insertMenstruation(selectedDate: selectedDay)
             RefreshToken.shared.calendarReloaded()

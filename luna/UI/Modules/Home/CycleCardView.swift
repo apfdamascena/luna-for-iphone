@@ -12,13 +12,13 @@ class CycleCardView: UIView, AnyView {
     
     public let leftView: UIView = {
         let view = UIView()
-        view.backgroundColor = .blue
+//        view.backgroundColor = .blue
         return view
     }()
     
     public let rightView: UIView = {
         let view = UIView()
-        view.backgroundColor = .green
+//        view.backgroundColor = .green
         return view
     }()
     
