@@ -410,6 +410,13 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     @objc func changeCurrentIndexCardPhase(at newIndex: Int) {
         self.cardPhaseDataSource.index.onNext(newIndex)
     }
+    
+    func openCalendar(with event: EKEvent) {
+        let calendar = EKEventViewController()
+        calendar.event = event
+        calendar.allowsEditing = true
+        self.present(calendar, animated: true)
+    }
 }
 
 

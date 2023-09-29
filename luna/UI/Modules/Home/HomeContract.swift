@@ -31,6 +31,8 @@ protocol PresenterToViewHomeProtocol {
     
     func changeCurrentIndexCardPhase(at newIndex: Int)
     func loadActivity(dataSource: ActivityEventMonthWeek)
+    
+    func openCalendar(with event: EKEvent)
 
 }
 

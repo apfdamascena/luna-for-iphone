@@ -11,9 +11,6 @@ import UIKit
 import EventKit
 
 class HomePresenter: ViewToPresenterHomeProtocol {
-    func openCalendarOnLuna(withEvent: EKEvent) {
-        <#code#>
-    }
     
     var view: PresenterToViewHomeProtocol?
     var interactor: PresenterToInteractorHomeProtocol?
@@ -117,6 +114,10 @@ class HomePresenter: ViewToPresenterHomeProtocol {
     
     func getFirstDayLastMenstruation() -> Date? {
         return interactor?.getFirstDayOfLastMenstruation()
+    }
+    
+    func openCalendarOnLuna(withEvent: EKEvent) {
+        view?.openCalendar(with: withEvent)
     }
     
 }
