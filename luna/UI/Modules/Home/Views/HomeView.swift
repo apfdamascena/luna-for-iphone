@@ -96,6 +96,7 @@ class HomeView: UIView, AnyView  {
         super.init(frame: frame)
         isSkeletonable = true
         setupView()
+        print("CYNARA VALERIA DE OLIVEIRA COSTA DO AMARAL CAVALCANTI")
     }
     
     
