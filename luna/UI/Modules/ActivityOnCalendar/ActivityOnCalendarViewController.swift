@@ -39,8 +39,12 @@ class ActivityOnCalendarViewController: UIViewController {
             .rx
             .tap
             .bind{
+                guard let tab = self.tabBarController as? LunaTabBarViewController else { return }
+                tab.setupViewControllers()
+                
                 self.tabBarController?.tabBar.isHidden = false
                 self.tabBarController?.selectedIndex = 0
+           
             }.disposed(by: disposeBag)
     }
     
@@ -52,6 +56,7 @@ class ActivityOnCalendarViewController: UIViewController {
                 tab.setupViewControllers()
             }.disposed(by: disposeBag)
     }
+
 }
 
 extension ActivityOnCalendarViewController: PresenterToViewActivityOnCalendarProtocol{

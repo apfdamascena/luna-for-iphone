@@ -59,7 +59,7 @@ class LunaTabBarViewController: UITabBarController {
             return navigationController
         }
         
-        setViewControllers(navigationControllers, animated: true)
+        setViewControllers(navigationControllers, animated: false)
     }
     
     private func addAdditionalConfiguration(){
