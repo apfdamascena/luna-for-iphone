@@ -71,8 +71,6 @@ extension ActivityOnCalendarViewController: PresenterToViewActivityOnCalendarPro
         guard let tab = self.tabBarController as? LunaTabBarViewController else { return }
         tab.setupViewControllers()
     }
-    
-
 }
 
 
