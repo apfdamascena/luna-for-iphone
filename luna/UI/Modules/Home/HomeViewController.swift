@@ -45,7 +45,7 @@ class HomeViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = homeView
-        checkLunaCalendarToken()
+        
     }
     
     // MARK: - Lifecycle Methods
@@ -76,10 +76,11 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
         self.navigationController?.isNavigationBarHidden = true
-
+        
         
         DispatchQueue.main.async {
             self.presenter?.loadActivitiesDataSource()
+            self.checkLunaCalendarToken()
             self.startTimer()
         }
         
@@ -260,16 +261,21 @@ class HomeViewController: UIViewController {
     }
     
     func checkLunaCalendarToken() {
-        if RefreshToken.shared.isNotRefreshed {
-            guard let selectedDay = presenter?.getFirstDayLastMenstruation() else {
-                return
-            }
-            print("rola")
-            
-            presenter?.insertMenstruation(selectedDate: selectedDay)
-            presenter?.insertMenstruation(selectedDate: selectedDay)
-            RefreshToken.shared.calendarReloaded()
+        guard let selectedDay = presenter?.getFirstDayLastMenstruation() else {
+            return
         }
+        
+        presenter?.insertMenstruation(selectedDate: selectedDay)
+        presenter?.insertMenstruation(selectedDate: selectedDay)
+//        if RefreshToken.shared.isNotRefreshed {
+//            guard let selectedDay = presenter?.getFirstDayLastMenstruation() else {
+//                return
+//            }
+//            
+//            presenter?.insertMenstruation(selectedDate: selectedDay)
+//            presenter?.insertMenstruation(selectedDate: selectedDay)
+//            RefreshToken.shared.calendarReloaded()
+//        }
     }
 }
 

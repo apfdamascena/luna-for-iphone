@@ -125,10 +125,20 @@ class LunaCalendarManager: CalendarManager  {
                 title: phase.title,
                 startDate: phase.startDate,
                 endDate: phase.endDate)
-            createEvent(event)
-
+//            createEvent(event)
+            
+            if event.startDate.formatToInt() > Date().formatToInt() || event.title != CyclePhase.expectedMenstruation || isFirst {
+                      createEvent(event)
+            } else {
+                let event = LunaEvent(
+                    title: phase.title,
+                    startDate: Date().daysAfter(1),
+                    endDate: phase.endDate)
+                createEvent(event)
+            }
         }
     }
+    
     
     func adjustEventsInCalendar(selectedDate: Date, isRemove: Bool) {
         guard let eventService = self.lunaEventService else { return }

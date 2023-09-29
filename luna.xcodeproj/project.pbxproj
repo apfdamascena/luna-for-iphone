@@ -204,7 +204,6 @@
 		A48F4A3E2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A3D2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift */; };
 		A48F4A402A9E8AED00BB5058 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A3F2A9E8AED00BB5058 /* String.swift */; };
 		A49046322AC4BFBD007759A1 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49046312AC4BFBD007759A1 /* UIViewController+Keyboard.swift */; };
-		A49046342AC4CA49007759A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A49046332AC4CA49007759A1 /* GoogleService-Info.plist */; };
 		BF4144312A93DC2F00517910 /* LunaCalendarManager+Check.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4144302A93DC2F00517910 /* LunaCalendarManager+Check.swift */; };
 		BF42D2162A8AC67A00E09472 /* CalendarVerifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42D2152A8AC67A00E09472 /* CalendarVerifications.swift */; };
 		BF4951002AB0FB8A0064F5D6 /* BestActivityContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4950FB2AB0FB8A0064F5D6 /* BestActivityContract.swift */; };
@@ -224,6 +223,7 @@
 		BF6520E02A6F0D4B00E60054 /* CycleDurationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520DC2A6F0D4B00E60054 /* CycleDurationRouter.swift */; };
 		BF6520E12A6F0D4B00E60054 /* CycleDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520DD2A6F0D4B00E60054 /* CycleDurationViewController.swift */; };
 		BF6520E42A6F0D5D00E60054 /* CycleDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6520E32A6F0D5D00E60054 /* CycleDurationView.swift */; };
+		BF68D0A72AC72B3C00A852D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF68D0A62AC72B3B00A852D2 /* GoogleService-Info.plist */; };
 		BF8701482ABE2F7900F6D83D /* LunaCalendarManager+Bugfix.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8701472ABE2F7900F6D83D /* LunaCalendarManager+Bugfix.swift */; };
 		BF8FB7802AC5F7A500EDC354 /* RefreshToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8FB77F2AC5F7A500EDC354 /* RefreshToken.swift */; };
 		BF9A367B2ABB7F2000D231CB /* CreateEventContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A36762ABB7F2000D231CB /* CreateEventContract.swift */; };
@@ -492,7 +492,6 @@
 		A48F4A3D2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPhaseControlDataSourceImpl.swift; sourceTree = "<group>"; };
 		A48F4A3F2A9E8AED00BB5058 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		A49046312AC4BFBD007759A1 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
-		A49046332AC4CA49007759A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF4144302A93DC2F00517910 /* LunaCalendarManager+Check.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LunaCalendarManager+Check.swift"; sourceTree = "<group>"; };
 		BF42D2152A8AC67A00E09472 /* CalendarVerifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVerifications.swift; sourceTree = "<group>"; };
 		BF4950FB2AB0FB8A0064F5D6 /* BestActivityContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestActivityContract.swift; sourceTree = "<group>"; };
@@ -512,6 +511,7 @@
 		BF6520DC2A6F0D4B00E60054 /* CycleDurationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationRouter.swift; sourceTree = "<group>"; };
 		BF6520DD2A6F0D4B00E60054 /* CycleDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationViewController.swift; sourceTree = "<group>"; };
 		BF6520E32A6F0D5D00E60054 /* CycleDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDurationView.swift; sourceTree = "<group>"; };
+		BF68D0A62AC72B3B00A852D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF8701472ABE2F7900F6D83D /* LunaCalendarManager+Bugfix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LunaCalendarManager+Bugfix.swift"; sourceTree = "<group>"; };
 		BF8FB77F2AC5F7A500EDC354 /* RefreshToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshToken.swift; sourceTree = "<group>"; };
 		BF9A36762ABB7F2000D231CB /* CreateEventContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventContract.swift; sourceTree = "<group>"; };
@@ -978,7 +978,7 @@
 		0DBADDCB2A65FF2A00A10FC3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A49046332AC4CA49007759A1 /* GoogleService-Info.plist */,
+				BF68D0A62AC72B3B00A852D2 /* GoogleService-Info.plist */,
 				0DA74C742A9549AA0021EC40 /* fonts */,
 				0DBADDA42A65FDF300A10FC3 /* Assets.xcassets */,
 				0DBADDA62A65FDF300A10FC3 /* LaunchScreen.storyboard */,
@@ -1721,8 +1721,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DBADDA82A65FDF300A10FC3 /* LaunchScreen.storyboard in Resources */,
-				A49046342AC4CA49007759A1 /* GoogleService-Info.plist in Resources */,
 				CACB96F62A85670300EB66DD /* Constants.strings in Resources */,
+				BF68D0A72AC72B3C00A852D2 /* GoogleService-Info.plist in Resources */,
 				0DA74C762A9549CB0021EC40 /* CoconRegularFont.otf in Resources */,
 				0DBADDA52A65FDF300A10FC3 /* Assets.xcassets in Resources */,
 			);
@@ -2317,7 +2317,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9YF48LKAWG;
+				DEVELOPMENT_TEAM = M3SKJK6V42;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = luna/Info.plist;
@@ -2332,7 +2332,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.4.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ufpe.luna;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -2352,7 +2352,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9YF48LKAWG;
+				DEVELOPMENT_TEAM = M3SKJK6V42;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = luna/Info.plist;
@@ -2367,7 +2367,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.4.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ufpe.luna;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
