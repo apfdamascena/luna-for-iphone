@@ -13,5 +13,5 @@ struct ActivityEvent {
     let startDate: Date
     let endDate: Date
     var phase: CyclePhase = .none
-    let event: EKEvent
+    var event: EKEvent? = nil
 }

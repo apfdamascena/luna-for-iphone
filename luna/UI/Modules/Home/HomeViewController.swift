@@ -315,10 +315,10 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     
     func loadActivity(dataSource: ActivityEventMonthWeek) {
         let newDataSouceMonth = dataSource.month.map { event in
-            return ActivityCellViewModel(title: event.title, hourStart: event.startDate.formattHour(), hourEnd: event.endDate.formattHour(), day: event.startDate, phase: event.phase, activity: event.event)
+            return ActivityCellViewModel(title: event.title, hourStart: event.startDate.formattHour(), hourEnd: event.endDate.formattHour(), day: event.startDate, phase: event.phase, activity: event.event!)
         }
         let newDataSouceWeek = dataSource.week.map { event in
-            return ActivityCellViewModel(title: event.title, hourStart: event.startDate.formattHour(), hourEnd: event.endDate.formattHour(), day: event.startDate, phase: event.phase, activity: event.event)
+            return ActivityCellViewModel(title: event.title, hourStart: event.startDate.formattHour(), hourEnd: event.endDate.formattHour(), day: event.startDate, phase: event.phase, activity: event.event!)
         }
         let newDataSource = ActivityFilter(week: newDataSouceWeek, month: newDataSouceMonth)
         
