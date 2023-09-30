@@ -59,11 +59,13 @@ extension ActivityOnCalendarViewController: PresenterToViewActivityOnCalendarPro
     
     func navigateToHomeView() {
         
+        self.tabBarController?.tabBar.isHidden = false
+        self.tabBarController?.selectedIndex = 0
+        
         guard let tab = self.tabBarController as? LunaTabBarViewController else { return }
         tab.setupViewControllers()
         
-        self.tabBarController?.tabBar.isHidden = false
-        self.tabBarController?.selectedIndex = 0
+
     }
     
     
