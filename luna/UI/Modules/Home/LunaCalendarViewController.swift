@@ -8,8 +8,8 @@
 import UIKit
 import EventKitUI
 
-class LunaCalendarViewController: EKEventViewController {
-    
+class LunaCalendarViewController: EKEventEditViewController {
+
     let root: HomeViewController
     
     init(with parent: HomeViewController){
