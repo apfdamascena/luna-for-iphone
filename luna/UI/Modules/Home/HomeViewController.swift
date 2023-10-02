@@ -72,7 +72,7 @@ class HomeViewController: UIViewController {
         addNewActivityTrriggerEventObservable()
         
         presenter?.loadCalendarToCollection(isloading: true)
-        
+        schedulerNextCardPhaseInformation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -285,9 +285,20 @@ class HomeViewController: UIViewController {
     }
     
     override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
-        super.dismiss(animated: flag){
-            print("caraiu")
-        }
+        super.dismiss(animated: flag)
+    }
+    
+    func schedulerNextCardPhaseInformation(){
+        Timer.scheduledTimer(timeInterval: 7,
+                             target: self,
+                             selector: #selector(giveNextCardPhaseInformation),
+                             userInfo: nil,
+                             repeats: true)
+    }
+    
+    @objc func giveNextCardPhaseInformation(){
+        guard let index = try? cardPhaseDataSource.index.value() else { return }
+        self.presenter?.userTappedRightSideCardPhase(at: index)
     }
 }
 
@@ -412,7 +423,6 @@ extension HomeViewController: PresenterToViewHomeProtocol {
             self.datasource.lastCell?.transformToStandard()
             center.transformToLarge()
             self.datasource.lastCell = center
-            
         }
     }
     

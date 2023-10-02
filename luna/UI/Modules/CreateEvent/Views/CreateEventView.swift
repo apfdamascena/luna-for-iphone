@@ -25,7 +25,6 @@ class CreateEventView: UIView, AnyView, UITextFieldDelegate {
         textField.setLeftPaddingPoints(2.su)
         textField.textColor = .black
         textField.backgroundColor = Asset.gray50.color
-        
         return textField
     }()
     
