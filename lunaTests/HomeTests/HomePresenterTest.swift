@@ -23,7 +23,7 @@ final class HomePresenterTest: XCTestCase {
         let fakeCard = 0
         let expectedCardPhase = 1
         
-        presenter.userTappedCardPhase(at: fakeCard)
+        presenter.userTappedRightSideCardPhase(at: fakeCard)
         
         XCTAssertTrue(interactor.nextIndexForCardPhaseCalled)
         XCTAssertEqual(view.cardPhaseFake, expectedCardPhase)
@@ -43,7 +43,7 @@ final class HomePresenterTest: XCTestCase {
         let fakeCardPhase  = 4
         let expectedCardPhase = 0
         
-        presenter.userTappedCardPhase(at: fakeCardPhase)
+        presenter.userTappedRightSideCardPhase(at: fakeCardPhase)
         
         XCTAssertTrue(interactor.nextIndexForCardPhaseCalled)
         XCTAssertEqual(view.cardPhaseFake, expectedCardPhase)

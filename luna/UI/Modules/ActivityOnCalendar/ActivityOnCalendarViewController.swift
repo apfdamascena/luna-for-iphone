@@ -39,8 +39,7 @@ class ActivityOnCalendarViewController: UIViewController {
             .rx
             .tap
             .bind{
-                self.tabBarController?.tabBar.isHidden = false
-                self.tabBarController?.selectedIndex = 0
+                self.presenter?.userTapGoHome()
             }.disposed(by: disposeBag)
     }
     
@@ -48,14 +47,32 @@ class ActivityOnCalendarViewController: UIViewController {
         activityOnCalendarView.newActivity
             .rx
             .tap.bind {
-                guard let tab = self.tabBarController as? LunaTabBarViewController else { return }
-                tab.setupViewControllers()
+                self.presenter?.userTapNewActivity()
             }.disposed(by: disposeBag)
     }
+
 }
 
-extension ActivityOnCalendarViewController: PresenterToViewActivityOnCalendarProtocol{
+extension ActivityOnCalendarViewController: PresenterToViewActivityOnCalendarProtocol {
+    
     // TODO: Implement View Output Methods
+    
+    func navigateToHomeView() {
+        
+        self.tabBarController?.tabBar.isHidden = false
+        self.tabBarController?.selectedIndex = 0
+        
+        guard let tab = self.tabBarController as? LunaTabBarViewController else { return }
+        tab.setupViewControllers()
+        
+
+    }
+    
+    
+    func navigateToNewActivityView() {
+        guard let tab = self.tabBarController as? LunaTabBarViewController else { return }
+        tab.setupViewControllers()
+    }
 }
 
 

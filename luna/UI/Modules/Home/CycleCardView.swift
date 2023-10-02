@@ -10,6 +10,18 @@ import SnapKit
 
 class CycleCardView: UIView, AnyView {
     
+    public let leftView: UIView = {
+        let view = UIView()
+//        view.backgroundColor = .blue
+        return view
+    }()
+    
+    public let rightView: UIView = {
+        let view = UIView()
+//        view.backgroundColor = .green
+        return view
+    }()
+    
     public let stack: UIStackView = {
         let view = UIStackView()
         view.axis = .horizontal
@@ -65,6 +77,8 @@ class CycleCardView: UIView, AnyView {
         addSubview(title)
         stack.addArrangedSubview(aboutText)
         stack.addArrangedSubview(FlowIndex)
+        addSubview(leftView)
+        addSubview(rightView)
     }
     
     func addConstraints() {
@@ -82,6 +96,18 @@ class CycleCardView: UIView, AnyView {
         
         cardImage.snp.makeConstraints{
             $0.edges.equalToSuperview()
+        }
+        
+        leftView.snp.makeConstraints {
+            $0.leading.equalToSuperview()
+            $0.width.equalTo(cardImage.snp.width).dividedBy(2)
+            $0.height.equalToSuperview()
+        }
+        
+        rightView.snp.makeConstraints {
+            $0.leading.equalTo(leftView.snp.trailing)
+            $0.width.equalTo(cardImage.snp.width).dividedBy(2)
+            $0.height.equalToSuperview()
         }
         
     }

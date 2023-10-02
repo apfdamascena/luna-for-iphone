@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import EventKit
 
 struct ActivityEvent {
     let title: String
     let startDate: Date
     let endDate: Date
     var phase: CyclePhase = .none
+    var event: EKEvent? = nil
 }

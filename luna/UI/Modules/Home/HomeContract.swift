@@ -31,6 +31,8 @@ protocol PresenterToViewHomeProtocol {
     
     func changeCurrentIndexCardPhase(at newIndex: Int)
     func loadActivity(dataSource: ActivityEventMonthWeek)
+    
+    func openCalendar(with event: EKEvent)
 
 }
 
@@ -59,9 +61,14 @@ protocol ViewToPresenterHomeProtocol {
     
     func showCyclePhaseReferencesSheet()
     
-    func userTappedCardPhase(at index: Int)
+    func userTappedRightSideCardPhase(at index: Int)
+    func userTappedLeftSideCardPhase(at index: Int)
     func loadActivitiesDataSource()
-    func getFirstDayLastMenstruation() -> Date? 
+    func getFirstDayLastMenstruation() -> Date?
+    
+    
+    func openCalendarOnLuna(withEvent: EKEvent)
+
 }
 
 
@@ -81,7 +88,8 @@ protocol PresenterToInteractorHomeProtocol {
     
     func openDeviceSettings()
     
-    func nextIndexForCardPhase(at index: Int) -> Int
+    func nextIndexForRightSideCardPhase(at index: Int) -> Int
+    func nextIndexForLeftSideCardPhase(at index: Int) -> Int
     
     var calendarPermission: CalendarAccess { get }
     
