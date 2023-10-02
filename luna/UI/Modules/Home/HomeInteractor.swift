@@ -178,7 +178,7 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
             event.title == CyclePhase.menstruation.value
         }
         
-        guard let menstruationEvent = menstruationEvents?.first else {
+        guard let menstruationEvent = menstruationEvents?.last else {
             return nil
         }
         
