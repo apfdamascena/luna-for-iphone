@@ -135,6 +135,11 @@ class LunaCalendarManager: CalendarManager  {
                     startDate: Date().daysAfter(1),
                     endDate: phase.endDate)
                 createEvent(event)
+                let pmsEvent = LunaEvent(
+                    title: CyclePhase.pms,
+                    startDate: phase.startDate,
+                    endDate: Date())
+                createEvent(pmsEvent)
             }
         }
     }
