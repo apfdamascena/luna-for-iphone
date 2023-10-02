@@ -16,7 +16,7 @@ class HomeView: UIView, AnyView  {
     private(set) var warningCalendarAccess = WarningCalendarAccess()
     private let monthTag = MonthTag()
     
-    private(set) var activitiesView = ActivitiesView()
+    private(set) lazy var activitiesView = ActivitiesView()
     private let phaseCycleTitle = PhaseCycleTitle()
     private(set) var cardCycle = CycleCardView()
         
