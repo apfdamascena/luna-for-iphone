@@ -51,6 +51,7 @@
 		0D2DB3092AC1FFF8003D71D8 /* LandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB3082AC1FFF8003D71D8 /* LandingPageView.swift */; };
 		0D2DB30B2AC214C5003D71D8 /* NotificationRequestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB30A2AC214C5003D71D8 /* NotificationRequestInteractor.swift */; };
 		0D2DB3112AC616F2003D71D8 /* LunaButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB3102AC616F2003D71D8 /* LunaButtonText.swift */; };
+		0D2DB3132AC77DE8003D71D8 /* LunaCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DB3122AC77DE8003D71D8 /* LunaCalendarViewController.swift */; };
 		0D2FC76A2A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */; };
 		0D2FC76C2A6EF4810025D8B6 /* DataSourceEventObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */; };
 		0D2FC76E2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC76D2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift */; };
@@ -204,6 +205,8 @@
 		A48F4A3E2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A3D2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift */; };
 		A48F4A402A9E8AED00BB5058 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A3F2A9E8AED00BB5058 /* String.swift */; };
 		A49046322AC4BFBD007759A1 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49046312AC4BFBD007759A1 /* UIViewController+Keyboard.swift */; };
+		A49046342AC4CA49007759A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A49046332AC4CA49007759A1 /* GoogleService-Info.plist */; };
+		A49046362AC755F1007759A1 /* NegativeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49046352AC755F1007759A1 /* NegativeModule.swift */; };
 		BF4144312A93DC2F00517910 /* LunaCalendarManager+Check.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4144302A93DC2F00517910 /* LunaCalendarManager+Check.swift */; };
 		BF42D2162A8AC67A00E09472 /* CalendarVerifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42D2152A8AC67A00E09472 /* CalendarVerifications.swift */; };
 		BF4951002AB0FB8A0064F5D6 /* BestActivityContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4950FB2AB0FB8A0064F5D6 /* BestActivityContract.swift */; };
@@ -334,6 +337,7 @@
 		0D2DB3082AC1FFF8003D71D8 /* LandingPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageView.swift; sourceTree = "<group>"; };
 		0D2DB30A2AC214C5003D71D8 /* NotificationRequestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRequestInteractor.swift; sourceTree = "<group>"; };
 		0D2DB3102AC616F2003D71D8 /* LunaButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaButtonText.swift; sourceTree = "<group>"; };
+		0D2DB3122AC77DE8003D71D8 /* LunaCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunaCalendarViewController.swift; sourceTree = "<group>"; };
 		0D2FC7692A6EF42D0025D8B6 /* OnboardingPageControlDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSource.swift; sourceTree = "<group>"; };
 		0D2FC76B2A6EF4810025D8B6 /* DataSourceEventObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceEventObservable.swift; sourceTree = "<group>"; };
 		0D2FC76D2A6EF4C10025D8B6 /* OnboardingPageControlDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControlDataSourceImpl.swift; sourceTree = "<group>"; };
@@ -491,6 +495,8 @@
 		A48F4A3D2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPhaseControlDataSourceImpl.swift; sourceTree = "<group>"; };
 		A48F4A3F2A9E8AED00BB5058 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		A49046312AC4BFBD007759A1 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
+		A49046332AC4CA49007759A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A49046352AC755F1007759A1 /* NegativeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativeModule.swift; sourceTree = "<group>"; };
 		BF4144302A93DC2F00517910 /* LunaCalendarManager+Check.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LunaCalendarManager+Check.swift"; sourceTree = "<group>"; };
 		BF42D2152A8AC67A00E09472 /* CalendarVerifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVerifications.swift; sourceTree = "<group>"; };
 		BF4950FB2AB0FB8A0064F5D6 /* BestActivityContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestActivityContract.swift; sourceTree = "<group>"; };
@@ -811,10 +817,12 @@
 				0DF410642A85603300A10405 /* datasource */,
 				A46C05512A7464230071ABCE /* Views */,
 				0D67941B2A735C1A00382142 /* HomeContract.swift */,
+				A48F4A312A9684B600BB5058 /* CycleCardView.swift */,
 				0D67941C2A735C1A00382142 /* HomePresenter.swift */,
 				0D67941D2A735C1A00382142 /* HomeRouter.swift */,
 				0D67941E2A735C1A00382142 /* HomeViewController.swift */,
 				0D67941F2A735C1A00382142 /* HomeInteractor.swift */,
+				0D2DB3122AC77DE8003D71D8 /* LunaCalendarViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1302,7 +1310,6 @@
 				0DF410662A85656300A10405 /* MonthTag.swift */,
 				0DF410682A856A6300A10405 /* PhaseCycleTitle.swift */,
 				0DF4106A2A85712E00A10405 /* LearnCycleTitle.swift */,
-				A48F4A312A9684B600BB5058 /* CycleCardView.swift */,
 				0D8095892AB3419E00106998 /* ActivityView.swift */,
 			);
 			path = Views;
@@ -1574,6 +1581,7 @@
 			isa = PBXGroup;
 			children = (
 				CAE579A12A7AD8A1004EE21C /* CalendarCollectionConverter.swift */,
+				A49046352AC755F1007759A1 /* NegativeModule.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1949,6 +1957,7 @@
 				BF4951192AB395280064F5D6 /* NewActivityInformations.swift in Sources */,
 				0DBADDE22A6603F800A10FC3 /* LastDayMenstruationViewController.swift in Sources */,
 				0DF4106E2A85820D00A10405 /* SeeMoreCard.swift in Sources */,
+				0D2DB3132AC77DE8003D71D8 /* LunaCalendarViewController.swift in Sources */,
 				0D7C73B02A67834100677D1E /* TouchableUserEvent.swift in Sources */,
 				A427FC5C2AB0DBFC006B4F2B /* FirstTimeNewActivityContract.swift in Sources */,
 				BF4951172AB2410C0064F5D6 /* BestActivityViewModel.swift in Sources */,
@@ -2100,6 +2109,7 @@
 				0D6336A62A77510400EE9699 /* OnboardingCyclePhaseContent.swift in Sources */,
 				0D2DB3042AC1FEEE003D71D8 /* LandingPageInteractor.swift in Sources */,
 				A46C054D2A74641E0071ABCE /* LunaButtonBack.swift in Sources */,
+				A49046362AC755F1007759A1 /* NegativeModule.swift in Sources */,
 				A48B7EDA2A7ACBCD00CCC4C0 /* CycleDetailsCard.swift in Sources */,
 				0D2939772AB113630017891A /* ActivityCell.swift in Sources */,
 				0D65E3842AB24B62008148FD /* ActivityPeriod.swift in Sources */,

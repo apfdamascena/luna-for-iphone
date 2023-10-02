@@ -11,6 +11,8 @@ import UIKit
 import EventKit
 
 class HomePresenter: ViewToPresenterHomeProtocol {
+
+
     var view: PresenterToViewHomeProtocol?
     var interactor: PresenterToInteractorHomeProtocol?
     var router: PresenterToRouterHomeProtocol?
@@ -101,8 +103,13 @@ class HomePresenter: ViewToPresenterHomeProtocol {
         view?.moveTo(month)
     }
     
-    func userTappedCardPhase(at index: Int) {
-        guard let newCardPhaseIndex = interactor?.nextIndexForCardPhase(at: index) else { return }
+    func userTappedRightSideCardPhase(at index: Int) {
+        guard let newCardPhaseIndex = interactor?.nextIndexForRightSideCardPhase(at: index) else { return }
+        view?.changeCurrentIndexCardPhase(at: newCardPhaseIndex)
+    }
+    
+    func userTappedLeftSideCardPhase(at index: Int) {
+        guard let newCardPhaseIndex = interactor?.nextIndexForLeftSideCardPhase(at: index) else { return }
         view?.changeCurrentIndexCardPhase(at: newCardPhaseIndex)
     }
     
@@ -113,6 +120,10 @@ class HomePresenter: ViewToPresenterHomeProtocol {
     
     func getFirstDayLastMenstruation() -> Date? {
         return interactor?.getFirstDayOfLastMenstruation()
+    }
+    
+    func openCalendarOnLuna(withEvent: EKEvent) {
+        view?.openCalendar(with: withEvent)
     }
     
 }

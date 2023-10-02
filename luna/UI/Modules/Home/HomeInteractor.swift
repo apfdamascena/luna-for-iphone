@@ -160,8 +160,12 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
         }
     }
     
-    func nextIndexForCardPhase(at index: Int) -> Int {
+    func nextIndexForRightSideCardPhase(at index: Int) -> Int {
         return (index + 1) % 5
+    }
+    
+    func nextIndexForLeftSideCardPhase(at index: Int) -> Int {
+        return mod(index - 1, 5)
     }
     
     func findActivityEventsOfCurrentMonth() -> ActivityEventMonthWeek {
@@ -184,6 +188,8 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
         
         return menstruationEvent.startDate
     }
+    
+
     
         
 }

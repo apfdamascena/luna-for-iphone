@@ -16,9 +16,9 @@ class HomeInteractorMock: HomeInteractor, HomeInteractorSpy  {
     var loadUserCalendarHasBeenCalled: Bool = false
     var loadCalendarToCollectionHasBeenCalled: Bool = false
     
-    override func nextIndexForCardPhase(at index: Int) -> Int {
+    override func nextIndexForRightSideCardPhase(at index: Int) -> Int {
         nextIndexForCardPhaseCalled = true
-        return super.nextIndexForCardPhase(at: index)
+        return super.nextIndexForRightSideCardPhase(at: index)
     }
     
     override func openDeviceSettings() {
