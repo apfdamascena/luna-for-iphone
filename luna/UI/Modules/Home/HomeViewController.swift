@@ -12,6 +12,7 @@ import RxCocoa
 import FirebaseAnalytics
 import SkeletonView
 import EventKit
+import EventKitUI
 
 class HomeViewController: UIViewController {
 
@@ -426,9 +427,16 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     
     func openCalendar(with event: EKEvent) {
         let calendar = LunaCalendarViewController(with: self)
+        calendar.editViewDelegate = self
         calendar.event = event
-        calendar.allowsEditing = true
         present(calendar, animated: true)
+    }
+}
+
+extension HomeViewController: EKEventEditViewDelegate {
+    
+    func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
+        self.dismiss(animated: true)
     }
 }
 
