@@ -73,13 +73,13 @@ class HomeViewController: UIViewController {
         
         presenter?.loadCalendarToCollection(isloading: true)
         schedulerNextCardPhaseInformation()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
-        self.navigationController?.isNavigationBarHidden = true
-        
+
         DispatchQueue.main.async {
             self.presenter?.loadActivitiesDataSource()
             self.checkLunaCalendarToken()
@@ -96,6 +96,7 @@ class HomeViewController: UIViewController {
         AnalyticsCenter.shared.post(AnalyticsEvents.openApp(teste))
         
         moveInitialCollection()
+
     }
     
     func startTimer() {
