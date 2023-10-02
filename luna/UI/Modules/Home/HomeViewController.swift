@@ -333,7 +333,14 @@ extension HomeViewController: PresenterToViewHomeProtocol {
         let newDataSource = ActivityFilter(week: newDataSouceWeek, month: newDataSouceMonth)
         
         activitiesDataSource.activitiesForSegmentedControl.onNext(newDataSource)
-        activitiesDataSource.activities.onNext(newDataSource.week)
+        
+        let value = ActivityPeriod(self.homeView.activitiesView.segmentedControl.selectedSegmentIndex)
+        
+        
+        value == .week ?
+        activitiesDataSource.activities.onNext(newDataSource.week) :
+        activitiesDataSource.activities.onNext(newDataSource.month)
+        
     }
     
     func moveCalendarCollection(toXAxis: CGFloat) {

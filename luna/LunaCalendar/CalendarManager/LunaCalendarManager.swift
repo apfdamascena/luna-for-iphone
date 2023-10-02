@@ -125,7 +125,6 @@ class LunaCalendarManager: CalendarManager  {
                 title: phase.title,
                 startDate: phase.startDate,
                 endDate: phase.endDate)
-//            createEvent(event)
             
             if event.startDate.formatToInt() > Date().formatToInt() || event.title != CyclePhase.expectedMenstruation || isFirst {
                       createEvent(event)
