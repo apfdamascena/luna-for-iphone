@@ -59,6 +59,8 @@ class LunaTabBarViewController: UITabBarController {
             return navigationController
         }
         
+        navigationControllers[0].setNavigationBarHidden(true, animated: false)
+        
         setViewControllers(navigationControllers, animated: false)
     }
     

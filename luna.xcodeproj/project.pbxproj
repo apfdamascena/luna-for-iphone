@@ -804,7 +804,6 @@
 		0D6794112A71D51800382142 /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				A48F4A3B2A993C4700BB5058 /* CardPhaseControl */,
 				0D6794122A71D53C00382142 /* RootScreenViewFactory.swift */,
 			);
 			path = Root;
@@ -861,9 +860,9 @@
 		0D7C73AA2A6757A500677D1E /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				CACB96F82A85670300EB66DD /* Constants.strings */,
 				0D7C73AB2A67580D00677D1E /* Strings+Generated.swift */,
 				0D7C73AC2A67580D00677D1E /* XCAssets+Generated.swift */,
-				CACB96F82A85670300EB66DD /* Constants.strings */,
 				0D6336962A774C7D00EE9699 /* OnboardingInformation.swift */,
 				CAE579A32A7ADE2D004EE21C /* HomeCollection.swift */,
 			);
@@ -1343,13 +1342,6 @@
 				A48F4A362A9690C000BB5058 /* DynamicCardPhaseFactory.swift */,
 			);
 			path = DynamicCardPhase;
-			sourceTree = "<group>";
-		};
-		A48F4A3B2A993C4700BB5058 /* CardPhaseControl */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CardPhaseControl;
 			sourceTree = "<group>";
 		};
 		A490462D2AC4A8D3007759A1 /* Controllers */ = {

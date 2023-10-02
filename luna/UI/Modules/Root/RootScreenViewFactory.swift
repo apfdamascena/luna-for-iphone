@@ -16,6 +16,9 @@ class RootScreenViewFactory {
             rootController = LunaTabBarViewController()
         }
         
-        return UINavigationController(rootViewController: rootController)
+        let navigator = UINavigationController(rootViewController: rootController)
+
+        
+        return navigator
     }
 }
