@@ -234,7 +234,6 @@
 		BF9A367F2ABB7F2000D231CB /* CreateEventInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A367A2ABB7F2000D231CB /* CreateEventInteractor.swift */; };
 		BF9A36812ABB7F3E00D231CB /* CreateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A36802ABB7F3E00D231CB /* CreateEventView.swift */; };
 		BFBD77132A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD77122A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift */; };
-		BFC844482ACB439F0082FEF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFC844472ACB439F0082FEF0 /* GoogleService-Info.plist */; };
 		BFCAAD3B2A6B19AE00A91CC0 /* MenstruationDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */; };
 		BFCDE18E2AA6553700CFCA95 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BFCDE18D2AA6553700CFCA95 /* FirebaseAnalytics */; };
 		BFCDE1902AA6553700CFCA95 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = BFCDE18F2AA6553700CFCA95 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -524,7 +523,6 @@
 		BF9A367A2ABB7F2000D231CB /* CreateEventInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventInteractor.swift; sourceTree = "<group>"; };
 		BF9A36802ABB7F3E00D231CB /* CreateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventView.swift; sourceTree = "<group>"; };
 		BFBD77122A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LunaCalendarManager+Verifications.swift"; sourceTree = "<group>"; };
-		BFC844472ACB439F0082FEF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationView.swift; sourceTree = "<group>"; };
 		BFCDE1982AA6678700CFCA95 /* AnalyticsEventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEventType.swift; sourceTree = "<group>"; };
 		BFCDE19A2AA6693800CFCA95 /* AnalyticsEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvents.swift; sourceTree = "<group>"; };
@@ -984,7 +982,6 @@
 		0DBADDCB2A65FF2A00A10FC3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BFC844472ACB439F0082FEF0 /* GoogleService-Info.plist */,
 				0DA74C742A9549AA0021EC40 /* fonts */,
 				0DBADDA42A65FDF300A10FC3 /* Assets.xcassets */,
 				0DBADDA62A65FDF300A10FC3 /* LaunchScreen.storyboard */,
@@ -1726,7 +1723,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFC844482ACB439F0082FEF0 /* GoogleService-Info.plist in Resources */,
 				0DBADDA82A65FDF300A10FC3 /* LaunchScreen.storyboard in Resources */,
 				CACB96F62A85670300EB66DD /* Constants.strings in Resources */,
 				0DA74C762A9549CB0021EC40 /* CoconRegularFont.otf in Resources */,

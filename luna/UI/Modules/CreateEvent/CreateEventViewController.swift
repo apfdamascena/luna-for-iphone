@@ -65,6 +65,11 @@ class CreateEventViewController: UIViewController {
 
                 } else {
                     self.initialDate = self.initialDate + 1
+                    
+                    if self.titleEvent == "" {
+                        self.titleEvent = NewActivityInformations.shared.title
+                    }
+                    
                     self.addActivity(title: self.titleEvent, initialDate: self.initialDate, finalDate: self.endDate)
                     self.presenter?.userTappedCreateEventButton()
                 }
