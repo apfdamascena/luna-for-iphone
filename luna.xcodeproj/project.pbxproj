@@ -205,7 +205,6 @@
 		A48F4A3E2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A3D2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift */; };
 		A48F4A402A9E8AED00BB5058 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A3F2A9E8AED00BB5058 /* String.swift */; };
 		A49046322AC4BFBD007759A1 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49046312AC4BFBD007759A1 /* UIViewController+Keyboard.swift */; };
-		A49046342AC4CA49007759A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A49046332AC4CA49007759A1 /* GoogleService-Info.plist */; };
 		A49046362AC755F1007759A1 /* NegativeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49046352AC755F1007759A1 /* NegativeModule.swift */; };
 		BF4144312A93DC2F00517910 /* LunaCalendarManager+Check.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4144302A93DC2F00517910 /* LunaCalendarManager+Check.swift */; };
 		BF42D2162A8AC67A00E09472 /* CalendarVerifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42D2152A8AC67A00E09472 /* CalendarVerifications.swift */; };
@@ -235,6 +234,7 @@
 		BF9A367F2ABB7F2000D231CB /* CreateEventInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A367A2ABB7F2000D231CB /* CreateEventInteractor.swift */; };
 		BF9A36812ABB7F3E00D231CB /* CreateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A36802ABB7F3E00D231CB /* CreateEventView.swift */; };
 		BFBD77132A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD77122A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift */; };
+		BFC844482ACB439F0082FEF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFC844472ACB439F0082FEF0 /* GoogleService-Info.plist */; };
 		BFCAAD3B2A6B19AE00A91CC0 /* MenstruationDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */; };
 		BFCDE18E2AA6553700CFCA95 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BFCDE18D2AA6553700CFCA95 /* FirebaseAnalytics */; };
 		BFCDE1902AA6553700CFCA95 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = BFCDE18F2AA6553700CFCA95 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -495,7 +495,6 @@
 		A48F4A3D2A993E0400BB5058 /* CardPhaseControlDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPhaseControlDataSourceImpl.swift; sourceTree = "<group>"; };
 		A48F4A3F2A9E8AED00BB5058 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		A49046312AC4BFBD007759A1 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
-		A49046332AC4CA49007759A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A49046352AC755F1007759A1 /* NegativeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativeModule.swift; sourceTree = "<group>"; };
 		BF4144302A93DC2F00517910 /* LunaCalendarManager+Check.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LunaCalendarManager+Check.swift"; sourceTree = "<group>"; };
 		BF42D2152A8AC67A00E09472 /* CalendarVerifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVerifications.swift; sourceTree = "<group>"; };
@@ -525,6 +524,7 @@
 		BF9A367A2ABB7F2000D231CB /* CreateEventInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventInteractor.swift; sourceTree = "<group>"; };
 		BF9A36802ABB7F3E00D231CB /* CreateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventView.swift; sourceTree = "<group>"; };
 		BFBD77122A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LunaCalendarManager+Verifications.swift"; sourceTree = "<group>"; };
+		BFC844472ACB439F0082FEF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationView.swift; sourceTree = "<group>"; };
 		BFCDE1982AA6678700CFCA95 /* AnalyticsEventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEventType.swift; sourceTree = "<group>"; };
 		BFCDE19A2AA6693800CFCA95 /* AnalyticsEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvents.swift; sourceTree = "<group>"; };
@@ -984,6 +984,7 @@
 		0DBADDCB2A65FF2A00A10FC3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BFC844472ACB439F0082FEF0 /* GoogleService-Info.plist */,
 				0DA74C742A9549AA0021EC40 /* fonts */,
 				0DBADDA42A65FDF300A10FC3 /* Assets.xcassets */,
 				0DBADDA62A65FDF300A10FC3 /* LaunchScreen.storyboard */,
@@ -1725,6 +1726,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC844482ACB439F0082FEF0 /* GoogleService-Info.plist in Resources */,
 				0DBADDA82A65FDF300A10FC3 /* LaunchScreen.storyboard in Resources */,
 				CACB96F62A85670300EB66DD /* Constants.strings in Resources */,
 				0DA74C762A9549CB0021EC40 /* CoconRegularFont.otf in Resources */,
@@ -2338,7 +2340,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.4.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ufpe.luna;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -2373,7 +2375,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.4.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ufpe.luna;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
