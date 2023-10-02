@@ -47,7 +47,7 @@ class HomeView: UIView, AnyView  {
         let view = PhaseCycleTitle()
         view.phaseTitle.textColor = .white
         view.youAreInLabel.textColor = .white
-        view.showAnimatedSkeleton()
+        view.showAnimatedSkeleton(usingColor: Asset.gray50.color)
         return view
     }()
     
@@ -60,6 +60,24 @@ class HomeView: UIView, AnyView  {
     private let cardSkeleton: UIView = {
         let view = UIView()
         view.isSkeletonable = true
+        return view
+    }()
+    
+    var activitiesSkeleton: UIView = {
+        let view = UIView()
+        view.isSkeletonable = true
+        return view
+    }()
+    
+    var activitiesViewSkeleton: ActivitiesView = {
+        let view = ActivitiesView()
+        view.isSkeletonable = true
+        
+        view.newActivity.isHidden = true
+        view.segmentedControl.isHidden = true
+        
+        view.showAnimatedSkeleton(usingColor: Asset.gray50.color)
+        
         return view
     }()
     
@@ -124,7 +142,8 @@ class HomeView: UIView, AnyView  {
         addSubview(phaseCycleSkeleton)
         addSubview(collectionViewSkeleton)
         addSubview(cardSkeleton)
-        
+        addSubview(activitiesViewSkeleton)
+        addSubview(activitiesSkeleton)
     }
     
     func addConstraints() {
@@ -195,6 +214,15 @@ class HomeView: UIView, AnyView  {
         activitiesView.snp.makeConstraints{
             $0.leading.trailing.equalTo(self).inset(3.su)
         }
+        
+        activitiesViewSkeleton.snp.makeConstraints {
+            $0.edges.equalTo(activitiesView)
+        }
+        
+        activitiesSkeleton.snp.makeConstraints {
+            $0.edges.equalTo(activitiesViewSkeleton.segmentedControl)
+        }
+        
     }
     
     func addAdditionalConfiguration() {
@@ -236,9 +264,10 @@ class HomeView: UIView, AnyView  {
             [
                 self.collectionViewSkeleton,
                 self.cardSkeleton,
-                self.phaseCycleSkeleton
+                self.activitiesSkeleton,
+                self.activitiesViewSkeleton
             ].forEach {
-                $0.showAnimatedSkeleton()
+                $0.showAnimatedSkeleton(usingColor: Asset.gray50.color)
             }
             
         }
@@ -249,7 +278,8 @@ class HomeView: UIView, AnyView  {
         [
             self.collectionViewSkeleton,
             self.cardSkeleton,
-            self.phaseCycleSkeleton
+            self.activitiesSkeleton,
+            self.activitiesViewSkeleton
         ].forEach {
             $0.hideSkeleton()
         }
@@ -258,6 +288,8 @@ class HomeView: UIView, AnyView  {
         cardSkeleton.isHidden = true
         skeletonBackground.isHidden = true
         phaseCycleSkeleton.isHidden = true
+        activitiesSkeleton.isHidden = true
+        activitiesViewSkeleton.isHidden = true
     }
     
     func cardFeedbackDisappear() {

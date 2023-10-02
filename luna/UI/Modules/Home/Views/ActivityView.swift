@@ -13,22 +13,27 @@ class ActivitiesView: UIView, AnyView {
     private let activitiesTitleStack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
+        
+        stack.isSkeletonable = true
         return stack
     }()
     
-    private let activitiesTitle: LunaText = {
+    private(set) var activitiesTitle: LunaText = {
         let label = LunaText()
         let model = LunaTextViewModel(size: 25,
                                       color: .black,
                                       weight: .semibold)
         label.draw(model)
         label.text = L10n.Constants.Content.Label.NewActivity.title
+        
+        label.isSkeletonable = true
         return label
     }()
     
     private(set) var newActivity: LunaButton = {
         let button = LunaButton()
         button.draw(style: .newEvent)
+        button.isSkeletonable = true
         return button
     }()
     
@@ -37,6 +42,7 @@ class ActivitiesView: UIView, AnyView {
                      L10n.Constants.Content.Label.NewActivity.month]
         let segmented = UISegmentedControl(items: items)
         segmented.selectedSegmentIndex = 0
+        segmented.isSkeletonable = true
         return segmented
     }()
     
@@ -45,6 +51,8 @@ class ActivitiesView: UIView, AnyView {
         stack.spacing = 1.5.su
         stack.axis = .vertical
         stack.alignment = .fill
+        
+        stack.isSkeletonable = true
         return stack
     }()
     

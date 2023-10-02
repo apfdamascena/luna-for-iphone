@@ -984,7 +984,6 @@
 		0DBADDCB2A65FF2A00A10FC3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A49046332AC4CA49007759A1 /* GoogleService-Info.plist */,
 				0DA74C742A9549AA0021EC40 /* fonts */,
 				0DBADDA42A65FDF300A10FC3 /* Assets.xcassets */,
 				0DBADDA62A65FDF300A10FC3 /* LaunchScreen.storyboard */,
@@ -1727,7 +1726,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DBADDA82A65FDF300A10FC3 /* LaunchScreen.storyboard in Resources */,
-				A49046342AC4CA49007759A1 /* GoogleService-Info.plist in Resources */,
 				CACB96F62A85670300EB66DD /* Constants.strings in Resources */,
 				0DA74C762A9549CB0021EC40 /* CoconRegularFont.otf in Resources */,
 				0DBADDA52A65FDF300A10FC3 /* Assets.xcassets in Resources */,
@@ -2325,7 +2323,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9YF48LKAWG;
+				DEVELOPMENT_TEAM = CMWHQAT5B4;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = luna/Info.plist;
@@ -2360,7 +2358,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9YF48LKAWG;
+				DEVELOPMENT_TEAM = CMWHQAT5B4;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = luna/Info.plist;
