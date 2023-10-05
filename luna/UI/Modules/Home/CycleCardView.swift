@@ -8,19 +8,31 @@
 import UIKit
 import SnapKit
 
+class FlowCardView: UIView, AnyView {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func addSubviews() {
+        
+    }
+    
+    func addConstraints() {
+        backgroundColor = .red
+    }
+}
+
 class CycleCardView: UIView, AnyView {
     
-    public let leftView: UIView = {
-        let view = UIView()
-//        view.backgroundColor = .blue
-        return view
-    }()
+    public let leftView = UIView()
     
-    public let rightView: UIView = {
-        let view = UIView()
-//        view.backgroundColor = .green
-        return view
-    }()
+    public let rightView = UIView()
     
     public let stack: UIStackView = {
         let view = UIStackView()
@@ -45,11 +57,14 @@ class CycleCardView: UIView, AnyView {
         return view
     }()
     
-    public let FlowIndex: UIImageView = {
-        let view = UIImageView(image: Asset.flowCardIndex0.image)
-        view.contentMode = .scaleAspectFit
-        return view
-    }()
+//    public let FlowIndex: UIImageView = {
+//        let view = UIImageView(image: Asset.flowCardIndex0.image)
+//        view.contentMode = .scaleAspectFit
+//        return view
+//    }()
+    
+    let FlowIndex = FlowCardView()
+    
     
     public var title: LunaText = {
         let label = LunaText()
@@ -130,7 +145,7 @@ class CycleCardView: UIView, AnyView {
             Asset.flowCardIndex3.image,
             Asset.flowCardIndex4.image,
         ]
-        FlowIndex.image = flowIndexImages[index]
+//        FlowIndex.image = flowIndexImages[index]
     }
     
 }
