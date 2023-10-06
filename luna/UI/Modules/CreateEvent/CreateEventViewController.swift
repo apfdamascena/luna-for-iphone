@@ -34,6 +34,7 @@ class CreateEventViewController: UIViewController {
         self.navigationItem.title = L10n.Constants.Content.Label.CreateEvent.Nav.title
         let nav = self.navigationController?.navigationBar
         nav?.tintColor = Asset.red600.color
+        self.dismissKeyboard()
     }
     
     func draw() {
