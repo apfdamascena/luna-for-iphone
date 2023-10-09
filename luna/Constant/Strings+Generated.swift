@@ -14,10 +14,12 @@ internal enum L10n {
     internal enum Content {
       internal enum Alert {
         internal enum Warning {
-          /// Você não pode marcar atividadade sem nome
-          internal static let noTitleActivity = L10n.tr("Constants", "constants.content.alert.warning.no_title_activity", fallback: "Você não pode marcar atividadade sem nome")
-          /// Aviso
-          internal static let title = L10n.tr("Constants", "constants.content.alert.warning.title", fallback: "Aviso")
+          /// Adicione as métricas para a sua atividade
+          internal static let noMetrics = L10n.tr("Constants", "constants.content.alert.warning.no_metrics", fallback: "Adicione as métricas para a sua atividade")
+          /// Adicione um título para a sua atividade
+          internal static let noTitleActivity = L10n.tr("Constants", "constants.content.alert.warning.no_title_activity", fallback: "Adicione um título para a sua atividade")
+          /// Ei! Faltou algo
+          internal static let title = L10n.tr("Constants", "constants.content.alert.warning.title", fallback: "Ei! Faltou algo")
         }
       }
       internal enum Api {

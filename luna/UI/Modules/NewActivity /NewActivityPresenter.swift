@@ -32,8 +32,9 @@ class NewActivityPresenter: ViewToPresenterNewActivityProtocol {
         return idealPhase
     }
     
-    func isNotPossibleCreateActivityWithoutName() {
-        view?.showFeedbackForUser()
+    func fieldsWereNotFilled(_ value: LabelsNotFilled) {
+        let text = value == .metrics ? L10n.Constants.Content.Alert.Warning.noMetrics : L10n.Constants.Content.Alert.Warning.noTitleActivity
+        view?.showFeedbackForUser(with: text)
     }
     
 }

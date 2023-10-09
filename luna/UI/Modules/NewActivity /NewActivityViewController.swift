@@ -10,6 +10,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+enum LabelsNotFilled {
+
+    case title
+    case metrics
+}
+
 class NewActivityViewController: UIViewController {
     
     private let newActivityView = NewActivityView()
@@ -64,10 +70,17 @@ class NewActivityViewController: UIViewController {
         newActivityView.button
             .rx
             .tap.bind {
+                
                 guard self.titleActivity != "" else {
-                    self.presenter?.isNotPossibleCreateActivityWithoutName()
+                    self.presenter?.fieldsWereNotFilled(.title)
                     return
                 }
+                
+                guard self.allUsersLabelsWereFilled() else {
+                    self.presenter?.fieldsWereNotFilled(.metrics)
+                    return
+                }
+                
                 self.idealPhase(
                     stress: self.stressValue,
                     sociability: self.sociabilityValue,
@@ -76,6 +89,13 @@ class NewActivityViewController: UIViewController {
                 )
                 self.presenter?.userTappedContinueButton()
             }.disposed(by: disposeBag)
+    }
+    
+    func allUsersLabelsWereFilled() -> Bool {
+        let filled = [stressValue, sociabilityValue, fisicsEffortValue].reduce(true) { partialResult, value in
+            return partialResult && value != ""
+        }
+        return filled
     }
     
     func selectedStressCollectionNumber() {
@@ -135,10 +155,10 @@ class NewActivityViewController: UIViewController {
 
 extension NewActivityViewController: PresenterToViewNewActivityProtocol{
     
-    func showFeedbackForUser() {
+    func showFeedbackForUser(with text: String) {
         
         let alert = UIAlertController(title: L10n.Constants.Content.Alert.Warning.title,
-                                      message: L10n.Constants.Content.Alert.Warning.noTitleActivity,
+                                      message: text,
                                       preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "OK",
