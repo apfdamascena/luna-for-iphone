@@ -70,12 +70,16 @@ class NewActivityViewController: UIViewController {
         newActivityView.button
             .rx
             .tap.bind {
+                
                 guard self.titleActivity != "" else {
                     self.presenter?.fieldsWereNotFilled(.title)
                     return
                 }
                 
-                guard self.allUsersLabelsWereFilled() else { return }
+                guard self.allUsersLabelsWereFilled() else {
+                    self.presenter?.fieldsWereNotFilled(.metrics)
+                    return
+                }
                 
                 self.idealPhase(
                     stress: self.stressValue,
@@ -154,7 +158,7 @@ extension NewActivityViewController: PresenterToViewNewActivityProtocol{
     func showFeedbackForUser(with text: String) {
         
         let alert = UIAlertController(title: L10n.Constants.Content.Alert.Warning.title,
-                                      message: L10n.Constants.Content.Alert.Warning.noTitleActivity,
+                                      message: text,
                                       preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "OK",
