@@ -32,8 +32,9 @@ class NewActivityPresenter: ViewToPresenterNewActivityProtocol {
         return idealPhase
     }
     
-    func isNotPossibleCreateActivityWithoutName() {
-        view?.showFeedbackForUser()
+    func fieldsWereNotFilled(_ value: LabelsNotFilled) {
+        let text = value == .metrics ? "Adicione as métricas para a sua atividade" : "Adicione um título para a sua atividade"
+        view?.showFeedbackForUser(with: text)
     }
     
 }

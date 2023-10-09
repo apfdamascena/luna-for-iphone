@@ -10,6 +10,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+enum LabelsNotFilled {
+
+    case title
+    case metrics
+}
+
 class NewActivityViewController: UIViewController {
     
     private let newActivityView = NewActivityView()
@@ -65,7 +71,7 @@ class NewActivityViewController: UIViewController {
             .rx
             .tap.bind {
                 guard self.titleActivity != "" else {
-                    self.presenter?.isNotPossibleCreateActivityWithoutName()
+                    self.presenter?.fieldsWereNotFilled(.title)
                     return
                 }
                 
@@ -145,7 +151,7 @@ class NewActivityViewController: UIViewController {
 
 extension NewActivityViewController: PresenterToViewNewActivityProtocol{
     
-    func showFeedbackForUser() {
+    func showFeedbackForUser(with text: String) {
         
         let alert = UIAlertController(title: L10n.Constants.Content.Alert.Warning.title,
                                       message: L10n.Constants.Content.Alert.Warning.noTitleActivity,
