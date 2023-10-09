@@ -68,6 +68,9 @@ class NewActivityViewController: UIViewController {
                     self.presenter?.isNotPossibleCreateActivityWithoutName()
                     return
                 }
+                
+                guard self.allUsersLabelsWereFilled() else { return }
+                
                 self.idealPhase(
                     stress: self.stressValue,
                     sociability: self.sociabilityValue,
@@ -76,6 +79,13 @@ class NewActivityViewController: UIViewController {
                 )
                 self.presenter?.userTappedContinueButton()
             }.disposed(by: disposeBag)
+    }
+    
+    func allUsersLabelsWereFilled() -> Bool {
+        let filled = [stressValue, sociabilityValue, fisicsEffortValue].reduce(true) { partialResult, value in
+            return partialResult && value != ""
+        }
+        return filled
     }
     
     func selectedStressCollectionNumber() {
