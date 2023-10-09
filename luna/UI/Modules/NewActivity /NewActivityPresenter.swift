@@ -33,7 +33,7 @@ class NewActivityPresenter: ViewToPresenterNewActivityProtocol {
     }
     
     func fieldsWereNotFilled(_ value: LabelsNotFilled) {
-        let text = value == .metrics ? "Adicione as métricas para a sua atividade" : L10n.Constants.Content.Alert.Warning.noTitleActivity
+        let text = value == .metrics ? L10n.Constants.Content.Alert.Warning.noMetrics : L10n.Constants.Content.Alert.Warning.noTitleActivity
         view?.showFeedbackForUser(with: text)
     }
     
