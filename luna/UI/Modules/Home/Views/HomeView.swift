@@ -81,9 +81,10 @@ class HomeView: UIView, AnyView  {
         return view
     }()
     
-    private let skeletonBackground: UIView = {
+    private(set) var skeletonBackground: UIView = {
         let view = UIView()
         view.backgroundColor = .white
+        view.isHidden = true
         return view
     }()
     
@@ -110,9 +111,8 @@ class HomeView: UIView, AnyView  {
     }()
     
     override init(frame: CGRect) {
-        self.hasAcessToCalendar = .unauthorized
+        self.hasAcessToCalendar = .loading
         super.init(frame: frame)
-        isSkeletonable = true
         setupView()
     }
     
@@ -264,7 +264,7 @@ class HomeView: UIView, AnyView  {
     }
     
     func appearSkeleton() {
-        
+        skeletonBackground.isHidden = false
         DispatchQueue.main.async {
             [
                 self.collectionViewSkeleton,
@@ -324,7 +324,7 @@ class HomeView: UIView, AnyView  {
         cardCycle.isHidden = true
         warningNoMenstrualData.isHidden = false
         activitiesView.isHidden = true
-        
+
     }
     
     func accessToCalendar(allowed: CalendarAccess){

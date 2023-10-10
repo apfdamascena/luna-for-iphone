@@ -13,10 +13,6 @@ import EventKit
 // MARK: View Output (Presenter -> View)
 protocol PresenterToViewHomeProtocol {
     
-    func userAllowedAccessCalendar()
-    func allowAccessCalendar()
-    func userDeniedAccessCalendar()
-    
     func changeSelectedCell(selectedCell: CalendarCollectionViewCell) 
     func moveCalendarCollection(toXAxis: CGFloat)
     func updateView(_ center: CalendarCollectionViewCell)
@@ -44,7 +40,6 @@ protocol ViewToPresenterHomeProtocol {
     var interactor: PresenterToInteractorHomeProtocol? { get set }
     var router: PresenterToRouterHomeProtocol? { get set }
     
-    func checkCalendarPermission()
     func loadUserCalendar()
     func insertMenstruation(selectedDate: Date) -> Bool
     func findBestPhase(activity: ActivityMetrics) -> EKEvent
@@ -102,8 +97,6 @@ protocol PresenterToInteractorHomeProtocol {
 // MARK: Interactor Output (Interactor -> Presenter)
 protocol InteractorToPresenterHomeProtocol {
     
-    func accessAllowed()
-    func accessDenied()
     func showFeedbackRegisterMenstruation()
     
 }

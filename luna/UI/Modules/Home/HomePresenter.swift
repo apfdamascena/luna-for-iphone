@@ -25,18 +25,6 @@ class HomePresenter: ViewToPresenterHomeProtocol {
         self.router = router
     }
     
-    func checkCalendarPermission() {
-        interactor?.checkIfUserGivePermission { permission in
-            
-            switch permission {
-            case .success:
-                self.view?.userAllowedAccessCalendar()
-            case .failure:
-                self.view?.userDeniedAccessCalendar()
-            }
-        }
-    }
-    
     func showCyclePhaseReferencesSheet() {
         guard let homePresenterView = view else { return }
         self.router?.pushReferencesSheet(on: homePresenterView)
@@ -52,9 +40,12 @@ class HomePresenter: ViewToPresenterHomeProtocol {
         view?.load(collectionDataSource: collectionDataSource?.calendar ?? [])
         
         if isloading {
+            self.loadUserCalendar()
             self.view?.didUpdateState(.loading)
+            
         } else {
             if collectionDataSource?.haveAccess == true {
+                self.loadUserCalendar()
                 self.view?.didUpdateState(.autorized)
             } else {
                 self.view?.didUpdateState(.unautorized)
@@ -129,14 +120,6 @@ class HomePresenter: ViewToPresenterHomeProtocol {
 }
 
 extension HomePresenter: InteractorToPresenterHomeProtocol {
-    
-    func accessAllowed() {
-        view?.userAllowedAccessCalendar()
-    }
-    
-    func accessDenied() {
-        view?.userDeniedAccessCalendar()
-    }
     
     func showFeedbackRegisterMenstruation() {
         view?.showFeedbackRegisterMenstruation()

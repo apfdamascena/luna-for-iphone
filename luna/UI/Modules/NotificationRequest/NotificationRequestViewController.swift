@@ -23,11 +23,15 @@ class NotificationRequestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        presenter?.removeCalendar()
+        DispatchQueue.main.async {
+            self.presenter?.removeCalendar()
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        // O PROBLEMA TA AQUI
         Notification.shared.requestAccess()
     }
 }
