@@ -155,7 +155,7 @@ class NewActivityViewController: UIViewController {
 
 extension NewActivityViewController: PresenterToViewNewActivityProtocol{
     
-    func showFeedbackForUser(with text: String) {
+    @objc func showFeedbackForUser(with text: String) {
         
         let alert = UIAlertController(title: L10n.Constants.Content.Alert.Warning.title,
                                       message: text,

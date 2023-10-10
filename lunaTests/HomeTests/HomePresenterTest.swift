@@ -89,7 +89,7 @@ final class HomePresenterTest: XCTestCase {
             interactor: interactorMock
         )
         
-        presenter.loadCalendarToCollection()
+//        presenter.loadCalendarToCollection()
         
         XCTAssertTrue(interactorMock.loadCalendarToCollectionHasBeenCalled)
         

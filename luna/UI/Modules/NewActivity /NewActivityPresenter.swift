@@ -15,6 +15,16 @@ class NewActivityPresenter: ViewToPresenterNewActivityProtocol {
     var interactor: PresenterToInteractorNewActivityProtocol?
     var router: PresenterToRouterNewActivityProtocol?
     
+    init(
+        view: PresenterToViewNewActivityProtocol? = nil,
+        interactor: PresenterToInteractorNewActivityProtocol? = nil,
+        router: PresenterToRouterNewActivityProtocol? = nil
+    ) {
+        self.view = view
+        self.interactor = interactor
+        self.router = router
+    }
+    
     func userTappedContinueButton() {
         
         guard let pageViewController = view else { return }        

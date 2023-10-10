@@ -206,6 +206,19 @@
 		A48F4A402A9E8AED00BB5058 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F4A3F2A9E8AED00BB5058 /* String.swift */; };
 		A49046322AC4BFBD007759A1 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49046312AC4BFBD007759A1 /* UIViewController+Keyboard.swift */; };
 		A49046362AC755F1007759A1 /* NegativeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49046352AC755F1007759A1 /* NegativeModule.swift */; };
+		A490463E2AD5C3D0007759A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A490463D2AD5C3D0007759A1 /* GoogleService-Info.plist */; };
+		A49046422AD5C610007759A1 /* NewActivityPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49046412AD5C610007759A1 /* NewActivityPresenterTest.swift */; };
+		A49046442AD5C61A007759A1 /* NewActivityRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49046432AD5C61A007759A1 /* NewActivityRouterTest.swift */; };
+		A49046462AD5C764007759A1 /* NewActivityViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49046452AD5C764007759A1 /* NewActivityViewControllerSpy.swift */; };
+		A49046482AD5C783007759A1 /* NewActivityNavigationControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49046472AD5C783007759A1 /* NewActivityNavigationControllerMock.swift */; };
+		A49046492AD5CC39007759A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A490463D2AD5C3D0007759A1 /* GoogleService-Info.plist */; };
+		A490464B2AD5CCFA007759A1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A490464A2AD5CCFA007759A1 /* FirebaseAnalytics */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A490464D2AD5CCFF007759A1 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A490464C2AD5CCFF007759A1 /* FirebaseAnalyticsSwift */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A490464F2AD5CD8C007759A1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A490464E2AD5CD8C007759A1 /* FirebaseAnalytics */; };
+		A49046512AD5CD91007759A1 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A49046502AD5CD91007759A1 /* FirebaseAnalyticsSwift */; };
+		A49046532AD5CE8D007759A1 /* NewActivityRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49046522AD5CE8D007759A1 /* NewActivityRouterSpy.swift */; };
+		A49046552AD5D0E3007759A1 /* NewActivityInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49046542AD5D0E3007759A1 /* NewActivityInteractorSpy.swift */; };
+		A49046572AD5D1A6007759A1 /* ActivityMetricsFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49046562AD5D1A6007759A1 /* ActivityMetricsFake.swift */; };
 		BF4144312A93DC2F00517910 /* LunaCalendarManager+Check.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4144302A93DC2F00517910 /* LunaCalendarManager+Check.swift */; };
 		BF42D2162A8AC67A00E09472 /* CalendarVerifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42D2152A8AC67A00E09472 /* CalendarVerifications.swift */; };
 		BF4951002AB0FB8A0064F5D6 /* BestActivityContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4950FB2AB0FB8A0064F5D6 /* BestActivityContract.swift */; };
@@ -495,6 +508,14 @@
 		A48F4A3F2A9E8AED00BB5058 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		A49046312AC4BFBD007759A1 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
 		A49046352AC755F1007759A1 /* NegativeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativeModule.swift; sourceTree = "<group>"; };
+		A490463D2AD5C3D0007759A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A49046412AD5C610007759A1 /* NewActivityPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityPresenterTest.swift; sourceTree = "<group>"; };
+		A49046432AD5C61A007759A1 /* NewActivityRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityRouterTest.swift; sourceTree = "<group>"; };
+		A49046452AD5C764007759A1 /* NewActivityViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityViewControllerSpy.swift; sourceTree = "<group>"; };
+		A49046472AD5C783007759A1 /* NewActivityNavigationControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityNavigationControllerMock.swift; sourceTree = "<group>"; };
+		A49046522AD5CE8D007759A1 /* NewActivityRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityRouterSpy.swift; sourceTree = "<group>"; };
+		A49046542AD5D0E3007759A1 /* NewActivityInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityInteractorSpy.swift; sourceTree = "<group>"; };
+		A49046562AD5D1A6007759A1 /* ActivityMetricsFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMetricsFake.swift; sourceTree = "<group>"; };
 		BF4144302A93DC2F00517910 /* LunaCalendarManager+Check.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LunaCalendarManager+Check.swift"; sourceTree = "<group>"; };
 		BF42D2152A8AC67A00E09472 /* CalendarVerifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVerifications.swift; sourceTree = "<group>"; };
 		BF4950FB2AB0FB8A0064F5D6 /* BestActivityContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestActivityContract.swift; sourceTree = "<group>"; };
@@ -580,7 +601,9 @@
 			files = (
 				A427FC7A2AB23233006B4F2B /* SnapshotTesting in Frameworks */,
 				A427FC782AB23233006B4F2B /* InlineSnapshotTesting in Frameworks */,
+				A490464B2AD5CCFA007759A1 /* FirebaseAnalytics in Frameworks */,
 				2814909EB8D2BDC1D5AA5874 /* Pods_lunaTests.framework in Frameworks */,
+				A490464D2AD5CCFF007759A1 /* FirebaseAnalyticsSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +611,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A49046512AD5CD91007759A1 /* FirebaseAnalyticsSwift in Frameworks */,
+				A490464F2AD5CD8C007759A1 /* FirebaseAnalytics in Frameworks */,
 				6994CDD4C9481D9C0BE8F427 /* Pods_luna_lunaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -962,8 +987,9 @@
 		0DBADDB12A65FDF300A10FC3 /* lunaTests */ = {
 			isa = PBXGroup;
 			children = (
-				A427FC632AB216B3006B4F2B /* FirstTimeNewActivityTests */,
 				0D0B29152AA11EA80048722A /* HomeTests */,
+				A490463F2AD5C5F6007759A1 /* NewActivityTests */,
+				A427FC632AB216B3006B4F2B /* FirstTimeNewActivityTests */,
 				0DBADDB22A65FDF300A10FC3 /* lunaTests.swift */,
 			);
 			path = lunaTests;
@@ -981,6 +1007,7 @@
 		0DBADDCB2A65FF2A00A10FC3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A490463D2AD5C3D0007759A1 /* GoogleService-Info.plist */,
 				0DA74C742A9549AA0021EC40 /* fonts */,
 				0DBADDA42A65FDF300A10FC3 /* Assets.xcassets */,
 				0DBADDA62A65FDF300A10FC3 /* LaunchScreen.storyboard */,
@@ -1349,6 +1376,28 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		A490463F2AD5C5F6007759A1 /* NewActivityTests */ = {
+			isa = PBXGroup;
+			children = (
+				A49046402AD5C600007759A1 /* Doubles */,
+				A49046412AD5C610007759A1 /* NewActivityPresenterTest.swift */,
+				A49046432AD5C61A007759A1 /* NewActivityRouterTest.swift */,
+			);
+			path = NewActivityTests;
+			sourceTree = "<group>";
+		};
+		A49046402AD5C600007759A1 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				A49046452AD5C764007759A1 /* NewActivityViewControllerSpy.swift */,
+				A49046472AD5C783007759A1 /* NewActivityNavigationControllerMock.swift */,
+				A49046522AD5CE8D007759A1 /* NewActivityRouterSpy.swift */,
+				A49046542AD5D0E3007759A1 /* NewActivityInteractorSpy.swift */,
+				A49046562AD5D1A6007759A1 /* ActivityMetricsFake.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
 		BF4950FA2AB0FB3D0064F5D6 /* BestActivity */ = {
 			isa = PBXGroup;
 			children = (
@@ -1637,6 +1686,8 @@
 			packageProductDependencies = (
 				A427FC772AB23233006B4F2B /* InlineSnapshotTesting */,
 				A427FC792AB23233006B4F2B /* SnapshotTesting */,
+				A490464A2AD5CCFA007759A1 /* FirebaseAnalytics */,
+				A490464C2AD5CCFF007759A1 /* FirebaseAnalyticsSwift */,
 			);
 			productName = lunaTests;
 			productReference = 0DBADDAE2A65FDF300A10FC3 /* lunaTests.xctest */;
@@ -1658,6 +1709,10 @@
 				0DBADDBA2A65FDF300A10FC3 /* PBXTargetDependency */,
 			);
 			name = lunaUITests;
+			packageProductDependencies = (
+				A490464E2AD5CD8C007759A1 /* FirebaseAnalytics */,
+				A49046502AD5CD91007759A1 /* FirebaseAnalyticsSwift */,
+			);
 			productName = lunaUITests;
 			productReference = 0DBADDB82A65FDF300A10FC3 /* lunaUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -1716,6 +1771,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DBADDA82A65FDF300A10FC3 /* LaunchScreen.storyboard in Resources */,
+				A490463E2AD5C3D0007759A1 /* GoogleService-Info.plist in Resources */,
 				CACB96F62A85670300EB66DD /* Constants.strings in Resources */,
 				0DA74C762A9549CB0021EC40 /* CoconRegularFont.otf in Resources */,
 				0DBADDA52A65FDF300A10FC3 /* Assets.xcassets in Resources */,
@@ -1727,6 +1783,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DA74C772A9549CB0021EC40 /* CoconRegularFont.otf in Resources */,
+				A49046492AD5CC39007759A1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2122,6 +2179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D0B291C2AA151C10048722A /* HomeRouterSpy.swift in Sources */,
+				A49046532AD5CE8D007759A1 /* NewActivityRouterSpy.swift in Sources */,
 				0D9D8A0D2AA699A400B64E2D /* HomeInteractorTest.swift in Sources */,
 				0D0B29172AA11EC70048722A /* HomeRouterTest.swift in Sources */,
 				0D0B291A2AA151490048722A /* HomeRouterMock.swift in Sources */,
@@ -2133,12 +2191,18 @@
 				0D0B29262AA264A70048722A /* HomePresenterSpy.swift in Sources */,
 				A427FC702AB229C6006B4F2B /* FirstTimeNewActivityNavigationControllerMock.swift in Sources */,
 				0D0B29242AA264540048722A /* HomePresenterMock.swift in Sources */,
+				A49046422AD5C610007759A1 /* NewActivityPresenterTest.swift in Sources */,
 				0DBADDB32A65FDF300A10FC3 /* lunaTests.swift in Sources */,
+				A49046552AD5D0E3007759A1 /* NewActivityInteractorSpy.swift in Sources */,
 				A427FC892AB26B7B006B4F2B /* FirstTimeNewActivityPresenterTest.swift in Sources */,
 				0D9D8A0F2AA6FC5900B64E2D /* HomeInteractorSpy.swift in Sources */,
 				0D0B29202AA263C80048722A /* HomeViewControllerMock.swift in Sources */,
+				A49046442AD5C61A007759A1 /* NewActivityRouterTest.swift in Sources */,
 				A427FC6A2AB218B4006B4F2B /* FirstTimeNewActivityRouterTest.swift in Sources */,
+				A49046572AD5D1A6007759A1 /* ActivityMetricsFake.swift in Sources */,
 				0D9D8A112AA8EEEE00B64E2D /* LunaCalendarManagerMock.swift in Sources */,
+				A49046462AD5C764007759A1 /* NewActivityViewControllerSpy.swift in Sources */,
+				A49046482AD5C783007759A1 /* NewActivityNavigationControllerMock.swift in Sources */,
 				A427FC7C2AB23267006B4F2B /* FirstTimeNewActivitySnapshotTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2537,6 +2601,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A427FC762AB23233006B4F2B /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
 			productName = SnapshotTesting;
+		};
+		A490464A2AD5CCFA007759A1 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFCDE18C2AA6553700CFCA95 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		A490464C2AD5CCFF007759A1 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFCDE18C2AA6553700CFCA95 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		A490464E2AD5CD8C007759A1 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFCDE18C2AA6553700CFCA95 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		A49046502AD5CD91007759A1 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFCDE18C2AA6553700CFCA95 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
 		};
 		BFCDE18D2AA6553700CFCA95 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

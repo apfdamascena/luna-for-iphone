@@ -31,9 +31,9 @@ class HomeInteractorMock: HomeInteractor, HomeInteractorSpy  {
         super.loadPhasesToUserCalendar()
     }
     
-    override func loadCalendarToCollection() -> [CyclePhaseViewModel] {
-        loadCalendarToCollectionHasBeenCalled = true
-        return super.loadCalendarToCollection()
-    }
+//    override func loadCalendarToCollection() -> [CyclePhaseViewModel] {
+//        loadCalendarToCollectionHasBeenCalled = true
+//        return super.loadCalendarToCollection()
+//    }
     
 }

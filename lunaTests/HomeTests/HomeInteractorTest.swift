@@ -4,8 +4,8 @@
 //
 //  Created by alexdamascena on 04/09/23.
 //
-@testable import luna
 import XCTest
+@testable import luna
 
 final class HomeInteractorTest: XCTestCase {
 
