@@ -267,7 +267,6 @@
 		CA6F76AC2ABE26BA00BC91A8 /* DatePickersStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F76AB2ABE26BA00BC91A8 /* DatePickersStack.swift */; };
 		CAAB60F22A82CB080003F770 /* ReferencesSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB60F12A82CB080003F770 /* ReferencesSheetView.swift */; };
 		CAAB60F42A82CE980003F770 /* ReferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB60F32A82CE980003F770 /* ReferencesViewController.swift */; };
-		CAC08D4D2AD4959700FA4FD3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAC08D4C2AD4959700FA4FD3 /* GoogleService-Info.plist */; };
 		CACB96F62A85670300EB66DD /* Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = CACB96F82A85670300EB66DD /* Constants.strings */; };
 		CAE579A22A7AD8A1004EE21C /* CalendarCollectionConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE579A12A7AD8A1004EE21C /* CalendarCollectionConverter.swift */; };
 		CAE579A42A7ADE2D004EE21C /* HomeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE579A32A7ADE2D004EE21C /* HomeCollection.swift */; };
@@ -554,7 +553,6 @@
 		CA6F76AB2ABE26BA00BC91A8 /* DatePickersStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickersStack.swift; sourceTree = "<group>"; };
 		CAAB60F12A82CB080003F770 /* ReferencesSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencesSheetView.swift; sourceTree = "<group>"; };
 		CAAB60F32A82CE980003F770 /* ReferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencesViewController.swift; sourceTree = "<group>"; };
-		CAC08D4C2AD4959700FA4FD3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CACB96F72A85670300EB66DD /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Constants.strings"; sourceTree = "<group>"; };
 		CACB96FA2A856C5B00EB66DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Constants.strings; sourceTree = "<group>"; };
 		CAE579A12A7AD8A1004EE21C /* CalendarCollectionConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionConverter.swift; sourceTree = "<group>"; };
@@ -983,7 +981,6 @@
 		0DBADDCB2A65FF2A00A10FC3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CAC08D4C2AD4959700FA4FD3 /* GoogleService-Info.plist */,
 				0DA74C742A9549AA0021EC40 /* fonts */,
 				0DBADDA42A65FDF300A10FC3 /* Assets.xcassets */,
 				0DBADDA62A65FDF300A10FC3 /* LaunchScreen.storyboard */,
@@ -1722,7 +1719,6 @@
 				CACB96F62A85670300EB66DD /* Constants.strings in Resources */,
 				0DA74C762A9549CB0021EC40 /* CoconRegularFont.otf in Resources */,
 				0DBADDA52A65FDF300A10FC3 /* Assets.xcassets in Resources */,
-				CAC08D4D2AD4959700FA4FD3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
