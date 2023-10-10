@@ -54,8 +54,8 @@ class CreateEventViewController: UIViewController {
             .rx
             .tap.bind {
                 if self.initialDate > self.endDate {
-                    let alert = UIAlertController(title: "Aviso",
-                                                  message: "Cuidado! A data initial está depois da data final",
+                    let alert = UIAlertController(title: L10n.Constants.Content.Alert.Warning.warning,
+                                                  message: L10n.Constants.Content.Alert.Warning.initialDateAfter,
                                                   preferredStyle: .alert)
 
                     alert.addAction(UIAlertAction(title: "OK",

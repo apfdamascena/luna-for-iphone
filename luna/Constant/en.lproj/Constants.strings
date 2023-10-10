@@ -325,3 +325,13 @@
 "constants.content.alert.warning.no_title_activity"="Add a title for your activity";
 "constants.content.alert.warning.no_metrics"="Add metrics for your activity";
 "constants.content.alert.warning.title"="Hey! Something was missing";
+
+"constants.content.alert.warning.future.title"="Are you already in the future?";
+
+"constants.content.alert.warning.future.description"="Only record the days of menstruation that have already passed";
+
+"constants.content.alert.warning.warning"="Warning";
+
+"constants.content.alert.warning.max_menstruation"="You have reached your maximum period length, try taking a day off from the start or end of your period.";
+
+"constants.content.alert.warning.initial_date_after"="Be careful! The start date is after the end date";
