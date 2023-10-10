@@ -15,7 +15,7 @@ import EventKit
 import EventKitUI
 
 class HomeViewController: UIViewController {
-
+    
     var presenter: ViewToPresenterHomeProtocol?
     
     private let homeView = HomeView()
@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
     private var datasource: CalendarCollectionViewDataSource
     private var cardPhaseDataSource: CardPhaseControlDataSource
     private var activitiesDataSource: ActivityDataSource
-
+    
     private let notificationStation = NotificationStation()
     
     init(
@@ -54,7 +54,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = false
-        presenter?.checkCalendarPermission()
         
         homeView.appearSkeleton()
         
@@ -71,15 +70,17 @@ class HomeViewController: UIViewController {
         addTableViewDataSourceEventObservable()
         addNewActivityTrriggerEventObservable()
         
-        presenter?.loadCalendarToCollection(isloading: true)
+        DispatchQueue.main.async {
+            self.presenter?.loadCalendarToCollection(isloading: true)
+        }
         schedulerNextCardPhaseInformation()
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
-
+        
         DispatchQueue.main.async {
             self.presenter?.loadActivitiesDataSource()
             self.checkLunaCalendarToken()
@@ -96,12 +97,13 @@ class HomeViewController: UIViewController {
         AnalyticsCenter.shared.post(AnalyticsEvents.openApp(teste))
         
         moveInitialCollection()
-
+        
     }
     
     func startTimer() {
         timer?.invalidate()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(fetchState), userInfo: nil, repeats: false)
+        //        fetchState()
     }
     
     @objc func fetchState() {
@@ -170,7 +172,7 @@ class HomeViewController: UIViewController {
             }.disposed(by: disposeBag)
     }
     
-
+    
     func idealPhase(stress: String, sociability: String, fisicalEffort: String, finalDate: Date) {
         let stressInt = stress.toInt()
         let sociabilityInt = sociability.toInt()
@@ -252,11 +254,11 @@ class HomeViewController: UIViewController {
         }.disposed(by: disposeBag)
         
         homeView.activities
-                .rx
-                .modelSelected(ActivityCellViewModel.self)
-                .subscribe(onNext: { model in
-                    self.presenter?.openCalendarOnLuna(withEvent: model.activity)
-                }).disposed(by: disposeBag)
+            .rx
+            .modelSelected(ActivityCellViewModel.self)
+            .subscribe(onNext: { model in
+                self.presenter?.openCalendarOnLuna(withEvent: model.activity)
+            }).disposed(by: disposeBag)
     }
     
     func addTableViewDataSourceEventObservable(){
@@ -264,7 +266,7 @@ class HomeViewController: UIViewController {
             .asObservable()
             .subscribe(onNext: { data in
                 self.homeView.drawActivities(data)
-        }).disposed(by: disposeBag)
+            }).disposed(by: disposeBag)
     }
     
     func addNewActivityTrriggerEventObservable(){
@@ -308,7 +310,7 @@ extension HomeViewController: PresenterToViewHomeProtocol {
     
     func didUpdateState(_ state: HomeViewState) {
         homeView.updateState(state)
-        }
+    }
     
     func moveTo(_ month: Date) {
         self.homeView.monthChanged(to: month)
@@ -377,12 +379,12 @@ extension HomeViewController: PresenterToViewHomeProtocol {
                 let alert = UIAlertController(title: "Aviso",
                                               message: "Você atingiu a duração máxima de menstruação, tente retirar um dia do início ou final da menstruação.",
                                               preferredStyle: .alert)
-
+                
                 alert.addAction(UIAlertAction(title: "OK",
                                               style: .default,
                                               handler: { _ in
                 }))
-
+                
                 present(alert, animated: true, completion: nil)
                 presenter?.loadCalendarToCollection(isloading: false)
             }
@@ -401,25 +403,10 @@ extension HomeViewController: PresenterToViewHomeProtocol {
         }
     }
     
-    func userAllowedAccessCalendar() {
-        self.homeView.userAllowedAccessCalendar()
-        presenter?.loadUserCalendar()
-    }
-    
-    func allowAccessCalendar() {
-        self.homeView.userAllowedAccessCalendar()
-    }
-    
-    func userDeniedAccessCalendar() {
-        DispatchQueue.main.async {
-            self.homeView.userDeniedAccessCalendar()
-        }
-    }
-    
     func cardFeedbackDisappear() {
-         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0){
-             self.homeView.cardFeedbackDisappear()
-         }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0){
+            self.homeView.cardFeedbackDisappear()
+        }
     }
     
     @objc func updateView(_ center: CalendarCollectionViewCell) {

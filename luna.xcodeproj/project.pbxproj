@@ -233,7 +233,6 @@
 		BF9A367E2ABB7F2000D231CB /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A36792ABB7F2000D231CB /* CreateEventViewController.swift */; };
 		BF9A367F2ABB7F2000D231CB /* CreateEventInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A367A2ABB7F2000D231CB /* CreateEventInteractor.swift */; };
 		BF9A36812ABB7F3E00D231CB /* CreateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A36802ABB7F3E00D231CB /* CreateEventView.swift */; };
-		BFA1C24F2ACB513D00A21109 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFA1C24E2ACB513D00A21109 /* GoogleService-Info.plist */; };
 		BFBD77132A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD77122A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift */; };
 		BFCAAD3B2A6B19AE00A91CC0 /* MenstruationDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */; };
 		BFCDE18E2AA6553700CFCA95 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BFCDE18D2AA6553700CFCA95 /* FirebaseAnalytics */; };
@@ -268,6 +267,7 @@
 		CA6F76AC2ABE26BA00BC91A8 /* DatePickersStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F76AB2ABE26BA00BC91A8 /* DatePickersStack.swift */; };
 		CAAB60F22A82CB080003F770 /* ReferencesSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB60F12A82CB080003F770 /* ReferencesSheetView.swift */; };
 		CAAB60F42A82CE980003F770 /* ReferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB60F32A82CE980003F770 /* ReferencesViewController.swift */; };
+		CAC08D4D2AD4959700FA4FD3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAC08D4C2AD4959700FA4FD3 /* GoogleService-Info.plist */; };
 		CACB96F62A85670300EB66DD /* Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = CACB96F82A85670300EB66DD /* Constants.strings */; };
 		CAE579A22A7AD8A1004EE21C /* CalendarCollectionConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE579A12A7AD8A1004EE21C /* CalendarCollectionConverter.swift */; };
 		CAE579A42A7ADE2D004EE21C /* HomeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE579A32A7ADE2D004EE21C /* HomeCollection.swift */; };
@@ -523,7 +523,6 @@
 		BF9A36792ABB7F2000D231CB /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		BF9A367A2ABB7F2000D231CB /* CreateEventInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventInteractor.swift; sourceTree = "<group>"; };
 		BF9A36802ABB7F3E00D231CB /* CreateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventView.swift; sourceTree = "<group>"; };
-		BFA1C24E2ACB513D00A21109 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFBD77122A8D48E60092C4CC /* LunaCalendarManager+Verifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LunaCalendarManager+Verifications.swift"; sourceTree = "<group>"; };
 		BFCAAD3A2A6B19AE00A91CC0 /* MenstruationDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationDurationView.swift; sourceTree = "<group>"; };
 		BFCDE1982AA6678700CFCA95 /* AnalyticsEventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEventType.swift; sourceTree = "<group>"; };
@@ -555,6 +554,7 @@
 		CA6F76AB2ABE26BA00BC91A8 /* DatePickersStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickersStack.swift; sourceTree = "<group>"; };
 		CAAB60F12A82CB080003F770 /* ReferencesSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencesSheetView.swift; sourceTree = "<group>"; };
 		CAAB60F32A82CE980003F770 /* ReferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencesViewController.swift; sourceTree = "<group>"; };
+		CAC08D4C2AD4959700FA4FD3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CACB96F72A85670300EB66DD /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Constants.strings"; sourceTree = "<group>"; };
 		CACB96FA2A856C5B00EB66DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Constants.strings; sourceTree = "<group>"; };
 		CAE579A12A7AD8A1004EE21C /* CalendarCollectionConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionConverter.swift; sourceTree = "<group>"; };
@@ -983,7 +983,7 @@
 		0DBADDCB2A65FF2A00A10FC3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BFA1C24E2ACB513D00A21109 /* GoogleService-Info.plist */,
+				CAC08D4C2AD4959700FA4FD3 /* GoogleService-Info.plist */,
 				0DA74C742A9549AA0021EC40 /* fonts */,
 				0DBADDA42A65FDF300A10FC3 /* Assets.xcassets */,
 				0DBADDA62A65FDF300A10FC3 /* LaunchScreen.storyboard */,
@@ -1720,9 +1720,9 @@
 			files = (
 				0DBADDA82A65FDF300A10FC3 /* LaunchScreen.storyboard in Resources */,
 				CACB96F62A85670300EB66DD /* Constants.strings in Resources */,
-				BFA1C24F2ACB513D00A21109 /* GoogleService-Info.plist in Resources */,
 				0DA74C762A9549CB0021EC40 /* CoconRegularFont.otf in Resources */,
 				0DBADDA52A65FDF300A10FC3 /* Assets.xcassets in Resources */,
+				CAC08D4D2AD4959700FA4FD3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2317,7 +2317,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M3SKJK6V42;
+				DEVELOPMENT_TEAM = CMWHQAT5B4;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = luna/Info.plist;
@@ -2352,7 +2352,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M3SKJK6V42;
+				DEVELOPMENT_TEAM = CMWHQAT5B4;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = luna/Info.plist;
