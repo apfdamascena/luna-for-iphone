@@ -14,10 +14,24 @@ internal enum L10n {
     internal enum Content {
       internal enum Alert {
         internal enum Warning {
-          /// Você não pode marcar atividadade sem nome
-          internal static let noTitleActivity = L10n.tr("Constants", "constants.content.alert.warning.no_title_activity", fallback: "Você não pode marcar atividadade sem nome")
+          /// Cuidado! A data initial está depois da data final
+          internal static let initialDateAfter = L10n.tr("Constants", "constants.content.alert.warning.initial_date_after", fallback: "Cuidado! A data initial está depois da data final")
+          /// Você atingiu a duração máxima de menstruação, tente retirar um dia do início ou final da menstruação.
+          internal static let maxMenstruation = L10n.tr("Constants", "constants.content.alert.warning.max_menstruation", fallback: "Você atingiu a duração máxima de menstruação, tente retirar um dia do início ou final da menstruação.")
+          /// Adicione as métricas para a sua atividade
+          internal static let noMetrics = L10n.tr("Constants", "constants.content.alert.warning.no_metrics", fallback: "Adicione as métricas para a sua atividade")
+          /// Adicione um título para a sua atividade
+          internal static let noTitleActivity = L10n.tr("Constants", "constants.content.alert.warning.no_title_activity", fallback: "Adicione um título para a sua atividade")
+          /// Ei! Faltou algo
+          internal static let title = L10n.tr("Constants", "constants.content.alert.warning.title", fallback: "Ei! Faltou algo")
           /// Aviso
-          internal static let title = L10n.tr("Constants", "constants.content.alert.warning.title", fallback: "Aviso")
+          internal static let warning = L10n.tr("Constants", "constants.content.alert.warning.warning", fallback: "Aviso")
+          internal enum Future {
+            /// Registre apenas os dias de menstruação que já passaram
+            internal static let description = L10n.tr("Constants", "constants.content.alert.warning.future.description", fallback: "Registre apenas os dias de menstruação que já passaram")
+            /// Você já está no futuro?
+            internal static let title = L10n.tr("Constants", "constants.content.alert.warning.future.title", fallback: "Você já está no futuro?")
+          }
         }
       }
       internal enum Api {

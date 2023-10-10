@@ -13,7 +13,7 @@ import EventKit
 // MARK: View Output (Presenter -> View)
 protocol PresenterToViewNewActivityProtocol {
     
-    func showFeedbackForUser()
+    func showFeedbackForUser(with text: String)
    
 }
 
@@ -27,7 +27,7 @@ protocol ViewToPresenterNewActivityProtocol {
     func userTappedContinueButton()
     func findBestPhase(activity: ActivityMetrics) -> EKEvent
     
-    func isNotPossibleCreateActivityWithoutName()
+    func fieldsWereNotFilled(_ value: LabelsNotFilled)
 
 }
 

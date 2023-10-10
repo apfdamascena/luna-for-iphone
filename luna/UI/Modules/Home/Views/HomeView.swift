@@ -234,6 +234,10 @@ class HomeView: UIView, AnyView  {
     func userDeniedAccessCalendar() {
         self.toggleCalendarViewIfUserAccess(to: false)
         self.hasAcessToCalendar = .unauthorized
+        phaseCycleTitle.isHidden = true
+        warningNoMenstrualData.isHidden = true
+        cardCycle.isHidden = true
+        activitiesView.isHidden = true
     }
     
     func userAllowedAccessCalendar() {
@@ -255,6 +259,7 @@ class HomeView: UIView, AnyView  {
         case .unautorized:
             userDeniedAccessCalendar()
             disapearSkeleton()
+          
         }
     }
     
@@ -290,6 +295,7 @@ class HomeView: UIView, AnyView  {
         phaseCycleSkeleton.isHidden = true
         activitiesSkeleton.isHidden = true
         activitiesViewSkeleton.isHidden = true
+        
     }
     
     func cardFeedbackDisappear() {
@@ -301,27 +307,24 @@ class HomeView: UIView, AnyView  {
     }
     
     func showWarningNoMenstrualData(if cycle: CyclePhase){
-        
-        
-        if hasAcessToCalendar == .unauthorized {
-            phaseCycleTitle.isHidden = true
-            warningNoMenstrualData.isHidden = true
-            cardCycle.isHidden = true
-            activitiesView.isHidden = true
+
+        guard hasAcessToCalendar == .authorized else {
             return
         }
         
-        phaseCycleTitle.isHidden = false
-        warningNoMenstrualData.isHidden = true
-        cardCycle.isHidden = false
-        activitiesView.isHidden = false
-        
-        if cycle == .none {
-            phaseCycleTitle.isHidden = true
-            cardCycle.isHidden = true
-            warningNoMenstrualData.isHidden = false
-            activitiesView.isHidden = true
+        guard cycle == .none else {
+            phaseCycleTitle.isHidden = false
+            warningNoMenstrualData.isHidden = true
+            cardCycle.isHidden = false
+            activitiesView.isHidden = false
+            return
         }
+
+        phaseCycleTitle.isHidden = true
+        cardCycle.isHidden = true
+        warningNoMenstrualData.isHidden = false
+        activitiesView.isHidden = true
+
     }
     
     func accessToCalendar(allowed: CalendarAccess){
@@ -335,9 +338,6 @@ class HomeView: UIView, AnyView  {
                 .forEach{
                     $0.isHidden = value
                 }
-            [self.phaseCycleTitle].forEach{
-                $0.isHidden = !value
-            }
         
         }
 

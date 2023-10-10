@@ -294,9 +294,17 @@
 "constants.content.label.new_activity.week" = "Semana";
 "constants.content.label.new_activity.month" = "Mês";
 
-"constants.content.alert.warning.no_title_activity"="Você não pode marcar atividadade sem nome";
-"constants.content.alert.warning.title"="Aviso";
+"constants.content.alert.warning.no_title_activity"="Adicione um título para a sua atividade";
+"constants.content.alert.warning.no_metrics"="Adicione as métricas para a sua atividade";
+"constants.content.alert.warning.title"="Ei! Faltou algo";
 
+"constants.content.alert.warning.future.title"="Você já está no futuro?";
 
+"constants.content.alert.warning.future.description"="Registre apenas os dias de menstruação que já passaram";
 
+"constants.content.alert.warning.warning"="Aviso";
+
+"constants.content.alert.warning.max_menstruation"="Você atingiu a duração máxima de menstruação, tente retirar um dia do início ou final da menstruação.";
+
+"constants.content.alert.warning.initial_date_after"="Cuidado! A data initial está depois da data final";
 

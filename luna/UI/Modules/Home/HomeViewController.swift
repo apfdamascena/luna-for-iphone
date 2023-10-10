@@ -376,8 +376,8 @@ extension HomeViewController: PresenterToViewHomeProtocol {
                 }
             }
             else {
-                let alert = UIAlertController(title: "Aviso",
-                                              message: "Você atingiu a duração máxima de menstruação, tente retirar um dia do início ou final da menstruação.",
+                let alert = UIAlertController(title: L10n.Constants.Content.Alert.Warning.warning,
+                                              message: L10n.Constants.Content.Alert.Warning.maxMenstruation,
                                               preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "OK",
@@ -390,8 +390,8 @@ extension HomeViewController: PresenterToViewHomeProtocol {
             }
         }
         else {
-            let alert = UIAlertController(title: "Aviso",
-                                          message: "Você não pode marcar em dias futuros",
+            let alert = UIAlertController(title: L10n.Constants.Content.Alert.Warning.Future.title,
+                                          message: L10n.Constants.Content.Alert.Warning.Future.description,
                                           preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "OK",
